@@ -1,0 +1,75 @@
+.container-wrapper{
+    @include clearfix;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: ($gridGutterWidth/2);
+    padding-right: ($gridGutterWidth/2);
+    width: 90%;
+}
+
+// HEADER
+// --------------------------------------------------
+
+header{
+    display: block;
+    position:relative;
+    width: 100%;
+}
+
+#top-menu-header{
+    display: block;
+    position: relative; 
+    background-color: $blue;
+}
+#bottom-menu-header{
+    display: block;
+    position: relative;
+    @include clearfix;
+
+    padding: 12px 0px;
+
+    background-color: rgba(255,255,255,1);
+    @include filter-gradient(#ffffff, #e5e5e5, vertical);
+    @include background-image(linear-gradient(top, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 95%, rgba(235,235,235,1) 100%));
+    @include box-shadow(0px 4px 15px 0  lighten($grey, 18%));
+}
+
+#bottom-menu-header{
+    .pull-right{
+        position: relative;
+        top: 2px;
+    }
+}
+
+.logo{
+    display: inline-block;
+    position: relative;
+    height: 48px;
+    width: auto;
+    margin-right: 30px;
+    img{
+        height: 100%;
+        width: auto;
+    }
+}
+
+// SERVICES - HOMEPAGE
+// --------------------------------------------------
+
+#services{ 
+    &>.container-wrapper>div{
+        padding: 0px 5px;
+        &:first-child{
+            padding-left: 0;
+        }
+        &:last-child{
+            padding-right: 0;
+        }
+    }
+    .service{
+        display: inline-block;
+        &:not(:last-child){
+            margin-right: 15px;
+        }
+    }
+}

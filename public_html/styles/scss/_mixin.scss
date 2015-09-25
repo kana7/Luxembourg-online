@@ -1,0 +1,209 @@
+@mixin base-style(){
+    font-family: $font-stack;
+    font-size: $font-size;
+    color: $dark-grey;
+    line-height: $base-line-height;
+}
+
+//queries for the grid
+@mixin media($media) {
+    @if $media == phone {
+        @media screen and (max-width: $phone + px) { @content; }
+    }
+    @else if $media == tab {
+        @media screen and (min-width: $tab + px) { @content; }
+    }
+    @else if $media == desk {
+        @media screen and (min-width: $desk + px) { @content; }
+    }
+    @else if $media == lg-desk {
+        @media screen and (min-width: $lgdesk + px) { @content; }
+    }
+}
+@mixin viewport($media, $min: 0, $max: 0) {
+    @if $media == max {
+        @media screen and (max-width: $max + px) { @content; }
+    }
+    @else if $media == range {
+        @media screen and (min-width: $min + px) and (max-width: $max + px) { @content; }
+    }
+    @else if $media == min {
+        @media screen and (min-width: $min + px) { @content; }
+    }
+}
+
+@mixin container-base{
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: ($gridGutterWidth/2);
+    padding-right: ($gridGutterWidth/2);
+}
+
+@mixin container($containerWidth){
+    @include container-base;
+    width: #{$containerWidth}px;
+}
+
+@mixin noselect(){
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+@mixin noTransition(){
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    -ms-transition: none !important;
+    transition: none !important;
+}
+
+@mixin clearfix() {
+    &:before{
+        content: "";
+        display: table;
+    }
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin flexbox(){
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;
+}
+
+@mixin center-block($blockWidth:""){
+    @if $blockWidth != "" {
+        width: $blockWidth;
+    }
+    display: block;
+    float: none !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+@mixin transform($parameter...){
+    transform: $parameter;
+    -webkit-transform: $parameter;
+    -ms-transform: $parameter;
+    transform: $parameter;
+}
+
+@mixin vertical-align-middle($position: relative){
+    position: $position;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+@mixin disable-vertical-align(){
+    top: auto;
+    transform: none;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+}
+
+@mixin box-shadow($params...) {
+    -webkit-box-shadow: $params;
+    -moz-box-shadow: $params;
+    box-shadow: $params;
+}
+
+@mixin button($color: $blue-primary, $text_color: $white-background) {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font: 14px/100% Arial, Helvetica, sans-serif;
+    padding: .5em 2em .55em;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    @include rounded();
+    @include box-shadow(0, 1px, 2px, $shadow-color);
+
+    color: $text_color !important;
+    font-weight: bold;
+    border: solid 1px darken($color, 18%);
+    background: $color;
+    @include gradient(saturate($color, 15%), darken($color, 15%));
+
+    &:hover {
+        text-decoration: none;
+        background: saturate($color, 10%);
+        @include gradient(saturate($color, 5%), darken($color, 5%));
+    }
+
+    &:active {
+        position: relative;
+        top: 1px;
+        color: saturate($color, 15%);
+        @include gradient(saturate($color, 15%), lighten($color, 15%));
+    }
+}
+
+@mixin rounded($radius: $radius-size) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin gradient($from, $to) {
+    background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+    background: -moz-linear-gradient(top,  $from, $to);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
+}
+
+@mixin card($depth) {
+    @if $depth < 1 {
+        box-shadow: none;
+    } @else if $depth > 5 {
+        @warn "Invalid $depth `#{$depth}` for mixin `card`.";
+    } @else {
+        box-shadow: bottom-shadow($depth), top-shadow($depth);  
+    }
+}
+@function top-shadow($depth) {
+    $primary-offset: nth(1.5 3 10 14 19, $depth) * 1px;
+    $blur: nth(1.5 3 10 14 19, $depth) * 4px;
+    $color: rgba($shadow-color, nth(.12 .16 .19 .25 .30, $depth));
+
+    @return 0 $primary-offset $blur $color;
+}
+@function bottom-shadow($depth) {
+    $primary-offset: nth(1.5 3 6 10 15, $depth) * 1px;
+    $blur: nth(1 3 3 5 6, $depth) * 4px;
+    $color: rgba($shadow-color, nth(.24 .23 .23 .22 .22, $depth));
+
+    @return 0 $primary-offset $blur $color;
+}
+
+@mixin ellipsis($overflow: ellipsis){
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: $overflow; // values are: clip, ellipsis, or a string
+}
+
+@mixin box-emboss($opacity, $opacity2){
+    box-shadow:white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
+}
+
+@mixin letterpress($opacity){
+    text-shadow:white($opacity) 0 1px 0;
+}

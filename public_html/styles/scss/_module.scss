@@ -1,0 +1,105 @@
+// HEADER
+// --------------------------------------------------
+
+.top-menu-header-links{
+    font-size: 13px;
+    font-weight: 400;
+    color: $white;
+    padding: 9px 0px 8px;
+    @include text-shadow(0px 1px 5px $dark-grey);
+    &.left li{
+        margin-right: 30px;
+    }
+    &.right li{
+        margin-left: 30px;
+    }
+}
+
+.bottom-menu-header-links{
+    display: inline-block;
+    position: relative;
+    bottom: 4px;
+    
+    ul{
+        font-size: 16px;
+        font-weight: 400;
+        color: lighten($footer-grey, 20%);
+        box-sizing: border-box;
+    }
+    li{
+        border-left: 1px solid lighten($grey, 18%);
+        text-align: center;
+    }
+    a{
+        display: block;
+        position: relative;
+        padding: 0px 30px;
+        img{
+            display: inline-block;
+            height: 40px;
+            width: auto;
+            margin-right: 14px;
+        }
+        .link{
+            display: inline-block;
+            position: relative;
+            bottom: 15px;
+        }
+
+    }
+}
+
+// BUTTONS
+// --------------------------------------------------
+
+@mixin btn{
+    display: inline-block;
+    position: relative;
+    margin: 5px;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 10px 12px 9px;
+    margin: 5px 0px;
+    font-size: 14px;
+    border-radius: $border-radius;
+    @include noselect();
+    @include transition($transitionUi);
+    &:focus{
+        outline: 0;
+    }
+    &:hover, &:focus{
+        text-decoration: none;
+    }
+}
+
+.btn-blue, .btn-orange, .btn-white{
+    @include btn;
+}
+
+.btn-blue{
+    background-color: $blue;
+    color: $white;
+    @include text-shadow(0px 2px 5px $dark-grey);
+}
+.btn-orange{}
+.btn-white{}
+
+// SERVICE - HOMEPAGE
+// --------------------------------------------------
+
+.service{
+    height: 75px;
+    width: 100%;
+    border: 1px solid $grey;
+    border-radius: $border-radius;
+    h3{
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+}

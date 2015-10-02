@@ -1,0 +1,52 @@
+// RESPONSIVE STYLE
+// --------------------------------------------------
+@include viewport(max, $max: 1279){
+    .header-icon{
+        display: none !important;
+    }
+    .bottom-menu-header-links{ 
+        float: left;
+        height: 40px;
+        ul{height: 100%;}
+        li{
+            height: 100%;
+            border-left: none;        
+            a{
+                height: 100%;
+                width: 100%;
+                line-height: 42px;
+                .link{
+                    bottom: auto;
+                }
+            } 
+        }
+    }
+
+    .container-wrapper{
+        width: 95%;
+    }
+}
+@include media(phone){
+    .container-wrapper{
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+
+@include media(tab){
+    .section-layout{
+        height: 350px;
+    }
+}
+@include media(desk){
+
+}
+@include media(lgdesk){
+
+}
+
+@include viewport(min, $min: 1400){
+    .container-wrapper{
+        width: 1344px;
+    }
+}

@@ -1,83 +1,117 @@
 <!doctype html>
-<html lang="fr">
+<html class="no-js" lang="">
+
     <head>
         <meta charset="utf-8">
-        <title>Luxembourg Online</title>
-        <meta name="description" content="Découvrez les offres imbattables Luxembourg Online pour Internet haut débit et très haut débit (fibre, VDSL), la téléphonie et la TV ">
+        <title>LuxembourgOnline</title>
+        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="shortcut icon" href="/favicon.ico">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
+        <!-- build:css(.) styles/vendor.css -->
+        <!-- bower:css -->
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/css/main.css">
+        <!-- endbuild -->
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <!--<script src="/bower_components/modernizr/modernizr.js"></script>-->
+        <!-- endbuild -->
+        <script src="scripts/vendor/picturefill.min.js"></script>
     </head>
+
     <body>
         <!--[if lt IE 10]>
-          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <div class="fixed-options">
+            <a href="#">
+                <div class="white-fixed-option">
+                    <div class="icon-call-me"></div>
+                    <p>Veuillez me rappeler</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="blue-fixed-option">
+                    <p>Abonnez-vous<br/> <strong>en ligne </strong><span class="icon-right-arrow"></span></p>
+                </div>
+            </a>
+        </div>
 
-        <!--                HEADER                -->
         <header>
 
             <div id="top-menu-header">
                 <div class="container-wrapper">
-                    <nav class="pull-left">
-                        <ul class="top-menu-header-links left">
-                            <li><a href="#">Particuliers</a></li>
-                            <li><a href="#">Business</a></li>
-                        </ul>
-                    </nav>
-                    <nav class="pull-right">
-                        <ul class="top-menu-header-links right">
-                            <li><a href="#">Assistance</a></li>
-                            <li><a href="#">Boutiques</a></li>
-                            <li><a href="#">Magazine</a></li>
-                            <li><a href="#">À propos</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">fr</a></li>
-                        </ul>
-                    </nav>
+                    <div class="row">
+                        <nav class="pull-left">
+                            <ul class="top-menu-header-links left">
+                                <li><a href="#">Particuliers</a></li>
+                                <li><a href="#">Business</a></li>
+                            </ul>
+                        </nav>
+                        <nav class="pull-right">
+                            <ul class="top-menu-header-links right">
+                                <li><a href="#">Assistance</a></li>
+                                <li><a href="#">Boutiques</a></li>
+                                <li><a href="#">Magazine</a></li>
+                                <li><a href="#">À propos</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">fr</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
 
             <div id="bottom-menu-header">
                 <div class="container-wrapper">
-                    <div class="pull-left">
-                        <div class="logo">
-                            <img src="images/Logo_LOL_bleu.png" alt="logo LOL" />
-                        </div><!--
-                        --><nav class="bottom-menu-header-links">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <img src="images/icons/internet.png" alt="icone internet" /><div class="link">Internet</div>
-                                    </a>
-                                </li><!--
-                                --><li>
-                                    <a href="#">
-                                        <img src="images/icons/telephonie.png" alt="icone telephonie" /><div class="link">Téléphonie</div>
-                                    </a>
-                                </li><!--
-                                --><li>
-                                    <a href="#">
-                                        <img src="images/icons/tv.png" alt="icone tv" /><div class="link">Tv</div>
-                                    </a>
-                                </li><!--
-                                --><li>
-                                    <a href="#">
-                                        <img src="images/icons/mobile.png" alt="icone mobile" /><div class="link">Mobile</div>
-                                    </a>
-                                </li><!--
-                                --><li>
-                                    <a href="#">
-                                        <img src="images/icons/promos.png" alt="icone promos" /><div class="link">Promos</div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div  class="pull-right">
-                        <a class="btn-blue" href="#">Espace Client</a>
+                    <div class="row">
+                        <div class="pull-left">
+                            <div class="logo">
+                                <img src="images/icons/img/Logo-LOL.png" alt="logo LOL" />
+                            </div><!--
+                            --><nav class="bottom-menu-header-links">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <img class="header-icon" src="images/icons/img/internet.png" alt="Internet" />
+                                            <div class="link">Internet</div>
+                                        </a>
+                                    </li><!--
+                                    --><li>
+                                        <a href="#">
+                                            <img class="header-icon" src="images/icons/img/telephonie.png" alt="Téléphonie" />
+                                            <div class="link">Téléphonie</div>
+                                        </a>
+                                    </li><!--
+                                    --><li>
+                                        <a href="#">
+                                            <img class="header-icon" src="images/icons/img/tv.png" alt="Tv" />
+                                            <div class="link">Tv</div>
+                                        </a>
+                                    </li><!--
+                                    --><li>
+                                        <a href="#">
+                                            <img class="header-icon" src="images/icons/img/mobile.png" alt="Mobile" />
+                                            <div class="link">Mobile</div>
+                                        </a>
+                                    </li><!--
+                                    --><li>
+                                        <a href="#">
+                                            <img class="header-icon" src="images/icons/img/promos.png" alt="Promos" />
+                                            <div class="link">Promos</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="pull-right">
+                            <a class="btn-blue" href="#">Espace Client</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -86,32 +120,40 @@
         <!--            ./HEADER                -->
 
         <!--            SLIDER             -->
-        <div id="slider" class="hidden">
+        <div id="slider">
             <div id="slider-ui">
                 <div class="buttons">
-                    <button class="arrow left"><</button><button class="arrow right">></button>
+                    <button class="arrow left"><span class="icon-right-arrow"></span></button>
+                    <button class="arrow right"><span class="icon-right-arrow"></span></button>
                 </div>
                 <ul class="dots">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li class="active"><span class="icon-dot-stroke-slider"></span></li>
+                    <li><span class="icon-dot-slider"></span></li>
+                    <li><span class="icon-dot-slider"></span></li>
+                    <li><span class="icon-dot-slider"></span></li>
+                    <li><span class="icon-dot-slider"></span></li>
                 </ul>
             </div>
             <div id="slider-contents">
                 <div class="content" data-order="1">
-                    <div class="pull-left">
-                        <h1>offre spéciale</h1>
-                        <p>Frais d'installation et de cablage fibre <strong>offerts!</strong></p>
-                        <p>Voir détails et conditions en magasin</p>
-                    </div>
-                    <div class="pull-right">
-                        <div class="price">
-                            <div>à partir de</div>
-                            <div>,90</div>
-                            <div>54</div>
-                            <div>/mois</div>
+                    <img src="images/index/1024px/Slider/slider_fibre.jpg" 
+                         srcset="images/index/1280px/Slider/slider_fibre.jpg 1920w,
+                         images/index/1024px/Slider/slider_fibre.jpg 1400w,
+                         images/index/640px/Slider/slider_fibre.jpg 900w,
+                         images/index/320px/Slider/slider_fibre.jpg 600w"
+                         sizes="100%"  
+                         alt="pub fibre"/>
+                    <div class="infos">
+                        <div class="container-wrapper">
+                            <div class="row">
+                                <div class="phone-6 absolute-vertical-align-middle">
+                                    <h1>offre spéciale</h1>
+                                    <p>Frais d'installation et de cablage fibre<br/>
+                                        <strong>offerts!</strong>
+                                    </p>
+                                    <p class="bottom-details">Voir détails et conditions en magasin</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -122,51 +164,115 @@
         <!--                SERVICES                -->
         <section id="services">
             <div class="container-wrapper">
-                <div class="phone-3">
-                    <div class="service ">
-                        <h3><strong>lol</strong> dsl</h3>
-                        <ul class="details">
-                            <li>Internet</li>
-                            <li>+ Fixe</li>
-                            <li>+ Mobile</li>
-                            <li>Price</li>
-                        </ul>
+                <div class="flex">
+                    <div id="loldsl" class="service">
+                        <img src="images/index/1024px/Offres/LOL_DSL.jpg" 
+                             srcset="images/index/1280px/Offres/LOL_DSL.jpg 1920w,
+                             images/index/1024px/Offres/LOL_DSL.jpg 1400w,
+                             images/index/640px/Offres/LOL_DSL.jpg 900w,
+                             images/index/320px/Offres/LOL_DSL.jpg 600w"
+                             sizes="100%"
+                             alt="lol dsl background"/>
+                        <div class="infos">
+                            <h3>
+                                <strong>lol</strong> dsl</h3>
+                            <ul class="details pull-right">
+                                <li>Internet</li>
+                                <li>+ Fixe</li>
+                                <li>+ Mobile</li>
+                                <li>
+                                    <div class="price-blue">
+                                        <div>,90€</div>
+                                        34<span>/mois</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="phone-3">
-                    <div class="service">
-                        <h3>nos mobiles</h3>
-                        <ul class="details">
-                            <li>Faites-vous plais</li>
-                            <li>+ Fixe</li>
-                            <li>+ Mobile</li>
-                            <li>Price</li>
-                        </ul>
+                    <div id="mobiles" class="service">
+                        <img src="images/index/1024px/Offres/iphone6.jpg"
+                             srcset="images/index/1280px/Offres/iphone6.jpg 1920w,
+                             images/index/1024px/Offres/iphone6.jpg 1400w,
+                             images/index/640px/Offres/iphone6.jpg 900w,
+                             images/index/320px/Offres/iphone6.jpg 600w"
+                             sizes="100%"
+                             alt="nos mobiles background"/>
+                        <div class="infos">
+                            <h3>nos mobiles</h3>
+                            <ul class="details pull-left">
+                                <li>Faites-vous plaisir :</li>
+                                <li><strong>iPhone 6 (16GB)</strong></li>
+                                <li>
+                                    <div class="price-orange">
+                                        <div>€</div>
+                                        79
+                                    </div>
+                                </li>
+                            </ul>
+                            <p class="bottom-info">Prix avec Fincancement 30/24</p>
+                        </div>
                     </div>
-                </div>
-                <div class="phone-3">
-                    <div class="service">
-                        <h3>installation offerte</h3>
-                        <ul class="details">
-                            <li>Internet</li>
-                            <li>+ <strong>LOL</strong> tv</li>
-                            <li>Price</li>
-                        </ul>
+
+                    <div id="installation" class="service">
+                        <img src="images/index/1024px/Offres/Offre_TV.jpg"
+                             srcset="images/index/1280px/Offres/Offre_TV.jpg 1920w,
+                             images/index/1024px/Offres/Offre_TV.jpg 1400w,
+                             images/index/640px/Offres/Offre_TV.jpg 900w,
+                             images/index/320px/Offres/Offre_TV.jpg 600w"
+                             sizes="100%"
+                             alt="installation background">
+                        <div class="infos">
+                            <h3 class="orange">installation <strong>offerte</strong></h3>
+                            <ul class="details pull-right">
+                                <li>Internet</li>
+                                <li>+
+                                    <strong>LOL</strong> TV</li>
+                                <li>
+                                    <div class="price-blue">
+                                        <div>,90€</div>
+                                        51<span>/mois</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="phone-3">
-                    <div class="service">
-                        <h3>Toutes nos offres disponibles <strong>chez vous</strong>:</h3>
-                        <div>
+
+                    <div id="dispo" class="service">
+                        <img src="images/index/1024px/Offres/Recherche_Offre.jpg"
+                             srcset="images/index/1280px/Offres/Recherche_Offre.jpg 1920w,
+                             images/index/1024px/Offres/Recherche_Offre.jpg 1400w,
+                             images/index/640px/Offres/Recherche_Offre.jpg 900w,
+                             images/index/320px/Offres/Recherche_Offre.jpg 600w"
+                             sizes="100%"
+                             alt="disponibilité background"/>
+                        <div class="infos" style="text-align: center;">
+                            <h3 class="white">Toutes nos offres disponibles
+                                <strong>chez vous</strong>:</h3>
                             <form action="">
-                                <input type="text" />
+                                <input class="input-white" type="text" placeholder="Code Postal" maxlength="4"/>
+                                <button type="submit" class="btn-orange">Vérifiez les disponibilités</button>
                                 <ul class="icons">
-                                    <li>@</li>
-                                    <li>phone</li>
-                                    <li>tv</li>
-                                    <li>mobile</li>
+                                    <li>
+                                        <div class="dispo-icon">
+                                            <span class="icon-internet-ico"></span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="dispo-icon">
+                                            <span class="icon-telephonie-ico"></span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="dispo-icon">
+                                            <span class="icon-tv-ico"></span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="dispo-icon">
+                                            <span class="icon-mobile-ico"></span>
+                                        </div>
+                                    </li>
                                 </ul>
-                                <button type="submit">Vérifiez les disponibilités</button>
                             </form>
                         </div>
                     </div>
@@ -176,39 +282,79 @@
         <!--                ./SERVICES                -->
 
         <!--                OFFRES                -->
-        <section id="offres">
-            <div>
-                <img src="" alt="" />
-            </div>
-            <div>
-                <h1>découvrez toutes nos offres <strong>adaptées à vos besoins !</strong></h1>
-                <a href="#">Consulter le magasine</a>
+        <section id="offres" class="section-layout section-shadow right-orientation">
+            <div class="container-wrapper">
+                <div class="row clearfix">
+                    <div class="phone-6">
+                        <img class="section-img-align-bottom" src="images/index/1024px/magazines.png" 
+                             srcset="images/index/1280px/magazines.png 1920w,
+                             images/index/1024px/magazines.png 1400w,
+                             images/index/640px/magazines.png 900w,
+                             images/index/320px/magazines.png 600w"
+                             sizes="100%"
+                             alt="magazines" />
+                    </div>
+                    <div class="phone-6">
+                        <div class="vertical-align-middle">
+                            <h1 class="homepage-title">découvrez toutes nos offres
+                                <strong>adaptées à vos besoins !</strong>
+                            </h1>
+                            <a class="btn-white" href="#">Consulter le magasine</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <!--                ./OFFRES                -->
 
         <!--                20ANS               -->
-        <section id="20ans">
-            <div>
-                <img src="" alt="" />
-            </div>
-            <div>
-                <h1>Luxembourg online <strong>fête ses 20 ans !</strong></h1>
-                <p>Merci de votre fidélité.</p>
-                <a href="#">À propos de luxembourg Online</a>
+        <section id="twenty-years" class="section-layout">
+            <div class="container-wrapper">
+                <div class="row clearfix">
+                    <!--<img class="background-image-right" 
+                         src="images/index/1024px/20ans_LOL.png"
+                         srcset="images/index/1280px/20ans_LOL.png 1920w,
+                         images/index/1024px/20ans_LOL.png 1400w,
+                         images/index/640px/20ans_LOL.png 900w,
+                         images/index/320px/20ans_LOL.png 600w"
+                         sizes="100%"
+                         alt="bannière vingt ans"/>-->
+                    <div class="phone-6">
+                        <div class="vertical-align-middle">
+                            <h1 class="homepage-title">Luxembourg online<br/>
+                                <strong>fête ses 20 ans !</strong>
+                            </h1>
+                            <p class="homepage-description">Merci de votre fidélité.</p>
+                            <a class="btn-white" href="#">À propos de luxembourg Online</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <!--              ./20ANS               -->
 
         <!--              PORTAIL               -->
-        <section id="portail">
-            <div>
-                <img src="" alt="" />
-            </div>
-            <div>
-                <h1>Luxembourg online l'actu high-tech, cinéma et toutes vos sorties <strong>au luxembourg!</strong></h1>
-                <p>Merci de votre fidélité.</p>
-                <a href="#">Accéder à online.lu</a>
+        <section id="portail" class="section-layout section-shadow right-orientation">
+            <div class="container-wrapper">
+                <div class="row clearfix">
+                    <div class="phone-6">
+                        <img class="section-img-align-bottom" src="images/index/1024px/Portail.jpg"
+                             srcset="images/index/1280px/Portail.jpg 1920w,
+                             images/index/1024px/Portail.jpg 1400w,
+                             images/index/640px/Portail.jpg 900w,
+                             images/index/320px/Portail.jpg 600w"
+                             sizes="100%"
+                             alt="portail background" />
+                    </div>
+                    <div class="phone-6">
+                        <div class="vertical-align-middle">
+                            <h1 class="homepage-title">
+                                L’actu high-tech, cinéma et toutes vos sorties <br><strong>au luxembourg !</strong>
+                            </h1>
+                            <a class="btn-white" href="#">Accéder à online.lu</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <!--              ./PORTAIL               -->
@@ -216,92 +362,154 @@
         <!--              FOOTER               -->
         <footer>
             <div id="social-links">
-                <nav>
-                    <ul>
-                        <li><a href="#"><span></span>Online.lu</a></li>
-                        <li><a href="#"><span></span>Facebook</a></li>
-                        <li><a href="#"><span></span>Twitter</a></li>
-                        <li><a href="#"><span></span>Google+</a></li>
-                        <li><a href="#"><span></span>Linkedin</a></li>
-                    </ul>
-                </nav> 
+                <div class="container-wrapper">
+                    <div class="row">
+                        <span>Rejoignez-nous sur: </span>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <div class="social-icon lol"><span class="icon-icone-lol"></span></div>
+                                        <span class="brand-name">Online.lu</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="social-icon facebook"><span class="icon-facebook"></span></div>
+                                        <span class="brand-name">Facebook</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="social-icon twitter"><span class="icon-twitter"></span></div>
+                                        <span class="brand-name">Twitter</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="social-icon google"><span class="icon-google"></span></div>
+                                        <span class="brand-name">Google+</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="social-icon linkedin"><span class="icon-linkedin"></span></div>
+                                        <span class="brand-name">Linkedin</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
             </div>
-
             <div id="contact">
-                <ul class="contact-infos">
-                    <li><span></span>2799 0000</li>
-                    <li><span></span>Lu-Ve: 8h00-19h00  l  Sa: 9h00-18h00</li>
-                    <li><span></span>helpdesk@internet.lu</li>
-                </ul>
-            </div>
-
-            <div id="footer-links">
-                <a href="#"><p><span></span>: FAQ, informations, documents utiles, contrats, divers : accédez toute l’aide sur l’espace assistance de Luxembourg Online <span>></span></p></a>
-                <hr />
-                <div class="footer-links">
-                    <h4>internet:</h4>
-                    <nav>
-                        <ul class="links">
-                            <li><a href="#">Nos abonnements</a></li>
-                            <li><a href="#">Coup de coeur</a></li>
-                            <li><a href="#">LOL FIBER 100</a></li>
-                            <li><a href="#">Équipement</a></li>
-                            <li><a href="#">S'abonner</a></li>
+                <div class="container-wrapper">
+                    <div class="row">
+                        <span>Contactez-nous:</span>
+                        <ul class="contact-infos">
+                            <li>
+                                <span class="icon-phone-icone"></span>2799 0000
+                            </li>
+                            <li>
+                                <span class="icon-clock-icone"></span>Lu-Ve: 8h00-19h00&nbsp&nbspl&nbsp&nbspSa: 9h00-18h00
+                            </li>
+                            <li>
+                                <span class="icon-internet-ico"></span>helpdesk@internet.lu
+                            </li>
                         </ul>
-                    </nav>
-                </div>
-                <div class="footer-links">
-                    <h4>téléphonie:</h4>
-                    <nav>
-                        <ul class="links">
-                            <li><a href="#">Abonnement</a></li>
-                            <li><a href="#">Tarifs détaillés</a></li>
-                            <li><a href="#">Équipement</a></li>
-                            <li><a href="#">S'abonner</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="footer-links">
-                    <h4>tv:</h4>
-                    <nav>
-                        <ul class="links">
-                            <li><a href="#">Abonnement</a></li>
-                            <li><a href="#">Chaines</a></li>
-                            <li><a href="#">Équipement</a></li>
-                            <li><a href="#">S'abonner</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="footer-links">
-                    <h4>promos:</h4>
-                    <nav>
-                        <ul class="links">
-                            <li><a href="#">Offre spéciale fibre</a></li>
-                            <li><a href="#">TV - installation offerte</a></li>
-                            <li><a href="#">Offre spéciale II</a></li>
-                            <li><a href="#">Offre spécial Mobile</a></li>
-                        </ul>
-                    </nav>
+                    </div>
                 </div>
             </div>
-            <hr />
-            <div>
-                <nav>
-                    <ul class="links">
-                        <li><span></span>&copy;2015 Luxembourg Online S.A</li>
-                        <li><a href="#">Mentions légales</a></li>
-                        <li><a href="#">Offres d'emploi</a></li>
-                        <li><a href="#">Plan du site</a></li>
-                        <li><a href="#">Cookies</a></li>
-                        <li></li>
-                    </ul>
-                </nav>
+            <div id="footer-links"><div class="container-wrapper">
+                    <div class="row">
+                        <a class="help-link" href="#">
+                            <span style="font-size: 21pt; margin-right: 16px; top: 7px;" class="icon-info-icone"></span>
+                            <p> : FAQ, informations, documents utiles, contrats, divers : accédez à toute l’aide sur l’espace assistance de Luxembourg Online</p>
+                            <span style="margin-left: 16px;" class="icon-right-arrow"></span>
+                        </a>
+                        <hr class="separator"/>
+                    </div>
+                    <div class="row">
+                        <div class="footer-top-links">
+                            <h4>internet:</h4>
+                            <nav>
+                                <ul class="links">
+                                    <li><a href="#">Nos abonnements</a></li>
+                                    <li><a href="#">Coup de coeur</a></li>
+                                    <li><a href="#">LOL FIBER 100</a></li>
+                                    <li><a href="#">Équipement</a></li>
+                                    <li><a href="#">S'abonner</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="footer-top-links">
+                            <h4>téléphonie:</h4>
+                            <nav>
+                                <ul class="links">
+                                    <li><a href="#">Abonnement</a></li>
+                                    <li><a href="#">Tarifs détaillés</a></li>
+                                    <li><a href="#">Équipement</a></li>
+                                    <li><a href="#">S'abonner</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="footer-top-links">
+                            <h4>tv:</h4>
+                            <nav>
+                                <ul class="links">
+                                    <li><a href="#">Abonnement</a></li>
+                                    <li><a href="#">Chaines</a></li>
+                                    <li><a href="#">Équipement</a></li>
+                                    <li><a href="#">S'abonner</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="footer-top-links">
+                            <h4>promos:</h4>
+                            <nav>
+                                <ul class="links">
+                                    <li><a href="#">Offre spéciale fibre</a></li>
+                                    <li><a href="#">TV - installation offerte</a></li>
+                                    <li><a href="#">Offre spéciale II</a></li>
+                                    <li><a href="#">Offre spécial Mobile</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <hr class="separator"/>
+                        <div>
+                            <nav>
+                                <ul class="footer-bottom-links">
+                                    <li>
+                                        <span class="icon-icone-lol"></span>&copy;2015 Luxembourg Online S.A</li>
+                                    <li><a href="#">Mentions légales</a></li>
+                                    <li><a href="#">Offres d'emploi</a></li>
+                                    <li><a href="#">Plan du site</a></li>
+                                    <li><a href="#">Cookies</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
             </div>
         </footer>
         <!--              ./FOOTER               -->
 
+
+        <!-- build:js(.) scripts/vendor.js -->
+        <!-- bower:js -->
+        <!--<script src="/bower_components/jquery/dist/jquery.js"></script>-->
         <script src="scripts/vendor/jquery.min.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+
+
+        <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <!-- endbuild -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -321,4 +529,5 @@
             ga('send', 'pageview');
         </script>
     </body>
+
 </html>

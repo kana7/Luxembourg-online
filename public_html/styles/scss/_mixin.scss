@@ -176,7 +176,7 @@
     } @else if $depth > 5 {
         @warn "Invalid $depth `#{$depth}` for mixin `card`.";
     } @else {
-        box-shadow: bottom-shadow($depth), top-shadow($depth);  
+        box-shadow: bottom-shadow($depth), top-shadow($depth);
     }
 }
 @function top-shadow($depth) {
@@ -206,4 +206,51 @@
 
 @mixin letterpress($opacity){
     text-shadow:white($opacity) 0 1px 0;
+}
+
+@mixin background($imgpath,$position:0 0,$repeat: no-repeat) {
+    background: {
+        image: url($imgpath);
+        position: $position;
+        repeat: $repeat;
+    }
+}
+
+@mixin placeHolder{
+    &::-webkit-input-placeholder{@content}
+    &:-moz-placeholder{@content}
+    &::-moz-placeholder{@content}
+    &:-ms-input-placeholder{@content}
+}
+
+@mixin display-flex-spread(){
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@mixin display-flex-spread-item {
+  -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
 }

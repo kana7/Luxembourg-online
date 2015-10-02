@@ -1,75 +1,340 @@
-.container-wrapper{
-    @include clearfix;
+.container-wrapper
+{
     margin-right: auto;
     margin-left: auto;
-    padding-left: ($gridGutterWidth/2);
     padding-right: ($gridGutterWidth/2);
-    width: 90%;
+    padding-left: ($gridGutterWidth/2);
+    height: 100%;
+
+    @include clearfix;
 }
+
+.absolute-vertical-align-middle
+{
+    @include vertical-align-middle(absolute);
+}
+.vertical-align-middle
+{
+    @include vertical-align-middle();
+}
+
+.background-image-right
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+    height: 60% !important;
+    width: auto !important;
+
+}
+
+// FIXED ELEMENT
+// --------------------------------------------------
+.fixed-options{
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 45%;
+    width: 125px;
+    z-index: 3;
+}
+.white-fixed-option,.blue-fixed-option{
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 10px 10px;
+    text-align: right;
+} 
 
 // HEADER
 // --------------------------------------------------
+header
+{
+    position: relative;
 
-header{
     display: block;
-    position:relative;
+
     width: 100%;
-}
 
-#top-menu-header{
+    z-index: 1;
+}
+#top-menu-header
+{
+    position: relative;
+
     display: block;
-    position: relative; 
+
     background-color: $blue;
 }
-#bottom-menu-header{
-    display: block;
+#bottom-menu-header
+{
     position: relative;
+
+    display: block;
+
+    padding: 7px 0;
+
     @include clearfix;
-
-    padding: 12px 0px;
-
-    background-color: rgba(255,255,255,1);
-    @include filter-gradient(#ffffff, #e5e5e5, vertical);
-    @include background-image(linear-gradient(top, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 95%, rgba(235,235,235,1) 100%));
-    @include box-shadow(0px 4px 15px 0  lighten($grey, 18%));
 }
-
-#bottom-menu-header{
-    .pull-right{
+#bottom-menu-header
+{
+    .pull-left
+    {
         position: relative;
-        top: 2px;
+        top: 3px;
     }
 }
-
-.logo{
-    display: inline-block;
+.logo
+{
     position: relative;
-    height: 48px;
+
+    display: inline-block;
+    float: left;
+
     width: auto;
+    height: 40px;
     margin-right: 30px;
-    img{
-        height: 100%;
+    img
+    {
         width: auto;
+        height: 100%;
+    }
+}
+// CAROUSEL - HOMEPAGE
+// --------------------------------------------------
+#slider{
+    display: block;
+    position: relative;
+    width: 100%;
+    #slider-ui{
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+
+    }
+}
+#slider-contents{
+    display: block;
+    position: relative;
+    .content{
+        position: relative;
+        img{
+            display: block;
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+        .infos{
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
     }
 }
 
 // SERVICES - HOMEPAGE
 // --------------------------------------------------
+#services
+{
+    padding: 18px 0;
 
-#services{ 
-    &>.container-wrapper>div{
-        padding: 0px 5px;
-        &:first-child{
-            padding-left: 0;
+    text-align: center;
+    .flex
+    {
+        margin-right: -($gridGutterWidth/2);
+        margin-left: -($gridGutterWidth/2);
+
+        @include display-flex-spread;
+    }
+    .service
+    {
+        position: relative;
+
+        width: 24%;
+
+        @include display-flex-spread-item;
+        img
+        {
+            display: block;
+
+            width: 100%;
+            height: auto;
         }
-        &:last-child{
-            padding-right: 0;
+        .infos
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+            padding: 0 6% 15px 6%;
         }
     }
-    .service{
+}
+
+#dispo
+{
+    .input-white
+    {
+        width: 75%;
+    }
+    .btn-orange
+    {
+        position: relative;
+
+        margin-top: 10px;
+    }
+}
+
+// SECTIONs - HOMEPAGE
+// -------------------------------------------------
+
+.section-layout{
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    height: 400px;
+    .container-wrapper, .row, .row>div{
+        position: relative;
+        height: 100%;
+    }
+    img
+    {
+        width: auto;
+        height: 100%;
+    }
+    .btn-white
+    {
+        margin-top: 50px;
+    }
+}
+
+.section-img-align-bottom{
+    position: absolute;
+    bottom: 0;
+}
+
+.right-orientation,
+.left-orientation
+{
+    .row
+    {
+        position: relative;
+    }
+}
+
+.right-orientation .row > div:first-child,
+.left-orientation .row > div:last-child
+{
+    left: 0;
+
+    float: left !important;
+
+    text-align: left;
+    .section-img-align-bottom{
+        left: 0;
+    }
+}
+.right-orientation .row > div:last-child,
+.left-orientation .row > div:first-child
+{
+    right: 0;
+
+    float: right !important;
+
+    text-align: right;
+    .section-align-image-bottom{
+        right: 0;
+    }
+}
+
+// FOOTER - HOMEPAGE
+// -------------------------------------------------
+footer
+{
+    display: block;
+}
+#social-links,
+#contact,
+#footer-links
+{
+    display: inline-block;
+
+    width: 100%;
+}
+#social-links nav,
+#contact ul
+{
+    float: right;
+
+    width: 85%;
+
+    text-align: right;
+}
+
+#social-links ul,
+#contact ul
+{
+    @include display-flex-spread;
+    li
+    {
+        @include display-flex-spread-item;
+    }
+}
+
+
+#social-links
+{
+    padding: 25px 0 6px;
+    a
+    {
+        @include clearfix;
+    }
+    span,
+    .social-icon
+    {
         display: inline-block;
-        &:not(:last-child){
-            margin-right: 15px;
-        }
+        float: left;
+    }
+    .social-icon
+    {
+        position: relative;
+        bottom: 9px;
+
+        display: inline-block;
+
+        width: 34px;
+        height: 34px;
+        margin-right: 15px;
+    }
+    nav
+    {
+        display: inline-block;
+    }
+    ul
+    {
+        width: 100%;
+    }
+}
+
+#contact
+{
+    margin-top: -2px;
+    padding: 17px 0 9px;
+    span
+    {
+        display: inline-block;
+        float: left;
     }
 }

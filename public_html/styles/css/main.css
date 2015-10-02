@@ -1794,7 +1794,8 @@ span[class^=icon-] {
 
 .btn-blue,
 .btn-orange,
-.btn-white {
+.btn-white,
+.mobile-menu-button button {
   font-size: 16px;
   font-weight: 600;
   position: relative;
@@ -1819,14 +1820,40 @@ span[class^=icon-] {
   user-select: none; }
   .btn-blue:focus,
   .btn-orange:focus,
-  .btn-white:focus {
+  .btn-white:focus,
+  .mobile-menu-button button:focus {
     outline: 0; }
   .btn-blue:hover, .btn-blue:focus,
   .btn-orange:hover,
   .btn-orange:focus,
   .btn-white:hover,
-  .btn-white:focus {
+  .btn-white:focus,
+  .mobile-menu-button button:hover,
+  .mobile-menu-button button:focus {
     text-decoration: none; }
+
+.mobile-menu-button {
+  height: 100%; }
+  .mobile-menu-button button {
+    display: inline;
+    width: 42px;
+    height: 100%;
+    float: left;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+    background-color: #004994;
+    margin-right: 18px; }
+  .mobile-menu-button span[class^=icon-] {
+    display: inline;
+    margin: 0;
+    font-size: 21px; }
+    .mobile-menu-button span[class^=icon-].icon-account-icone {
+      color: #fff; }
+    .mobile-menu-button span[class^=icon-].icon-menu-icone {
+      color: #004994;
+      font-size: 30px;
+      top: 3px; }
 
 .btn-blue {
   color: #fff;
@@ -2219,12 +2246,18 @@ footer {
   display: block;
   padding: 5px 0; }
 
+@media screen and (max-width: 991px) {
+  #bottom-menu-header {
+    padding: 15px 0; }
+    #bottom-menu-header .pull-left {
+      width: 100%;
+      top: 0; } }
 @media screen and (max-width: 1279px) {
   .header-icon {
     display: none !important; }
 
   .bottom-menu-header-links {
-    float: left;
+    float: right;
     height: 40px; }
     .bottom-menu-header-links ul {
       height: 100%; }

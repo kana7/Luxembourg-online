@@ -1,11 +1,21 @@
 // RESPONSIVE STYLE
 // --------------------------------------------------
+@include viewport(max, $max: 991){
+    #bottom-menu-header{
+        padding: 15px 0;
+        .pull-left{
+            width: 100%;
+            top: 0;
+        }
+    }
+}
+
 @include viewport(max, $max: 1279){
     .header-icon{
         display: none !important;
     }
     .bottom-menu-header-links{ 
-        float: left;
+        float: right;
         height: 40px;
         ul{height: 100%;}
         li{
@@ -21,7 +31,6 @@
             } 
         }
     }
-
     .container-wrapper{
         width: 95%;
     }
@@ -32,7 +41,6 @@
         padding: 0 15px;
     }
 }
-
 @include media(tab){
     .section-layout{
         height: 350px;

@@ -200,9 +200,35 @@ span[class^=icon-]
 }
 .btn-blue,
 .btn-orange,
-.btn-white
+.btn-white,
+.mobile-menu-button button
 {
     @include btn;
+}
+.mobile-menu-button{
+    height: 100%;
+    button{
+        display: inline;
+        width: 42px;
+        height: 100%;
+        float: left;
+        padding: 5px;
+        margin: 0;
+        text-align: center;
+        background-color: $blue; 
+        margin-right: 18px;
+    }
+    span[class^=icon-]{
+        display: inline;
+        margin: 0;
+        font-size: 21px;
+        &.icon-account-icone{color:$white;}    
+        &.icon-menu-icone{
+            color: $blue; 
+            font-size: 30px;
+            top: 3px;
+        }    
+    }
 }
 .btn-blue
 {

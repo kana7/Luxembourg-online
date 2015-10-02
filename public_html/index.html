@@ -44,7 +44,7 @@
 
         <header>
 
-            <div id="top-menu-header">
+            <div id="top-menu-header" class="hidden-phone hidden-tab">
                 <div class="container-wrapper">
                     <div class="row">
                         <nav class="pull-left">
@@ -75,7 +75,13 @@
                                 <img src="images/icons/img/Logo-LOL.png" alt="logo LOL" />
                             </div><!--
                             --><nav class="bottom-menu-header-links">
-                                <ul>
+                                <div class="mobile-menu-button display-phone display-tab">
+                                    <button>
+                                        <span class="icon-account-icone"></span>
+                                    </button>
+                                    <span class="icon-menu-icone"></span>
+                                </div>
+                                <ul class="hidden-phone hidden-tab">
                                     <li>
                                         <a href="#">
                                             <img class="header-icon" src="images/icons/img/internet.png" alt="Internet" />
@@ -109,7 +115,7 @@
                                 </ul>
                             </nav>
                         </div>
-                        <div class="pull-right">
+                        <div class="pull-right hidden-phone hidden-tab">
                             <a class="btn-blue" href="#">Espace Client</a>
                         </div>
                     </div>

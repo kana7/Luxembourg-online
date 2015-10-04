@@ -71,21 +71,50 @@ header
 #bottom-menu-header
 {
     position: relative;
-
     display: block;
-
-    padding: 7px 0;
-
+    height: 50px;
+    padding: 8px 0;
     @include clearfix;
-}
-#bottom-menu-header
-{
+    .row{height:100%;}
     .pull-left
     {
         position: relative;
-        top: 3px;
+        height: 100%;
+        width: 100%;
+        top: 0px;
     }
 }
+.bottom-menu-header-links{
+    position: relative;
+    display: inline-block;
+    float: right;
+    height: 100%;
+    ul{height: 100%;}
+    li{
+        height: 100%;
+        border-left: none;        
+        a{
+            position: relative;
+            display: block;
+            height: 100%;
+            width: 100%;
+            line-height: 42px;
+            padding: 0 27px;
+            img{
+                display: inline-block;
+                width: auto;
+                height: 100%;
+                margin-right: 10px;
+            }
+            .link{
+                position: relative;
+                display: inline-block;
+                bottom: auto;
+            }
+        }
+    }
+}
+
 .logo
 {
     position: relative;
@@ -94,7 +123,7 @@ header
     float: left;
 
     width: auto;
-    height: 40px;
+    height: 100%;
     margin-right: 30px;
     img
     {
@@ -108,6 +137,7 @@ header
     display: block;
     position: relative;
     width: 100%;
+    padding-bottom: 35px;
     #slider-ui{
         display: block;
         position: absolute;
@@ -130,11 +160,11 @@ header
         }
         .infos{
             display: block;
-            position: absolute;
+            position: relative;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
+            height: 135px;
         }
 
     }
@@ -147,36 +177,38 @@ header
     padding: 18px 0;
 
     text-align: center;
-    .flex
-    {
-        margin-right: -($gridGutterWidth/2);
-        margin-left: -($gridGutterWidth/2);
 
-        @include display-flex-spread;
+    .row>div[class^=phone-]{
+        padding: 0 7px;
+        text-align: center;
     }
+
     .service
     {
+        display: inline-block;
         position: relative;
 
-        width: 24%;
+        width: 100%;
+        max-width: 320px;
+        height: 235px;
+        margin-bottom: 25px;
+        background-repeat:no-repeat;
+        background-position:center;
+        background-size: cover;
 
-        @include display-flex-spread-item;
-        img
-        {
-            display: block;
+        &#loldsl{background-image: url(../../images/index/320px/Offres/LOL_DSL.jpg);}
+        &#mobiles{background-image: url(../../images/index/320px/Offres/iphone6.jpg);}
+        &#installation{background-image: url(../../images/index/320px/Offres/Offre_TV.jpg);}
+        &#dispo{background-image: url(../../images/index/320px/Offres/Recherche_Offre.jpg);}
 
-            width: 100%;
-            height: auto;
-        }
         .infos
         {
             position: absolute;
+            padding: 0 20px;
             top: 0;
+            right: 0;
             left: 0;
-
-            width: 100%;
-            height: 100%;
-            padding: 0 6% 15px 6%;
+            bottom: 0;
         }
     }
 }
@@ -186,6 +218,7 @@ header
     .input-white
     {
         width: 75%;
+        height: 45px;
     }
     .btn-orange
     {
@@ -202,9 +235,11 @@ header
     position: relative;
 
     display: block;
-
+    padding: 30px 0;
     width: 100%;
-    height: 400px;
+    height: auto;
+    text-align: center;
+
     .container-wrapper, .row, .row>div{
         position: relative;
         height: 100%;
@@ -212,51 +247,13 @@ header
     img
     {
         width: auto;
-        height: 100%;
-    }
-    .btn-white
-    {
-        margin-top: 50px;
+        height: 230px;
     }
 }
 
 .section-img-align-bottom{
-    position: absolute;
+    position: relative;
     bottom: 0;
-}
-
-.right-orientation,
-.left-orientation
-{
-    .row
-    {
-        position: relative;
-    }
-}
-
-.right-orientation .row > div:first-child,
-.left-orientation .row > div:last-child
-{
-    left: 0;
-
-    float: left !important;
-
-    text-align: left;
-    .section-img-align-bottom{
-        left: 0;
-    }
-}
-.right-orientation .row > div:last-child,
-.left-orientation .row > div:first-child
-{
-    right: 0;
-
-    float: right !important;
-
-    text-align: right;
-    .section-align-image-bottom{
-        right: 0;
-    }
 }
 
 // FOOTER - HOMEPAGE

@@ -28,7 +28,7 @@
         <!--[if lt IE 10]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="fixed-options">
+        <div class="fixed-options hidden-phone hidden-tab">
             <a href="#">
                 <div class="white-fixed-option">
                     <div class="icon-call-me"></div>
@@ -128,7 +128,7 @@
         <!--            SLIDER             -->
         <div id="slider">
             <div id="slider-ui">
-                <div class="buttons">
+                <div class="buttons hidden-phone hidden-tab">
                     <button class="arrow left"><span class="icon-right-arrow"></span></button>
                     <button class="arrow right"><span class="icon-right-arrow"></span></button>
                 </div>
@@ -142,19 +142,12 @@
             </div>
             <div id="slider-contents">
                 <div class="content" data-order="1">
-                    <img src="images/index/1024px/Slider/slider_fibre.jpg" 
-                         srcset="images/index/1280px/Slider/slider_fibre.jpg 1920w,
-                         images/index/1024px/Slider/slider_fibre.jpg 1400w,
-                         images/index/640px/Slider/slider_fibre.jpg 900w,
-                         images/index/320px/Slider/slider_fibre.jpg 600w"
-                         sizes="100%"  
-                         alt="pub fibre"/>
                     <div class="infos">
                         <div class="container-wrapper">
                             <div class="row">
-                                <div class="phone-6 absolute-vertical-align-middle">
-                                    <h1>offre spéciale</h1>
-                                    <p>Frais d'installation et de cablage fibre<br/>
+                                <div class="phone-12 desk-6">
+                                    <h1 class="title">offre spéciale</h1>
+                                    <p class="top-details">Frais d'installation et de cablage fibre<br/>
                                         <strong>offerts!</strong>
                                     </p>
                                     <p class="bottom-details">Voir détails et conditions en magasin</p>
@@ -162,6 +155,13 @@
                             </div>
                         </div>
                     </div>
+                    <img src="images/index/1024px/Slider/slider_fibre.jpg" 
+                         srcset="images/index/1280px/Slider/slider_fibre.jpg 1920w,
+                         images/index/1024px/Slider/slider_fibre.jpg 1400w,
+                         images/index/640px/Slider/slider_fibre.jpg 900w,
+                         images/index/320px/Slider/slider_fibre.jpg 600w"
+                         sizes="100%"  
+                         alt="pub fibre"/>
                 </div>
             </div>
         </div>
@@ -170,116 +170,96 @@
         <!--                SERVICES                -->
         <section id="services">
             <div class="container-wrapper">
-                <div class="flex">
-                    <div id="loldsl" class="service">
-                        <img src="images/index/1024px/Offres/LOL_DSL.jpg" 
-                             srcset="images/index/1280px/Offres/LOL_DSL.jpg 1920w,
-                             images/index/1024px/Offres/LOL_DSL.jpg 1400w,
-                             images/index/640px/Offres/LOL_DSL.jpg 900w,
-                             images/index/320px/Offres/LOL_DSL.jpg 600w"
-                             sizes="100%"
-                             alt="lol dsl background"/>
-                        <div class="infos">
-                            <h3>
-                                <strong>lol</strong> dsl</h3>
-                            <ul class="details pull-right">
-                                <li>Internet</li>
-                                <li>+ Fixe</li>
-                                <li>+ Mobile</li>
-                                <li>
-                                    <div class="price-blue">
-                                        <div>,90€</div>
-                                        34<span>/mois</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div id="mobiles" class="service">
-                        <img src="images/index/1024px/Offres/iphone6.jpg"
-                             srcset="images/index/1280px/Offres/iphone6.jpg 1920w,
-                             images/index/1024px/Offres/iphone6.jpg 1400w,
-                             images/index/640px/Offres/iphone6.jpg 900w,
-                             images/index/320px/Offres/iphone6.jpg 600w"
-                             sizes="100%"
-                             alt="nos mobiles background"/>
-                        <div class="infos">
-                            <h3>nos mobiles</h3>
-                            <ul class="details pull-left">
-                                <li>Faites-vous plaisir :</li>
-                                <li><strong>iPhone 6 (16GB)</strong></li>
-                                <li>
-                                    <div class="price-orange">
-                                        <div>€</div>
-                                        79
-                                    </div>
-                                </li>
-                            </ul>
-                            <p class="bottom-info">Prix avec Fincancement 30/24</p>
-                        </div>
-                    </div>
-
-                    <div id="installation" class="service">
-                        <img src="images/index/1024px/Offres/Offre_TV.jpg"
-                             srcset="images/index/1280px/Offres/Offre_TV.jpg 1920w,
-                             images/index/1024px/Offres/Offre_TV.jpg 1400w,
-                             images/index/640px/Offres/Offre_TV.jpg 900w,
-                             images/index/320px/Offres/Offre_TV.jpg 600w"
-                             sizes="100%"
-                             alt="installation background">
-                        <div class="infos">
-                            <h3 class="orange">installation <strong>offerte</strong></h3>
-                            <ul class="details pull-right">
-                                <li>Internet</li>
-                                <li>+
-                                    <strong>LOL</strong> TV</li>
-                                <li>
-                                    <div class="price-blue">
-                                        <div>,90€</div>
-                                        51<span>/mois</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div id="dispo" class="service">
-                        <img src="images/index/1024px/Offres/Recherche_Offre.jpg"
-                             srcset="images/index/1280px/Offres/Recherche_Offre.jpg 1920w,
-                             images/index/1024px/Offres/Recherche_Offre.jpg 1400w,
-                             images/index/640px/Offres/Recherche_Offre.jpg 900w,
-                             images/index/320px/Offres/Recherche_Offre.jpg 600w"
-                             sizes="100%"
-                             alt="disponibilité background"/>
-                        <div class="infos" style="text-align: center;">
-                            <h3 class="white">Toutes nos offres disponibles
-                                <strong>chez vous</strong>:</h3>
-                            <form action="">
-                                <input class="input-white" type="text" placeholder="Code Postal" maxlength="4"/>
-                                <button type="submit" class="btn-orange">Vérifiez les disponibilités</button>
-                                <ul class="icons">
+                <div class="row">
+                    <div class="phone-12 tab-6 desk-3">
+                        <div id="loldsl" class="service">
+                            <div class="infos">
+                                <h3>
+                                    <strong>lol</strong> dsl</h3>
+                                <ul class="details pull-right">
+                                    <li>Internet</li>
+                                    <li>+ Fixe</li>
+                                    <li>+ Mobile</li>
                                     <li>
-                                        <div class="dispo-icon">
-                                            <span class="icon-internet-ico"></span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dispo-icon">
-                                            <span class="icon-telephonie-ico"></span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dispo-icon">
-                                            <span class="icon-tv-ico"></span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dispo-icon">
-                                            <span class="icon-mobile-ico"></span>
+                                        <div class="price-blue">
+                                            <div>,90€</div>
+                                            34<span>/mois</span>
                                         </div>
                                     </li>
                                 </ul>
-                            </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone-12 tab-6 desk-3">
+                        <div id="mobiles" class="service">
+                            <div class="infos">
+                                <h3>nos mobiles</h3>
+                                <ul class="details pull-left">
+                                    <li>Faites-vous plaisir :</li>
+                                    <li><strong>iPhone 6 (16GB)</strong></li>
+                                    <li>
+                                        <div class="price-orange">
+                                            <div>€</div>
+                                            79
+                                        </div>
+                                    </li>
+                                </ul>
+                                <p class="bottom-info">Prix avec Fincancement 30/24</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="phone-12 tab-6 desk-3">
+                        <div id="installation" class="service">
+                            <div class="infos">
+                                <h3 class="orange">installation <strong>offerte</strong></h3>
+                                <ul class="details pull-right">
+                                    <li>Internet</li>
+                                    <li>+
+                                        <strong>LOL</strong> TV</li>
+                                    <li>
+                                        <div class="price-blue">
+                                            <div>,90€</div>
+                                            51<span>/mois</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="phone-12 tab-6 desk-3">
+                        <div id="dispo" class="service">
+                            <div class="infos" style="text-align: center;">
+                                <h3 class="white">Toutes nos offres disponibles
+                                    <strong>chez vous</strong> : </h3>
+                                <form action="">
+                                    <input class="input-white" type="text" placeholder="Code Postal" maxlength="4"/>
+                                    <button type="submit" class="btn-orange">Vérifiez les disponibilités</button>
+                                    <ul class="icons hidden-phone">
+                                        <li>
+                                            <div class="dispo-icon">
+                                                <span class="icon-internet-ico"></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="dispo-icon">
+                                                <span class="icon-telephonie-ico"></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="dispo-icon">
+                                                <span class="icon-tv-ico"></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="dispo-icon">
+                                                <span class="icon-mobile-ico"></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -291,7 +271,7 @@
         <section id="offres" class="section-layout section-shadow right-orientation">
             <div class="container-wrapper">
                 <div class="row clearfix">
-                    <div class="phone-6">
+                    <div class="phone-12 desk-6">
                         <img class="section-img-align-bottom" src="images/index/1024px/magazines.png" 
                              srcset="images/index/1280px/magazines.png 1920w,
                              images/index/1024px/magazines.png 1400w,
@@ -300,13 +280,11 @@
                              sizes="100%"
                              alt="magazines" />
                     </div>
-                    <div class="phone-6">
-                        <div class="vertical-align-middle">
-                            <h1 class="homepage-title">découvrez toutes nos offres
-                                <strong>adaptées à vos besoins !</strong>
-                            </h1>
-                            <a class="btn-white" href="#">Consulter le magasine</a>
-                        </div>
+                    <div class="phone-12 desk-6">
+                        <h1 class="homepage-title">découvrez toutes nos offres
+                            <strong>adaptées à vos besoins !</strong>
+                        </h1>
+                        <a class="btn-white" href="#">Consulter le magasine</a>
                     </div>
                 </div>
             </div>
@@ -325,14 +303,12 @@
                          images/index/320px/20ans_LOL.png 600w"
                          sizes="100%"
                          alt="bannière vingt ans"/>-->
-                    <div class="phone-6">
-                        <div class="vertical-align-middle">
-                            <h1 class="homepage-title">Luxembourg online<br/>
-                                <strong>fête ses 20 ans !</strong>
-                            </h1>
-                            <p class="homepage-description">Merci de votre fidélité.</p>
-                            <a class="btn-white" href="#">À propos de luxembourg Online</a>
-                        </div>
+                    <div class="phone-12 desk-6">
+                        <h1 class="homepage-title">Luxembourg online<br/>
+                            <strong>fête ses 20 ans !</strong>
+                        </h1>
+                        <p class="homepage-description">Merci de votre fidélité.</p>
+                        <a class="btn-white" href="#">À propos de luxembourg Online</a>
                     </div>
                 </div>
             </div>
@@ -343,7 +319,7 @@
         <section id="portail" class="section-layout section-shadow right-orientation">
             <div class="container-wrapper">
                 <div class="row clearfix">
-                    <div class="phone-6">
+                    <div class="phone-12 desk-6">
                         <img class="section-img-align-bottom" src="images/index/1024px/Portail.jpg"
                              srcset="images/index/1280px/Portail.jpg 1920w,
                              images/index/1024px/Portail.jpg 1400w,
@@ -352,13 +328,11 @@
                              sizes="100%"
                              alt="portail background" />
                     </div>
-                    <div class="phone-6">
-                        <div class="vertical-align-middle">
-                            <h1 class="homepage-title">
-                                L’actu high-tech, cinéma et toutes vos sorties <br><strong>au luxembourg !</strong>
-                            </h1>
-                            <a class="btn-white" href="#">Accéder à online.lu</a>
-                        </div>
+                    <div class="phone-12 desk-6">
+                        <h1 class="homepage-title">
+                            L’actu high-tech, cinéma et toutes vos sorties <br><strong>au luxembourg !</strong>
+                        </h1>
+                        <a class="btn-white" href="#">Accéder à online.lu</a>
                     </div>
                 </div>
             </div>
@@ -429,13 +403,13 @@
             <div id="footer-links"><div class="container-wrapper">
                     <div class="row">
                         <a class="help-link" href="#">
-                            <span style="font-size: 21pt; margin-right: 16px; top: 7px;" class="icon-info-icone"></span>
+                            <span class="icon-info-icone"></span>
                             <p> : FAQ, informations, documents utiles, contrats, divers : accédez à toute l’aide sur l’espace assistance de Luxembourg Online</p>
-                            <span style="margin-left: 16px;" class="icon-right-arrow"></span>
+                            <span class="icon-right-arrow"></span>
                         </a>
-                        <hr class="separator"/>
+                        <hr class="separator hidden-phone hidden-tab"/>
                     </div>
-                    <div class="row">
+                    <div class="row hidden-phone hidden-tab">
                         <div class="footer-top-links">
                             <h4>internet:</h4>
                             <nav>

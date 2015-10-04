@@ -621,7 +621,7 @@ th {
   margin-right: 0% !important; }
 
 /*Colonnes pour tablette*/
-@media screen and (min-width: 680px) {
+@media screen and (min-width: 672px) {
   .tab-auto, .tab-0, .tab-1, .tab-2, .tab-3, .tab-4, .tab-5, .tab-6, .tab-7, .tab-8, .tab-9, .tab-10, .tab-11, .tab-12 {
     float: left; }
 
@@ -827,7 +827,7 @@ th {
   .tab-offset-right-0 {
     margin-right: 0% !important; } }
 /*Colonnes pour desktop*/
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1056px) {
   .desk-auto, .desk-0, .desk-1, .desk-2, .desk-3, .desk-4, .desk-5, .desk-6, .desk-7, .desk-8, .desk-9, .desk-10, .desk-11, .desk-12 {
     float: left; }
 
@@ -1033,6 +1033,211 @@ th {
   .desk-offset-right-0 {
     margin-right: 0% !important; } }
 /*Colonnes pour large desktop*/
+@media screen and (min-width: 1302px) {
+  .lgdesk-auto, .lgdesk-0, .lgdesk-1, .lgdesk-2, .lgdesk-3, .lgdesk-4, .lgdesk-5, .lgdesk-6, .lgdesk-7, .lgdesk-8, .lgdesk-9, .lgdesk-10, .lgdesk-11, .lgdesk-12 {
+    float: left; }
+
+  .lgdesk-12 {
+    width: 100.0%; }
+
+  .lgdesk-11 {
+    width: 91.66667%; }
+
+  .lgdesk-10 {
+    width: 83.33333%; }
+
+  .lgdesk-9 {
+    width: 75.0%; }
+
+  .lgdesk-8 {
+    width: 66.66667%; }
+
+  .lgdesk-7 {
+    width: 58.33333%; }
+
+  .lgdesk-6 {
+    width: 50.0%; }
+
+  .lgdesk-5 {
+    width: 41.66667%; }
+
+  .lgdesk-4 {
+    width: 33.33333%; }
+
+  .lgdesk-3 {
+    width: 25.0%; }
+
+  .lgdesk-2 {
+    width: 16.66667%; }
+
+  .lgdesk-1 {
+    width: 8.33333%; }
+
+  .lgdesk-0 {
+    width: 0%; }
+
+  .lgdesk-auto {
+    width: auto; }
+
+  /*Deplacement vers la gauche: large desktop*/
+  .lgdesk-pull-12 {
+    right: 100.0% !important; }
+
+  .lgdesk-pull-11 {
+    right: 91.66667% !important; }
+
+  .lgdesk-pull-10 {
+    right: 83.33333% !important; }
+
+  .lgdesk-pull-9 {
+    right: 75.0% !important; }
+
+  .lgdesk-pull-8 {
+    right: 66.66667% !important; }
+
+  .lgdesk-pull-7 {
+    right: 58.33333% !important; }
+
+  .lgdesk-pull-6 {
+    right: 50.0% !important; }
+
+  .lgdesk-pull-5 {
+    right: 41.66667% !important; }
+
+  .lgdesk-pull-4 {
+    right: 33.33333% !important; }
+
+  .lgdesk-pull-3 {
+    right: 25.0% !important; }
+
+  .lgdesk-pull-2 {
+    right: 16.66667% !important; }
+
+  .lgdesk-pull-1 {
+    right: 8.33333% !important; }
+
+  .lgdesk-pull-0 {
+    right: auto !important; }
+
+  /*Deplacement vers la droite: large desktop*/
+  .lgdesk-push-12 {
+    left: 100.0% !important; }
+
+  .lgdesk-push-11 {
+    left: 91.66667% !important; }
+
+  .lgdesk-push-10 {
+    left: 83.33333% !important; }
+
+  .lgdesk-push-9 {
+    left: 75.0% !important; }
+
+  .lgdesk-push-8 {
+    left: 66.66667% !important; }
+
+  .lgdesk-push-7 {
+    left: 58.33333% !important; }
+
+  .lgdesk-push-6 {
+    left: 50.0% !important; }
+
+  .lgdesk-push-5 {
+    left: 41.66667% !important; }
+
+  .lgdesk-push-4 {
+    left: 33.33333% !important; }
+
+  .lgdesk-push-3 {
+    left: 25.0% !important; }
+
+  .lgdesk-push-2 {
+    left: 16.66667% !important; }
+
+  .lgdesk-push-1 {
+    left: 8.33333% !important; }
+
+  .lgdesk-pull-0 {
+    right: auto !important; }
+
+  /*marge vers la gauche large desktop*/
+  .lgdesk-offset-12 {
+    margin-left: 100.0% !important; }
+
+  .lgdesk-offset-11 {
+    margin-left: 91.66667% !important; }
+
+  .lgdesk-offset-10 {
+    margin-left: 83.33333% !important; }
+
+  .lgdesk-offset-9 {
+    margin-left: 75.0% !important; }
+
+  .lgdesk-offset-8 {
+    margin-left: 66.66667% !important; }
+
+  .lgdesk-offset-7 {
+    margin-left: 58.33333% !important; }
+
+  .lgdesk-offset-6 {
+    margin-left: 50.0% !important; }
+
+  .lgdesk-offset-5 {
+    margin-left: 41.66667% !important; }
+
+  .lgdesk-offset-4 {
+    margin-left: 33.33333% !important; }
+
+  .lgdesk-offset-3 {
+    margin-left: 25.0% !important; }
+
+  .lgdesk-offset-2 {
+    margin-left: 16.66667% !important; }
+
+  .lgdesk-offset-1 {
+    margin-left: 8.33333% !important; }
+
+  .lgdesk-offset-0 {
+    margin-left: 0% !important; }
+
+  /*marge vers la droite large desktop*/
+  .lgdesk-offset-right-12 {
+    margin-right: 100.0% !important; }
+
+  .lgdesk-offset-right-11 {
+    margin-right: 91.66667% !important; }
+
+  .lgdesk-offset-right-10 {
+    margin-right: 83.33333% !important; }
+
+  .lgdesk-offset-right-9 {
+    margin-right: 75.0% !important; }
+
+  .lgdesk-offset-right-8 {
+    margin-right: 66.66667% !important; }
+
+  .lgdesk-offset-right-7 {
+    margin-right: 58.33333% !important; }
+
+  .lgdesk-offset-right-6 {
+    margin-right: 50.0% !important; }
+
+  .lgdesk-offset-right-5 {
+    margin-right: 41.66667% !important; }
+
+  .lgdesk-offset-right-4 {
+    margin-right: 33.33333% !important; }
+
+  .lgdesk-offset-right-3 {
+    margin-right: 25.0% !important; }
+
+  .lgdesk-offset-right-2 {
+    margin-right: 16.66667% !important; }
+
+  .lgdesk-offset-right-1 {
+    margin-right: 8.33333% !important; }
+
+  .lgdesk-offset-right-0 {
+    margin-right: 0% !important; } }
 .container:before, .clearfix:before, .container-fluid:before, .row:before {
   content: "";
   display: table; }
@@ -1094,7 +1299,7 @@ th {
 .display-lgdesk-inline-block {
   display: none !important; }
 
-@media screen and (max-width: 679px) {
+@media screen and (max-width: 671px) {
   .display-phone {
     display: block !important; }
 
@@ -1120,7 +1325,7 @@ th {
   .hidden-phone {
     display: none !important; } }
 /*Classes permettant d'afficher un bloc uniquement en resolution tablette*/
-@media screen and (min-width: 680px) and (max-width: 991px) {
+@media screen and (min-width: 672px) and (max-width: 1055px) {
   .display-tab {
     display: block !important; }
 
@@ -1146,7 +1351,7 @@ th {
   .hidden-tab {
     display: none !important; } }
 /*Classes permettant d'afficher un bloc uniquement en resolution desktop*/
-@media screen and (min-width: 992px) and (max-width: 1171px) {
+@media screen and (min-width: 1056px) and (max-width: 1301px) {
   .display-desk {
     display: block !important; }
 
@@ -1172,7 +1377,7 @@ th {
   .hidden-desk {
     display: none !important; } }
 /*Classes permettant d'afficher un bloc uniquement en haute resolution*/
-@media screen and (min-width: 1172px) {
+@media screen and (min-width: 1302px) {
   .display-lgdesk {
     display: block !important; }
 
@@ -1451,7 +1656,8 @@ header {
 #bottom-menu-header {
   position: relative;
   display: block;
-  padding: 7px 0; }
+  height: 50px;
+  padding: 8px 0; }
   #bottom-menu-header:before {
     content: "";
     display: table; }
@@ -1459,17 +1665,47 @@ header {
     content: "";
     display: table;
     clear: both; }
+  #bottom-menu-header .row {
+    height: 100%; }
+  #bottom-menu-header .pull-left {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: 0px; }
 
-#bottom-menu-header .pull-left {
+.bottom-menu-header-links {
   position: relative;
-  top: 3px; }
+  display: inline-block;
+  float: right;
+  height: 100%; }
+  .bottom-menu-header-links ul {
+    height: 100%; }
+  .bottom-menu-header-links li {
+    height: 100%;
+    border-left: none; }
+    .bottom-menu-header-links li a {
+      position: relative;
+      display: block;
+      height: 100%;
+      width: 100%;
+      line-height: 42px;
+      padding: 0 27px; }
+      .bottom-menu-header-links li a img {
+        display: inline-block;
+        width: auto;
+        height: 100%;
+        margin-right: 10px; }
+      .bottom-menu-header-links li a .link {
+        position: relative;
+        display: inline-block;
+        bottom: auto; }
 
 .logo {
   position: relative;
   display: inline-block;
   float: left;
   width: auto;
-  height: 40px;
+  height: 100%;
   margin-right: 30px; }
   .logo img {
     width: auto;
@@ -1478,7 +1714,8 @@ header {
 #slider {
   display: block;
   position: relative;
-  width: 100%; }
+  width: 100%;
+  padding-bottom: 35px; }
   #slider #slider-ui {
     display: block;
     position: absolute;
@@ -1498,62 +1735,47 @@ header {
       height: auto; }
     #slider-contents .content .infos {
       display: block;
-      position: absolute;
+      position: relative;
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%; }
+      height: 135px; }
 
 #services {
   padding: 18px 0;
   text-align: center; }
-  #services .flex {
-    margin-right: -10px;
-    margin-left: -10px;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-align-content: flex-start;
-    -ms-flex-line-pack: start;
-    align-content: flex-start;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center; }
+  #services .row > div[class^=phone-] {
+    padding: 0 7px;
+    text-align: center; }
   #services .service {
+    display: inline-block;
     position: relative;
-    width: 24%;
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
-    -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-    -webkit-align-self: auto;
-    -ms-flex-item-align: auto;
-    align-self: auto; }
-    #services .service img {
-      display: block;
-      width: 100%;
-      height: auto; }
+    width: 100%;
+    max-width: 320px;
+    height: 235px;
+    margin-bottom: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+    #services .service#loldsl {
+      background-image: url(../../images/index/320px/Offres/LOL_DSL.jpg); }
+    #services .service#mobiles {
+      background-image: url(../../images/index/320px/Offres/iphone6.jpg); }
+    #services .service#installation {
+      background-image: url(../../images/index/320px/Offres/Offre_TV.jpg); }
+    #services .service#dispo {
+      background-image: url(../../images/index/320px/Offres/Recherche_Offre.jpg); }
     #services .service .infos {
       position: absolute;
+      padding: 0 20px;
       top: 0;
+      right: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
-      padding: 0 6% 15px 6%; }
+      bottom: 0; }
 
 #dispo .input-white {
-  width: 75%; }
+  width: 75%;
+  height: 45px; }
 #dispo .btn-orange {
   position: relative;
   margin-top: 10px; }
@@ -1561,42 +1783,20 @@ header {
 .section-layout {
   position: relative;
   display: block;
+  padding: 30px 0;
   width: 100%;
-  height: 400px; }
+  height: auto;
+  text-align: center; }
   .section-layout .container-wrapper, .section-layout .row, .section-layout .row > div {
     position: relative;
     height: 100%; }
   .section-layout img {
     width: auto;
-    height: 100%; }
-  .section-layout .btn-white {
-    margin-top: 50px; }
+    height: 230px; }
 
 .section-img-align-bottom {
-  position: absolute;
+  position: relative;
   bottom: 0; }
-
-.right-orientation .row,
-.left-orientation .row {
-  position: relative; }
-
-.right-orientation .row > div:first-child,
-.left-orientation .row > div:last-child {
-  left: 0;
-  float: left !important;
-  text-align: left; }
-  .right-orientation .row > div:first-child .section-img-align-bottom,
-  .left-orientation .row > div:last-child .section-img-align-bottom {
-    left: 0; }
-
-.right-orientation .row > div:last-child,
-.left-orientation .row > div:first-child {
-  right: 0;
-  float: right !important;
-  text-align: right; }
-  .right-orientation .row > div:last-child .section-align-image-bottom,
-  .left-orientation .row > div:first-child .section-align-image-bottom {
-    right: 0; }
 
 footer {
   display: block; }
@@ -1621,9 +1821,9 @@ footer {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -1684,15 +1884,15 @@ footer {
   color: #fff; }
 
 .homepage-title {
-  font-size: 38px;
-  line-height: 46px;
-  margin: 0;
+  font-size: 20px;
+  line-height: 28px;
+  margin: 15px 0;
   text-transform: uppercase; }
 
 .homepage-description {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
-  margin: 20px 0 0;
+  margin: 0 0 20px;
   color: #004994; }
 
 span[class^=icon-] {
@@ -1766,42 +1966,23 @@ span[class^=icon-] {
   .top-menu-header-links.right li {
     margin-left: 30px; }
 
-.bottom-menu-header-links {
-  position: relative;
-  display: inline-block;
-  float: left; }
-  .bottom-menu-header-links ul {
-    font-size: 16px;
-    font-weight: 400;
-    box-sizing: border-box;
-    color: #9a9a9a; }
-  .bottom-menu-header-links li {
-    text-align: center;
-    border-left: 1px solid #eeeeee; }
-  .bottom-menu-header-links a {
-    position: relative;
-    display: block;
-    padding: 0 27px; }
-    .bottom-menu-header-links a img {
-      display: inline-block;
-      width: auto;
-      height: 40px;
-      margin-right: 10px; }
-    .bottom-menu-header-links a .link {
-      position: relative;
-      bottom: 11px;
-      display: inline-block; }
+.bottom-menu-header-links ul {
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+  color: #9a9a9a; }
+.bottom-menu-header-links li {
+  text-align: center; }
 
 .btn-blue,
 .btn-orange,
 .btn-white,
 .mobile-menu-button button {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   position: relative;
   display: inline-block;
-  margin: 5px;
-  margin: 5px 0;
+  margin: 3px 0;
   padding: 10px 15px;
   cursor: pointer;
   -webkit-transition: background 0.4s ease-in-out, border 0.4s ease-in-out, color 0.4s ease-in-out;
@@ -1836,24 +2017,24 @@ span[class^=icon-] {
   height: 100%; }
   .mobile-menu-button button {
     display: inline;
-    width: 42px;
+    width: 35px;
     height: 100%;
     float: left;
     padding: 5px;
     margin: 0;
     text-align: center;
     background-color: #004994;
-    margin-right: 18px; }
+    margin-right: 12px; }
   .mobile-menu-button span[class^=icon-] {
     display: inline;
     margin: 0;
-    font-size: 21px; }
+    font-size: 17px; }
     .mobile-menu-button span[class^=icon-].icon-account-icone {
       color: #fff; }
     .mobile-menu-button span[class^=icon-].icon-menu-icone {
       color: #004994;
-      font-size: 30px;
-      top: 3px; }
+      font-size: 28px;
+      top: 2px; }
 
 .btn-blue {
   color: #fff;
@@ -1898,7 +2079,6 @@ span[class^=icon-] {
   line-height: 35px;
   position: relative;
   display: inline-block;
-  height: 60px;
   padding: 5px 10px;
   text-align: center;
   border-radius: 5px; }
@@ -1930,13 +2110,11 @@ span[class^=icon-] {
   transform: translateY(-50%);
   left: 0;
   right: 0;
-  margin: 0 auto;
-  width: 90%; }
+  margin: 0 auto; }
   #slider-ui .buttons .arrow {
     text-align: center;
     border: none;
     background: none;
-    font-size: 50pt;
     color: #c0c0c0;
     -moz-transition: transitionUi;
     -o-transition: transitionUi;
@@ -1946,18 +2124,22 @@ span[class^=icon-] {
       color: #9a9a9a; }
     #slider-ui .buttons .arrow:focus {
       outline: 0; }
+    #slider-ui .buttons .arrow.left span, #slider-ui .buttons .arrow.right span {
+      margin: 0; }
     #slider-ui .buttons .arrow.left {
       float: left;
       -ms-transform: rotate(180deg);
       /* IE 9 */
       -webkit-transform: rotate(180deg);
       /* Chrome, Safari, Opera */
-      transform: rotate(180deg); }
+      transform: rotate(180deg);
+      margin-left: -20px; }
       #slider-ui .buttons .arrow.left span {
         position: relative;
         top: 9px; }
     #slider-ui .buttons .arrow.right {
-      float: right; }
+      float: right;
+      margin-right: -20px; }
 #slider-ui .dots {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -1965,9 +2147,9 @@ span[class^=icon-] {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -1979,34 +2161,38 @@ span[class^=icon-] {
   align-items: center;
   position: absolute;
   bottom: 15px;
+  width: 150px;
   left: 0;
   right: 0;
-  width: 145px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  font-size: 8px; }
   #slider-ui .dots li {
-    font-size: 8pt;
     color: #a7a7a7; }
     #slider-ui .dots li.active {
       color: #004994; }
 
-#slider-contents h1 {
-  margin: 0 0 25px;
-  font-size: 42pt;
+#slider-contents .infos {
+  text-align: center;
+  padding: 20px 0; }
+#slider-contents .title {
+  margin: 0 0 12px;
   color: #004994;
+  font-size: 25px;
   font-weight: 800;
   text-transform: uppercase; }
-#slider-contents p {
-  color: #e75e0a;
-  font-size: 26pt;
-  font-weight: 300;
+#slider-contents .top-details, #slider-contents .bottom-details {
   margin: 0;
-  line-height: 42px; }
-  #slider-contents p strong {
+  font-weight: 300; }
+#slider-contents p.top-details {
+  color: #e75e0a;
+  font-size: 16px;
+  line-height: 23px;
+  margin: 0 0 8px; }
+  #slider-contents p.top-details strong {
     text-transform: uppercase; }
 #slider-contents p.bottom-details {
-  margin-top: 10px;
-  color: #c0c0c0;
-  font-size: 11pt; }
+  font-size: 10px;
+  color: #818181; }
 
 .service {
   border: 1px solid #e6e6e6;
@@ -2014,19 +2200,21 @@ span[class^=icon-] {
   .service img {
     border-radius: inherit; }
   .service .infos h3 {
-    font-size: 1.6em;
+    font-size: 1.7em;
     font-weight: 400;
-    line-height: 27px;
-    margin: 20px 0 15px;
+    line-height: 25px;
+    margin: 15px -17px 5px;
     text-align: center;
     text-transform: uppercase; }
   .service .infos .details {
-    font-size: 17pt;
-    line-height: 30px;
+    font-size: 21px;
+    line-height: 28px;
     text-align: left;
     color: #004994; }
     .service .infos .details li {
       display: block; }
+  .service#dispo h3 {
+    font-size: 1.3em; }
 
 .icons {
   position: relative;
@@ -2048,9 +2236,6 @@ span[class^=icon-] {
     margin-bottom: 16px;
     text-align: center; }
 
-#dispo h3 {
-  font-size: 15pt; }
-
 .dispo-icon {
   position: relative;
   display: inline-block;
@@ -2069,50 +2254,52 @@ span[class^=icon-] {
     color: #fff; }
 
 .bottom-info {
-  font-size: 9pt;
+  font-size: 10pt;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   text-align: center; }
 
 .price-blue,
 .price-orange {
   font-weight: 800;
   position: relative;
-  display: block;
-  margin-top: 20px; }
+  display: block; }
   .price-blue span,
   .price-orange span {
-    font-size: 9pt; }
+    font-size: 11pt; }
   .price-blue div,
   .price-orange div {
     position: absolute; }
 
 .price-blue {
-  font-size: 38pt;
-  color: #004994; }
+  font-size: 46px;
+  color: #004994;
+  margin-top: 14px; }
   .price-blue div {
-    font-size: 10pt;
-    top: -14px;
-    left: 60px; }
+    font-size: 11pt;
+    top: -12px;
+    left: 55px; }
 
 .price-orange {
-  font-size: 52pt;
-  color: #e75e0a; }
+  font-size: 62px;
+  color: #e75e0a;
+  margin-top: 23px; }
   .price-orange div {
-    font-size: 13pt;
+    font-size: 14pt;
     font-weight: 600;
-    top: -20px;
-    left: 80px; }
+    top: -15px;
+    left: 75px; }
 
 #twenty-years {
   background-image: url(../../images/index/1024px/20ans_LOL.png);
   background-repeat: no-repeat;
-  background-position: right top;
-  background-size: 50% auto; }
+  background-position: center top;
+  background-size: 620px auto;
+  padding-top: 170px; }
 
 footer {
   border-bottom: 2px solid #676767;
@@ -2171,13 +2358,20 @@ footer {
     .help-link:hover p {
       text-decoration: underline; }
   .help-link p {
-    display: inline-block;
+    display: inline;
     margin: 0; }
   .help-link span[class^=icon-] {
-    font-size: 15pt;
+    display: inline;
     position: relative;
-    top: 4px;
     display: inline-block; }
+    .help-link span[class^=icon-].icon-info-icone {
+      margin-right: 16px;
+      font-size: 21pt;
+      top: 7px; }
+    .help-link span[class^=icon-].icon-right-arrow {
+      margin-left: 16px;
+      font-size: 15pt;
+      top: 4px; }
 
 .separator {
   margin: 0;
@@ -2201,41 +2395,13 @@ footer {
 .footer-bottom-links {
   font-size: 10pt;
   line-height: 53px;
-  width: 100%;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center; }
+  width: 100%; }
   .footer-bottom-links .icon-icone-lol {
     font-size: 17pt;
     position: relative;
     top: 5px;
     display: inline-block;
     margin-right: 10px; }
-  .footer-bottom-links li {
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
-    -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-    -webkit-align-self: auto;
-    -ms-flex-item-align: auto;
-    align-self: auto; }
   .footer-bottom-links a {
     display: block; }
     .footer-bottom-links a:hover {
@@ -2246,40 +2412,260 @@ footer {
   display: block;
   padding: 5px 0; }
 
-@media screen and (max-width: 991px) {
-  #bottom-menu-header {
-    padding: 15px 0; }
-    #bottom-menu-header .pull-left {
-      width: 100%;
-      top: 0; } }
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1301px) {
   .header-icon {
     display: none !important; }
 
-  .bottom-menu-header-links {
-    float: right;
-    height: 40px; }
-    .bottom-menu-header-links ul {
-      height: 100%; }
-    .bottom-menu-header-links li {
-      height: 100%;
-      border-left: none; }
-      .bottom-menu-header-links li a {
-        height: 100%;
-        width: 100%;
-        line-height: 42px; }
-        .bottom-menu-header-links li a .link {
-          bottom: auto; }
+  .icons {
+    width: 60%;
+    margin-top: 6%; } }
+@media screen and (max-width: 671px) {
+  .container-wrapper {
+    width: 320px;
+    padding: 0 10px; } }
+@media screen and (min-width: 672px) {
+  .container-wrapper {
+    width: 640px; }
 
+  #services .row > div[class^=phone-] {
+    padding: 0 15px; }
+  #services .service {
+    height: auto;
+    padding-bottom: 135%;
+    margin-bottom: 30px; }
+    #services .service#loldsl {
+      background-image: url(../../images/index/640px/Offres/LOL_DSL.jpg); }
+    #services .service#mobiles {
+      background-image: url(../../images/index/640px/Offres/iphone6.jpg); }
+    #services .service#installation {
+      background-image: url(../../images/index/640px/Offres/Offre_TV.jpg); }
+    #services .service#dispo {
+      background-image: url(../../images/index/640px/Offres/Recherche_Offre.jpg); }
+    #services .service .details {
+      font-size: 25px;
+      line-height: 25px; }
+    #services .service h3 {
+      font-size: 1.4em;
+      margin: 20px -11px 5px; }
+
+  #slider-contents .title {
+    font-size: 30pt;
+    margin-bottom: 15px; }
+  #slider-contents p.top-details {
+    font-size: 21pt;
+    line-height: 35px; }
+  #slider-contents p.bottom-details {
+    font-size: 10pt; }
+
+  #slider-ui .buttons {
+    width: 95%; }
+    #slider-ui .buttons .arrow {
+      font-size: 38pt; }
+  #slider-ui .dots {
+    width: 135px; }
+    #slider-ui .dots li {
+      font-size: 7pt; } }
+@media screen and (min-width: 1056px) {
   .container-wrapper {
-    width: 95%; } }
-@media screen and (max-width: 679px) {
-  .container-wrapper {
-    width: 100%;
-    padding: 0 15px; } }
-@media screen and (min-width: 680px) {
+    width: 1024px; }
+
+  #bottom-menu-header {
+    height: 65px;
+    padding: 11px 0; }
+    #bottom-menu-header .pull-left {
+      width: auto; }
+
+  .bottom-menu-header-links {
+    float: left; }
+
   .section-layout {
-    height: 350px; } }
+    height: 325px; }
+
+  #slider-contents .title {
+    font-size: 30pt;
+    margin-bottom: 15px; }
+  #slider-contents p.top-details {
+    font-size: 21pt;
+    line-height: 35px; }
+  #slider-contents p.bottom-details {
+    font-size: 10pt; }
+
+  #slider-ui .buttons {
+    width: 95%; }
+    #slider-ui .buttons .arrow {
+      font-size: 38pt; }
+  #slider-ui .dots {
+    width: 135px; }
+    #slider-ui .dots li {
+      font-size: 7pt; }
+
+  #services .service {
+    margin-bottom: 0; }
+    #services .service#loldsl {
+      background-image: url(../../images/index/1024px/Offres/LOL_DSL.jpg); }
+    #services .service#mobiles {
+      background-image: url(../../images/index/1024px/Offres/iphone6.jpg); }
+    #services .service#installation {
+      background-image: url(../../images/index/1024px/Offres/Offre_TV.jpg); }
+    #services .service#dispo {
+      background-image: url(../../images/index/1024px/Offres/Recherche_Offre.jpg); }
+    #services .service .infos {
+      padding: 0 15px 15px; }
+      #services .service .infos .details {
+        font-size: 20px;
+        line-height: 25px; }
+      #services .service .infos h3 {
+        font-size: 1.4em;
+        margin: 20px -11px 5px; }
+
+  .bottom-info {
+    font-size: 8pt; }
+
+  .price-blue span, .price-orange span {
+    font-size: 9.5pt; }
+
+  .price-orange {
+    font-size: 43pt;
+    margin-top: 22px; }
+    .price-orange div {
+      font-size: 14pt;
+      top: -17px;
+      left: 68px; }
+
+  .price-blue {
+    font-size: 34pt; }
+    .price-blue div {
+      font-size: 11pt;
+      top: -11px;
+      left: 55px; }
+
+  #dispo h3 {
+    font-size: 12pt !important; }
+  #dispo .input-white {
+    height: 48px; }
+  #dispo .btn-orange {
+    font-size: 15px; }
+
+  .right-orientation .row,
+  .left-orientation .row {
+    position: relative; }
+
+  .right-orientation .row > div:first-child,
+  .left-orientation .row > div:last-child {
+    left: 0;
+    float: left !important;
+    text-align: left; }
+    .right-orientation .row > div:first-child .section-img-align-bottom,
+    .left-orientation .row > div:last-child .section-img-align-bottom {
+      left: 0; }
+
+  .right-orientation .row > div:last-child,
+  .left-orientation .row > div:first-child {
+    right: 0;
+    float: right !important;
+    text-align: right; }
+    .right-orientation .row > div:last-child .section-align-image-bottom,
+    .left-orientation .row > div:first-child .section-align-image-bottom {
+      right: 0; }
+
+  .section-img-align-bottom {
+    position: absolute; }
+
+  .help-link {
+    font-size: 12.5pt; }
+    .help-link span[class^=icon-].icon-info-icone {
+      margin-right: 5px;
+      font-size: 19pt; }
+    .help-link span[class^=icon-].icon-right-arrow {
+      margin-left: 5px;
+      font-size: 14pt; }
+
+  #twenty-years {
+    background-size: 700px auto;
+    background-position: right top; } }
+@media screen and (min-width: 1302px) {
+  .container-wrapper {
+    width: 1280px; }
+
+  .section-layout {
+    height: 400px; }
+
+  .bottom-menu-header-links li {
+    border-left: 1px solid #eeeeee; }
+    .bottom-menu-header-links li a .link {
+      bottom: 15px; }
+
+  #slider-contents .title {
+    font-size: 42pt; }
+  #slider-contents p.top-details {
+    font-size: 26pt;
+    line-height: 42px; }
+  #slider-contents p.bottom-details {
+    font-size: 11pt; }
+
+  #slider-ui .buttons {
+    width: 90%; }
+    #slider-ui .buttons .arrow {
+      font-size: 50pt; }
+  #slider-ui .dots {
+    width: 145px; }
+    #slider-ui .dots li {
+      font-size: 8pt; }
+
+  #services .row > div[class^=phone-] {
+    padding: 0 7px; }
+  #services .service#loldsl {
+    background-image: url(../../images/index/1280px/Offres/LOL_DSL.jpg); }
+  #services .service#mobiles {
+    background-image: url(../../images/index/1280px/Offres/iphone6.jpg); }
+  #services .service#installation {
+    background-image: url(../../images/index/1280px/Offres/Offre_TV.jpg); }
+  #services .service#dispo {
+    background-image: url(../../images/index/1280px/Offres/Recherche_Offre.jpg); }
+  #services .service .infos {
+    padding: 0 25px 15px; }
+    #services .service .infos h3 {
+      font-size: 1.9em;
+      line-height: 28px; }
+    #services .service .infos .details {
+      font-size: 25px;
+      line-height: 35px; }
+
+  .bottom-info {
+    font-size: 10pt; }
+
+  .price-blue span, .price-orange span {
+    font-size: 10pt; }
+
+  .price-orange {
+    font-size: 43pt;
+    margin-top: 20px; }
+    .price-orange div {
+      font-size: 14pt;
+      top: -17px;
+      left: 68px; }
+
+  .price-blue {
+    font-size: 34pt; }
+    .price-blue div {
+      font-size: 11pt;
+      top: -11px;
+      left: 55px; }
+
+  #dispo h3 {
+    font-size: 16pt !important; }
+
+  #twenty-years {
+    background-size: 900px auto; }
+
+  .help-link {
+    font-size: 14pt; }
+    .help-link span[class^=icon-].icon-info-icone {
+      margin-right: 7px;
+      font-size: 20pt; }
+    .help-link span[class^=icon-].icon-right-arrow {
+      margin-left: 7px;
+      font-size: 15pt; } }
 @media screen and (min-width: 1400px) {
   .container-wrapper {
     width: 1344px; } }

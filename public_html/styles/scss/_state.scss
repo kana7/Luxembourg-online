@@ -14,7 +14,7 @@
 @include media(phone){
     .container-wrapper{
         width: 320px;
-        padding: 0 10px;
+        padding: 0 14px;
     }
 }
 @include media(tab){
@@ -68,7 +68,31 @@
             width: 135px;
             li{font-size: 7pt;}
         }
-    } 
+    }
+    .help-link{
+        font-size: 17px;
+        line-height: 25px;
+        padding: 15px 0 20px;
+    }
+    #social-links{
+        .brand-name{
+            display: inline-block;
+        }
+    }
+    #social-links .social-icon{
+        margin-right: 10px;
+    }
+    #contact li{
+        width: auto;
+    }
+    .homepage-title{
+        font-size: 36px;
+        line-height: 45px;
+    }
+    .footer-bottom-links li{
+        margin: 0 35px;
+        text-align: center;
+    }
 }
 
 @include media(desk){
@@ -87,6 +111,19 @@
     }
     .section-layout{
         height: 325px;
+        padding: 0;
+    }
+    #slider{
+        padding-bottom: 0;
+    }
+    #slider-contents .content .infos{
+        position: absolute;
+        height: 100%;
+        z-index: 1;
+        text-align: left;
+        .row{
+            @include vertical-align-middle;
+        }
     }
     #slider-contents{
         .title{
@@ -113,7 +150,11 @@
             li{font-size: 7pt;}
         }
     }
+
     #services{
+        .row > div[class^=phone-]{
+            padding: 0 7px;
+        }
         .service{
             margin-bottom: 0;
             &#loldsl{background-image: url(../../images/index/1024px/Offres/LOL_DSL.jpg);}
@@ -193,12 +234,38 @@
         right: 0;
         float: right !important;
         text-align: right;
+        height: auto;
+        @include vertical-align-middle;
         .section-align-image-bottom{
             right: 0;
         }
     }
+    #twenty-years .row div:first-child{
+        text-align: left;
+        @include vertical-align-middle;
+        height: auto;
+    }
+    .section-layout img{
+        height: 100%;
+    }
     .section-img-align-bottom{
         position: absolute;
+    }
+    .homepage-title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    #social-links{
+        padding: 20px 0 7px;
+    }
+    #social-links .text, #contact .text{
+        text-align: left;
+        width: auto;
+        margin: 0;
+        float: left;margin-top: 5px;
+    }
+    #social-links nav, #contact ul{
+        width: 75%;
     }
 
     .help-link{
@@ -218,6 +285,12 @@
     #twenty-years{
         background-size: 700px auto;
         background-position:right top;
+        padding-top: 0; 
+    }
+    .footer-bottom-links li{
+        text-align: left;
+        margin: 0;
+        margin-right: 69px;
     }
 }
 @include media(lgdesk){
@@ -288,6 +361,15 @@
                 }
             }
         }
+    }
+    .homepage-title {
+        font-size: 40px;
+        line-height: 52px;
+        margin: 0 0 25px;
+    }
+    .homepage-description {
+        font-size: 18px;
+        margin: 0 0 45px;
     }
     .bottom-info{
         font-size: 10pt;

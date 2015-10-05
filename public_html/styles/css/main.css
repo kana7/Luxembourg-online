@@ -1810,7 +1810,7 @@ footer {
 #social-links nav,
 #contact ul {
   float: right;
-  width: 85%;
+  width: 100%;
   text-align: right; }
 
 #social-links ul,
@@ -1845,8 +1845,13 @@ footer {
     -ms-flex-item-align: auto;
     align-self: auto; }
 
+#social-links .text, #contact .text {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px; }
+
 #social-links {
-  padding: 25px 0 6px; }
+  padding: 20px 0 15px; }
   #social-links a:before {
     content: "";
     display: table; }
@@ -1854,28 +1859,32 @@ footer {
     content: "";
     display: table;
     clear: both; }
-  #social-links span,
+  #social-links .brand-name {
+    display: none; }
   #social-links .social-icon {
     display: inline-block;
-    float: left; }
-  #social-links .social-icon {
+    float: left;
     position: relative;
     bottom: 9px;
     display: inline-block;
     width: 34px;
-    height: 34px;
-    margin-right: 15px; }
+    height: 34px; }
   #social-links nav {
-    display: inline-block; }
+    display: inline-block;
+    margin-top: 10px; }
   #social-links ul {
     width: 100%; }
 
 #contact {
   margin-top: -2px;
-  padding: 17px 0 9px; }
+  padding: 17px 0 9px;
+  text-align: center; }
+  #contact li {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center; }
   #contact span {
-    display: inline-block;
-    float: left; }
+    display: inline-block; }
 
 .orange {
   color: #e75e0a; }
@@ -1885,9 +1894,11 @@ footer {
 
 .homepage-title {
   font-size: 20px;
-  line-height: 28px;
+  line-height: 26px;
   margin: 15px 0;
   text-transform: uppercase; }
+  .homepage-title strong {
+    display: block; }
 
 .homepage-description {
   font-size: 14px;
@@ -2338,7 +2349,7 @@ footer {
   background-color: #004994; }
   #contact span[class^=icon-] {
     font-size: 15pt;
-    bottom: 4px;
+    top: 4px;
     color: #fff; }
 
 #footer-links {
@@ -2347,7 +2358,8 @@ footer {
     color: inherit; }
 
 .help-link {
-  font-size: 14.5pt;
+  font-size: 15px;
+  line-height: 20px;
   font-weight: 300;
   display: inline-block;
   width: 100%;
@@ -2365,12 +2377,13 @@ footer {
     position: relative;
     display: inline-block; }
     .help-link span[class^=icon-].icon-info-icone {
-      margin-right: 16px;
-      font-size: 21pt;
-      top: 7px; }
+      margin-right: 8px;
+      font-size: 21px;
+      top: 6px; }
     .help-link span[class^=icon-].icon-right-arrow {
-      margin-left: 16px;
-      font-size: 15pt;
+      margin-left: 5px;
+      margin-right: 0px;
+      font-size: 16px;
       top: 4px; }
 
 .separator {
@@ -2392,25 +2405,39 @@ footer {
     text-decoration: underline;
     color: #dadada; }
 
-.footer-bottom-links {
+.footer-bottom-links, .copyright {
   font-size: 10pt;
   line-height: 53px;
   width: 100%; }
-  .footer-bottom-links .icon-icone-lol {
+  .footer-bottom-links .icon-icone-lol, .copyright .icon-icone-lol {
     font-size: 17pt;
     position: relative;
     top: 5px;
     display: inline-block;
     margin-right: 10px; }
-  .footer-bottom-links a {
+  .footer-bottom-links a, .copyright a {
     display: block; }
-    .footer-bottom-links a:hover {
+    .footer-bottom-links a:hover, .copyright a:hover {
       text-decoration: underline;
       color: #dadada; }
 
 .links li {
   display: block;
   padding: 5px 0; }
+
+.copyright {
+  text-align: center; }
+
+.footer-bottom-links {
+  text-align: center;
+  line-height: 35px;
+  padding: 10px 0; }
+  .footer-bottom-links li:first-child {
+    padding-left: 30px; }
+  .footer-bottom-links .icon-icone-lol {
+    position: absolute;
+    left: 0;
+    top: 3px; }
 
 @media screen and (max-width: 1301px) {
   .header-icon {
@@ -2422,7 +2449,7 @@ footer {
 @media screen and (max-width: 671px) {
   .container-wrapper {
     width: 320px;
-    padding: 0 10px; } }
+    padding: 0 14px; } }
 @media screen and (min-width: 672px) {
   .container-wrapper {
     width: 640px; }
@@ -2464,7 +2491,29 @@ footer {
   #slider-ui .dots {
     width: 135px; }
     #slider-ui .dots li {
-      font-size: 7pt; } }
+      font-size: 7pt; }
+
+  .help-link {
+    font-size: 17px;
+    line-height: 25px;
+    padding: 15px 0 20px; }
+
+  #social-links .brand-name {
+    display: inline-block; }
+
+  #social-links .social-icon {
+    margin-right: 10px; }
+
+  #contact li {
+    width: auto; }
+
+  .homepage-title {
+    font-size: 36px;
+    line-height: 45px; }
+
+  .footer-bottom-links li {
+    margin: 0 35px;
+    text-align: center; } }
 @media screen and (min-width: 1056px) {
   .container-wrapper {
     width: 1024px; }
@@ -2479,7 +2528,24 @@ footer {
     float: left; }
 
   .section-layout {
-    height: 325px; }
+    height: 325px;
+    padding: 0; }
+
+  #slider {
+    padding-bottom: 0; }
+
+  #slider-contents .content .infos {
+    position: absolute;
+    height: 100%;
+    z-index: 1;
+    text-align: left; }
+    #slider-contents .content .infos .row {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
 
   #slider-contents .title {
     font-size: 30pt;
@@ -2499,6 +2565,8 @@ footer {
     #slider-ui .dots li {
       font-size: 7pt; }
 
+  #services .row > div[class^=phone-] {
+    padding: 0 7px; }
   #services .service {
     margin-bottom: 0; }
     #services .service#loldsl {
@@ -2563,13 +2631,50 @@ footer {
   .left-orientation .row > div:first-child {
     right: 0;
     float: right !important;
-    text-align: right; }
+    text-align: right;
+    height: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
     .right-orientation .row > div:last-child .section-align-image-bottom,
     .left-orientation .row > div:first-child .section-align-image-bottom {
       right: 0; }
 
+  #twenty-years .row div:first-child {
+    text-align: left;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: auto; }
+
+  .section-layout img {
+    height: 100%; }
+
   .section-img-align-bottom {
     position: absolute; }
+
+  .homepage-title {
+    font-size: 30px;
+    line-height: 40px; }
+
+  #social-links {
+    padding: 20px 0 7px; }
+
+  #social-links .text, #contact .text {
+    text-align: left;
+    width: auto;
+    margin: 0;
+    float: left;
+    margin-top: 5px; }
+
+  #social-links nav, #contact ul {
+    width: 75%; }
 
   .help-link {
     font-size: 12.5pt; }
@@ -2582,7 +2687,13 @@ footer {
 
   #twenty-years {
     background-size: 700px auto;
-    background-position: right top; } }
+    background-position: right top;
+    padding-top: 0; }
+
+  .footer-bottom-links li {
+    text-align: left;
+    margin: 0;
+    margin-right: 69px; } }
 @media screen and (min-width: 1302px) {
   .container-wrapper {
     width: 1280px; }
@@ -2630,6 +2741,15 @@ footer {
     #services .service .infos .details {
       font-size: 25px;
       line-height: 35px; }
+
+  .homepage-title {
+    font-size: 40px;
+    line-height: 52px;
+    margin: 0 0 25px; }
+
+  .homepage-description {
+    font-size: 18px;
+    margin: 0 0 45px; }
 
   .bottom-info {
     font-size: 10pt; }

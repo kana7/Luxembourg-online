@@ -3,13 +3,21 @@
 
 }
 @include media(tab){
-    #document-links li{
+    #document-links ul li:not(:last-child){
+        margin-bottom: 0;
+    }
+    #document-links ul li{
+        display: inline-block;
         width: auto;
     }
 }
 @include media(desk){
     #document-links .icon{
         display: inline-block;
+    }
+    #document-links a{
+        line-height: 31px;
+        padding-left: 40px;
     }
 }
 @include media(lgdesk){

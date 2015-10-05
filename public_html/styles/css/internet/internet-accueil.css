@@ -1,4 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,400italic);
+#document-links {
+  background-color: #e6e6e6;
+  color: #818181;
+  font-size: 18px;
+  font-weight: 400; }
+  #document-links span {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    font-size: 28px; }
+
 #document-links .icon {
   display: none; }
 
@@ -11,12 +22,22 @@
       width: 100%; }
       #document-links ul li:not(:last-child) {
         margin-bottom: 15px; }
+      #document-links ul li a {
+        display: block; }
 
 @media screen and (min-width: 672px) {
-  #document-links li {
+  #document-links ul li:not(:last-child) {
+    margin-bottom: 0; }
+
+  #document-links ul li {
+    display: inline-block;
     width: auto; } }
 @media screen and (min-width: 1056px) {
   #document-links .icon {
-    display: inline-block; } }
+    display: inline-block; }
+
+  #document-links a {
+    line-height: 31px;
+    padding-left: 40px; } }
 
 /*# sourceMappingURL=internet-accueil.css.map */

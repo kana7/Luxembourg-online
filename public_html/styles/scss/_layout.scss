@@ -235,7 +235,7 @@ header
     position: relative;
 
     display: block;
-    padding: 30px 0;
+    padding: 35px 0;
     width: 100%;
     height: auto;
     text-align: center;
@@ -264,7 +264,7 @@ footer
 }
 #social-links,
 #contact,
-#footer-links
+#footer-links, #document-links
 {
     display: inline-block;
 
@@ -281,7 +281,7 @@ footer
 }
 
 #social-links ul,
-#contact ul
+#contact ul, #document-links ul
 {
     @include display-flex-spread;
     li
@@ -296,15 +296,16 @@ footer
     margin-bottom: 20px;
 }
 
+#social-links .brand-name{
+    display: none;
+}
+
 #social-links
 {
     padding: 20px 0 15px;
     a
     {
         @include clearfix;
-    }
-    .brand-name{
-        display: none;
     }
     .social-icon
     {

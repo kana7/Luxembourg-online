@@ -8,24 +8,52 @@
 {
     color: $white;
 }
+// BACKGROUND-COLOR CLASS
+// --------------------------------------------------
+.background-green{
+    background-color: $green;
+}
+.background-black{
+    background-color: $section-black;
+}
+.background-lightgrey{
+    background-color: $light-grey;
+}
+
+// BACKGROUND-COLOR CLASS
+// --------------------------------------------------
+.iner-shadow{
+    box-shadow: inset 0 4px 15px 2px lighten($black, 75%);
+}
+
 // FONT CLASS
 // --------------------------------------------------
-.homepage-title{
-    font-size: 20px;
-    line-height: 26px;
-    margin: 15px 0;
+
+.section-layout{color: $blue;}
+.section-title{
+    font-size: 24px;
+    line-height: 30px;
+    margin: 20px 0;
     text-transform: uppercase;
     strong{
         display: block;
     }
 }
-.homepage-description{
+.section-title.lowercase{
+    text-transform: none;
+}
+.section-description{
     font-size: 14px;
     font-weight: 600;
 
     margin: 0 0 20px;
 
-    color: $blue;
+}
+.section-text{
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0 0 30px;
+    line-height: 21px;
 }
 
 span[class^=icon-]
@@ -41,7 +69,6 @@ span[class^=icon-]
 // --------------------------------------------------
 .section-shadow
 {
-    background-color: $light-grey;
     -webkit-box-shadow: 0 0 25px 0 lighten($black, 83%);
     box-shadow: 0 0 5px 0 lighten($black, 83%);
 }
@@ -169,6 +196,7 @@ span[class^=icon-]
 .btn-blue,
 .btn-orange,
 .btn-white,
+.btn-black,
 .mobile-menu-button button
 {
     @include btn;
@@ -224,7 +252,12 @@ span[class^=icon-]
 .btn-white
 {
     border: 2px solid $grey;
-    background-color: $white;
+    color: $dark-grey;
+}
+.btn-black{
+    border: 2px solid $white;
+    background-color: $section-black;
+    color: $white;
 }
 
 // INPUT
@@ -567,6 +600,16 @@ footer
     &.linkedin
     {
         background-color: #2085c7;
+    }
+}
+
+#document-links{
+    background-color: #e6e6e6;
+    color: $dark-grey;
+    font-size: 20px;
+    font-weight: 400;
+    span{
+        
     }
 }
 

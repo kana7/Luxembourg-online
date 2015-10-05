@@ -1,33 +1,20 @@
 <!doctype html>
-<html lang="">
-
+<html lang="fr">
     <head>
         <meta charset="utf-8">
-        <title>LuxembourgOnline</title>
+        <title>Luxembourg Online : Internet - Accueil</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="shortcut icon" href="/favicon.ico">
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <!-- build:css(.) styles/vendor.css -->
-        <!-- bower:css -->
-        <!-- endbower -->
-        <!-- endbuild -->
-        <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="styles/css/main.css">
-        <!-- endbuild -->
-        <!-- build:js scripts/vendor/modernizr.js -->
-        <!--<script src="/bower_components/modernizr/modernizr.js"></script>-->
-        <!-- endbuild -->
-        <script src="scripts/vendor/picturefill.min.js"></script>
+        <link rel="stylesheet" href="../styles/css/main.css">
+        <link rel="stylesheet" href="../styles/css/internet/internet-accueil.css">
+
+        <script src="../scripts/vendor/picturefill.min.js"></script>
     </head>
 
     <body>
-        <!--[if lt IE 10]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
         <div class="fixed-options hidden-phone hidden-tab">
             <a href="#">
                 <div class="white-fixed-option">
@@ -72,7 +59,7 @@
                     <div class="row">
                         <div class="pull-left">
                             <div class="logo">
-                                <img src="images/icons/img/Logo-LOL.png" alt="logo LOL" />
+                                <img src="../images/icons/img/Logo-LOL.png" alt="logo LOL" />
                             </div><!--
                             --><nav class="bottom-menu-header-links">
                                 <div class="mobile-menu-button display-phone display-tab">
@@ -84,31 +71,31 @@
                                 <ul class="hidden-phone hidden-tab">
                                     <li>
                                         <a href="#">
-                                            <img class="header-icon" src="images/icons/img/internet.png" alt="Internet" />
+                                            <img class="header-icon" src="../images/icons/img/internet.png" alt="Internet" />
                                             <div class="link">Internet</div>
                                         </a>
                                     </li><!--
                                     --><li>
                                         <a href="#">
-                                            <img class="header-icon" src="images/icons/img/telephonie.png" alt="Téléphonie" />
+                                            <img class="header-icon" src="../images/icons/img/telephonie.png" alt="Téléphonie" />
                                             <div class="link">Téléphonie</div>
                                         </a>
                                     </li><!--
                                     --><li>
                                         <a href="#">
-                                            <img class="header-icon" src="images/icons/img/tv.png" alt="Tv" />
+                                            <img class="header-icon" src="../images/icons/img/tv.png" alt="Tv" />
                                             <div class="link">Tv</div>
                                         </a>
                                     </li><!--
                                     --><li>
                                         <a href="#">
-                                            <img class="header-icon" src="images/icons/img/mobile.png" alt="Mobile" />
+                                            <img class="header-icon" src="../images/icons/img/mobile.png" alt="Mobile" />
                                             <div class="link">Mobile</div>
                                         </a>
                                     </li><!--
                                     --><li>
                                         <a href="#">
-                                            <img class="header-icon" src="images/icons/img/promos.png" alt="Promos" />
+                                            <img class="header-icon" src="../images/icons/img/promos.png" alt="Promos" />
                                             <div class="link">Promos</div>
                                         </a>
                                     </li>
@@ -123,224 +110,94 @@
             </div>
 
         </header>
-        <!--            ./HEADER                -->
-
-        <!--            SLIDER             -->
-        <div id="slider">
-            <div id="slider-ui">
-                <div class="buttons hidden-phone hidden-tab">
-                    <button class="arrow left"><span class="icon-right-arrow"></span></button>
-                    <button class="arrow right"><span class="icon-right-arrow"></span></button>
-                </div>
-                <ul class="dots">
-                    <li class="active"><span class="icon-dot-stroke-slider"></span></li>
-                    <li><span class="icon-dot-slider"></span></li>
-                    <li><span class="icon-dot-slider"></span></li>
-                    <li><span class="icon-dot-slider"></span></li>
-                    <li><span class="icon-dot-slider"></span></li>
-                </ul>
-            </div>
-            <div id="slider-contents">
-                <div class="content" data-order="1">
-                    <div class="infos">
-                        <div class="container-wrapper">
-                            <div class="row">
-                                <div class="phone-12 desk-6">
-                                    <h1 class="title">offre spéciale</h1>
-                                    <p class="top-details">Frais d'installation et de cablage fibre<br/>
-                                        <strong>offerts!</strong>
-                                    </p>
-                                    <p class="bottom-details">Voir détails et conditions en magasin</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <img src="images/index/1024px/Slider/slider_fibre.jpg" 
-                         srcset="images/index/1280px/Slider/slider_fibre.jpg 1920w,
-                         images/index/1024px/Slider/slider_fibre.jpg 1400w,
-                         images/index/640px/Slider/slider_fibre.jpg 900w,
-                         images/index/320px/Slider/slider_fibre.jpg 600w"
-                         sizes="100%"  
-                         alt="pub fibre"/>
-                </div>
-            </div>
-        </div>
-        <!--            ./SLIDER             -->
-
-        <!--                SERVICES                -->
-        <section id="services">
-            <div class="container-wrapper">
-                <div class="row">
-                    <div class="phone-12 tab-6 desk-3">
-                        <div id="loldsl" class="service">
-                            <div class="infos">
-                                <h3>
-                                    <strong>lol</strong> dsl</h3>
-                                <ul class="details pull-right">
-                                    <li>Internet</li>
-                                    <li>+ Fixe</li>
-                                    <li>+ Mobile</li>
-                                    <li>
-                                        <div class="price-blue">
-                                            <div>,90€</div>
-                                            34<span>/mois</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="phone-12 tab-6 desk-3">
-                        <div id="mobiles" class="service">
-                            <div class="infos">
-                                <h3>nos mobiles</h3>
-                                <ul class="details pull-left">
-                                    <li>Faites-vous plaisir :</li>
-                                    <li><strong>iPhone 6 (16GB)</strong></li>
-                                    <li>
-                                        <div class="price-orange">
-                                            <div>€</div>
-                                            79
-                                        </div>
-                                    </li>
-                                </ul>
-                                <p class="bottom-info">Prix avec Fincancement 30/24</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="phone-12 tab-6 desk-3">
-                        <div id="installation" class="service">
-                            <div class="infos">
-                                <h3 class="orange">installation <strong>offerte</strong></h3>
-                                <ul class="details pull-right">
-                                    <li>Internet</li>
-                                    <li>+
-                                        <strong>LOL</strong> TV</li>
-                                    <li>
-                                        <div class="price-blue">
-                                            <div>,90€</div>
-                                            51<span>/mois</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="phone-12 tab-6 desk-3">
-                        <div id="dispo" class="service">
-                            <div class="infos" style="text-align: center;">
-                                <h3 class="white">Toutes nos offres disponibles
-                                    <strong>chez vous</strong> : </h3>
-                                <form action="">
-                                    <input class="input-white" type="text" placeholder="Code Postal" maxlength="4"/>
-                                    <button type="submit" class="btn-orange">Vérifiez les disponibilités</button>
-                                    <ul class="icons hidden-phone">
-                                        <li>
-                                            <div class="dispo-icon">
-                                                <span class="icon-internet-ico"></span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="dispo-icon">
-                                                <span class="icon-telephonie-ico"></span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="dispo-icon">
-                                                <span class="icon-tv-ico"></span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="dispo-icon">
-                                                <span class="icon-mobile-ico"></span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--                ./SERVICES                -->
-
-        <!--                OFFRES                -->
-        <section id="offres" class="section-layout section-shadow right-orientation">
+        
+        <section class="section-layout left-orientation background-green">
             <div class="container-wrapper">
                 <div class="row clearfix">
                     <div class="phone-12 desk-6">
-                        <img class="section-img-align-bottom" src="images/index/1024px/magazines.png" 
-                             srcset="images/index/1280px/magazines.png 1920w,
-                             images/index/1024px/magazines.png 1400w,
-                             images/index/640px/magazines.png 900w,
-                             images/index/320px/magazines.png 600w"
+                        <img class="section-img-align-bottom" src="../images/Internet/1024px/portable_internet.jpg" 
+                             srcset="../images/Internet/1280px/portable_internet.jpg 1920w,
+                             ../images/Internet/1024px/portable_internet.jpg 1400w,
+                             ../images/Internet/640px/portable_internet.jpg 900w,
+                             ../images/Internet/320px/portable_internet.jpg 600w"
                              sizes="100%"
-                             alt="magazines" />
+                             alt="portable internet" />
                     </div>
                     <div class="phone-12 desk-6">
-                        <h1 class="homepage-title">découvrez toutes nos offres
-                            <strong>adaptées à vos besoins !</strong>
+                        <h1 class="section-title lowercase">Des offres internet 
+                            <strong>Toujours plus attractives !</strong>
                         </h1>
-                        <a class="btn-white" href="#">Consulter le magasine</a>
+                        <p class="section-text">Que vous ayez simplement besoin de l’essentiel ou que vous
+                            soyez un surfeur hyperconnecté, une de nos offres est forcément faite pour vous ! Découvrez nos packages complets et profitez d’un trafic illimité...</p>
+                        <a class="btn-white" href="#">Voir nos offres Internet</a>
                     </div>
                 </div>
             </div>
         </section>
-        <!--                ./OFFRES                -->
-
-        <!--                20ANS               -->
-        <section id="twenty-years" class="section-layout">
-            <div class="container-wrapper">
-                <div class="row clearfix">
-                    <!--<img class="background-image-right" 
-                         src="images/index/1024px/20ans_LOL.png"
-                         srcset="images/index/1280px/20ans_LOL.png 1920w,
-                         images/index/1024px/20ans_LOL.png 1400w,
-                         images/index/640px/20ans_LOL.png 900w,
-                         images/index/320px/20ans_LOL.png 600w"
-                         sizes="100%"
-                         alt="bannière vingt ans"/>-->
-                    <div class="phone-12 desk-6">
-                        <h1 class="homepage-title">Luxembourg online<br/>
-                            <strong>fête ses 20 ans !</strong>
-                        </h1>
-                        <p class="homepage-description">Merci de votre fidélité.</p>
-                        <a class="btn-white" href="#">À propos de luxembourg Online</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--              ./20ANS               -->
-
-        <!--              PORTAIL               -->
-        <section id="portail" class="section-layout section-shadow right-orientation">
+        
+        <section class="section-layout right-orientation background-black">
             <div class="container-wrapper">
                 <div class="row clearfix">
                     <div class="phone-12 desk-6">
-                        <img class="section-img-align-bottom" src="images/index/1024px/Portail.jpg"
-                             srcset="images/index/1280px/Portail.jpg 1920w,
-                             images/index/1024px/Portail.jpg 1400w,
-                             images/index/640px/Portail.jpg 900w,
-                             images/index/320px/Portail.jpg 600w"
+                        <img class="section-img-align-bottom" 
+                             src="../images/Internet/1024px/fibre.jpg"
+                             srcset="../images/Internet/1280px/fibre.jpg 1920w,
+                             ../images/Internet/1024px/fibre.jpg 1400w,
+                             ../images/Internet/640px/fibre.jpg 900w,
+                             ../images/Internet/320px/fibre.jpg 600w"
                              sizes="100%"
-                             alt="portail background" />
+                             alt="fibre optique"/>
                     </div>
                     <div class="phone-12 desk-6">
-                        <h1 class="homepage-title">
-                            L’actu high-tech, cinéma et toutes vos sorties <strong>au luxembourg !</strong>
+                        <h1 class="section-title white lowercase">
+                            <strong>La Fibre Optique</strong>
+                            Le meilleur moyen d'accéder à internet
                         </h1>
-                        <a class="btn-white" href="#">Accéder à online.lu</a>
+                        <p class="section-text white">Considérée comme étant la technologie d’avenir, la fibre se généralise au Luxembourg.  Moyen d’accès Internet le plus efficace et le plus rapide, elle booste les connexions. </p>
+                        <a class="btn-black" href="#">En savoir plus sur la fibre</a>
                     </div>
                 </div>
             </div>
         </section>
-        <!--              ./PORTAIL               -->
-
-        <!--              FOOTER               -->
+        
+        <section class="section-layout left-orientation background-lightgrey">
+            <div class="container-wrapper">
+                <div class="row clearfix">
+                    <div class="phone-12 desk-6">
+                        <img class="section-img-align-bottom" src="../images/Internet/1024px/fritz.jpg"
+                             srcset="../images/Internet/1280px/fritz.jpg 1920w,
+                             ../images/Internet/1024px/fritz.jpg 1400w,
+                             ../images/Internet/640px/fritz.jpg 900w,
+                             ../images/Internet/320px/fritz.jpg 600w"
+                             sizes="100%"
+                             alt="modem Fritz!Box" />
+                    </div>
+                    <div class="phone-12 desk-6">
+                        <h1 class="section-title lowercase">
+                            <strong>Nos FRITZ!Box</strong>
+                            Le choix de la qualité !
+                        </h1>
+                        <p class="section-text hidden-lgdesk">Pour sa gamme internet, Luxembourg Online a fait le choix de la qualité avec les produits AVM.</p>
+                        <p class="section-text display-lgdesk">Pour sa gamme internet, Luxembourg Online a fait le choix de la qualité <span style="display: block;">avec les produits AVM.</span></p>
+                        <a class="btn-white" href="#">Voir nos équipements</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <footer>
+            <div id="document-links" class="iner-shadow">
+                <div class="container-wrapper">
+                    <div class="row">
+                        <ul>
+                            <li><a href=""><span class="icon icon-faq-ico"></span>FAQ</a></li>
+                            <li><a href=""><span class="icon icon-calculator-ico"></span>Nos tarifs détaillés</a></li>
+                            <li><a href=""><span class="icon icon-parrainage-ico"></span>Bon de parrainnage</a></li>
+                            <li><a href=""><span class="icon icon-document-ico"></span>Documents</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div id="social-links">
                 <div class="container-wrapper">
                     <div class="row">
@@ -478,19 +335,8 @@
         </footer>
         <!--              ./FOOTER               -->
 
-
-        <!-- build:js(.) scripts/vendor.js -->
-        <!-- bower:js -->
-        <!--<script src="/bower_components/jquery/dist/jquery.js"></script>-->
-        <script src="scripts/vendor/jquery.min.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
-
-
-
-        <!-- build:js scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
+        <script src="../scripts/vendor/jquery.min.js"></script>
+        <script src="../scripts/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

@@ -1,0 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,400italic);
+#document-links .icon {
+  display: none; }
+
+#document-links {
+  padding: 20px 0; }
+  #document-links ul {
+    text-align: center; }
+    #document-links ul li {
+      display: block;
+      width: 100%; }
+      #document-links ul li:not(:last-child) {
+        margin-bottom: 15px; }
+
+@media screen and (min-width: 672px) {
+  #document-links li {
+    width: auto; } }
+@media screen and (min-width: 1056px) {
+  #document-links .icon {
+    display: inline-block; } }
+
+/*# sourceMappingURL=internet-accueil.css.map */

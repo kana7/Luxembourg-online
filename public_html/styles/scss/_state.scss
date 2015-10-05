@@ -74,10 +74,8 @@
         line-height: 25px;
         padding: 15px 0 20px;
     }
-    #social-links{
-        .brand-name{
+    #social-links .brand-name{
             display: inline-block;
-        }
     }
     #social-links .social-icon{
         margin-right: 10px;
@@ -85,7 +83,7 @@
     #contact li{
         width: auto;
     }
-    .homepage-title{
+    .section-title{
         font-size: 36px;
         line-height: 45px;
     }
@@ -98,6 +96,9 @@
 @include media(desk){
     .container-wrapper{
         width: 1024px;
+    }
+    .btn-black{
+        margin-bottom: 30px;
     }
     #bottom-menu-header{
         height: 65px;
@@ -234,11 +235,15 @@
         right: 0;
         float: right !important;
         text-align: right;
-        height: auto;
-        @include vertical-align-middle;
-        .section-align-image-bottom{
+        .section-img-align-bottom{
             right: 0;
         }
+    }
+    .right-orientation .row > div:last-child, .left-orientation .row > div:last-child{
+        @include vertical-align-middle;
+        height: auto;
+
+
     }
     #twenty-years .row div:first-child{
         text-align: left;
@@ -251,7 +256,7 @@
     .section-img-align-bottom{
         position: absolute;
     }
-    .homepage-title {
+    .section-title {
         font-size: 30px;
         line-height: 40px;
     }
@@ -267,7 +272,7 @@
     #social-links nav, #contact ul{
         width: 75%;
     }
-
+    
     .help-link{
         font-size: 12.5pt;
         span[class^=icon-]{
@@ -297,10 +302,12 @@
     .container-wrapper{
         width: 1280px;
     }
+    .btn-black{
+        margin-bottom: 10px;
+    }
     .section-layout{
         height: 400px;
     }
-
     .bottom-menu-header-links{
         li{
             border-left: 1px solid #eeeeee;
@@ -362,12 +369,12 @@
             }
         }
     }
-    .homepage-title {
+    .section-title {
         font-size: 40px;
         line-height: 52px;
         margin: 0 0 25px;
     }
-    .homepage-description {
+    .section-description {
         font-size: 18px;
         margin: 0 0 45px;
     }
@@ -420,9 +427,15 @@
             }
         }
     }
+    .footer-bottom-links li{
+        margin-right: 111px;
+    }
 }
 @include viewport(min, $min: 1400){
     .container-wrapper{
         width: 1344px;
+    }
+    .footer-bottom-links li{
+        margin-right: 122px;
     }
 }

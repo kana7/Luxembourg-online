@@ -1,0 +1,15 @@
+#document-links .icon{display: none;}
+#document-links{
+    padding: 20px 0;
+        ul{
+        text-align: center;
+        
+        li{
+            display: block;
+            width: 100%;
+            &:not(:last-child){
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+
+@include media(phone){
+
+}
+@include media(tab){
+    #document-links li{
+        width: auto;
+    }
+}
+@include media(desk){
+    #document-links .icon{
+        display: inline-block;
+    }
+}
+@include media(lgdesk){
+
+}

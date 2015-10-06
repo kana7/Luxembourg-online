@@ -157,22 +157,27 @@ span[class^=icon-]
     }
 }
 .sub-menu{
-        font-size: 15px;
-        text-transform: uppercase;
-        li.active{
-            font-weight: 800;
-        }
-        .link{
-            display: inline;
-            padding-bottom: 3px;
-        }
-
-        li:hover{
-            .link{
-                border-bottom: 2px dotted $grey;
+    font-size: 15px;
+    text-transform: uppercase;
+    li.active{
+        font-weight: 800;
+        &:hover{
+            a{
+                cursor: default;
             }
         }
     }
+    .link{
+        display: inline;
+        padding-bottom: 3px;
+    }
+
+    li:not(.active):hover{
+        .link{
+            border-bottom: 2px dotted $grey;
+        }
+    }
+}
 
 // BUTTONS
 // --------------------------------------------------
@@ -645,6 +650,19 @@ footer
     &.linkedin
     {
         background-color: #2085c7;
+    }
+}
+
+#document-links{
+    background-color: #e6e6e6;
+    color: $dark-grey;
+    font-size: 18px;
+    font-weight: 400;
+    span{
+        position: absolute;
+        top: 1px;
+        left: 0;
+        font-size: 28px;
     }
 }
 

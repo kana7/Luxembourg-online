@@ -74,6 +74,13 @@
         line-height: 25px;
         padding: 15px 0 20px;
     }
+    #document-links ul li:not(:last-child){
+        margin-bottom: 0;
+    }
+    #document-links ul li{
+        display: inline-block;
+        width: auto;
+    }
     #social-links .brand-name{
         display: inline-block;
     }
@@ -300,6 +307,13 @@
         text-align: left;
         margin: 0;
         margin-right: 69px;
+    }
+    #document-links .icon{
+        display: inline-block;
+    }
+    #document-links a{
+        line-height: 31px;
+        padding-left: 40px;
     }
 }
 @include media(lgdesk){

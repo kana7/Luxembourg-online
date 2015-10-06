@@ -276,6 +276,7 @@ footer
 {
     display: block;
 }
+
 #social-links,
 #contact,
 #footer-links, #document-links
@@ -284,6 +285,27 @@ footer
 
     width: 100%;
 }
+
+#document-links .icon{display: none;}
+#document-links{
+    padding: 20px 0;
+    ul{
+        text-align: center;
+
+        li{
+            display: block;
+            width: 100%;
+            &:not(:last-child){
+                margin-bottom: 15px;
+            }
+            a{
+                display: block;
+            }
+        }
+    }
+}
+
+
 #social-links nav,
 #contact ul
 {

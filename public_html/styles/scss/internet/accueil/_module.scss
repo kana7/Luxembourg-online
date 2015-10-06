@@ -10,3 +10,26 @@
         font-size: 28px;
     }
 }
+#test-offres{
+    background-color: $blue;
+    .text{
+        font-size: 22px;
+        font-weight: 400;
+        color: #fff;
+        line-height: 30px;
+        margin-bottom: 17px;
+
+        span[class^=icon-]{
+            display: none;
+        }
+    }
+    .input-white, .btn-white{
+        width: 100%;
+    }
+    .input-white{
+        margin-bottom: 15px;
+    }
+    .btn-white{
+        font-size: 18px; 
+    }
+}

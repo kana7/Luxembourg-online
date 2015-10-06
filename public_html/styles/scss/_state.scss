@@ -75,7 +75,7 @@
         padding: 15px 0 20px;
     }
     #social-links .brand-name{
-            display: inline-block;
+        display: inline-block;
     }
     #social-links .social-icon{
         margin-right: 10px;
@@ -96,6 +96,10 @@
 @include media(desk){
     .container-wrapper{
         width: 1024px;
+    }
+    .first-section{
+        padding-top: 0px !important;
+        height: 400px !important;
     }
     .btn-black{
         margin-bottom: 30px;
@@ -272,7 +276,7 @@
     #social-links nav, #contact ul{
         width: 75%;
     }
-    
+
     .help-link{
         font-size: 12.5pt;
         span[class^=icon-]{
@@ -302,6 +306,10 @@
     .container-wrapper{
         width: 1280px;
     }
+    .first-section{
+        padding-top: 15px !important;
+        height: 500px !important;
+    }
     .btn-black{
         margin-bottom: 10px;
     }
@@ -309,7 +317,7 @@
         height: 400px;
     }
     .bottom-menu-header-links{
-        li{
+        .main-menu li{
             border-left: 1px solid #eeeeee;
             a{
                 .link{
@@ -317,7 +325,15 @@
                 }
             }
         }
-    } 
+    }
+    .sub-menu{
+        height: 60px;
+        line-height: 55px;
+        font-size: 16px;
+        li{
+            margin-right: 65px;
+        }
+    }
 
     #slider-contents{
         .title{

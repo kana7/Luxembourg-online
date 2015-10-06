@@ -68,7 +68,7 @@
                                     </button>
                                     <span class="icon-menu-icone"></span>
                                 </div>
-                                <ul class="hidden-phone hidden-tab">
+                                <ul class="main-menu hidden-phone hidden-tab">
                                     <li>
                                         <a href="#">
                                             <img class="header-icon" src="../images/icons/img/internet.png" alt="Internet" />
@@ -84,7 +84,7 @@
                                     --><li>
                                         <a href="#">
                                             <img class="header-icon" src="../images/icons/img/tv.png" alt="Tv" />
-                                            <div class="link">Tv</div>
+                                            <div class="link">TV</div>
                                         </a>
                                     </li><!--
                                     --><li>
@@ -101,6 +101,12 @@
                                     </li>
                                 </ul>
                             </nav>
+                            <ul class="sub-menu hidden-phone hidden-tab">
+                                <li class="active"><a href="#">Accueil Internet</a></li>
+                                <li><a href="#"><div class="link">Nos Offres</div></a></li>
+                                <li><a href="#"><div class="link">Équipement</div></a></li>
+                                <li><a href="#"><div class="link">Abonnez-vous</div></a></li>
+                            </ul>
                         </div>
                         <div class="pull-right hidden-phone hidden-tab">
                             <a class="btn-blue" href="#">Espace Client</a>
@@ -110,8 +116,8 @@
             </div>
 
         </header>
-        
-        <section class="section-layout left-orientation background-green">
+
+        <section class="section-layout left-orientation background-green first-section">
             <div class="container-wrapper">
                 <div class="row clearfix">
                     <div class="phone-12 desk-6">
@@ -129,12 +135,24 @@
                         </h1>
                         <p class="section-text">Que vous ayez simplement besoin de l’essentiel ou que vous
                             soyez un surfeur hyperconnecté, une de nos offres est forcément faite pour vous ! Découvrez nos packages complets et profitez d’un trafic illimité...</p>
-                        <a class="btn-white" href="#">Voir nos offres Internet</a>
+                        <a class="btn-outline-white" href="#">Voir nos offres Internet</a>
                     </div>
                 </div>
             </div>
         </section>
-        
+        <section id="test-offres">
+            <div class="container-wrapper">
+                <div class="row">
+                    <div class="text display-phone phone-12">Quelles offres sont <br/>disponibles chez vous ?</div>
+                    <div class="text hidden-phone phone-12 desk-6"><span class="icon-internet-ico"></span>Quelles offres sont disponibles chez vous ?</div>
+
+                    <form class="phone-12 desk-6" action="">
+                        <input class="input-white" type="text" placeholder="Code Postal"/>
+                        <button class="btn-white" type="submit">Vérifiez les disponibilités</button>
+                    </form>
+                </div>
+            </div>
+        </section>
         <section class="section-layout right-orientation background-black">
             <div class="container-wrapper">
                 <div class="row clearfix">
@@ -154,12 +172,12 @@
                             Le meilleur moyen d'accéder à internet
                         </h1>
                         <p class="section-text white">Considérée comme étant la technologie d’avenir, la fibre se généralise au Luxembourg.  Moyen d’accès Internet le plus efficace et le plus rapide, elle booste les connexions. </p>
-                        <a class="btn-black" href="#">En savoir plus sur la fibre</a>
+                        <a class="btn-outline-black" href="#">En savoir plus sur la fibre</a>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <section class="section-layout left-orientation background-lightgrey">
             <div class="container-wrapper">
                 <div class="row clearfix">
@@ -179,12 +197,12 @@
                         </h1>
                         <p class="section-text hidden-lgdesk">Pour sa gamme internet, Luxembourg Online a fait le choix de la qualité avec les produits AVM.</p>
                         <p class="section-text display-lgdesk">Pour sa gamme internet, Luxembourg Online a fait le choix de la qualité <span style="display: block;">avec les produits AVM.</span></p>
-                        <a class="btn-white" href="#">Voir nos équipements</a>
+                        <a class="btn-outline-white" href="#">Voir nos équipements</a>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <footer>
             <div id="document-links" class="iner-shadow">
                 <div class="container-wrapper">
@@ -192,7 +210,7 @@
                         <ul>
                             <li><a href=""><span class="icon icon-faq-ico"></span>FAQ</a></li>
                             <li><a href=""><span class="icon icon-calculator-ico"></span>Nos tarifs détaillés</a></li>
-                            <li><a href=""><span class="icon icon-parrainage-ico"></span>Bon de parrainnage</a></li>
+                            <li><a href=""><span class="icon icon-parrainage-ico"></span>Bon de parrainage</a></li>
                             <li><a href=""><span class="icon icon-document-ico"></span>Documents</a></li>
                         </ul>
                     </div>

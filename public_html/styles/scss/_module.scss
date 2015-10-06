@@ -144,7 +144,7 @@ span[class^=icon-]
 }
 .bottom-menu-header-links
 {
-    ul{
+    .main-menu{
         font-size: 16px;
         font-weight: 400;
 
@@ -152,10 +152,27 @@ span[class^=icon-]
 
         color: lighten($footer-grey, 20%);
     }
-    li{
+    .main-menu li{
         text-align: center;
     }
 }
+.sub-menu{
+        font-size: 15px;
+        text-transform: uppercase;
+        li.active{
+            font-weight: 800;
+        }
+        .link{
+            display: inline;
+            padding-bottom: 3px;
+        }
+
+        li:hover{
+            .link{
+                border-bottom: 2px dotted $grey;
+            }
+        }
+    }
 
 // BUTTONS
 // --------------------------------------------------
@@ -169,7 +186,7 @@ span[class^=icon-]
     display: inline-block;
 
     margin: 3px 0;
-    padding: 10px 15px;
+    padding: 12px 15px;
 
     cursor: pointer;
     -webkit-transition: $transitionUi;
@@ -196,7 +213,8 @@ span[class^=icon-]
 .btn-blue,
 .btn-orange,
 .btn-white,
-.btn-black,
+.btn-outline-white,
+.btn-outline-black,
 .mobile-menu-button button
 {
     @include btn;
@@ -249,15 +267,42 @@ span[class^=icon-]
 
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e75e0a', endColorstr='#d8520a',GradientType=0 ); /* IE6-8 */
 }
-.btn-white
+
+.btn-white{
+    color: $blue;
+    font-weight: 600;
+    background-color: $white;
+    font-size: 18px;
+    padding: 12px 15px;
+    -webkit-box-shadow: 0 2px 4px 0 lighten($black, 15%);
+    box-shadow: 0 2px 4px 0 lighten($black, 15%);
+
+    background: rgb(214,214,214);
+    background: -moz-linear-gradient(top, rgb(214,214,214) 0%, rgb(255,255,255) 50%, rgb(214,214,214) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgb(214,214,214)), color-stop(50%, rgb(255,255,255)), color-stop(100%, rgb(214,214,214)));
+    background: -webkit-linear-gradient(top, rgb(214,214,214) 0%, rgb(255,255,255) 50%, rgb(214,214,214) 100%);
+    background: -o-linear-gradient(top, rgb(214,214,214) 0%, rgb(255,255,255) 50%, rgb(214,214,214) 100%);
+    background: -ms-linear-gradient(top, rgb(214,214,214) 0%, rgb(255,255,255) 50%, rgb(214,214,214) 100%);
+    background: linear-gradient(to bottom, rgb(214,214,214) 0%, rgb(255,255,255) 50%, rgb(214,214,214) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#d6d6d6', GradientType=0 );
+}
+.btn-outline-white
 {
     border: 2px solid $grey;
     color: $dark-grey;
+    &:hover{
+        background-color: $grey;
+        color: $light-grey;
+    }
 }
-.btn-black{
+.btn-outline-black{
     border: 2px solid $white;
     background-color: $section-black;
     color: $white;
+    &:hover{
+        background-color: $white;
+        color: $section-black;
+    }
 }
 
 // INPUT

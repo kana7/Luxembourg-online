@@ -10,6 +10,23 @@
     left: 0;
     font-size: 28px; }
 
+#test-offres {
+  background-color: #004994; }
+  #test-offres .text {
+    font-size: 22px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 30px;
+    margin-bottom: 17px; }
+    #test-offres .text span[class^=icon-] {
+      display: none; }
+  #test-offres .input-white, #test-offres .btn-white {
+    width: 100%; }
+  #test-offres .input-white {
+    margin-bottom: 15px; }
+  #test-offres .btn-white {
+    font-size: 18px; }
+
 #document-links .icon {
   display: none; }
 
@@ -25,7 +42,38 @@
       #document-links ul li a {
         display: block; }
 
+#test-offres {
+  text-align: center;
+  padding: 20px 0; }
+
 @media screen and (min-width: 672px) {
+  #test-offres {
+    padding: 6px 0 10px; }
+    #test-offres .btn-white, #test-offres .input-white {
+      width: 290px;
+      vertical-align: top; }
+    #test-offres .btn-white {
+      vertical-align: top;
+      top: 3px;
+      float: right; }
+    #test-offres .input-white {
+      float: left; }
+    #test-offres .text {
+      position: relative;
+      font-size: 19px;
+      margin-bottom: 30px; }
+      #test-offres .text span[class^=icon-] {
+        display: inline-block;
+        position: relative;
+        top: 15px;
+        font-size: 45px;
+        margin-right: 31px;
+        -ms-transform: rotate(-20deg);
+        /* IE 9 */
+        -webkit-transform: rotate(-20deg);
+        /* Chrome, Safari, Opera */
+        transform: rotate(-20deg); }
+
   #document-links ul li:not(:last-child) {
     margin-bottom: 0; }
 
@@ -33,11 +81,40 @@
     display: inline-block;
     width: auto; } }
 @media screen and (min-width: 1056px) {
+  #test-offres {
+    padding: 5px 0 6px; }
+    #test-offres .text {
+      display: inline-block;
+      margin-bottom: 22px; }
+    #test-offres .row {
+      position: relative; }
+    #test-offres form {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      right: 0; }
+    #test-offres .btn-white, #test-offres .input-white {
+      margin: 0; }
+    #test-offres .btn-white {
+      top: 2px;
+      width: 270px; }
+    #test-offres .input-white {
+      width: 200px; }
+
   #document-links .icon {
     display: inline-block; }
 
   #document-links a {
     line-height: 31px;
     padding-left: 40px; } }
+@media screen and (min-width: 1302px) {
+  #test-offres .input-white {
+    width: 250px; }
+  #test-offres .btn-white {
+    float: left;
+    margin-left: 30px; } }
 
 /*# sourceMappingURL=internet-accueil.css.map */

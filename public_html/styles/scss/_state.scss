@@ -44,6 +44,19 @@
         }
 
     }
+    #offers-section{
+        div[class^=phone-]{
+            margin-bottom: 35px;
+            padding: 0 10px;
+        }
+    }
+    .footer-note{
+        margin: -14px 0 30px;
+    }
+    .content-container .content-title{
+        font-size: 26px;
+        margin: 25px 0 27px;
+    }
     #slider-contents{
         .title{
             font-size: 30pt;
@@ -162,7 +175,9 @@
             li{font-size: 7pt;}
         }
     }
-
+    #offers-section{
+        padding-top: 45px;
+    }
     #services{
         .row > div[class^=phone-]{
             padding: 0 7px;

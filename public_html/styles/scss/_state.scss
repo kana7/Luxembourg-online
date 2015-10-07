@@ -176,7 +176,7 @@
         }
     }
     #offers-section{
-        padding-top: 45px;
+        padding-top: 70px;
     }
     .footer-note{
         text-align: left;
@@ -348,7 +348,7 @@
     .offer-item-orange .check-list li .icon-check-ico, .offer-item-blue .check-list li .icon-check-ico{
         margin-right: 18px;
     }
-    .offer-item-blue .offer-price div{
+    .offer-item-blue .offer-price div, .offer-item-orange .offer-price div{
         left: 122px;
     }
 }
@@ -385,6 +385,8 @@
             margin-right: 65px;
         }
     }
+    
+    .offer-item-orange .offer-price div, .offer-item-blue .offer-price div{left: 158px;}
 
     #slider-contents{
         .title{

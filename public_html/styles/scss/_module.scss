@@ -237,13 +237,13 @@ span[class^=icon-]
 .btn-white,
 .btn-outline-white,
 .btn-outline-black,
-.mobile-menu-button button
+.mobile-menu-button .mobile-button-blue
 {
     @include btn;
 }
 .mobile-menu-button{
     height: 100%;
-    button{
+    .mobile-button-blue{
         display: inline;
         width: 35px;
         height: 100%;
@@ -254,11 +254,17 @@ span[class^=icon-]
         background-color: $blue; 
         margin-right: 12px;
     }
+    .mobile-button-white{
+        outline: 0;
+        background-color: white;
+        border: none;
+        border-radius: 4px;
+    }
     span[class^=icon-]{
         display: inline;
         margin: 0;
         font-size: 17px;
-        &.icon-account-icone{color:$white;}    
+        &.icon-account-icone{color:$white;}  
         &.icon-menu-icone{
             color: $blue; 
             font-size: 28px;
@@ -388,6 +394,7 @@ span[class^=icon-]
         color: $white;
     }
     .item-header{
+        border-radius: 4px 4px 0px 0px;
         padding: 18px 0 15px;
         font-size: 24px;
         text-transform: uppercase;
@@ -407,15 +414,18 @@ span[class^=icon-]
             padding: 20px 0;
         }
     }
+    .item-footer{
+        border-radius: 0px 0px 4px 4px;
+    }
     .offer-price{
         position: relative;
-        font-weight: 800;
+        font-weight: 600;
         font-size: 58px;
         div{
             position: absolute;
             font-size: 32px;
             top: 3px;
-            left: 154px;
+            left: 150px;
         }
         span{
             font-size: 22px;
@@ -489,6 +499,34 @@ span[class^=icon-]
 }
 .offer-item-orange{
     @include offer-item($orange);
+}
+.offer-item-blue, .offer-item-orange{
+    &.up-flat{
+        border-radius: 2px 2px 6px 6px;
+        .item-body{
+            &>li:not(:last-child){
+                border: none;
+            }
+        }
+        .thumbnails-wrapper{height: 40}
+        .thumbnails-wrapper{
+            height: 100%;
+            width: 60%;
+            margin: 0 auto;
+            div[class^=phone-]{
+                height: 100%;
+                border: 1px solid $grey;
+                border-radius: 2px;
+            }
+            img{
+                width: auto;
+                height: 100%;
+            }
+        }
+    }
+    &.up-flat:not(.offer-item-orange){
+        border-color: $grey;
+    }
 }
 
 .content-container{

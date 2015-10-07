@@ -5,11 +5,11 @@
 @include media(tab){
     #test-offres{
         padding: 6px 0 10px;
-        .btn-white, .input-white{
+        .btn-orange, .input-white{
             width: 290px;
             vertical-align: top;
         }
-        .btn-white{
+        .btn-orange{
             vertical-align: top;
             top: 3px;
             float: right;
@@ -48,10 +48,10 @@
             @include vertical-align-middle(absolute);
             right: 0;
         }
-        .btn-white, .input-white{
+        .btn-orange, .input-white{
             margin: 0;
         }
-        .btn-white{
+        .btn-orange{
             top: 2px;
             width: 270px;
         }
@@ -63,7 +63,7 @@
 @include media(lgdesk){
     #test-offres{
         .input-white{width: 250px;}
-        .btn-white{
+        .btn-orange{
             float: left;
             margin-left: 30px;
         }

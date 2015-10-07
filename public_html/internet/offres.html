@@ -42,8 +42,8 @@
                         </nav>
                         <nav class="pull-right">
                             <ul class="top-menu-header-links right">
+                                <li><a href="http://www.internet.lu/lolcloud/index.htm" target="_blank">LOL CLOUD</a></li>
                                 <li><a href="#">Assistance</a></li>
-                                <li><a href="#">Boutiques</a></li>
                                 <li><a href="#">Magazine</a></li>
                                 <li><a href="#">À propos</a></li>
                                 <li><a href="#">Contact</a></li>
@@ -59,18 +59,20 @@
                     <div class="row">
                         <div class="pull-left">
                             <div class="logo">
-                                <img src="../images/icons/img/Logo-LOL.png" alt="logo LOL" />
+                                <a href="../index.html"><img src="../images/icons/img/Logo-LOL.png" alt="logo LOL" /></a>
                             </div><!--
                             --><nav class="bottom-menu-header-links">
                                 <div class="mobile-menu-button display-phone display-tab">
-                                    <button>
+                                    <button class="mobile-button-blue">
                                         <span class="icon-account-icone"></span>
                                     </button>
-                                    <span class="icon-menu-icone"></span>
+                                    <button class="mobile-button-white">
+                                        <span class="icon-menu-icone"></span>
+                                    </button>
                                 </div>
                                 <ul class="main-menu hidden-phone hidden-tab">
                                     <li>
-                                        <a href="#">
+                                        <a href="accueil.html">
                                             <img class="header-icon" src="../images/icons/img/internet.png" alt="Internet" />
                                             <div class="link">Internet</div>
                                         </a>
@@ -83,8 +85,8 @@
                                     </li><!--
                                     --><li>
                                         <a href="#">
-                                            <img class="header-icon" src="../images/icons/img/tv.png" alt="Tv" />
-                                            <div class="link">Tv</div>
+                                            <img class="header-icon" src="../images/icons/img/tv.png" alt="TV" />
+                                            <div class="link">TV</div>
                                         </a>
                                     </li><!--
                                     --><li>
@@ -102,9 +104,9 @@
                                 </ul>
                             </nav>
                             <ul class="sub-menu hidden-phone hidden-tab">
-                                <li><a href="#"><div class="link">Accueil Internet</div></a></li>
-                                <li class="active"><a href="#"><div class="link">Nos Offres</div></a></li>
-                                <li><a href="#"><div class="link">Équipement</div></a></li>
+                                <li><a href="accueil.html"><div class="link">Accueil Internet</div></a></li>
+                                <li class="active"><a href="offres.html"><div class="link">Nos Offres</div></a></li>
+                                <li><a href="equipement.html"><div class="link">Équipement</div></a></li>
                                 <li><a href="#"><div class="link">Abonnez-vous</div></a></li>
                             </ul>
                         </div>
@@ -120,8 +122,8 @@
 
         <section id="offers-section" class="content-container drop-shadow ">
             <div class="container-wrapper">
-                <div class="row">
-                    <h1 class="content-title">Nos Offres internet</h1>
+                <div class="row hidden-desk hidden-lgdesk">
+                    <h1 class="content-title">Nos Offres Internet</h1>
                 </div>
                 <div class="row display-phone">
                     <div class="phone-12">
@@ -155,37 +157,7 @@
                         <a class="btn-outline-white" href="#">Vérifiez la disponibilité</a>
                     </div>
                 </div>
-                <div class="row hidden-phone">
-                    <div class="phone-6 desk-3">
-                        <div class="offer-item-orange">
-                            <div class="item-header">
-                                <strong>LOL</strong> fiber 100
-                            </div>
-                            <ul class="item-body">
-                                <li class="description">Offre coup  de <span class="icon-heart-ico"></span></li>
-                                <li class="info"><span class="icon-download-ico download"></span>100 Mbit/s<span class="exponent">1</span></li>
-                                <li class="info"><span class="icon-download-ico upload"></span>50 Mbits/s<span class="exponent">1</span></li>
-                                <li>
-                                    <div class="check-list-title"><span class="icon-pack-ico"></span> Inclus dans ce pack : </div>
-                                    <ul class="check-list">
-                                        <li><span class="icon-check-ico"></span>Volume illimité</li>
-                                        <li><span class="icon-check-ico"></span>Abonnement tél. fixe</li>
-                                        <li><span class="icon-check-ico"></span>Appels nat. fixe<span class="exponent">2</span></li>
-                                        <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
-                                        <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">2</span></li>
-                                        <li><span class="icon-check-ico"></span>LOL CLOUD 5GB</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <div class="item-footer">
-                                <div class="offer-price">
-                                    <div>,90€</div>
-                                    54<span>/mois</span>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="btn-outline-white" href="#">Vérifiez la disponibilité</a>
-                    </div>
+                <div style="margin-left: -20px; margin-right: -20px;" class="row hidden-phone">
                     <div class="phone-6 desk-3">
                         <div class="offer-item-blue">
                             <div class="item-header">
@@ -241,6 +213,36 @@
                                 <div class="offer-price">
                                     <div>,90€</div>
                                     44<span>/mois</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="btn-outline-white" href="#">Vérifiez la disponibilité</a>
+                    </div>
+                    <div class="phone-6 desk-3">
+                        <div class="offer-item-orange">
+                            <div class="item-header">
+                                <strong>LOL</strong> fiber 100
+                            </div>
+                            <ul class="item-body">
+                                <li class="description">Offre coup  de <span class="icon-heart-ico"></span></li>
+                                <li class="info"><span class="icon-download-ico download"></span>100 Mbit/s<span class="exponent">1</span></li>
+                                <li class="info"><span class="icon-download-ico upload"></span>50 Mbits/s<span class="exponent">1</span></li>
+                                <li>
+                                    <div class="check-list-title"><span class="icon-pack-ico"></span> Inclus dans ce pack : </div>
+                                    <ul class="check-list">
+                                        <li><span class="icon-check-ico"></span>Volume illimité</li>
+                                        <li><span class="icon-check-ico"></span>Abonnement tél. fixe</li>
+                                        <li><span class="icon-check-ico"></span>Appels nat. fixe<span class="exponent">2</span></li>
+                                        <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
+                                        <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">2</span></li>
+                                        <li><span class="icon-check-ico"></span>LOL CLOUD 5GB</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="item-footer">
+                                <div class="offer-price">
+                                    <div>,90€</div>
+                                    54<span>/mois</span>
                                 </div>
                             </div>
                         </div>
@@ -382,7 +384,8 @@
                     </div>
                 </div>
             </div>
-            <div id="footer-links"><div class="container-wrapper">
+            <div id="footer-links">
+                <div class="container-wrapper">
                     <div class="row">
                         <a class="help-link" href="#">
                             <span class="icon-info-icone"></span>
@@ -396,9 +399,9 @@
                             <h4>internet : </h4>
                             <nav>
                                 <ul class="links">
-                                    <li><a href="#">Nos offres</a></li>
+                                    <li><a href="offres.html">Nos offres</a></li>
                                     <li><a href="#">Offre spéciale fibre</a></li>
-                                    <li><a href="#">Nos équipements</a></li>
+                                    <li><a href="equipement.html">Nos équipements</a></li>
                                 </ul>
                             </nav>
                         </div>

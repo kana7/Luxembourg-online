@@ -1670,7 +1670,7 @@ header {
   position: relative;
   display: block;
   width: 100%;
-  z-index: 1; }
+  z-index: 2; }
 
 #top-menu-header {
   position: relative;
@@ -1971,7 +1971,11 @@ footer {
 
 .section-layout {
   color: #004994;
-  z-index: -1; }
+  z-index: 0; }
+
+.content-container {
+  position: relative;
+  z-index: 1; }
 
 .section-title {
   font-size: 24px;
@@ -2312,7 +2316,7 @@ span[class^=icon-] {
       margin-right: 0;
       margin-left: 5px;
       top: 4px;
-      font-size: 22px; }
+      font-size: 1.14em; }
   .offer-item-blue .info {
     font-size: 21px;
     font-weight: 800; }
@@ -2405,7 +2409,7 @@ span[class^=icon-] {
       margin-right: 0;
       margin-left: 5px;
       top: 4px;
-      font-size: 22px; }
+      font-size: 1.14em; }
   .offer-item-orange .info {
     font-size: 21px;
     font-weight: 800; }
@@ -2946,6 +2950,9 @@ footer {
   #offers-section {
     padding-top: 45px; }
 
+  .footer-note {
+    text-align: left; }
+
   #services .row > div[class^=phone-] {
     padding: 0 7px; }
   #services .service {
@@ -3084,6 +3091,21 @@ footer {
   #document-links a {
     line-height: 31px;
     padding-left: 40px; } }
+@media screen and (min-width: 1056px) and (max-width: 1302px) {
+  #offers-section div[class^=phone-] {
+    padding: 0 5px; }
+
+  .offer-item-blue .description, .offer-item-orange .description {
+    font-size: 19px; }
+
+  .offer-item-orange .item-body > li:not(:first-child), .offer-item-blue .item-body > li:not(:first-child) {
+    padding-left: 15px; }
+
+  .offer-item-orange .check-list li .icon-check-ico, .offer-item-blue .check-list li .icon-check-ico {
+    margin-right: 18px; }
+
+  .offer-item-blue .offer-price div {
+    left: 122px; } }
 @media screen and (min-width: 1302px) {
   .container-wrapper {
     width: 1280px; }

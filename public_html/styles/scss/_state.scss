@@ -178,6 +178,9 @@
     #offers-section{
         padding-top: 45px;
     }
+    .footer-note{
+        text-align: left;
+    }
     #services{
         .row > div[class^=phone-]{
             padding: 0 7px;
@@ -331,6 +334,25 @@
         padding-left: 40px;
     }
 }
+
+@include viewport(range, $min: 1056, $max: 1302){
+    #offers-section div[class^=phone-]{
+        padding: 0 5px;
+    }
+    .offer-item-blue .description, .offer-item-orange .description{
+        font-size: 19px;
+    }
+    .offer-item-orange .item-body > li:not(:first-child), .offer-item-blue .item-body > li:not(:first-child){
+        padding-left: 15px;
+    }
+    .offer-item-orange .check-list li .icon-check-ico, .offer-item-blue .check-list li .icon-check-ico{
+        margin-right: 18px;
+    }
+    .offer-item-blue .offer-price div{
+        left: 122px;
+    }
+}
+
 @include media(lgdesk){
     .container-wrapper{
         width: 1280px;

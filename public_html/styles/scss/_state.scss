@@ -21,6 +21,12 @@
     .container-wrapper{
         width: 640px;
     }
+    .section-layout{
+        img{
+            width: auto;
+            height: 230px;
+        }
+    }
     #services{
         .row>div[class^=phone-]{
             padding: 0 15px;
@@ -57,6 +63,9 @@
         font-size: 26px;
         margin: 25px 0 27px;
     }
+    #slider-contents .infos{
+        height: 450px;
+    }
     #slider-contents{
         .title{
             font-size: 30pt;
@@ -68,6 +77,19 @@
         }
         p.bottom-details{
             font-size: 10pt;
+        }
+
+        .flickity-prev-next-button {
+            position: absolute;
+            top: 50%;
+            width: 55px;
+            height: 55px;
+            &.previous{left: 50px;}
+            &.next{right: 50px;}
+            svg{
+                width: 70%;
+                height: 70%;
+            }
         }
     }
     #slider-ui{
@@ -138,12 +160,15 @@
         height: 325px;
         padding: 0;
     }
+    #slider-contents .flickity-page-dots{
+        bottom: 20px;
+    }
     #slider{
         padding-bottom: 0;
     }
-    #slider-contents .content .infos{
-        position: absolute;
-        height: 100%;
+    #slider-contents .infos{
+        position: relative;
+        height: 135px;
         z-index: 1;
         text-align: left;
         .row{
@@ -162,6 +187,9 @@
         p.bottom-details{
             font-size: 10pt;
         }
+    }
+    #slider-contents .infos{
+        height: 330px;
     }
     #slider-ui{
         .buttons{
@@ -385,7 +413,7 @@
             margin-right: 65px;
         }
     }
-    
+
     .offer-item-orange .offer-price div, .offer-item-blue .offer-price div{left: 158px;}
 
     #slider-contents{
@@ -399,6 +427,9 @@
         p.bottom-details{
             font-size: 11pt;
         }
+    }
+    #slider-contents .infos{
+        height: 360px;
     }
     #slider-ui{
         .buttons{

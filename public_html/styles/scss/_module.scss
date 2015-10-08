@@ -42,7 +42,7 @@
     z-index: 1;
 }
 .section-title{
-    font-size: 24px;
+    font-size: 23px;
     line-height: 30px;
     margin: 20px 0;
     text-transform: uppercase;
@@ -76,7 +76,7 @@ span[class^=icon-]
 .exponent{
     vertical-align:super;
     font-weight: 800;
-    font-size: 0.7em;
+    font-size: 0.5em;
 }
 
 .footer-note{
@@ -259,6 +259,7 @@ span[class^=icon-]
         background-color: white;
         border: none;
         border-radius: 4px;
+            margin-right: -8px;
     }
     span[class^=icon-]{
         display: inline;
@@ -534,7 +535,7 @@ span[class^=icon-]
         font-size: 20px;
         font-weight: 800;
         text-align: center;
-        margin: 40px 0 25px;
+        margin: 40px 0 50px;
     }
     .btn-outline-white{
         font-size: 17px;
@@ -598,10 +599,13 @@ span[class^=icon-]
         }
     }
 }
+
 #slider-contents{
     .infos{
         text-align: center;
         padding: 20px 0;
+        background-repeat: no-repeat;
+        background-position: center top;
     }
     .title{
         margin: 0 0 12px;

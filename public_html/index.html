@@ -8,10 +8,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="shortcut icon" href="/favicon.ico">
-
+        <link rel="stylesheet" href="styles/css/vendor/flickity.min.css" />
         <link rel="stylesheet" href="styles/css/main.css">
+        <link rel="stylesheet" href="styles/css/slider_src.css">
 
-        <script src="scripts/vendor/picturefill.min.js"></script>
+        <script>
+            // Picture element HTML5 shiv
+            document.createElement("picture");
+        </script>
+        <script src="scripts/vendor/picturefill.min.js" async></script>
     </head>
 
     <body>
@@ -42,12 +47,11 @@
                         </nav>
                         <nav class="pull-right">
                             <ul class="top-menu-header-links right">
-                                <li><a href="http://www.internet.lu/lolcloud/index.htm" target="_blank">LOL CLOUD</a></li>
                                 <li><a href="#">Assistance</a></li>
+                                <li><a href="http://www.internet.lu/lolcloud/index.htm" target="_blank">LOL CLOUD</a></li>
                                 <li><a href="#">Magazine</a></li>
                                 <li><a href="#">À propos</a></li>
                                 <li><a href="#">Contact</a></li>
-                                <li><a href="#">fr</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -116,7 +120,7 @@
 
         <!--            SLIDER             -->
         <div id="slider">
-            <div id="slider-ui">
+            <div id="slider-ui" class="hidden">
                 <div class="buttons hidden-phone hidden-tab">
                     <button class="arrow left"><span class="icon-right-arrow"></span></button>
                     <button class="arrow right"><span class="icon-right-arrow"></span></button>
@@ -129,9 +133,10 @@
                     <li><span class="icon-dot-slider"></span></li>
                 </ul>
             </div>
-            <div id="slider-contents">
-                <div class="content" data-order="1">
-                    <div class="infos">
+            <div id="slider-contents" class="main-gallery">
+                <div class="gallery-cell">
+                    <div class="infos image-1">
+                        <a href="#"></a>
                         <div class="container-wrapper">
                             <div class="row">
                                 <div class="phone-12 desk-6">
@@ -144,12 +149,21 @@
                             </div>
                         </div>
                     </div>
-                    <img src="images/index/1024px/Slider/slider_fibre.jpg" 
-                         srcset="images/index/1280px/Slider/slider_fibre.jpg 1920w,
-                         images/index/1024px/Slider/slider_fibre.jpg 1400w,
-                         images/index/640px/Slider/slider_fibre.jpg 900w"
-                         sizes="100%"  
-                         alt="pub fibre"/>
+                </div>
+                <div class="gallery-cell">
+                    <div class="infos image-1">
+                        <a href="#"></a>
+                        <div class="container-wrapper">
+                            <div class="row">
+                                <div class="phone-12 desk-6">
+                                    <h1 class="title">Ceci est un test</h1>
+                                    <p class="top-details">Vous êtes sur le slider 2.
+                                    </p>
+                                    <p class="bottom-details">Voir détails et conditions en magasin</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -159,6 +173,40 @@
         <section id="services">
             <div class="container-wrapper">
                 <div class="row">
+                    <div class="phone-12 tab-6 desk-3 display-tab display-phone">
+                        <div id="dispo" class="service">
+                            <div class="infos" style="text-align: center;">
+                                <h3 class="white">Toutes nos offres <br/>disponibles
+                                    <strong>chez vous</strong> : </h3>
+                                <form action="">
+                                    <input class="input-white" type="text" placeholder="Code Postal" maxlength="4"/>
+                                    <button type="submit" class="btn-orange">Vérifiez les disponibilités</button>
+                                    <ul class="icons hidden-phone">
+                                        <li>
+                                            <div class="dispo-icon">
+                                                <span class="icon-internet-ico"></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="dispo-icon">
+                                                <span class="icon-telephonie-ico"></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="dispo-icon">
+                                                <span class="icon-tv-ico"></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="dispo-icon">
+                                                <span class="icon-mobile-ico"></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                     <div class="phone-12 tab-6 desk-3">
                         <div id="loldsl" class="service">
                             <div class="infos">
@@ -216,7 +264,7 @@
                         </div>
                     </div>
 
-                    <div class="phone-12 tab-6 desk-3">
+                    <div class="phone-12 tab-6 desk-3 hidden-tab hidden-phone">
                         <div id="dispo" class="service">
                             <div class="infos" style="text-align: center;">
                                 <h3 class="white">Toutes nos offres disponibles
@@ -462,8 +510,20 @@
         <!--              ./FOOTER               -->
 
         <script src="scripts/vendor/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/vendor/flickity.pkgd.min.js"></script>
 
         <script src="scripts/main.js"></script>
+
+        <script type="text/javascript">
+            $('.main-gallery').flickity({
+                // options
+                cellAlign: 'center',
+                contain: true,
+                wrapAround: true,
+                autoPlay: true
+            });
+
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

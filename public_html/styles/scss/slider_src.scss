@@ -1,0 +1,31 @@
+@import "_theme.scss";
+@import "_mixin.scss";
+
+#slider-contents{
+    .infos{
+        &.image-1{
+            background-image: url(../../images/index/640px/Slider/slider_fibre.jpg);
+            background-size: auto 320px;
+        }
+    }
+}
+
+@include media(tab){
+    #slider-contents .infos.image-1{
+        background-image: url(../../images/index/640px/Slider/slider_fibre.jpg);
+        background-size: auto 450px;
+    }
+}
+@include media(desk){
+    #slider-contents .infos.image-1{
+        background-image: url(../../images/index/1024px/Slider/slider_fibre.jpg);
+        background-size: auto 330px;
+    }
+}
+@include media(lgdesk){
+    #slider-contents .infos.image-1{
+        background-image: url(../../images/index/1280px/Slider/slider_fibre.jpg);
+        background-size: 1920px auto;
+    }
+}
+

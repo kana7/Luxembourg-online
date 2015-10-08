@@ -1,0 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,400italic);
+#slider-contents .infos.image-1 {
+  background-image: url(../../images/index/640px/Slider/slider_fibre.jpg);
+  background-size: auto 320px; }
+
+@media screen and (min-width: 672px) {
+  #slider-contents .infos.image-1 {
+    background-image: url(../../images/index/640px/Slider/slider_fibre.jpg);
+    background-size: auto 450px; } }
+@media screen and (min-width: 1056px) {
+  #slider-contents .infos.image-1 {
+    background-image: url(../../images/index/1024px/Slider/slider_fibre.jpg);
+    background-size: auto 330px; } }
+@media screen and (min-width: 1302px) {
+  #slider-contents .infos.image-1 {
+    background-image: url(../../images/index/1280px/Slider/slider_fibre.jpg);
+    background-size: 1920px auto; } }
+
+/*# sourceMappingURL=slider_src.css.map */

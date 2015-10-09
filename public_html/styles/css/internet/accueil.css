@@ -66,9 +66,8 @@
     #test-offres .btn-orange, #test-offres .input-white {
       margin: 0; }
     #test-offres .btn-orange {
-      top: 3px;
-      width: 270px;
-      }
+      top: 2px;
+      width: 270px; }
     #test-offres .input-white {
       width: 200px; } }
 @media screen and (min-width: 1302px) {

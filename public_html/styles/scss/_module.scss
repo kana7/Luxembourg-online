@@ -259,7 +259,7 @@ span[class^=icon-]
         background-color: white;
         border: none;
         border-radius: 4px;
-            margin-right: -8px;
+        margin-right: -8px;
     }
     span[class^=icon-]{
         display: inline;
@@ -505,24 +505,72 @@ span[class^=icon-]
     &.up-flat{
         border-radius: 2px 2px 6px 6px;
         .item-body{
+            padding: 20px 0;
             &>li:not(:last-child){
                 border: none;
             }
+            &>li{
+                display: block;
+                padding: 0;
+                text-align: center !important;
+            }
         }
-        .thumbnails-wrapper{height: 40}
+        .main-image{
+            padding: 0 60px !important;
+            margin-bottom: 15px;
+            img{width: 100%; height: auto;}
+        }
+        .thumbnails{
+            margin-bottom: 25px;
+        }
         .thumbnails-wrapper{
-            height: 100%;
+            height: auto;
             width: 60%;
             margin: 0 auto;
-            div[class^=phone-]{
-                height: 100%;
+            @include display-flex-center;
+            .thumb{
+                display: inline-block;
+                float: left;
+                width: 50px;
+                height: 25px;
                 border: 1px solid $grey;
                 border-radius: 2px;
+                text-align: center;
+                margin-left: 5px;
             }
             img{
-                width: auto;
-                height: 100%;
+                display: inline-block;
+                @include vertical-align-middle;
+                max-width: 45px;
+                max-height: 20px;
             }
+        }
+        .item-name{
+            margin-bottom: 25px;
+        }
+        .main{
+            font-size: 21px;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+        .sub{
+            font-size: 16px;
+            color: darken($dark-grey, 15%);
+            font-weight: 600;
+        }
+        .description-list>li{
+            margin-bottom: 6px;
+            color: $dark-grey;
+            line-height: 19px;
+        }
+        .label{
+            color: darken($dark-grey, 5%);
+            font-size: 15px;
+            font-weight: 800;
+        }
+        .info{
+            font-size: 14px;
+            font-weight: 400;
         }
     }
     &.up-flat:not(.offer-item-orange){
@@ -536,6 +584,12 @@ span[class^=icon-]
         font-weight: 800;
         text-align: center;
         margin: 40px 0 50px;
+    }
+    .content-subtitle{
+        @extend .content-title;
+        margin: -25px 0 45px;
+        font-weight: 400;
+        font-size: 21px;
     }
     .btn-outline-white{
         font-size: 17px;

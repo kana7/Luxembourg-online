@@ -2017,7 +2017,7 @@ footer {
   #contact span {
     display: inline-block; }
 
-body, .mobile-side-menu {
+body, .mobile-side-menu, #offers-section {
   background-color: #fff; }
 
 .orange {
@@ -2335,7 +2335,8 @@ span[class^=icon-] {
 .btn-blue {
   color: #fff;
   background-color: #004994;
-  text-shadow: 0 2px 5px #404040; }
+  text-shadow: 0 2px 5px #404040;
+  margin: 0; }
 
 .btn-orange {
   color: #fff;
@@ -2687,6 +2688,7 @@ span[class^=icon-] {
     color: #5b5b5b;
     font-weight: 600; }
   .offer-item-blue.up-flat .description-list > li, .offer-item-orange.up-flat .description-list > li {
+    display: block;
     margin-bottom: 6px;
     color: #818181;
     line-height: 19px; }
@@ -3229,6 +3231,9 @@ footer {
     width: 135px; }
     #slider-ui .dots li {
       font-size: 7pt; }
+
+  .content-container .content-title, .content-container .content-subtitle, .content-container .content-subtitle {
+    text-align: left; }
 
   #offers-section {
     padding-top: 70px; }

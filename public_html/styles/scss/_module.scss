@@ -1,4 +1,4 @@
-body, .mobile-side-menu{
+body, .mobile-side-menu, #offers-section{
     background-color: $white;
 }
 
@@ -360,6 +360,7 @@ span[class^=icon-]
     color: $white;
     background-color: $blue;
     text-shadow: 0 2px 5px lighten($black, 25%);
+    margin: 0;
 }
 .btn-orange
 {
@@ -641,6 +642,7 @@ span[class^=icon-]
             font-weight: 600;
         }
         .description-list>li{
+            display: block;
             margin-bottom: 6px;
             color: $dark-grey;
             line-height: 19px;

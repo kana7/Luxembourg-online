@@ -2109,7 +2109,7 @@ span[class^=icon-] {
   -ms-transform: translateX(0px);
   -o-transform: translateX(0px);
   transform: translateX(0px);
-  background-color: #004994;
+  background-color: #fff;
   -webkit-transition: -webkit-transform 0.4s ease;
   /* Changed here */
   -moz-transition: -moz-transform 0.4s ease;

@@ -152,7 +152,11 @@
         .pull-left{
             width: auto;
         }
+        &:after{
+            top: 64px;
+        }
     }
+    
     .bottom-menu-header-links{
         float: left;
     }

@@ -515,14 +515,15 @@
         <script src="scripts/main.js"></script>
 
         <script type="text/javascript">
-            $('.main-gallery').flickity({
-                // options
-                cellAlign: 'center',
-                contain: true,
-                wrapAround: true,
-                autoPlay: true
+            $(function () {
+                $('.main-gallery').flickity({
+                    // options
+                    cellAlign: 'center',
+                    contain: true,
+                    wrapAround: true,
+                    autoPlay: true
+                });
             });
-
         </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

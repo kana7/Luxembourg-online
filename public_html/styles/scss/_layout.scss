@@ -76,8 +76,6 @@ header{
     {
         position: relative;
         height: 100%;
-        width: 100%;
-        top: 0px;
     }
 }
 .bottom-menu-header-links{
@@ -85,6 +83,15 @@ header{
     display: inline-block;
     float: right;
     height: 100%;
+    &.mobile{
+        width: 100%;
+        padding: 0 25px;
+        .mobile-menu-button{
+            display: inline-block;
+            position: relative;
+            float: right;
+        }
+    }
     .main-menu{height: 100%;}
     .main-menu li{
         height: 100%;

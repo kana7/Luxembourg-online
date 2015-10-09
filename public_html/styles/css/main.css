@@ -1693,15 +1693,20 @@ header {
     height: 100%; }
   #bottom-menu-header .pull-left {
     position: relative;
-    height: 100%;
-    width: 100%;
-    top: 0px; }
+    height: 100%; }
 
 .bottom-menu-header-links {
   position: relative;
   display: inline-block;
   float: right;
   height: 100%; }
+  .bottom-menu-header-links.mobile {
+    width: 100%;
+    padding: 0 25px; }
+    .bottom-menu-header-links.mobile .mobile-menu-button {
+      display: inline-block;
+      position: relative;
+      float: right; }
   .bottom-menu-header-links .main-menu {
     height: 100%; }
   .bottom-menu-header-links .main-menu li {
@@ -2012,6 +2017,9 @@ footer {
   #contact span {
     display: inline-block; }
 
+body, .mobile-side-menu {
+  background-color: #fff; }
+
 .orange {
   color: #e75e0a; }
 
@@ -2088,6 +2096,73 @@ span[class^=icon-] {
     margin-top: 5px;
     line-height: 19px; }
 
+#siteWrap {
+  position: relative;
+  min-width: 100%;
+  min-height: 100%;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
+  transform: translateX(0px);
+  -webkit-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
+  transform: translateX(0px);
+  background-color: #004994;
+  -webkit-transition: -webkit-transform 0.4s ease;
+  /* Changed here */
+  -moz-transition: -moz-transform 0.4s ease;
+  -o-transition: -o-transform 0.4s ease;
+  transition: transform 0.4s ease; }
+  #siteWrap.open {
+    transform: translateX(-247px);
+    -webkit-transform: translateX(-247px);
+    -ms-transform: translateX(-247px);
+    -o-transform: translateX(-247px);
+    transform: translateX(-247px);
+    border-right: 1px solid #f8f8f8; }
+
+.mobile-side-menu {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0; }
+  .mobile-side-menu .menu {
+    display: inline-block;
+    float: right;
+    width: 247px;
+    text-align: left; }
+    .mobile-side-menu .menu .menu-item {
+      display: block;
+      padding: 16px 20px;
+      color: #004994;
+      font-size: 14px;
+      font-weight: 600;
+      /* text-transform: uppercase; */
+      border-bottom: 1px solid #F3F3F3;
+      cursor: pointer; }
+      .mobile-side-menu .menu .menu-item .icon-right-arrow {
+        float: right;
+        margin: 0;
+        font-size: 10px;
+        position: relative;
+        top: 3px; }
+      .mobile-side-menu .menu .menu-item:hover, .mobile-side-menu .menu .menu-item:active {
+        background-color: whitesmoke; }
+    .mobile-side-menu .menu .sous-nav {
+      background-color: #e9e9e9; }
+      .mobile-side-menu .menu .sous-nav .menu-item {
+        padding: 12px 20px;
+        text-align: left;
+        color: #696969;
+        font-size: 13px; }
+
 .white-fixed-option, .blue-fixed-option {
   background-color: #c0c0c0;
   border-radius: 8px 0px 0px 8px;
@@ -2133,10 +2208,20 @@ span[class^=icon-] {
   background: -webkit-linear-gradient(top, #fff 0%, #fff 90%, #f7f7f7 100%);
   background: linear-gradient(to bottom, #fff 0%, #fff 90%, #f7f7f7 100%);
   /* W3C */
-  -webkit-box-shadow: 0 4px 15px 0 #eeeeee;
-  box-shadow: 0 4px 15px 0 #eeeeee;
+  border-bottom: 1px solid #D0D0D0;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f7f7f7',GradientType=0 );
   /* IE6-9 */ }
+  #bottom-menu-header:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    margin-left: -1px;
+    display: block;
+    position: absolute;
+    top: 49px;
+    left: 0;
+    z-index: -1;
+    box-shadow: 0 2px 8px 0 #000000; }
 
 .top-menu-header-links {
   font-size: 13px;
@@ -2180,7 +2265,7 @@ span[class^=icon-] {
   font-weight: 600;
   position: relative;
   display: inline-block;
-  /* margin: 3px 0; */
+  margin: 3px 0;
   padding: 12px 15px;
   cursor: pointer;
   -webkit-transition: background 0.4s ease-in-out, border 0.4s ease-in-out, color 0.4s ease-in-out;
@@ -2191,13 +2276,13 @@ span[class^=icon-] {
   border: 1px solid transparent;
   border-radius: 5px;
   background-image: none;
+  z-index: 2;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
-  }
+  user-select: none; }
   .btn-blue:focus,
   .btn-orange:focus,
   .btn-white:focus,
@@ -3095,6 +3180,8 @@ footer {
     padding: 11px 0; }
     #bottom-menu-header .pull-left {
       width: auto; }
+    #bottom-menu-header:after {
+      top: 64px; }
 
   .bottom-menu-header-links {
     float: left; }

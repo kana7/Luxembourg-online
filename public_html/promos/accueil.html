@@ -2,16 +2,15 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <title>Luxembourg Online : Internet - Accueil</title>
+        <title>Luxembourg Online : Promos - Accueil</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="shortcut icon" href="/favicon.ico">
 
         <link rel="stylesheet" href="../styles/css/main.css">
-        <link rel="stylesheet" href="../styles/css/internet/accueil.css">
+        <link rel="stylesheet" href="../styles/css/promos/promos.css"/>
 
-        <script src="../scripts/vendor/picturefill.min.js"></script>
     </head>
 
     <body>
@@ -71,12 +70,6 @@
                 </div>
 
                 <div id="bottom-menu-header">
-                    <ul class="sub-menu hidden-phone hidden-tab">
-                        <li class="active"><a href="accueil.html"><div class="link">Accueil Internet</div></a></li>
-                        <li><a href="offres.html"><div class="link">Nos Offres</div></a></li>
-                        <li><a href="equipement.html"><div class="link">Équipement</div></a></li>
-                        <li><a href="#"><div class="link">Abonnez-vous</div></a></li>
-                    </ul>
                     <nav class="bottom-menu-header-links mobile display-phone display-tab">
                         <div class="pull-left">
                             <div class="logo">
@@ -94,6 +87,11 @@
                     </nav>
                     <div class="container-wrapper hidden-phone hidden-tab">
                         <div class="row">
+                            <ul class="sub-menu hidden-phone hidden-tab">
+                                <li class="active"><a href="accueil.html"><div class="link">Accueil Promos</div></a></li>
+                                <li><a href="fibre.html"><div class="link">offre spéciale fibre</div></a></li>
+                                <li><a href="internetTV.html"><div class="link">offre spéciale tv</div></a></li>
+                            </ul>
                             <div class="pull-left">
                                 <div class="logo">
                                     <a href="../index.html"><img src="../images/icons/img/Logo-LOL.png" alt="logo LOL" /></a>
@@ -101,7 +99,7 @@
                                 --><nav class="bottom-menu-header-links">
                                     <ul class="main-menu">
                                         <li>
-                                            <a href="accueil.html">
+                                            <a href="../internet/accueil.html">
                                                 <img class="header-icon" src="../images/icons/img/internet.png" alt="Internet" />
                                                 <div class="link">Internet</div>
                                             </a>
@@ -142,105 +140,45 @@
 
             </header>
 
-            <section class="section-layout left-orientation background-green first-section">
-                <div class="container-wrapper">
-                    <div class="row clearfix">
-                        <div class="phone-12 desk-6">
-                            <img class="section-img-align-bottom" src="../images/Internet/1024px/portable_internet.jpg" 
-                                 srcset="../images/Internet/1280px/portable_internet.jpg 1920w,
-                                 ../images/Internet/1024px/portable_internet.jpg 1400w,
-                                 ../images/Internet/640px/portable_internet.jpg 900w,
-                                 ../images/Internet/320px/portable_internet.jpg 600w"
-                                 sizes="100%"
-                                 alt="portable internet" />
-                        </div>
-                        <div class="phone-12 desk-6">
-                            <h1 class="section-title lowercase">Des offres internet 
-                                <strong>Toujours plus attractives !</strong>
-                            </h1>
-                            <p class="section-text">Que vous ayez simplement besoin de l’essentiel ou que vous
-                                soyez un surfeur hyperconnecté, une de nos offres est forcément faite pour vous ! Découvrez nos packages complets et profitez d’un trafic illimité...</p>
-                            <a class="btn-outline-white" href="#">Voir nos offres Internet</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="test-offres">
+            <section id="promo-fibre" class="section-layout section-background-image right fit-height">
                 <div class="container-wrapper">
                     <div class="row">
-                        <div class="text display-phone phone-12">Quelles offres sont <br/>disponibles chez vous ?</div>
-                        <div class="text hidden-phone phone-12 desk-6"><span class="icon-internet-ico"></span>Quelles offres sont disponibles chez vous ?</div>
-
-                        <form class="phone-12 desk-6" action="">
-                            <input class="input-white" type="text" placeholder="Code Postal"/>
-                            <button class="btn-orange" type="submit">Vérifiez les disponibilités</button>
-                        </form>
-                    </div>
-                </div>
-            </section>
-            <section class="section-layout right-orientation background-black">
-                <div class="container-wrapper">
-                    <div class="row clearfix">
                         <div class="phone-12 desk-6">
-                            <img class="section-img-align-bottom" 
-                                 src="../images/Internet/1024px/fibre.jpg"
-                                 srcset="../images/Internet/1280px/fibre.jpg 1920w,
-                                 ../images/Internet/1024px/fibre.jpg 1400w,
-                                 ../images/Internet/640px/fibre.jpg 900w,
-                                 ../images/Internet/320px/fibre.jpg 600w"
-                                 sizes="100%"
-                                 alt="fibre optique"/>
-                        </div>
-                        <div class="phone-12 desk-6">
-                            <h1 class="section-title white lowercase">
-                                <strong>La Fibre Optique</strong>
-                                Le meilleur moyen d'accéder à internet
-                            </h1>
-                            <p class="section-text white">Considérée comme étant la technologie d’avenir, la fibre se généralise au Luxembourg.  Moyen d’accès Internet le plus efficace et le plus rapide, elle booste les connexions. </p>
-                            <a class="btn-outline-black" href="#">En savoir plus sur la fibre</a>
+                            <h1 class="section-title bold">offre fibre</h1>
+                            <p class="section-description orange">Frais d'installation et de cablâge fibre <strong>offerts !</strong></p>
+                            <div class="clearfix">
+                                <div class="section-price">
+                                    <p class="price-label">à partir de</p>
+                                    <div>,90€</div>
+                                    54<span>/mois</span>
+                                </div>
+                            </div>
+                            <a class="btn-outline-white" href="#">Voir les détails de l'offre</a>
                         </div>
                     </div>
                 </div>
             </section>
-
-            <section class="section-layout left-orientation background-lightgrey">
+            <section id="promo-internetTV" class="section-layout section-shadow background-lightgrey  section-background-image left fit-height">
                 <div class="container-wrapper">
-                    <div class="row clearfix">
-                        <div class="phone-12 desk-6">
-                            <img class="section-img-align-bottom" src="../images/Internet/1024px/fritz.jpg"
-                                 srcset="../images/Internet/1280px/fritz.jpg 1920w,
-                                 ../images/Internet/1024px/fritz.jpg 1400w,
-                                 ../images/Internet/640px/fritz.jpg 900w,
-                                 ../images/Internet/320px/fritz.jpg 600w"
-                                 sizes="100%"
-                                 alt="modem Fritz!Box" />
-                        </div>
-                        <div class="phone-12 desk-6">
-                            <h1 class="section-title lowercase">
-                                <strong>Nos FRITZ!Box</strong>
-                                Le choix de la qualité !
+                    <div class="row">
+                        <div class="phone-12 desk-6 pull-right">
+                            <h1 class="section-title bold">
+                                Internet + lol tv
                             </h1>
-                            <p class="section-text hidden-lgdesk">Pour sa gamme internet, Luxembourg Online a fait le choix de la qualité avec les produits AVM.</p>
-                            <p class="section-text display-lgdesk">Pour sa gamme internet, Luxembourg Online a fait le choix de la qualité <span style="display: block;">avec les produits AVM.</span></p>
-                            <a class="btn-outline-white" href="#">Voir nos équipements</a>
+                            <p class="section-description orange"><strong>installation offerte</strong></p>
+                            <div class="clearfix">
+                                <div class="section-price">
+                                    <div>,90€</div>
+                                    51<span>/mois</span>
+                                </div>
+                            </div>
+                            <a class="btn-outline-white" href="#">Voir les détails de l'offre</a>
                         </div>
                     </div>
                 </div>
             </section>
 
             <footer>
-                <div id="document-links" class="iner-shadow">
-                    <div class="container-wrapper">
-                        <div class="row">
-                            <ul>
-                                <li><a href=""><span class="icon icon-faq-ico"></span>FAQ</a></li>
-                                <li><a href=""><span class="icon icon-calculator-ico"></span>Nos tarifs détaillés</a></li>
-                                <li><a href=""><span class="icon icon-parrainage-ico"></span>Bon de parrainage</a></li>
-                                <li><a href=""><span class="icon icon-document-ico"></span>Documents</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
                 <div id="social-links">
                     <div class="container-wrapper">
                         <div class="row">

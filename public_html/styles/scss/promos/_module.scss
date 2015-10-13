@@ -1,0 +1,77 @@
+#promo-fibre{
+    background-image: url(../../../images/promos/Accueil/320px/Offre_Fibre4.jpg);
+}
+#promo-internetTV{
+    background-image: url(../../../images/promos/Accueil/320px/Offre_internettv_4.jpg);
+}
+
+#promo-fibre, #promo-internetTV{
+    .section-title{
+        font-size: 33px;
+        margin: 10px 0;
+    }
+    .section-description{
+        font-weight: 300;
+        font-size: 24px;
+        margin: 0 0 17px;
+        line-height: 27px;
+        strong{
+            display: inline;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    }
+}
+.gallery-cell{
+    width: 100%;
+    padding: 0 5px;
+}
+.promo-info{
+    margin-top: -15px;
+    margin-bottom: 30px;
+    .text{
+        margin: 0px 0px 15px;
+        line-height: 25px;
+        font-size: 16px;
+        strong{
+            display: inline;
+        }
+        &.bottom{
+            margin: 10px 0;
+            font-size: 16px;
+        }
+    }
+    .promo-price{
+        font-weight: 800;
+        font-size: 32px;
+        margin-bottom: 25px;
+        .price{
+            font-size: 68px;
+            margin-bottom: 5px;
+        }
+        .label, .price{
+            display: inline-block;
+        }
+        .label{
+            margin-left: 15px;
+            @include vertical-align-middle;
+        }
+    }
+    .btn-blue{
+        font-size: 21px;
+        padding: 13px 25px;
+    }
+    .details{
+        margin: 20px 0 10px;
+        font-size: 11px;
+    }
+}
+.promo-offer-container{
+    div[class^=phone-]:first-child{
+        padding-right: 15px;
+    }
+    div[class^=phone-]:last-child{
+        padding-left: 15px;
+    }
+}
+

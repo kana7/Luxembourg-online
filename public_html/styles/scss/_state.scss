@@ -129,6 +129,11 @@
         font-size: 36px;
         line-height: 45px;
     }
+    .section-price{
+        div{
+            left: 75px;
+        }
+    }
     .footer-bottom-links li{
         margin: 0 35px;
         text-align: center;
@@ -239,6 +244,13 @@
             } 
         } 
     }
+    .section-price{
+        font-size: 75px;
+        div{
+            left: 84px;
+            top: 14px !important;
+        }
+    }
     .bottom-info{
         font-size: 8pt;
     }
@@ -306,14 +318,24 @@
     .right-orientation .row > div:last-child, .left-orientation .row > div:last-child{
         @include vertical-align-middle;
         height: auto;
-
-
     }
-    #twenty-years .row div:first-child{
-        text-align: left;
-        @include vertical-align-middle;
-        height: auto;
+    .section-background-image{
+        .container-wrapper>.row>div:first-child{
+            @include vertical-align-middle;
+            height: auto;
+        }
+        &.left{
+            .row>div:first-child{
+                text-align: right;
+            }
+        }
+        &.right{
+            .row>div:first-child{
+                text-align: left;
+            }
+        }
     }
+
     .section-layout img{
         height: 100%;
     }
@@ -351,10 +373,18 @@
             }
         }
     }
-    #twenty-years{
+    .section-background-image{
         background-size: 700px auto;
-        background-position:right top;
-        padding-top: 0; 
+        padding-top: 0;
+        &.fit-height{
+            background-size: auto 100%;
+        }
+        &.left{
+            background-position: left top;
+        }
+        &.right{
+            background-position: right top;
+        }
     }
     .footer-bottom-links li{
         text-align: left;
@@ -413,8 +443,8 @@
         }
     }
     .sub-menu{
-        height: 60px;
-        line-height: 55px;
+        height: 65px;
+        line-height: 65px;
         font-size: 16px;
         li{
             margin-right: 65px;
@@ -476,6 +506,7 @@
             }
         }
     }
+
     .section-title {
         font-size: 40px;
         line-height: 52px;
@@ -517,7 +548,7 @@
             font-size: 16pt !important;
         }
     }
-    #twenty-years{
+    .section-background-image{
         background-size: 900px auto;
     }
     .help-link{

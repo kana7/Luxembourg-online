@@ -1643,6 +1643,9 @@ ul, li {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
 
+.align-center {
+  text-align: center; }
+
 .background-image-right {
   position: absolute;
   top: 0;
@@ -1732,11 +1735,12 @@ header {
 .sub-menu {
   position: absolute;
   display: inline-block;
-  top: 55px;
+  top: 65px;
   left: 0;
   width: 100%;
   height: 50px;
-  line-height: 50px; }
+  line-height: 50px;
+  text-align: center; }
   .sub-menu li {
     text-align: center;
     margin-right: 60px; }
@@ -1892,6 +1896,9 @@ header {
   position: relative;
   margin-top: 10px; }
 
+.section-padding {
+  padding: 60px 0 40px; }
+
 .section-layout {
   position: relative;
   display: block;
@@ -1912,6 +1919,12 @@ header {
 
 .content-container div[class^=phone-] {
   text-align: center; }
+
+.section-background-image {
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 620px auto;
+  padding-top: 170px; }
 
 footer {
   display: block; }
@@ -2026,6 +2039,9 @@ body, .mobile-side-menu, #offers-section {
 .white {
   color: #fff; }
 
+.blue {
+  color: #004994; }
+
 .background-green {
   background-color: #e3eee3; }
 
@@ -2034,6 +2050,9 @@ body, .mobile-side-menu, #offers-section {
 
 .background-lightgrey {
   background-color: #f8f8f8; }
+
+.background-lightblue {
+  background-color: #eff4f7; }
 
 .iner-shadow {
   box-shadow: inset 0 4px 15px 2px #bfbfbf; }
@@ -2095,6 +2114,33 @@ span[class^=icon-] {
     display: block;
     margin-top: 5px;
     line-height: 19px; }
+
+.bold {
+  font-weight: 800; }
+
+.section-price {
+  display: inline-block;
+  position: relative;
+  font-weight: 600;
+  font-size: 68px;
+  margin: 0 0 20px;
+  padding-top: 5px; }
+  .section-price .price-label {
+    position: absolute;
+    top: -6px;
+    left: 4px;
+    margin: 0;
+    text-align: left;
+    font-size: 14px; }
+  .section-price div {
+    display: inline-block;
+    position: absolute;
+    font-size: 23px;
+    top: 13px;
+    left: 75px; }
+  .section-price span {
+    font-size: 23px;
+    padding-left: 4px; }
 
 #siteWrap {
   position: relative;
@@ -2448,13 +2494,11 @@ span[class^=icon-] {
     color: #004994; }
     .offer-item-blue .item-body > li:not(:last-child) {
       border-bottom: 1px solid #004994; }
-    .offer-item-blue .item-body > li:not(:first-child) {
-      text-align: left;
-      padding-left: 50px; }
     .offer-item-blue .item-body > li {
       display: block;
       position: relative;
-      padding: 20px 0; }
+      padding: 20px 0;
+      background-color: #fff; }
   .offer-item-blue .item-footer {
     border-radius: 0px 0px 4px 4px; }
   .offer-item-blue .offer-price {
@@ -2484,7 +2528,9 @@ span[class^=icon-] {
       font-size: 1.14em; }
   .offer-item-blue .info {
     font-size: 21px;
-    font-weight: 800; }
+    font-weight: 800;
+    text-align: left;
+    padding-left: 50px !important; }
     .offer-item-blue .info .icon-download-ico {
       position: relative;
       top: 1px;
@@ -2498,6 +2544,9 @@ span[class^=icon-] {
         -ms-transform: rotate(180deg);
         -webkit-transform: rotate(180deg);
         transform: rotate(180deg); }
+  .offer-item-blue .check-list-container {
+    text-align: left;
+    padding-left: 50px !important; }
   .offer-item-blue .check-list-title {
     position: relative;
     padding-left: 43px;
@@ -2544,13 +2593,11 @@ span[class^=icon-] {
     color: #004994; }
     .offer-item-orange .item-body > li:not(:last-child) {
       border-bottom: 1px solid #e75e0a; }
-    .offer-item-orange .item-body > li:not(:first-child) {
-      text-align: left;
-      padding-left: 50px; }
     .offer-item-orange .item-body > li {
       display: block;
       position: relative;
-      padding: 20px 0; }
+      padding: 20px 0;
+      background-color: #fff; }
   .offer-item-orange .item-footer {
     border-radius: 0px 0px 4px 4px; }
   .offer-item-orange .offer-price {
@@ -2580,7 +2627,9 @@ span[class^=icon-] {
       font-size: 1.14em; }
   .offer-item-orange .info {
     font-size: 21px;
-    font-weight: 800; }
+    font-weight: 800;
+    text-align: left;
+    padding-left: 50px !important; }
     .offer-item-orange .info .icon-download-ico {
       position: relative;
       top: 1px;
@@ -2594,6 +2643,9 @@ span[class^=icon-] {
         -ms-transform: rotate(180deg);
         -webkit-transform: rotate(180deg);
         transform: rotate(180deg); }
+  .offer-item-orange .check-list-container {
+    text-align: left;
+    padding-left: 50px !important; }
   .offer-item-orange .check-list-title {
     position: relative;
     padding-left: 43px;
@@ -2910,11 +2962,7 @@ span[class^=icon-] {
     left: 75px; }
 
 #twenty-years {
-  background-image: url(../../images/index/1024px/20ans_LOL.png);
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: 620px auto;
-  padding-top: 170px; }
+  background-image: url(../../images/index/1024px/20ans_LOL.png); }
 
 footer {
   border-bottom: 2px solid #676767;
@@ -3163,6 +3211,9 @@ footer {
     font-size: 36px;
     line-height: 45px; }
 
+  .section-price div {
+    left: 75px; }
+
   .footer-bottom-links li {
     margin: 0 35px;
     text-align: center; } }
@@ -3262,6 +3313,12 @@ footer {
         font-size: 1.4em;
         margin: 20px -11px 5px; }
 
+  .section-price {
+    font-size: 75px; }
+    .section-price div {
+      left: 84px;
+      top: 14px !important; }
+
   .bottom-info {
     font-size: 8pt; }
 
@@ -3321,8 +3378,7 @@ footer {
     transform: translateY(-50%);
     height: auto; }
 
-  #twenty-years .row div:first-child {
-    text-align: left;
+  .section-background-image .container-wrapper > .row > div:first-child {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -3330,6 +3386,10 @@ footer {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     height: auto; }
+  .section-background-image.left .row > div:first-child {
+    text-align: right; }
+  .section-background-image.right .row > div:first-child {
+    text-align: left; }
 
   .section-layout img {
     height: 100%; }
@@ -3363,10 +3423,15 @@ footer {
       margin-left: 5px;
       font-size: 14pt; }
 
-  #twenty-years {
+  .section-background-image {
     background-size: 700px auto;
-    background-position: right top;
     padding-top: 0; }
+    .section-background-image.fit-height {
+      background-size: auto 100%; }
+    .section-background-image.left {
+      background-position: left top; }
+    .section-background-image.right {
+      background-position: right top; }
 
   .footer-bottom-links li {
     text-align: left;
@@ -3414,8 +3479,8 @@ footer {
       bottom: 15px; }
 
   .sub-menu {
-    height: 60px;
-    line-height: 55px;
+    height: 65px;
+    line-height: 65px;
     font-size: 16px; }
     .sub-menu li {
       margin-right: 65px; }
@@ -3495,7 +3560,7 @@ footer {
   #dispo h3 {
     font-size: 16pt !important; }
 
-  #twenty-years {
+  .section-background-image {
     background-size: 900px auto; }
 
   .help-link {

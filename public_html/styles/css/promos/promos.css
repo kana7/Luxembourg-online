@@ -1,0 +1,144 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,400italic);
+#promo-fibre {
+  background-image: url(../../../images/promos/Accueil/320px/Offre_Fibre4.jpg); }
+
+#promo-internetTV {
+  background-image: url(../../../images/promos/Accueil/320px/Offre_internettv_4.jpg); }
+
+#promo-fibre .section-title, #promo-internetTV .section-title {
+  font-size: 33px;
+  margin: 10px 0; }
+#promo-fibre .section-description, #promo-internetTV .section-description {
+  font-weight: 300;
+  font-size: 24px;
+  margin: 0 0 17px;
+  line-height: 27px; }
+  #promo-fibre .section-description strong, #promo-internetTV .section-description strong {
+    display: inline;
+    text-transform: uppercase;
+    font-weight: 600; }
+
+.gallery-cell {
+  width: 100%;
+  padding: 0 5px; }
+
+.promo-info {
+  margin-top: -15px;
+  margin-bottom: 30px; }
+  .promo-info .text {
+    margin: 0px 0px 15px;
+    line-height: 25px;
+    font-size: 16px; }
+    .promo-info .text strong {
+      display: inline; }
+    .promo-info .text.bottom {
+      margin: 10px 0;
+      font-size: 16px; }
+  .promo-info .promo-price {
+    font-weight: 800;
+    font-size: 32px;
+    margin-bottom: 25px; }
+    .promo-info .promo-price .price {
+      font-size: 68px;
+      margin-bottom: 13px;
+      }
+    .promo-info .promo-price .label, .promo-info .promo-price .price {
+      display: inline-block; }
+    .promo-info .promo-price .label {
+      /* margin-left: 15px; */
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      }
+  .promo-info .btn-blue {
+    font-size: 21px;
+    padding: 13px 25px; }
+  .promo-info .details {
+    margin: 20px 0 10px;
+    font-size: 11px; }
+
+.promo-offer-container div[class^=phone-]:first-child {
+  padding-right: 15px; }
+.promo-offer-container div[class^=phone-]:last-child {
+  padding-left: 15px; }
+
+@media screen and (max-width: 671px) {
+  #promo-fibre, #promo-internetTV {
+    background-size: auto 160px !important; } }
+@media screen and (min-width: 672px) {
+  #promo-fibre {
+    background-image: url(../../../images/promos/Accueil/640px/Offre_Fibre3.jpg); }
+
+  #promo-internetTV {
+    background-image: url(../../../images/promos/Accueil/640px/Offre_internettv_3.jpg); }
+
+  #promo-fibre, #promo-internetTV {
+    background-size: auto 160px !important; } }
+@media screen and (min-width: 1056px) {
+  #promo-fibre {
+    background-image: url(../../../images/promos/Accueil/1024px/Offre_Fibre2.jpg); }
+
+  #promo-internetTV {
+    background-image: url(../../../images/promos/Accueil/1024px/Offre_internettv_2.jpg); }
+
+  #promo-fibre, #promo-internetTV {
+    background-size: auto 100% !important; }
+    #promo-fibre .section-title, #promo-internetTV .section-title {
+      font-size: 50px;
+      margin: 10px 0 15px; }
+    #promo-fibre .section-description, #promo-internetTV .section-description {
+      font-size: 27px;
+      line-height: 35px; }
+      #promo-fibre .section-description strong, #promo-internetTV .section-description strong {
+        display: block; }
+    #promo-fibre.section-layout, #promo-internetTV.section-layout {
+      height: 400px !important; }
+
+  .promo-info {
+    padding: 0 110px;
+    margin-bottom: 0px; }
+    .promo-info .text {
+      margin: 4px 0px 50px;
+      line-height: 23px;
+      font-size: 18px; }
+      .promo-info .text strong {
+        display: block; }
+      .promo-info .text.bottom {
+        margin: 15px 0;
+        font-size: 16px; }
+    .promo-info .promo-price {
+      font-weight: 800;
+      font-size: 35px;
+      margin-bottom: 60px; }
+      .promo-info .promo-price .price {
+        font-size: 75px;
+        margin-bottom: 10px; }
+      .promo-info .promo-price .label, .promo-info .promo-price .price {
+        display: block; }
+    .promo-info .btn-blue {
+      font-size: 21px;
+      padding: 13px 25px; }
+    .promo-info .details {
+      margin: 50px 0 0;
+      font-size: 11px; }
+
+  .promo-offer-container div[class^=phone-]:first-child {
+    padding-right: 3px;
+    }
+  .promo-offer-container div[class^=phone-]:last-child {
+    padding-left: 3px;
+    } }
+@media screen and (min-width: 1302px) {
+  #promo-fibre {
+    background-image: url(../../../images/promos/Accueil/1280px/Offre_Fibre1.jpg); }
+
+  #promo-internetTV {
+    background-image: url(../../../images/promos/Accueil/1280px/Offre_internettv_1.jpg); }
+
+  #promo-fibre, #promo-internetTV {
+    background-size: auto 100% !important; } }
+
+/*# sourceMappingURL=promos.css.map */

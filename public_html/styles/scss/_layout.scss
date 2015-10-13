@@ -18,6 +18,10 @@
     @include vertical-align-middle();
 }
 
+.align-center{
+    text-align: center;
+}
+
 .background-image-right
 {
     position: absolute;
@@ -120,12 +124,12 @@ header{
 .sub-menu{
     position: absolute;
     display: inline-block;
-    top: 55px;
+    top: 65px;
     left: 0;
     width: 100%;
     height: 50px;
     line-height: 50px;
-
+    text-align: center;
     li{
         text-align: center;
         margin-right: 60px;
@@ -334,8 +338,11 @@ header{
     }
 }
 
-// SECTIONs - HOMEPAGE
+// SECTIONS - HOMEPAGE
 // -------------------------------------------------
+.section-padding{
+    padding: 60px 0 40px;
+}
 .section-layout{
     position: relative;
 
@@ -365,6 +372,13 @@ header{
     div[class^=phone-]{
         text-align: center;
     }
+}
+
+.section-background-image{
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 620px auto;
+    padding-top: 170px;
 }
 
 // FOOTER - HOMEPAGE

@@ -2037,6 +2037,9 @@ footer {
 body, .mobile-side-menu, #offers-section {
   background-color: #fff; }
 
+svg:not(:root) {
+  overflow: visible; }
+
 .orange {
   color: #e75e0a; }
 
@@ -3191,8 +3194,8 @@ footer {
     #slider-contents .flickity-prev-next-button.next {
       right: 50px; }
     #slider-contents .flickity-prev-next-button svg {
-      width: 70%;
-      height: 70%; }
+      width: 80%;
+      height: 80%; }
   #slider-contents .section-price {
     font-size: 72px;
     margin: 0px 0 20px;

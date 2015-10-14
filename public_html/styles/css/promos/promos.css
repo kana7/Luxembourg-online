@@ -72,8 +72,7 @@
     padding-left: 5px !important; } }
 @media screen and (max-width: 671px) {
   #promo-fibre, #promo-internetTV {
-    background-size: auto auto !important;
-    } }
+    background-size: auto 160px !important; } }
 @media screen and (min-width: 672px) {
   #promo-fibre {
     background-image: url(../../../images/promos/Accueil/640px/Offre_Fibre3.jpg); }
@@ -82,8 +81,7 @@
     background-image: url(../../../images/promos/Accueil/640px/Offre_internettv_3.jpg); }
 
   #promo-fibre, #promo-internetTV {
-    background-size: auto auto !important;
-    } }
+    background-size: auto 160px !important; } }
 @media screen and (min-width: 1056px) {
   #promo-fibre {
     background-image: url(../../../images/promos/Accueil/1024px/Offre_Fibre2.jpg); }

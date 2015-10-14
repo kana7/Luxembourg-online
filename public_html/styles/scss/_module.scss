@@ -1,9 +1,26 @@
-body, .mobile-side-menu, #offers-section{
+body, .mobile-side-menu, #offers-section, .menu-links-wrapper{
     background-color: $white;
 }
 svg:not(:root) {
     overflow: visible;
 }
+
+.flickity-page-dots{
+    .dot{
+        width: 12px;
+        height: 12px;
+        background: $dark-grey;
+        border-radius: 50%;
+        filter: alpha(opacity=100);
+        opacity: 1;
+        cursor: pointer;
+        &.is-selected{
+            background: $white;
+            border: 2px solid $blue;
+        }
+    }
+}
+
 // COLOR CLASS
 // --------------------------------------------------
 .orange
@@ -155,6 +172,8 @@ span[class^=icon-]
         border-right: 1px solid $light-grey;
     }
 }
+
+//menu mobile
 .mobile-side-menu{
     list-style: none;
     width: 100%;
@@ -165,7 +184,8 @@ span[class^=icon-]
     bottom: 0;
     left: 0;
     z-index: 0;
-    .menu{
+    //panneau base + sous-menu de liens glissants
+    .menu, .menu-links{
         display: inline-block;
         float: right;
         width: 247px;
@@ -200,6 +220,15 @@ span[class^=icon-]
             }
         }
     }
+    //layout des sous menus
+    .menu-links-wrapper{
+        position: absolute;
+        display: block;
+        height: 100%;
+        top: 0;
+        right: -247px;
+    }
+
 }
 .white-fixed-option,.blue-fixed-option{
     background-color: $grey;

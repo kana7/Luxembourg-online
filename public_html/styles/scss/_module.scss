@@ -97,8 +97,11 @@ span[class^=icon-]
         display: block;
     }
 }
-.bold{
+.extra-bold{
     font-weight: 800;
+}
+.bold{
+    font-weight: 600;
 }
 
 .section-price{
@@ -782,9 +785,12 @@ span[class^=icon-]
         padding: 20px 0;
         background-repeat: no-repeat;
         background-position: center top;
+        .align-right{
+            text-align: center;
+        }
     }
     .title{
-        margin: 0 0 12px;
+        margin: 0 0 8px;
         color: $blue;
         font-size: 25px;
         font-weight: 800;
@@ -795,7 +801,7 @@ span[class^=icon-]
         color: $orange;
         font-size: 16px;
         line-height: 23px;
-        margin: 0 0 8px;;
+        margin: 0 0 8px;
         strong{
             text-transform: uppercase;
         }
@@ -803,6 +809,20 @@ span[class^=icon-]
     p.bottom-details{
         font-size: 10px;
         color: $dark-grey;
+    }
+    .section-price{
+        font-size: 55px;
+        margin: -10px 0 20px;
+        padding-top: 0px;
+        div{    
+            font-size: 20px;
+            top: 7px;
+            left: 62px;
+        }
+        span{
+            font-size: 18px;
+            padding-left: 0px;
+        }
     }
 }
 

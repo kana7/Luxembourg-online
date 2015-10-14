@@ -91,6 +91,20 @@
                 height: 70%;
             }
         }
+        .section-price{
+            font-size: 72px;
+            margin: 0px 0 20px;
+            padding-top: 2px;
+            div{
+                font-size: 24px;
+                top: 12px;
+                left: 83px;
+            }
+            span{
+                font-size: 21px;
+                padding-left: 0px;
+            }
+        }
     }
     #slider-ui{
         .buttons{
@@ -177,28 +191,42 @@
     }
     #slider-contents .infos{
         position: relative;
-        height: 135px;
+        height: 330px;
         z-index: 1;
         text-align: left;
+        .align-right{
+            text-align: right !important;
+        }
         .row{
             @include vertical-align-middle;
         }
     }
     #slider-contents{
         .title{
-            font-size: 30pt;
+            font-size: 32pt;
             margin-bottom: 15px;
         }
         p.top-details{
-            font-size: 21pt;
+            font-size: 18pt;
             line-height: 35px;
         }
         p.bottom-details{
             font-size: 10pt;
         }
-    }
-    #slider-contents .infos{
-        height: 330px;
+        .section-price {
+            font-size: 72px;
+            margin: 0px 0 20px;
+            padding-top: 2px;
+            margin-right: 65px;
+            div{
+                font-size: 21px;
+                top: 13px !important;
+                left: 84px;
+            }
+            span{
+                font-size: 21px;
+            }
+        }
     }
     #slider-ui{
         .buttons{
@@ -461,11 +489,13 @@
 
     #slider-contents{
         .title{
-            font-size: 42pt;
+            font-size: 37pt;
+            line-height: 58px;
+            margin-bottom: 10px;
         }
         p.top-details{
-            font-size: 26pt;
-            line-height: 42px;
+            font-size: 25pt;
+            line-height: 40px;
         }
         p.bottom-details{
             font-size: 11pt;
@@ -474,106 +504,121 @@
     #slider-contents .infos{
         height: 360px;
     }
-    #slider-ui{
-        .buttons{
-            width: 90%;
-            .arrow{
-                font-size: 50pt;
+    #slider-contents{
+        .section-price{
+            font-size: 82px !important;
+            padding-top: 7px;
+            margin-right: 80px;
+            div{
+                font-size: 22px;
+                top: 16px !important;
+                left: 93px;
             }
-        }
-        .dots{
-            width: 145px;
-            li{font-size: 8pt;}
-        }
-    } 
-    #services{
-        .row>div[class^=phone-]{
-            padding: 0 7px;
-        }
-        .service
-        {
-            &#loldsl{background-image: url(../../images/index/1280px/Offres/LOL_DSL.jpg);}
-            &#mobiles{background-image: url(../../images/index/1280px/Offres/iphone6.jpg);}
-            &#installation{background-image: url(../../images/index/1280px/Offres/Offre_TV.jpg);}
-            &#dispo{background-image: url(../../images/index/1280px/Offres/Recherche_Offre.jpg);}
-            .infos
-            {
-                padding: 0 25px 15px;
-                h3
-                {
-                    font-size: 1.9em;
-                    line-height: 28px;
-                }
-                .details
-                {
-                    font-size: 25px;
-                    line-height: 35px;
-                }
-            }
+        span{
+            font-size: 22px;
         }
     }
-
-    .section-title {
-        font-size: 40px;
-        line-height: 52px;
-        margin: 0 0 25px;
-    }
-    .section-description {
-        font-size: 18px;
-        margin: 0 0 45px;
-    }
-    .bottom-info{
-        font-size: 10pt;
-    }
-    .price-blue span, .price-orange span{
-        font-size: 10pt;
-    }
-    .price-orange{
-        font-size: 43pt;
-        margin-top: 20px;
-        div{
-            font-size: 14pt;
-            top: -17px;
-            left: 68px;
-
+}
+#slider-ui{
+    .buttons{
+        width: 90%;
+        .arrow{
+            font-size: 50pt;
         }
     }
-
-    .price-blue{
-        font-size: 34pt;
-        div{
-            font-size: 11pt;
-            top: -11px;
-            left: 55px;
-        }
+    .dots{
+        width: 145px;
+        li{font-size: 8pt;}
     }
-    #dispo
+} 
+#services{
+    .row>div[class^=phone-]{
+        padding: 0 7px;
+    }
+    .service
     {
-        h3
+        &#loldsl{background-image: url(../../images/index/1280px/Offres/LOL_DSL.jpg);}
+        &#mobiles{background-image: url(../../images/index/1280px/Offres/iphone6.jpg);}
+        &#installation{background-image: url(../../images/index/1280px/Offres/Offre_TV.jpg);}
+        &#dispo{background-image: url(../../images/index/1280px/Offres/Recherche_Offre.jpg);}
+        .infos
         {
-            font-size: 16pt !important;
+            padding: 0 25px 15px;
+            h3
+            {
+                font-size: 1.9em;
+                line-height: 28px;
+            }
+            .details
+            {
+                font-size: 25px;
+                line-height: 35px;
+            }
         }
     }
-    .section-background-image{
-        background-size: 900px auto;
-    }
-    .help-link{
-        font-size: 14pt;
-        span[class^=icon-]{
-            &.icon-info-icone{
-                margin-right: 7px;
-                font-size: 20pt;
-            }
-            &.icon-right-arrow{
-                margin-left: 7px;
-                font-size: 15pt;
+}
 
-            }
+.section-title {
+    font-size: 40px;
+    line-height: 52px;
+    margin: 0 0 25px;
+}
+.section-description {
+    font-size: 18px;
+    margin: 0 0 45px;
+}
+.bottom-info{
+    font-size: 10pt;
+}
+.price-blue span, .price-orange span{
+    font-size: 10pt;
+}
+.price-orange{
+    font-size: 43pt;
+    margin-top: 20px;
+    div{
+        font-size: 14pt;
+        top: -17px;
+        left: 68px;
+
+    }
+}
+
+.price-blue{
+    font-size: 34pt;
+    div{
+        font-size: 11pt;
+        top: -11px;
+        left: 55px;
+    }
+}
+#dispo
+{
+    h3
+    {
+        font-size: 16pt !important;
+    }
+}
+.section-background-image{
+    background-size: 900px auto;
+}
+.help-link{
+    font-size: 14pt;
+    span[class^=icon-]{
+        &.icon-info-icone{
+            margin-right: 7px;
+            font-size: 20pt;
+        }
+        &.icon-right-arrow{
+            margin-left: 7px;
+            font-size: 15pt;
+
         }
     }
-    .footer-bottom-links li{
-        margin-right: 111px;
-    }
+}
+.footer-bottom-links li{
+    margin-right: 111px;
+}
 }
 @include viewport(min, $min: 1400){
     .container-wrapper{

@@ -3,29 +3,66 @@
 
 #slider-contents{
     .infos{
+        background-size: auto 320px;
         &.image-1{
-            background-image: url(../../images/index/640px/Slider/slider_fibre.jpg);
-            background-size: auto 320px;
+            background-image: url(../../images/index/320px/Slider/Slider_672x320px.jpg);
+        }
+        &.image-2{
+            background-image: url(../../images/index/320px/Slider/Slider2_672x320px.jpg);
+        }
+        &.image-3{
+            background-image: url(../../images/index/320px/Slider/Slider3_672x320px.jpg);
         }
     }
 }
 
 @include media(tab){
-    #slider-contents .infos.image-1{
-        background-image: url(../../images/index/640px/Slider/slider_fibre.jpg);
-        background-size: auto 450px;
-    }
+    #slider-contents{
+        .infos{
+            background-size: auto 450px;
+            &.image-1{
+                background-image: url(../../images/index/640px/Slider/Slider_1056x450px.jpg);
+            }
+            &.image-2{
+                background-image: url(../../images/index/640px/Slider/Slider2_1056x450px.jpg);
+            }
+            &.image-3{
+                background-image: url(../../images/index/640px/Slider/Slider3_1056x450px.jpg);
+            }
+        }
+    } 
 }
 @include media(desk){
-    #slider-contents .infos.image-1{
-        background-image: url(../../images/index/1024px/Slider/slider_fibre.jpg);
-        background-size: auto 330px;
+    #slider-contents{
+        .infos{
+            background-size: auto 330px;
+            &.image-1{
+                background-image: url(../../images/index/1024px/Slider/Slider_1302x330px.jpg);
+            }
+            &.image-2{
+                background-image: url(../../images/index/1024px/Slider/Slider2_1302x330px.jpg);
+            }
+            &.image-3{
+                background-image: url(../../images/index/1024px/Slider/Slider3_1302x330px.jpg);
+            }
+        }
     }
 }
 @include media(lgdesk){
-    #slider-contents .infos.image-1{
-        background-image: url(../../images/index/1280px/Slider/slider_fibre.jpg);
-        background-size: 1920px auto;
+    #slider-contents{
+        .infos{
+            background-size: 1920px auto;
+            &.image-1{
+                background-image: url(../../images/index/1280px/Slider/Slider_1920x360px.jpg);
+            }
+            &.image-2{
+                background-image: url(../../images/index/1280px/Slider/Slider2_1920x360px.jpg);
+            }
+            &.image-3{
+                background-image: url(../../images/index/1280px/Slider/Slider3_1920x360px.jpg);
+            }
+        }
     }
+
 }
 

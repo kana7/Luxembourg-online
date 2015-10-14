@@ -1646,6 +1646,9 @@ ul, li {
 .align-center {
   text-align: center; }
 
+.align-right {
+  text-align: right; }
+
 .background-image-right {
   position: absolute;
   top: 0;
@@ -1788,6 +1791,7 @@ header {
     #slider-contents .infos a {
       display: block;
       position: absolute;
+      top: 0;
       width: 100%;
       height: 100%; }
 
@@ -2113,8 +2117,11 @@ span[class^=icon-] {
   .footer-note span {
     display: block; }
 
-.bold {
+.extra-bold {
   font-weight: 800; }
+
+.bold {
+  font-weight: 600; }
 
 .section-price {
   display: inline-block;
@@ -2838,8 +2845,10 @@ span[class^=icon-] {
   padding: 20px 0;
   background-repeat: no-repeat;
   background-position: center top; }
+  #slider-contents .infos .align-right {
+    text-align: center; }
 #slider-contents .title {
-  margin: 0 0 12px;
+  margin: 0 0 8px;
   color: #004994;
   font-size: 25px;
   font-weight: 800;
@@ -2857,6 +2866,17 @@ span[class^=icon-] {
 #slider-contents p.bottom-details {
   font-size: 10px;
   color: #818181; }
+#slider-contents .section-price {
+  font-size: 55px;
+  margin: -10px 0 20px;
+  padding-top: 0px; }
+  #slider-contents .section-price div {
+    font-size: 20px;
+    top: 7px;
+    left: 62px; }
+  #slider-contents .section-price span {
+    font-size: 18px;
+    padding-left: 0px; }
 
 .service {
   border: 1px solid #e6e6e6;
@@ -3173,6 +3193,17 @@ footer {
     #slider-contents .flickity-prev-next-button svg {
       width: 70%;
       height: 70%; }
+  #slider-contents .section-price {
+    font-size: 72px;
+    margin: 0px 0 20px;
+    padding-top: 2px; }
+    #slider-contents .section-price div {
+      font-size: 24px;
+      top: 12px;
+      left: 83px; }
+    #slider-contents .section-price span {
+      font-size: 21px;
+      padding-left: 0px; }
 
   #slider-ui .buttons {
     width: 95%; }
@@ -3248,9 +3279,11 @@ footer {
 
   #slider-contents .infos {
     position: relative;
-    height: 135px;
+    height: 330px;
     z-index: 1;
     text-align: left; }
+    #slider-contents .infos .align-right {
+      text-align: right !important; }
     #slider-contents .infos .row {
       position: relative;
       top: 50%;
@@ -3260,16 +3293,24 @@ footer {
       transform: translateY(-50%); }
 
   #slider-contents .title {
-    font-size: 30pt;
+    font-size: 32pt;
     margin-bottom: 15px; }
   #slider-contents p.top-details {
-    font-size: 21pt;
+    font-size: 18pt;
     line-height: 35px; }
   #slider-contents p.bottom-details {
     font-size: 10pt; }
-
-  #slider-contents .infos {
-    height: 330px; }
+  #slider-contents .section-price {
+    font-size: 72px;
+    margin: 0px 0 20px;
+    padding-top: 2px;
+    margin-right: 65px; }
+    #slider-contents .section-price div {
+      font-size: 21px;
+      top: 13px !important;
+      left: 84px; }
+    #slider-contents .section-price span {
+      font-size: 21px; }
 
   #slider-ui .buttons {
     width: 95%; }
@@ -3490,15 +3531,28 @@ footer {
     left: 162px; }
 
   #slider-contents .title {
-    font-size: 42pt; }
+    font-size: 37pt;
+    line-height: 58px;
+    margin-bottom: 10px; }
   #slider-contents p.top-details {
-    font-size: 26pt;
-    line-height: 42px; }
+    font-size: 25pt;
+    line-height: 40px; }
   #slider-contents p.bottom-details {
     font-size: 11pt; }
 
   #slider-contents .infos {
     height: 360px; }
+
+  #slider-contents .section-price {
+    font-size: 82px !important;
+    padding-top: 7px;
+    margin-right: 80px; }
+    #slider-contents .section-price div {
+      font-size: 22px;
+      top: 16px !important;
+      left: 93px; }
+    #slider-contents .section-price span {
+      font-size: 22px; }
 
   #slider-ui .buttons {
     width: 90%; }

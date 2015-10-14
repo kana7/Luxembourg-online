@@ -2233,7 +2233,23 @@ span[class^=icon-] {
     display: block;
     height: 100%;
     top: 0;
-    right: -247px; }
+    right: -247px;
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+    -webkit-transition: -webkit-transform 0.4s ease;
+    /* Changed here */
+    -moz-transition: -moz-transform 0.4s ease;
+    -o-transition: -o-transform 0.4s ease;
+    transition: transform 0.4s ease; }
+    .mobile-side-menu .menu-links-wrapper.is-open {
+      transform: translateX(-247px);
+      -webkit-transform: translateX(-247px);
+      -ms-transform: translateX(-247px);
+      -o-transform: translateX(-247px);
+      transform: translateX(-247px); }
 
 .white-fixed-option, .blue-fixed-option {
   background-color: #c0c0c0;

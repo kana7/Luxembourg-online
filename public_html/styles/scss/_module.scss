@@ -227,6 +227,14 @@ span[class^=icon-]
         height: 100%;
         top: 0;
         right: -247px;
+        @include transform(translateX(0px));
+        -webkit-transition: -webkit-transform 0.4s ease; /* Changed here */ 
+        -moz-transition: -moz-transform 0.4s ease;
+        -o-transition: -o-transform 0.4s ease;
+        transition: transform 0.4s ease;
+        &.is-open{
+            @include transform(translateX(-247px));
+        }
     }
 
 }

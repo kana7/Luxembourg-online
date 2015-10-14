@@ -3315,6 +3315,10 @@ footer {
     #slider-contents .section-price span {
       font-size: 21px; }
 
+  .flickity-prev-next-button svg {
+    width: 100% !important;
+    height: 100% !important; }
+
   #slider-ui .buttons {
     width: 95%; }
     #slider-ui .buttons .arrow {

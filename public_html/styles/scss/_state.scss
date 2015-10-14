@@ -228,6 +228,12 @@
             }
         }
     }
+    .flickity-prev-next-button {
+            svg{
+                width: 100% !important;
+                height: 100% !important;
+            }
+        }
     #slider-ui{
         .buttons{
             width: 95%;

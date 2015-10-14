@@ -16,29 +16,24 @@ var OpenMenu = (function () {
     var $document = $('html');
 
     var init = function () {
-        console.log('hola chicka');
         _bindEvents();
     };
     var _bindEvents = function () {
         $mobileButton.on('click', _toggleSideMenu.bind(this));
-        //$document.on('click', _closeSideMenuOnAway.bind(this));
+        $document.on('click', _closeSideMenuOnAway.bind(this));
         $document.on('resize', _closeSideMenu.bind(this));
     };
     
-    var _toggleSideMenu = function(){
+    var _toggleSideMenu = function(event){
+        event.stopPropagation();
         $contentSite.toggleClass('open');
-    };
-    var _openSideMenu = function (event) {
-        if (!$contentSite.hasClass('open')) {
-            $contentSite.addClass('open');
-        }
     };
     var _closeSideMenuOnAway = function (event) {
         if (!$(event.target).closest($mobileMenu, $mobileButton).length) {
             _closeSideMenu();
         }
     };
-    var _closeSideMenu = function (event) {
+    var _closeSideMenu = function () {
         if ($contentSite.hasClass('open')) {
             $contentSite.removeClass('open');
         }

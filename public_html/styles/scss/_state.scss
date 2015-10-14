@@ -219,7 +219,13 @@
         padding-top: 70px;
     }
     .footer-note{
-        text-align: left;
+        text-align: center;
+        span{
+            display: inline-block;
+            &:first-child{
+                margin-right: 5px;
+            }
+        }
     }
     #services{
         .row > div[class^=phone-]{
@@ -451,7 +457,7 @@
         }
     }
 
-    .offer-item-orange .offer-price div, .offer-item-blue .offer-price div{left: 158px;}
+    .offer-item-orange .offer-price div, .offer-item-blue .offer-price div{left: 162px;}
 
     #slider-contents{
         .title{

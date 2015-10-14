@@ -2110,10 +2110,8 @@ span[class^=icon-] {
   font-size: 13px;
   margin: 30px 0;
   line-height: 15px; }
-  .footer-note br {
-    display: block;
-    margin-top: 5px;
-    line-height: 19px; }
+  .footer-note span {
+    display: block; }
 
 .bold {
   font-weight: 800; }
@@ -2254,7 +2252,6 @@ span[class^=icon-] {
   background: -webkit-linear-gradient(top, #fff 0%, #fff 90%, #f7f7f7 100%);
   background: linear-gradient(to bottom, #fff 0%, #fff 90%, #f7f7f7 100%);
   /* W3C */
-  border-bottom: 1px solid #D0D0D0;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f7f7f7',GradientType=0 );
   /* IE6-9 */ }
   #bottom-menu-header:after {
@@ -3290,7 +3287,11 @@ footer {
     padding-top: 70px; }
 
   .footer-note {
-    text-align: left; }
+    text-align: center; }
+    .footer-note span {
+      display: inline-block; }
+      .footer-note span:first-child {
+        margin-right: 5px; }
 
   #services .row > div[class^=phone-] {
     padding: 0 7px; }
@@ -3486,7 +3487,7 @@ footer {
       margin-right: 65px; }
 
   .offer-item-orange .offer-price div, .offer-item-blue .offer-price div {
-    left: 158px; }
+    left: 162px; }
 
   #slider-contents .title {
     font-size: 42pt; }

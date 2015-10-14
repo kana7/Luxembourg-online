@@ -29,7 +29,6 @@ body, .mobile-side-menu, #offers-section{
 .background-lightblue{
     background-color: #eff4f7;
 }
-
 // SHADOW CLASS
 // --------------------------------------------------
 .iner-shadow{
@@ -94,8 +93,8 @@ span[class^=icon-]
     font-size: 13px;
     margin: 30px 0;
     line-height: 15px;
-    br{
-        display:block; margin-top:5px; line-height:19px;
+    span{
+        display: block;
     }
 }
 .bold{
@@ -242,7 +241,6 @@ span[class^=icon-]
     background: -webkit-linear-gradient(top,  #fff 0%,#fff 90%,#f7f7f7 100%); /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
     background: -webkit-linear-gradient(top, #fff 0%, #fff 90%, #f7f7f7 100%);
     background:         linear-gradient(to bottom,  #fff 0%,#fff 90%,#f7f7f7 100%); /* W3C */
-    border-bottom: 1px solid #D0D0D0;
 
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f7f7f7',GradientType=0 ); /* IE6-9 */
     &:after{

@@ -1,3 +1,20 @@
+@include viewport(range, $max:1301, $min: 1056){
+    .promo-offer-container{
+        .offer-item-blue, offer-item-orange{
+            .info, .check-list-container{
+                padding-left: 18px !important;
+            }
+        }
+        div[class^=phone-]:first-child{
+            padding-right: 5px !important;
+        }
+        div[class^=phone-]:last-child{
+            padding-left: 5px !important;
+        }
+    }
+}
+
+
 @include media(phone){
     #promo-fibre, #promo-internetTV{
         background-size: auto 160px !important;
@@ -14,6 +31,7 @@
         background-size: auto 160px !important;
     }
 }
+
 @include media(desk){
     #promo-fibre{
         background-image: url(../../../images/promos/Accueil/1024px/Offre_Fibre2.jpg);
@@ -39,7 +57,8 @@
         }
     }
     .promo-info{
-        padding: 0 110px;
+        &.left{padding-right: 110px;}
+        &.right{padding-left: 110px;}
         margin-bottom: 0px;
         .text{
             margin: 4px 0px 50px;
@@ -59,11 +78,14 @@
             margin-bottom: 60px;
             .price{
                 font-size: 75px;
-                margin-bottom: 10px;
+                margin-bottom: 15px;
+            }
+            .label{
+                margin: 0;
             }
             .label, .price{
-            display: block;
-        }
+                display: block;
+            }
         }
         .btn-blue{
             font-size: 21px;

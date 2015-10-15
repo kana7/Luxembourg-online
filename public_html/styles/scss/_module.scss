@@ -340,6 +340,19 @@ span[class^=icon-]
     }
     .main-menu li{
         text-align: center;
+        .active-border{
+            display: none;
+            position: absolute;
+            top: 51px;
+            height: 3px;
+            width: 100%;
+            background-color: $blue;
+        }
+        &.active{
+            .active-border{
+                display: block;
+            }
+        }
     }
 }
 .sub-menu{

@@ -2342,6 +2342,15 @@ span[class^=icon-] {
   color: #9a9a9a; }
 .bottom-menu-header-links .main-menu li {
   text-align: center; }
+  .bottom-menu-header-links .main-menu li .active-border {
+    display: none;
+    position: absolute;
+    top: 51px;
+    height: 3px;
+    width: 100%;
+    background-color: #004994; }
+  .bottom-menu-header-links .main-menu li.active .active-border {
+    display: block; }
 
 .sub-menu {
   font-size: 15px;

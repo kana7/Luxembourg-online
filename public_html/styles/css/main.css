@@ -2250,6 +2250,20 @@ span[class^=icon-] {
       -ms-transform: translateX(-247px);
       -o-transform: translateX(-247px);
       transform: translateX(-247px); }
+    .mobile-side-menu .menu-links-wrapper .menu-item.back {
+      text-align: left;
+      color: #fff;
+      background-color: #004994;
+      border-bottom: 2px solid #004994; }
+      .mobile-side-menu .menu-links-wrapper .menu-item.back span {
+        float: left;
+        top: 1px;
+        margin-right: 5px;
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg); }
 
 .white-fixed-option, .blue-fixed-option {
   background-color: #c0c0c0;

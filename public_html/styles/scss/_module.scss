@@ -235,6 +235,18 @@ span[class^=icon-]
         &.is-open{
             @include transform(translateX(-247px));
         }
+        .menu-item.back{
+            text-align: left;
+            color: $white;
+            background-color: $blue;
+            border-bottom: 2px solid $blue;
+            span{
+                float: left;
+                top: 1px;
+                margin-right: 5px;
+                @include transform(rotate(180deg));
+            }
+        }
     }
 
 }

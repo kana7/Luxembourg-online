@@ -3197,7 +3197,8 @@ footer {
 
   .section-layout img {
     width: auto;
-    height: 230px; }
+    height: 230px;
+    }
 
   #services .row > div[class^=phone-] {
     padding: 0 15px; }

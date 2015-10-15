@@ -123,6 +123,16 @@
         line-height: 25px;
         padding: 15px 0 20px;
     }
+    #social-links ul,
+    #contact ul, #document-links ul
+    {
+        &.center{
+            @include display-flex-center;
+            li:not(:last-child){
+                margin-right: 150px;
+            }
+        }
+    }
     #document-links ul li:not(:last-child){
         margin-bottom: 0;
     }
@@ -229,11 +239,11 @@
         }
     }
     .flickity-prev-next-button {
-            svg{
-                width: 100% !important;
-                height: 100% !important;
-            }
+        svg{
+            width: 100% !important;
+            height: 100% !important;
         }
+    }
     #slider-ui{
         .buttons{
             width: 95%;
@@ -520,111 +530,111 @@
                 top: 16px !important;
                 left: 93px;
             }
-        span{
-            font-size: 22px;
+            span{
+                font-size: 22px;
+            }
         }
     }
-}
-#slider-ui{
-    .buttons{
-        width: 90%;
-        .arrow{
-            font-size: 50pt;
+    #slider-ui{
+        .buttons{
+            width: 90%;
+            .arrow{
+                font-size: 50pt;
+            }
         }
-    }
-    .dots{
-        width: 145px;
-        li{font-size: 8pt;}
-    }
-} 
-#services{
-    .row>div[class^=phone-]{
-        padding: 0 7px;
-    }
-    .service
-    {
-        &#loldsl{background-image: url(../../images/index/1280px/Offres/LOL_DSL.jpg);}
-        &#mobiles{background-image: url(../../images/index/1280px/Offres/iphone6.jpg);}
-        &#installation{background-image: url(../../images/index/1280px/Offres/Offre_TV.jpg);}
-        &#dispo{background-image: url(../../images/index/1280px/Offres/Recherche_Offre.jpg);}
-        .infos
+        .dots{
+            width: 145px;
+            li{font-size: 8pt;}
+        }
+    } 
+    #services{
+        .row>div[class^=phone-]{
+            padding: 0 7px;
+        }
+        .service
         {
-            padding: 0 25px 15px;
-            h3
+            &#loldsl{background-image: url(../../images/index/1280px/Offres/LOL_DSL.jpg);}
+            &#mobiles{background-image: url(../../images/index/1280px/Offres/iphone6.jpg);}
+            &#installation{background-image: url(../../images/index/1280px/Offres/Offre_TV.jpg);}
+            &#dispo{background-image: url(../../images/index/1280px/Offres/Recherche_Offre.jpg);}
+            .infos
             {
-                font-size: 1.9em;
-                line-height: 28px;
-            }
-            .details
-            {
-                font-size: 25px;
-                line-height: 35px;
+                padding: 0 25px 15px;
+                h3
+                {
+                    font-size: 1.9em;
+                    line-height: 28px;
+                }
+                .details
+                {
+                    font-size: 25px;
+                    line-height: 35px;
+                }
             }
         }
     }
-}
 
-.section-title {
-    font-size: 40px;
-    line-height: 52px;
-    margin: 0 0 25px;
-}
-.section-description {
-    font-size: 18px;
-    margin: 0 0 45px;
-}
-.bottom-info{
-    font-size: 10pt;
-}
-.price-blue span, .price-orange span{
-    font-size: 10pt;
-}
-.price-orange{
-    font-size: 43pt;
-    margin-top: 20px;
-    div{
-        font-size: 14pt;
-        top: -17px;
-        left: 68px;
-
+    .section-title {
+        font-size: 40px;
+        line-height: 52px;
+        margin: 0 0 25px;
     }
-}
-
-.price-blue{
-    font-size: 34pt;
-    div{
-        font-size: 11pt;
-        top: -11px;
-        left: 55px;
+    .section-description {
+        font-size: 18px;
+        margin: 0 0 45px;
     }
-}
-#dispo
-{
-    h3
+    .bottom-info{
+        font-size: 10pt;
+    }
+    .price-blue span, .price-orange span{
+        font-size: 10pt;
+    }
+    .price-orange{
+        font-size: 43pt;
+        margin-top: 20px;
+        div{
+            font-size: 14pt;
+            top: -17px;
+            left: 68px;
+
+        }
+    }
+
+    .price-blue{
+        font-size: 34pt;
+        div{
+            font-size: 11pt;
+            top: -11px;
+            left: 55px;
+        }
+    }
+    #dispo
     {
-        font-size: 16pt !important;
-    }
-}
-.section-background-image{
-    background-size: 900px auto;
-}
-.help-link{
-    font-size: 14pt;
-    span[class^=icon-]{
-        &.icon-info-icone{
-            margin-right: 7px;
-            font-size: 20pt;
+        h3
+        {
+            font-size: 16pt !important;
         }
-        &.icon-right-arrow{
-            margin-left: 7px;
-            font-size: 15pt;
+    }
+    .section-background-image{
+        background-size: 900px auto;
+    }
+    .help-link{
+        font-size: 14pt;
+        span[class^=icon-]{
+            &.icon-info-icone{
+                margin-right: 7px;
+                font-size: 20pt;
+            }
+            &.icon-right-arrow{
+                margin-left: 7px;
+                font-size: 15pt;
 
+            }
         }
     }
-}
-.footer-bottom-links li{
-    margin-right: 111px;
-}
+    .footer-bottom-links li{
+        margin-right: 111px;
+    }
 }
 @include viewport(min, $min: 1400){
     .container-wrapper{

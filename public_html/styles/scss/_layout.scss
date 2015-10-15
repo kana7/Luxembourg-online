@@ -18,6 +18,13 @@
     @include vertical-align-middle();
 }
 
+.flex-align-spread{
+    @include display-flex-spread;
+}
+.flex-align-center{
+    @include display-flex-center;
+}
+
 .align-center{
     text-align: center;
 }
@@ -434,9 +441,16 @@ footer
 #social-links ul,
 #contact ul, #document-links ul
 {
-    @include display-flex-spread;
-    li
-    {
+    &.center{
+        @include display-flex-center;
+        li:not(:last-child){
+            margin-right: 0px;
+        }
+    }
+    &.spread{
+        @include display-flex-spread;
+    }
+    li{
         @include display-flex-spread-item;
     }
 }

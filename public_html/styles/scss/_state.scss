@@ -448,7 +448,7 @@
         font-size: 19px;
     }
     .offer-item-orange .item-body > li:not(:first-child), .offer-item-blue .item-body > li:not(:first-child){
-        padding-left: 15px;
+        padding-left: 15px !important;
     }
     .offer-item-orange .check-list li .icon-check-ico, .offer-item-blue .check-list li .icon-check-ico{
         margin-right: 18px;

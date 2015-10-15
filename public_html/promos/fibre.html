@@ -29,21 +29,65 @@
         </div>
         <nav class="mobile-side-menu">
             <ul class="menu">
-                <li class="menu-item"><a href="#">Internet <span class="icon-right-arrow"></span></a></li>
-                <li class="menu-item"><a href="#">Téléphonie <span class="icon-right-arrow"></span></a></li>
-                <li class="menu-item"><a href="#">TV <span class="icon-right-arrow"></span></a></li>
-                <li class="menu-item"><a href="#">Mobile <span class="icon-right-arrow"></span></a></li>
-                <li class="menu-item"><a href="#">Promos <span class="icon-right-arrow"></span></a></li>
+                <li class="menu-item" data-id='internet'>Internet<span class="icon-right-arrow"></span></li>
+                <li class="menu-item" data-id='telephone'>Téléphonie <span class="icon-right-arrow"></span></li>
+                <li class="menu-item" data-id='tv'>TV <span class="icon-right-arrow"></span></li>
+                <li class="menu-item" data-id='mobile'>Mobile<span class="icon-right-arrow"></span></li>
+                <li class="menu-item" data-id='promo'>Promos <span class="icon-right-arrow"></span></li>
                 <li class="sous-nav">
                     <ul class="menu">
                         <li class="menu-item"><a href="#">Assistance</a></li>
-                        <li class="menu-item"><a href="#">LOL CLOUD</a></li>
+                        <li class="menu-item"><a href="http://www.internet.lu/lolcloud/index.htm">LOL CLOUD</a></li>
                         <li class="menu-item"><a href="#">Magazine</a></li>
                         <li class="menu-item"><a href="#">À propos</a></li>
                         <li class="menu-item"><a href="#">Contact</a></li>
                     </ul>
                 </li>
             </ul>
+            <div class="menu-links-wrapper">
+                <ul class="menu-links" id="internet">
+                    <li class="menu-item back"><span class="icon-right-arrow"></span>Internet</li>
+                    <li class="menu-item"><a href="/LuxembourgOnline/internet/accueil.html">Accueil</a></li>
+                    <li class="menu-item"><a href="/LuxembourgOnline/internet/offres.html">Nos offres</a></li>
+                    <li class="menu-item"><a href="/LuxembourgOnline/internet/equipement.html">Nos équipements</a></li>
+                    <li class="menu-item"><a href="#">Abonnez-vous</a></li>
+                </ul>
+            </div>
+            <div class="menu-links-wrapper">
+                <ul class="menu-links" id="telephone">
+                    <li class="menu-item back"><span class="icon-right-arrow"></span>Téléphonie</li>
+                    <li class="menu-item"><a href="/LuxembourgOnline/telephonie/accueil.html">Accueil</a></li>
+                    <li class="menu-item"><a href="#">Nos tarifs</a></li>
+                    <li class="menu-item"><a href="#">Nos téléphones</a></li>
+                    <li class="menu-item"><a href="#">Abonnez-vous</a></li>
+                </ul>
+            </div>
+            <div class="menu-links-wrapper">
+                <ul class="menu-links" id="tv">
+                    <li class="menu-item back"><span class="icon-right-arrow"></span>TV</li>
+                    <li class="menu-item"><a href="/LuxembourgOnline/tv/accueil.html">Accueil</a></li>
+                    <li class="menu-item"><a href="#">Notre offre TV</a></li>
+                    <li class="menu-item"><a href="#">Nos équipements</a></li>
+                    <li class="menu-item"><a href="#">Abonnez-vous</a></li>
+                </ul>
+            </div>
+            <div class="menu-links-wrapper">
+                <ul class="menu-links" id="mobile">
+                    <li class="menu-item back"><span class="icon-right-arrow"></span>Mobile</li>
+                    <li class="menu-item"><a href="/LuxembourgOnline/mobile/accueil.html">Accueil</a></li>
+                    <li class="menu-item"><a href="/LuxembourgOnline/mobile/abonnements.html">Nos abonnements</a></li>
+                    <li class="menu-item"><a href="#">Nos téléphones</a></li>
+                    <li class="menu-item"><a href="#">Abonnez-vous</a></li>
+                </ul>
+            </div>
+            <div class="menu-links-wrapper">
+                <ul class="menu-links" id="promo">
+                    <li class="menu-item back"><span class="icon-right-arrow"></span>Promos</li>
+                    <li class="menu-item"><a href="/LuxembourgOnline/promos/accueil.html">Accueil</a></li>
+                    <li class="menu-item"><a href="/LuxembourgOnline/promos/fibre.html">Offre spéciale fibre</a></li>
+                    <li class="menu-item"><a href="/LuxembourgOnline/promos/internetTV.html">offre spéciale TV</a></li>
+                </ul>
+            </div>
         </nav>
         <div id="siteWrap">
             <header>
@@ -94,37 +138,42 @@
                             </ul>
                             <div class="pull-left">
                                 <div class="logo">
-                                    <a href="../index.html"><img src="../images/icons/img/Logo-LOL.png" alt="logo LOL" /></a>
+                                    <a href="/LuxembourgOnline/index.html"><img src="/LuxembourgOnline/images/icons/img/Logo-LOL.png" alt="logo LOL" /></a>
                                 </div><!--
                                 --><nav class="bottom-menu-header-links">
                                     <ul class="main-menu">
                                         <li>
-                                            <a href="../internet/accueil.html">
-                                                <img class="header-icon" src="../images/icons/img/internet.png" alt="Internet" />
+                                            <div class="active-border"></div>
+                                            <a href="/LuxembourgOnline/internet/accueil.html">
+                                                <img class="header-icon" src="/LuxembourgOnline/images/icons/img/internet.png" alt="Internet" />
                                                 <div class="link">Internet</div>
                                             </a>
                                         </li><!--
                                         --><li>
-                                            <a href="#">
-                                                <img class="header-icon" src="../images/icons/img/telephonie.png" alt="Téléphonie" />
+                                            <div class="active-border"></div>
+                                            <a href="/LuxembourgOnline/telephonie/accueil.html">
+                                                <img class="header-icon" src="/LuxembourgOnline/images/icons/img/telephonie.png" alt="Téléphonie" />
                                                 <div class="link">Téléphonie</div>
                                             </a>
                                         </li><!--
                                         --><li>
-                                            <a href="#">
-                                                <img class="header-icon" src="../images/icons/img/tv.png" alt="Tv" />
+                                            <div class="active-border"></div>
+                                            <a href="/LuxembourgOnline/tv/accueil.html">
+                                                <img class="header-icon" src="/LuxembourgOnline/images/icons/img/tv.png" alt="Tv" />
                                                 <div class="link">Tv</div>
                                             </a>
                                         </li><!--
                                         --><li>
-                                            <a href="#">
-                                                <img class="header-icon" src="../images/icons/img/mobile.png" alt="Mobile" />
+                                            <div class="active-border"></div>
+                                            <a href="/LuxembourgOnline/mobile/accueil.html">
+                                                <img class="header-icon" src="/LuxembourgOnline/images/icons/img/mobile.png" alt="Mobile" />
                                                 <div class="link">Mobile</div>
                                             </a>
                                         </li><!--
-                                        --><li>
-                                            <a href="../promos/accueil.html">
-                                                <img class="header-icon" src="../images/icons/img/promos.png" alt="Promos" />
+                                        --><li class="active">
+                                            <div class="active-border"></div>
+                                            <a href="/LuxembourgOnline/promos/accueil.html">
+                                                <img class="header-icon" src="/LuxembourgOnline/images/icons/img/promos.png" alt="Promos" />
                                                 <div class="link">Promos</div>
                                             </a>
                                         </li>

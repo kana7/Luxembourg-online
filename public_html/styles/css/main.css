@@ -1506,13 +1506,13 @@ ul, li {
   padding: 0; }
 
 @font-face {
-  font-family: "luxOnline-icons";
-  src: url("../../fonts/luxOnline-icons.eot");
-  src: url("../../fonts/luxOnline-icons.eot?#iefix") format("embedded-opentype"), url("../../fonts/luxOnline-icons.woff") format("woff"), url("../../fonts/luxOnline-icons.ttf") format("truetype"), url("../../fonts/luxOnline-icons.svg#untitled-font-5") format("svg");
+  font-family: "luxonline-icons";
+  src: url("../../fonts/luxonline-icons.eot");
+  src: url("../../fonts/luxonline-icons.eot?#iefix") format("embedded-opentype"), url("../../fonts/luxonline-icons.woff") format("woff"), url("../../fonts/luxonline-icons.ttf") format("truetype"), url("../../fonts/luxonline-icons.svg#luxonline-icons") format("svg");
   font-weight: normal;
   font-style: normal; }
 [data-icon]:before {
-  font-family: "luxOnline-icons" !important;
+  font-family: "luxonline-icons" !important;
   content: attr(data-icon);
   font-style: normal !important;
   font-weight: normal !important;
@@ -1525,7 +1525,7 @@ ul, li {
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-  font-family: "luxOnline-icons" !important;
+  font-family: "luxonline-icons" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -1556,10 +1556,10 @@ ul, li {
 .icon-dot-slider:before {
   content: "g"; }
 
-.icon-download-ico:before {
+.icon-dot-stroke-slider:before {
   content: "h"; }
 
-.icon-dot-stroke-slider:before {
+.icon-download-ico:before {
   content: "i"; }
 
 .icon-facebook:before {
@@ -1574,44 +1574,50 @@ ul, li {
 .icon-heart-ico:before {
   content: "m"; }
 
-.icon-twitter:before {
+.icon-icone-lol:before {
   content: "n"; }
 
-.icon-tv-ico:before {
+.icon-info-icone:before {
   content: "o"; }
 
-.icon-telephonie-ico:before {
+.icon-internet-ico:before {
   content: "p"; }
 
-.icon-right-arrow:before {
+.icon-linkedin:before {
   content: "q"; }
 
-.icon-phone-icone:before {
+.icon-menu-icone:before {
   content: "r"; }
 
-.icon-parrainage-ico:before {
+.icon-mobile-ico:before {
   content: "s"; }
 
 .icon-pack-ico:before {
   content: "t"; }
 
-.icon-mobile-ico:before {
+.icon-parrainage-ico:before {
   content: "u"; }
 
-.icon-menu-icone:before {
+.icon-phone-icone:before {
   content: "v"; }
 
-.icon-linkedin:before {
+.icon-pig-ico:before {
   content: "w"; }
 
-.icon-internet-ico:before {
+.icon-repondeur-icone:before {
   content: "x"; }
 
-.icon-info-icone:before {
+.icon-right-arrow:before {
   content: "y"; }
 
-.icon-icone-lol:before {
+.icon-telephonie-ico:before {
   content: "z"; }
+
+.icon-tv-ico:before {
+  content: "A"; }
+
+.icon-twitter:before {
+  content: "B"; }
 
 .container-wrapper {
   margin-right: auto;
@@ -1956,7 +1962,7 @@ header {
     height: 100%; }
   .section-layout img {
     width: 100%;
-    max-height: 100%; }
+    height: auto; }
 
 .section-img-align-bottom {
   position: relative;
@@ -2148,15 +2154,15 @@ svg:not(:root) {
 
 .section-shadow {
   -webkit-box-shadow: 0 2px 25px 2px #d4d4d4;
-  box-shadow: 0 2px 25px 2px #d4d4d4; }
+  box-shadow: 0 2px 25px 2px #d4d4d4;
+  z-index: 2; }
 
 .drop-shadow {
   -webkit-box-shadow: 0 2px 13px 2px #B5B5B5;
   box-shadow: 0 2px 13px 2px #B5B5B5; }
 
 .section-layout {
-  color: #004994;
-  z-index: 0; }
+  color: #004994; }
 
 .content-container {
   position: relative;
@@ -2415,10 +2421,12 @@ span[class^=icon-] {
   .bottom-menu-header-links .main-menu li .active-border {
     display: none;
     position: absolute;
-    top: 51px;
-    height: 3px;
+    top: -11px;
+    height: 65px;
     width: 100%;
-    background-color: #004994; }
+    background-color: #FFFFFF;
+    border-bottom: 3px solid #004994;
+    box-shadow: inset 0 0 15px -4px #2d2d2d; }
   .bottom-menu-header-links .main-menu li.active .active-border {
     display: block; }
 

@@ -1,0 +1,7 @@
+@include media(tab){
+    #offers-section div[class^=phone-] {
+        margin-bottom: 0px;
+        padding: 0 10px;
+    }
+}
+

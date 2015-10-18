@@ -3562,8 +3562,7 @@ footer {
   .right-orientation .row > div:first-child,
   .left-orientation .row > div:last-child {
     left: 0;
-    float: left !important;
-    text-align: left; }
+    float: left !important; }
     .right-orientation .row > div:first-child .section-img-align-bottom,
     .left-orientation .row > div:last-child .section-img-align-bottom {
       left: 0; }
@@ -3571,11 +3570,16 @@ footer {
   .right-orientation .row > div:last-child,
   .left-orientation .row > div:first-child {
     right: 0;
-    float: right !important;
-    text-align: right; }
+    float: right !important; }
     .right-orientation .row > div:last-child .section-img-align-bottom,
     .left-orientation .row > div:first-child .section-img-align-bottom {
       right: 0; }
+
+  .right-orientation .row > div:last-child {
+    text-align: left; }
+
+  .left-orientation .row > div:last-child {
+    text-align: left; }
 
   .right-orientation .row > div:last-child, .left-orientation .row > div:last-child {
     position: relative;

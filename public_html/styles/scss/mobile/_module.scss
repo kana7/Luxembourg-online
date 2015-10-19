@@ -1,0 +1,48 @@
+.text-highlight{
+    margin: 12px 0;
+    text-align: center;
+    color: $orange;
+    font-size: 44px;
+}
+
+.offer-container{
+        margin: 0;
+        width: auto;
+    }
+
+.offer-item-blue, .offer-item-orange{
+    margin: 0;
+    .item-body{
+        li{
+            padding: 18px 0;
+            padding-left: 15px !important;
+        }
+    }
+    .info{
+        font-size: 16px;
+        font-weight: 400;
+        span:not(.exponent){
+            display: inline-block;
+            position: absolute;
+            top: 20px;
+            width: 45px;
+            font-size: 16px;
+            text-align: center;
+            margin: 0;
+        }
+        .data{
+            padding-left: 65px;
+        }
+        .exponent{
+            position: absolute;
+            font-weight: 400;
+            font-size: 9px !important;
+            padding: 0;
+        }
+    }
+}
+
+.btn-outline-white{
+    padding: 13px 48px;
+    font-size: 16px;
+}

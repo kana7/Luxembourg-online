@@ -1,0 +1,16 @@
+@include media(tab){
+    #offers-section div[class^=phone-] {
+        margin-bottom: 5px;
+        padding: 0 10px;
+    }
+    .footer-note {
+        margin: 10px 0 35px;;
+    }
+}
+
+@include media(desk){
+    .offer-container{
+        margin: 0 auto;
+        width: 1010px;
+    }
+}

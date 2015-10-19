@@ -1,3 +1,52 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,400italic);
+.text-highlight {
+  margin: 12px 0;
+  text-align: center;
+  color: #e75e0a;
+  font-size: 44px; }
+
+.offer-container {
+  margin: 0;
+  width: auto; }
+
+.offer-item-blue, .offer-item-orange {
+  margin: 0; }
+  .offer-item-blue .item-body li, .offer-item-orange .item-body li {
+    padding: 18px 0;
+    padding-left: 15px !important; }
+  .offer-item-blue .info, .offer-item-orange .info {
+    font-size: 16px;
+    font-weight: 400; }
+    .offer-item-blue .info span:not(.exponent), .offer-item-orange .info span:not(.exponent) {
+      display: inline-block;
+      position: absolute;
+      top: 20px;
+      width: 45px;
+      font-size: 16px;
+      text-align: center;
+      margin: 0; }
+    .offer-item-blue .info .data, .offer-item-orange .info .data {
+      padding-left: 65px; }
+    .offer-item-blue .info .exponent, .offer-item-orange .info .exponent {
+      position: absolute;
+      font-weight: 400;
+      font-size: 9px !important;
+      padding: 0; }
+
+.btn-outline-white {
+  padding: 13px 48px;
+  font-size: 16px; }
+
+@media screen and (min-width: 672px) {
+  #offers-section div[class^=phone-] {
+    margin-bottom: 5px;
+    padding: 0 10px; }
+
+  .footer-note {
+    margin: 10px 0 35px; } }
+@media screen and (min-width: 1056px) {
+  .offer-container {
+    margin: 0 auto;
+    width: 1010px; } }
 
 /*# sourceMappingURL=mobile.css.map */

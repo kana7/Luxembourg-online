@@ -351,7 +351,6 @@
         .left-orientation .row > div:last-child{
         left: 0;
         float: left !important;
-        text-align: left;
         .section-img-align-bottom{
             left: 0;
         }
@@ -360,10 +359,12 @@
         .left-orientation .row > div:first-child{
         right: 0;
         float: right !important;
-        text-align: right;
         .section-img-align-bottom{
             right: 0;
         }
+    }
+    .right-orientation .row > div:last-child, .left-orientation .row > div:last-child{
+        text-align: left;
     }
     .right-orientation .row > div:last-child, .left-orientation .row > div:last-child{
         @include vertical-align-middle;

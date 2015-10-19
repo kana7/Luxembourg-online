@@ -39,86 +39,89 @@
 }
 
 .icon-account-icone:before {
+  content: "b";
+}
+.icon-x-icone:before {
   content: "a";
 }
 .icon-calculator-ico:before {
-  content: "b";
-}
-.icon-call-me:before {
   content: "c";
 }
-.icon-check-ico:before {
+.icon-call-me:before {
   content: "d";
 }
-.icon-clock-icone:before {
+.icon-check-ico:before {
   content: "e";
 }
-.icon-document-ico:before {
+.icon-clock-icone:before {
   content: "f";
 }
-.icon-dot-slider:before {
+.icon-document-ico:before {
   content: "g";
 }
-.icon-dot-stroke-slider:before {
+.icon-dot-slider:before {
   content: "h";
 }
-.icon-download-ico:before {
+.icon-dot-stroke-slider:before {
   content: "i";
 }
-.icon-facebook:before {
+.icon-download-ico:before {
   content: "j";
 }
 .icon-faq-ico:before {
   content: "k";
 }
-.icon-google:before {
+.icon-facebook:before {
   content: "l";
 }
 .icon-heart-ico:before {
   content: "m";
 }
-.icon-icone-lol:before {
+.icon-google:before {
   content: "n";
 }
-.icon-info-icone:before {
+.icon-telephonie-ico:before {
   content: "o";
 }
-.icon-internet-ico:before {
+.icon-repondeur-icone:before {
   content: "p";
 }
-.icon-linkedin:before {
+.icon-right-arrow:before {
   content: "q";
 }
-.icon-menu-icone:before {
+.icon-pig-ico:before {
   content: "r";
 }
-.icon-mobile-ico:before {
+.icon-parrainage-ico:before {
   content: "s";
 }
-.icon-pack-ico:before {
+.icon-phone-icone:before {
   content: "t";
 }
-.icon-parrainage-ico:before {
+.icon-pack-ico:before {
   content: "u";
 }
-.icon-phone-icone:before {
+.icon-mobile-ico:before {
   content: "v";
 }
-.icon-pig-ico:before {
+.icon-menu-icone:before {
   content: "w";
 }
-.icon-repondeur-icone:before {
+.icon-linkedin:before {
   content: "x";
 }
-.icon-right-arrow:before {
+.icon-internet-ico:before {
   content: "y";
 }
-.icon-telephonie-ico:before {
+.icon-info-icone:before {
   content: "z";
 }
-.icon-tv-ico:before {
+.icon-icone-lol:before {
   content: "A";
 }
-.icon-twitter:before {
+.icon-tv-ico:before {
   content: "B";
+}
+.icon-twitter:before {
+  content: "C";
 }

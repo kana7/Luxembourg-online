@@ -41,6 +41,7 @@ ul, li{
         url("../../fonts/luxonline-icons.svg#luxonline-icons") format("svg");
     font-weight: normal;
     font-style: normal;
+
 }
 
 [data-icon]:before {
@@ -70,88 +71,89 @@ ul, li{
 }
 
 .icon-account-icone:before {
-  content: "a";
+    content: "b";
+}
+.icon-x-icone:before {
+    content: "a";
 }
 .icon-calculator-ico:before {
-  content: "b";
+    content: "c";
 }
 .icon-call-me:before {
-  content: "c";
+    content: "d";
 }
 .icon-check-ico:before {
-  content: "d";
+    content: "e";
 }
 .icon-clock-icone:before {
-  content: "e";
+    content: "f";
 }
 .icon-document-ico:before {
-  content: "f";
+    content: "g";
 }
 .icon-dot-slider:before {
-  content: "g";
+    content: "h";
 }
 .icon-dot-stroke-slider:before {
-  content: "h";
+    content: "i";
 }
 .icon-download-ico:before {
-  content: "i";
-}
-.icon-facebook:before {
-  content: "j";
+    content: "j";
 }
 .icon-faq-ico:before {
-  content: "k";
+    content: "k";
 }
-.icon-google:before {
-  content: "l";
+.icon-facebook:before {
+    content: "l";
 }
 .icon-heart-ico:before {
-  content: "m";
+    content: "m";
 }
-.icon-icone-lol:before {
-  content: "n";
-}
-.icon-info-icone:before {
-  content: "o";
-}
-.icon-internet-ico:before {
-  content: "p";
-}
-.icon-linkedin:before {
-  content: "q";
-}
-.icon-menu-icone:before {
-  content: "r";
-}
-.icon-mobile-ico:before {
-  content: "s";
-}
-.icon-pack-ico:before {
-  content: "t";
-}
-.icon-parrainage-ico:before {
-  content: "u";
-}
-.icon-phone-icone:before {
-  content: "v";
-}
-.icon-pig-ico:before {
-  content: "w";
-}
-.icon-repondeur-icone:before {
-  content: "x";
-}
-.icon-right-arrow:before {
-  content: "y";
+.icon-google:before {
+    content: "n";
 }
 .icon-telephonie-ico:before {
-  content: "z";
+    content: "o";
+}
+.icon-repondeur-icone:before {
+    content: "p";
+}
+.icon-right-arrow:before {
+    content: "q";
+}
+.icon-pig-ico:before {
+    content: "r";
+}
+.icon-parrainage-ico:before {
+    content: "s";
+}
+.icon-phone-icone:before {
+    content: "t";
+}
+.icon-pack-ico:before {
+    content: "u";
+}
+.icon-mobile-ico:before {
+    content: "v";
+}
+.icon-menu-icone:before {
+    content: "w";
+}
+.icon-linkedin:before {
+    content: "x";
+}
+.icon-internet-ico:before {
+    content: "y";
+}
+.icon-info-icone:before {
+    content: "z";
+}
+.icon-icone-lol:before {
+    content: "A";
 }
 .icon-tv-ico:before {
-  content: "A";
+    content: "B";
 }
 .icon-twitter:before {
-  content: "B";
+    content: "C";
 }
-
-

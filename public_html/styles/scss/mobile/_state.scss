@@ -1,16 +1,37 @@
+@include media(phone){
+    #offers-section div[class^=phone-] {
+        margin-bottom: 0px;
+    }
+    .footer-note {
+        margin: 20px 0;
+    }
+}
 @include media(tab){
     #offers-section div[class^=phone-] {
-        margin-bottom: 5px;
+        margin-bottom: 20px;
         padding: 0 10px;
     }
     .footer-note {
-        margin: 10px 0 35px;;
+        margin: 10px 0 35px;
+    }
+    .offer-container{
+        @include display-flex-center();
+    }
+    .text-highlight{
+        font-size: 41px;
     }
 }
 
 @include media(desk){
     .offer-container{
+        display: block;
         margin: 0 auto;
         width: 1010px;
+    }
+    .text-highlight{
+        font-size: 44px;
+    }
+    .offer-item-blue .offer-price div {
+        left: 158px;
     }
 }

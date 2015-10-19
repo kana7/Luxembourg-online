@@ -2,7 +2,7 @@
     margin: 12px 0;
     text-align: center;
     color: $orange;
-    font-size: 44px;
+    font-size: 30px;
 }
 
 .offer-container{
@@ -15,7 +15,9 @@
     .item-body{
         li{
             padding: 18px 0;
-            padding-left: 15px !important;
+            &:not(.description){
+                padding-left: 15px !important;
+            }
         }
     }
     .info{
@@ -40,6 +42,10 @@
             padding: 0;
         }
     }
+}
+
+.offer-item-blue .offer-price div {
+    left: 155px;
 }
 
 .btn-outline-white{

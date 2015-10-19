@@ -201,7 +201,6 @@ span[class^=icon-]
         text-align: left;
         .menu-item{
             display: block;
-            padding: 16px 20px;
             color: #004994;
             font-size: 14px;
             font-weight: 600;
@@ -218,6 +217,13 @@ span[class^=icon-]
             &:hover, &:active{
                 background-color: darken($light-grey, 1%);
             }
+            &.link{
+                padding: 0;
+                a{
+                    display: block;
+                    padding: 16px 20px;
+                }
+            }
         }
         .sous-nav{
             background-color: darken($light-grey, 6%);
@@ -227,6 +233,15 @@ span[class^=icon-]
                 color: #696969;
                 font-size: 13px;
             }
+        }
+    }
+    .menu>.menu-item, .menu-item.back{
+        padding: 16px 20px;
+    }
+    .menu-links{
+        a{
+            display: block;
+            padding: 16px 20px;
         }
     }
     //layout des sous menus
@@ -357,9 +372,10 @@ span[class^=icon-]
             width: 100%;
             background-color: #FFFFFF;
             border-bottom: 3px solid #004994;
-            box-shadow: inset 0 0 15px -4px rgb(45, 45, 45);
         }
         &.active{
+            font-weight: 600;
+            color: $footer-grey;
             .active-border{
                 display: block;
             }
@@ -510,6 +526,10 @@ span[class^=icon-]
     background: -ms-linear-gradient(top, rgb(214,214,214) 0%, rgb(255,255,255) 50%, rgb(214,214,214) 100%);
     background: linear-gradient(to bottom, rgb(214,214,214) 0%, rgb(255,255,255) 50%, rgb(214,214,214) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#d6d6d6', GradientType=0 );
+}
+.btn-outline-black, .btn-outline-white{
+    padding: 15px 48px;
+    font-size: 16px;
 }
 .btn-outline-white
 {

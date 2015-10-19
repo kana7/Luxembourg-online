@@ -2282,7 +2282,6 @@ span[class^=icon-] {
     text-align: left; }
     .mobile-side-menu .menu .menu-item, .mobile-side-menu .menu-links .menu-item {
       display: block;
-      padding: 16px 20px;
       color: #004994;
       font-size: 14px;
       font-weight: 600;
@@ -2297,6 +2296,11 @@ span[class^=icon-] {
         top: 3px; }
       .mobile-side-menu .menu .menu-item:hover, .mobile-side-menu .menu .menu-item:active, .mobile-side-menu .menu-links .menu-item:hover, .mobile-side-menu .menu-links .menu-item:active {
         background-color: whitesmoke; }
+      .mobile-side-menu .menu .menu-item.link, .mobile-side-menu .menu-links .menu-item.link {
+        padding: 0; }
+        .mobile-side-menu .menu .menu-item.link a, .mobile-side-menu .menu-links .menu-item.link a {
+          display: block;
+          padding: 16px 20px; }
     .mobile-side-menu .menu .sous-nav, .mobile-side-menu .menu-links .sous-nav {
       background-color: #e9e9e9; }
       .mobile-side-menu .menu .sous-nav .menu-item, .mobile-side-menu .menu-links .sous-nav .menu-item {
@@ -2304,6 +2308,11 @@ span[class^=icon-] {
         text-align: left;
         color: #696969;
         font-size: 13px; }
+  .mobile-side-menu .menu > .menu-item, .mobile-side-menu .menu-item.back {
+    padding: 16px 20px; }
+  .mobile-side-menu .menu-links a {
+    display: block;
+    padding: 16px 20px; }
   .mobile-side-menu .menu-links-wrapper {
     position: absolute;
     display: block;
@@ -2425,10 +2434,12 @@ span[class^=icon-] {
     height: 65px;
     width: 100%;
     background-color: #FFFFFF;
-    border-bottom: 3px solid #004994;
-    box-shadow: inset 0 0 15px -4px #2d2d2d; }
-  .bottom-menu-header-links .main-menu li.active .active-border {
-    display: block; }
+    border-bottom: 3px solid #004994; }
+  .bottom-menu-header-links .main-menu li.active {
+    font-weight: 600;
+    color: #676767; }
+    .bottom-menu-header-links .main-menu li.active .active-border {
+      display: block; }
 
 .sub-menu {
   font-size: 15px;
@@ -2565,6 +2576,10 @@ span[class^=icon-] {
   background: -ms-linear-gradient(top, #d6d6d6 0%, white 50%, #d6d6d6 100%);
   background: linear-gradient(to bottom, #d6d6d6 0%, white 50%, #d6d6d6 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#d6d6d6', GradientType=0 ); }
+
+.btn-outline-black, .btn-outline-white {
+  padding: 15px 48px;
+  font-size: 16px; }
 
 .btn-outline-white {
   border: 2px solid #c0c0c0;

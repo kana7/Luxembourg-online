@@ -9,14 +9,6 @@
         width: 60%;
         margin-top: 6%;
     }
-    .section-info p{
-        font-size: 21px;
-        line-height: 26px;
-    }
-    .section-info .btn-blue {
-        font-size: 19px;
-        padding: 15px 50px;
-    }
 }
 
 @include media(phone){
@@ -33,6 +25,14 @@
     .content-container .offer-item-blue .info .data, .offer-item-orange .info .data{
         padding-left: 40px;
     }
+    .section-info p{
+        font-size: 19px;
+        line-height: 26px;
+    }
+    .section-info .btn-blue {
+        font-size: 19px;
+        padding: 15px 50px;
+    }
 }
 @include media(tab){
     .container-wrapper{
@@ -41,7 +41,7 @@
     .section-subtitle{
         font-size: 27px;
     }
-    .section-layout{
+    .section-layout:not(.height-auto){
         img{
             width: auto;
             height: 230px;
@@ -198,6 +198,7 @@
     }
     .section-layout.content-container{
         height: 400px;
+        &.height-auto{height: auto;}
     }
     .first-section{
         padding-top: 0px !important;
@@ -223,6 +224,7 @@
     .section-layout{
         height: 325px;
         padding: 0;
+        &.height-auto{height: auto;}
     }
     #slider-contents .flickity-page-dots{
         bottom: 20px;
@@ -427,7 +429,7 @@
     }
 
     .section-layout img{
-        height: 100%;
+        height: 100% !important;
     }
     .section-img-align-bottom{
         position: absolute;
@@ -540,6 +542,9 @@
     }
     .section-layout{
         height: 400px;
+        &.height-auto{
+            height: auto;
+        }
     }
     .bottom-menu-header-links{
         .main-menu li{

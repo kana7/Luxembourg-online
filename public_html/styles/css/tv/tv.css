@@ -1,0 +1,60 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,400italic);
+.text-highlight {
+  margin: 12px 0;
+  text-align: center;
+  color: #e75e0a;
+  font-size: 30px; }
+
+.offer-item-blue .item-body > li {
+  background-color: transparent; }
+
+.footer-note {
+  font-size: 11px;
+  margin-top: 20px;
+  text-align: center;
+  color: #818181; }
+  .footer-note > span {
+    display: block; }
+  .footer-note .exponent {
+    display: inline-block;
+    margin-right: 5px; }
+
+.content-container .offer-item-blue .info .data, .content-container .offer-item-orange .info .data {
+  padding: 0; }
+
+.content-container .offer-item-blue .info, .content-container .offer-item-orange .info {
+  text-align: center; }
+
+.content-container .offer-item-blue .info, .content-container .offer-item-orange .info {
+  font-size: 21px;
+  font-weight: 400; }
+
+.content-container .offer-item-blue .item-header, .content-container .offer-item-orange .item-header {
+  padding: 12px 0;
+  font-size: 31px; }
+
+@media screen and (max-width: 671px) {
+  .footer-note {
+    margin: 20px 0; }
+
+  .section-info {
+    margin-bottom: 30px; }
+    .section-info p {
+      font-size: 18px; }
+    .section-info h1 {
+      line-height: 31px;
+      font-size: 21px; } }
+@media screen and (min-width: 672px) {
+  .footer-note {
+    margin: 10px 0 35px; }
+
+  .text-highlight {
+    font-size: 41px; }
+
+  .offer-item-blue .offer-price div {
+    left: 198px; } }
+@media screen and (min-width: 1056px) {
+  .text-highlight {
+    font-size: 44px; } }
+
+/*# sourceMappingURL=tv.css.map */

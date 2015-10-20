@@ -3391,15 +3391,7 @@ footer {
 
   .icons {
     width: 60%;
-    margin-top: 6%; }
-
-  .section-info p {
-    font-size: 21px;
-    line-height: 26px; }
-
-  .section-info .btn-blue {
-    font-size: 19px;
-    padding: 15px 50px; } }
+    margin-top: 6%; } }
 @media screen and (max-width: 671px) {
   .container-wrapper {
     width: 320px;
@@ -3412,7 +3404,15 @@ footer {
     padding-left: 0px !important; }
 
   .content-container .offer-item-blue .info .data, .offer-item-orange .info .data {
-    padding-left: 40px; } }
+    padding-left: 40px; }
+
+  .section-info p {
+    font-size: 19px;
+    line-height: 26px; }
+
+  .section-info .btn-blue {
+    font-size: 19px;
+    padding: 15px 50px; } }
 @media screen and (min-width: 672px) {
   .container-wrapper {
     width: 640px; }
@@ -3420,7 +3420,7 @@ footer {
   .section-subtitle {
     font-size: 27px; }
 
-  .section-layout img {
+  .section-layout:not(.height-auto) img {
     width: auto;
     height: 230px; }
 
@@ -3567,6 +3567,8 @@ footer {
 
   .section-layout.content-container {
     height: 400px; }
+    .section-layout.content-container.height-auto {
+      height: auto; }
 
   .first-section {
     padding-top: 0px !important;
@@ -3589,6 +3591,8 @@ footer {
   .section-layout {
     height: 325px;
     padding: 0; }
+    .section-layout.height-auto {
+      height: auto; }
 
   #slider-contents .flickity-page-dots {
     bottom: 20px; }
@@ -3770,7 +3774,7 @@ footer {
     height: auto; }
 
   .section-layout img {
-    height: 100%; }
+    height: 100% !important; }
 
   .section-img-align-bottom {
     position: absolute; }
@@ -3863,6 +3867,8 @@ footer {
 
   .section-layout {
     height: 400px; }
+    .section-layout.height-auto {
+      height: auto; }
 
   .bottom-menu-header-links .main-menu li {
     border-left: 1px solid #eeeeee; }

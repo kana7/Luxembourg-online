@@ -16,10 +16,16 @@
         width: 320px;
         padding: 0 14px;
     }
+    .table-details td, .table-details th{
+        font-size: 12px;
+    }
 }
 @include media(tab){
     .container-wrapper{
         width: 640px;
+    }
+    .section-subtitle{
+        font-size: 27px;
     }
     .section-layout{
         img{
@@ -386,7 +392,7 @@
             }
         }
     }
-    
+
     .content-container .row>div[class^=phone-]{
         @include vertical-align-middle;
         height: auto;
@@ -402,6 +408,17 @@
         font-size: 30px;
         line-height: 40px;
     }
+
+    .bottom-link{
+        margin: 18px 0;
+        font-size: 19px;
+        padding-right: 5px;
+        span{
+            top: 2px;
+            font-size: 17px;
+        }
+    }
+
     #social-links{
         padding: 20px 0 7px;
     }

@@ -91,7 +91,7 @@ svg:not(:root) {
     }
 }
 .section-subtitle{
-    font-size: 27px;
+    font-size: 23px;
     line-height: 27px;
     margin: 20px 0;
     font-weight: 400;
@@ -1357,13 +1357,14 @@ footer
 .bottom-link{
     text-align: center;
     margin: 18px 0;
-    font-size: 19px;
+    line-height: 25px;
+    font-size: 18px;
     color: $blue;
     padding-right: 5px;
     span{
         position: relative;
         top: 2px;
-        font-size: 17px;
+        font-size: 16px;
     }
     &:hover{
         color: lighten($blue, 10%);

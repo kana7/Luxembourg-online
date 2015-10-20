@@ -2190,7 +2190,7 @@ svg:not(:root) {
     display: block; }
 
 .section-subtitle {
-  font-size: 27px;
+  font-size: 23px;
   line-height: 27px;
   margin: 20px 0;
   font-weight: 400; }
@@ -2654,8 +2654,7 @@ span[class^=icon-] {
   border-radius: 6px;
   border: 1px solid #004994;
   text-align: center;
-  margin-bottom: 20px;
-  }
+  margin-bottom: 20px; }
   .offer-item-blue .item-header, .offer-item-blue .item-body, .offer-item-blue .item-footer {
     display: block; }
   .offer-item-blue .item-header, .offer-item-blue .item-footer {
@@ -2664,10 +2663,9 @@ span[class^=icon-] {
     color: #fff; }
   .offer-item-blue .item-header {
     border-radius: 4px 4px 0px 0px;
-    padding: 12px 0;
-    font-size: 21px;
-    text-transform: uppercase;
-    }
+    padding: 18px 0 15px;
+    font-size: 24px;
+    text-transform: uppercase; }
   .offer-item-blue .item-body {
     color: #004994; }
     .offer-item-blue .item-body > li:not(:last-child) {
@@ -3318,13 +3316,14 @@ footer {
 .bottom-link {
   text-align: center;
   margin: 18px 0;
-  font-size: 19px;
+  line-height: 25px;
+  font-size: 18px;
   color: #004994;
   padding-right: 5px; }
   .bottom-link span {
     position: relative;
     top: 2px;
-    font-size: 17px; }
+    font-size: 16px; }
   .bottom-link:hover {
     color: #0062c7; }
 
@@ -3338,10 +3337,16 @@ footer {
 @media screen and (max-width: 671px) {
   .container-wrapper {
     width: 320px;
-    padding: 0 14px; } }
+    padding: 0 14px; }
+
+  .table-details td, .table-details th {
+    font-size: 12px; } }
 @media screen and (min-width: 672px) {
   .container-wrapper {
     width: 640px; }
+
+  .section-subtitle {
+    font-size: 27px; }
 
   .section-layout img {
     width: auto;
@@ -3689,6 +3694,14 @@ footer {
   .section-title {
     font-size: 30px;
     line-height: 40px; }
+
+  .bottom-link {
+    margin: 18px 0;
+    font-size: 19px;
+    padding-right: 5px; }
+    .bottom-link span {
+      top: 2px;
+      font-size: 17px; }
 
   #social-links {
     padding: 20px 0 7px; }

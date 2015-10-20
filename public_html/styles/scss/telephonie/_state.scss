@@ -5,6 +5,20 @@
     .footer-note {
         margin: 20px 0;
     }
+    .offer-item-blue .item-body li:not(.description), .offer-item-orange .item-body li:not(.description) {
+        padding-left: 0px !important;
+    }
+    .offer-item-blue .info .data, .offer-item-orange .info .data{
+        padding-left: 40px;
+    }
+    .info-telephonie p{
+        font-size: 21px;
+        line-height: 26px;
+    }
+    .info-telephonie .btn-blue {
+        font-size: 19px;
+        padding: 15px 50px;
+    }
 }
 @include media(tab){
     #offers-section div[class^=phone-] {
@@ -20,9 +34,15 @@
     .text-highlight{
         font-size: 41px;
     }
+    .offer-item-blue{
+        width: 395px;
+    }
 }
 
 @include media(desk){
+    .section-layout{
+        height: 400px;
+    }
     .offer-container{
         display: block;
         margin: 0 auto;
@@ -31,18 +51,15 @@
     .content-container{
         margin-top: 40px;
     }
-    .content-container div[class^=phone-]{
-        padding: 0 100px;
-    }
     .text-highlight{
         font-size: 44px;
     }
-    .footer-note{
-        margin-top: 20px;
-        text-align: left;
-        color: $dark-grey;
-        &>span{
-            display: block;
+    .info-telephonie{
+        h1{
+            line-height: 35px;
+        }
+        p{
+            margin: 0 0 50px;
         }
     }
 }

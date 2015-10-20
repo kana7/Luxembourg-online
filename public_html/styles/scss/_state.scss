@@ -386,6 +386,11 @@
             }
         }
     }
+    
+    .content-container .row>div[class^=phone-]{
+        @include vertical-align-middle;
+        height: auto;
+    }
 
     .section-layout img{
         height: 100%;

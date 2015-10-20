@@ -81,11 +81,17 @@ svg:not(:root) {
 .section-title{
     font-size: 23px;
     line-height: 30px;
-    margin: 20px 0;
+    margin: 25px 0;
     text-transform: uppercase;
     strong{
         display: block;
     }
+}
+.section-subtitle{
+    font-size: 27px;
+    line-height: 27px;
+    margin: 20px 0;
+    font-weight: 400;
 }
 .section-title.lowercase{
     text-transform: none;
@@ -1312,5 +1318,51 @@ footer
         position: absolute;
         left: 0;
         top: 3px;
+    }
+}
+
+.table-details{
+    width: 100%;
+    thead, tbody, tr{
+        width: 100%;
+    }
+    tr{
+        border-bottom: 1px solid $grey;
+    }
+    td, th{
+        border-collapse: collapse;
+        text-align: left;
+        padding: 15px 0;
+        .exponent{
+            font-weight: 400;
+            font-size: 0.7em;
+        }
+    }
+    th{
+        font-size: 18px;
+        color: $dark-grey;
+        font-weight: 400;
+    }
+    td{
+        font-size: 19px;
+        a{
+          border-bottom: 1px solid $blue;
+        }
+    }
+}
+
+.bottom-link{
+    text-align: center;
+    margin: 18px 0;
+    font-size: 19px;
+    color: $blue;
+    padding-right: 5px;
+    span{
+        position: relative;
+        top: 2px;
+        font-size: 17px;
+    }
+    &:hover{
+        color: lighten($blue, 10%);
     }
 }

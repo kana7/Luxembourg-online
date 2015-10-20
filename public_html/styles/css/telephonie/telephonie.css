@@ -1,3 +1,106 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,400italic);
+.text-highlight {
+  margin: 12px 0;
+  text-align: center;
+  color: #e75e0a;
+  font-size: 30px; }
+
+.offer-item-blue .item-body > li {
+  background-color: transparent; }
+
+.offer-container {
+  margin: 0;
+  width: auto; }
+
+.offer-item-blue, .offer-item-orange {
+  margin: 0; }
+  .offer-item-blue .item-body li, .offer-item-orange .item-body li {
+    padding: 18px 0; }
+    .offer-item-blue .item-body li:not(.description), .offer-item-orange .item-body li:not(.description) {
+      padding-left: 15px !important; }
+  .offer-item-blue .info, .offer-item-orange .info {
+    font-size: 16px;
+    font-weight: 400; }
+    .offer-item-blue .info span:not(.exponent), .offer-item-orange .info span:not(.exponent) {
+      display: inline-block;
+      position: absolute;
+      top: 20px;
+      width: 45px;
+      font-size: 16px;
+      text-align: center;
+      margin: 0; }
+    .offer-item-blue .info .data, .offer-item-orange .info .data {
+      display: inline-block;
+      padding-left: 65px; }
+    .offer-item-blue .info .exponent, .offer-item-orange .info .exponent {
+      position: absolute;
+      font-weight: 400;
+      font-size: 9px !important;
+      padding: 0; }
+
+.offer-item-blue .offer-price div {
+  left: 155px; }
+
+.btn-outline-white {
+  padding: 13px 48px;
+  font-size: 16px; }
+
+.footer-note {
+  font-size: 11px; }
+
+@media screen and (max-width: 671px) {
+  #offers-section div[class^=phone-] {
+    margin-bottom: 0px; }
+
+  .footer-note {
+    margin: 20px 0; } }
+@media screen and (min-width: 672px) {
+  #offers-section div[class^=phone-] {
+    margin-bottom: 20px;
+    padding: 0 10px; }
+
+  .footer-note {
+    margin: 10px 0 35px; }
+
+  .offer-container {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+
+  .text-highlight {
+    font-size: 41px; } }
+@media screen and (min-width: 1056px) {
+  .offer-container {
+    display: block;
+    margin: 0 auto;
+    width: 1010px; }
+
+  .text-highlight {
+    font-size: 44px; }
+
+  .offer-item-blue .offer-price div {
+    left: 158px; }
+
+  .footer-note {
+    margin-top: 20px;
+    text-align: left;
+    color: #818181; }
+    .footer-note > span {
+      display: block; } }
 
 /*# sourceMappingURL=telephonie.css.map */

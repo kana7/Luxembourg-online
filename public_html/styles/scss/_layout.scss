@@ -13,9 +13,11 @@
 {
     @include vertical-align-middle(absolute);
 }
-.vertical-align-middle
-{
+.vertical-align-middle{
     @include vertical-align-middle();
+}
+.disable-vertical-align-middle{
+    @include disable-vertical-align();
 }
 
 .flex-align-spread{

@@ -27,6 +27,12 @@
     .table-details td, .table-details th{
         font-size: 12px;
     }
+    .content-container .offer-item-blue .item-body li:not(.description), .offer-item-orange .item-body li:not(.description) {
+        padding-left: 0px !important;
+    }
+    .content-container .offer-item-blue .info .data, .offer-item-orange .info .data{
+        padding-left: 40px;
+    }
 }
 @include media(tab){
     .container-wrapper{
@@ -175,6 +181,11 @@
     .footer-bottom-links li{
         margin: 0 35px;
         text-align: center;
+    }
+    .content-container{
+        .offer-item-blue, .offer-item-orange{
+            width: 395px;
+        }
     }
 }
 

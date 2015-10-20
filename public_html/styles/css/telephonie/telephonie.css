@@ -8,43 +8,6 @@
 .offer-item-blue .item-body > li {
   background-color: transparent; }
 
-.offer-container {
-  margin: 0;
-  width: auto; }
-
-.offer-item-blue, .offer-item-orange {
-  margin: 0; }
-  .offer-item-blue .item-body li, .offer-item-orange .item-body li {
-    padding: 18px 0; }
-    .offer-item-blue .item-body li:not(.description), .offer-item-orange .item-body li:not(.description) {
-      padding-left: 15px !important; }
-  .offer-item-blue .info, .offer-item-orange .info {
-    font-size: 16px;
-    font-weight: 400; }
-    .offer-item-blue .info span:not(.exponent), .offer-item-orange .info span:not(.exponent) {
-      display: inline-block;
-      position: absolute;
-      top: 20px;
-      width: 45px;
-      font-size: 16px;
-      text-align: center;
-      margin: 0; }
-    .offer-item-blue .info .data, .offer-item-orange .info .data {
-      display: inline-block;
-      padding-left: 65px; }
-    .offer-item-blue .info .exponent, .offer-item-orange .info .exponent {
-      position: absolute;
-      font-weight: 400;
-      font-size: 9px !important;
-      padding: 0; }
-
-.offer-item-blue .offer-price div {
-  left: 155px; }
-
-.btn-outline-white {
-  padding: 13px 48px;
-  font-size: 16px; }
-
 .footer-note {
   font-size: 11px;
   margin-top: 20px;
@@ -56,32 +19,15 @@
     display: inline-block;
     margin-right: 5px; }
 
-.offer-item-blue {
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 30px; }
-  .offer-item-blue .item-header {
-    padding: 12px 0;
-    font-size: 21px; }
-
 @media screen and (max-width: 671px) {
   .footer-note {
-    margin: 20px 0; }
-
-  .offer-item-blue .item-body li:not(.description), .offer-item-orange .item-body li:not(.description) {
-    padding-left: 0px !important; }
-
-  .offer-item-blue .info .data, .offer-item-orange .info .data {
-    padding-left: 40px; } }
+    margin: 20px 0; } }
 @media screen and (min-width: 672px) {
   .footer-note {
     margin: 10px 0 35px; }
 
   .text-highlight {
-    font-size: 41px; }
-
-  .offer-item-blue {
-    width: 395px; } }
+    font-size: 41px; } }
 @media screen and (min-width: 1056px) {
   .text-highlight {
     font-size: 44px; } }

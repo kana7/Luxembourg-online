@@ -2953,6 +2953,41 @@ span[class^=icon-] {
 .offer-item-blue.up-flat:not(.offer-item-orange), .offer-item-orange.up-flat:not(.offer-item-orange) {
   border-color: #c0c0c0; }
 
+.content-container .offer-item-blue, .content-container .offer-item-orange {
+  margin: 0;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 30px; }
+  .content-container .offer-item-blue .item-header, .content-container .offer-item-orange .item-header {
+    padding: 12px 0;
+    font-size: 21px; }
+  .content-container .offer-item-blue .item-body li, .content-container .offer-item-orange .item-body li {
+    padding: 18px 0; }
+    .content-container .offer-item-blue .item-body li:not(.description), .content-container .offer-item-orange .item-body li:not(.description) {
+      padding-left: 15px !important; }
+  .content-container .offer-item-blue .info, .content-container .offer-item-orange .info {
+    font-size: 16px;
+    font-weight: 400; }
+    .content-container .offer-item-blue .info span:not(.exponent), .content-container .offer-item-orange .info span:not(.exponent) {
+      display: inline-block;
+      position: absolute;
+      top: 20px;
+      width: 45px;
+      font-size: 16px;
+      text-align: center;
+      margin: 0; }
+    .content-container .offer-item-blue .info .data, .content-container .offer-item-orange .info .data {
+      display: inline-block;
+      padding-left: 65px; }
+    .content-container .offer-item-blue .info .exponent, .content-container .offer-item-orange .info .exponent {
+      position: absolute;
+      font-weight: 400;
+      font-size: 9px !important;
+      padding: 0; }
+.content-container .btn-outline-white {
+  padding: 13px 48px;
+  font-size: 16px; }
+
 .content-container .content-title, .content-container .content-subtitle {
   font-size: 20px;
   font-weight: 800;
@@ -3371,7 +3406,13 @@ footer {
     padding: 0 14px; }
 
   .table-details td, .table-details th {
-    font-size: 12px; } }
+    font-size: 12px; }
+
+  .content-container .offer-item-blue .item-body li:not(.description), .offer-item-orange .item-body li:not(.description) {
+    padding-left: 0px !important; }
+
+  .content-container .offer-item-blue .info .data, .offer-item-orange .info .data {
+    padding-left: 40px; } }
 @media screen and (min-width: 672px) {
   .container-wrapper {
     width: 640px; }
@@ -3513,7 +3554,10 @@ footer {
 
   .footer-bottom-links li {
     margin: 0 35px;
-    text-align: center; } }
+    text-align: center; }
+
+  .content-container .offer-item-blue, .content-container .offer-item-orange {
+    width: 395px; } }
 @media screen and (min-width: 1056px) {
   .container-wrapper {
     width: 1024px; }

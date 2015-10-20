@@ -2,12 +2,6 @@
     .footer-note {
         margin: 20px 0;
     }
-    .offer-item-blue .item-body li:not(.description), .offer-item-orange .item-body li:not(.description) {
-        padding-left: 0px !important;
-    }
-    .offer-item-blue .info .data, .offer-item-orange .info .data{
-        padding-left: 40px;
-    }
 }
 @include media(tab){
     .footer-note {
@@ -15,9 +9,6 @@
     }
     .text-highlight{
         font-size: 41px;
-    }
-    .offer-item-blue{
-        width: 395px;
     }
 }
 

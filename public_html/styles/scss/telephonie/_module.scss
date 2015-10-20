@@ -9,55 +9,6 @@
     background-color: transparent;
 }
 
-.offer-container{
-    margin: 0;
-    width: auto;
-}
-
-.offer-item-blue, .offer-item-orange{
-    margin: 0;
-    .item-body{
-        li{
-            padding: 18px 0;
-            &:not(.description){
-                padding-left: 15px !important;
-            }
-        }
-    }
-    .info{
-        font-size: 16px;
-        font-weight: 400;
-        span:not(.exponent){
-            display: inline-block;
-            position: absolute;
-            top: 20px;
-            width: 45px;
-            font-size: 16px;
-            text-align: center;
-            margin: 0;
-        }
-        .data{
-            display: inline-block;
-            padding-left: 65px;
-        }
-        .exponent{
-            position: absolute;
-            font-weight: 400;
-            font-size: 9px !important;
-            padding: 0;
-        }
-    }
-}
-
-.offer-item-blue .offer-price div {
-    left: 155px;
-}
-
-.btn-outline-white{
-    padding: 13px 48px;
-    font-size: 16px;
-}
-
 .footer-note{
     font-size: 11px;
     margin-top: 20px;
@@ -69,16 +20,5 @@
     .exponent{
         display: inline-block;
         margin-right: 5px;
-    }
-}
-
-
-.offer-item-blue{
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 30px;
-    .item-header{
-        padding: 12px 0;
-        font-size: 21px;
     }
 }

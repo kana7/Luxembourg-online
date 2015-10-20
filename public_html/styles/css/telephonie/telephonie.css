@@ -56,21 +56,6 @@
     display: inline-block;
     margin-right: 5px; }
 
-.info-telephonie {
-  margin-bottom: 45px; }
-  .info-telephonie h1 {
-    line-height: 35px;
-    margin: 0 0 25px;
-    font-weight: 400; }
-  .info-telephonie p {
-    margin: 0 0 30px;
-    font-size: 27px;
-    line-height: 32px; }
-  .info-telephonie .btn-blue {
-    margin: 0;
-    font-size: 21px;
-    padding: 17px 50px; }
-
 .offer-item-blue {
   display: inline-block;
   width: 100%;
@@ -90,15 +75,7 @@
     padding-left: 0px !important; }
 
   .offer-item-blue .info .data, .offer-item-orange .info .data {
-    padding-left: 40px; }
-
-  .info-telephonie p {
-    font-size: 21px;
-    line-height: 26px; }
-
-  .info-telephonie .btn-blue {
-    font-size: 19px;
-    padding: 15px 50px; } }
+    padding-left: 40px; } }
 @media screen and (min-width: 672px) {
   #offers-section div[class^=phone-] {
     margin-bottom: 20px;
@@ -145,11 +122,6 @@
     margin-top: 40px; }
 
   .text-highlight {
-    font-size: 44px; }
-
-  .info-telephonie h1 {
-    line-height: 35px; }
-  .info-telephonie p {
-    margin: 0 0 50px; } }
+    font-size: 44px; } }
 
 /*# sourceMappingURL=telephonie.css.map */

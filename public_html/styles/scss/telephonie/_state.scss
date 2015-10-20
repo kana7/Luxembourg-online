@@ -11,14 +11,6 @@
     .offer-item-blue .info .data, .offer-item-orange .info .data{
         padding-left: 40px;
     }
-    .info-telephonie p{
-        font-size: 21px;
-        line-height: 26px;
-    }
-    .info-telephonie .btn-blue {
-        font-size: 19px;
-        padding: 15px 50px;
-    }
 }
 @include media(tab){
     #offers-section div[class^=phone-] {
@@ -53,13 +45,5 @@
     }
     .text-highlight{
         font-size: 44px;
-    }
-    .info-telephonie{
-        h1{
-            line-height: 35px;
-        }
-        p{
-            margin: 0 0 50px;
-        }
     }
 }

@@ -9,6 +9,14 @@
         width: 60%;
         margin-top: 6%;
     }
+    .section-info p{
+        font-size: 21px;
+        line-height: 26px;
+    }
+    .section-info .btn-blue {
+        font-size: 19px;
+        padding: 15px 50px;
+    }
 }
 
 @include media(phone){
@@ -300,6 +308,9 @@
             } 
         } 
     }
+    .section-subtitle{
+        text-align: left;
+    }
     .section-price{
         font-size: 75px;
         div{
@@ -470,6 +481,14 @@
     #document-links a{
         line-height: 31px;
         padding-left: 40px;
+    }
+    .section-info{
+        h1{
+            line-height: 35px;
+        }
+        p{
+            margin: 0 0 50px;
+        }
     }
 }
 

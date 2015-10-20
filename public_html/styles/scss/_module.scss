@@ -95,6 +95,7 @@ svg:not(:root) {
     line-height: 27px;
     margin: 20px 0;
     font-weight: 400;
+    text-align: center;
 }
 .section-title.lowercase{
     text-transform: none;
@@ -140,6 +141,26 @@ span[class^=icon-]
 .bold{
     font-weight: 600;
 }
+
+.section-info{
+    margin-bottom: 45px;
+    h1{
+        line-height: 35px;
+        margin: 0 0 25px;
+        font-weight: 400;
+    }
+    p{
+        margin: 0 0 30px;
+        font-size: 27px;
+        line-height: 32px;
+    }
+    .btn-blue{
+        margin: 0;
+        font-size: 21px;
+        padding: 17px 50px;
+    }
+}
+
 
 .section-price{
     display: inline-block;
@@ -556,6 +577,17 @@ span[class^=icon-]
     &:hover{
         background-color: $white;
         color: $section-black;
+    }
+}
+
+#offers-section{
+    .section-subtitle{
+        margin-bottom: 40px;
+        font-weight: 600;
+    }
+    .btn-outline-white{
+        width: 100%;
+        padding: 15px 0;
     }
 }
 
@@ -1349,7 +1381,7 @@ footer
     td{
         font-size: 19px;
         a{
-          border-bottom: 1px solid $blue;
+            border-bottom: 1px solid $blue;
         }
     }
 }

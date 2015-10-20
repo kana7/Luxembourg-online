@@ -2193,7 +2193,8 @@ svg:not(:root) {
   font-size: 23px;
   line-height: 27px;
   margin: 20px 0;
-  font-weight: 400; }
+  font-weight: 400;
+  text-align: center; }
 
 .section-title.lowercase {
   text-transform: none; }
@@ -2232,6 +2233,21 @@ span[class^=icon-] {
 
 .bold {
   font-weight: 600; }
+
+.section-info {
+  margin-bottom: 45px; }
+  .section-info h1 {
+    line-height: 35px;
+    margin: 0 0 25px;
+    font-weight: 400; }
+  .section-info p {
+    margin: 0 0 30px;
+    font-size: 27px;
+    line-height: 32px; }
+  .section-info .btn-blue {
+    margin: 0;
+    font-size: 21px;
+    padding: 17px 50px; }
 
 .section-price {
   display: inline-block;
@@ -2598,7 +2614,8 @@ span[class^=icon-] {
 
 .btn-outline-black, .btn-outline-white {
   padding: 15px 48px;
-  font-size: 16px; }
+  font-size: 16px;
+  }
 
 .btn-outline-white {
   border: 2px solid #c0c0c0;
@@ -2614,6 +2631,13 @@ span[class^=icon-] {
   .btn-outline-black:hover {
     background-color: #fff;
     color: #07040D; }
+
+#offers-section .section-subtitle {
+  margin-bottom: 40px;
+  font-weight: 600; }
+#offers-section .btn-outline-white {
+  width: 100%;
+  padding: 15px 0; }
 
 .input-white {
   font-size: 15pt;
@@ -3333,7 +3357,15 @@ footer {
 
   .icons {
     width: 60%;
-    margin-top: 6%; } }
+    margin-top: 6%; }
+
+  .section-info p {
+    font-size: 21px;
+    line-height: 26px; }
+
+  .section-info .btn-blue {
+    font-size: 19px;
+    padding: 15px 50px; } }
 @media screen and (max-width: 671px) {
   .container-wrapper {
     width: 320px;
@@ -3597,6 +3629,9 @@ footer {
         font-size: 1.4em;
         margin: 20px -11px 5px; }
 
+  .section-subtitle {
+    text-align: left; }
+
   .section-price {
     font-size: 75px; }
     .section-price div {
@@ -3745,7 +3780,12 @@ footer {
 
   #document-links a {
     line-height: 31px;
-    padding-left: 40px; } }
+    padding-left: 40px; }
+
+  .section-info h1 {
+    line-height: 35px; }
+  .section-info p {
+    margin: 0 0 50px; } }
 @media screen and (min-width: 1056px) and (max-width: 1302px) {
   #offers-section div[class^=phone-] {
     padding: 0 5px; }

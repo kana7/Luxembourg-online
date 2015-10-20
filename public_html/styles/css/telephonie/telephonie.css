@@ -65,9 +65,6 @@
     font-size: 21px; }
 
 @media screen and (max-width: 671px) {
-  #offers-section div[class^=phone-] {
-    margin-bottom: 0px; }
-
   .footer-note {
     margin: 20px 0; }
 
@@ -77,32 +74,8 @@
   .offer-item-blue .info .data, .offer-item-orange .info .data {
     padding-left: 40px; } }
 @media screen and (min-width: 672px) {
-  #offers-section div[class^=phone-] {
-    margin-bottom: 20px;
-    padding: 0 10px; }
-
   .footer-note {
     margin: 10px 0 35px; }
-
-  .offer-container {
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-content: flex-start;
-    -ms-flex-line-pack: start;
-    align-content: flex-start;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start; }
 
   .text-highlight {
     font-size: 41px; }
@@ -110,17 +83,6 @@
   .offer-item-blue {
     width: 395px; } }
 @media screen and (min-width: 1056px) {
-  .section-layout {
-    height: 400px; }
-
-  .offer-container {
-    display: block;
-    margin: 0 auto;
-    width: 1010px; }
-
-  .content-container {
-    margin-top: 40px; }
-
   .text-highlight {
     font-size: 44px; } }
 

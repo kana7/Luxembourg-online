@@ -28,11 +28,14 @@
         margin: 0 auto;
         width: 1010px;
     }
+    .content-container{
+        margin-top: 40px;
+    }
+    .content-container div[class^=phone-]{
+        padding: 0 100px;
+    }
     .text-highlight{
         font-size: 44px;
-    }
-    .offer-item-blue .offer-price div {
-        left: 158px;
     }
     .footer-note{
         margin-top: 20px;

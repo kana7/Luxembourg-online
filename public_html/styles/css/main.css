@@ -2141,6 +2141,9 @@ svg:not(:root) {
 .blue {
   color: #004994; }
 
+.grey {
+  color: #818181; }
+
 .background-green {
   background-color: #e3eee3; }
 
@@ -2651,7 +2654,8 @@ span[class^=icon-] {
   border-radius: 6px;
   border: 1px solid #004994;
   text-align: center;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  }
   .offer-item-blue .item-header, .offer-item-blue .item-body, .offer-item-blue .item-footer {
     display: block; }
   .offer-item-blue .item-header, .offer-item-blue .item-footer {
@@ -2660,9 +2664,10 @@ span[class^=icon-] {
     color: #fff; }
   .offer-item-blue .item-header {
     border-radius: 4px 4px 0px 0px;
-    padding: 18px 0 15px;
-    font-size: 24px;
-    text-transform: uppercase; }
+    padding: 12px 0;
+    font-size: 21px;
+    text-transform: uppercase;
+    }
   .offer-item-blue .item-body {
     color: #004994; }
     .offer-item-blue .item-body > li:not(:last-child) {

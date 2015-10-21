@@ -1963,10 +1963,11 @@ header {
 .section-layout {
   position: relative;
   display: block;
-  padding: 35px 0;
+  /* padding: 35px 0; */
   width: 100%;
   height: auto;
-  text-align: center; }
+  text-align: center;
+  }
   .section-layout .container-wrapper, .section-layout .row, .section-layout .row > div {
     position: relative;
     height: 100%; }

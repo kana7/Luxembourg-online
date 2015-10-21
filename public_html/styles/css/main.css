@@ -1963,11 +1963,10 @@ header {
 .section-layout {
   position: relative;
   display: block;
-  /* padding: 35px 0; */
+  padding: 35px 0;
   width: 100%;
   height: auto;
-  text-align: center;
-  }
+  text-align: center; }
   .section-layout .container-wrapper, .section-layout .row, .section-layout .row > div {
     position: relative;
     height: 100%; }
@@ -2235,6 +2234,9 @@ span[class^=icon-] {
 
 .bold {
   font-weight: 600; }
+
+.normal {
+  font-weight: 400; }
 
 .section-info {
   margin-bottom: 45px; }
@@ -3386,6 +3388,42 @@ footer {
     font-size: 16px; }
   .bottom-link:hover {
     color: #0062c7; }
+
+.pdf-list {
+  display: inline-block;
+  position: relative;
+  margin: 40px 0;
+  text-align: left; }
+  .pdf-list h4 {
+    font-weight: 800;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 0 0 30px;
+    }
+  .pdf-list li {
+    display: block;
+    font-size: 17px; }
+    .pdf-list li:hover .link {
+      text-decoration: underline; }
+  .pdf-list img {
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+    height: auto;
+    margin-right: 15px; }
+  .pdf-list .link {
+    display: inline-block;
+    position: relative; }
+    .pdf-list .link span {
+      display: block;
+      font-size: 14px;
+      margin-top: 4px; }
+    .pdf-list .link.single-line {
+      top: 4px; }
+  .pdf-list a {
+    display: block;
+    padding: 8px 0;
+    margin-top: 4px; }
 
 @media screen and (max-width: 1301px) {
   .header-icon {

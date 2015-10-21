@@ -1,4 +1,7 @@
 @include media(phone){
+    .channels-language-links{
+        @include display-flex-center;
+    }
     .footer-note {
         margin: 20px 0;
     }
@@ -14,6 +17,9 @@
     }
 }
 @include media(tab){
+    .channels-language-links{
+        @include display-flex-spread;
+    }
     .footer-note {
         margin: 10px 0 35px;
     }
@@ -23,10 +29,44 @@
     .offer-item-blue .offer-price div {
         left: 198px;
     }
+    .channels-items{
+        .item{
+            margin: 0px 30px 25px;
+        }
+    }
 }
 
 @include media(desk){
+    .channels-language-links li{
+        width: auto;
+    }
     .text-highlight{
         font-size: 44px;
+    }
+    .img-layout{
+        display: inline-block;
+        height: 100%;
+        width: auto;
+    }
+    .header-channel{
+        height: 200px;
+        &>div[class^=phone-]{
+            height: 100%;
+            &>*{
+                @include vertical-align-middle;
+            }
+        }
+    }
+    .section-subtitle{
+        margin: 0;
+        font-size: 45px;
+    }
+    .pull-right{
+        .section-subtitle{
+            text-align: right;
+        }
+        .img-layout{
+            float: right
+        }
     }
 }

@@ -147,6 +147,7 @@
     background-image: url(../../../images/promos/Accueil/1280px/Offre_internettv_1.jpg); }
 
   #promo-fibre, #promo-internetTV {
-    background-size: auto 100% !important; } }
+    background-size: AUTO 100% !important;
+    } }
 
 /*# sourceMappingURL=promos.css.map */

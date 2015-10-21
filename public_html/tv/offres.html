@@ -192,7 +192,7 @@
 
             </header>
 
-            <section class="section-layout content-container section-padding height-auto">
+            <section class="section-layout content-container section-padding height-auto background-lightgrey">
                 <div class="container-wrapper">
                     <div class="phone-12 desk-6 section-info">
                         <h1 class="grey">Accédez à tous vos contenus<br/> depuis votre TV.</h1>
@@ -218,6 +218,65 @@
                             </div>
                         </div>
                         <a style="margin-bottom: 40px;" class="btn-outline-white" href="#">Vérifiez la disponibilité</a>
+                    </div>
+                </div>
+            </section>
+            <section class="section-shadow">
+                <div class="container-wrapper">
+                    <div class="row header-channel">
+                        <div class="phone-12 desk-6">
+                            <img class="img-layout" src="../images/TV/1024px/TV_liste_chaine_tv.jpg" 
+                                 srcset="../images/TV/1280px/TV_liste_chaine_tv.jpg 1920w,
+                                 ../images/TV/1024px/TV_liste_chaine_tv.jpg 1400w,
+                                 ../images/TV/640px/TV_liste_chaine_tv.jpg 900w,
+                                 ../images/TV/320px/TV_liste_chaine_tv.jpg 600w"
+                                 sizes="100%"
+                                 alt="Offre chaînes TV" />
+                        </div>
+                        <div class="phone-12 desk-6 pull-right">
+                            <h2 class="section-subtitle">Liste des chaînes TV</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="phone-12">
+                            <ul class="channels-language-links">
+                                <li data-language="de">Allemand</li>
+                                <li data-language="fr">Français</li>
+                                <li data-language="gb">Anglais</li>
+                                <li data-language="pt">Portugais</li>
+                                <li data-language="it">Italien</li>
+                                <li data-language="nl">Néerlandais</li>
+                                <li data-language="ru">Russe</li>
+                                <li data-language="es">Espagnol</li>
+                            </ul>
+                            <div id="tvChannels" class="channels-items">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="background-lightgrey">
+                <div class="container-wrapper">
+                    <div class="row header-channel">
+                        <div class="phone-12 desk-6 pull-right">
+                            <img class="img-layout" src="../images/TV/1024px/TV_liste_chaine_radio.jpg" 
+                                 srcset="../images/TV/1280px/TV_liste_chaine_radio.jpg 1920w,
+                                 ../images/TV/1024px/TV_liste_chaine_radio.jpg 1400w,
+                                 ../images/TV/640px/TV_liste_chaine_radio.jpg 900w,
+                                 ../images/TV/320px/TV_liste_chaine_radio.jpg 600w"
+                                 sizes="100%"
+                                 alt="Offre chaînes Radio"/>
+                        </div>
+                        <div class="phone-12 desk-6">
+                            <h2 class="section-subtitle">Liste des chaînes Radio</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="phone-12">
+                            <div id="radioChannels" class="channels-items">
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -367,6 +426,7 @@
 
         <script src="../scripts/vendor/jquery.min.js"></script>
         <script src="../scripts/main.js"></script>
+        <script src="../scripts/tvscript.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

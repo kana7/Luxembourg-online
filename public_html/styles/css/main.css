@@ -3546,8 +3546,7 @@ footer {
   .pannel-forms .clearfix > div[class^=phone-]:first-child {
     padding-left: 0 !important; }
   .pannel-forms .clearfix > div[class^=phone-]:not(:first-child) {
-    padding-right: 0;
-    }
+    padding-right: 0; }
 
 @media screen and (max-width: 1301px) {
   .header-icon {

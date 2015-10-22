@@ -15,23 +15,47 @@
     </head>
 
     <body>
-        <div id="CientSpace">
+        <div id="clientSpace">
             <div class="background-client"></div>
             <div class="white-pannel">
                 <button class="pannel-close"><span class="icon-x-icone"></span></button>
                 <h1>Espace Client</h1>
                 <ul class="client-menu">
-                    <li>Email</li>
-                    <li>Mon compte</li>
-                    <li>Homepage</li>
+                    <li class="active" data-id="mail">Email</li>
+                    <li data-id="account">Mon compte</li>
+                    <li data-id="homepage">Homepage</li>
                 </ul>
                 <div class="pannel-forms">
-                    <form class="clearfix" action="">
+                    <form id="mail" class="clearfix is-visible" name="ServiceLogin1" method="POST" action="https://email.internet.lu/Scripts/sql.exe?_selection=10">
+                        <input type="hidden" name="Sql" value="Default.phs">  
+                        <input type="hidden" name="SqlDB" value="OMS2">  
                         <div class="phone-6">
-                            <input type="text" placeholder="Nom d'utilisateur"/>
+                            <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
                         </div>
                         <div class="phone-6">
-                            <input class="pull-right" type="password" placeholder="Mot de passe"/>
+                            <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
+                        </div>
+                        <button class="btn-blue" type="submit">Se connecter</button>
+                    </form>
+                    <form id="account" class="clearfix" name="LoginPhone" method="POST" action="http://shop.internet.lu/Scripts/sql.exe?LoginScript=LoginClient.phs&NextScript=DisplayAccount.phs&_Login=">
+                        <input type="hidden" name="Sql" value="LoginClient_Login.phs">  
+                        <input type="hidden" name="SqlDB" value="LOLShop">  
+                        <div class="phone-6">
+                            <input type="text" name="_Username" placeholder="Nom d'utilisateur"/>
+                        </div>
+                        <div class="phone-6">
+                            <input class="pull-right" type="password" name="_Password" placeholder="Mot de passe"/>
+                        </div>
+                        <button class="btn-blue" type="submit">Se connecter</button>
+                    </form>
+                    <form id="homepage" class="clearfix" name="ServiceLogin3" method="POST" action="http://sites.internet.lu/Scripts/sql.exe">
+                        <input type="hidden" name="Sql" value="default.phs">  
+                        <input type="hidden" name="SqlDB" value="OHPS">  
+                        <div class="phone-6">
+                            <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
+                        </div>
+                        <div class="phone-6">
+                            <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
                         </div>
                         <button class="btn-blue" type="submit">Se connecter</button>
                     </form>
@@ -160,7 +184,7 @@
                             </div>
                         </div>
                         <div class="mobile-menu-button">
-                            <button class="mobile-button-blue">
+                            <button id="openClientSpaceMobile" class="mobile-button-blue">
                                 <span class="icon-account-icone"></span>
                             </button>
                             <button class="mobile-button-white">

@@ -3419,6 +3419,12 @@ footer {
     padding: 8px 0;
     margin-top: 4px; }
 
+#clientSpace {
+  visibility: hidden;
+  transition: opacity 2s linear; }
+  #clientSpace.is-visible {
+    visibility: visible; }
+
 .background-client {
   display: block;
   position: fixed;
@@ -3428,7 +3434,8 @@ footer {
   right: 0;
   background-color: #000;
   opacity: 0.6;
-  z-index: 10; }
+  z-index: 10;
+  cursor: pointer; }
 
 .white-pannel {
   display: block;
@@ -3530,12 +3537,17 @@ footer {
   display: block;
   position: relative;
   padding-bottom: 65px; }
+  .pannel-forms form {
+    display: none; }
+    .pannel-forms form.is-visible {
+      display: block; }
   .pannel-forms .clearfix > div[class^=phone-] {
     padding: 0 10px; }
   .pannel-forms .clearfix > div[class^=phone-]:first-child {
     padding-left: 0 !important; }
   .pannel-forms .clearfix > div[class^=phone-]:not(:first-child) {
-    padding-right: 0; }
+    padding-right: 0;
+    }
 
 @media screen and (max-width: 1301px) {
   .header-icon {
@@ -3551,9 +3563,6 @@ footer {
 
   .table-details td, .table-details th {
     font-size: 12px; }
-
-  .content-container .offer-item-blue .item-body li:not(.description), .offer-item-orange .item-body li:not(.description) {
-    padding-left: 0px !important; }
 
   .content-container .offer-item-blue .info .data, .offer-item-orange .info .data {
     padding-left: 40px; }

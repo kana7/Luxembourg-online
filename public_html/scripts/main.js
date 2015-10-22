@@ -2,6 +2,7 @@
 // ON PAGE READY
 $(function () {
     MenuMobile.init();
+    ClientSpace.init();
 });
 
 // Permet d'ouvrir le menu de droite sur mobile
@@ -16,7 +17,7 @@ var MenuMobile = (function () {
     var $backButtons = $menuLinks.find('.back');
     var $currentSubMenu;
     var $document = $('html');
-    
+
     var flag = "1";
 
 
@@ -41,9 +42,9 @@ var MenuMobile = (function () {
 
     var _toggleSideMenu = function (event) {
         flag = "0";
-        if ($contentSite.hasClass('open')){
+        if ($contentSite.hasClass('open')) {
             _closeSideMenu();
-        }else{
+        } else {
             $contentSite.addClass('open');
         }
     };
@@ -87,7 +88,43 @@ var MenuMobile = (function () {
     };
 })();
 
-var ClientSpace = (function(){
-    var openButton = $('#openClientSpace');
+var ClientSpace = (function () {
+    var $clientSpace = $('#clientSpace');
+    var $clientSpacePannel = $clientSpace.find('.white-pannel');
+    var $backgroundClient = $clientSpace.find('.background-client');
+    var $clientMenuItem = $clientSpace.find('.client-menu>li');
+    var $formGroup = $clientSpace.find('.pannel-forms');
+    var $forms = $clientSpace.find('.pannel-forms>form');
+    var $openButton = $('#openClientSpace, #openClientSpaceMobile');
+    var $closeButton = $clientSpace.find('.pannel-close');
     
+
+    var init = function () {
+        _bindEvents();
+    };
+    var _bindEvents = function () {
+        $openButton.on('click', _openClientSpace.bind(this));
+        $closeButton.on('click', _closeClientSpace.bind(this));
+        $backgroundClient.on('click', _closeClientSpace.bind(this));
+        $clientMenuItem.on('click', function(){
+            _showForm($(this));
+        });
+    };
+    var _openClientSpace = function () {
+        $clientSpace.addClass('is-visible');
+    };
+    var _closeClientSpace = function () {
+        $clientSpace.removeClass('is-visible');
+    };
+    var _showForm = function(element){
+        alert(element.attr('data-id'));
+        $clientMenuItem.removeClass('active');
+        $forms.removeClass('is-visible');
+        $formGroup.find('#'+element.attr('data-id')+'').addClass('is-visible');
+        element.addClass('active');
+    };
+    
+    return{
+        init: init
+    };
 })();

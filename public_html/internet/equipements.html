@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="fr">
-
     <head>
         <meta charset="utf-8">
-        <title>Luxembourg Online : Internet - Equipements</title>
+        <title>Luxembourg Online : Internet - Accueil</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="shortcut icon" href="/favicon.ico">
 
         <link rel="stylesheet" href="../styles/css/main.css">
+        <link rel="stylesheet" href="../styles/css/internet/accueil.css">
 
         <script src="../scripts/vendor/picturefill.min.js"></script>
     </head>
@@ -28,7 +28,6 @@
                 </div>
             </a>
         </div>
-
         <nav class="mobile-side-menu">
             <ul class="menu">
                 <li class="menu-item"><a href="/LuxembourgOnline/index.html">Accueil</a></li>
@@ -92,7 +91,6 @@
                 </ul>
             </div>
         </nav>
-
         <div id="siteWrap">
             <header>
                 <div id="top-menu-header" class="hidden-phone hidden-tab">
@@ -118,6 +116,12 @@
                 </div>
 
                 <div id="bottom-menu-header">
+                    <ul class="sub-menu hidden-phone hidden-tab">
+                        <li><a href="accueil.html"><div class="link">Accueil Internet</div></a></li>
+                        <li><a href="offres.html"><div class="link">Nos Offres</div></a></li>
+                        <li class="active"><a href="equipement.html"><div class="link">Nos Équipements</div></a></li>
+                        <li><a href="abonnement.html"><div class="link">Abonnez-vous</div></a></li>
+                    </ul>
                     <nav class="bottom-menu-header-links mobile display-phone display-tab">
                         <div class="pull-left">
                             <div class="logo">
@@ -134,16 +138,10 @@
                         </div>
                     </nav>
                     <div class="container-wrapper hidden-phone hidden-tab">
-                        <ul class="sub-menu hidden-phone hidden-tab">
-                            <li><a href="accueil.html"><div class="link">Accueil Internet</div></a></li>
-                            <li><a href="offres.html"><div class="link">Nos Offres</div></a></li>
-                            <li class="active"><a href="equipement.html"><div class="link">Équipement</div></a></li>
-                            <li><a href="abonnement.html"><div class="link">Abonnez-vous</div></a></li>
-                        </ul>
                         <div class="row">
                             <div class="pull-left">
                                 <div class="logo">
-                                    <a href="../index.html"><img src="../images/icons/img/Logo-LOL.png" alt="logo LOL" /></a>
+                                    <a href="/LuxembourgOnline/index.html"><img src="/LuxembourgOnline/images/icons/img/Logo-LOL.png" alt="logo LOL" /></a>
                                 </div><!--
                                 --><nav class="bottom-menu-header-links">
                                     <ul class="main-menu">
@@ -193,26 +191,29 @@
                 </div>
 
             </header>
-            <!--            ./HEADER                -->
-
-            <section id="offers-section" class="content-container drop-shadow ">
+            <section id="offers-section" class="drop-shadow">
                 <div class="container-wrapper">
                     <div class="row hidden-desk hidden-lgdesk">
                         <h1 class="content-title">Nos équipements : </h1>
-                        <h2 class="content-subtitle">Modem</h2>
                     </div>
                     <div class="row hidden-phone hidden-tab">
                         <h2 class="content-subtitle">Modem</h2>
                     </div>
                     <div  class="row display-phone">
                         <div class="phone-12">
-                            <div class="offer-item-orange up-flat">
-                                <ul class="item-body">
+                            <div class="">
+                                <ul>
                                     <li class="main-image"><img src="../images/equipment/modem/3272/3272.png" alt="FRITZ!BOX 3272" /></li>
                                     <li class="thumbnails">
                                         <div class="thumbnails-wrapper clearfix">
                                             <div class="thumb"><img src="../images/equipment/modem/3272/3272_small1.png" alt="FRITZ!BOX 3272 - front" /></div>
                                             <div class="thumb"><img src="../images/equipment/modem/3272/3272_small2.png" alt="FRITZ!BOX 3272 - back" /></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="offer-price">
+                                            <div>€</div>
+                                            4<span>/mois</span>
                                         </div>
                                     </li>
                                     <li class="item-name">
@@ -376,7 +377,6 @@
                     </div>
                 </div>
             </section>
-            <!--              FOOTER               -->
             <footer>
                 <div id="document-links" class="iner-shadow">
                     <div class="container-wrapper">
@@ -520,12 +520,11 @@
                     </div>
                 </div>
             </footer>
-            <!--              ./FOOTER               -->
         </div>
+        <!--              ./FOOTER               -->
 
         <script src="../scripts/vendor/jquery.min.js"></script>
-        <script src="../scripts/vendor/../main.js"></script>
-        <!-- endbuild -->
+        <script src="../scripts/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

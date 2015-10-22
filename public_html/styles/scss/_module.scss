@@ -759,14 +759,14 @@ span[class^=icon-]
         }
     }
 }
-.offer-item-blue{
+.offer-item-blue, .equipement-item-blue{
     @include offer-item($blue);
 }
-.offer-item-orange{
+.offer-item-orange, .equipement-item-orange{
     @include offer-item($orange);
 }
 .offer-item-blue, .offer-item-orange{
-    &.up-flat{
+    /*&.up-flat{
         border-radius: 2px 2px 6px 6px;
         .item-body{
             padding: 20px 0;
@@ -840,7 +840,7 @@ span[class^=icon-]
     }
     &.up-flat:not(.offer-item-orange){
         border-color: $grey;
-    }
+    }*/
 }
 
 .content-container{
@@ -891,22 +891,20 @@ span[class^=icon-]
     }
 }
 
-.content-container{
-    .content-title{
-        font-size: 20px;
-        font-weight: 800;
-        text-align: center;
-        margin: 40px 0 50px;
-    }
-    .content-subtitle{
-        @extend .content-title;
-        margin: -25px 0 45px;
-        font-weight: 400;
-        font-size: 21px;
-    }
-    .btn-outline-white{
-        font-size: 17px;
-    }
+.content-title{
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    margin: 40px 0 50px;
+}
+.content-subtitle{
+    @extend .content-title;
+    margin: -25px 0 45px;
+    font-weight: 400;
+    font-size: 21px;
+}
+.btn-outline-white{
+    font-size: 17px;
 }
 
 // CAROUSEL - HOMEPAGE
@@ -1498,5 +1496,126 @@ footer
         display: block;
         padding: 8px 0;
         margin-top: 4px;
+    }
+}
+
+// ESPACE CLIENT
+// --------------------------------------------------
+#clientSpace{
+}
+
+.background-client{
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $black;
+    opacity: 0.6;
+    z-index: 10;
+}
+.white-pannel{
+    display: block;
+    position: fixed;
+    width: 100%;
+    max-width: 480px;
+    min-width: 320px;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 20px 20px 25px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: $white;
+    border-radius: 6px;
+    z-index: 11;
+    .pannel-close{
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 24px;
+        padding: 0;
+        border: none;
+        background: none;
+        span{
+            margin: 0;
+            font-size: 16px;
+        }
+        &:focus{
+            outline: 0;
+        }
+    }
+    h1{
+        font-size: 24px;
+        padding-bottom: 15px;
+        margin: 0;
+        font-weight: 400;
+        border-bottom: 1px solid $blue;
+    }
+    input{
+        width: 100%;
+        height: 35px;
+        padding-left: 5px;
+        border: none;
+        border-radius: 4px;
+        box-shadow: inset 0 1px 5px -1px #000;
+        background-color: $light-grey;
+        font-size: 14px;
+    }
+    .btn-blue{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 11px 18px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+    .contact-infos{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: #004994;
+        font-weight: 800;
+        font-size: 14px;
+        span{
+            display: block;
+            margin-top: 5px;
+            font-weight: 400;
+        }
+    }
+}
+.client-menu{
+    @include display-flex-spread;
+    margin: 20px 0 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: $dark-grey;
+    li{
+        height: 25px;
+        cursor: pointer;
+        &:hover{
+            border-bottom: 2px dotted #c0c0c0
+        }
+        &.active{
+            color: $blue;
+        }
+    }
+}
+.pannel-forms{
+    display: block;
+    position: relative;
+    padding-bottom: 65px;
+    .clearfix>div[class^=phone-]{
+        padding: 0 10px;
+    }
+    .clearfix>div[class^=phone-]:first-child{
+        padding-left: 0 !important;
+    }
+    .clearfix>div[class^=phone-]:not(:first-child){
+        padding-right: 0;
     }
 }

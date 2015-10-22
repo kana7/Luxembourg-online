@@ -15,6 +15,37 @@
     </head>
 
     <body>
+        <div id="CientSpace">
+            <div class="background-client"></div>
+            <div class="white-pannel">
+                <button class="pannel-close"><span class="icon-x-icone"></span></button>
+                <h1>Espace Client</h1>
+                <ul class="client-menu">
+                    <li>Email</li>
+                    <li>Mon compte</li>
+                    <li>Homepage</li>
+                </ul>
+                <div class="pannel-forms">
+                    <form class="clearfix" action="">
+                        <div class="phone-6">
+                            <input type="text" placeholder="Nom d'utilisateur"/>
+                        </div>
+                        <div class="phone-6">
+                            <input class="pull-right" type="password" placeholder="Mot de passe"/>
+                        </div>
+                        <button class="btn-blue" type="submit">Se connecter</button>
+                    </form>
+                    <div class="contact-infos hidden-phone">
+                        Helpdesk: 2799 0000
+                        <span>Lu-Ve: 8h00-19h00  l  Sa: 9h00-18h00</span>
+                    </div>
+                    <div class="contact-infos display-phone">
+                        Helpdesk: 2799 0000
+                        <span>Lu-Ve: 8h00-19h00<br/>Sa: 9h00-18h00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="fixed-options hidden-phone hidden-tab">
             <a href="#">
                 <div class="white-fixed-option">
@@ -184,7 +215,7 @@
                                 </nav>
                             </div>
                             <div class="pull-right hidden-phone hidden-tab">
-                                <a class="btn-blue" href="#">Espace Client</a>
+                                <button id="openClientSpace" class="btn-blue" type="button">Espace Client</button>
                             </div>
                         </div>
                     </div>

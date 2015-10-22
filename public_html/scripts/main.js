@@ -1,11 +1,11 @@
 
 // ON PAGE READY
 $(function () {
-    OpenMenu.init();
+    MenuMobile.init();
 });
 
 // Permet d'ouvrir le menu de droite sur mobile
-var OpenMenu = (function () {
+var MenuMobile = (function () {
     //Cache DOM
     var $mobileButton = $('.mobile-button-white');
     var $contentSite = $('#siteWrap');
@@ -85,4 +85,9 @@ var OpenMenu = (function () {
     return{
         init: init
     };
+})();
+
+var ClientSpace = (function(){
+    var openButton = $('#openClientSpace');
+    
 })();

@@ -102,7 +102,6 @@
     -webkit-transform: $parameter;
     -ms-transform: $parameter;
     -o-transform: $parameter;
-    transform: $parameter;
 }
 
 @mixin vertical-align-middle($position: relative){

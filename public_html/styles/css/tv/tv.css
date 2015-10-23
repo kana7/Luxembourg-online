@@ -125,6 +125,30 @@
   margin: 10px 0 8px;
   font-size: 13px; }
 
+.equipement-description {
+  display: block;
+  font-size: 16px; }
+  .equipement-description li {
+    display: block;
+    line-height: 20px; }
+
+.minix-info h1 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 65px; }
+  .minix-info h1 span {
+    display: block;
+    font-size: 45px;
+    font-weight: 400; }
+    .minix-info h1 span strong {
+      font-weight: 800; }
+
+.achat {
+  font-size: 16px;
+  line-height: 20px; }
+  .achat span {
+    display: block; }
+
 @media screen and (max-width: 671px) {
   .channels-language-links {
     display: -ms-flexbox;

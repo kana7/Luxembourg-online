@@ -57,6 +57,15 @@ svg:not(:root) {
 .background-lightpink{
     background-color: #F4F0F1;
 }
+.background-white{
+    background-color: $white;
+}
+// BORDER CLASS
+// --------------------------------------------------
+.border-grey{
+    border: 1px solid $grey;
+}
+
 // SHADOW CLASS
 // --------------------------------------------------
 .iner-shadow{
@@ -1629,5 +1638,31 @@ footer
     }
     .clearfix>div[class^=phone-]:not(:first-child){
         padding-right: 0;
+    }
+}
+
+.equipement-price{
+    display: inline-block;
+    margin: 10px 0 15px;
+    background-color: $blue;
+    border-radius: 8px;
+    color: $white;
+    padding: 15px 40px;
+    font-size: 67px;
+    font-weight: 800;
+
+    .price{
+        position: relative;
+        div{
+            position: absolute;
+            right: 0;
+            top:0;
+            font-weight: 600;
+            font-size: 0.6em;
+        }
+        span{
+            font-weight: 600;
+            font-size: 0.41em;
+        }
     }
 }

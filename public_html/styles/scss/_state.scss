@@ -400,6 +400,13 @@
     .right-orientation .row > div:last-child, .left-orientation .row > div:last-child{
         text-align: left;
     }
+    .right-orientation .row>div:last-child{
+        text-align: left;
+    }
+    .left-orientation .row>div:last-child{
+        text-align: left;
+    }
+    
     .right-orientation .row > div:last-child, .left-orientation .row > div:last-child{
         @include vertical-align-middle;
         height: auto;

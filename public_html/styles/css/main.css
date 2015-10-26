@@ -1888,10 +1888,10 @@ header {
   #slider-contents .flickity-prev-next-button:hover .arrow {
     fill: #818181; }
 
-#offers-section .gallery-cell {
+#offers-section .gallery-cell, #equipement-section .gallery-cell {
   width: 100%;
   padding: 0 2px; }
-#offers-section .flickity-page-dots {
+#offers-section .flickity-page-dots, #equipement-section .flickity-page-dots {
   width: 100%;
   top: -28px;
   bottom: auto;
@@ -1900,7 +1900,7 @@ header {
   list-style: none;
   text-align: center;
   line-height: 1; }
-  #offers-section .flickity-page-dots .dot {
+  #offers-section .flickity-page-dots .dot, #equipement-section .flickity-page-dots .dot {
     width: 12px;
     height: 12px;
     background: #818181;
@@ -1908,7 +1908,7 @@ header {
     filter: alpha(opacity=100);
     opacity: 1;
     cursor: pointer; }
-    #offers-section .flickity-page-dots .dot.is-selected {
+    #offers-section .flickity-page-dots .dot.is-selected, #equipement-section .flickity-page-dots .dot.is-selected {
       background: #fff;
       border: 2px solid #004994; }
 
@@ -2972,6 +2972,12 @@ span[class^=icon-] {
     .equipement-item-blue.mobile .main-image img, .equipement-item-orange.mobile .main-image img {
       width: 100%;
       height: auto; }
+    .equipement-item-blue.mobile .main-image.fillHeight, .equipement-item-orange.mobile .main-image.fillHeight {
+      max-width: 190px;
+      height: 135px; }
+      .equipement-item-blue.mobile .main-image.fillHeight img, .equipement-item-orange.mobile .main-image.fillHeight img {
+        height: 100%;
+        width: auto; }
   .equipement-item-blue.mobile .thumbnails, .equipement-item-orange.mobile .thumbnails {
     display: block;
     position: relative;
@@ -3033,7 +3039,8 @@ span[class^=icon-] {
   .equipement-item-blue.mobile .details, .equipement-item-orange.mobile .details {
     float: left;
     text-align: left;
-    padding-left: 15px; }
+    padding-left: 15px;
+    padding-right: 15px; }
   .equipement-item-blue.mobile .item-name, .equipement-item-orange.mobile .item-name {
     font-size: 19px;
     line-height: 21px;
@@ -3042,7 +3049,7 @@ span[class^=icon-] {
       color: #004994;
       font-weight: 800; }
     .equipement-item-blue.mobile .item-name .sub, .equipement-item-orange.mobile .item-name .sub {
-      font-size: 0.9em; }
+      font-size: 0.8em; }
   .equipement-item-blue.mobile .config, .equipement-item-orange.mobile .config {
     text-align: left;
     font-size: 14px; }

@@ -1556,12 +1556,6 @@ ul, li {
 .icon-document-ico:before {
   content: "g"; }
 
-.icon-dot-slider:before {
-  content: "h"; }
-
-.icon-dot-stroke-slider:before {
-  content: "i"; }
-
 .icon-download-ico:before {
   content: "j"; }
 
@@ -2950,6 +2944,118 @@ span[class^=icon-] {
   &.up-flat:not(.offer-item-orange){
       border-color: $grey;
   }*/ }
+
+#equipement-section {
+  padding-bottom: 40px; }
+
+.equipement-item-blue.mobile, .equipement-item-orange.mobile {
+  background-color: #fff;
+  border-color: #dadada;
+  border-radius: 2px;
+  text-align: center;
+  padding: 30px 0 25px;
+  margin: 0; }
+  .equipement-item-blue.mobile:before, .equipement-item-orange.mobile:before {
+    content: "";
+    display: table; }
+  .equipement-item-blue.mobile:after, .equipement-item-orange.mobile:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .equipement-item-blue.mobile li, .equipement-item-orange.mobile li {
+    padding-left: 0; }
+  .equipement-item-blue.mobile .main-image, .equipement-item-orange.mobile .main-image {
+    position: relative;
+    display: block;
+    width: 190px;
+    margin: 0 auto 20px; }
+    .equipement-item-blue.mobile .main-image img, .equipement-item-orange.mobile .main-image img {
+      width: 100%;
+      height: auto; }
+  .equipement-item-blue.mobile .thumbnails, .equipement-item-orange.mobile .thumbnails {
+    display: block;
+    position: relative;
+    margin-bottom: 20px; }
+  .equipement-item-blue.mobile .thumbnails-wrapper, .equipement-item-orange.mobile .thumbnails-wrapper {
+    height: auto;
+    width: 60%;
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+    .equipement-item-blue.mobile .thumbnails-wrapper .thumb, .equipement-item-orange.mobile .thumbnails-wrapper .thumb {
+      display: inline-block;
+      float: left;
+      width: 50px;
+      height: 25px;
+      border: 1px solid #dadada;
+      border-radius: 2px;
+      text-align: center;
+      margin-left: 5px; }
+      .equipement-item-blue.mobile .thumbnails-wrapper .thumb .btnLightBox, .equipement-item-orange.mobile .thumbnails-wrapper .thumb .btnLightBox {
+        border: none;
+        background: none; }
+    .equipement-item-blue.mobile .thumbnails-wrapper img, .equipement-item-orange.mobile .thumbnails-wrapper img {
+      display: inline-block;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      max-width: 45px;
+      max-height: 20px; }
+  .equipement-item-blue.mobile .equipement-price, .equipement-item-orange.mobile .equipement-price {
+    padding: 13px 45px;
+    font-size: 54px;
+    margin-bottom: 20px; }
+  .equipement-item-blue.mobile .price div, .equipement-item-orange.mobile .price div {
+    right: 38px;
+    top: 3px;
+    font-size: 0.55em; }
+  .equipement-item-blue.mobile .price span, .equipement-item-orange.mobile .price span {
+    font-size: 0.35em; }
+  .equipement-item-blue.mobile .details, .equipement-item-orange.mobile .details {
+    float: left;
+    text-align: left;
+    padding-left: 15px; }
+  .equipement-item-blue.mobile .item-name, .equipement-item-orange.mobile .item-name {
+    font-size: 19px;
+    line-height: 21px;
+    margin-bottom: 25px; }
+    .equipement-item-blue.mobile .item-name .main, .equipement-item-orange.mobile .item-name .main {
+      color: #004994;
+      font-weight: 800; }
+    .equipement-item-blue.mobile .item-name .sub, .equipement-item-orange.mobile .item-name .sub {
+      font-size: 0.9em; }
+  .equipement-item-blue.mobile .config, .equipement-item-orange.mobile .config {
+    text-align: left;
+    font-size: 14px; }
+    .equipement-item-blue.mobile .config div, .equipement-item-orange.mobile .config div {
+      display: inline-block; }
+    .equipement-item-blue.mobile .config li, .equipement-item-orange.mobile .config li {
+      line-height: 18px; }
+  .equipement-item-blue.mobile .label, .equipement-item-orange.mobile .label {
+    font-weight: 800; }
+  .equipement-item-blue.mobile .info, .equipement-item-orange.mobile .info {
+    padding: 0 !important;
+    font-size: 1em;
+    font-weight: 400; }
 
 .content-container .offer-item-blue, .content-container .offer-item-orange {
   margin: 0;

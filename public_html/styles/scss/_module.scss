@@ -604,6 +604,81 @@ span[class^=icon-]
     }
 }
 
+// EQUIPEMENTS - UI
+// --------------------------------------------------
+.equipementCat{
+    display: block;
+    &.is-hidden{
+        display: none;
+    }
+}
+.searchMenu, .philter{
+    display: block;
+    position: relative;
+    button{
+        display: block;
+        width: 100%;
+        padding: 12px;
+        border-radius: 2px;
+        background: none;
+        border: none;
+        outline: 0;
+        span[class^=icon-]{
+            font-size: 0.9em;
+            @include transform(rotate(90deg));
+            margin: 0;
+        }
+    }
+    .dropdown{
+        position: absolute;
+        display: none;
+        width: 100%;
+        text-transform: capitalize;
+        text-align: center;
+        background-color: $white;
+        border: 1px solid lighten($grey, 8%);
+        border-top: transparent;
+        font-weight: 600;
+        z-index: 2;
+        li{
+            display: block;
+            padding: 11px;
+            cursor: pointer;
+            &:not(:last-child){
+                border-bottom: 1px solid lighten($grey, 8%);
+            }
+            &:hover{
+                background-color: darken($white, 10%);
+            }
+        }
+        &.is-visible{
+            display: block;
+        }
+    }
+}
+.searchMenu button{
+    background-color: $white;
+    border: 1px solid lighten($grey, 8%);
+    color: $blue;
+    font-size: 16px;
+    font-weight: 400;
+    z-index: 3;
+}
+.philter button{
+    background-color: $blue;
+    color: $white;
+    font-size: 21px;
+    margin: 15px 0 45px;
+    span[class^=icon-]{
+        font-size: 0.6em;
+    }
+    .selectPhilter{
+        font-weight: 600;
+        padding-left: 15px;
+    }
+}
+
+
 // INPUT
 // --------------------------------------------------
 @mixin input

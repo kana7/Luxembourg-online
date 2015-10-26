@@ -3,7 +3,50 @@
 $(function () {
     MenuMobile.init();
     ClientSpace.init();
+    if ($('#equipement-section')) {
+        equipementFilter.init();
+    }
 });
+
+
+// Permet de gérer l'affichage dans les pages équipements
+var equipementFilter = (function () {
+    var $search = $('.searchMenu');
+    var $philter = $('.philter');
+    var $searchMenuButton = $search.children('button');
+    var $searchMenu = $search.find('.dropdown');
+    var $searchMenuItem = $searchMenu.children('li');
+    var $deletePhilter = $philter.children('button');
+    var $philterText = $philter.find('.selectedPhilter');
+    var $categories = $('.equipementCat');
+    var init = function () {
+        _bindEvents();
+    };
+    var _bindEvents = function () {
+        $searchMenuButton.on('click', _toggleMenu);
+        $searchMenuItem.on('click', function () {
+            _selectPhilter($(this));
+        });
+        $deletePhilter.on('click', _deletePhilter);
+    };
+    var _toggleMenu = function () {
+        $searchMenu.toggleClass('is-visible');
+    };
+    var _selectPhilter = function (element) {
+        _deletePhilter();
+        // Re créer le philter
+        $('#' + element.attr('data-cat') + '').removeClass('is-hidden');
+        $('#' + element.attr('data-cat') + '').show().flickity('resize');
+    };
+    var _deletePhilter = function () {
+        $categories.addClass('is-hidden');
+        $philter.remove();
+        
+    };
+    return{
+        init: init
+    };
+})();
 
 // Permet d'ouvrir le menu de droite sur mobile
 var MenuMobile = (function () {
@@ -97,7 +140,7 @@ var ClientSpace = (function () {
     var $forms = $clientSpace.find('.pannel-forms>form');
     var $openButton = $('#openClientSpace, #openClientSpaceMobile');
     var $closeButton = $clientSpace.find('.pannel-close');
-    
+
 
     var init = function () {
         _bindEvents();
@@ -106,7 +149,7 @@ var ClientSpace = (function () {
         $openButton.on('click', _openClientSpace.bind(this));
         $closeButton.on('click', _closeClientSpace.bind(this));
         $backgroundClient.on('click', _closeClientSpace.bind(this));
-        $clientMenuItem.on('click', function(){
+        $clientMenuItem.on('click', function () {
             _showForm($(this));
         });
     };
@@ -116,14 +159,14 @@ var ClientSpace = (function () {
     var _closeClientSpace = function () {
         $clientSpace.removeClass('is-visible');
     };
-    var _showForm = function(element){
+    var _showForm = function (element) {
         alert(element.attr('data-id'));
         $clientMenuItem.removeClass('active');
         $forms.removeClass('is-visible');
-        $formGroup.find('#'+element.attr('data-id')+'').addClass('is-visible');
+        $formGroup.find('#' + element.attr('data-id') + '').addClass('is-visible');
         element.addClass('active');
     };
-    
+
     return{
         init: init
     };

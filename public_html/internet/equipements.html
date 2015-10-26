@@ -257,7 +257,25 @@
                     </div>
                     <div  class="row display-phone">
                         <div class="phone-12">
-                            <div id="modem" class="main-gallery">
+                            <div class="searchMenu">
+                                <button>
+                                    <span class="icon-right-arrow"></span> Affiner votre recherche :
+                                </button>
+                                <ul class="dropdown">
+                                    <li data-cat="modem">Modem</li>
+                                    <li data-cat="wlan">Répétiteur WLAN</li>
+                                    <li data-cat="power">Répétiteur POWERLINE</li>
+                                    <li data-cat="usb">Accessoires wifi</li>
+                                </ul>
+                            </div>
+                            <div data-cat="modem" class="philter">
+                                <button>
+                                    <span class="icon-x-icone"></span><span class="selectedPhilter">Modem</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="phone-12">
+                            <div id="modem" class="main-gallery equipementCat">
                                 <div class="gallery-cell">
                                     <div class="equipement-item-blue mobile">
                                         <ul>
@@ -384,7 +402,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="repeat" class="main-gallery">
+                            <div id="wlan" class="main-gallery equipementCat is-hidden">
                                 <div class="gallery-cell">
                                     <div class="equipement-item-blue mobile">
                                         <ul>
@@ -461,6 +479,8 @@
                                         </ul>
                                     </div>
                                 </div>
+                            </div>
+                            <div id="power" class="main-gallery equipementCat is-hidden">
                                 <div class="gallery-cell">
                                     <div class="equipement-item-blue mobile">
                                         <ul>
@@ -569,7 +589,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="usb" class="main-gallery">
+                            <div id="usb" class="main-gallery equipementCat is-hidden">
                                 <div class="gallery-cell">
                                     <div class="equipement-item-blue mobile">
                                         <ul>

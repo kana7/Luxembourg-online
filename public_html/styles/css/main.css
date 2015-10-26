@@ -2637,6 +2637,70 @@ span[class^=icon-] {
   width: 100%;
   padding: 15px 0; }
 
+.equipementCat {
+  display: block; }
+  .equipementCat.is-hidden {
+    display: none; }
+
+.searchMenu, .philter {
+  display: block;
+  position: relative; }
+  .searchMenu button, .philter button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 2px;
+    background: none;
+    border: none;
+    outline: 0; }
+    .searchMenu button span[class^=icon-], .philter button span[class^=icon-] {
+      font-size: 0.9em;
+      transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      margin: 0; }
+  .searchMenu .dropdown, .philter .dropdown {
+    position: absolute;
+    display: none;
+    width: 100%;
+    text-transform: capitalize;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #d4d4d4;
+    border-top: transparent;
+    font-weight: 600;
+    z-index: 2; }
+    .searchMenu .dropdown li, .philter .dropdown li {
+      display: block;
+      padding: 11px;
+      cursor: pointer; }
+      .searchMenu .dropdown li:not(:last-child), .philter .dropdown li:not(:last-child) {
+        border-bottom: 1px solid #d4d4d4; }
+      .searchMenu .dropdown li:hover, .philter .dropdown li:hover {
+        background-color: #e6e6e6; }
+    .searchMenu .dropdown.is-visible, .philter .dropdown.is-visible {
+      display: block; }
+
+.searchMenu button {
+  background-color: #fff;
+  border: 1px solid #d4d4d4;
+  color: #004994;
+  font-size: 16px;
+  font-weight: 400;
+  z-index: 3; }
+
+.philter button {
+  background-color: #004994;
+  color: #fff;
+  font-size: 21px;
+  margin: 15px 0 45px; }
+  .philter button span[class^=icon-] {
+    font-size: 0.6em; }
+  .philter button .selectPhilter {
+    font-weight: 600;
+    padding-left: 15px; }
+
 .input-white {
   font-size: 15pt;
   font-weight: 600;

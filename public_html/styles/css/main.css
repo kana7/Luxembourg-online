@@ -1987,7 +1987,7 @@ footer {
 #social-links,
 #contact,
 #footer-links, #document-links {
-  display: inline-block;
+  /*display: inline-block;*/
   width: 100%; }
 
 #document-links .icon {

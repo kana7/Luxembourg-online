@@ -1771,7 +1771,7 @@ header {
     .bottom-menu-header-links .main-menu li a {
       position: relative;
       display: block;
-      height: 100%;
+      /*height: 100%;*/
       width: 100%;
       line-height: 42px;
       padding: 0 27px; }
@@ -1805,7 +1805,7 @@ header {
   display: inline-block;
   float: left;
   width: auto;
-  height: 100%;
+  /*height: 100%;*/
   margin-right: 30px; }
   .logo img {
     width: auto;

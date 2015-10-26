@@ -1,3 +1,6 @@
+// Empeche la scrollBar de recouvrir le contenu sur ie
+@-ms-viewport{ width: auto !important; }
+
 .container-wrapper
 {
     margin-right: auto;

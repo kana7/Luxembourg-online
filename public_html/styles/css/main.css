@@ -1616,6 +1616,8 @@ ul, li {
 .icon-twitter:before {
   content: "C"; }
 
+@-ms-viewport {
+  width: auto !important; }
 .container-wrapper {
   margin-right: auto;
   margin-left: auto;

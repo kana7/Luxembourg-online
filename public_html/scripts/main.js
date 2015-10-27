@@ -11,14 +11,15 @@ $(function () {
 
 // Permet de gérer l'affichage dans les pages équipements
 var equipementFilter = (function () {
+    var $document = $('html');
     var $search = $('.searchMenu');
-    var $philter = $('.philter');
     var $searchMenuButton = $search.children('button');
     var $searchMenu = $search.find('.dropdown');
     var $searchMenuItem = $searchMenu.children('li');
-    var $deletePhilter = $philter.children('button');
-    var $philterText = $philter.find('.selectedPhilter');
     var $categories = $('.equipementCat');
+
+    var flag = 1;
+
     var init = function () {
         _bindEvents();
     };
@@ -27,21 +28,44 @@ var equipementFilter = (function () {
         $searchMenuItem.on('click', function () {
             _selectPhilter($(this));
         });
-        $deletePhilter.on('click', _deletePhilter);
+        $document.on('click', function () {
+            if (flag != "0") {
+                _closeMenu();
+            }
+            else {
+                flag = "1";
+            }
+        });
     };
     var _toggleMenu = function () {
+        flag = "0";
         $searchMenu.toggleClass('is-visible');
     };
+    var _closeMenu = function () {
+        $searchMenu.removeClass('is-visible');
+    };
     var _selectPhilter = function (element) {
+        flag = "0";
         _deletePhilter();
-        // Re créer le philter
+        renderPhilter(element.attr('data-cat'), element.text());
         $('#' + element.attr('data-cat') + '').removeClass('is-hidden');
         $('#' + element.attr('data-cat') + '').show().flickity('resize');
+        _closeMenu();
     };
+
     var _deletePhilter = function () {
         $categories.addClass('is-hidden');
-        $philter.remove();
-        
+        $('.philter').remove();
+    };
+
+    var renderPhilter = function (cat, name) {
+        var html = '';
+        html += '<div data-cat="' + cat + '" class="philter">';
+        html += '<button>';
+        html += '<span class="selectedPhilter">' + name + '</span>';
+        html += '</button>';
+        html += '</div>';
+        $(html).insertAfter($search);
     };
     return{
         init: init

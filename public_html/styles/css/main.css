@@ -2694,7 +2694,8 @@ span[class^=icon-] {
   background-color: #004994;
   color: #fff;
   font-size: 21px;
-  margin: 15px 0 45px; }
+  margin: 15px 0 45px;
+  cursor: default; }
   .philter button span[class^=icon-] {
     font-size: 0.6em; }
   .philter button .selectPhilter {

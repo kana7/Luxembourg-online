@@ -185,6 +185,15 @@
             width: 395px;
         }
     }
+    .equipement-item-blue.mobile, .equipement-item-orange.mobile{
+        padding: 30px 20px 25px;
+        .equipement-price{
+            margin: 0;
+        }
+        .thumbnails{
+            margin-bottom: 30px;
+        }
+    }
 }
 
 @include media(desk){

@@ -3117,7 +3117,7 @@ span[class^=icon-] {
       font-size: 0.8em; }
   .equipement-item-blue.mobile .config, .equipement-item-orange.mobile .config {
     text-align: left;
-    font-size: 14px; }
+    font-size: 13px; }
     .equipement-item-blue.mobile .config div, .equipement-item-orange.mobile .config div {
       display: inline-block; }
     .equipement-item-blue.mobile .config li, .equipement-item-orange.mobile .config li {
@@ -3917,7 +3917,14 @@ footer {
     text-align: center; }
 
   .content-container .offer-item-blue, .content-container .offer-item-orange {
-    width: 395px; } }
+    width: 395px; }
+
+  .equipement-item-blue.mobile, .equipement-item-orange.mobile {
+    padding: 30px 20px 25px; }
+    .equipement-item-blue.mobile .equipement-price, .equipement-item-orange.mobile .equipement-price {
+      margin: 0; }
+    .equipement-item-blue.mobile .thumbnails, .equipement-item-orange.mobile .thumbnails {
+      margin-bottom: 30px; } }
 @media screen and (min-width: 1056px) {
   .container-wrapper {
     width: 1024px; }

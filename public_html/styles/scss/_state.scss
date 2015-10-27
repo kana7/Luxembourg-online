@@ -10,8 +10,39 @@
         margin-top: 6%;
     }
 }
-
+@include viewport(max, $max: 1055){
+    .equipement-item-blue, .equipement-item-orange{
+        .main-image{
+            margin: 0 auto 15px;
+        }
+        .thumbnails{
+            margin-bottom: 30px;
+        }
+        .config{
+            padding-left: 28px;
+        }
+        .equipement-price{
+            margin-top: 30px;
+            margin-bottom: 0;
+        }
+        .item-name{
+            width: 100%;
+            font-size: 19px;
+            line-height: 21px;
+            margin-bottom: 25px;
+            text-align: center;
+            .sub{
+                font-size: 0.71em;
+            }
+        }
+    }
+}
 @include media(phone){
+    .equipement-item-blue, .equipement-item-orange{
+        .equipement-price{
+            padding: 13px 82px;
+        }
+    }
     .container-wrapper{
         width: 320px;
         padding: 0 14px;

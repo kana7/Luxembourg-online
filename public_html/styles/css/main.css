@@ -3113,17 +3113,19 @@ span[class^=icon-] {
     padding: 13px 45px;
     font-size: 54px;
     margin-bottom: 20px; }
+  .equipement-item-blue .link, .equipement-item-orange .link {
+    display: block;
+    text-decoration: underline;
+    margin-top: 10px; }
   .equipement-item-blue .price div, .equipement-item-orange .price div {
     right: 38px !important;
     top: 3px !important;
-    font-size: 0.55em; }
+    font-size: 0.55em !important; }
   .equipement-item-blue .price span, .equipement-item-orange .price span {
     font-size: 0.35em !important; }
   .equipement-item-blue .details, .equipement-item-orange .details {
     float: left;
-    text-align: left;
-    padding-left: 15px;
-    padding-right: 15px; }
+    text-align: left; }
   .equipement-item-blue .item-name, .equipement-item-orange .item-name {
     font-size: 19px;
     line-height: 21px;
@@ -3773,7 +3775,28 @@ footer {
   .icons {
     width: 60%;
     margin-top: 6%; } }
+@media screen and (max-width: 1055px) {
+  .equipement-item-blue .main-image, .equipement-item-orange .main-image {
+    margin: 0 auto 15px; }
+  .equipement-item-blue .thumbnails, .equipement-item-orange .thumbnails {
+    margin-bottom: 30px; }
+  .equipement-item-blue .config, .equipement-item-orange .config {
+    padding-left: 28px; }
+  .equipement-item-blue .equipement-price, .equipement-item-orange .equipement-price {
+    margin-top: 30px;
+    margin-bottom: 0; }
+  .equipement-item-blue .item-name, .equipement-item-orange .item-name {
+    width: 100%;
+    font-size: 19px;
+    line-height: 21px;
+    margin-bottom: 25px;
+    text-align: center; }
+    .equipement-item-blue .item-name .sub, .equipement-item-orange .item-name .sub {
+      font-size: 0.71em; } }
 @media screen and (max-width: 671px) {
+  .equipement-item-blue .equipement-price, .equipement-item-orange .equipement-price {
+    padding: 13px 82px; }
+
   .container-wrapper {
     width: 320px;
     padding: 0 14px; }

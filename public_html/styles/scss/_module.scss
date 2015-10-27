@@ -1019,11 +1019,16 @@ span[class^=icon-]
         font-size: 54px;
         margin-bottom: 20px;
     }
+    .link{
+        display: block;
+        text-decoration: underline;
+        margin-top: 10px;
+    }
     .price{
         div{
             right: 38px !important;
             top: 3px !important;
-            font-size: 0.55em;
+            font-size: 0.55em !important;
         }
         span{
             font-size: 0.35em !important;
@@ -1032,9 +1037,6 @@ span[class^=icon-]
     .details{
         float: left;
         text-align: left;
-        padding-left: 15px;
-        padding-right: 15px;
-
     }
     .item-name{
         font-size: 19px;

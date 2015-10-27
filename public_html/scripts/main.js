@@ -3,7 +3,7 @@
 $(function () {
     MenuMobile.init();
     ClientSpace.init();
-    if ($('#equipement-section')) {
+    if ($('.searchMenu')) {
         equipementFilter.init();
     }
 });

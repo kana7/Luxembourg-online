@@ -3523,7 +3523,7 @@ footer {
     margin: 0 0 30px; }
   .pdf-list li {
     display: block;
-    font-size: 17px; }
+    font-size: 14px; }
     .pdf-list li:hover .link {
       text-decoration: underline; }
   .pdf-list img {
@@ -3531,7 +3531,7 @@ footer {
     vertical-align: top;
     width: auto;
     height: auto;
-    margin-right: 15px; }
+    margin-right: 2px; }
   .pdf-list .link {
     display: inline-block;
     position: relative; }

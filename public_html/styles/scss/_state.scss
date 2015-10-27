@@ -185,7 +185,7 @@
             width: 395px;
         }
     }
-    .equipement-item-blue.mobile, .equipement-item-orange.mobile{
+    .equipement-item-blue{
         padding: 30px 20px 25px;
         .equipement-price{
             margin: 0;
@@ -197,6 +197,30 @@
 }
 
 @include media(desk){
+    #equipement-section{
+        padding-top: 70px;
+        min-height: 787px;
+    }
+    .equipement-item-blue, .equipement-item-orange{
+        height: 200px;
+        text-align: right;
+        padding: 0 40px 0 20px;
+        margin-bottom: 15px;
+        .details{
+            vertical-align: top;
+            padding-left: 20px;
+            padding-right: 0px;
+            li{
+                display: block;
+            }
+        }
+        .main-image.fillHeight{
+            height: 125px;
+        }
+        .thumbnails{
+            margin-bottom: 0;
+        }
+    }
     .container-wrapper{
         width: 1024px;
     }
@@ -415,7 +439,7 @@
     .left-orientation .row>div:last-child{
         text-align: left;
     }
-    
+
     .right-orientation .row > div:last-child, .left-orientation .row > div:last-child{
         @include vertical-align-middle;
         height: auto;

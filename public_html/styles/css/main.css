@@ -2682,13 +2682,28 @@ span[class^=icon-] {
     .searchMenu .dropdown.is-visible, .philter .dropdown.is-visible {
       display: block; }
 
-.searchMenu button {
+.searchMenu button, .DesktopMenu {
   background-color: #fff;
   border: 1px solid #d4d4d4;
   color: #004994;
   font-size: 16px;
   font-weight: 400;
   z-index: 3; }
+
+.DesktopMenu {
+  display: block; }
+  .DesktopMenu li {
+    display: block;
+    padding: 11px;
+    padding-left: 25px;
+    cursor: pointer; }
+    .DesktopMenu li:not(:last-child) {
+      border-bottom: 1px solid #d4d4d4; }
+    .DesktopMenu li:hover {
+      background-color: #e6e6e6; }
+    .DesktopMenu li.is-active {
+      background-color: #004994;
+      color: #fff; }
 
 .philter button {
   background-color: #004994;
@@ -3013,41 +3028,44 @@ span[class^=icon-] {
 #equipement-section {
   padding-bottom: 40px; }
 
-.equipement-item-blue.mobile, .equipement-item-orange.mobile {
+.equipement-item-blue, .equipement-item-orange {
   background-color: #fff;
   border-color: #dadada;
   border-radius: 2px;
   text-align: center;
   padding: 30px 0 25px;
   margin: 0; }
-  .equipement-item-blue.mobile:before, .equipement-item-orange.mobile:before {
+  .equipement-item-blue:before, .equipement-item-orange:before {
     content: "";
     display: table; }
-  .equipement-item-blue.mobile:after, .equipement-item-orange.mobile:after {
+  .equipement-item-blue:after, .equipement-item-orange:after {
     content: "";
     display: table;
     clear: both; }
-  .equipement-item-blue.mobile li, .equipement-item-orange.mobile li {
+  .equipement-item-blue li, .equipement-item-orange li {
     padding-left: 0; }
-  .equipement-item-blue.mobile .main-image, .equipement-item-orange.mobile .main-image {
+  .equipement-item-blue .main-image, .equipement-item-orange .main-image {
     position: relative;
     display: block;
     width: 190px;
     margin: 0 auto 20px; }
-    .equipement-item-blue.mobile .main-image img, .equipement-item-orange.mobile .main-image img {
+    .equipement-item-blue .main-image img, .equipement-item-orange .main-image img {
       width: 100%;
       height: auto; }
-    .equipement-item-blue.mobile .main-image.fillHeight, .equipement-item-orange.mobile .main-image.fillHeight {
+    .equipement-item-blue .main-image.fillHeight, .equipement-item-orange .main-image.fillHeight {
       max-width: 190px;
-      height: 135px; }
-      .equipement-item-blue.mobile .main-image.fillHeight img, .equipement-item-orange.mobile .main-image.fillHeight img {
+      height: 135px;
+      max-height: 100%;
+      text-align: center; }
+      .equipement-item-blue .main-image.fillHeight img, .equipement-item-orange .main-image.fillHeight img {
+        display: inline-block;
         height: 100%;
         width: auto; }
-  .equipement-item-blue.mobile .thumbnails, .equipement-item-orange.mobile .thumbnails {
+  .equipement-item-blue .thumbnails, .equipement-item-orange .thumbnails {
     display: block;
     position: relative;
     margin-bottom: 20px; }
-  .equipement-item-blue.mobile .thumbnails-wrapper, .equipement-item-orange.mobile .thumbnails-wrapper {
+  .equipement-item-blue .thumbnails-wrapper, .equipement-item-orange .thumbnails-wrapper {
     height: auto;
     width: 60%;
     margin: 0 auto;
@@ -3069,7 +3087,7 @@ span[class^=icon-] {
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start; }
-    .equipement-item-blue.mobile .thumbnails-wrapper .thumb, .equipement-item-orange.mobile .thumbnails-wrapper .thumb {
+    .equipement-item-blue .thumbnails-wrapper .thumb, .equipement-item-orange .thumbnails-wrapper .thumb {
       display: inline-block;
       float: left;
       width: 50px;
@@ -3078,10 +3096,10 @@ span[class^=icon-] {
       border-radius: 2px;
       text-align: center;
       margin-left: 5px; }
-      .equipement-item-blue.mobile .thumbnails-wrapper .thumb .btnLightBox, .equipement-item-orange.mobile .thumbnails-wrapper .thumb .btnLightBox {
+      .equipement-item-blue .thumbnails-wrapper .thumb .btnLightBox, .equipement-item-orange .thumbnails-wrapper .thumb .btnLightBox {
         border: none;
         background: none; }
-    .equipement-item-blue.mobile .thumbnails-wrapper img, .equipement-item-orange.mobile .thumbnails-wrapper img {
+    .equipement-item-blue .thumbnails-wrapper img, .equipement-item-orange .thumbnails-wrapper img {
       display: inline-block;
       position: relative;
       top: 50%;
@@ -3091,40 +3109,40 @@ span[class^=icon-] {
       transform: translateY(-50%);
       max-width: 45px;
       max-height: 20px; }
-  .equipement-item-blue.mobile .equipement-price, .equipement-item-orange.mobile .equipement-price {
+  .equipement-item-blue .equipement-price, .equipement-item-orange .equipement-price {
     padding: 13px 45px;
     font-size: 54px;
     margin-bottom: 20px; }
-  .equipement-item-blue.mobile .price div, .equipement-item-orange.mobile .price div {
-    right: 38px;
-    top: 3px;
+  .equipement-item-blue .price div, .equipement-item-orange .price div {
+    right: 38px !important;
+    top: 3px !important;
     font-size: 0.55em; }
-  .equipement-item-blue.mobile .price span, .equipement-item-orange.mobile .price span {
-    font-size: 0.35em; }
-  .equipement-item-blue.mobile .details, .equipement-item-orange.mobile .details {
+  .equipement-item-blue .price span, .equipement-item-orange .price span {
+    font-size: 0.35em !important; }
+  .equipement-item-blue .details, .equipement-item-orange .details {
     float: left;
     text-align: left;
     padding-left: 15px;
     padding-right: 15px; }
-  .equipement-item-blue.mobile .item-name, .equipement-item-orange.mobile .item-name {
+  .equipement-item-blue .item-name, .equipement-item-orange .item-name {
     font-size: 19px;
     line-height: 21px;
     margin-bottom: 25px; }
-    .equipement-item-blue.mobile .item-name .main, .equipement-item-orange.mobile .item-name .main {
+    .equipement-item-blue .item-name .main, .equipement-item-orange .item-name .main {
       color: #004994;
       font-weight: 800; }
-    .equipement-item-blue.mobile .item-name .sub, .equipement-item-orange.mobile .item-name .sub {
+    .equipement-item-blue .item-name .sub, .equipement-item-orange .item-name .sub {
       font-size: 0.8em; }
-  .equipement-item-blue.mobile .config, .equipement-item-orange.mobile .config {
+  .equipement-item-blue .config, .equipement-item-orange .config {
     text-align: left;
     font-size: 13px; }
-    .equipement-item-blue.mobile .config div, .equipement-item-orange.mobile .config div {
+    .equipement-item-blue .config div, .equipement-item-orange .config div {
       display: inline-block; }
-    .equipement-item-blue.mobile .config li, .equipement-item-orange.mobile .config li {
+    .equipement-item-blue .config li, .equipement-item-orange .config li {
       line-height: 18px; }
-  .equipement-item-blue.mobile .label, .equipement-item-orange.mobile .label {
+  .equipement-item-blue .label, .equipement-item-orange .label {
     font-weight: 800; }
-  .equipement-item-blue.mobile .info, .equipement-item-orange.mobile .info {
+  .equipement-item-blue .info, .equipement-item-orange .info {
     padding: 0 !important;
     font-size: 1em;
     font-weight: 400; }
@@ -3919,13 +3937,33 @@ footer {
   .content-container .offer-item-blue, .content-container .offer-item-orange {
     width: 395px; }
 
-  .equipement-item-blue.mobile, .equipement-item-orange.mobile {
+  .equipement-item-blue {
     padding: 30px 20px 25px; }
-    .equipement-item-blue.mobile .equipement-price, .equipement-item-orange.mobile .equipement-price {
+    .equipement-item-blue .equipement-price {
       margin: 0; }
-    .equipement-item-blue.mobile .thumbnails, .equipement-item-orange.mobile .thumbnails {
+    .equipement-item-blue .thumbnails {
       margin-bottom: 30px; } }
 @media screen and (min-width: 1056px) {
+  #equipement-section {
+    padding-top: 70px;
+    min-height: 787px; }
+
+  .equipement-item-blue, .equipement-item-orange {
+    height: 200px;
+    text-align: right;
+    padding: 0 40px 0 20px;
+    margin-bottom: 15px; }
+    .equipement-item-blue .details, .equipement-item-orange .details {
+      vertical-align: top;
+      padding-left: 20px;
+      padding-right: 0px; }
+      .equipement-item-blue .details li, .equipement-item-orange .details li {
+        display: block; }
+    .equipement-item-blue .main-image.fillHeight, .equipement-item-orange .main-image.fillHeight {
+      height: 125px; }
+    .equipement-item-blue .thumbnails, .equipement-item-orange .thumbnails {
+      margin-bottom: 0; }
+
   .container-wrapper {
     width: 1024px; }
 

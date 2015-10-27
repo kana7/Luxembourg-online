@@ -15,6 +15,7 @@ var equipementFilter = (function () {
     var $search = $('.searchMenu');
     var $searchMenuButton = $search.children('button');
     var $searchMenu = $search.find('.dropdown');
+    var $searchDeskMenuItem = $search.find('.DesktopMenu>li');
     var $searchMenuItem = $searchMenu.children('li');
     var $categories = $('.equipementCat');
 
@@ -25,8 +26,11 @@ var equipementFilter = (function () {
     };
     var _bindEvents = function () {
         $searchMenuButton.on('click', _toggleMenu);
-        $searchMenuItem.on('click', function () {
-            _selectPhilter($(this));
+        $searchMenuItem.on('click', function (event) {
+            _selectPhilter($(this), event);
+        });
+        $searchDeskMenuItem.on('click', function (event) {
+            _selectPhilter($(this), event);
         });
         $document.on('click', function () {
             if (flag != "0") {
@@ -44,10 +48,15 @@ var equipementFilter = (function () {
     var _closeMenu = function () {
         $searchMenu.removeClass('is-visible');
     };
-    var _selectPhilter = function (element) {
+    var _selectPhilter = function (element, event) {
         flag = "0";
         _deletePhilter();
-        renderPhilter(element.attr('data-cat'), element.text());
+        if ($(event.target).closest('ul').hasClass('dropdown')) {
+            renderPhilter(element.attr('data-cat'), element.text());
+        } else {
+            $searchDeskMenuItem.removeClass('is-active');
+            element.addClass('is-active');
+        }
         $('#' + element.attr('data-cat') + '').removeClass('is-hidden');
         $('#' + element.attr('data-cat') + '').show().flickity('resize');
         _closeMenu();
@@ -55,7 +64,9 @@ var equipementFilter = (function () {
 
     var _deletePhilter = function () {
         $categories.addClass('is-hidden');
-        $('.philter').remove();
+        if ($('.philter')) {
+            $('.philter').remove();
+        }
     };
 
     var renderPhilter = function (cat, name) {

@@ -656,13 +656,32 @@ span[class^=icon-]
         }
     }
 }
-.searchMenu button{
+.searchMenu button, .DesktopMenu{
     background-color: $white;
     border: 1px solid lighten($grey, 8%);
     color: $blue;
     font-size: 16px;
     font-weight: 400;
     z-index: 3;
+}
+.DesktopMenu{
+    display: block;
+    li{
+        display: block;
+        padding: 11px;
+        padding-left: 25px;
+        cursor: pointer;
+        &:not(:last-child){
+            border-bottom: 1px solid lighten($grey, 8%);
+        }
+        &:hover{
+            background-color: darken($white, 10%);
+        }
+        &.is-active{
+            background-color: $blue;
+            color: $white;
+        }
+    }
 }
 .philter button{
     background-color: $blue;
@@ -931,7 +950,7 @@ span[class^=icon-]
     padding-bottom: 40px;
 }
 
-.equipement-item-blue.mobile, .equipement-item-orange.mobile{
+.equipement-item-blue, .equipement-item-orange{
     background-color: $white;
     border-color: lighten($grey, 10%);
     border-radius: 2px;
@@ -954,7 +973,10 @@ span[class^=icon-]
         &.fillHeight{
             max-width: 190px;
             height: 135px;
+            max-height: 100%;
+            text-align: center;
             img{
+                display: inline-block;
                 height: 100%;
                 width: auto;
             }
@@ -999,12 +1021,12 @@ span[class^=icon-]
     }
     .price{
         div{
-            right: 38px;
-            top: 3px;
+            right: 38px !important;
+            top: 3px !important;
             font-size: 0.55em;
         }
         span{
-            font-size: 0.35em;
+            font-size: 0.35em !important;
         }
     }
     .details{

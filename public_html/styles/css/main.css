@@ -1967,7 +1967,7 @@ header {
     position: relative;
     height: 100%; }
   .section-layout img {
-    width: 100%;
+    width: 80%;
     height: auto; }
 
 .section-img-align-bottom {
@@ -3512,7 +3512,7 @@ footer {
     color: #0062c7; }
 
 .pdf-list {
-  display: inline-block;
+  /*display: inline-block;*/
   position: relative;
   margin: 40px 0;
   text-align: left; }
@@ -3727,7 +3727,10 @@ footer {
     padding: 15px 50px; }
 
   .btn-outline-white {
-    font-size: 13px; } }
+    font-size: 13px; }
+
+  .logo {
+    margin-right: 0px; } }
 @media screen and (min-width: 672px) {
   .container-wrapper {
     width: 640px; }

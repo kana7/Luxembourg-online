@@ -31,6 +31,9 @@
         font-size: 19px;
         padding: 15px 50px;
     }
+    .btn-outline-white{
+        font-size: 13px;
+    }
 }
 @include media(tab){
     .container-wrapper{

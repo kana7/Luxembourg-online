@@ -2672,7 +2672,7 @@ span[class^=icon-] {
   box-shadow: 0 2px 4px 0 #262626;
   -o-box-shadow: 0 2px 4px 0 #262626;
   -ms-box-shadow: 0 2px 4px 0 #262626;
-  line-height: 35px;
+  /*line-height: 35px;*/
   position: relative;
   display: inline-block;
   padding: 5px 10px;
@@ -3418,12 +3418,14 @@ footer {
 
 .separator {
   margin: 0;
-  border-color: #919191;
-  -webkit-box-shadow: 0 1px 1px 0 #747474;
-  -moz-box-shadow: 0 1px 1px 0 #747474;
-  box-shadow: 0 1px 1px 0 #747474;
-  -o-box-shadow: 0 1px 1px 0 #747474;
-  -ms-box-shadow: 0 1px 1px 0 #747474; }
+  background-color: #575757;
+  height: 2px;
+  border-color: #A2A2A2;
+  -webkit-box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.18);
+  -moz-box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.18);
+  box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.18);
+  -o-box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.18);
+  -ms-box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.18); }
 
 .footer-top-links {
   font-weight: 300;

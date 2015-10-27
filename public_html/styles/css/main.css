@@ -1959,7 +1959,7 @@ header {
 .section-layout {
   position: relative;
   display: block;
-  padding: 35px 0;
+  padding: 0px 0;
   width: 100%;
   height: auto;
   text-align: center; }

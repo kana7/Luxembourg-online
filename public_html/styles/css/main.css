@@ -3877,6 +3877,9 @@ footer {
   .content-container .offer-item-blue, .content-container .offer-item-orange {
     width: 395px; }
 
+  .pdf-list img {
+    margin-right: 10px; }
+
   .tab-adjust {
     margin: 24px 0; }
 
@@ -4171,7 +4174,13 @@ footer {
     margin: 0 0 50px; }
 
   .pdf-list img {
-    margin-right: 10px; } }
+    margin-right: 10px; }
+
+  .tab-adjust {
+    margin: 40px 0; }
+
+  .tab-adjust-2 {
+    margin: 40px 0px; } }
 @media screen and (min-width: 1056px) and (max-width: 1302px) {
   #offers-section div[class^=phone-] {
     padding: 0 5px; }

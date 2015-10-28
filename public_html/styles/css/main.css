@@ -3110,13 +3110,22 @@ span[class^=icon-] {
       max-width: 45px;
       max-height: 20px; }
   .equipement-item-blue .equipement-price, .equipement-item-orange .equipement-price {
+    position: relative;
     padding: 13px 45px;
     font-size: 54px;
     margin-bottom: 20px; }
   .equipement-item-blue .link, .equipement-item-orange .link {
     display: block;
+    position: absolute;
+    text-align: center;
+    top: 85px;
+    left: 0;
+    right: 0;
     text-decoration: underline;
-    margin-top: 10px; }
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #818181; }
   .equipement-item-blue .price div, .equipement-item-orange .price div {
     right: 38px !important;
     top: 3px !important;
@@ -3795,7 +3804,8 @@ footer {
       font-size: 0.71em; } }
 @media screen and (max-width: 671px) {
   .equipement-item-blue .equipement-price, .equipement-item-orange .equipement-price {
-    padding: 13px 82px; }
+    padding: 13px 82px;
+    margin-bottom: 25px; }
 
   .container-wrapper {
     width: 320px;
@@ -3972,7 +3982,7 @@ footer {
     min-height: 787px; }
 
   .equipement-item-blue, .equipement-item-orange {
-    height: 200px;
+    height: 275px;
     text-align: right;
     padding: 0 40px 0 20px;
     margin-bottom: 15px; }

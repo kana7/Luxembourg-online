@@ -1015,14 +1015,23 @@ span[class^=icon-]
         }
     }
     .equipement-price{
+        position: relative;
         padding: 13px 45px;
         font-size: 54px;
         margin-bottom: 20px;
     }
     .link{
         display: block;
+        position: absolute;
+        text-align: center;
+        top: 85px;
+        left: 0;
+        right: 0;
         text-decoration: underline;
         margin-top: 10px;
+        font-size: 13px;
+        font-weight: 400;
+        color: $dark-grey;
     }
     .price{
         div{

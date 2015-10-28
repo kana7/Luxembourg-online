@@ -1505,6 +1505,9 @@ ul, li {
   margin: 0;
   padding: 0; }
 
+.finance-list li {
+  display: block; }
+
 @font-face {
   font-family: "luxonline-icons";
   src: url("../../fonts/luxonline-icons.eot");

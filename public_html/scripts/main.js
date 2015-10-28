@@ -3,7 +3,7 @@
 $(function () {
     MenuMobile.init();
     ClientSpace.init();
-    if ($('.searchMenu')) {
+    if ($('.searchMenu:not(.mobile)')) {
         equipementFilter.init();
     }
 });
@@ -12,7 +12,7 @@ $(function () {
 // Permet de gérer l'affichage dans les pages équipements
 var equipementFilter = (function () {
     var $document = $('html');
-    var $search = $('.searchMenu');
+    var $search = $('.searchMenu:not(.mobile)');
     var $searchMenuButton = $search.children('button');
     var $searchMenu = $search.find('.dropdown');
     var $searchDeskMenuItem = $search.find('.DesktopMenu>li');
@@ -41,6 +41,7 @@ var equipementFilter = (function () {
             }
         });
     };
+    
     var _toggleMenu = function () {
         flag = "0";
         $searchMenu.toggleClass('is-visible');

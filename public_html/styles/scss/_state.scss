@@ -191,6 +191,12 @@
             width: 395px;
         }
     }
+    .tab-adjust{
+        margin: 24px 0;
+    }
+    .tab-adjust-2{
+        margin: 25px 0px 55px 0px;
+    }
 }
 
 @include media(desk){
@@ -519,6 +525,9 @@
         p{
             margin: 0 0 50px;
         }
+    }
+    .pdf-list img{
+        margin-right: 10px;
     }
 }
 

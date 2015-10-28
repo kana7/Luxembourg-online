@@ -2636,7 +2636,7 @@ span[class^=icon-] {
 
 .btn-outline-black, .btn-outline-white {
   padding: 15px 48px;
-  font-size: 16px; }
+  font-size: 13px; }
 
 .btn-outline-white {
   border: 2px solid #c0c0c0;
@@ -2658,7 +2658,7 @@ span[class^=icon-] {
   font-weight: 600; }
 #offers-section .btn-outline-white {
   width: 100%;
-  padding: 1px 0; }
+  padding: 15px 0; }
 
 .input-white {
   font-size: 15pt;

@@ -1914,6 +1914,25 @@ header {
       background: #fff;
       border: 2px solid #004994; }
 
+#mobileType {
+  height: 115px;
+  width: 100%; }
+  #mobileType .gallery-cell {
+    height: 100%;
+    width: 100%;
+    padding: 0 10px; }
+  #mobileType .mobile-container {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    padding: 11px 0 10px; }
+  #mobileType .brandType {
+    height: 75%; }
+  #mobileType img {
+    height: 100%;
+    width: auto;
+    max-width: 100%; }
+
 #services {
   padding: 18px 0;
   text-align: center; }
@@ -3039,6 +3058,32 @@ span[class^=icon-] {
 #equipement-section {
   padding-bottom: 40px; }
 
+#mobileType {
+  background-color: #fff;
+  border: 1px solid #dadada;
+  border-radius: 2px;
+  text-align: center;
+  padding: 0; }
+  #mobileType .gallery-cell {
+    cursor: pointer; }
+    #mobileType .gallery-cell .active-border {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      height: 5px;
+      width: 100%;
+      background-color: #004994; }
+    #mobileType .gallery-cell.selected .mobile-name {
+      color: #004994;
+      font-weight: 800; }
+    #mobileType .gallery-cell .mobile-name {
+      display: inline-block;
+      margin-top: 6px;
+      width: 100%;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600; }
+
 .equipement-item-blue, .equipement-item-orange {
   background-color: #fff;
   border-color: #dadada;
@@ -4014,7 +4059,14 @@ footer {
     .equipement-item-blue .equipement-price {
       margin: 0; }
     .equipement-item-blue .thumbnails {
-      margin-bottom: 30px; } }
+      margin-bottom: 30px; }
+
+  #mobileType {
+    height: 150px; }
+    #mobileType .gallery-cell {
+      width: 25%; }
+      #mobileType .gallery-cell .mobile-container {
+        padding: 20px 0 10px; } }
 @media screen and (min-width: 1056px) {
   #equipement-section {
     padding-top: 70px;

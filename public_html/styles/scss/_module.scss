@@ -937,6 +937,40 @@ span[class^=icon-]
     padding-bottom: 40px;
 }
 
+#mobileType{
+    background-color: $white;
+    border: 1px solid lighten($grey, 10%);
+    border-radius: 2px;
+    text-align: center;
+    padding: 0;
+    .gallery-cell{
+        cursor: pointer;
+        .active-border{
+            display: none;
+            position: absolute;
+            bottom: 0;
+            height: 5px;
+            width: 100%;
+            background-color: $blue;
+        }
+        &.selected{
+            .mobile-name{
+                color: $blue;
+                font-weight: 800;
+            }
+        }
+        .mobile-name{
+            display: inline-block;
+            margin-top: 6px;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+}
+
+
 .equipement-item-blue, .equipement-item-orange{
     background-color: $white;
     border-color: lighten($grey, 10%);

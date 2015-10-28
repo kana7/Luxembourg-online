@@ -295,6 +295,29 @@ header{
         }
     }
 }
+#mobileType{
+    height: 115px;
+    width: 100%;
+    .gallery-cell {
+        height: 100%;
+        width: 100%;
+        padding: 0 10px;
+    }
+    .mobile-container{
+        display: inline-block;
+        position: relative;
+        height: 100%;
+        padding: 11px 0 10px;
+    }
+    .brandType{
+        height: 75%;
+    }
+    img{
+        height: 100%;
+        width: auto;
+        max-width: 100%;
+    }
+}
 
 // SERVICES - HOMEPAGE
 // --------------------------------------------------

@@ -1,3 +1,6 @@
+// Empeche la scrollBar de recouvrir le contenu sur ie
+@-ms-viewport{ width: auto !important; }
+
 .container-wrapper
 {
     margin-right: auto;
@@ -360,7 +363,7 @@ header{
     position: relative;
 
     display: block;
-    padding: 35px 0;
+    padding: 30px 0;
     width: 100%;
     height: auto;
     text-align: center;
@@ -371,7 +374,7 @@ header{
     }
     img
     {
-        width: 100%;
+        width: 80%;
         height: auto;
     }
 }
@@ -405,7 +408,7 @@ footer
 #contact,
 #footer-links, #document-links
 {
-    display: inline-block;
+    /*display: inline-block;*/
 
     width: 100%;
 }

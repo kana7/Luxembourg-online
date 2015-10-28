@@ -124,6 +124,8 @@
     -webkit-box-shadow: $params;
     -moz-box-shadow: $params;
     box-shadow: $params;
+    -o-box-shadow: $params;
+    -ms-box-shadow: $params;
 }
 
 @mixin button($color: $blue-primary, $text_color: $white-background) {
@@ -217,10 +219,9 @@
 }
 
 @mixin placeHolder{
-    &::-webkit-input-placeholder{@content}
+    &::-webkit-placeholder{@content}
     &:-moz-placeholder{@content}
-    &::-moz-placeholder{@content}
-    &:-ms-input-placeholder{@content}
+    &:-ms-placeholder{@content}
 }
 
 @mixin display-flex-center(){

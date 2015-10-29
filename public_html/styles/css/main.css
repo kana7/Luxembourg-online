@@ -1925,7 +1925,8 @@ header {
     display: inline-block;
     position: relative;
     height: 100%;
-    padding: 11px 0 10px; }
+    padding: 11px 0 10px;
+    }
   #mobileType .brandType {
     height: 75%; }
   #mobileType img {
@@ -2978,83 +2979,6 @@ span[class^=icon-] {
         margin-right: 25px;
         font-size: 16px; }
 
-.offer-item-blue, .offer-item-orange {
-  /*&.up-flat{
-      border-radius: 2px 2px 6px 6px;
-      .item-body{
-          padding: 20px 0;
-          &>li:not(:last-child){
-              border: none;
-          }
-          &>li{
-              display: block;
-              padding: 0;
-              text-align: center !important;
-          }
-      }
-      .main-image{
-          padding: 0 60px !important;
-          margin-bottom: 15px;
-          img{width: 100%; height: auto;}
-      }
-      .thumbnails{
-          margin-bottom: 25px;
-      }
-      .thumbnails-wrapper{
-          height: auto;
-          width: 60%;
-          margin: 0 auto;
-          @include display-flex-center;
-          .thumb{
-              display: inline-block;
-              float: left;
-              width: 50px;
-              height: 25px;
-              border: 1px solid $grey;
-              border-radius: 2px;
-              text-align: center;
-              margin-left: 5px;
-          }
-          img{
-              display: inline-block;
-              @include vertical-align-middle;
-              max-width: 45px;
-              max-height: 20px;
-          }
-      }
-      .item-name{
-          margin-bottom: 25px;
-      }
-      .main{
-          font-size: 21px;
-          font-weight: 800;
-          margin-bottom: 5px;
-      }
-      .sub{
-          font-size: 16px;
-          color: darken($dark-grey, 15%);
-          font-weight: 600;
-      }
-      .description-list>li{
-          display: block;
-          margin-bottom: 6px;
-          color: $dark-grey;
-          line-height: 19px;
-      }
-      .label{
-          color: darken($dark-grey, 5%);
-          font-size: 15px;
-          font-weight: 800;
-      }
-      .info{
-          font-size: 14px;
-          font-weight: 400;
-      }
-  }
-  &.up-flat:not(.offer-item-orange){
-      border-color: $grey;
-  }*/ }
-
 #equipement-section {
   padding-bottom: 40px; }
 
@@ -3083,6 +3007,13 @@ span[class^=icon-] {
       text-align: center;
       font-size: 16px;
       font-weight: 600; }
+  #mobileType .flickity-prev-next-button {
+    background: none; }
+    #mobileType .flickity-prev-next-button .arrow {
+      fill: #004994; }
+
+.flickity-prev-next-button:focus {
+  box-shadow: none; }
 
 .equipement-item-blue, .equipement-item-orange {
   background-color: #fff;
@@ -3962,9 +3893,6 @@ footer {
       left: 50px; }
     #slider-contents .flickity-prev-next-button.next {
       right: 50px; }
-    #slider-contents .flickity-prev-next-button svg {
-      width: 80%;
-      height: 80%; }
   #slider-contents .section-price {
     font-size: 72px;
     margin: 0px 0 20px;
@@ -4068,6 +3996,9 @@ footer {
       #mobileType .gallery-cell .mobile-container {
         padding: 20px 0 10px; } }
 @media screen and (min-width: 1056px) {
+  #mobileType .flickity-prev-next-button {
+    height: 35px; }
+
   #equipement-section {
     padding-top: 70px;
     min-height: 787px; }
@@ -4163,10 +4094,6 @@ footer {
       left: 84px; }
     #slider-contents .section-price span {
       font-size: 21px; }
-
-  .flickity-prev-next-button svg {
-    width: 100% !important;
-    height: 100% !important; }
 
   #slider-ui .buttons {
     width: 95%; }

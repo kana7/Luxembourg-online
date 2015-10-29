@@ -1505,9 +1505,6 @@ ul, li {
   margin: 0;
   padding: 0; }
 
-.finance-list li {
-  display: block; }
-
 @font-face {
   font-family: "luxonline-icons";
   src: url("../../fonts/luxonline-icons.eot");
@@ -1702,7 +1699,7 @@ ul, li {
   text-align: center; }
 
 .align-right {
-  text-align: right; }
+  text-align: right !important; }
 
 .background-image-right {
   position: absolute;
@@ -2267,6 +2264,12 @@ span[class^=icon-] {
     margin: 0;
     font-size: 21px;
     padding: 17px 50px; }
+
+.finance-list li {
+  display: block; }
+
+.repondeur-list li {
+  line-height: 1.5em; }
 
 .section-price {
   display: inline-block;

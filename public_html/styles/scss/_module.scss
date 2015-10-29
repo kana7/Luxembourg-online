@@ -172,7 +172,12 @@ span[class^=icon-]
     }
 }
 
-
+.finance-list li{
+    display: block;
+}
+.repondeur-list li{
+    line-height: 1.5em;
+}
 .section-price{
     display: inline-block;
     position: relative;

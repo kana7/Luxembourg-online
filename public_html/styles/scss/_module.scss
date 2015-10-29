@@ -709,6 +709,170 @@ span[class^=icon-]
     }
 }
 
+// MOBILE - EQUIPEMENTS
+// --------------------------------------------------
+#mobileDetail{
+    border: 1px solid lighten($grey, 8%);
+    background-color: $white;
+    margin-top: 15px;
+    padding: 25px 30px;
+    @include clearfix;
+}
+.descWrapper, .imageWrapper{
+    @include clearfix;
+}
+.descWrapper{
+    margin-top: 45px;
+}
+.os{
+    display: inline-block;
+    float: right;
+}
+.typeContainer {
+    font-size: 30pt;
+    color: #00529c;
+    margin-bottom: 20px;
+    position: relative;
+}
+.descSubWrapperLeft {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    float: left;
+}
+.descSubWrapperRight {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    float: right;
+}
+.qmkMobile {
+    position: relative;
+    display: inline-block;
+    color: $blue;
+    margin-left: 5px;
+}
+.rightWrapper {
+    display: inline-block;
+    float: left;
+    width: 100%;
+}
+.priceWrapperRight {
+    display: inline-block;
+    position: relative;
+    float: right;
+    text-align: right;
+    font-size: 26pt;
+    color: #e96021;
+    padding: 11px 0px;
+}
+.priceWrapperLeft {
+    display: inline-block;
+    position: relative;
+    @include vertical-align-middle(absolute);
+}
+.priceWrapper{
+    @include clearfix;
+    display: block;
+    position: relative;
+    border-bottom: 1px solid lighten($grey, 8%);
+}
+.squareWrapper {
+    position: relative;
+    @include display-flex-spread;
+    margin-bottom: 10px;
+}
+.descTitle {
+    padding: 0px 0px 5px 0px;
+    font-size: 12pt;
+    clear: both;
+    font-weight: bold;
+    color: $blue;
+}
+.descLabel {
+    float: left;
+    font-size: 13px;
+    width: 90px;
+    padding-left: 10px;
+    line-height: 28px;
+}
+.descLine{
+    display: block;
+    @include clearfix;
+}
+.descContent {
+    float: left;
+    font-size: 13px;
+    line-height: 28px;
+    font-weight: 600;
+}
+.square{
+    float: left;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    margin-right: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    color: white;
+    &.squareCam {
+        background-image: url('../../images/equipment/mobile/squareCam.png');
+        .squareCamText {
+            padding: 4px;
+            line-height: 48pt;
+            font-size: 7pt;
+        }
+    }
+    &.squareScreen {
+        background-image: url('../../images/equipment/mobile/squareScreen.png');
+        .squareScreenText {
+            padding: 6px;
+            line-height: 12pt;
+            font-size: 9pt;
+        }
+    }
+    &.squareRam {
+        background-image: url('../../images/equipment/mobile/squareRam2.png');
+        .squareRamText {
+            padding: 12px 4px;
+            line-height: 9pt;
+            font-size: 7pt;
+        }
+    }
+    &.squareProc {
+        background-image: url('../../images/equipment/mobile/squareProc.png');
+        .squareProcText {
+            padding: 4px;
+            line-height: 9pt;
+            font-size: 7pt;
+        }
+    }
+    &.squareCap {
+        background-image: url('../../images/equipment/mobile/squareCap.png');
+        display: flex;
+        align-items: center;
+        .squareCapText {
+            line-height: 10pt;
+            font-size: 8pt;
+            display: inline-block;
+            width: 100%;
+        }
+    }
+}
+.picContainer{
+    float: right;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    img{
+        display: inline-block;
+        max-height: 302px;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
 
 // INPUT
 // --------------------------------------------------

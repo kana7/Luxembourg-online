@@ -69,6 +69,15 @@
     .logo{
         margin-right: 0px;
     }
+    .typeContainer{
+      text-align: center;  
+    }
+    .priceWrapperRight{
+        font-size: 20px;
+    }
+    .picContainer{
+        margin-bottom: 10px;
+    }
 }
 @include media(tab){
     .container-wrapper{
@@ -245,6 +254,12 @@
                 padding: 20px 0 10px;
             }
         }
+    }
+    .descSubWrapperRight, .descSubWrapperLeft{
+        width: 50%;
+    }
+    .descSubWrapperRight{
+        padding-left: 20px;
     }
 }
 
@@ -616,7 +631,18 @@
     .section-height-extention{
         height: 450px;
     }
+    
+    .picContainer, .rightWrapper{
+        width: 50%;
+    }
+    .descSubWrapperRight{
+        padding-left: 0;
+    }
+    .picContainer{
+        text-align: right;
+    }
 }
+
 
 @include viewport(range, $min: 1056, $max: 1302){
     #offers-section div[class^=phone-]{

@@ -2773,6 +2773,202 @@ span[class^=icon-] {
     font-weight: 600;
     padding-left: 15px; }
 
+#mobileDetail {
+  border: 1px solid #d4d4d4;
+  background-color: #fff;
+  margin-top: 15px;
+  padding: 25px 30px; }
+  #mobileDetail:before {
+    content: "";
+    display: table; }
+  #mobileDetail:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.descWrapper:before, .imageWrapper:before {
+  content: "";
+  display: table; }
+.descWrapper:after, .imageWrapper:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.descWrapper {
+  margin-top: 45px; }
+
+.os {
+  display: inline-block;
+  float: right; }
+
+.typeContainer {
+  font-size: 30pt;
+  color: #00529c;
+  margin-bottom: 20px;
+  position: relative; }
+
+.descSubWrapperLeft {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  float: left; }
+
+.descSubWrapperRight {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  float: right; }
+
+.qmkMobile {
+  position: relative;
+  display: inline-block;
+  color: #004994;
+  margin-left: 5px; }
+
+.rightWrapper {
+  display: inline-block;
+  float: left;
+  width: 100%; }
+
+.priceWrapperRight {
+  display: inline-block;
+  position: relative;
+  float: right;
+  text-align: right;
+  font-size: 26pt;
+  color: #e96021;
+  padding: 11px 0px; }
+
+.priceWrapperLeft {
+  display: inline-block;
+  position: relative;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.priceWrapper {
+  display: block;
+  position: relative;
+  border-bottom: 1px solid #d4d4d4; }
+  .priceWrapper:before {
+    content: "";
+    display: table; }
+  .priceWrapper:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.squareWrapper {
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 10px; }
+
+.descTitle {
+  padding: 0px 0px 5px 0px;
+  font-size: 12pt;
+  clear: both;
+  font-weight: bold;
+  color: #004994; }
+
+.descLabel {
+  float: left;
+  font-size: 13px;
+  width: 90px;
+  padding-left: 10px;
+  line-height: 28px; }
+
+.descLine {
+  display: block; }
+  .descLine:before {
+    content: "";
+    display: table; }
+  .descLine:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.descContent {
+  float: left;
+  font-size: 13px;
+  line-height: 28px;
+  font-weight: 600; }
+
+.square {
+  float: left;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  margin-right: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  color: white; }
+  .square.squareCam {
+    background-image: url("../../images/equipment/mobile/squareCam.png"); }
+    .square.squareCam .squareCamText {
+      padding: 4px;
+      line-height: 48pt;
+      font-size: 7pt; }
+  .square.squareScreen {
+    background-image: url("../../images/equipment/mobile/squareScreen.png"); }
+    .square.squareScreen .squareScreenText {
+      padding: 6px;
+      line-height: 12pt;
+      font-size: 9pt; }
+  .square.squareRam {
+    background-image: url("../../images/equipment/mobile/squareRam2.png"); }
+    .square.squareRam .squareRamText {
+      padding: 12px 4px;
+      line-height: 9pt;
+      font-size: 7pt; }
+  .square.squareProc {
+    background-image: url("../../images/equipment/mobile/squareProc.png"); }
+    .square.squareProc .squareProcText {
+      padding: 4px;
+      line-height: 9pt;
+      font-size: 7pt; }
+  .square.squareCap {
+    background-image: url("../../images/equipment/mobile/squareCap.png");
+    display: flex;
+    align-items: center; }
+    .square.squareCap .squareCapText {
+      line-height: 10pt;
+      font-size: 8pt;
+      display: inline-block;
+      width: 100%; }
+
+.picContainer {
+  float: right;
+  width: 100%;
+  text-align: center;
+  position: relative; }
+  .picContainer img {
+    display: inline-block;
+    max-height: 302px;
+    max-width: 100%;
+    width: auto;
+    height: auto; }
+
 .input-white {
   font-size: 15pt;
   font-weight: 600;
@@ -3844,7 +4040,16 @@ footer {
     font-size: 13px; }
 
   .logo {
-    margin-right: 0px; } }
+    margin-right: 0px; }
+
+  .typeContainer {
+    text-align: center; }
+
+  .priceWrapperRight {
+    font-size: 20px; }
+
+  .picContainer {
+    margin-bottom: 10px; } }
 @media screen and (min-width: 672px) {
   .container-wrapper {
     width: 640px; }
@@ -4009,7 +4214,13 @@ footer {
     #mobileType .gallery-cell {
       width: 25%; }
       #mobileType .gallery-cell .mobile-container {
-        padding: 20px 0 10px; } }
+        padding: 20px 0 10px; }
+
+  .descSubWrapperRight, .descSubWrapperLeft {
+    width: 50%; }
+
+  .descSubWrapperRight {
+    padding-left: 20px; } }
 @media screen and (min-width: 1056px) {
   #mobileType .flickity-prev-next-button {
     height: 35px; }
@@ -4333,7 +4544,16 @@ footer {
     text-align: right !important; }
 
   .section-height-extention {
-    height: 450px; } }
+    height: 450px; }
+
+  .picContainer, .rightWrapper {
+    width: 50%; }
+
+  .descSubWrapperRight {
+    padding-left: 0; }
+
+  .picContainer {
+    text-align: right; } }
 @media screen and (min-width: 1056px) and (max-width: 1302px) {
   #offers-section div[class^=phone-] {
     padding: 0 5px; }

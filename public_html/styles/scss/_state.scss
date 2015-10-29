@@ -607,6 +607,15 @@
     .tab-adjust-2{
         margin: 40px 0px;
     }
+    .finance-list{
+        line-height: none;
+    }
+    .repondeur-list{
+        text-align: right !important;
+    }
+    .section-height-extention{
+        height: 450px;
+    }
 }
 
 @include viewport(range, $min: 1056, $max: 1302){
@@ -624,6 +633,16 @@
     }
     .offer-item-blue .offer-price div, .offer-item-orange .offer-price div{
         left: 122px;
+    }
+    .finance-list{
+        p{
+            margin: 5px 0;
+        }
+    }
+    .repondeur-list{
+        p{
+            margin: 7px 0;
+        }
     }
 }
 

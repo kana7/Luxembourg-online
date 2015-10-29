@@ -172,7 +172,22 @@ span[class^=icon-]
     }
 }
 
-
+.finance-list{
+    text-align: left;
+    line-height: 20px;
+    li{
+        display: block;
+    }
+} 
+.repondeur-list {
+    font-size: 14.5px;
+    line-height: 25px;
+    text-align: left;
+    .btn-outline-white{
+        margin-top: 15px;
+        padding: 7px 35px;
+    }
+}
 .section-price{
     display: inline-block;
     position: relative;
@@ -1419,6 +1434,9 @@ footer
         top: 1px;
         left: 0;
         font-size: 28px;
+    }
+    .active{
+        font-weight: bold;
     }
 }
 

@@ -4220,7 +4220,11 @@ footer {
     width: 50%; }
 
   .descSubWrapperRight {
-    padding-left: 20px; } }
+    padding-left: 20px; }
+
+  .rightWrapper {
+    display: block;
+    width: 75%; } }
 @media screen and (min-width: 1056px) {
   #mobileType .flickity-prev-next-button {
     height: 35px; }
@@ -4547,6 +4551,7 @@ footer {
     height: 450px; }
 
   .picContainer, .rightWrapper {
+    display: block;
     width: 50%; }
 
   .descSubWrapperRight {

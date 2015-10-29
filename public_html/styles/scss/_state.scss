@@ -261,6 +261,10 @@
     .descSubWrapperRight{
         padding-left: 20px;
     }
+    .rightWrapper{
+        display: block;
+        width: 75%;
+    }
 }
 
 @include media(desk){
@@ -633,6 +637,7 @@
     }
     
     .picContainer, .rightWrapper{
+        display: block;
         width: 50%;
     }
     .descSubWrapperRight{

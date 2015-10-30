@@ -246,6 +246,9 @@
             }
         }
     }
+    .pdf-list-extended{
+        height: 200px;
+    }
 }
 
 @include media(desk){
@@ -615,6 +618,9 @@
     }
     .section-height-extention{
         height: 450px;
+    }
+    .hotcity-link{
+        @include vertical-align-middle;
     }
 }
 

@@ -1802,6 +1802,28 @@ header {
   .sub-menu a {
     display: block; }
 
+.plan-title {
+  padding: 20px 0;
+  margin: 0 !important; }
+
+.map {
+  padding: 40px 0px 30px 0; }
+  .map .row [class^=desk-] {
+    padding: 0px 10px 10px 0; }
+
+.boxmap {
+  border: 1px solid;
+  min-height: 325px; }
+  .boxmap h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600; }
+  .boxmap li {
+    display: block;
+    padding: 6px 20px; }
+  .boxmap span {
+    margin-right: 5px; }
+
 .logo {
   position: relative;
   display: inline-block;
@@ -4009,7 +4031,10 @@ footer {
     #mobileType .gallery-cell {
       width: 25%; }
       #mobileType .gallery-cell .mobile-container {
-        padding: 20px 0 10px; } }
+        padding: 20px 0 10px; }
+
+  .pdf-list-extended {
+    height: 200px; } }
 @media screen and (min-width: 1056px) {
   #mobileType .flickity-prev-next-button {
     height: 35px; }
@@ -4333,7 +4358,15 @@ footer {
     text-align: right !important; }
 
   .section-height-extention {
-    height: 450px; } }
+    height: 450px; }
+
+  .hotcity-link {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); } }
 @media screen and (min-width: 1056px) and (max-width: 1302px) {
   #offers-section div[class^=phone-] {
     padding: 0 5px; }

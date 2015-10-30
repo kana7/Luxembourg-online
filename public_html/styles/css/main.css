@@ -1802,6 +1802,28 @@ header {
   .sub-menu a {
     display: block; }
 
+.plan-title {
+  padding: 20px 0;
+  margin: 0 !important; }
+
+.map {
+  padding: 40px 0px 30px 0; }
+  .map .row [class^=desk-] {
+    padding: 0px 10px 10px 0; }
+
+.boxmap {
+  border: 1px solid;
+  min-height: 325px; }
+  .boxmap h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600; }
+  .boxmap li {
+    display: block;
+    padding: 6px 20px; }
+  .boxmap span {
+    margin-right: 5px; }
+
 .logo {
   position: relative;
   display: inline-block;
@@ -1913,6 +1935,25 @@ header {
     #offers-section .flickity-page-dots .dot.is-selected, #equipement-section .flickity-page-dots .dot.is-selected {
       background: #fff;
       border: 2px solid #004994; }
+
+#mobileType {
+  height: 115px;
+  width: 100%; }
+  #mobileType .gallery-cell {
+    height: 100%;
+    width: 100%;
+    padding: 0 10px; }
+  #mobileType .mobile-container {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    padding: 11px 0 10px; }
+  #mobileType .brandType {
+    height: 75%; }
+  #mobileType img {
+    height: 100%;
+    width: auto;
+    max-width: 100%; }
 
 #services {
   padding: 18px 0;
@@ -2265,11 +2306,19 @@ span[class^=icon-] {
     font-size: 21px;
     padding: 17px 50px; }
 
-.finance-list li {
-  display: block; }
+.finance-list {
+  text-align: left;
+  line-height: 20px; }
+  .finance-list li {
+    display: block; }
 
-.repondeur-list li {
-  line-height: 1.5em; }
+.repondeur-list {
+  font-size: 14.5px;
+  line-height: 25px;
+  text-align: left; }
+  .repondeur-list .btn-outline-white {
+    margin-top: 15px;
+    padding: 7px 35px; }
 
 .section-price {
   display: inline-block;
@@ -2965,85 +3014,41 @@ span[class^=icon-] {
         margin-right: 25px;
         font-size: 16px; }
 
-.offer-item-blue, .offer-item-orange {
-  /*&.up-flat{
-      border-radius: 2px 2px 6px 6px;
-      .item-body{
-          padding: 20px 0;
-          &>li:not(:last-child){
-              border: none;
-          }
-          &>li{
-              display: block;
-              padding: 0;
-              text-align: center !important;
-          }
-      }
-      .main-image{
-          padding: 0 60px !important;
-          margin-bottom: 15px;
-          img{width: 100%; height: auto;}
-      }
-      .thumbnails{
-          margin-bottom: 25px;
-      }
-      .thumbnails-wrapper{
-          height: auto;
-          width: 60%;
-          margin: 0 auto;
-          @include display-flex-center;
-          .thumb{
-              display: inline-block;
-              float: left;
-              width: 50px;
-              height: 25px;
-              border: 1px solid $grey;
-              border-radius: 2px;
-              text-align: center;
-              margin-left: 5px;
-          }
-          img{
-              display: inline-block;
-              @include vertical-align-middle;
-              max-width: 45px;
-              max-height: 20px;
-          }
-      }
-      .item-name{
-          margin-bottom: 25px;
-      }
-      .main{
-          font-size: 21px;
-          font-weight: 800;
-          margin-bottom: 5px;
-      }
-      .sub{
-          font-size: 16px;
-          color: darken($dark-grey, 15%);
-          font-weight: 600;
-      }
-      .description-list>li{
-          display: block;
-          margin-bottom: 6px;
-          color: $dark-grey;
-          line-height: 19px;
-      }
-      .label{
-          color: darken($dark-grey, 5%);
-          font-size: 15px;
-          font-weight: 800;
-      }
-      .info{
-          font-size: 14px;
-          font-weight: 400;
-      }
-  }
-  &.up-flat:not(.offer-item-orange){
-      border-color: $grey;
-  }*/ }
-
 #equipement-section {
   padding-bottom: 40px; }
+
+#mobileType {
+  background-color: #fff;
+  border: 1px solid #dadada;
+  border-radius: 2px;
+  text-align: center;
+  padding: 0; }
+  #mobileType .gallery-cell {
+    cursor: pointer; }
+    #mobileType .gallery-cell .active-border {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      height: 5px;
+      width: 100%;
+      background-color: #004994; }
+    #mobileType .gallery-cell.selected .mobile-name {
+      color: #004994;
+      font-weight: 800; }
+    #mobileType .gallery-cell .mobile-name {
+      display: inline-block;
+      margin-top: 6px;
+      width: 100%;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600; }
+  #mobileType .flickity-prev-next-button {
+    background: none; }
+    #mobileType .flickity-prev-next-button .arrow {
+      fill: #004994; }
+
+.flickity-prev-next-button:focus {
+  box-shadow: none; }
 
 .equipement-item-blue, .equipement-item-orange {
   background-color: #fff;
@@ -3925,9 +3930,6 @@ footer {
       left: 50px; }
     #slider-contents .flickity-prev-next-button.next {
       right: 50px; }
-    #slider-contents .flickity-prev-next-button svg {
-      width: 80%;
-      height: 80%; }
   #slider-contents .section-price {
     font-size: 72px;
     margin: 0px 0 20px;
@@ -4022,8 +4024,21 @@ footer {
     .equipement-item-blue .equipement-price {
       margin: 0; }
     .equipement-item-blue .thumbnails {
-      margin-bottom: 30px; } }
+      margin-bottom: 30px; }
+
+  #mobileType {
+    height: 150px; }
+    #mobileType .gallery-cell {
+      width: 25%; }
+      #mobileType .gallery-cell .mobile-container {
+        padding: 20px 0 10px; }
+
+  .pdf-list-extended {
+    height: 200px; } }
 @media screen and (min-width: 1056px) {
+  #mobileType .flickity-prev-next-button {
+    height: 35px; }
+
   #equipement-section {
     padding-top: 70px;
     min-height: 787px; }
@@ -4119,10 +4134,6 @@ footer {
       left: 84px; }
     #slider-contents .section-price span {
       font-size: 21px; }
-
-  .flickity-prev-next-button svg {
-    width: 100% !important;
-    height: 100% !important; }
 
   #slider-ui .buttons {
     width: 95%; }
@@ -4338,7 +4349,24 @@ footer {
     margin: 40px 0; }
 
   .tab-adjust-2 {
-    margin: 40px 0px; } }
+    margin: 40px 0px; }
+
+  .finance-list {
+    line-height: none; }
+
+  .repondeur-list {
+    text-align: right !important; }
+
+  .section-height-extention {
+    height: 450px; }
+
+  .hotcity-link {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); } }
 @media screen and (min-width: 1056px) and (max-width: 1302px) {
   #offers-section div[class^=phone-] {
     padding: 0 5px; }
@@ -4353,7 +4381,13 @@ footer {
     margin-right: 18px; }
 
   .offer-item-blue .offer-price div, .offer-item-orange .offer-price div {
-    left: 122px; } }
+    left: 122px; }
+
+  .finance-list p {
+    margin: 5px 0; }
+
+  .repondeur-list p {
+    margin: 7px 0; } }
 @media screen and (min-width: 1302px) {
   .container-wrapper {
     width: 1280px; }

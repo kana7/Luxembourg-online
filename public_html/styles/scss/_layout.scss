@@ -22,7 +22,6 @@
 .disable-vertical-align-middle{
     @include disable-vertical-align();
 }
-
 .flex-align-spread{
     @include display-flex-spread;
 }
@@ -150,7 +149,32 @@ header{
     }
     a{display: block;}
 }
-
+.plan-title{
+    padding:20px 0;
+    margin: 0 !important;
+}
+.map{
+    padding: 40px 0px 30px 0;
+    .row [class^=desk-]{
+        padding: 0px 10px 10px 0;
+    }
+}
+.boxmap{
+    border: 1px solid;
+    min-height: 325px;    
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    li {
+        display: block;
+        padding: 6px 20px;
+    }
+    span{
+        margin-right: 5px;
+    }
+}
 .logo
 {
     position: relative;
@@ -293,6 +317,29 @@ header{
                 border: 2px solid $blue;
             }
         }
+    }
+}
+#mobileType{
+    height: 115px;
+    width: 100%;
+    .gallery-cell {
+        height: 100%;
+        width: 100%;
+        padding: 0 10px;
+    }
+    .mobile-container{
+        display: inline-block;
+        position: relative;
+        height: 100%;
+        padding: 11px 0 10px;
+    }
+    .brandType{
+        height: 75%;
+    }
+    img{
+        height: 100%;
+        width: auto;
+        max-width: 100%;
     }
 }
 

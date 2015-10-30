@@ -172,11 +172,21 @@ span[class^=icon-]
     }
 }
 
-.finance-list li{
-    display: block;
-}
-.repondeur-list li{
-    line-height: 1.5em;
+.finance-list{
+    text-align: left;
+    line-height: 20px;
+    li{
+        display: block;
+    }
+} 
+.repondeur-list {
+    font-size: 14.5px;
+    line-height: 25px;
+    text-align: left;
+    .btn-outline-white{
+        margin-top: 15px;
+        padding: 7px 35px;
+    }
 }
 .section-price{
     display: inline-block;
@@ -861,86 +871,53 @@ span[class^=icon-]
 .offer-item-orange, .equipement-item-orange{
     @include offer-item($orange);
 }
-.offer-item-blue, .offer-item-orange{
-    /*&.up-flat{
-        border-radius: 2px 2px 6px 6px;
-        .item-body{
-            padding: 20px 0;
-            &>li:not(:last-child){
-                border: none;
-            }
-            &>li{
-                display: block;
-                padding: 0;
-                text-align: center !important;
-            }
-        }
-        .main-image{
-            padding: 0 60px !important;
-            margin-bottom: 15px;
-            img{width: 100%; height: auto;}
-        }
-        .thumbnails{
-            margin-bottom: 25px;
-        }
-        .thumbnails-wrapper{
-            height: auto;
-            width: 60%;
-            margin: 0 auto;
-            @include display-flex-center;
-            .thumb{
-                display: inline-block;
-                float: left;
-                width: 50px;
-                height: 25px;
-                border: 1px solid $grey;
-                border-radius: 2px;
-                text-align: center;
-                margin-left: 5px;
-            }
-            img{
-                display: inline-block;
-                @include vertical-align-middle;
-                max-width: 45px;
-                max-height: 20px;
-            }
-        }
-        .item-name{
-            margin-bottom: 25px;
-        }
-        .main{
-            font-size: 21px;
-            font-weight: 800;
-            margin-bottom: 5px;
-        }
-        .sub{
-            font-size: 16px;
-            color: darken($dark-grey, 15%);
-            font-weight: 600;
-        }
-        .description-list>li{
-            display: block;
-            margin-bottom: 6px;
-            color: $dark-grey;
-            line-height: 19px;
-        }
-        .label{
-            color: darken($dark-grey, 5%);
-            font-size: 15px;
-            font-weight: 800;
-        }
-        .info{
-            font-size: 14px;
-            font-weight: 400;
-        }
-    }
-    &.up-flat:not(.offer-item-orange){
-        border-color: $grey;
-    }*/
-}
 #equipement-section{
     padding-bottom: 40px;
 }
+
+#mobileType{
+    background-color: $white;
+    border: 1px solid lighten($grey, 10%);
+    border-radius: 2px;
+    text-align: center;
+    padding: 0;
+    .gallery-cell{
+        cursor: pointer;
+        .active-border{
+            display: none;
+            position: absolute;
+            bottom: 0;
+            height: 5px;
+            width: 100%;
+            background-color: $blue;
+        }
+        &.selected{
+            .mobile-name{
+                color: $blue;
+                font-weight: 800;
+            }
+        }
+        .mobile-name{
+            display: inline-block;
+            margin-top: 6px;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+    .flickity-prev-next-button {
+        background: none;
+        .arrow {
+            fill: $blue;
+        }
+    }
+}
+
+.flickity-prev-next-button:focus{
+    box-shadow: none;
+}
+
 
 .equipement-item-blue, .equipement-item-orange{
     background-color: $white;

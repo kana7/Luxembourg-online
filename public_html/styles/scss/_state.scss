@@ -142,10 +142,6 @@
             height: 55px;
             &.previous{left: 50px;}
             &.next{right: 50px;}
-            svg{
-                width: 80%;
-                height: 80%;
-            }
         }
         .section-price{
             font-size: 72px;
@@ -241,9 +237,26 @@
             margin-bottom: 30px;
         }
     }
+    #mobileType{
+        height: 150px;
+        .gallery-cell {
+            width: 25%;
+            .mobile-container{
+                padding: 20px 0 10px;
+            }
+        }
+    }
+    .pdf-list-extended{
+        height: 200px;
+    }
 }
 
 @include media(desk){
+    #mobileType{
+        .flickity-prev-next-button{
+            height: 35px;
+        }
+    }
     #equipement-section{
         padding-top: 70px;
         min-height: 787px;
@@ -347,12 +360,6 @@
             span{
                 font-size: 21px;
             }
-        }
-    }
-    .flickity-prev-next-button {
-        svg{
-            width: 100% !important;
-            height: 100% !important;
         }
     }
     #slider-ui{
@@ -603,6 +610,18 @@
     .tab-adjust-2{
         margin: 40px 0px;
     }
+    .finance-list{
+        line-height: none;
+    }
+    .repondeur-list{
+        text-align: right !important;
+    }
+    .section-height-extention{
+        height: 450px;
+    }
+    .hotcity-link{
+        @include vertical-align-middle;
+    }
 }
 
 @include viewport(range, $min: 1056, $max: 1302){
@@ -620,6 +639,16 @@
     }
     .offer-item-blue .offer-price div, .offer-item-orange .offer-price div{
         left: 122px;
+    }
+    .finance-list{
+        p{
+            margin: 5px 0;
+        }
+    }
+    .repondeur-list{
+        p{
+            margin: 7px 0;
+        }
     }
 }
 

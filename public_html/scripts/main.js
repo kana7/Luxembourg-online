@@ -219,7 +219,6 @@ var ClientSpace = (function () {
         $clientSpace.removeClass('is-visible');
     };
     var _showForm = function (element) {
-        alert(element.attr('data-id'));
         $clientMenuItem.removeClass('active');
         $forms.removeClass('is-visible');
         $formGroup.find('#' + element.attr('data-id') + '').addClass('is-visible');

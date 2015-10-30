@@ -70,7 +70,7 @@
         margin-right: 0px;
     }
     .typeContainer{
-      text-align: center;  
+        text-align: center;  
     }
     .priceWrapperRight{
         font-size: 20px;
@@ -264,6 +264,9 @@
     .rightWrapper{
         display: block;
         width: 75%;
+    }
+    .pdf-list-extended{
+        height: 200px;
     }
 }
 
@@ -635,7 +638,10 @@
     .section-height-extention{
         height: 450px;
     }
-    
+    .hotcity-link{
+        @include vertical-align-middle;
+    }
+
     .picContainer, .rightWrapper{
         display: block;
         width: 50%;

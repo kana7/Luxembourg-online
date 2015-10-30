@@ -1,16 +1,39 @@
-
+var temp;
 // ON PAGE READY
 $(function () {
     MenuMobile.init();
     ClientSpace.init();
     if ($('.searchMenu:not(.mobile)')) {
-        equipementFilter.init();
+        EquipementFilter.init();
+    }
+    if ($('.dropdown')) {
+        $('.dropdown').each(function () {
+            temp = new DropDown($(this));
+            temp.init();
+        });
     }
 });
 
 
+var DropDown = function (element) {
+    var $dropdown = element;
+    var $dropButton = $dropdown.children('[data-trigger]');
+    var $hiddenContainer = $dropdown.children(':not([data-trigger])');
+
+    this.init = function () {
+        _bindEvents();
+    };
+    var _bindEvents = function () {
+        $dropButton.on('click', _triggerDrop.bind(this));
+    };
+    var _triggerDrop = function () {
+        $dropButton.toggleClass('is-active');
+        $hiddenContainer.toggleClass('is-visible');
+    };
+};
+
 // Permet de gérer l'affichage dans les pages équipements
-var equipementFilter = (function () {
+var EquipementFilter = (function () {
     var $document = $('html');
     var $search = $('.searchMenu:not(.mobile)');
     var $searchMenuButton = $search.children('button');
@@ -41,7 +64,7 @@ var equipementFilter = (function () {
             }
         });
     };
-    
+
     var _toggleMenu = function () {
         flag = "0";
         $searchMenu.toggleClass('is-visible');

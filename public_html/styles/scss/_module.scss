@@ -2026,3 +2026,33 @@ footer
         }
     }
 }
+
+.question{
+    display: block;
+    line-height: 20px;
+    color: $blue;
+    font-size: 15px;
+    .question_q{
+        border-bottom: 2px solid lighten($grey, 10%);
+        padding: 20px 0;
+        
+        &.is-active{
+            font-weight: 600;
+        }
+    }
+}
+.answer {
+    padding: 10px;
+    font-size: 0.9em;
+    background-color: #e7e9ec;
+    margin: 0;
+    a{
+        text-decoration: underline;
+    }
+}
+
+.dropdown{
+    &>[data-trigger]{
+        cursor: pointer;
+    }
+}

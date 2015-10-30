@@ -539,3 +539,15 @@ footer
         display: inline-block;
     }
 }
+
+// JS MODULE
+// -------------------------------------------------
+
+.dropdown{
+    &>:not([data-trigger]){
+        display: none;
+        &.is-visible{
+            display: block;
+        }
+    }
+}

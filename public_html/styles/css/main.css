@@ -2129,6 +2129,11 @@ footer {
   #contact span {
     display: inline-block; }
 
+.dropdown > :not([data-trigger]) {
+  display: none; }
+  .dropdown > :not([data-trigger]).is-visible {
+    display: block; }
+
 body, .mobile-side-menu, #offers-section, .menu-links-wrapper {
   background-color: #fff; }
 
@@ -3987,6 +3992,28 @@ footer {
     .equipement-price .price span {
       font-weight: 600;
       font-size: 0.41em; }
+
+.question {
+  display: block;
+  line-height: 20px;
+  color: #004994;
+  font-size: 15px; }
+  .question .question_q {
+    border-bottom: 2px solid #dadada;
+    padding: 20px 0; }
+    .question .question_q.is-active {
+      font-weight: 600; }
+
+.answer {
+  padding: 10px;
+  font-size: 0.9em;
+  background-color: #e7e9ec;
+  margin: 0; }
+  .answer a {
+    text-decoration: underline; }
+
+.dropdown > [data-trigger] {
+  cursor: pointer; }
 
 @media screen and (max-width: 1301px) {
   .header-icon {

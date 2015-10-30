@@ -1975,6 +1975,9 @@ header {
 .section-padding {
   padding: 60px 0 40px; }
 
+.padding {
+  padding: 40px 0; }
+
 .section-layout {
   position: relative;
   display: block;
@@ -2129,6 +2132,11 @@ footer {
   #contact span {
     display: inline-block; }
 
+.location-section .row > [class^=phone-]:first-child {
+  padding-right: 20px; }
+.location-section .row > [class^=phone-]:last-child {
+  padding-left: 20px; }
+
 .dropdown > :not([data-trigger]) {
   display: none; }
   .dropdown > :not([data-trigger]).is-visible {
@@ -2172,6 +2180,12 @@ svg:not(:root) {
 
 .background-lightgrey {
   background-color: #f8f8f8; }
+
+.background-border {
+  border: 1px solid #d4d4d4;
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 25px; }
 
 .background-lightblue {
   background-color: #eff4f7; }
@@ -4011,6 +4025,13 @@ footer {
   margin: 0; }
   .answer a {
     text-decoration: underline; }
+
+.shop-location {
+  font-size: 18px; }
+  .shop-location h3 {
+    text-align: center; }
+  .shop-location ul li {
+    display: block; }
 
 .dropdown > [data-trigger] {
   cursor: pointer; }

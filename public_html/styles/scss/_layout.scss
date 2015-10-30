@@ -382,6 +382,9 @@ header{
 .section-padding{
     padding: 60px 0 40px;
 }
+.padding{
+    padding: 40px 0;
+}
 .section-layout{
     position: relative;
 
@@ -537,6 +540,17 @@ footer
     span
     {
         display: inline-block;
+    }
+}
+
+// CONTACT PAGE
+// -------------------------------------------------
+.location-section{
+    .row>[class^=phone-]:first-child{
+        padding-right: 20px;
+    }
+    .row>[class^=phone-]:last-child{
+        padding-left: 20px;
     }
 }
 

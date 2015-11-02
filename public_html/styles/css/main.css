@@ -4123,7 +4123,8 @@ h2.contact-title {
     padding: 9px 30px 8px; }
 
 .input-group {
-  margin-bottom: 15px; }
+  margin-bottom: 20px;
+  }
   .input-group * {
     display: block; }
   .input-group input, .input-group textarea {
@@ -4178,7 +4179,7 @@ h2.contact-title {
   display: inline-block;
   position: relative;
   top: 16px;
-  padding-left: 20px; }
+  }
 
 .dropdown > [data-trigger] {
   cursor: pointer; }

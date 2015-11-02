@@ -341,45 +341,59 @@
                                             <label for="">Nom*</label>
                                             <input type="text" />
                                         </div>
+                                    </div>
+                                    <div class="right-container phone-12 tab-6">
+                                        <div class="input-group">
+                                            <label for="">Prénom*</label>
+                                            <input type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="left-container phone-12 tab-6">
                                         <div class="input-group">
                                             <label for="">Adresse*</label>
                                             <input type="text" />
                                         </div>
+                                    </div>
+                                    <div class="right-container phone-12 tab-6">
+                                        <div class="input-group">
+                                            <label for="">Code postal*</label>
+                                            <input type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="left-container phone-12 tab-6">
                                         <div class="input-group">
                                             <label for="">Localité*</label>
                                             <input type="text" />
                                         </div>
+                                    </div>
+                                    <div class="right-container phone-12 tab-6">
+                                        <div class="input-group">
+                                            <label for="">Téléphone</label>
+                                            <input type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="left-container phone-12 tab-6">
                                         <div class="input-group">
                                             <label for="">E-mail</label>
                                             <input type="text" />
                                         </div>
                                     </div>
-                                    <div class="right-container pull-right phone-12 tab-6">
-                                        <div class="input-group">
-                                            <label for="">Prénom*</label>
-                                            <input type="text" />
-                                        </div>
-                                        <div class="input-group">
-                                            <label for="">Code Postal*</label>
-                                            <input type="text" />
-                                        </div>
-                                        <div class="input-group">
-                                            <label for="">Téléphone</label>
-                                            <input type="text" />
-                                        </div>
+                                    <div class="right-container phone-12 tab-6">
                                         <div class="input-group">
                                             <label for="">Mobile</label>
                                             <input type="text" />
-                                        </div> 
+                                        </div>
                                     </div>
-                                    <div class="clearfix">
-                                        <div style="padding-right: 20px;" class="input-group file phone-6">
+                                    <div class="left-container phone-12 tab-6">
+                                        <div class="input-group file">
                                             <input type="file" class="custom-file-input" />
                                             <ul>
                                                 <li></li>
                                             </ul>
                                         </div>
-                                        <span class="input-file-info">Taille maximale : 5 Mo</span>
+                                    </div>
+                                    <div class="right-container phone-12 tab-6">
+                                        <span class="input-file-info hidden-phone">Taille maximale : 5 Mo</span>
                                     </div>
                                 </div>
                                 <div class="contact-form-mess pull-right phone-12 desk-6">
@@ -550,7 +564,7 @@
             $(function () {
                 $('.custom-file-input').on('change', function () {
                     $('.input-group.file ul').find('li').remove();
-                    $('.input-group.file ul').append('<li>' + this.value.replace("C:\\fakepath\\", "")+ '</li>');
+                    $('.input-group.file ul').append('<li>' + this.value.replace("C:\\fakepath\\", "") + '</li>');
                 });
             });
         </script>

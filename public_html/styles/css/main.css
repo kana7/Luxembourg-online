@@ -2001,7 +2001,7 @@ header {
 #dispo .input-white {
   width: 75%;
   height: 45px; }
-#dispo .btn-orange {
+#dispo .btn-orange, #dispo .input-group .custom-file-input::before, .input-group #dispo .custom-file-input::before {
   position: relative;
   margin-top: 10px; }
 
@@ -2589,6 +2589,7 @@ span[class^=icon-] {
 
 .btn-blue,
 .btn-orange,
+.input-group .custom-file-input::before,
 .btn-white,
 .btn-outline-white,
 .btn-outline-black,
@@ -2617,6 +2618,7 @@ span[class^=icon-] {
   user-select: none; }
   .btn-blue:focus,
   .btn-orange:focus,
+  .input-group .custom-file-input:focus::before,
   .btn-white:focus,
   .btn-outline-white:focus,
   .btn-outline-black:focus,
@@ -2624,7 +2626,9 @@ span[class^=icon-] {
     outline: 0; }
   .btn-blue:hover, .btn-blue:focus,
   .btn-orange:hover,
+  .input-group .custom-file-input:hover::before,
   .btn-orange:focus,
+  .input-group .custom-file-input:focus::before,
   .btn-white:hover,
   .btn-white:focus,
   .btn-outline-white:hover,
@@ -2670,7 +2674,7 @@ span[class^=icon-] {
   text-shadow: 0 2px 5px #404040;
   margin: 0; }
 
-.btn-orange {
+.btn-orange, .input-group .custom-file-input::before {
   color: #fff;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e75e0a+0,d8520a+100 */
   background: #e75e0a;
@@ -4097,6 +4101,85 @@ h2.contact-title {
   margin-top: 30px;
   height: 300px; }
 
+.contact-form-info, .contact-form-mess {
+  font-size: 14px; }
+  .contact-form-info h3, .contact-form-mess h3 {
+    font-size: 1.3em;
+    font-weight: 800;
+    margin: 0 0 20px; }
+
+.contact-form-info {
+  padding-right: 0px;
+  margin-bottom: 15px; }
+  .contact-form-info .left-container {
+    padding-right: 0px; }
+  .contact-form-info .right-container {
+    padding-left: 0px; }
+
+.contact-form-mess {
+  padding-left: 0px; }
+  .contact-form-mess .btn-blue {
+    font-size: 1.1em;
+    padding: 9px 30px 8px; }
+
+.input-group {
+  margin-bottom: 15px; }
+  .input-group * {
+    display: block; }
+  .input-group input, .input-group textarea {
+    width: 100%;
+    border-radius: 4px;
+    border: none; }
+  .input-group label {
+    color: #8b8b8b;
+    font-size: 1.1em;
+    margin-bottom: 10px; }
+  .input-group input[type="text"] {
+    height: 35px;
+    padding-left: 10px;
+    background-color: #f8f8f8;
+    -webkit-box-shadow: inset 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: inset 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: inset 0 1px 5px 1px rgba(0, 0, 0, 0.2); }
+  .input-group textarea {
+    border: none;
+    min-height: 183px;
+    resize: none;
+    padding: 10px;
+    -webkit-box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2); }
+  .input-group .custom-file-input:focus {
+    outline: none; }
+  .input-group .custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+    display: none; }
+    .input-group .custom-file-input::-webkit-file-upload-button:focus {
+      outline: none; }
+  .input-group .custom-file-input::before {
+    content: 'Joindre un fichier';
+    width: 100%;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -o-box-shadow: none;
+    -ms-box-shadow: none;
+    padding: 9px 0px 8px; }
+    .input-group .custom-file-input::before:focus {
+      outline: none; }
+  .input-group.file ul {
+    margin-top: 10px; }
+
+.input-file-info {
+  display: inline-block;
+  position: relative;
+  top: 16px;
+  padding-left: 20px; }
+
 .dropdown > [data-trigger] {
   cursor: pointer; }
 
@@ -4345,7 +4428,12 @@ h2.contact-title {
     text-align: left;
     margin-bottom: 0; }
   .location-section .pull-right {
-    text-align: right; } }
+    text-align: right; }
+
+  .contact-form-info .left-container {
+    padding-right: 20px; }
+  .contact-form-info .right-container {
+    padding-left: 20px; } }
 @media screen and (min-width: 1056px) {
   #mobileType .flickity-prev-next-button {
     height: 35px; }
@@ -4523,7 +4611,7 @@ h2.contact-title {
     font-size: 12pt !important; }
   #dispo .input-white {
     height: 48px; }
-  #dispo .btn-orange {
+  #dispo .btn-orange, #dispo .input-group .custom-file-input::before, .input-group #dispo .custom-file-input::before {
     font-size: 15px; }
 
   .right-orientation .row,
@@ -4694,7 +4782,14 @@ h2.contact-title {
   .location-section .row > [class^=phone-]:last-child {
     padding-left: 20px; }
   .location-section .row > [class^=phone-]:not(:last-child) {
-    margin-bottom: 0px; } }
+    margin-bottom: 0px; }
+
+  .contact-form-info {
+    padding-right: 30px;
+    margin-bottom: 0px; }
+
+  .contact-form-mess {
+    padding-left: 30px; } }
 @media screen and (min-width: 1056px) and (max-width: 1302px) {
   #offers-section div[class^=phone-] {
     padding: 0 5px; }

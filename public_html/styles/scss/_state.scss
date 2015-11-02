@@ -277,6 +277,14 @@
             text-align: right;
         }
     }
+    .contact-form-info{
+        .left-container{
+            padding-right: 20px;
+        }
+        .right-container{
+            padding-left: 20px;
+        }
+    }
 }
 
 @include media(desk){
@@ -671,6 +679,13 @@
         .row>[class^=phone-]:not(:last-child){
             margin-bottom: 0px;
         }
+    }
+    .contact-form-info{
+        padding-right: 30px;
+        margin-bottom: 0px;
+    }
+    .contact-form-mess{
+        padding-left: 30px;
     }
 }
 

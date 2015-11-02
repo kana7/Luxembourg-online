@@ -330,68 +330,76 @@
             </section>
             <section class="section-shadow padding">
                 <div class="container-wrapper">
-                    <h2 class="contact-title">Formulaire de contact</h2>
-                    <div>
-                        <form action="">
-                            <div>
-                                <h3>Vos coordonnées</h3>
-                                <div class="left-container">
-                                    <div class="input-group">
-                                        <label for="">Nom*</label>
-                                        <input type="text" />
+                    <div class="row">
+                        <h2 class="contact-title">Formulaire de contact</h2>
+                        <div class="background-border clearfix">
+                            <form action="">
+                                <div class="contact-form-info phone-12 desk-6">
+                                    <h3>Vos coordonnées</h3>
+                                    <div class="left-container phone-12 tab-6">
+                                        <div class="input-group">
+                                            <label for="">Nom*</label>
+                                            <input type="text" />
+                                        </div>
+                                        <div class="input-group">
+                                            <label for="">Adresse*</label>
+                                            <input type="text" />
+                                        </div>
+                                        <div class="input-group">
+                                            <label for="">Localité*</label>
+                                            <input type="text" />
+                                        </div>
+                                        <div class="input-group">
+                                            <label for="">E-mail</label>
+                                            <input type="text" />
+                                        </div>
                                     </div>
-                                    <div class="input-group">
-                                        <label for="">Adresse*</label>
-                                        <input type="text" />
+                                    <div class="right-container pull-right phone-12 tab-6">
+                                        <div class="input-group">
+                                            <label for="">Prénom*</label>
+                                            <input type="text" />
+                                        </div>
+                                        <div class="input-group">
+                                            <label for="">Code Postal*</label>
+                                            <input type="text" />
+                                        </div>
+                                        <div class="input-group">
+                                            <label for="">Téléphone</label>
+                                            <input type="text" />
+                                        </div>
+                                        <div class="input-group">
+                                            <label for="">Mobile</label>
+                                            <input type="text" />
+                                        </div> 
                                     </div>
-                                    <div class="input-group">
-                                        <label for="">Localité*</label>
-                                        <input type="text" />
-                                    </div>
-                                    <div class="input-group">
-                                        <label for="">E-mail</label>
-                                        <input type="text" />
+                                    <div class="clearfix">
+                                        <div style="padding-right: 20px;" class="input-group file phone-6">
+                                            <input type="file" class="custom-file-input" />
+                                            <ul>
+                                                <li></li>
+                                            </ul>
+                                        </div>
+                                        <span class="input-file-info">Taille maximale : 5 Mo</span>
                                     </div>
                                 </div>
-                                <div class="right-container">
-                                    <div class="input-group">
-                                        <label for="">Prénom*</label>
+                                <div class="contact-form-mess pull-right phone-12 desk-6">
+                                    <h3>Votre demande</h3>
+                                    <div class="input-group select">
+                                        <label for="">Objet*</label>
                                         <input type="text" />
                                     </div>
                                     <div class="input-group">
-                                        <label for="">Code Postal*</label>
-                                        <input type="text" />
+                                        <label for="">Message*</label>
+                                        <textarea name="" id=""></textarea>
                                     </div>
-                                    <div class="input-group">
-                                        <label for="">Téléphone</label>
-                                        <input type="text" />
-                                    </div>
-                                    <div class="input-group">
-                                        <label for="">Mobile</label>
-                                        <input type="text" />
-                                    </div> 
+                                    <input type="submit" class="btn-blue pull-right" value="Envoyez"/>
                                 </div>
-                                <div class="input-group file">
-                                    <input type="file" />
-                                </div>
-                            </div>
-                            <div>
-                                <h3>Votre demande</h3>
-                                <div class="input-group select">
-                                    <label for="">Prénom*</label>
-                                    <input type="text" />
-                                </div>
-                                <div class="input-group">
-                                    <label for="">Message*</label>
-                                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                                </div>
-                                <input type="submit" class="btn-blue" value="Envoyez"/>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section class="padding background-lightgrey">
+            <section class="padding background-lightgrey section-shadow">
                 <div class="container-wrapper">
                     <div class="contact-details align-center">
                         <div class="title extra-bold">Administration :</div>
@@ -403,7 +411,7 @@
                 </div>
             </section>
             <footer>
-                <div id="social-links" class="iner-shadow">
+                <div id="social-links">
                     <div class="container-wrapper">
                         <div class="row">
                             <div class="text">Rejoignez-nous sur: </div>
@@ -538,6 +546,14 @@
 
         <script src="../scripts/vendor/jquery.min.js"></script>
         <script src="../scripts/main.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $('.custom-file-input').on('change', function () {
+                    $('.input-group.file ul').find('li').remove();
+                    $('.input-group.file ul').append('<li>' + this.value.replace("C:\\fakepath\\", "")+ '</li>');
+                });
+            });
+        </script>
         <script>
             var map;
             var map2;

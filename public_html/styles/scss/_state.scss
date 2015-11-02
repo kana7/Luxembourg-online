@@ -268,6 +268,15 @@
     .pdf-list-extended{
         height: 200px;
     }
+    .location-section{
+        .pull-left{
+            text-align: left;
+            margin-bottom: 0;
+        }
+        .pull-right{
+            text-align: right;
+        }
+    }
 }
 
 @include media(desk){
@@ -651,6 +660,17 @@
     }
     .picContainer{
         text-align: right;
+    }
+    .location-section{
+        .row>[class^=phone-]:first-child{
+            padding-right: 20px;
+        }
+        .row>[class^=phone-]:last-child{
+            padding-left: 20px;
+        }
+        .row>[class^=phone-]:not(:last-child){
+            margin-bottom: 0px;
+        }
     }
 }
 

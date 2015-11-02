@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
     <head>
         <meta charset="utf-8">
@@ -241,7 +241,7 @@
 
             </header>
 
-            <section class="section-layout left-orientation background-lightgrey drop-shadow">
+            <section class="section-layout left-orientation background-lightgrey">
                 <div class="container-wrapper">
                     <div class="row">
                         <div class="phone-12 desk-6">
@@ -261,75 +261,76 @@
                     </div>
                 </div>
             </section>
-            <section class="drop-shadow padding">
+            <section class="section-shadow padding">
                 <div class="container-wrapper">
                     <div class="row">
                         <div class="phone-12 desk-6">
-                            <div class="contact-details">
-                                <div>Téléphone</div>
-                                <div><strong>2799 0000</strong></div>
+                            <div class="contact-details align-center">
+                                <div class="title">Téléphone : </div>
+                                <div style="margin-top: 30px;"><strong style="font-size: 3.6em;">2799 0000</strong></div>
                             </div>
                         </div>
                         <div class="phone-12 desk-6">
-                            <div class="contact-details">
-                                <div>Téléphone</div>
+                            <div class="contact-details align-center">
+                                <div class="title">E-mail : </div>
                                 <ul>
-                                    <li>Commercial : commercial@internet.lu</li>
-                                    <li>Helpdesk : helpdesk@internet.lu</li>
-                                    <li>Compatibilité : compta@internet.lu</li>
+                                    <li>Commercial : <span class="extra-bold">commercial@internet.lu</span></li>
+                                    <li>Helpdesk : <span class="extra-bold">helpdesk@internet.lu</span></li>
+                                    <li>Compatibilité : <span class="extra-bold">compta@internet.lu</span></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="location-section background-lightgrey drop-shadow padding">
+            <section class="location-section background-lightgrey padding">
                 <div class="container-wrapper">
                     <div class="row">
-                        <div class="phone-12 tab-6">
+                        <h2 class="contact-title">Nos boutiques</h2>
+                        <div class="phone-12 desk-6">
                             <div class="shop-location background-border">
                                 <h3>Luxembourg-ville</h3>
                                 <div class="clearfix">
-                                    <ul>
-                                        <li class="bold">Adresse :</li>
+                                    <ul class="pull-left phone-12 tab-6">
+                                        <li class="extra-bold">Adresse :</li>
                                         <li>3, avenue de la Porte-Neuve</li>
                                         <li>L-2227 Luxembourg</li>
                                     </ul>
-                                    <ul>
-                                        <li class="bold">Heures d'ouverture : </li>
+                                    <ul class="pull-right phone-12 tab-6">
+                                        <li class="extra-bold">Heures d'ouverture : </li>
                                         <li>Lu-Ve: 9h30 - 18h30</li>
                                         <li>Sa: 9h00 - 18h00</li>
                                     </ul>
                                 </div>
-                                <div class="googleMap">
+                                <div id="map1" class="googleMap">
                                 </div>
                             </div>
                         </div>
-                        <div class="phone-12 tab-6">
+                        <div class="phone-12 desk-6">
                             <div class="shop-location background-border">
                                 <h3>Dudelange</h3>
                                 <div class="clearfix">
-                                    <ul>
-                                        <li>Adresse :</li>
+                                    <ul class="pull-left phone-12 tab-6">
+                                        <li class="extra-bold">Adresse :</li>
                                         <li>71, av. Grande-Duchesse Charlotte</li>
                                         <li>L-3441 Dudelange</li>
                                     </ul>
-                                    <ul>
-                                        <li>Heures d'ouverture : </li>
+                                    <ul class="pull-right phone-12 tab-6">
+                                        <li class="extra-bold">Heures d'ouverture : </li>
                                         <li>Lu: 13h00 - 18h00</li>
                                         <li>Ma-Sa: 10h00 - 18h00</li>
                                     </ul>
                                 </div>
-                                <div class="googleMap">
+                                <div id="map2" class="googleMap">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="drop-shadow padding">
+            <section class="section-shadow padding">
                 <div class="container-wrapper">
-                    <h2>Formulaire de contact</h2>
+                    <h2 class="contact-title">Formulaire de contact</h2>
                     <div>
                         <form action="">
                             <div>
@@ -390,20 +391,19 @@
                     </div>
                 </div>
             </section>
-            <section class="drop-shadow padding">
+            <section class="padding background-lightgrey">
                 <div class="container-wrapper">
-                    <div class="contact-details">
-                        <div>Administration :</div>
+                    <div class="contact-details align-center">
+                        <div class="title extra-bold">Administration :</div>
                         <ul>
-                            <li>Commercial : commercial@internet.lu</li>
-                            <li>Helpdesk : helpdesk@internet.lu</li>
-                            <li>Compatibilité : compta@internet.lu</li>
+                            <li><span class="extra-bold">Adresse :</span> 14, Av. du X Septembre | L-2550 Luxembourg</li>
+                            <li><span class="extra-bold">Fax :</span> 2799 3555 (commercial) | 45 93 34 (comptabilité)</li>
                         </ul>
                     </div>
                 </div>
             </section>
             <footer>
-                <div id="social-links">
+                <div id="social-links" class="iner-shadow">
                     <div class="container-wrapper">
                         <div class="row">
                             <div class="text">Rejoignez-nous sur: </div>
@@ -538,6 +538,40 @@
 
         <script src="../scripts/vendor/jquery.min.js"></script>
         <script src="../scripts/main.js"></script>
+        <script>
+            var map;
+            var map2;
+            function initMap() {
+                var luxVille = {lat: 49.612368, lng: 6.127969};
+                var dudelange = {lat: 49.480682, lng: 6.085256};
+                map = new google.maps.Map(document.getElementById('map1'), {
+                    center: luxVille,
+                    zoom: 14
+                });
+                var marker = new google.maps.Marker({
+                    position: luxVille,
+                    animation: google.maps.Animation.DROP,
+                    map: map,
+                    title: '3, avenue de la Porte-Neuve'
+                });
+                map2 = new google.maps.Map(document.getElementById('map2'), {
+                    center: dudelange,
+                    zoom: 14
+                });
+                var marker = new google.maps.Marker({
+                    position: dudelange,
+                    animation: google.maps.Animation.DROP,
+                    map: map2,
+                    title: '67 Avenue Grande-Duchesse charlotte'
+                });
+                var trafficLayer = new google.maps.TrafficLayer();
+                trafficLayer.setMap(map);
+                trafficLayer.setMap(map2);
+            }
+        </script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuu7e1_LY895Sdb36SLlyE77QmBZ_5zss&callback=initMap&language=fr">
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

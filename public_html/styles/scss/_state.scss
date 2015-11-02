@@ -36,6 +36,11 @@
             }
         }
     }
+    .group-contact-details{
+        div[class^=phone-]:first-child{
+            margin-bottom: 20px;
+        }
+    }
 }
 @include media(phone){
     .equipement-item-blue, .equipement-item-orange{

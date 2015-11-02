@@ -2097,10 +2097,9 @@ footer
     }
     li{
         display: block;
-        font-size: 1.1em;
+        font-size: 1em;
     }
 }
-
 h2.contact-title {
     margin: 0 0 35px;
     text-align: center;
@@ -2144,7 +2143,7 @@ h2.contact-title {
     *{
         display: block;
     }
-    input, textarea{
+    input, textarea, select{
         width: 100%;
         border-radius: 4px;
         border: none;
@@ -2160,6 +2159,13 @@ h2.contact-title {
         padding-left: 10px;
         background-color: $light-grey;
         @include box-shadow(inset 0 1px 5px 1px rgba(0,0,0,0.20));
+    }
+    select{
+        height: 35px;
+        padding-left: 10px;
+        background-color: $light-grey;
+        @include box-shadow(0 1px 5px 1px rgba(0,0,0,0.20));
+        cursor: pointer;
     }
     textarea{
         border: none;
@@ -2181,6 +2187,7 @@ h2.contact-title {
     .custom-file-input::before {
         content: 'Joindre un fichier';
         @extend .btn-orange;
+        font-size: 1.1em;
         width: 100%;
         @include box-shadow(none);
         padding: 9px 0px 8px;

@@ -110,9 +110,27 @@ svg:not(:root) {
     margin: 20px 0;
     font-weight: 400;
     text-align: center;
+    &[data-trigger]{
+        span[class^=icon]{
+            font-size: 0.75em;
+            @include transform(rotate(0deg));
+            @include transition(transform 0.1s ease-in);
+        }
+        &.is-active{
+            span[class^=icon]{
+                @include transform(rotate(90deg));
+            }
+        }
+    }
+    &[data-trigger]:hover{
+        color: lighten($blue, 10%)
+    }
 }
-.section-title.lowercase{
+.lowercase{
     text-transform: none;
+}
+.uppercase{
+    text-transform: uppercase;
 }
 .section-description{
     font-size: 14px;
@@ -1780,6 +1798,61 @@ footer
         top: 3px;
     }
 }
+.table-tarifs{
+    width: 100%;
+    thead, tbody, tr{
+        width: 100%;
+    }
+    th, td{
+        border-collapse: collapse;
+        text-align: center;
+        padding: 10px 20px;
+        border: 1px solid darken($light-grey, 7%);
+    }
+    thead{
+        th{
+            background-color: $blue;
+            color: $white;
+            border-top: 1px solid $blue;
+            border-bottom: 1px solid $blue;
+            font-size: 1.1em;
+            font-weight: 600;
+            &:first-child{
+                border-left: 1px solid $blue;
+            }
+            &:last-child{
+                border-right: 1px solid $blue;
+            }
+        }
+    }
+    tbody{
+        th,td{
+            font-size: 1.1em;
+            color: $blue;
+        }
+        th{
+            text-align: left;
+            font-weight: 400;
+            background-color: #FFF;
+            width: 20%;
+        }
+        td{
+            color: $dark-grey;
+            font-weight: 400;
+        }
+        tr:nth-child(odd) {
+            background-color: darken($light-grey, 4%);
+        }
+    }
+    tfoot{
+        td{
+            border: none;
+            color: $blue;
+            text-align: left;
+            padding-left: 0;
+        }
+    }
+}
 
 .table-details{
     width: 100%;
@@ -1787,7 +1860,7 @@ footer
         width: 100%;
     }
     tr{
-        border-bottom: 1px solid $grey;
+        border-bottom: 2px solid lighten($grey, 8%);
     }
     td, th{
         border-collapse: collapse;
@@ -1829,7 +1902,6 @@ footer
 }
 
 .pdf-list{
-    /*display: inline-block;*/
     position: relative;
     margin: 40px 0;
     text-align: left;

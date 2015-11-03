@@ -2277,9 +2277,29 @@ svg:not(:root) {
   margin: 20px 0;
   font-weight: 400;
   text-align: center; }
+  .section-subtitle[data-trigger] span[class^=icon] {
+    font-size: 0.75em;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transition: transform 0.1s ease-in;
+    -o-transition: transform 0.1s ease-in;
+    -webkit-transition: transform 0.1s ease-in;
+    transition: transform 0.1s ease-in; }
+  .section-subtitle[data-trigger].is-active span[class^=icon] {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg); }
+  .section-subtitle[data-trigger]:hover {
+    color: #0062c7; }
 
-.section-title.lowercase {
+.lowercase {
   text-transform: none; }
+
+.uppercase {
+  text-transform: uppercase; }
 
 .section-description {
   font-size: 14px;
@@ -3817,12 +3837,51 @@ footer {
     left: 0;
     top: 3px; }
 
+.table-tarifs {
+  width: 100%; }
+  .table-tarifs thead, .table-tarifs tbody, .table-tarifs tr {
+    width: 100%; }
+  .table-tarifs th, .table-tarifs td {
+    border-collapse: collapse;
+    text-align: center;
+    padding: 10px 20px;
+    border: 1px solid #e6e6e6; }
+  .table-tarifs thead th {
+    background-color: #004994;
+    color: #fff;
+    border-top: 1px solid #004994;
+    border-bottom: 1px solid #004994;
+    font-size: 1.1em;
+    font-weight: 600; }
+    .table-tarifs thead th:first-child {
+      border-left: 1px solid #004994; }
+    .table-tarifs thead th:last-child {
+      border-right: 1px solid #004994; }
+  .table-tarifs tbody th, .table-tarifs tbody td {
+    font-size: 1.1em;
+    color: #004994; }
+  .table-tarifs tbody th {
+    text-align: left;
+    font-weight: 400;
+    background-color: #FFF;
+    width: 20%; }
+  .table-tarifs tbody td {
+    color: #818181;
+    font-weight: 400; }
+  .table-tarifs tbody tr:nth-child(odd) {
+    background-color: #eeeeee; }
+  .table-tarifs tfoot td {
+    border: none;
+    color: #004994;
+    text-align: left;
+    padding-left: 0; }
+
 .table-details {
   width: 100%; }
   .table-details thead, .table-details tbody, .table-details tr {
     width: 100%; }
   .table-details tr {
-    border-bottom: 1px solid #c0c0c0; }
+    border-bottom: 2px solid #d4d4d4; }
   .table-details td, .table-details th {
     border-collapse: collapse;
     text-align: left;
@@ -3854,7 +3913,6 @@ footer {
     color: #0062c7; }
 
 .pdf-list {
-  /*display: inline-block;*/
   position: relative;
   margin: 40px 0;
   text-align: left; }

@@ -17,8 +17,14 @@
     }
 }
 @include media(tab){
-    .channels-language-links{
+    .channels-language-links:not(.radio){
         @include display-flex-spread;
+    }
+    .channels-language-links.radio{
+        @include display-flex-center;
+        li{
+            margin: 0 60px;
+        }
     }
     .footer-note {
         margin: 10px 0 35px;

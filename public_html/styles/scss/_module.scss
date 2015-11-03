@@ -2167,6 +2167,17 @@ h2.contact-title {
         @include box-shadow(0 1px 5px 1px rgba(0,0,0,0.20));
         cursor: pointer;
     }
+    .select-arrow select {
+        background: transparent;
+        -webkit-appearance: none;
+    }
+    .select-arrow{
+        display: inline-block;
+        width: 100%;
+        background: url(../../images/Icons/Img/arrow.png) no-repeat;
+        background-size: auto auto;
+        background-position: 97% center;
+    }
     textarea{
         border: none;
         min-height: 183px;

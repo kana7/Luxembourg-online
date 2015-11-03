@@ -3837,6 +3837,10 @@ footer {
     left: 0;
     top: 3px; }
 
+.container-table {
+  width: 100%;
+  overflow-x: auto; }
+
 .table-tarifs {
   width: 100%; }
   .table-tarifs thead, .table-tarifs tbody, .table-tarifs tr {

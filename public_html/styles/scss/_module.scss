@@ -1798,6 +1798,10 @@ footer
         top: 3px;
     }
 }
+.container-table{
+    width: 100%;
+    overflow-x: auto;
+}
 .table-tarifs{
     width: 100%;
     thead, tbody, tr{

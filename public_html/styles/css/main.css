@@ -2277,6 +2277,10 @@ svg:not(:root) {
   margin: 20px 0;
   font-weight: 400;
   text-align: center; }
+  .section-subtitle.divers-subtitle {
+    font-size: 19px; }
+    .section-subtitle.divers-subtitle.is-active {
+      font-weight: 600; }
   .section-subtitle[data-trigger] span[class^=icon] {
     font-size: 0.75em;
     transform: rotate(0deg);

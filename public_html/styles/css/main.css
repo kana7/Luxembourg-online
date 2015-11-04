@@ -1715,7 +1715,8 @@ ul, li {
   right: 0;
   top: 45%;
   width: 125px;
-  z-index: 3; }
+  z-index: 3;
+  }
 
 .white-fixed-option, .blue-fixed-option {
   display: block;
@@ -1824,6 +1825,88 @@ header {
   .boxmap span {
     margin-right: 5px; }
 
+.propos-title {
+  position: relative;
+  padding: 50px 0; }
+  .propos-title span {
+    font-weight: 800; }
+  .propos-title p {
+    color: #004994;
+    font-size: 16px; }
+
+.section-images-text {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.section-images {
+  background-repeat: no-repeat;
+  background-position: bottom; }
+  .section-images h1 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 800;
+    text-shadow: 3px 5px 7px rgba(38, 38, 38, 0.5); }
+  .section-images p {
+    color: white;
+    text-align: justify;
+    line-height: 20px;
+    font-size: 16px;
+    text-shadow: 1px 1px 5px #000000; }
+    .section-images p span {
+      font-weight: 800; }
+  .section-images a {
+    margin-top: 20px;
+    color: white;
+    text-transform: uppercase; }
+
+#anniv {
+  background-image: url("../../images/Divers/A_propos/20ans_672x162px.png");
+  background-color: #004994;
+  background-size: 90% auto;
+  background-position: bottom center; }
+  #anniv h1 {
+    font-size: 75px; }
+
+#fibre {
+  min-height: 480px;
+  background-color: #0E1821; }
+  #fibre h1 {
+    font-size: 50px; }
+
+#valeurs {
+  background-image: url("../../images/Divers/A_propos/nosvaleurs_672x320px.jpg"); }
+  #valeurs h1 {
+    font-size: 45px;
+    margin: 0; }
+
+.section-propos {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.42); }
+  .section-propos p {
+    color: #004994;
+    text-align: justify;
+    line-height: 20px;
+    font-size: 16px; }
+  .section-propos h2 {
+    text-transform: uppercase;
+    font-size: 29px;
+    font-weight: 800;
+    line-height: 32px; }
+
+.history-banner {
+  background-color: #004994; }
+  .history-banner h1 {
+    text-shadow: 3px 5px 7px rgba(38, 38, 38, 0.5);
+    color: white;
+    font-size: 57px;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: 70px 0;
+    margin: 0; }
+
 .logo {
   position: relative;
   display: inline-block;
@@ -1870,9 +1953,36 @@ header {
       height: 100%;
       z-index: 2; }
 
-#slider-contents .gallery-cell {
+#slider-magazine {
+  display: block;
+  position: relative;
+  height: 400px; }
+  #slider-magazine img {
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    width: auto;
+    height: 400px; }
+  #slider-magazine .infos {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 320px; }
+    #slider-magazine .infos a {
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2; }
+  #slider-magazine figcaption {
+    margin: 10px 0; }
+
+#slider-contents .gallery-cell, #slider-magazine .gallery-cell {
   width: 100%; }
-#slider-contents .flickity-page-dots {
+#slider-contents .flickity-page-dots, #slider-magazine .flickity-page-dots {
   width: 100%;
   bottom: -28px;
   padding: 0;
@@ -1880,7 +1990,7 @@ header {
   list-style: none;
   text-align: center;
   line-height: 1; }
-  #slider-contents .flickity-page-dots .dot {
+  #slider-contents .flickity-page-dots .dot, #slider-magazine .flickity-page-dots .dot {
     width: 12px;
     height: 12px;
     background: #818181;
@@ -1888,10 +1998,10 @@ header {
     filter: alpha(opacity=100);
     opacity: 1;
     cursor: pointer; }
-    #slider-contents .flickity-page-dots .dot.is-selected {
+    #slider-contents .flickity-page-dots .dot.is-selected, #slider-magazine .flickity-page-dots .dot.is-selected {
       background: #fff;
       border: 2px solid #004994; }
-#slider-contents .flickity-prev-next-button {
+#slider-contents .flickity-prev-next-button, #slider-magazine .flickity-prev-next-button {
   position: absolute;
   top: 50%;
   width: 44px;
@@ -1904,12 +2014,12 @@ header {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
-  #slider-contents .flickity-prev-next-button:focus {
+  #slider-contents .flickity-prev-next-button:focus, #slider-magazine .flickity-prev-next-button:focus {
     outline: 0;
     box-shadow: none; }
-  #slider-contents .flickity-prev-next-button .arrow {
+  #slider-contents .flickity-prev-next-button .arrow, #slider-magazine .flickity-prev-next-button .arrow {
     fill: #c0c0c0; }
-  #slider-contents .flickity-prev-next-button:hover .arrow {
+  #slider-contents .flickity-prev-next-button:hover .arrow, #slider-magazine .flickity-prev-next-button:hover .arrow {
     fill: #818181; }
 
 #offers-section .gallery-cell, #equipement-section .gallery-cell {
@@ -2352,10 +2462,6 @@ span[class^=icon-] {
   bottom: 100%;
   left: 0;
   z-index: 1;
-  transform: translateX(0px);
-  -webkit-transform: translateX(0px);
-  -ms-transform: translateX(0px);
-  -o-transform: translateX(0px);
   background-color: #fff;
   -webkit-transition: -webkit-transform 0.4s ease;
   /* Changed here */
@@ -4034,7 +4140,16 @@ footer {
         padding: 20px 0 10px; }
 
   .pdf-list-extended {
-    height: 200px; } }
+    height: 200px; }
+
+  #anniv {
+    background-image: url("../../images/Divers/A_propos/20ans_1056x162px.png"); }
+
+  #fibre {
+    background-image: url("../../images/Divers/A_propos/slider_1302x330px.jpg"); }
+
+  #valeurs {
+    background-image: url("../../images/Divers/A_propos/nosvaleurs_1056x300px.jpg"); } }
 @media screen and (min-width: 1056px) {
   #mobileType .flickity-prev-next-button {
     height: 35px; }
@@ -4366,7 +4481,33 @@ footer {
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-    transform: translateY(-50%); } }
+    transform: translateY(-50%); }
+
+  #anniv {
+    background-image: url("../../images/Divers/A_propos/20ans_1920x200px.png"); }
+    #anniv h1 {
+      margin-top: 131px;
+      font-size: 80px; }
+
+  #fibre {
+    background-image: url("../../images/Divers/A_propos/notre_reseau_1920x480px.jpg"); }
+    #fibre h1 {
+      margin-left: 57px;
+      margin-top: 111px;
+      font-size: 60px; }
+
+  #valeurs {
+    height: 360px;
+    background-image: url("../../images/Divers/A_propos/nosvaleurs_1920x360px.jpg"); }
+    #valeurs h1 {
+      margin-right: 57px;
+      margin-top: 111px;
+      font-size: 60px; }
+
+  .section-propos {
+    height: 200px !important; }
+    .section-propos h2 {
+      margin-top: 80px; } }
 @media screen and (min-width: 1056px) and (max-width: 1302px) {
   #offers-section div[class^=phone-] {
     padding: 0 5px; }

@@ -28,6 +28,7 @@ function natSort(as, bs) {
     }
     return a.length - b.length;
 }
+var nonDispoTemplate = '<div class="not-dispo">Offre <br />indisponible <br />à votre adresse</div>';
 
 var obj = {},
         streetList = {},
@@ -36,6 +37,199 @@ var obj = {},
         nbrTimeout = "",
         vhash = "",
         _cp = "", _ville = "", _rue = "", _nbr = "";
+
+function checkDispo(homeId) {
+    if (homeId !== undefined || homeId !== null || homeId !== '') {
+        $.ajax({
+            url: "http://shop.internet.lu/Scripts/sql.exe?SqlDB=LOLShop&Sql=FOServiceMap:FOServiceListNew.phs&_HomeId=" + homeId,
+            dataType: 'jsonp',
+            success: function (data) {
+                obj = data;
+                ab = ["", "", "", "", "", "", ""];
+
+                if (obj.Service[6]) {  // Dégroupage DSL
+                    articleObj = obj.Service[6].article;
+                    if (obj.Service[6] && $(articleObj[0]).size() > 0) {//entry exists
+                        for (i in articleObj) {
+                            for (b in articleObj) {
+                                if (articleObj[b].idObject == "5257" && ab[0] == "") {// LOL DSL 24
+                                    ab[0] = articleObj[b].idObject;
+                                }
+                            }
+
+                        }
+
+                    }
+                }
+                if (obj.Service[2]) { // D�groupage Fibre
+                    articleObj = obj.Service[2].article;
+                    if (obj.Service[2] && $(articleObj[0]).size() > 0) {//entry exists
+                        for (i in articleObj) {
+                            for (b in articleObj) {
+                                if (articleObj[b].idObject == "5272" && ab[1] == "") {//Fiber 30 dégroupé
+                                    ab[1] = articleObj[b].idObject;
+                                }
+                                if (articleObj[b].idObject == "5275" && ab[2] == "") {//Fiber 100 dégroupé
+                                    ab[2] = articleObj[b].idObject;
+                                }
+                                if (articleObj[b].idObject == "5276" && ab[2] == "") {//Fiber 200 dégroupé
+                                    ab[3] = articleObj[b].idObject;
+                                }
+                            }
+
+                        }
+                    }
+                }
+                if (obj.Service[8]) { // D�groupage VDSL
+                    articleObj = obj.Service[8].article;
+                    if (obj.Service[8] && $(articleObj[0]).size() > 0) {//entry exists
+                        for (i in articleObj) {
+                            for (b in articleObj) {
+                                if (articleObj[b].idObject == "5273" && ab[1] == "") {//Fiber 30
+                                    ab[1] = articleObj[b].idObject;
+                                }
+                                if (articleObj[b].idObject == "5274" && ab[2] == "") {//Fiber 100 1 paire
+                                    ab[2] = articleObj[b].idObject;
+                                }
+                                if (articleObj[b].idObject == "5336" && ab[2] == "") {//Fiber 100 2 paires
+                                    ab[2] = articleObj[b].idObject;
+                                }
+                            }
+
+                        }
+                    }
+                }
+                if (obj.Service[5]) { // Revente Fibre
+                    articleObj = obj.Service[5].article;
+                    if (obj.Service[5] && $(articleObj[0]).size() > 0) {//entry exists
+                        for (i in articleObj) {
+                            for (b in articleObj) {
+                                if (articleObj[b].idObject == "5262" && ab[1] == "") {//Fiber 30
+                                    ab[1] = articleObj[b].idObject;
+                                }
+                                if (articleObj[b].idObject == "5263" && ab[2] == "") {//Fiber 100
+                                    ab[2] = articleObj[b].idObject;
+                                }
+                                if (articleObj[b].idObject == "5264" && ab[3] == "") {//Fiber 200
+                                    ab[3] = articleObj[b].idObject;
+                                }
+                            }
+
+                        }
+
+                    }
+                }
+                if (obj.Service[4]) { // Revente VDSL 30
+                    articleObj = obj.Service[4].article;
+                    if (obj.Service[4] && $(articleObj[0]).size() > 0) {//entry exists
+                        for (i in articleObj) {
+                            for (b in articleObj) {
+                                if (articleObj[b].idObject == "5262" && ab[1] == "") {//Fiber 30
+                                    ab[1] = articleObj[b].idObject;
+                                }
+
+                            }
+
+                        }
+                    }
+                }
+                if (obj.Service[41]) { // Revente VDSL 100 1 paire
+                    articleObj = obj.Service[41].article;
+                    if (obj.Service[41] && $(articleObj[0]).size() > 0) {//entry exists
+                        for (i in articleObj) {
+                            for (b in articleObj) {
+                                if (articleObj[b].idObject == "5263" && ab[2] == "") {//Fiber 100 1 paire
+                                    ab[2] = articleObj[b].idObject;
+                                }
+                            }
+
+                        }
+                    }
+                }
+                if (obj.Service[42]) { // Revente VDSL 100 2 paires
+                    articleObj = obj.Service[42].article;
+                    if (obj.Service[42] && $(articleObj[0]).size() > 0) {//entry exists
+                        for (i in articleObj) {
+                            for (b in articleObj) {
+                                if (articleObj[b].idObject == "5263" && ab[2] == "") {//Fiber 100 2 paires
+                                    ab[2] = articleObj[b].idObject;
+                                }
+                            }
+
+                        }
+                    }
+                }
+                if (obj.Service[3]) {
+                    articleObj = obj.Service[3].article;
+                    if (obj.Service[3] && $(articleObj[0]).size() > 0) {//entry exists
+                        for (i in articleObj) {
+                            for (b in articleObj) {
+                                if (articleObj[b].idObject == "2188" && ab[4] == "") {//LOL KOMPLETT Start
+                                    ab[4] = articleObj[b].idObject;
+                                }
+                                if (articleObj[b].idObject == "2189" && ab[5] == "") {//LOL KOMPLETT Run
+                                    ab[5] = articleObj[b].idObject;
+                                }
+                                if (articleObj[b].idObject == "2190" && ab[6] == "") {//LOL KOMPLETT Professionnal
+                                    ab[6] = articleObj[b].idObject;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                console.log(ab.toString().length);
+
+                if (ab.toString().length == 6) {
+                    console.log('je suis une patate');
+                    $(".k24").show();
+                    $(".ik30").show();
+                    $(".ik100").show();
+                    $(".ik200").show();
+                } else {
+                    if (ab[0] != "") {
+                        $(".k24").show();
+                    } else {
+                        $(".ik24").show();
+                    }
+                    if (ab[1] != "") {
+                        $(".k30").show();
+                    } else {
+                        $(".ik30").show();
+                    }
+                    if (ab[2] != "") {
+                        $(".k100").show();
+                    } else {
+                        $(".ik100").show();
+                    }
+                    if (ab[3] != "") {
+                        $(".k200").show();
+                    } else {
+                        $(".ik200").show();
+                    }
+                    if (ab[4] != "") {
+                        $(".kstart").show();
+                    } else {
+                        $(".ikstart").show();
+                    }
+                    if (ab[5] != "") {
+                        $(".krun").show();
+                    } else {
+                        $(".ikrun").show();
+                    }
+                    if (ab[6] != "") {
+                        $(".kpro").show();
+                    } else {
+                        $(".ikpro").show();
+                    }
+                }
+                //$("#adressLabel").html($("#numero option:selected").text() + "," + $("#rue option:selected").text() + "," + $("#zipcode").val() + " " + $("#ville option:selected").text());
+                //$(".btnVerif").fadeIn();
+            }
+        });
+    }
+}
+;
 
 $(function () {
     try {
@@ -47,16 +241,16 @@ $(function () {
             _ville = vhash[1];
             _rue = vhash[2];
             _nbr = vhash[3];
-            $("#zipcode").val(_cp);
+            //$("#zipcode").val(_cp);
 
-            setTimeout(function () {
-                $("#verifyCp").click();
-                /*
-                 setTimeout(function(){
-                 $(".btnVerif").click();
-                 },200);
-                 */
-            }, 10);
+            /*setTimeout(function () {
+             $("#verifyCp").click();
+             setTimeout(function(){
+             $(".btnVerif").click();
+             },200);
+             
+             }, 10);*/
+            checkDispo(_nbr);
         } else {
             $("#zipcode").val("");
         }
@@ -205,195 +399,6 @@ $(function () {
             alert("Veuillez entrer votre numéro de rue pour continuer..");
         }
     });
-
-    var checkDispo = function () {
-        if ($('#numero').val() !== "") {
-            $.ajax({
-                url: "http://shop.internet.lu/Scripts/sql.exe?SqlDB=LOLShop&Sql=FOServiceMap:FOServiceListNew.phs&_HomeId=" + $("#numero").val(),
-                dataType: 'jsonp',
-                success: function (data) {
-                    obj = data;
-                    ab = ["", "", "", "", "", "", ""];
-
-                    if (obj.Service[6]) {  // Dégroupage DSL
-                        articleObj = obj.Service[6].article;
-                        if (obj.Service[6] && $(articleObj[0]).size() > 0) {//entry exists
-                            for (i in articleObj) {
-                                for (b in articleObj) {
-                                    if (articleObj[b].idObject == "5257" && ab[0] == "") {// LOL DSL 24
-                                        ab[0] = articleObj[b].idObject;
-                                    }
-                                }
-
-                            }
-
-                        }
-                    }
-                    if (obj.Service[2]) { // D�groupage Fibre
-                        articleObj = obj.Service[2].article;
-                        if (obj.Service[2] && $(articleObj[0]).size() > 0) {//entry exists
-                            for (i in articleObj) {
-                                for (b in articleObj) {
-                                    if (articleObj[b].idObject == "5272" && ab[1] == "") {//Fiber 30 dégroupé
-                                        ab[1] = articleObj[b].idObject;
-                                    }
-                                    if (articleObj[b].idObject == "5275" && ab[2] == "") {//Fiber 100 dégroupé
-                                        ab[2] = articleObj[b].idObject;
-                                    }
-                                    if (articleObj[b].idObject == "5276" && ab[2] == "") {//Fiber 200 dégroupé
-                                        ab[3] = articleObj[b].idObject;
-                                    }
-                                }
-
-                            }
-                        }
-                    }
-                    if (obj.Service[8]) { // D�groupage VDSL
-                        articleObj = obj.Service[8].article;
-                        if (obj.Service[8] && $(articleObj[0]).size() > 0) {//entry exists
-                            for (i in articleObj) {
-                                for (b in articleObj) {
-                                    if (articleObj[b].idObject == "5273" && ab[1] == "") {//Fiber 30
-                                        ab[1] = articleObj[b].idObject;
-                                    }
-                                    if (articleObj[b].idObject == "5274" && ab[2] == "") {//Fiber 100 1 paire
-                                        ab[2] = articleObj[b].idObject;
-                                    }
-                                    if (articleObj[b].idObject == "5336" && ab[2] == "") {//Fiber 100 2 paires
-                                        ab[2] = articleObj[b].idObject;
-                                    }
-                                }
-
-                            }
-                        }
-                    }
-                    if (obj.Service[5]) { // Revente Fibre
-                        articleObj = obj.Service[5].article;
-                        if (obj.Service[5] && $(articleObj[0]).size() > 0) {//entry exists
-                            for (i in articleObj) {
-                                for (b in articleObj) {
-                                    if (articleObj[b].idObject == "5262" && ab[1] == "") {//Fiber 30
-                                        ab[1] = articleObj[b].idObject;
-                                    }
-                                    if (articleObj[b].idObject == "5263" && ab[2] == "") {//Fiber 100
-                                        ab[2] = articleObj[b].idObject;
-                                    }
-                                    if (articleObj[b].idObject == "5264" && ab[3] == "") {//Fiber 200
-                                        ab[3] = articleObj[b].idObject;
-                                    }
-                                }
-
-                            }
-
-                        }
-                    }
-                    if (obj.Service[4]) { // Revente VDSL 30
-                        articleObj = obj.Service[4].article;
-                        if (obj.Service[4] && $(articleObj[0]).size() > 0) {//entry exists
-                            for (i in articleObj) {
-                                for (b in articleObj) {
-                                    if (articleObj[b].idObject == "5262" && ab[1] == "") {//Fiber 30
-                                        ab[1] = articleObj[b].idObject;
-                                    }
-
-                                }
-
-                            }
-                        }
-                    }
-                    if (obj.Service[41]) { // Revente VDSL 100 1 paire
-                        articleObj = obj.Service[41].article;
-                        if (obj.Service[41] && $(articleObj[0]).size() > 0) {//entry exists
-                            for (i in articleObj) {
-                                for (b in articleObj) {
-                                    if (articleObj[b].idObject == "5263" && ab[2] == "") {//Fiber 100 1 paire
-                                        ab[2] = articleObj[b].idObject;
-                                    }
-                                }
-
-                            }
-                        }
-                    }
-                    if (obj.Service[42]) { // Revente VDSL 100 2 paires
-                        articleObj = obj.Service[42].article;
-                        if (obj.Service[42] && $(articleObj[0]).size() > 0) {//entry exists
-                            for (i in articleObj) {
-                                for (b in articleObj) {
-                                    if (articleObj[b].idObject == "5263" && ab[2] == "") {//Fiber 100 2 paires
-                                        ab[2] = articleObj[b].idObject;
-                                    }
-                                }
-
-                            }
-                        }
-                    }
-                    if (obj.Service[3]) {
-                        articleObj = obj.Service[3].article;
-                        if (obj.Service[3] && $(articleObj[0]).size() > 0) {//entry exists
-                            for (i in articleObj) {
-                                for (b in articleObj) {
-                                    if (articleObj[b].idObject == "2188" && ab[4] == "") {//LOL KOMPLETT Start
-                                        ab[4] = articleObj[b].idObject;
-                                    }
-                                    if (articleObj[b].idObject == "2189" && ab[5] == "") {//LOL KOMPLETT Run
-                                        ab[5] = articleObj[b].idObject;
-                                    }
-                                    if (articleObj[b].idObject == "2190" && ab[6] == "") {//LOL KOMPLETT Professionnal
-                                        ab[6] = articleObj[b].idObject;
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    if (ab.toString().length == 6) {
-                        $(".k24").show();
-                        $(".ik30").show();
-                        $(".ik100").show();
-                        $(".ik200").show();
-                    } else {
-                        if (ab[0] != "") {
-                            $(".k24").show();
-                        } else {
-                            $(".ik24").show();
-                        }
-                        if (ab[1] != "") {
-                            $(".k30").show();
-                        } else {
-                            $(".ik30").show();
-                        }
-                        if (ab[2] != "") {
-                            $(".k100").show();
-                        } else {
-                            $(".ik100").show();
-                        }
-                        if (ab[3] != "") {
-                            $(".k200").show();
-                        } else {
-                            $(".ik200").show();
-                        }
-                        if (ab[4] != "") {
-                            $(".kstart").show();
-                        } else {
-                            $(".ikstart").show();
-                        }
-                        if (ab[5] != "") {
-                            $(".krun").show();
-                        } else {
-                            $(".ikrun").show();
-                        }
-                        if (ab[6] != "") {
-                            $(".kpro").show();
-                        } else {
-                            $(".ikpro").show();
-                        }
-                    }
-                    //$("#adressLabel").html($("#numero option:selected").text() + "," + $("#rue option:selected").text() + "," + $("#zipcode").val() + " " + $("#ville option:selected").text());
-                    //$(".btnVerif").fadeIn();
-                }
-            });
-        }
-    };
 
     $("#btnVerif").click(function () {
         console.log($("#numero").val());

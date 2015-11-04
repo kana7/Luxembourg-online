@@ -51,7 +51,7 @@
     .table-details td, .table-details th{
         font-size: 12px;
     }
-
+    
     .content-container .offer-item-blue .info .data, .offer-item-orange .info .data{
         padding-left: 40px;
     }
@@ -104,7 +104,7 @@
                 margin: 20px -11px 5px;
             }
         }
-
+        
     }
     #offers-section{
         div[class^=phone-]{
@@ -134,7 +134,7 @@
         p.bottom-details{
             font-size: 10pt;
         }
-
+        
         .flickity-prev-next-button {
             position: absolute;
             top: 50%;
@@ -249,6 +249,15 @@
     .pdf-list-extended{
         height: 200px;
     }
+    #anniv{
+        background-image: url("../../images/Divers/A_propos/20ans_1056x162px.png");
+    }
+    #fibre{
+        background-image: url("../../images/Divers/A_propos/slider_1302x330px.jpg");
+    }
+    #valeurs{
+        background-image: url("../../images/Divers/A_propos/nosvaleurs_1056x300px.jpg");
+    }
 }
 
 @include media(desk){
@@ -308,7 +317,7 @@
             top: 64px;
         }
     }
-
+    
     .bottom-menu-header-links{
         float: left;
     }
@@ -425,7 +434,7 @@
     .bottom-info{
         font-size: 8pt;
     }
-
+    
     .price-blue span, .price-orange span{
         font-size: 9.5pt;
     }
@@ -436,10 +445,10 @@
             font-size: 14pt;
             top: -17px;
             left: 68px;
-
+            
         }
     }
-
+    
     .price-blue{
         font-size: 34pt;
         div{
@@ -448,7 +457,7 @@
             left: 55px;
         }
     }
-
+    
     #dispo{
         h3{
             font-size: 12pt !important;
@@ -460,14 +469,14 @@
             font-size: 15px;
         }
     }
-
+    
     .right-orientation,
     .left-orientation{
         .row{
             position: relative;
         }
     }
-
+    
     .right-orientation .row > div:first-child,
         .left-orientation .row > div:last-child{
         left: 0;
@@ -493,7 +502,7 @@
     .left-orientation .row>div:last-child{
         text-align: left;
     }
-
+    
     .right-orientation .row > div:last-child, .left-orientation .row > div:last-child{
         @include vertical-align-middle;
         height: auto;
@@ -514,12 +523,12 @@
             }
         }
     }
-
+    
     .content-container .row>div[class^=phone-]{
         @include vertical-align-middle;
         height: auto;
     }
-
+    
     .section-layout img{
         height: 100% !important;
     }
@@ -530,7 +539,7 @@
         font-size: 30px;
         line-height: 40px;
     }
-
+    
     .bottom-link{
         margin: 18px 0;
         font-size: 19px;
@@ -540,7 +549,7 @@
             font-size: 17px;
         }
     }
-
+    
     #social-links{
         padding: 20px 0 7px;
     }
@@ -553,7 +562,7 @@
     #social-links nav, #contact ul{
         width: 75%;
     }
-
+    
     .help-link{
         font-size: 12.5pt;
         span[class^=icon-]{
@@ -564,7 +573,7 @@
             &.icon-right-arrow{
                 margin-left: 5px;
                 font-size: 14pt;
-
+                
             }
         }
     }
@@ -621,6 +630,36 @@
     }
     .hotcity-link{
         @include vertical-align-middle;
+    }
+    #anniv{
+        background-image: url("../../images/Divers/A_propos/20ans_1920x200px.png");
+        h1{
+            margin-top: 131px;
+            font-size: 80px;
+        }
+    }
+    #fibre{
+        background-image: url("../../images/Divers/A_propos/notre_reseau_1920x480px.jpg");
+        h1{
+            margin-left: 57px;
+            margin-top: 111px;
+            font-size: 60px;
+        }
+    }
+    #valeurs{
+        height: 360px;
+        background-image: url("../../images/Divers/A_propos/nosvaleurs_1920x360px.jpg");
+        h1{
+            margin-right: 57px;
+            margin-top: 111px;
+            font-size: 60px;
+        }
+    }
+    .section-propos{
+        height: 200px !important;
+        h2{
+            margin-top: 80px;
+        }
     }
 }
 
@@ -687,9 +726,9 @@
             margin-right: 65px;
         }
     }
-
+    
     .offer-item-orange .offer-price div, .offer-item-blue .offer-price div{left: 162px;}
-
+    
     #slider-contents{
         .title{
             font-size: 37pt;
@@ -760,7 +799,7 @@
             }
         }
     }
-
+    
     .section-title {
         font-size: 40px;
         line-height: 52px;
@@ -783,10 +822,10 @@
             font-size: 14pt;
             top: -17px;
             left: 68px;
-
+            
         }
     }
-
+    
     .price-blue{
         font-size: 34pt;
         div{
@@ -815,7 +854,7 @@
             &.icon-right-arrow{
                 margin-left: 7px;
                 font-size: 15pt;
-
+                
             }
         }
     }

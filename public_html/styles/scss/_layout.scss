@@ -8,7 +8,7 @@
     padding-right: ($gridGutterWidth/2);
     padding-left: ($gridGutterWidth/2);
     height: 100%;
-
+    
     @include clearfix;
 }
 
@@ -40,11 +40,11 @@
     position: absolute;
     top: 0;
     right: 0;
-
+    
     display: block;
     height: 60% !important;
     width: auto !important;
-
+    
 }
 
 // FIXED ELEMENT
@@ -76,9 +76,9 @@ header{
 #top-menu-header
 {
     position: relative;
-
+    
     display: block;
-
+    
     background-color: $blue;
 }
 #bottom-menu-header
@@ -175,13 +175,102 @@ header{
         margin-right: 5px;
     }
 }
+.propos-title{
+    position: relative;
+    padding: 50px 0;
+    span{
+        font-weight: 800;
+    }
+    p{
+        color: #004994;
+        font-size: 16px;
+    }
+}
+.section-images-text{
+    @include vertical-align-middle;
+}
+.section-images{
+    h1{
+        color: white;
+        text-transform: uppercase;
+        font-weight: 800;
+        text-shadow: 3px 5px 7px rgba(38, 38, 38, 0.5);
+    }
+    p{
+        color: white;
+        text-align: justify;
+        line-height: 20px;        
+        font-size: 16px;
+        text-shadow: 1px 1px 5px #000000;
+        span{
+            font-weight: 800;
+        }
+    }
+    a{
+        margin-top: 20px;
+        color: white;
+        text-transform: uppercase;
+    }
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+#anniv{
+    background-image: url("../../images/Divers/A_propos/20ans_672x162px.png");
+    background-color: #004994;
+    h1{
+        font-size: 75px;
+    }
+    background-size: 90% auto;
+    background-position: bottom center;
+}
+#fibre{
+    min-height: 480px;
+    background-color: #0E1821;
+    h1{
+        font-size: 50px;
+    }
+}
+#valeurs{
+    background-image: url("../../images/Divers/A_propos/nosvaleurs_672x320px.jpg");
+    h1{
+        font-size: 45px;
+        margin: 0;
+    }
+}
+.section-propos{   
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.42);
+    p{
+        color: #004994;
+        text-align: justify;
+        line-height: 20px;        
+        font-size: 16px;
+    }
+    h2{
+        text-transform: uppercase;
+        font-size: 29px;
+        font-weight: 800;
+        line-height: 32px;
+    }
+}
+.history-banner{
+    background-color: #004994;
+    h1{
+        text-shadow: 3px 5px 7px rgba(38, 38, 38, 0.5);
+        color: white;
+        font-size: 57px;
+        text-transform: uppercase;
+        font-weight: 800;
+        padding: 70px 0;
+        margin: 0;
+    }
+}
 .logo
 {
     position: relative;
-
+    
     display: inline-block;
     float: left;
-
+    
     width: auto;
     height: 100%;
     margin-right: 30px;
@@ -204,7 +293,7 @@ header{
         height: 100%;
         width: 100%;
         z-index: 1;
-
+        
     }
 }
 #slider-contents{
@@ -231,10 +320,40 @@ header{
             height: 100%;
             z-index: 2;
         }
-    }
-
+    }    
 }
-#slider-contents{
+#slider-magazine{
+    display: block;
+    position: relative;
+    height: 400px;
+    img{
+        margin: 0 auto;
+        display: block;
+        position: relative;
+        width: auto;
+        height: 400px;
+    }
+    .infos{
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 320px;
+        a{
+            display: block;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+    }
+    figcaption{
+        margin: 10px 0;
+    }
+}
+#slider-contents, #slider-magazine{
     .gallery-cell{
         width: 100%;
     }
@@ -253,7 +372,7 @@ header{
             border-radius: 50%;
             filter: alpha(opacity=100);
             opacity: 1;
-
+            
             cursor: pointer;
             &.is-selected{
                 background: $white;
@@ -310,7 +429,7 @@ header{
             border-radius: 50%;
             filter: alpha(opacity=100);
             opacity: 1;
-
+            
             cursor: pointer;
             &.is-selected{
                 background: $white;
@@ -348,19 +467,19 @@ header{
 #services
 {
     padding: 18px 0;
-
+    
     text-align: center;
-
+    
     .row>div[class^=phone-]{
         padding: 0 7px;
         text-align: center;
     }
-
+    
     .service
     {
         display: inline-block;
         position: relative;
-
+        
         width: 100%;
         max-width: 320px;
         height: 235px;
@@ -368,12 +487,12 @@ header{
         background-repeat:no-repeat;
         background-position:center;
         background-size: cover;
-
+        
         &#loldsl{background-image: url(../../images/index/320px/Offres/LOL_DSL.jpg);}
         &#mobiles{background-image: url(../../images/index/320px/Offres/iphone6.jpg);}
         &#installation{background-image: url(../../images/index/320px/Offres/Offre_TV.jpg);}
         &#dispo{background-image: url(../../images/index/320px/Offres/Recherche_Offre.jpg);}
-
+        
         .infos
         {
             position: absolute;
@@ -396,7 +515,7 @@ header{
     .btn-orange
     {
         position: relative;
-
+        
         margin-top: 10px;
     }
 }
@@ -408,13 +527,13 @@ header{
 }
 .section-layout{
     position: relative;
-
+    
     display: block;
     padding: 30px 0;
     width: 100%;
     height: auto;
     text-align: center;
-
+    
     .container-wrapper, .row, .row>div{
         position: relative;
         height: 100%;
@@ -456,7 +575,7 @@ footer
 #footer-links, #document-links
 {
     /*display: inline-block;*/
-
+    
     width: 100%;
 }
 
@@ -465,7 +584,7 @@ footer
     padding: 20px 0;
     ul{
         text-align: center;
-
+        
         li{
             display: block;
             width: 100%;
@@ -484,9 +603,9 @@ footer
 #contact ul
 {
     float: right;
-
+    
     width: 100%;
-
+    
     text-align: right;
 }
 
@@ -528,12 +647,12 @@ footer
     {
         display: inline-block;
         float: left;
-
+        
         position: relative;
         bottom: 9px;
-
+        
         display: inline-block;
-
+        
         width: 34px;
         height: 34px;
     }

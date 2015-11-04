@@ -931,12 +931,23 @@ span[class^=icon-]
     font-weight: 600;
     height: 45px;
     margin-top: 5px;
-
+    margin-bottom: 5px;
     color: $dark-grey;
     border: 2px solid lighten($grey, 2%);
     @include box-shadow( 0 2px 4px 0 lighten($black, 15%));
     @include input;
 }
+
+#dispo, #dispoMobile{
+    .input-white.select{
+        display: inline-block;
+        width: 100%;
+        height: 40px;
+        font-size: 1.1em;
+        margin: 10px 0;
+        cursor: pointer;
+    }
+} 
 
 // CONTAINER
 // --------------------------------------------------

@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8" />
-        <title>Luxembourg Online : homepage</title>
+        <title>Homepage : Luxembourg Online</title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -252,19 +252,6 @@
 
             <!--            SLIDER             -->
             <div id="slider">
-                <!--<div id="slider-ui" class="hidden">
-                    <div class="buttons hidden-phone hidden-tab">
-                        <button class="arrow left"><span class="icon-right-arrow"></span></button>
-                        <button class="arrow right"><span class="icon-right-arrow"></span></button>
-                    </div>
-                    <ul class="dots">
-                        <li class="active"><span class="icon-dot-stroke-slider"></span></li>
-                        <li><span class="icon-dot-slider"></span></li>
-                        <li><span class="icon-dot-slider"></span></li>
-                        <li><span class="icon-dot-slider"></span></li>
-                        <li><span class="icon-dot-slider"></span></li>
-                    </ul>
-                </div>-->
                 <div id="slider-contents" class="main-gallery">
                     <div class="gallery-cell">
                         <div class="infos image-1">
@@ -416,32 +403,34 @@
                                 <div class="infos" style="text-align: center;">
                                     <h3 class="white">Toutes nos offres disponibles
                                         <strong>chez vous</strong> : </h3>
-                                    <form action="">
-                                        <input class="input-white" type="text" placeholder="Code Postal" maxlength="4"/>
-                                        <button type="submit" class="btn-orange">Vérifiez les disponibilités</button>
-                                        <ul class="icons hidden-phone">
-                                            <li>
-                                                <div class="dispo-icon">
-                                                    <span class="icon-internet-ico"></span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="dispo-icon">
-                                                    <span class="icon-telephonie-ico"></span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="dispo-icon">
-                                                    <span class="icon-tv-ico"></span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="dispo-icon">
-                                                    <span class="icon-mobile-ico"></span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </form>
+                                    <input id="zipcode" value class="input-white" type="text" placeholder="Code Postal" maxlength="4"/>
+                                    <select  id="ville" value class="input-white select" name="ville"></select>
+                                    <select id="rue" value class="input-white select" name="rue"></select>
+                                    <select id="numero" value class="input-white select" name="numero"></select>
+                                    <button id="verifyCp" type="button" class="btn-orange btnVerify">Vérifiez les disponibilités</button>
+                                    <button id="btnVerif2" type="button" class="btn-orange btnVerify">Vérifiez les disponibilités</button>
+                                    <ul class="icons hidden-phone">
+                                        <li>
+                                            <div class="dispo-icon">
+                                                <span class="icon-internet-ico"></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="dispo-icon">
+                                                <span class="icon-telephonie-ico"></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="dispo-icon">
+                                                <span class="icon-tv-ico"></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="dispo-icon">
+                                                <span class="icon-mobile-ico"></span>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -658,8 +647,9 @@
         </div>
 
         <script src="scripts/vendor/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/jquery.maskedinput.min.js"></script>
         <script type="text/javascript" src="scripts/vendor/flickity.pkgd.min.js"></script>
-
+        <script type="text/javascript" src="scripts/internetscript.js"></script>
         <script src="scripts/main.js"></script>
 
         <script type="text/javascript">

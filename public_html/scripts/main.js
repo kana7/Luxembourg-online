@@ -210,12 +210,10 @@ var MenuMobile = (function () {
 var ClientSpace = (function () {
     var $clientSpace = $('.popup');
     //var $clientSpacePannel = $clientSpace.find('.white-pannel');
-    var $backgroundClient = $clientSpace.find('.background-client');
     var $clientMenuItem = $clientSpace.find('.client-menu>li');
     var $formGroup = $clientSpace.find('.pannel-forms');
     var $forms = $clientSpace.find('.pannel-forms>form');
     var $openButton = $('.openPopup');
-    var $closeButton =$('.pannel-close');
     var $popupIndex = ['clientSpace','testDispo'];
 
 

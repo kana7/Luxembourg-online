@@ -30,6 +30,23 @@ function natSort(as, bs) {
 }
 var nonDispoTemplate = '<div class="not-dispo">Offre <br />indisponible <br />à votre adresse</div>';
 
+var checkDispoTemplate = "<section id='test-offres'><div class='container-wrapper'><div class='row'><div class='text display-phone phone-12'>Quelles offres sont <br/>disponibles chez vous ?</div><div class='text hidden-phone phone-12 desk-6'><span class='icon-internet-ico'></span>Quelles offres sont disponibles chez vous ?</div><form class='phone-12 desk-6' action=''><input class='input-white' type='text' placeholder='Code Postal'/><button class='btn-orange' type='submit'>Vérifiez les disponibilités</button></form></div></div></section>";
+
+var popuptemplate = '<div id="testDispo" class="popup">' +
+        '<div class="background-client"></div>' +
+        '<div class="white-pannel">' +
+        '<button class="pannel-close"><span class="icon-x-icone"></span></button>' +
+        '<h1>Tester la disponibilité</h1>' +
+        '<input id="zipcode" value class="input-white" type="text" placeholder="Code Postal" maxlength="4"/>' +
+        '<select  id="ville" value class="input-white select" name="ville"></select>' +
+        '<select id="rue" value class="input-white select" name="rue"></select>' +
+        '<select id="numero" value class="input-white select" name="numero"></select>' +
+        '<button id="verifyCp" type="button" class="btn-orange btnVerify">Vérifiez les disponibilités</button>' +
+        '<button id="btnVerif2" type="button" class="btn-orange btnVerify">Vérifiez les disponibilités</button>' +
+        '</div>' +
+        '</div>' +
+        '</div>';
+
 var obj = {},
         streetList = {},
         currRue = "",
@@ -120,7 +137,6 @@ function checkDispo(homeId) {
                                     ab[2] = articleObj[b].idObject;
                                 }
                             }
-
                         }
                     }
                 }
@@ -192,7 +208,7 @@ function checkDispo(homeId) {
                 if (ab[1] == "") {
                     $('.k30').addClass('is-not');
                     $('.k30').prepend(nonDispoTemplate);
-                    
+
                 } else {
                     $('.k30').removeClass('is-not');
                     $('.k30').find('.not-dispo').remove();
@@ -222,6 +238,9 @@ function checkDispo(homeId) {
                 }
                 //$("#adressLabel").html($("#numero option:selected").text() + "," + $("#rue option:selected").text() + "," + $("#zipcode").val() + " " + $("#ville option:selected").text());
                 //$(".btnVerif").fadeIn();
+                if ($('#offers-section')) {
+                    $('#offers-section').after(checkDispoTemplate);
+                }
             }
         });
     }

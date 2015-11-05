@@ -14,7 +14,24 @@ $(function () {
     }
 });
 
+//size of viewport
+function viewport() {
+    var e = window, a = 'inner';
+    if (!('innerWidth' in window)) {
+        a = 'client';
+        e = document.documentElement || document.body;
+    }
+    return {width: e[ a + 'Width' ], height: e[ a + 'Height' ]};
+}
 
+//Déplace l'encart pour tester la disponibilité sur la page accueil
+function moveDispo() {
+    if (viewport().width > 1056) {
+        $('#dispo').parent('.phone-12.tab-6.desk-3.display-tab.display-phone').remove();
+    } else {
+        $('#dispo').parent('.phone-12.tab-6.desk-3.hidden-tab.hidden-phone').remove();
+    }
+}
 var DropDown = function (element) {
     var $dropdown = element;
     var $dropButton = $dropdown.children('[data-trigger]');
@@ -191,13 +208,13 @@ var MenuMobile = (function () {
 })();
 
 var ClientSpace = (function () {
-    var $clientSpace = $('#clientSpace');
+    var $clientSpace = $('#clientSpace, .popup');
     var $clientSpacePannel = $clientSpace.find('.white-pannel');
     var $backgroundClient = $clientSpace.find('.background-client');
     var $clientMenuItem = $clientSpace.find('.client-menu>li');
     var $formGroup = $clientSpace.find('.pannel-forms');
     var $forms = $clientSpace.find('.pannel-forms>form');
-    var $openButton = $('#openClientSpace, #openClientSpaceMobile');
+    var $openButton = $('#openClientSpace, #openClientSpaceMobile, .openPopup');
     var $closeButton = $clientSpace.find('.pannel-close');
 
 

@@ -3192,7 +3192,8 @@ span[class^=icon-] {
   height: 40px;
   font-size: 1.1em;
   margin: 10px 0;
-  cursor: pointer; }
+  cursor: pointer;
+  }
 
 .offer-item-blue, .equipement-item-blue {
   display: block;

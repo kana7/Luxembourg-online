@@ -1,3 +1,41 @@
+var encartDispoTemplate = '<div class="phone-12 tab-6 desk-3">' +
+        '<div id="dispo" class="service">' +
+        '<div class="infos" style="text-align: center;">' +
+        '<h3 class="white">Toutes nos offres disponibles' +
+        '<strong>chez vous</strong> : </h3>' +
+        '<input value name="zipcode" class="input-white" type="text" placeholder="Code Postal" maxlength="4"/>' +
+        '<select name="ville" value class="input-white select"></select>' +
+        '<select name="rue" value class="input-white select"></select>' +
+        '<select name="numero" value class="input-white select numero"></select>' +
+        '<button type="button" class="btn-orange btnVerify verifyCp">Vérifiez les disponibilités</button>' +
+        '<button type="button" class="btn-orange btnVerify btnVerif">Vérifiez les disponibilités</button>' +
+        '<ul class="icons hidden-phone">' +
+        '<li>' +
+        '<div class="dispo-icon">' +
+        '<span class="icon-internet-ico"></span>' +
+        '</div>' +
+        '</li>' +
+        '<li>' +
+        '<div class="dispo-icon">' +
+        '<span class="icon-telephonie-ico"></span>' +
+        '</div>' +
+        '</li>' +
+        '<li>' +
+        '<div class="dispo-icon">' +
+        '<span class="icon-tv-ico"></span>' +
+        '</div>' +
+        '</li>' +
+        '<li>' +
+        '<div class="dispo-icon">' +
+        '<span class="icon-mobile-ico"></span>' +
+        '</div>' +
+        '</li>' +
+        '</ul>' +
+        '</div>' +
+        '</div>' +
+        '</div>';
+
+
 var temp;
 // ON PAGE READY
 $(function () {
@@ -25,11 +63,11 @@ function viewport() {
 }
 
 //Déplace l'encart pour tester la disponibilité sur la page accueil
-function moveDispo() {
+function printDispo() {
     if (viewport().width > 1056) {
-        $('#dispo').parent('.phone-12.tab-6.desk-3.display-tab.display-phone').remove();
+        $('#services .row').append(encartDispoTemplate);
     } else {
-        $('#dispo').parent('.phone-12.tab-6.desk-3.hidden-tab.hidden-phone').remove();
+        $('#services .row').prepend(encartDispoTemplate);
     }
 }
 var DropDown = function (element) {
@@ -214,20 +252,20 @@ var ClientSpace = (function () {
     var $formGroup = $clientSpace.find('.pannel-forms');
     var $forms = $clientSpace.find('.pannel-forms>form');
     var $openButton = $('.openPopup');
-    var $popupIndex = ['clientSpace','testDispo'];
+    var $popupIndex = ['clientSpace', 'testDispo'];
 
 
     var init = function () {
         _bindEvents();
     };
     var _bindEvents = function () {
-        $openButton.on('click', function(){
+        $openButton.on('click', function () {
             _openClientSpace($(this));
         });
-        $('body').on('click','.pannel-close' , function(event){
+        $('body').on('click', '.pannel-close', function (event) {
             _closeClientSpace(event);
         });
-        $('body').on('click', '.background-client' ,function(event){
+        $('body').on('click', '.background-client', function (event) {
             _closeClientSpace(event);
         });
         $clientMenuItem.on('click', function () {
@@ -235,7 +273,7 @@ var ClientSpace = (function () {
         });
     };
     var _openClientSpace = function ($element) {
-        $('#'+$popupIndex[$element.attr('data-popup')]).addClass('is-visible');
+        $('#' + $popupIndex[$element.attr('data-popup')]).addClass('is-visible');
     };
     var _closeClientSpace = function (event) {
         $(event.target).closest('.popup').removeClass('is-visible');

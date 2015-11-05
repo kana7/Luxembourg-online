@@ -399,42 +399,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="phone-12 tab-6 desk-3">
-                            <div id="dispo" class="service">
-                                <div class="infos" style="text-align: center;">
-                                    <h3 class="white">Toutes nos offres disponibles
-                                        <strong>chez vous</strong> : </h3>
-                                    <input value name="zipcode" class="input-white" type="text" placeholder="Code Postal" maxlength="4"/>
-                                    <select name="ville" value class="input-white select"></select>
-                                    <select name="rue" value class="input-white select"></select>
-                                    <select name="numero" value class="input-white select numero"></select>
-                                    <button type="button" class="btn-orange btnVerify verifyCp">Vérifiez les disponibilités</button>
-                                    <button type="button" class="btn-orange btnVerify btnVerif">Vérifiez les disponibilités</button>
-                                    <ul class="icons hidden-phone">
-                                        <li>
-                                            <div class="dispo-icon">
-                                                <span class="icon-internet-ico"></span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="dispo-icon">
-                                                <span class="icon-telephonie-ico"></span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="dispo-icon">
-                                                <span class="icon-tv-ico"></span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="dispo-icon">
-                                                <span class="icon-mobile-ico"></span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -655,6 +619,7 @@
         <script src="scripts/main.js"></script>
 
         <script type="text/javascript">
+            printDispo();
             $(function () {
                 $('.main-gallery').flickity({
                     // options

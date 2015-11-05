@@ -21,7 +21,7 @@
     </head>
 
     <body>
-        <div id="clientSpace">
+        <div id="clientSpace" class="popup">
             <div class="background-client"></div>
             <div class="white-pannel">
                 <button class="pannel-close"><span class="icon-x-icone"></span></button>
@@ -186,7 +186,7 @@
                             </div>
                         </div>
                         <div class="mobile-menu-button">
-                            <button id="openClientSpaceMobile" class="mobile-button-blue">
+                            <button id="openClientSpaceMobile" class="mobile-button-blue openPopup" data-popup="0">
                                 <span class="icon-account-icone"></span>
                             </button>
                             <button class="mobile-button-white">
@@ -241,7 +241,7 @@
                                 </nav>
                             </div>
                             <div class="pull-right hidden-phone hidden-tab">
-                                <button id="openClientSpace" class="btn-blue">Espace Client</button>
+                                <button id="openClientSpace" class="btn-blue openPopup" data-popup="0">Espace Client</button>
                             </div>
                         </div>
                     </div>
@@ -404,12 +404,12 @@
                                 <div class="infos" style="text-align: center;">
                                     <h3 class="white">Toutes nos offres disponibles
                                         <strong>chez vous</strong> : </h3>
-                                    <input id="zipcode" value class="input-white" type="text" placeholder="Code Postal" maxlength="4"/>
-                                    <select  id="ville" value class="input-white select" name="ville"></select>
-                                    <select id="rue" value class="input-white select" name="rue"></select>
-                                    <select id="numero" value class="input-white select" name="numero"></select>
-                                    <button id="verifyCp" type="button" class="btn-orange btnVerify">Vérifiez les disponibilités</button>
-                                    <button id="btnVerif2" type="button" class="btn-orange btnVerify">Vérifiez les disponibilités</button>
+                                    <input value name="zipcode" class="input-white" type="text" placeholder="Code Postal" maxlength="4"/>
+                                    <select name="ville" value class="input-white select"></select>
+                                    <select name="rue" value class="input-white select"></select>
+                                    <select name="numero" value class="input-white select numero"></select>
+                                    <button type="button" class="btn-orange btnVerify verifyCp">Vérifiez les disponibilités</button>
+                                    <button type="button" class="btn-orange btnVerify btnVerif">Vérifiez les disponibilités</button>
                                     <ul class="icons hidden-phone">
                                         <li>
                                             <div class="dispo-icon">

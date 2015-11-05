@@ -624,6 +624,7 @@ span[class^=icon-]
 }
 .btn-outline-white
 {
+    background-color: transparent;
     border: 2px solid $grey;
     color: $dark-grey;
     &:hover{
@@ -2017,7 +2018,7 @@ footer
 
 // ESPACE CLIENT
 // --------------------------------------------------
-#clientSpace{
+.popup{
     visibility: hidden;
     transition: opacity 2s linear;
     &.is-visible{

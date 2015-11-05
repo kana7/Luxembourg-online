@@ -2865,6 +2865,7 @@ span[class^=icon-] {
   font-size: 16px; }
 
 .btn-outline-white {
+  background-color: transparent;
   border: 2px solid #c0c0c0;
   color: #818181; }
   .btn-outline-white:hover {
@@ -3192,8 +3193,7 @@ span[class^=icon-] {
   height: 40px;
   font-size: 1.1em;
   margin: 10px 0;
-  cursor: pointer;
-  }
+  cursor: pointer; }
 
 .offer-item-blue, .equipement-item-blue {
   display: block;
@@ -4119,10 +4119,10 @@ footer {
     padding: 8px 0;
     margin-top: 4px; }
 
-#clientSpace {
+.popup {
   visibility: hidden;
   transition: opacity 2s linear; }
-  #clientSpace.is-visible {
+  .popup.is-visible {
     visibility: visible; }
 
 .background-client {

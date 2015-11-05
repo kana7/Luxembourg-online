@@ -208,32 +208,39 @@ var MenuMobile = (function () {
 })();
 
 var ClientSpace = (function () {
-    var $clientSpace = $('#clientSpace, .popup');
-    var $clientSpacePannel = $clientSpace.find('.white-pannel');
+    var $clientSpace = $('.popup');
+    //var $clientSpacePannel = $clientSpace.find('.white-pannel');
     var $backgroundClient = $clientSpace.find('.background-client');
     var $clientMenuItem = $clientSpace.find('.client-menu>li');
     var $formGroup = $clientSpace.find('.pannel-forms');
     var $forms = $clientSpace.find('.pannel-forms>form');
-    var $openButton = $('#openClientSpace, #openClientSpaceMobile, .openPopup');
-    var $closeButton = $clientSpace.find('.pannel-close');
+    var $openButton = $('.openPopup');
+    var $closeButton =$('.pannel-close');
+    var $popupIndex = ['clientSpace','testDispo'];
 
 
     var init = function () {
         _bindEvents();
     };
     var _bindEvents = function () {
-        $openButton.on('click', _openClientSpace.bind(this));
-        $closeButton.on('click', _closeClientSpace.bind(this));
-        $backgroundClient.on('click', _closeClientSpace.bind(this));
+        $openButton.on('click', function(){
+            _openClientSpace($(this));
+        });
+        $('body').on('click','.pannel-close' , function(event){
+            _closeClientSpace(event);
+        });
+        $('body').on('click', '.background-client' ,function(event){
+            _closeClientSpace(event);
+        });
         $clientMenuItem.on('click', function () {
             _showForm($(this));
         });
     };
-    var _openClientSpace = function () {
-        $clientSpace.addClass('is-visible');
+    var _openClientSpace = function ($element) {
+        $('#'+$popupIndex[$element.attr('data-popup')]).addClass('is-visible');
     };
-    var _closeClientSpace = function () {
-        $clientSpace.removeClass('is-visible');
+    var _closeClientSpace = function (event) {
+        $(event.target).closest('.popup').removeClass('is-visible');
     };
     var _showForm = function (element) {
         $clientMenuItem.removeClass('active');

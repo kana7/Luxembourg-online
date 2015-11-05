@@ -55,6 +55,11 @@ var obj = {},
         vhash = "",
         _cp = "", _ville = "", _rue = "", _nbr = "";
 
+//détecte le bouton pour offrir le test de dispo et ajoute la popup dans la page
+function createDispoPopup() {
+    $('body').prepend(popuptemplate);
+}
+
 function checkDispo(homeId) {
     if ($("#ville").val() == 98 || $("#ville").val() == 428 || $("#ville").val() == 159 || $("#ville").val() == 174) {
         window.location.href = "http://www.internet.lu/internet/tarifs_detailles.html";
@@ -248,6 +253,7 @@ function checkDispo(homeId) {
 ;
 
 $(function () {
+    createDispoPopup();
     try {
         vhash = (window.location.hash.split('#')[1]).split(";");
 

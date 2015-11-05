@@ -10,13 +10,12 @@
         <link rel="shortcut icon" href="/favicon.ico">
 
         <link rel="stylesheet" href="../styles/css/main.css">
-        <link rel="stylesheet" href="../styles/css/internet/accueil.css">
 
         <script src="../scripts/vendor/picturefill.min.js"></script>
     </head>
 
     <body>
-        <div id="clientSpace">
+        <div id="clientSpace" class="popup">
             <div class="background-client"></div>
             <div class="white-pannel">
                 <button class="pannel-close"><span class="icon-x-icone"></span></button>
@@ -185,7 +184,7 @@
                             </div>
                         </div>
                         <div class="mobile-menu-button">
-                            <button id="openClientSpaceMobile" class="mobile-button-blue">
+                            <button id="openClientSpaceMobile" class="mobile-button-blue openPopup" data-popup="0">
                                 <span class="icon-account-icone"></span>
                             </button>
                             <button class="mobile-button-white">
@@ -240,7 +239,7 @@
                                 </nav>
                             </div>
                             <div class="pull-right hidden-phone hidden-tab">
-                                <button id="openClientSpace" class="btn-blue">Espace Client</button>
+                                <button id="openClientSpace" class="btn-blue openPopup" data-popup="0">Espace Client</button>
                             </div>
                         </div>
                     </div>
@@ -271,7 +270,7 @@
                     </div>
                 </div>
             </section>
-            <section id="test-offres">
+            <!--<section id="test-offres">
                 <div class="container-wrapper">
                     <div class="row">
                         <div class="text display-phone phone-12">Vérifiez si LOL TV est <br/>disponible chez vous :</div>
@@ -283,8 +282,8 @@
                         </form>
                     </div>
                 </div>
-            </section>
-            <section class="section-layout right-orientation">
+            </section>-->
+            <section class="section-layout right-orientation section-shadow">
                 <div class="container-wrapper">
                     <div class="row clearfix">
                         <div class="phone-12 desk-6">

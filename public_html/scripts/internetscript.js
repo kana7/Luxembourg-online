@@ -38,9 +38,9 @@ var popuptemplate = '<div id="testDispo" class="popup">' +
         '<button class="pannel-close"><span class="icon-x-icone"></span></button>' +
         '<h1>Tester la disponibilité</h1>' +
         '<input name="zipcode" value class="input-white" type="text" placeholder="Code Postal" maxlength="4"/>' +
-        '<select value class="input-white select ville" name="ville"></select>' +
-        '<select value class="input-white select rue" name="rue"></select>' +
-        '<select value class="input-white select numero" name="numero"></select>' +
+        '<select name="ville" value class="input-white select"></select>' +
+        '<select name="rue" value class="input-white select"></select>' +
+        '<select name="numero" value class="input-white select"></select>' +
         '<button type="button" class="btn-orange btnVerify verifyCp">Vérifiez les disponibilités</button>' +
         '<button type="button" class="btn-orange btnVerify btnVerif2">Vérifiez les disponibilités</button>' +
         '</div>' +
@@ -57,7 +57,9 @@ var obj = {},
 
 //détecte le bouton pour offrir le test de dispo et ajoute la popup dans la page
 function createDispoPopup() {
-    $('body').prepend(popuptemplate);
+    if ($('.openPopup[data-popup=1]').length){
+        $('body').prepend(popuptemplate);
+    }
 }
 
 function checkDispo(homeId) {
@@ -253,7 +255,7 @@ function checkDispo(homeId) {
 ;
 
 $(function () {
-    //createDispoPopup();
+    createDispoPopup();
     try {
         vhash = (window.location.hash.split('#')[1]).split(";");
 

@@ -2830,6 +2830,16 @@ span[class^=icon-] {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e75e0a', endColorstr='#d8520a',GradientType=0 );
   /* IE6-8 */ }
 
+.btn-blue.btn-subscription, .btn-orange.btn-subscription, .input-group .btn-subscription.custom-file-input::before {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -o-box-shadow: none;
+  -ms-box-shadow: none;
+  margin: 0;
+  padding: 13px 50px;
+  font-size: 17px; }
+
 .btn-white {
   color: #004994;
   font-weight: 600;
@@ -2875,6 +2885,8 @@ span[class^=icon-] {
 #offers-section .btn-outline-white {
   width: 100%;
   padding: 15px 0; }
+#offers-section div[class^=phone-] {
+  text-align: center; }
 
 .equipementCat {
   display: block; }

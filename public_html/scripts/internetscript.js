@@ -39,6 +39,9 @@ var obj = {},
         _cp = "", _ville = "", _rue = "", _nbr = "";
 
 function checkDispo(homeId) {
+    if ($("#ville").val() == 98 || $("#ville").val() == 428 || $("#ville").val() == 159 || $("#ville").val() == 174) {
+        window.location.href = "http://www.internet.lu/internet/tarifs_detailles.html";
+    }
     if (homeId !== undefined || homeId !== null || homeId !== '') {
         $.ajax({
             url: "http://shop.internet.lu/Scripts/sql.exe?SqlDB=LOLShop&Sql=FOServiceMap:FOServiceListNew.phs&_HomeId=" + homeId,
@@ -59,44 +62,6 @@ function checkDispo(homeId) {
 
                         }
 
-                    }
-                }
-                if (obj.Service[2]) { // D�groupage Fibre
-                    articleObj = obj.Service[2].article;
-                    if (obj.Service[2] && $(articleObj[0]).size() > 0) {//entry exists
-                        for (i in articleObj) {
-                            for (b in articleObj) {
-                                if (articleObj[b].idObject == "5272" && ab[1] == "") {//Fiber 30 dégroupé
-                                    ab[1] = articleObj[b].idObject;
-                                }
-                                if (articleObj[b].idObject == "5275" && ab[2] == "") {//Fiber 100 dégroupé
-                                    ab[2] = articleObj[b].idObject;
-                                }
-                                if (articleObj[b].idObject == "5276" && ab[2] == "") {//Fiber 200 dégroupé
-                                    ab[3] = articleObj[b].idObject;
-                                }
-                            }
-
-                        }
-                    }
-                }
-                if (obj.Service[8]) { // D�groupage VDSL
-                    articleObj = obj.Service[8].article;
-                    if (obj.Service[8] && $(articleObj[0]).size() > 0) {//entry exists
-                        for (i in articleObj) {
-                            for (b in articleObj) {
-                                if (articleObj[b].idObject == "5273" && ab[1] == "") {//Fiber 30
-                                    ab[1] = articleObj[b].idObject;
-                                }
-                                if (articleObj[b].idObject == "5274" && ab[2] == "") {//Fiber 100 1 paire
-                                    ab[2] = articleObj[b].idObject;
-                                }
-                                if (articleObj[b].idObject == "5336" && ab[2] == "") {//Fiber 100 2 paires
-                                    ab[2] = articleObj[b].idObject;
-                                }
-                            }
-
-                        }
                     }
                 }
                 if (obj.Service[5]) { // Revente Fibre
@@ -177,51 +142,83 @@ function checkDispo(homeId) {
                         }
                     }
                 }
-                
-                console.log(ab.toString().length);
+                if (obj.Service[8]) { // D�groupage VDSL
+                    articleObj = obj.Service[8].article;
+                    if (obj.Service[8] && $(articleObj[0]).size() > 0) {//entry exists
+                        for (i in articleObj) {
+                            for (b in articleObj) {
+                                if (articleObj[b].idObject == "5273" && ab[1] == "") {//Fiber 30
+                                    ab[1] = articleObj[b].idObject;
+                                }
+                                if (articleObj[b].idObject == "5274" && ab[2] == "") {//Fiber 100 1 paire
+                                    ab[2] = articleObj[b].idObject;
+                                }
+                                if (articleObj[b].idObject == "5336" && ab[2] == "") {//Fiber 100 2 paires
+                                    ab[2] = articleObj[b].idObject;
+                                }
+                            }
 
-                if (ab.toString().length == 6) {
-                    console.log('je suis une patate');
-                    $(".k24").show();
-                    $(".ik30").show();
-                    $(".ik100").show();
-                    $(".ik200").show();
+                        }
+                    }
+                }
+                if (obj.Service[2]) { // D�groupage Fibre
+                    articleObj = obj.Service[2].article;
+                    if (obj.Service[2] && $(articleObj[0]).size() > 0) {//entry exists
+                        for (i in articleObj) {
+                            for (b in articleObj) {
+                                if (articleObj[b].idObject == "5272" && ab[1] == "") {//Fiber 30 dégroupé
+                                    ab[1] = articleObj[b].idObject;
+                                }
+                                if (articleObj[b].idObject == "5275" && ab[2] == "") {//Fiber 100 dégroupé
+                                    ab[2] = articleObj[b].idObject;
+                                }
+                                if (articleObj[b].idObject == "5276" && ab[2] == "") {//Fiber 200 dégroupé
+                                    ab[3] = articleObj[b].idObject;
+                                }
+                            }
+
+                        }
+                    }
+                }
+                $('.k24, .k30, .k100, .k200').next().remove();
+                if (ab[0] == "") {
+                    $('.k24').addClass('is-not');
+                    $('.k24').prepend(nonDispoTemplate);
                 } else {
-                    if (ab[0] != "") {
-                        $(".k24").show();
-                    } else {
-                        $(".ik24").show();
-                    }
-                    if (ab[1] != "") {
-                        $(".k30").show();
-                    } else {
-                        $(".ik30").show();
-                    }
-                    if (ab[2] != "") {
-                        $(".k100").show();
-                    } else {
-                        $(".ik100").show();
-                    }
-                    if (ab[3] != "") {
-                        $(".k200").show();
-                    } else {
-                        $(".ik200").show();
-                    }
-                    if (ab[4] != "") {
-                        $(".kstart").show();
-                    } else {
-                        $(".ikstart").show();
-                    }
-                    if (ab[5] != "") {
-                        $(".krun").show();
-                    } else {
-                        $(".ikrun").show();
-                    }
-                    if (ab[6] != "") {
-                        $(".kpro").show();
-                    } else {
-                        $(".ikpro").show();
-                    }
+                    $('.k24').removeClass('is-not');
+                    $('.k24').find('.not-dispo').remove();
+                    $('.k24').after('<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_FR.pdf" target="_blank">Abonnez-vous</a>');
+                }
+                if (ab[1] == "") {
+                    $('.k30').addClass('is-not');
+                    $('.k30').prepend(nonDispoTemplate);
+                    
+                } else {
+                    $('.k30').removeClass('is-not');
+                    $('.k30').find('.not-dispo').remove();
+                    $('.k30').after('<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_FR.pdf" target="_blank">Abonnez-vous</a>');
+                }
+                if (ab[2] == "") {
+                    $('.k100').addClass('is-not');
+                    $('.k100').prepend(nonDispoTemplate);
+                } else {
+                    $('.k100').removeClass('is-not');
+                    $('.k100').find('.not-dispo').remove();
+                    $('.k100').after('<a class="btn-orange btn-subscription" href="../documents/LOLFIBERDSL_FR.pdf" target="_blank">Abonnez-vous</a>');
+                }
+                if (ab[3] == "") {
+                    $('.k200').addClass('is-not');
+                    $('.k200').prepend(nonDispoTemplate);
+                } else {
+                    $('.k200').removeClass('is-not');
+                    $('.k200').find('.not-dispo').remove();
+                    $('.k200').after('<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_FR.pdf" target="_blank">Abonnez-vous</a>');
+                }
+                if (ab[4] == "") {
+                }
+                if (ab[5] == "") {
+                }
+                if (ab[6] == "") {
                 }
                 //$("#adressLabel").html($("#numero option:selected").text() + "," + $("#rue option:selected").text() + "," + $("#zipcode").val() + " " + $("#ville option:selected").text());
                 //$(".btnVerif").fadeIn();

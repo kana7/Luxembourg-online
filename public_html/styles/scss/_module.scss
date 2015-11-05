@@ -594,6 +594,13 @@ span[class^=icon-]
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e75e0a', endColorstr='#d8520a',GradientType=0 ); /* IE6-8 */
 }
 
+.btn-blue.btn-subscription, .btn-orange.btn-subscription{
+    @include box-shadow(none);
+    margin: 0;
+    padding: 13px 50px;
+    font-size: 17px;
+}
+
 .btn-white{
     color: $blue;
     font-weight: 600;
@@ -643,6 +650,9 @@ span[class^=icon-]
         width: 100%;
         padding: 15px 0;
     }
+    div[class^=phone-]{
+        text-align: center;
+    } 
 }
 
 // EQUIPEMENTS - UI

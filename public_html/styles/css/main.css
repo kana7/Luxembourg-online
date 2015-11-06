@@ -2800,7 +2800,7 @@ span[class^=icon-] {
 .btn-blue {
   color: #fff;
   background-color: #004994;
-  text-shadow: 0 2px 5px #404040;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   margin: 0; }
 
 .btn-orange, .input-group .custom-file-input::before {
@@ -4175,7 +4175,7 @@ footer {
     margin: 0;
     font-weight: 400;
     border-bottom: 1px solid #004994; }
-  .white-pannel input {
+  .white-pannel select, .white-pannel input {
     width: 100%;
     height: 45px;
     padding-left: 5px;
@@ -4188,13 +4188,28 @@ footer {
     -ms-box-shadow: inset 0 1px 5px -1px #000;
     background-color: #f8f8f8;
     font-size: 14px; }
+  .white-pannel .input-white {
+    font-size: 16px;
+    text-align: center; }
+    .white-pannel .input-white.select {
+      cursor: pointer; }
+  .white-pannel .btn-blue, .white-pannel .btn-orange, .white-pannel .input-group .custom-file-input::before, .input-group .white-pannel .custom-file-input::before {
+    padding: 11px 18px;
+    font-size: 14px;
+    border-radius: 6px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -o-box-shadow: none;
+    -ms-box-shadow: none; }
+  .white-pannel .btn-orange, .white-pannel .input-group .custom-file-input::before, .input-group .white-pannel .custom-file-input::before {
+    padding: 15px 20px;
+    font-size: 16px;
+    margin-top: 5px; }
   .white-pannel .btn-blue {
     position: absolute;
     right: 0;
-    bottom: 0;
-    padding: 11px 18px;
-    font-size: 14px;
-    border-radius: 6px; }
+    bottom: 0; }
   .white-pannel .contact-infos {
     position: absolute;
     bottom: 0;

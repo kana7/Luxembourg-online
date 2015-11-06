@@ -41,8 +41,10 @@ var popuptemplate = '<div id="testDispo" class="popup">' +
         '<select name="ville" value class="input-white select"></select>' +
         '<select name="rue" value class="input-white select"></select>' +
         '<select name="numero" value class="input-white select numero"></select>' +
+        '<div style="text-align: center;">'+
         '<button type="button" class="btn-orange btnVerify verifyCp">Vérifiez les disponibilités</button>' +
         '<button type="button" class="btn-orange btnVerify btnVerif2">Vérifiez les disponibilités</button>' +
+        '</div>'+
         '</div>' +
         '</div>' +
         '</div>';

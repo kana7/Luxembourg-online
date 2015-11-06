@@ -1,9 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,400italic);
 #promo-fibre {
-  background-image: url(../../../images/Promos/Accueil/Offre_Fibre4.jpg); }
+  background-image: url(../../../images/promos/Accueil/320px/Offre_Fibre4.jpg); }
 
 #promo-internetTV {
-  background-image: url(../../../images/Promos/Accueil/Offre_internettv_4.jpg); }
+  background-image: url(../../../images/promos/Accueil/320px/Offre_internettv_4.jpg); }
 
 #promo-fibre .section-title, #promo-internetTV .section-title {
   font-size: 33px;
@@ -75,19 +75,19 @@
     background-size: auto 160px !important; } }
 @media screen and (min-width: 672px) {
   #promo-fibre {
-    background-image: url(../../../images/Promos/Accueil/Offre_Fibre3.jpg); }
+    background-image: url(../../../images/promos/Accueil/640px/Offre_Fibre3.jpg); }
 
   #promo-internetTV {
-    background-image: url(../../../images/Promos/Accueil/Offre_internettv_3.jpg); }
+    background-image: url(../../../images/promos/Accueil/640px/Offre_internettv_3.jpg); }
 
   #promo-fibre, #promo-internetTV {
     background-size: auto 160px !important; } }
 @media screen and (min-width: 1056px) {
   #promo-fibre {
-    background-image: url(../../../images/Promos/Accueil/Offre_Fibre2.jpg); }
+    background-image: url(../../../images/promos/Accueil/1024px/Offre_Fibre2.jpg); }
 
   #promo-internetTV {
-    background-image: url(../../../images/Promos/Accueil/Offre_internettv_2.jpg); }
+    background-image: url(../../../images/promos/Accueil/1024px/Offre_internettv_2.jpg); }
 
   #promo-fibre, #promo-internetTV {
     background-size: auto 100% !important; }
@@ -141,10 +141,10 @@
     padding-left: 15px; } }
 @media screen and (min-width: 1302px) {
   #promo-fibre {
-    background-image: url(../../../images/Promos/Accueil/Offre_Fibre1.jpg); }
+    background-image: url(../../../images/promos/Accueil/1280px/Offre_Fibre1.jpg); }
 
   #promo-internetTV {
-    background-image: url(../../../images/Promos/Accueil/Offre_internettv_1.jpg); }
+    background-image: url(../../../images/promos/Accueil/1280px/Offre_internettv_1.jpg); }
 
   #promo-fibre, #promo-internetTV {
     background-size: auto 100% !important; } }

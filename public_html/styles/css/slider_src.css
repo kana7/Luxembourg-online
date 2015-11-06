@@ -2,38 +2,38 @@
 #slider-contents .infos {
   background-size: auto 320px; }
   #slider-contents .infos.image-1 {
-    background-image: url(../../images/Homepage/SLIDER/Slider_672x320px.jpg); }
+    background-image: url(../../images/index/320px/Slider/Slider_672x320px.jpg); }
   #slider-contents .infos.image-2 {
-    background-image: url(../../images/Homepage/SLIDER/Slider2_672x320px.jpg); }
+    background-image: url(../../images/index/320px/Slider/Slider2_672x320px.jpg); }
   #slider-contents .infos.image-3 {
-    background-image: url(../../images/Homepage/SLIDER/Slider3_672x320px.jpg); }
+    background-image: url(../../images/index/320px/Slider/Slider3_672x320px.jpg); }
 
 @media screen and (min-width: 672px) {
   #slider-contents .infos {
     background-size: auto 450px; }
     #slider-contents .infos.image-1 {
-      background-image: url(../../images/Homepage/SLIDER/Slider_1056x450px.jpg); }
+      background-image: url(../../images/index/640px/Slider/Slider_1056x450px.jpg); }
     #slider-contents .infos.image-2 {
-      background-image: url(../../images/Homepage/SLIDER/Slider2_1056x450px.jpg); }
+      background-image: url(../../images/index/640px/Slider/Slider2_1056x450px.jpg); }
     #slider-contents .infos.image-3 {
-      background-image: url(../../images/Homepage/SLIDER/Slider3_1056x450px.jpg); } }
+      background-image: url(../../images/index/640px/Slider/Slider3_1056x450px.jpg); } }
 @media screen and (min-width: 1056px) {
   #slider-contents .infos {
     background-size: auto 330px; }
     #slider-contents .infos.image-1 {
-      background-image: url(../../images/Homepage/SLIDER/Slider_1302x330px.jpg); }
+      background-image: url(../../images/index/1024px/Slider/Slider_1302x330px.jpg); }
     #slider-contents .infos.image-2 {
-      background-image: url(../../images/Homepage/SLIDER/Slider2_1302x330px.jpg); }
+      background-image: url(../../images/index/1024px/Slider/Slider2_1302x330px.jpg); }
     #slider-contents .infos.image-3 {
-      background-image: url(../../images/Homepage/SLIDER/Slider3_1302x330px.jpg); } }
+      background-image: url(../../images/index/1024px/Slider/Slider3_1302x330px.jpg); } }
 @media screen and (min-width: 1302px) {
   #slider-contents .infos {
     background-size: 1920px auto; }
     #slider-contents .infos.image-1 {
-      background-image: url(../../images/Homepage/SLIDER/Slider_1920x360px.jpg); }
+      background-image: url(../../images/index/1280px/Slider/Slider_1920x360px.jpg); }
     #slider-contents .infos.image-2 {
-      background-image: url(../../images/Homepage/SLIDER/Slider2_1920x360px.jpg); }
+      background-image: url(../../images/index/1280px/Slider/Slider2_1920x360px.jpg); }
     #slider-contents .infos.image-3 {
-      background-image: url(../../images/Homepage/SLIDER/Slider3_1920x360px.jpg); } }
+      background-image: url(../../images/index/1280px/Slider/Slider3_1920x360px.jpg); } }
 
 /*# sourceMappingURL=slider_src.css.map */

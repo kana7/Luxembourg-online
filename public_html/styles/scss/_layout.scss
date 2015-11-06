@@ -1,8 +1,6 @@
 // Empeche la scrollBar de recouvrir le contenu sur ie
 @-ms-viewport{ width: auto !important; }
-.answer li{
-    display: block;
-}
+
 .container-wrapper
 {
     margin-right: auto;
@@ -234,8 +232,7 @@ header{
     background-image: url("../../images/Divers/A_propos/20ans_672x162px.png");
     background-color: #004994;
     h1{
-        font-size: 60px;
-        margin:0px;
+        font-size: 75px;
     }
     background-size: 90% auto;
     background-position: bottom center;
@@ -244,8 +241,7 @@ header{
     min-height: 480px;
     background-color: #0E1821;
     h1{
-        font-size: 45px;
-        margin: 0px;
+        font-size: 50px;
     }
 }
 #valeurs{
@@ -506,10 +502,10 @@ header{
         background-position:center;
         background-size: cover;
         
-        &#loldsl{background-image: url(../../images/Homepage/OFFRES/LOL_DSL_301x220px.jpg);}
-        &#mobiles{background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_301x220px.jpg);}
-        &#installation{background-image: url(../../images/Homepage/OFFRES//LOL_TV_301x220px.jpg);}
-        &#dispo{background-image: url(../../images/Homepage/OFFRES/Recherche_Offre.jpg);}
+        &#loldsl{background-image: url(../../images/index/320px/Offres/LOL_DSL.jpg);}
+        &#mobiles{background-image: url(../../images/index/320px/Offres/iphone6.jpg);}
+        &#installation{background-image: url(../../images/index/320px/Offres/Offre_TV.jpg);}
+        &#dispo{background-image: url(../../images/index/320px/Offres/Recherche_Offre.jpg);}
         
         .infos
         {

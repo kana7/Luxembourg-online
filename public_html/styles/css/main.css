@@ -1618,9 +1618,6 @@ ul, li {
 
 @-ms-viewport {
   width: auto !important; }
-.answer li {
-  display: block; }
-
 .container-wrapper {
   margin-right: auto;
   margin-left: auto;
@@ -1882,15 +1879,13 @@ header {
   background-size: 90% auto;
   background-position: bottom center; }
   #anniv h1 {
-    font-size: 60px;
-    margin: 0px; }
+    font-size: 75px; }
 
 #fibre {
   min-height: 480px;
   background-color: #0E1821; }
   #fibre h1 {
-    font-size: 45px;
-    margin: 0px; }
+    font-size: 50px; }
 
 #valeurs {
   background-image: url("../../images/Divers/A_propos/nosvaleurs_672x320px.jpg"); }
@@ -2097,13 +2092,13 @@ header {
     background-position: center;
     background-size: cover; }
     #services .service#loldsl {
-      background-image: url(../../images/Homepage/OFFRES/LOL_DSL_301x220px.jpg); }
+      background-image: url(../../images/index/320px/Offres/LOL_DSL.jpg); }
     #services .service#mobiles {
-      background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_301x220px.jpg); }
+      background-image: url(../../images/index/320px/Offres/iphone6.jpg); }
     #services .service#installation {
-      background-image: url(../../images/Homepage/OFFRES//LOL_TV_301x220px.jpg); }
+      background-image: url(../../images/index/320px/Offres/Offre_TV.jpg); }
     #services .service#dispo {
-      background-image: url(../../images/Homepage/OFFRES/Recherche_Offre.jpg); }
+      background-image: url(../../images/index/320px/Offres/Recherche_Offre.jpg); }
     #services .service .infos {
       position: absolute;
       padding: 0 20px;
@@ -2378,7 +2373,7 @@ svg:not(:root) {
   z-index: 1; }
 
 .section-title {
-  font-size: 30px;
+  font-size: 23px;
   line-height: 30px;
   margin: 25px 0;
   text-transform: uppercase; }
@@ -3812,7 +3807,7 @@ span[class^=icon-] {
     left: 75px; }
 
 #twenty-years {
-  background-image: url(../../images/Homepage/CONTENU/1280px/20ans_LOL.jpg); }
+  background-image: url(../../images/index/1024px/20ans_LOL.png); }
 
 footer {
   border-bottom: 2px solid #676767;
@@ -4344,7 +4339,7 @@ h2.contact-title {
   .input-group .select-arrow {
     display: inline-block;
     width: 100%;
-    background: url(../../images/Icone/Img/arrow.png) no-repeat;
+    background: url(../../images/Icons/Img/arrow.png) no-repeat;
     background-size: auto auto;
     background-position: 97% center; }
   .input-group textarea {
@@ -4451,10 +4446,7 @@ h2.contact-title {
     font-size: 20px; }
 
   .picContainer {
-    margin-bottom: 10px; }
-
-  .hotcity-link .table-details td {
-    font-size: 16px; } }
+    margin-bottom: 10px; } }
 @media screen and (min-width: 672px) {
   .container-wrapper {
     width: 640px; }
@@ -4473,13 +4465,13 @@ h2.contact-title {
     padding-bottom: 135%;
     margin-bottom: 30px; }
     #services .service#loldsl {
-      background-image: url(../../images/Homepage/OFFRES/LOL_DSL_235x321px.jpg); }
+      background-image: url(../../images/index/640px/Offres/LOL_DSL.jpg); }
     #services .service#mobiles {
-      background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_235x321px.jpg); }
+      background-image: url(../../images/index/640px/Offres/iphone6.jpg); }
     #services .service#installation {
-      background-image: url(../../images/Homepage/OFFRES/LOL_TV_235x321px.jpg); }
+      background-image: url(../../images/index/640px/Offres/Offre_TV.jpg); }
     #services .service#dispo {
-      background-image: url(../../images/Homepage/OFFRES/Recherche_Offre.jpg); }
+      background-image: url(../../images/index/640px/Offres/Recherche_Offre.jpg); }
     #services .service .details {
       font-size: 25px;
       line-height: 25px; }
@@ -4647,23 +4639,9 @@ h2.contact-title {
 
   #anniv {
     background-image: url("../../images/Divers/A_propos/20ans_1056x162px.png"); }
-    #anniv .align-middle {
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%); }
 
   #fibre {
     background-image: url("../../images/Divers/A_propos/slider_1302x330px.jpg"); }
-    #fibre .align-middle {
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%); }
 
   #valeurs {
     background-image: url("../../images/Divers/A_propos/nosvaleurs_1056x300px.jpg"); } }
@@ -4794,13 +4772,13 @@ h2.contact-title {
   #services .service {
     margin-bottom: 0; }
     #services .service#loldsl {
-      background-image: url(../../images/Homepage/OFFRES/LOL_DSL_297x406px.jpg); }
+      background-image: url(../../images/index/1024px/Offres/LOL_DSL.jpg); }
     #services .service#mobiles {
-      background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_297x406px.jpg); }
+      background-image: url(../../images/index/1024px/Offres/iphone6.jpg); }
     #services .service#installation {
-      background-image: url(../../images/Homepage/OFFRES/LOL_TV_297x406px.jpg); }
+      background-image: url(../../images/index/1024px/Offres/Offre_TV.jpg); }
     #services .service#dispo {
-      background-image: url(../../images/Homepage/OFFRES/Recherche_Offre.jpg); }
+      background-image: url(../../images/index/1024px/Offres/Recherche_Offre.jpg); }
     #services .service .infos {
       padding: 0 15px 15px; }
       #services .service .infos .details {
@@ -4999,25 +4977,26 @@ h2.contact-title {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%); }
-    .hotcity-link .table-details td {
-      font-size: 16px; }
 
   #anniv {
     background-image: url("../../images/Divers/A_propos/20ans_1920x200px.png"); }
     #anniv h1 {
-      font-size: 80px;
-      margin: 0; }
+      margin-top: 131px;
+      font-size: 80px; }
 
   #fibre {
     background-image: url("../../images/Divers/A_propos/notre_reseau_1920x480px.jpg"); }
     #fibre h1 {
-      font-size: 60px;
-      margin: 0; }
+      margin-left: 57px;
+      margin-top: 111px;
+      font-size: 60px; }
 
   #valeurs {
     height: 360px;
     background-image: url("../../images/Divers/A_propos/nosvaleurs_1920x360px.jpg"); }
     #valeurs h1 {
+      margin-right: 57px;
+      margin-top: 111px;
       font-size: 60px; }
 
   .section-propos {
@@ -5136,13 +5115,13 @@ h2.contact-title {
   #services .row > div[class^=phone-] {
     padding: 0 7px; }
   #services .service#loldsl {
-    background-image: url(../../images/Homepage/OFFRES/LOL_DSL_297x406px.jpg); }
+    background-image: url(../../images/index/1280px/Offres/LOL_DSL.jpg); }
   #services .service#mobiles {
-    background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_297x406px.jpg); }
+    background-image: url(../../images/index/1280px/Offres/iphone6.jpg); }
   #services .service#installation {
-    background-image: url(../../images/Homepage/OFFRES/LOL_TV_297x406px.jpg); }
+    background-image: url(../../images/index/1280px/Offres/Offre_TV.jpg); }
   #services .service#dispo {
-    background-image: url(../../images/Homepage/OFFRES/Recherche_Offre.jpg); }
+    background-image: url(../../images/index/1280px/Offres/Recherche_Offre.jpg); }
   #services .service .infos {
     padding: 0 25px 15px; }
     #services .service .infos h3 {

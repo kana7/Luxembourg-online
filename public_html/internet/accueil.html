@@ -271,22 +271,35 @@
                     </div>
                 </div>
             </section>
-            <section id="test-offres">
+            <section id="test-offres" class="clearfix">
                 <div class="container-wrapper">
                     <div class="row">
-                        <div class="text display-phone phone-12">Quelles offres sont <br/>disponibles chez vous ?</div>
-                        <div class="text hidden-phone phone-12 desk-6"><span class="icon-internet-ico"></span>Quelles offres sont disponibles chez vous ?</div>
+                        <div class="text phone-12 desk-6"><span class="icon-internet-ico"></span>Quelles offres sont disponibles chez vous ?</div>
 
-                        <form class="phone-12 desk-6" action="">
-                            <input class="input-white" type="text" placeholder="Code Postal"/>
-                            <button class="btn-orange" type="submit">Vérifiez les disponibilités</button>
-                        </form>
+                        <div class="testDispo clearfix">
+                            <div>
+                                <input name="zipcode" value class="input-white" type="text" placeholder="Code Postal" maxlength="4"/>
+                            </div>
+                            <div>
+                                <select  name="ville" class="input-white select"></select>
+                            </div>
+                            <div>
+                                <select name="rue" class="input-white select"></select>
+                            </div>
+                            <div>
+                                <select name="numero" class="input-white select"></select>
+                            </div>
+                            <div class="btn-verif">
+                                <button name="verifyCp" type="button" class="btn-orange btnVerify verifyCp">Vérifiez les disponibilités</button>
+                                <button name="btnVerif2" type="button" class="btn-orange btnVerify btnVerif">Vérifiez les disponibilités</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
             <section class="section-layout right-orientation background-black">
                 <div class="container-wrapper">
-                    <div class="row clearfix">
+                    <div class="row">
                         <div class="phone-12 desk-6">
                             <img class="section-img-align-bottom" 
                                  src="../images/Internet/1024px/fibre.jpg"
@@ -481,7 +494,10 @@
         <!--              ./FOOTER               -->
 
         <script src="../scripts/vendor/jquery.min.js"></script>
+        <script src="../scripts/jquery.maskedinput.min.js"></script>
+        <script src="../scripts/json2.js"></script>
         <script src="../scripts/main.js"></script>
+        <script src="../scripts/internetscript.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

@@ -41,10 +41,10 @@ var popuptemplate = '<div id="testDispo" class="popup">' +
         '<select name="ville" value class="input-white select"></select>' +
         '<select name="rue" value class="input-white select"></select>' +
         '<select name="numero" value class="input-white select numero"></select>' +
-        '<div style="text-align: center;">'+
+        '<div style="text-align: center;">' +
         '<button type="button" class="btn-orange btnVerify verifyCp">Vérifiez les disponibilités</button>' +
         '<button type="button" class="btn-orange btnVerify btnVerif2">Vérifiez les disponibilités</button>' +
-        '</div>'+
+        '</div>' +
         '</div>' +
         '</div>' +
         '</div>';
@@ -217,7 +217,6 @@ function checkDispo(homeId) {
                 if (ab[1] == "") {
                     $('.k30').addClass('is-not');
                     $('.k30').prepend(nonDispoTemplate);
-
                 } else {
                     $('.k30').removeClass('is-not');
                     $('.k30').find('.not-dispo').remove();
@@ -282,7 +281,12 @@ $(function () {
         }
 
     });
-    $("#dispo icons").show();
+    if ($("#dispo icons").length) {
+        $("#dispo icons").show();
+    }
+    if ($('#test-offres .text').length) {
+        $('#test-offres .text').show();
+    }
     $(".verifyCp").show();
     $(".btnVerif2, .btnVerif").hide();
     $("select[name=ville]").hide();
@@ -322,7 +326,33 @@ $(function () {
                 }
                 $(".verifyCp").hide();
                 $(".btnVerif2, .btnVerif").show();
-                if ($('#dispo .icons').length) {
+                if ($('#test-offres .text').length) {
+                    $('#test-offres .text').fadeOut(function () {
+                        $("select[name=ville]").html(locality).fadeIn();
+                        $("select[name=rue]").html(vhtml);
+                        if ($(locality).length == 2) {
+                            $("select[name=ville]").prop("selectedIndex", 1).change();
+                            $("select[name=ville] option").first().remove();
+                        }
+                        if ($("select[name=rue] option").length == 2) {
+                            $("select[name=rue]").prop("selectedIndex", 1).change();
+                            $("select[name=rue] option").first().remove();
+                        }
+                        if (vhash.length != 0) {
+                            $("select[name=ville] option").each(function () {
+                                if ($(this).val() == _ville) {
+                                    $(this).parent().prop("selectedIndex", $(this).index()).change();
+                                }
+                            });
+                            $("select[name=rue] option").each(function () {
+                                if ($(this).val() == _rue) {
+                                    $(this).parent().prop("selectedIndex", $(this).index()).change();
+                                }
+                            });
+
+                        }
+                    });
+                }else if ($('#dispo .icons').length) {
                     $("#dispo .icons").fadeOut(function () {
                         $("select[name=ville]").html(locality).fadeIn();
                         $("select[name=rue]").html(vhtml);
@@ -420,8 +450,8 @@ $(function () {
     });
     $("body").on('click', '.btnVerif', function () {
         var homeId = $("select[name=numero]").val();
-        if (homeId!="") {
-            window.location.href = "internet/offres.html#" + $("input[name=zipcode]").val() + ";" + $("select[name=ville]").val() + ";" + $("select[name=rue]").val() + ";" + $("select[name=numero]").val();
+        if (homeId != "") {
+            window.location.href = "/LuxembourgOnline/internet/offres.html#" + $("input[name=zipcode]").val() + ";" + $("select[name=ville]").val() + ";" + $("select[name=rue]").val() + ";" + $("select[name=numero]").val();
         } else {
             alert('Entrez votre numéro de rue pour continuer...');
         }

@@ -4,9 +4,9 @@ var encartDispoTemplate = '<div class="phone-12 tab-6 desk-3">' +
         '<h3 class="white">Toutes nos offres disponibles ' +
         '<strong>chez vous</strong> : </h3>' +
         '<input value name="zipcode" class="input-white" type="text" placeholder="Code Postal" maxlength="4"/>' +
-        '<select name="ville" value class="input-white select"></select>' +
-        '<select name="rue" value class="input-white select"></select>' +
-        '<select name="numero" value class="input-white select numero"></select>' +
+        '<select name="ville" class="input-white select"></select>' +
+        '<select name="rue" class="input-white select"></select>' +
+        '<select name="numero" class="input-white select numero"></select>' +
         '<button type="button" class="btn-orange btnVerify verifyCp">Vérifiez les disponibilités</button>' +
         '<button type="button" class="btn-orange btnVerify btnVerif">Vérifiez les disponibilités</button>' +
         '<ul class="icons hidden-phone">' +
@@ -247,7 +247,6 @@ var MenuMobile = (function () {
 
 var PopupModule = (function () {
     var $clientSpace = $('.popup');
-    //var $clientSpacePannel = $clientSpace.find('.white-pannel');
     var $clientMenuItem = $clientSpace.find('.client-menu>li');
     var $formGroup = $clientSpace.find('.pannel-forms');
     var $forms = $clientSpace.find('.pannel-forms>form');

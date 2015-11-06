@@ -11,6 +11,23 @@
             display: none;
         }
     }
+    .testDispo{
+        display: inline-block;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        &>div{
+            float: left;
+            width: 100%;
+            padding: 0 10px;
+            select, input, .btn-orange{
+                font-size: 16px !important;
+            }
+            &>*{
+                width: 100%;
+            }
+        }
+    }
     .input-white, .btn-white{
         width: 100%;
     }

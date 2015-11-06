@@ -1137,6 +1137,9 @@ span[class^=icon-]
     border-radius: 2px;
     text-align: center;
     padding: 0;
+    .flickity-slider{
+        height: 100%;
+    }
     .gallery-cell{
         cursor: pointer;
         .active-border{

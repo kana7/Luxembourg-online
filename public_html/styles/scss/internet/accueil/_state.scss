@@ -32,21 +32,39 @@
                 transform: rotate(-20deg);
             }
         }
+        .testDispo{
+            &>div{
+                width: 50%;
+            }
+        }
     }
 }
 @include media(desk){
     #test-offres{
         padding: 5px 0 6px;
         .text{
+            width: 45% !important;
             display: inline-block;
             margin-bottom: 22px;
         }
         .row{
             position: relative;
         }
-        form{
-            @include vertical-align-middle(absolute);
-            right: 0;
+        .testDispo{
+            @include display-flex-center;
+            width: auto;
+            margin: 4px 0;
+            &>div{
+                max-width: 217px;
+                width: auto;
+                select, input, .btn-orange{
+                    font-size: 15px !important;
+                    margin: 0;
+                }
+                .btn-orange{
+                    padding: 12px 8px;
+                }
+            }
         }
         .btn-orange, .input-white{
             margin: 0;
@@ -66,6 +84,18 @@
         .btn-orange{
             float: left;
             margin-left: 30px;
+        }
+        .testDispo{
+            &>div{
+                max-width: none;
+                select, input, .btn-orange{
+                    font-size: 15px !important;
+                    margin: 0;
+                }
+                .btn-orange{
+                    padding: 12px 15px;
+                }
+            }
         }
     }
 }

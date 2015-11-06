@@ -1,6 +1,8 @@
 // Empeche la scrollBar de recouvrir le contenu sur ie
 @-ms-viewport{ width: auto !important; }
-
+.answer li{
+    display: block;
+}
 .container-wrapper
 {
     margin-right: auto;
@@ -50,7 +52,7 @@
 // FIXED ELEMENT
 // --------------------------------------------------
 .fixed-options{
-    display: block;
+    display: none;
     position: fixed;
     right: 0;
     top: 45%;
@@ -149,30 +151,44 @@ header{
     }
     a{display: block;}
 }
-.plan-title{
-    padding:20px 0;
+.plan-title-padding{
+    padding: 35px 0;
     margin: 0 !important;
 }
 .map{
-    padding: 40px 0px 30px 0;
+    padding: 60px 0px 40px 0;
     .row [class^=desk-]{
-        padding: 0px 10px 10px 0;
+        padding: 0px 20px 20px 0;
     }
 }
 .boxmap{
-    border: 1px solid;
-    min-height: 325px;    
+    border: 1px solid lighten($grey, 8%);
+    min-height: 375px;
+    &.others{
+        min-height: 250px;
+    }
     h2 {
         text-align: center;
         text-transform: uppercase;
-        font-weight: 600;
+        font-weight: 800;
+        font-size: 17px;
+        margin: 17px 0 10px;
+    }
+    ul{
+        padding-left: 25px;
     }
     li {
         display: block;
-        padding: 6px 20px;
+        font-size: 16px;
+        padding: 9px 0px;
+        a:hover{
+            text-decoration: underline;
+        }
     }
-    span{
-        margin-right: 5px;
+    span[class^=icon-]{
+        margin-right: 10px;
+        color: #004994;
+        font-size: 10px;
     }
 }
 .propos-title{
@@ -218,7 +234,8 @@ header{
     background-image: url("../../images/Divers/A_propos/20ans_672x162px.png");
     background-color: #004994;
     h1{
-        font-size: 75px;
+        font-size: 60px;
+        margin:0px;
     }
     background-size: 90% auto;
     background-position: bottom center;
@@ -227,7 +244,8 @@ header{
     min-height: 480px;
     background-color: #0E1821;
     h1{
-        font-size: 50px;
+        font-size: 45px;
+        margin: 0px;
     }
 }
 #valeurs{
@@ -488,10 +506,10 @@ header{
         background-position:center;
         background-size: cover;
         
-        &#loldsl{background-image: url(../../images/index/320px/Offres/LOL_DSL.jpg);}
-        &#mobiles{background-image: url(../../images/index/320px/Offres/iphone6.jpg);}
-        &#installation{background-image: url(../../images/index/320px/Offres/Offre_TV.jpg);}
-        &#dispo{background-image: url(../../images/index/320px/Offres/Recherche_Offre.jpg);}
+        &#loldsl{background-image: url(../../images/Homepage/OFFRES/LOL_DSL_301x220px.jpg);}
+        &#mobiles{background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_301x220px.jpg);}
+        &#installation{background-image: url(../../images/Homepage/OFFRES//LOL_TV_301x220px.jpg);}
+        &#dispo{background-image: url(../../images/Homepage/OFFRES/Recherche_Offre.jpg);}
         
         .infos
         {
@@ -524,6 +542,9 @@ header{
 // -------------------------------------------------
 .section-padding{
     padding: 60px 0 40px;
+}
+.padding{
+    padding: 40px 0;
 }
 .section-layout{
     position: relative;
@@ -680,5 +701,25 @@ footer
     span
     {
         display: inline-block;
+    }
+}
+
+// CONTACT PAGE
+// -------------------------------------------------
+.location-section{
+    .row>[class^=phone-]:not(:last-child){
+        margin-bottom: 20px;
+    }
+}
+
+// JS MODULE
+// -------------------------------------------------
+
+.dropdown{
+    &>:not([data-trigger]){
+        display: none;
+        &.is-visible{
+            display: block;
+        }
     }
 }

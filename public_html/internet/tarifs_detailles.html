@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>tarifs détaillés -internet : Luxembourg Online</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="shortcut icon" href="/favicon.ico">
+        
+        <link rel="stylesheet" href="../styles/css/main.css">
+        <link rel="stylesheet" href="../styles/css/internet/accueil.css">
+        
+        <script src="../scripts/vendor/picturefill.min.js"></script>
+    </head>
+    
+    <body>
+        <div id="clientSpace">
+            <div class="background-client"></div>
+            <div class="white-pannel">
+                <button class="pannel-close"><span class="icon-x-icone"></span></button>
+                <h1>Espace Client</h1>
+                <ul class="client-menu">
+                    <li class="active" data-id="mail">Email</li>
+                    <li data-id="account">Mon compte</li>
+                    <li data-id="homepage">Homepage</li>
+                </ul>
+                <div class="pannel-forms">
+                    <form id="mail" class="clearfix is-visible" name="ServiceLogin1" method="POST" action="https://email.internet.lu/Scripts/sql.exe?_selection=10">
+                        <input type="hidden" name="Sql" value="Default.phs">  
+                        <input type="hidden" name="SqlDB" value="OMS2">  
+                        <div class="phone-6">
+                            <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
+                        </div>
+                        <div class="phone-6">
+                            <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
+                        </div>
+                        <button class="btn-blue" type="submit">Se connecter</button>
+                    </form>
+                    <form id="account" class="clearfix" name="LoginPhone" method="POST" action="http://shop.internet.lu/Scripts/sql.exe?LoginScript=LoginClient.phs&NextScript=DisplayAccount.phs&_Login=">
+                        <input type="hidden" name="Sql" value="LoginClient_Login.phs">  
+                        <input type="hidden" name="SqlDB" value="LOLShop">  
+                        <div class="phone-6">
+                            <input type="text" name="_Username" placeholder="Nom d'utilisateur"/>
+                        </div>
+                        <div class="phone-6">
+                            <input class="pull-right" type="password" name="_Password" placeholder="Mot de passe"/>
+                        </div>
+                        <button class="btn-blue" type="submit">Se connecter</button>
+                    </form>
+                    <form id="homepage" class="clearfix" name="ServiceLogin3" method="POST" action="http://sites.internet.lu/Scripts/sql.exe">
+                        <input type="hidden" name="Sql" value="default.phs">  
+                        <input type="hidden" name="SqlDB" value="OHPS">  
+                        <div class="phone-6">
+                            <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
+                        </div>
+                        <div class="phone-6">
+                            <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
+                        </div>
+                        <button class="btn-blue" type="submit">Se connecter</button>
+                    </form>
+                    <div class="contact-infos hidden-phone">
+                        Helpdesk: 2799 0000
+                        <span>Lu-Ve: 8h00-19h00  l  Sa: 9h00-18h00</span>
+                    </div>
+                    <div class="contact-infos display-phone">
+                        Helpdesk: 2799 0000
+                        <span>Lu-Ve: 8h00-19h00<br/>Sa: 9h00-18h00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fixed-options hidden-phone hidden-tab">
+            <a href="#">
+                <div class="white-fixed-option">
+                    <div class="icon-call-me"></div>
+                    <p>Veuillez me rappeler</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="blue-fixed-option">
+                    <p>Abonnez-vous<br/> <strong>en ligne </strong><span class="icon-right-arrow"></span></p>
+                </div>
+            </a>
+        </div>
+        <nav class="mobile-side-menu">
+            <ul class="menu">
+                <li class="menu-item"><a href="../index.html">Accueil</a></li>
+                <li class="menu-item" data-id='internet'>Internet<span class="icon-right-arrow"></span></li>
+                <li class="menu-item" data-id='telephone'>Téléphonie <span class="icon-right-arrow"></span></li>
+                <li class="menu-item" data-id='tv'>TV <span class="icon-right-arrow"></span></li>
+                <li class="menu-item" data-id='mobile'>Mobile<span class="icon-right-arrow"></span></li>
+                <li class="menu-item" data-id='promo'>Promos <span class="icon-right-arrow"></span></li>
+                <li class="sous-nav">
+                    <ul class="menu">
+                        <li class="menu-item"><a href="../divers/assistance.html">Assistance</a></li>
+                        <li class="menu-item"><a href="http://www.internet.lu/lolcloud/index.htm">LOL CLOUD</a></li>
+                        <li class="menu-item"><a href="../divers/magazine.html">Magazine</a></li>
+                        <li class="menu-item"><a href="../divers/propos.html">À propos</a></li>
+                        <li class="menu-item"><a href="../divers/contact.html">Contact</a></li>
+                        <li class="menu-item"><a href="../divers/emploi.html">Offres d'emplois</a></li>
+                        <li class="menu-item"><a href="../divers/plan.html">Plan du site</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="menu-links-wrapper">
+                <ul class="menu-links" id="internet">
+                    <li class="menu-item back"><span class="icon-right-arrow"></span>Internet</li>
+                    <li class="menu-item"><a href="../internet/accueil.html">Accueil</a></li>
+                    <li class="menu-item"><a href="../internet/offres.html">Nos offres</a></li>
+                    <li class="menu-item"><a href="../internet/equipements.html">Nos équipements</a></li>
+                    <li class="menu-item"><a href="../internet/abonnement.html">Abonnez-vous</a></li>
+                </ul>
+            </div>
+            <div class="menu-links-wrapper">
+                <ul class="menu-links" id="telephone">
+                    <li class="menu-item back"><span class="icon-right-arrow"></span>Téléphonie</li>
+                    <li class="menu-item"><a href="../telephonie/accueil.html">Accueil</a></li>
+                    <li class="menu-item"><a href="../telephonie/tarifs.html">Nos tarifs</a></li>
+                    <li class="menu-item"><a href="../telephonie/equipements.html">Nos téléphones</a></li>
+                    <li class="menu-item"><a href="../telephonie/abonnement.html">Abonnez-vous</a></li>
+                </ul>
+            </div>
+            <div class="menu-links-wrapper">
+                <ul class="menu-links" id="tv">
+                    <li class="menu-item back"><span class="icon-right-arrow"></span>TV</li>
+                    <li class="menu-item"><a href="../tv/accueil.html">Accueil</a></li>
+                    <li class="menu-item"><a href="../tv/offres.html">Notre offre TV</a></li>
+                    <li class="menu-item"><a href="../tv/equipements.html">Nos équipements</a></li>
+                    <li class="menu-item"><a href="../tv/abonnement.html">Abonnez-vous</a></li>
+                </ul>
+            </div>
+            <div class="menu-links-wrapper">
+                <ul class="menu-links" id="mobile">
+                    <li class="menu-item back"><span class="icon-right-arrow"></span>Mobile</li>
+                    <li class="menu-item"><a href="../mobile/accueil.html">Accueil</a></li>
+                    <li class="menu-item"><a href="../mobile/abonnements.html">Nos abonnements</a></li>
+                    <li class="menu-item"><a href="../mobile/equipements.html">Nos téléphones</a></li>
+                    <li class="menu-item"><a href="../mobile/abonnement.html">Abonnez-vous</a></li>
+                </ul>
+            </div>
+            <div class="menu-links-wrapper">
+                <ul class="menu-links" id="promo">
+                    <li class="menu-item back"><span class="icon-right-arrow"></span>Promos</li>
+                    <li class="menu-item"><a href="../promos/accueil.html">Accueil</a></li>
+                    <li class="menu-item"><a href="../promos/fibre.html">Offre spéciale fibre</a></li>
+                    <li class="menu-item"><a href="../promos/internetTV.html">offre spéciale TV</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="siteWrap">
+            <header>
+                <div id="top-menu-header" class="hidden-phone hidden-tab">
+                    <div class="container-wrapper">
+                        <div class="row">
+                            <nav class="pull-left">
+                                <ul class="top-menu-header-links left">
+                                    <li><a href="#">Particuliers</a></li>
+                                    <li><a href="#">Business</a></li>
+                                </ul>
+                            </nav>
+                            <nav class="pull-right">
+                                <ul class="top-menu-header-links right">
+                                    <li class="menu-item"><a href="../divers/assistance.html">Assistance</a></li>
+                                    <li class="menu-item"><a href="http://www.internet.lu/lolcloud/index.htm">LOL CLOUD</a></li>
+                                    <li class="menu-item"><a href="../divers/magazine.html">Magazine</a></li>
+                                    <li class="menu-item"><a href="../divers/propos.html">À propos</a></li>
+                                    <li class="menu-item"><a href="../divers/contact.html">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="bottom-menu-header">
+                    <ul class="sub-menu hidden-phone hidden-tab">
+                        <li><a href="accueil.html"><div class="link">Accueil Internet</div></a></li>
+                        <li><a href="offres.html"><div class="link">Nos Offres</div></a></li>
+                        <li><a href="equipements.html"><div class="link">Nos Équipements</div></a></li>
+                        <li><a href="abonnement.html"><div class="link">Abonnez-vous</div></a></li>
+                    </ul>
+                    <nav class="bottom-menu-header-links mobile display-phone display-tab">
+                        <div class="pull-left">
+                            <div class="logo">
+                                <a href="../index.html"><img src="../images/Icone/img/Logo-LOL.png" alt="logo LOL" /></a>
+                            </div>
+                        </div>
+                        <div class="mobile-menu-button">
+                            <button id="openClientSpaceMobile" class="mobile-button-blue">
+                                <span class="icon-account-icone"></span>
+                            </button>
+                            <button class="mobile-button-white">
+                                <span class="icon-menu-icone"></span>
+                            </button>
+                        </div>
+                    </nav>
+                    <div class="container-wrapper hidden-phone hidden-tab">
+                        <div class="row">
+                            <div class="pull-left">
+                                <div class="logo">
+                                    <a href="../index.html"><img src="../images/Icone/img/Logo-LOL.png" alt="logo LOL" /></a>
+                                </div><!--
+                                --><nav class="bottom-menu-header-links">
+                                    <ul class="main-menu">
+                                        <li class="active">
+                                            <div class="active-border"></div>
+                                            <a href="../internet/accueil.html">
+                                                <img class="header-icon" src="../images/Icone/img/internet.png" alt="Internet" />
+                                                <div class="link">Internet</div>
+                                            </a>
+                                        </li><!--
+                                        --><li>
+                                            <div class="active-border"></div>
+                                            <a href="../telephonie/accueil.html">
+                                                <img class="header-icon" src="../images/Icone/img/telephonie.png" alt="Téléphonie" />
+                                                <div class="link">Téléphonie</div>
+                                            </a>
+                                        </li><!--
+                                        --><li>
+                                            <div class="active-border"></div>
+                                            <a href="../tv/accueil.html">
+                                                <img class="header-icon" src="../images/Icone/img/tv.png" alt="Tv" />
+                                                <div class="link">Tv</div>
+                                            </a>
+                                        </li><!--
+                                        --><li>
+                                            <div class="active-border"></div>
+                                            <a href="../mobile/accueil.html">
+                                                <img class="header-icon" src="../images/Icone/img/mobile.png" alt="Mobile" />
+                                                <div class="link">Mobile</div>
+                                            </a>
+                                        </li><!--
+                                        --><li>
+                                            <div class="active-border"></div>
+                                            <a href="../promos/accueil.html">
+                                                <img class="header-icon" src="../images/Icone/img/promos.png" alt="Promos" />
+                                                <div class="link">Promos</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="pull-right hidden-phone hidden-tab">
+                                <button id="openClientSpace" class="btn-blue">Espace Client</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </header>
+            
+            <section class="section-layout left-orientation background-lightgrey drop-shadow">
+                <div class="container-wrapper">
+                    <div class="row clearfix">
+                        <div class="phone-12 desk-6">
+                            <img class="section-img-align-bottom" src="../images/Internet/1024px/tarifs_detailles.jpg" 
+                                 srcset="../images/Internet/1280px/tarifs_detailles.jpg 1920w,
+                                 ../images/Internet/1024px/tarifs_detailles.jpg 1400w,
+                                 ../images/Internet/640px/tarifs_detailles.jpg 900w,
+                                 ../images/Internet/320px/tarifs_detailles.jpg 600w"
+                                 sizes="100%"
+                                 alt="calculette tarifs" />
+                        </div>
+                        <div class="phone-12 desk-6">
+                            <h1 class="section-title lowercase normal">Nos tarifs <span class="bold">détaillés</span></h1>
+                            <p class="section-text">Consultez ci-dessous l'intégralité de nos tarifs Internet.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="padding">
+                <div class="container-wrapper">
+                    <div class="row">
+                        <div class="dropdown">
+                            <h2 data-trigger class="section-subtitle uppercase">Fibre/vdsl <span class="icon-right-arrow"></span></h2>
+                            <div>
+                                <div class="container-table">
+                                    <table class="table-tarifs">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>LOL FIBER 30</th>
+                                                <th>LOL FIBER 100</th>
+                                                <th>LOL FIBER 200</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>Prix/mois</th>
+                                                <td>44,90€</td>
+                                                <td>54,90€</td>
+                                                <td>71,90€</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Downstream max.</th>
+                                                <td>30 Mbit/s</td>
+                                                <td>100 Mbit/s</td>
+                                                <td>200 Mbit/s</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Upstream max.</th>
+                                                <td>10 Mbit/s</td>
+                                                <td>50 Mbit/s</td>
+                                                <td>100 Mbit/s</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Activation du service</th>
+                                                <td>24 mois: 0€<br>12 mois: 85€</td>
+                                                <td>24 mois: 0€<br>12 mois: 85€</td>
+                                                <td>24 mois: 0€<br>12 mois: 85€</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Installation</th>
+                                                <td>Self-Install: 25€<sup>1)</sup><br>Avec technicien: 89€</td>
+                                                <td>Avec technicien: 89€</td>
+                                                <td>Avec technicien: 89€</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Modem de base</th>
+                                                <td>Location 4 €/mois</td>
+                                                <td>Location 4 €/mois</td>
+                                                <td>Location 4 €/mois</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Abonnement téléphonique</th>
+                                                <td>LOL Phone inclus</td>
+                                                <td>LOL Phone inclus</td>
+                                                <td>LOL Phone inclus</td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <th>Téléphonie nat. fixe illimitée</th>
+                                                <td>inclus</td>
+                                                <td>inclus</td>
+                                                <td>inclus</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Appels vers mobiles LOL</th>
+                                                <td>inclus</td>
+                                                <td>inclus</td>
+                                                <td>inclus</td>
+                                            </tr>
+                                            <tr>
+                                                <th>EU120</th>
+                                                <td>inclus</td>
+                                                <td>inclus</td>
+                                                <td>inclus</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Volume</th>
+                                                <td>illimité</td>
+                                                <td>illimité</td>
+                                                <td>illimité</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Adresse IP</th>
+                                                <td>Dynamique</td>
+                                                <td>Dynamique</td>
+                                                <td>Dynamique</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Trafic des données</th>
+                                                <td>Fair Use</td>
+                                                <td>Fair Use</td>
+                                                <td>Fair Use</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="4">1) Disponibilité à vérifier</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <h2 data-trigger class="section-subtitle uppercase">adsl <span class="icon-right-arrow"></span></h2>
+                            <div>
+                                <div class="container-table">
+                                    <table class="table-tarifs">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>LOL DSL 24</th>
+                                                <th>LOL Komplett Start</th>
+                                                <th>LOL Komplett Run</th>
+                                                <th>LOL Komplett Professionnal</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>Prix/mois</th>
+                                                <td>34,90€/mois</td>
+                                                <td>35€/mois</td>
+                                                <td>53€/mois</td>
+                                                <td>78€/mois</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Downstream max.</th>
+                                                <td>24 Mbit/s</td>
+                                                <td>8 Mbit/s</td>
+                                                <td>12 Mbit/s</td>
+                                                <td>20 Mbit/s</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Upstream max.</th>
+                                                <td>1024 kbit/s</td>
+                                                <td>512 kbit/s</td>
+                                                <td>640 kbit/s</td>
+                                                <td>768 kbit/s</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Activation du service</th>
+                                                <td>24 mois: 0€<br>12 mois: 85€</td>
+                                                <td>24 mois: 25€<br>12 mois: 85€</td>
+                                                <td>24 mois: 25€<br>12 mois: 85€</td>
+                                                <td>24 mois: 25€<br>12 mois: 85€</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Installation</th>
+                                                <td>Self-Install: 25€<br>Avec technicien: 89€</td>
+                                                <td>24 mois: 0€<br>12 mois: 80€</td>
+                                                <td>24 mois: 0€<br>12 mois: 80€</td>
+                                                <td>24 mois: 0€<br>12 mois: 80€</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Modem de base</th>
+                                                <td>Location 4 €/mois</td>
+                                                <td>Location 4 €/mois</td>
+                                                <td>Location 4 €/mois</td>
+                                                <td>Location 4 €/mois</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Abonnement téléphonique</th>
+                                                <td>LOL Phone inclus</td>
+                                                <td>LOL Phone inclus</td>
+                                                <td>LOL Phone inclus</td>
+                                                <td>LOL Phone inclus</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Abonnement ligne ISDN</th>
+                                                <td>+7,00€/mois</td>
+                                                <td>+7,00€/mois</td>
+                                                <td>+7,00€/mois</td>
+                                                <td>+7,00€/mois</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Téléphonie flat(fixe vers national fixe)</th>
+                                                <td>inclus</td>
+                                                <td>+4,50€/mois</td>
+                                                <td>+4,50€/mois</td>
+                                                <td>+4,50€/mois</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Appels vers mobiles LOL</th>
+                                                <td>inclus</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <th>EU120</th>
+                                                <td>inclus</td>
+                                                <td>+4,50€/mois</td>
+                                                <td>+4,50€/mois</td>
+                                                <td>+4,50€/mois</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Volume</th>
+                                                <td>illimité</td>
+                                                <td>illimité</td>
+                                                <td>illimité</td>
+                                                <td>illimité</td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <th>Adresse IP</th>
+                                                <td>Dynamique</td>
+                                                <td>Dynamique</td>
+                                                <td>Dynamique</td>
+                                                <td>Dynamique</td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <th>Trafic des données</th>
+                                                <td>Fair Use</td>
+                                                <td>Fair Use</td>
+                                                <td>Fair Use</td>
+                                                <td>Fair Use</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <h2 data-trigger class="section-subtitle uppercase">lol cable <span class="icon-right-arrow"></span></h2>
+                            <div>
+                                <div class="container-table">
+                                    <table class="table-tarifs">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Cable 10</th>
+                                                <th>Cable 30</th>
+                                                <th>Cable 60</th>
+                                                <th>Cable 120</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>Download</th>
+                                                <td>10 Mbit/s</td>
+                                                <td>30 Mbit/s</td>
+                                                <td>60 Mbit/s</td>
+                                                <td>120 Mbit/s</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Upload</th>
+                                                <td>1 Mbit/s</td>
+                                                <td>10 Mbit/s</td>
+                                                <td>15 Mbit/s</td>
+                                                <td>15 Mbit/s</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Volume</th>
+                                                <td>Illimité</td>
+                                                <td>Illimité</td>
+                                                <td>Illimité</td>
+                                                <td>Illimité</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Prix mensuel</th>
+                                                <td>29 €</td>
+                                                <td>38 €</td>
+                                                <td>53 €</td>
+                                                <td>75 €</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Abo mensuel</th>
+                                                <td>gratuit</td>
+                                                <td>gratuit</td>
+                                                <td>gratuit</td>
+                                                <td>gratuit</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Tél.nat.fixe flat</th>
+                                                <td>+4,5€/mois</td>
+                                                <td>+4,5€/mois</td>
+                                                <td>gratuit</td>
+                                                <td>gratuit</td>
+                                            </tr>
+                                            <tr>
+                                                <th>120 min vers EU</th>
+                                                <td>+4,5€/mois</td>
+                                                <td>+4,5€/mois</td>
+                                                <td>+4,5€/mois</td>
+                                                <td>gratuit</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Install + modem<br />(avec contrat 24 mois)</th>
+                                                <td>85 €</td>
+                                                <td>gratuit</td>
+                                                <td>gratuit</td>
+                                                <td>gratuit</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Install + modem<br />(avec contrat 12 mois)</th>
+                                                <td>180 €</td>
+                                                <td>180 €</td>
+                                                <td>180 €</td>
+                                                <td>180 €</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div id="document-links" class="iner-shadow">
+                    <div class="container-wrapper">
+                        <div class="row">
+                            <ul class="spread">
+                                <li><a href="../internet/faq.html"><span class="icon icon-faq-ico"></span>FAQ</a></li>
+                                <li class="active"><a href="../internet/tarifs_detailles.html"><span class="icon icon-calculator-ico"></span>Nos tarifs détaillés</a></li>
+                                <li><a href="../internet/parrainage.html"><span class="icon icon-parrainage-ico"></span>Bon de parrainage</a></li>
+                                <li><a href="../internet/abonnement.html"><span class="icon icon-document-ico"></span>Documents</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="social-links">
+                    <div class="container-wrapper">
+                        <div class="row">
+                            <div class="text">Rejoignez-nous sur: </div>
+                            <nav>
+                                <ul class="spread">
+                                    <li>
+                                        <a href="http://www.online.lu/">
+                                            <div class="social-icon lol"><span class="icon-icone-lol"></span></div>
+                                            <span class="brand-name">Online.lu</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.facebook.com/Luxembourg.Online">
+                                            <div class="social-icon facebook"><span class="icon-facebook"></span></div>
+                                            <span class="brand-name">Facebook</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/Lux_Online">
+                                            <div class="social-icon twitter"><span class="icon-twitter"></span></div>
+                                            <span class="brand-name">Twitter</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://plus.google.com/+internetlu">
+                                            <div class="social-icon google"><span class="icon-google"></span></div>
+                                            <span class="brand-name">Google+</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/company/2054058?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A2054058%2Cidx%3A2-1-2%2CtarId%3A1446712404024%2Ctas%3Aluxembourg%20online">
+                                            <div class="social-icon linkedin"><span class="icon-linkedin"></span></div>
+                                            <span class="brand-name">LinkedIn</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div id="contact">
+                    <div class="container-wrapper">
+                        <div class="row">
+                            <div class="text">Contactez-nous : </div>
+                            <ul class="contact-infos spread">
+                                <li>
+                                    <span class="icon-phone-icone"></span>2799 0000
+                                </li>
+                                <li>
+                                    <span class="icon-clock-icone"></span>Lu-Sa: 9h00-18h00
+                                </li>
+                                <li>
+                                    <span class="icon-internet-ico"></span>commercial@internet.lu
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="footer-links">
+                    <div class="container-wrapper">
+                        <div class="row">
+                            <a class="help-link" href="../divers/assistance.html">
+                                <span class="icon-info-icone"></span>
+                                <p>Accédez à l’espace assistance de Luxembourg Online (FAQ, informations, documents utiles, contrats, divers)</p>
+                                <span class="icon-right-arrow"></span>
+                            </a>
+                            <div class="separator hidden-phone hidden-tab"></div>
+                        </div>
+                        <div class="row hidden-phone hidden-tab">
+                            <div class="footer-top-links">
+                                <h4>internet : </h4>
+                                <nav>
+                                    <ul class="links">
+                                        <li><a href="../internet/offres.html">Nos offres</a></li>
+                                        <li><a href="../promos/fibre.html">Offre spéciale fibre</a></li>
+                                        <li><a href="../internet/equipements.html">Nos équipements</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="footer-top-links">
+                                <h4>téléphonie : </h4>
+                                <nav>
+                                    <ul class="links">
+                                        <li><a href="../telephonie/tarifs.html">Nos tarifs</a></li>
+                                        <li><a href="../telephonie/equipements.html">Nos téléphones</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="footer-top-links">
+                                <h4>tv : </h4>
+                                <nav>
+                                    <ul class="links">
+                                        <li><a href="../tv/offres.html">Notre offre</a></li>
+                                        <li><a href="../tv/offres.html">Nos chaînes</a></li>
+                                        <li><a href="../tv/equipements.html">Nos équipements</a></li>
+                                        <li><a href="../promos/internetTV.html">Offre spéciale TV</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="footer-top-links">
+                                <h4>mobile : </h4>
+                                <nav>
+                                    <ul class="links">
+                                        <li><a href="../mobile/abonnements.html">Nos offres</a></li>
+                                        <li><a href="../mobile/equipements.html">Nos téléphones</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="separator"></div>
+                            <div class="phone-12">
+                                <div class="display-phone copyright"><span class="icon-icone-lol"></span>&copy;2015 Luxembourg Online S.A</div>
+                                <nav class="hidden-phone">
+                                    <ul class="footer-bottom-links">
+                                        <li>
+                                            <span class="icon-icone-lol"></span>&copy;2015 Luxembourg Online S.A</li>
+                                        <li><a href="../documents/CONDITIONS GENERALES DES SERVICES LUXEMBOURG ONLINE.pdf">Mentions légales</a></li>
+                                        <li><a href="../divers/emploi.html">Offres d'emploi</a></li>
+                                        <li><a href="../divers/plan.html">Plan du site</a></li>
+                                        <li><a href="#">Cookies</a></li>
+                                        <li><a href="../divers/contact.html">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!--              ./FOOTER               -->
+        
+        <script src="../scripts/vendor/jquery.min.js"></script>
+        <script src="../scripts/main.js"></script>
+        
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function (b, o, i, l, e, r) {
+                b.GoogleAnalyticsObject = l;
+                b[l] || (b[l] =
+                        function () {
+                            (b[l].q = b[l].q || []).push(arguments)
+                });
+                b[l].l = +new Date;
+                e = o.createElement(i);
+                r = o.getElementsByTagName(i)[0];
+                e.src = 'https://www.google-analytics.com/analytics.js';
+                r.parentNode.insertBefore(e, r)
+            }(window, document, 'script', 'ga'));
+            ga('create', 'UA-XXXXX-X');
+            ga('send', 'pageview');
+        </script>
+    </body>
+    
+</html>

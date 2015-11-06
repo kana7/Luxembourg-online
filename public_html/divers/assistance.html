@@ -1,0 +1,995 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Assistance : Luxembourg Online</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="shortcut icon" href="/favicon.ico">
+        
+        <link rel="stylesheet" href="../styles/css/main.css">
+        <link rel="stylesheet" href="../styles/css/internet/accueil.css">
+        
+        <script src="../scripts/vendor/picturefill.min.js"></script>
+    </head>
+    
+    <body>
+        <div id="clientSpace">
+            <div class="background-client"></div>
+            <div class="white-pannel">
+                <button class="pannel-close"><span class="icon-x-icone"></span></button>
+                <h1>Espace Client</h1>
+                <ul class="client-menu">
+                    <li class="active" data-id="mail">Email</li>
+                    <li data-id="account">Mon compte</li>
+                    <li data-id="homepage">Homepage</li>
+                </ul>
+                <div class="pannel-forms">
+                    <form id="mail" class="clearfix is-visible" name="ServiceLogin1" method="POST" action="https://email.internet.lu/Scripts/sql.exe?_selection=10">
+                        <input type="hidden" name="Sql" value="Default.phs">  
+                        <input type="hidden" name="SqlDB" value="OMS2">  
+                        <div class="phone-6">
+                            <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
+                        </div>
+                        <div class="phone-6">
+                            <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
+                        </div>
+                        <button class="btn-blue" type="submit">Se connecter</button>
+                    </form>
+                    <form id="account" class="clearfix" name="LoginPhone" method="POST" action="http://shop.internet.lu/Scripts/sql.exe?LoginScript=LoginClient.phs&NextScript=DisplayAccount.phs&_Login=">
+                        <input type="hidden" name="Sql" value="LoginClient_Login.phs">  
+                        <input type="hidden" name="SqlDB" value="LOLShop">  
+                        <div class="phone-6">
+                            <input type="text" name="_Username" placeholder="Nom d'utilisateur"/>
+                        </div>
+                        <div class="phone-6">
+                            <input class="pull-right" type="password" name="_Password" placeholder="Mot de passe"/>
+                        </div>
+                        <button class="btn-blue" type="submit">Se connecter</button>
+                    </form>
+                    <form id="homepage" class="clearfix" name="ServiceLogin3" method="POST" action="http://sites.internet.lu/Scripts/sql.exe">
+                        <input type="hidden" name="Sql" value="default.phs">  
+                        <input type="hidden" name="SqlDB" value="OHPS">  
+                        <div class="phone-6">
+                            <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
+                        </div>
+                        <div class="phone-6">
+                            <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
+                        </div>
+                        <button class="btn-blue" type="submit">Se connecter</button>
+                    </form>
+                    <div class="contact-infos hidden-phone">
+                        Helpdesk: 2799 0000
+                        <span>Lu-Ve: 8h00-19h00  l  Sa: 9h00-18h00</span>
+                    </div>
+                    <div class="contact-infos display-phone">
+                        Helpdesk: 2799 0000
+                        <span>Lu-Ve: 8h00-19h00<br/>Sa: 9h00-18h00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fixed-options hidden-phone hidden-tab">
+            <a href="#">
+                <div class="white-fixed-option">
+                    <div class="icon-call-me"></div>
+                    <p>Veuillez me rappeler</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="blue-fixed-option">
+                    <p>Abonnez-vous<br/> <strong>en ligne </strong><span class="icon-right-arrow"></span></p>
+                </div>
+            </a>
+        </div>
+        <nav class="mobile-side-menu">
+            <ul class="menu">
+                <li class="menu-item"><a href="../index.html">Accueil</a></li>
+                <li class="menu-item" data-id='internet'>Internet<span class="icon-right-arrow"></span></li>
+                <li class="menu-item" data-id='telephone'>Téléphonie <span class="icon-right-arrow"></span></li>
+                <li class="menu-item" data-id='tv'>TV <span class="icon-right-arrow"></span></li>
+                <li class="menu-item" data-id='mobile'>Mobile<span class="icon-right-arrow"></span></li>
+                <li class="menu-item" data-id='promo'>Promos <span class="icon-right-arrow"></span></li>
+                <li class="sous-nav">
+                    <ul class="menu">
+                        <li class="menu-item"><a href="../divers/assistance.html">Assistance</a></li>
+                        <li class="menu-item"><a href="http://www.internet.lu/lolcloud/index.htm">LOL CLOUD</a></li>
+                        <li class="menu-item"><a href="../divers/magazine.html">Magazine</a></li>
+                        <li class="menu-item"><a href="../divers/propos.html">À propos</a></li>
+                        <li class="menu-item"><a href="../divers/contact.html">Contact</a></li>
+                        <li class="menu-item"><a href="../divers/emploi.html">Offres d'emplois</a></li>
+                        <li class="menu-item"><a href="../divers/plan.html">Plan du site</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="menu-links-wrapper">
+                <ul class="menu-links" id="internet">
+                    <li class="menu-item back"><span class="icon-right-arrow"></span>Internet</li>
+                    <li class="menu-item"><a href="../internet/accueil.html">Accueil</a></li>
+                    <li class="menu-item"><a href="../internet/offres.html">Nos offres</a></li>
+                    <li class="menu-item"><a href="../internet/equipements.html">Nos équipements</a></li>
+                    <li class="menu-item"><a href="../internet/abonnement.html">Abonnez-vous</a></li>
+                </ul>
+            </div>
+            <div class="menu-links-wrapper">
+                <ul class="menu-links" id="telephone">
+                    <li class="menu-item back"><span class="icon-right-arrow"></span>Téléphonie</li>
+                    <li class="menu-item"><a href="../telephonie/accueil.html">Accueil</a></li>
+                    <li class="menu-item"><a href="../telephonie/tarifs.html">Nos tarifs</a></li>
+                    <li class="menu-item"><a href="../telephonie/equipements.html">Nos téléphones</a></li>
+                    <li class="menu-item"><a href="../telephonie/abonnement.html">Abonnez-vous</a></li>
+                </ul>
+            </div>
+            <div class="menu-links-wrapper">
+                <ul class="menu-links" id="tv">
+                    <li class="menu-item back"><span class="icon-right-arrow"></span>TV</li>
+                    <li class="menu-item"><a href="../tv/accueil.html">Accueil</a></li>
+                    <li class="menu-item"><a href="../tv/offres.html">Notre offre TV</a></li>
+                    <li class="menu-item"><a href="../tv/equipements.html">Nos équipements</a></li>
+                    <li class="menu-item"><a href="../tv/abonnement.html">Abonnez-vous</a></li>
+                </ul>
+            </div>
+            <div class="menu-links-wrapper">
+                <ul class="menu-links" id="mobile">
+                    <li class="menu-item back"><span class="icon-right-arrow"></span>Mobile</li>
+                    <li class="menu-item"><a href="../mobile/accueil.html">Accueil</a></li>
+                    <li class="menu-item"><a href="../mobile/abonnements.html">Nos abonnements</a></li>
+                    <li class="menu-item"><a href="../mobile/equipements.html">Nos téléphones</a></li>
+                    <li class="menu-item"><a href="../mobile/abonnement.html">Abonnez-vous</a></li>
+                </ul>
+            </div>
+            <div class="menu-links-wrapper">
+                <ul class="menu-links" id="promo">
+                    <li class="menu-item back"><span class="icon-right-arrow"></span>Promos</li>
+                    <li class="menu-item"><a href="../promos/accueil.html">Accueil</a></li>
+                    <li class="menu-item"><a href="../promos/fibre.html">Offre spéciale fibre</a></li>
+                    <li class="menu-item"><a href="../promos/internetTV.html">offre spéciale TV</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="siteWrap">
+            <header>
+                <div id="top-menu-header" class="hidden-phone hidden-tab">
+                    <div class="container-wrapper">
+                        <div class="row">
+                            <nav class="pull-left">
+                                <ul class="top-menu-header-links left">
+                                    <li><a href="#">Particuliers</a></li>
+                                    <li><a href="#">Business</a></li>
+                                </ul>
+                            </nav>
+                            <nav class="pull-right">
+                                <ul class="top-menu-header-links right">
+                                    <li class="menu-item"><a href="../divers/assistance.html">Assistance</a></li>
+                                    <li class="menu-item"><a href="http://www.internet.lu/lolcloud/index.htm">LOL CLOUD</a></li>
+                                    <li class="menu-item"><a href="../divers/magazine.html">Magazine</a></li>
+                                    <li class="menu-item"><a href="../divers/propos.html">À propos</a></li>
+                                    <li class="menu-item"><a href="../divers/contact.html">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="bottom-menu-header">                    
+                    <nav class="bottom-menu-header-links mobile display-phone display-tab">
+                        <div class="pull-left">
+                            <div class="logo">
+                                <a href="../index.html"><img src="../images/Icone/img/Logo-LOL.png" alt="logo LOL" /></a>
+                            </div>
+                        </div>
+                        <div class="mobile-menu-button">
+                            <button id="openClientSpaceMobile" class="mobile-button-blue">
+                                <span class="icon-account-icone"></span>
+                            </button>
+                            <button class="mobile-button-white">
+                                <span class="icon-menu-icone"></span>
+                            </button>
+                        </div>
+                    </nav>
+                    <div class="container-wrapper hidden-phone hidden-tab">
+                        <div class="row">
+                            <div class="pull-left">
+                                <div class="logo">
+                                    <a href="../index.html"><img src="../images/Icone/img/Logo-LOL.png" alt="logo LOL" /></a>
+                                </div><!--
+                                --><nav class="bottom-menu-header-links">
+                                    <ul class="main-menu">
+                                        <li>
+                                            <div class="active-border"></div>
+                                            <a href="../internet/accueil.html">
+                                                <img class="header-icon" src="../images/Icone/img/internet.png" alt="Internet" />
+                                                <div class="link">Internet</div>
+                                            </a>
+                                        </li><!--
+                                        --><li>
+                                            <div class="active-border"></div>
+                                            <a href="../telephonie/accueil.html">
+                                                <img class="header-icon" src="../images/Icone/img/telephonie.png" alt="Téléphonie" />
+                                                <div class="link">Téléphonie</div>
+                                            </a>
+                                        </li><!--
+                                        --><li>
+                                            <div class="active-border"></div>
+                                            <a href="../tv/accueil.html">
+                                                <img class="header-icon" src="../images/Icone/img/tv.png" alt="Tv" />
+                                                <div class="link">Tv</div>
+                                            </a>
+                                        </li><!--
+                                        --><li>
+                                            <div class="active-border"></div>
+                                            <a href="../mobile/accueil.html">
+                                                <img class="header-icon" src="../images/Icone/img/mobile.png" alt="Mobile" />
+                                                <div class="link">Mobile</div>
+                                            </a>
+                                        </li><!--
+                                        --><li>
+                                            <div class="active-border"></div>
+                                            <a href="../promos/accueil.html">
+                                                <img class="header-icon" src="../images/Icone/img/promos.png" alt="Promos" />
+                                                <div class="link">Promos</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="pull-right hidden-phone hidden-tab">
+                                <button id="openClientSpace" class="btn-blue">Espace Client</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </header>
+            
+            <section class="drop-shadow background-lightgrey">
+                <div class="container-wrapper">
+                    <div class="row">
+                        <div class="align-center phone-12">
+                            <h1 class="plan-title-padding section-title normal lowercase">Bienvenue sur l'assistance Luxembourg Online</h1>                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="padding">
+                <div class="container-wrapper">
+                    <div class="row">
+                        <div class="dropdown">
+                            <h2 data-trigger class="section-subtitle divers-subtitle"><span class="icon-right-arrow"></span> Guide d'installation et d'utilisation</h2>
+                            <div class="content-assistance">
+                                
+                                
+                                
+                                <style>
+                                    .modemItem{
+                                        display:none;
+                                        margin-top:15px;
+                                    }
+                                    .emailItem{
+                                        display:none;
+                                        margin-top:15px;
+                                    }
+                                    
+                                    .imgContainer{
+                                        width:200px;
+                                        height:150px;
+                                        vertical-align:middle;
+                                        text-align:center;
+                                    }
+                                    .imgContainer img {
+                                        border:0px;
+                                    }
+                                    td{
+                                        vertical-align:top;
+                                    }
+                                    .dropTabContent{
+                                        padding:10px;
+                                    }
+                                    .emailImg {
+                                        width:80%;
+                                    }
+                                    .emailPara {
+                                        list-style-type:decimal;
+                                        line-height:15pt;
+                                        font-weight:bold;
+                                        margin-left:18px;
+                                    }
+                                    .emailPara span {
+                                        font-weight:normal;
+                                    }
+                                    .emailPara2 {
+                                        list-style-type:decimal;
+                                        margin-left:10px;
+                                        margin-top:20px;
+                                        margin-bottom:20px;
+                                        font-weight:bold;
+                                    }
+                                    .emailPara2 span {
+                                        font-weight:normal;
+                                    }
+                                    .emailItem h3{
+                                        margin-left:0px;
+                                        font-size:16px;
+                                    }
+                                    .emailPara li, .emailPara2 li{
+                                        display: list-item;
+                                        list-style: decimal ;
+                                        list-style-type: decimal;
+                                    }
+                                    .emailPara {
+                                        list-style-type: decimal;
+                                        line-height: 15pt;
+                                        font-weight: bold;
+                                        margin-left: 18px;
+                                    }
+                                    .emailPara2 {
+                                        list-style-type: decimal;
+                                        margin-left: 10px;
+                                        margin-top: 20px;
+                                        margin-bottom: 20px;
+                                        font-weight: bold;
+                                    }
+                                    .link-assistance{
+                                        color: #004994;
+                                        text-decoration: underline;
+                                    }
+                                    .config td {
+                                        padding: 5px;
+                                    }
+                                    .content-assistance{
+                                        padding: 0 0 15px;
+                                        padding-left: 40px;
+                                    }
+                                </style>
+                                
+                                Séléctionnez le guide:
+                                <select class="modemList">
+                                    <option value="0">Fritz!Box (ADSL)</option>
+                                    <option value="1">Fritz!Box (VDSL)</option>
+                                    <option value="2">Fritz!Box (VDSL dégroupé)</option>
+                                    <option value="3">Minix (LOL TV)</option>
+                                    <option value="4">Minix Mini (LOL TV)</option>
+                                    
+                                </select>
+                                <div class="modemItem" style="display: none;">
+                                    <table>
+                                        <tbody><tr>
+                                                <td><div class="imgContainer" style="width:120px !important;"><a class="link link2" href="../documents/guides/Guide_ADSL_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_ADSL_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a></div></td>
+                                                <td><h3>Fritz!Box (ADSL)</h3><br><a class="link link2" href="../documents/guides/Guide_ADSL_A5_BD.pdf" target="_blank">Guide d'utilisation</a></td>
+                                            </tr>
+                                        </tbody></table>
+                                </div>
+                                
+                                <div class="modemItem" style="display: none;">
+                                    <table>
+                                        <tbody><tr>
+                                                <td><div class="imgContainer" style="width:120px !important;"><a class="link link2" href="../documents/guides/Guide_VDSL_RV_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_VDSL_RV_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a></div></td>
+                                                <td><h3>Fritz!Box (VDSL)</h3><br><a class="link link2" href="../documents/guides/Guide_VDSL_RV_A5_BD.pdf" target="_blank">Guide d'utilisation</a></td>
+                                            </tr>
+                                        </tbody></table>
+                                </div>
+                                
+                                <div class="modemItem" style="display: none;">
+                                    <table>
+                                        <tbody><tr>
+                                                <td><div class="imgContainer" style="width:120px !important;"><a class="link link2" href="../documents/guides/Guide_VDSL_DG_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_VDSL_DG_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a></div></td>
+                                                <td><h3>Fritz!Box (VDSL dégroupé)</h3><br><a class="link link2" href="../documents/guides/Guide_VDSL_DG_A5_BD.pdf" target="_blank">Guide d'utilisation</a></td>
+                                            </tr>
+                                        </tbody></table>
+                                </div>
+                                
+                                <div class="modemItem" style="display: none;">
+                                    <table>
+                                        <tbody><tr>
+                                                <td><div class="imgContainer" style="width:120px !important;"><a class="link link2" href="../documents/guides/Guide_TV_Minix_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_TV_Minix_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a></div></td>
+                                                <td><h3>Minix (LOL TV)</h3><br><a class="link link2" href="../documents/guides/Guide_TV_Minix_A5_BD.pdf" target="_blank">Guide d'utilisation</a></td>
+                                            </tr>
+                                        </tbody></table>
+                                </div>
+                                
+                                <div class="modemItem" style="display: block;">
+                                    <table>
+                                        <tbody><tr>
+                                                <td><div class="imgContainer" style="width:120px !important;"><a class="link link2" href="../documents/guides/Guide_TV_Minix_Mini_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_TV_Minix_Mini_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a></div></td>
+                                                <td><h3>Minix Mini (LOL TV)</h3><br><a class="link link2" href="../documents/guides/Guide_TV_Minix_Mini_A5_BD.pdf" target="_blank">Guide d'utilisation</a></td>
+                                            </tr>
+                                        </tbody></table>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="dropdown">
+                            <h2 data-trigger class="section-subtitle divers-subtitle"><span class="icon-right-arrow"></span> Configuration E-mail</h2>
+                            <div class="content-assistance">
+                                Séléctionnez la configuration:
+                                <select class="emailList">
+                                    <option value="0">Paramètres de base</option>
+                                    <option value="1">Windows Mail</option>
+                                    <option value="2">Windows Live Mail</option>
+                                    <option value="3">Outlook 2013</option>
+                                    <option value="4">Outlook 2010</option>
+                                    <option value="5">Outlook 2007</option>
+                                    <option value="6">Apple Mail</option>
+                                    <option value="7">iOS</option>
+                                    <option value="8">Android</option>
+                                    
+                                </select>
+                                <div class="emailItem" style="display: block;">
+                                    <table>
+                                        <tbody><tr>
+                                                <td style="text-align: center;width: 131px;">
+                                                    <img class="emailImg" src="http://www.internet.lu/images/logo_blue2.png" style="margin-right:20px;" data-realwidth="110" data-realheight="35">
+                                                </td>
+                                                <td><h3>Paramètres de base</h3>
+                                                    
+                                                    <ul class="emailPara">
+                                                        <li><span>Serveur de courrier entrant (POP) : <b>pop.internet.lu</b></span></li>
+                                                        <li><span>Port: <b>110/connexion sans SSL</b></span></li>
+                                                        <li><span>Serveur de courrier sortant (SMTP) : <b>smtp.internet.lu</b></span></li>
+                                                        <li><span>Port SMTP: <b>25 ou 587 avec authentification activée/connexion sans SSL</b></span></li><b>
+                                                            <li><span>Adresse email : <b>votre adresse @internet.lu</b></span></li>
+                                                            <li><span>Nom d'utilisateur (username) : <b>votre username</b></span></li>
+                                                            <li><span>Mot de passe (password) : <b>votre password</b></span></li>
+                                                        </b></ul><b>
+                                                    </b></td>
+                                            </tr>
+                                        </tbody></table>
+                                </div>
+                                
+                                <div class="emailItem" style="display: none;">
+                                    <table>
+                                        <tbody><tr>
+                                                <td style="text-align: center;width: 131px;">
+                                                    <img class="emailImg" src="../images/aide/win_mail.png" data-realwidth="150" data-realheight="150">
+                                                </td>
+                                                <td><h3>Windows Mail</h3>
+                                                    <ul class="emailPara">				
+                                                        <li><span>Cliquez dans la barre de menu à droite sur Paramètres.</span></li>
+                                                        <li><span>Cliquez sur Comptes, puis sur Ajouter un compte.</span></li>
+                                                        <li><span>Sélectionnez Autre compte.</span></li>
+                                                        <li><span>Cochez la case <b>POP</b> et cliquez ensuite sur Connecter.</span></li>
+                                                        <li><span>Cliquez sur Afficher plus de détails et remplissez les champs comme indiqué ci-dessous.</span></li>
+                                                        
+                                                        <ul class="emailPara2">
+                                                            <li>Adresse de messagerie : <span>introduisez votre adresse e-mail.</span></li>
+                                                            <li>Nom d'utilisateur : <span>réintroduisez votre nom d'utilisateur.</span></li>
+                                                            <li>Mot de passe : <span>introduisez votre mot de passe. Si vous le souhaitez, vous pouvez cocher la case "Mémoriser ce mot de passe".</span></li>
+                                                            <li>Serveur de messagerie entrant (POP) : <span>introduisez <b>pop.internet.lu</b> dans ce champ.</span></li>
+                                                            <li>Port : <span><b>110</b></span></li>
+                                                            <li>Le serveur entrant requiert SSL : <span>NE PAS cocher cette case.</span></li>
+                                                            <li>Serveur de messagerie sortant (SMTP) : <span>introduisez <b>smtp.internet.lu</b> dans ce champ.</span></li>
+                                                            <li>Port : <span><b>25 ou 587</b></span></li>
+                                                            <li>Le serveur sortant requiert SSL : <span>NE PAS cocher cette case.</span></li>
+                                                            <li>Le serveur sortant requiert l’authentification : <span>cochez cette case.</span></li>
+                                                            <li>Utiliser les mêmes nom d’utilisateur et mot de passe pour envoyer et recevoir les messages électroniques : <span>cochez cette case.</span></li>
+                                                        </ul>
+                                                        <li><span>Cliquez sur Connecter.</span></li>
+                                                        <li><span>Vous pouvez désormais envoyer et recevoir vos e-mails via Windows  Mail.</span></li>
+                                                    </ul></td>
+                                            </tr>
+                                        </tbody></table>
+                                </div>
+                                
+                                <div class="emailItem" style="display: none;">
+                                    <table>
+                                        <tbody><tr>
+                                                <td style="text-align: center;width: 131px;">
+                                                    <img class="emailImg" src="../images/aide/win_live_mail.png" data-realwidth="150" data-realheight="150">
+                                                </td>
+                                                <td><h3>Windows Live Mail</h3>
+                                                    
+                                                    
+                                                    <ul class="emailPara">
+                                                        <li><span>Dans la barre de menu, cliquez sur Comptes et ensuite sur Ajouter.</span></li>
+                                                        <li><span>Cliquez sur Compte de messagerie et ensuite sur Suivant.</span></li>
+                                                        <li><span>Remplissez les champs comme indiqué ci-dessous et cliquez sur Suivant.</span></li>
+                                                        <ul class="emailPara2">
+                                                            <li>Adresse de messagerie : <span>introduisez votre adresse e-mail.</span></li>
+                                                            <li>Mot de passe : <span>introduisez votre mot de passe. Si vous le souhaitez, vous pouvez cocher la case "Mémoriser ce mot de passe".</span></li>
+                                                            <li>Nom d’affichage : <span>introduisez votre nom. Vos contacts verront apparaître ce nom lorsqu’ils recevront vos e-mails.</span></li>
+                                                            <li>Configurer manuellement les paramètres du serveur : <span>cochez cette case.</span></li>
+                                                        </ul>
+                                                        <li><span>Remplissez les champs comme indiqué ci-dessous et cliquez sur Suivant.</span></li>
+                                                        
+                                                        
+                                                        <ul class="emailPara2">
+                                                            Informations sur le serveur entrant
+                                                            <li>Type de serveur : <span>sélectionnez <b>POP</b> dans le menu déroulant.</span></li>
+                                                            <li>Adresse du serveur : <span>introduisez <b>pop.internet.lu</b> dans ce champ.</span></li>
+                                                            <li>Port : <span><b>110</b></span></li>
+                                                            <li>Connexion sécurisée (SSL) requise : <span>NE PAS cocher cette case.</span></li>
+                                                            <li>Identifiant de connexion : <span>introduisez votre nom d'utilisateur.</span></li>
+                                                        </ul>
+                                                        <ul class="emailPara2">
+                                                            Informations sur le serveur sortant
+                                                            <li>Adresse du serveur : <span>introduisez <b>smtp.internet.lu</b> dans ce champ.</span></li>
+                                                            <li>Port : <span><b>25 ou 587</b></span></li>
+                                                            <li>Connexion sécurisée (SSL) requise : <span>NE PAS cocher cette case.</span></li>
+                                                            <li>Authentification requise : <span>cochez cette case.</span></li>
+                                                        </ul>
+                                                        <li><span>Cliquez sur Terminer, ensuite sur Arrêter.</span></li>
+                                                        
+                                                        <li><span>Vous pouvez désormais envoyer et recevoir vos e-mails via Windows Live Mail.</span></li>
+                                                    </ul>
+                                                    
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                </div>
+                                
+                                <div class="emailItem" style="display: none;">
+                                    <table>
+                                        <tbody><tr>
+                                                <td style="text-align: center;width: 131px;">
+                                                    <img class="emailImg" src="../images/aide/outlook_2013.png" data-realwidth="150" data-realheight="147">
+                                                </td>
+                                                <td><h3>Outlook 2013</h3>
+                                                    
+                                                    
+                                                    <ul class="emailPara">
+                                                        <li><span>Dans la barre de menu, cliquez sur Fichier et ensuite sur Informations.</span></li>
+                                                        <li><span>Cliquez sur le bouton Ajouter un compte.</span></li>
+                                                        <li><span>Cochez la case "Configuration manuelle ou types de serveurs supplémentaires" et cliquez sur Suivant.</span></li>
+                                                        <li><span>Cochez la case "POP ou IMAP" et cliquez sur Suivant.</span></li>
+                                                        <li><span>Remplissez les champs comme indiqué ci-dessous et cliquez sur le bouton "Paramètres supplémentaires".</span></li>
+                                                        <ul class="emailPara2">
+                                                            <li>Votre nom : <span>introduisez votre prénom et votre nom de famille.</span></li>
+                                                            <li>Adresse de messagerie : <span>introduisez votre adresse e-mail.</span></li>
+                                                            <li>Type de compte : <span>sélectionnez <b>POP</b> dans le menu déroulant.</span></li>
+                                                            <li>Serveur de courrier entrant : <span>introduisez <b>pop.internet.lu</b> dans ce champ.</span></li>
+                                                            <li>Serveur de courrier sortant (SMTP) : <span>introduisez <b>smtp.internet.lu</b> dans ce champ.</span></li>
+                                                            <li>Nom d'utilisateur : <span>introduisez votre nom d'utilisateur.</span></li>
+                                                            <li>Mot de passe : <span>introduisez votre mot de passe. Si vous le souhaitez, vous pouvez cocher la case "Mémoriser le mot de passe".</span></li>
+                                                        </ul>
+                                                        <li><span>Allez dans l'onglet Options avancées, remplissez les champs comme indiqué ci-dessous et cliquez sur le bouton OK</span></li>
+                                                        <ul class="emailPara2">
+                                                            <li>Utilisez le type de connexion chiffrée suivant : <span>sélectionnez <b>aucun</b>.</span></li>
+                                                            <li>Serveur entrant (POP) : <span>introduisez <b>110</b>.</span></li>
+                                                            <li>Serveur de courrier sortant (SMTP) : <span>introduisez <b>25 ou 587</b>.</span></li>
+                                                            <li>Utilisez le type de connexion chiffrée suivant : <span>sélectionnez <b>aucun</b>.</span></li>
+                                                        </ul>
+                                                        <li><span>Cliquez sur Suivant, puis sur Fermer et ensuite sur Terminer.</span></li>
+                                                        
+                                                        <li><span>Vous pouvez désormais envoyer et recevoir vos e-mails via Outlook 2013.</span></li>
+                                                        
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                </div>
+                                
+                                <div class="emailItem" style="display: none;">
+                                    <table>
+                                        <tbody><tr>
+                                                <td style="text-align: center;width: 131px;">
+                                                    <img class="emailImg" src="../images/aide/outlook_2010.png" data-realwidth="150" data-realheight="147">
+                                                </td>
+                                                <td><h3>Outlook 2010</h3>
+                                                    
+                                                    
+                                                    <ul class="emailPara">
+                                                        <li><span>Dans la barre de menu, cliquez sur Fichier et ensuite sur Informations.</span></li>
+                                                        <li><span>Cliquez sur le bouton Ajouter un compte.</span></li>
+                                                        <li><span>Cochez la case "Configurer manuellement les paramètres du serveur ou les types de serveurs supplémentaires" et cliquez sur Suivant.</span></li>
+                                                        <li><span>Cochez la case "Messagerie Internet" et cliquez sur Suivant.</span></li>
+                                                        <li><span>Remplissez les champs comme indiqué ci-dessous et cliquez sur le bouton "Paramètres supplémentaires".</span></li>
+                                                        <ul class="emailPara2">
+                                                            <li>Votre nom : <span>introduisez votre nom.</span></li>
+                                                            <li>Adresse de messagerie : <span>introduisez votre adresse e-mail.</span></li>
+                                                            <li>Type de compte : <span>sélectionnez <b>POP</b> dans le menu déroulant.</span></li>
+                                                            <li>Serveur de courrier entrant : <span>introduisez <b>pop.internet.lu</b> dans ce champ.</span></li>
+                                                            <li>Serveur de courrier sortant (SMTP) : <span>introduisez <b>smtp.internet.lu</b> dans ce champ.</span></li>
+                                                            <li>Nom d'utilisateur : <span>introduisez votre nom d'utilisateur.</span></li>
+                                                            <li>Mot de passe : <span>introduisez votre mot de passe. Si vous le souhaitez, vous pouvez cocher la case "Mémoriser le mot de passe".</span></li>
+                                                        </ul>
+                                                        <li><span>Allez dans l'onglet Options avancées, remplissez les champs comme indiqué ci-dessous et cliquez sur le bouton OK.</span></li>
+                                                        <ul class="emailPara2">
+                                                            <li>Serveur entrant (POP) : <span>introduisez <b>110</b>.</span></li>
+                                                            <li>Ce serveur nécessite une connexion chiffrée (SSL) : <span>NE PAS coher cette case.</span></li>
+                                                            <li>Serveur sortant (SMTP) : <span>introduisez <b>25 ou 587</b>.</span></li>
+                                                            <li>Utilisez le type de connexion chiffrée suivant : <span>sélectionnez <b>aucun</b></span></li>
+                                                        </ul>
+                                                        <li><span>Cliquez sur Suivant, ensuite sur Terminer.</span></li>
+                                                        
+                                                        <li><span>Vous pouvez désormais envoyer et recevoir vos e-mails via Outlook 2010.</span></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                </div>
+                                
+                                <div class="emailItem" style="display: none;">
+                                    <table>
+                                        <tbody><tr>
+                                                <td style="text-align: center;width: 131px;">
+                                                    <img class="emailImg" src="../images/aide/outlook_2007.png" data-realwidth="150" data-realheight="137">
+                                                </td>
+                                                <td><h3>Outlook 2007</h3>
+                                                    
+                                                    
+                                                    <ul class="emailPara">
+                                                        <li><span>Dans la barre de menu, cliquez sur Outils et ensuite sur Paramètres du compte.</span></li>
+                                                        <li><span>Allez dans l'onglet Messagerie et cliquez sur Nouveau.</span></li>
+                                                        <li><span>Cochez la case "Microsoft Exchange, POP3, IMAP ou HTTP" et cliquez sur Suivant.</span></li>
+                                                        <li><span>Cochez la case "Configurer manuellement les paramètres du serveur ou les types de serveurs supplémentaires" et cliquez sur Suivant.</span></li>
+                                                        <li><span>Cochez la case "Messagerie Internet" et cliquez sur Suivant.</span></li>
+                                                        <li><span>Remplissez les champs comme indiqué ci-dessous et cliquez sur le bouton "Paramètres supplémentaires".</span></li>
+                                                        <ul class="emailPara2">
+                                                            <li>Votre nom : <span>introduisez votre nom.</span></li>
+                                                            <li>Adresse de messagerie : <span>introduisez votre adresse e-mail.</span></li>
+                                                            <li>Type de compte : <span>sélectionnez <b>POP3</b> dans le menu déroulant.</span></li>
+                                                            <li>Serveur de courrier entrant : <span>introduisez <b>pop.internet.lu</b> dans ce champ.</span></li>
+                                                            <li>Serveur de courrier sortant (SMTP) : <span>introduisez <b>smtp.internet.lu</b> dans ce champ.</span></li>
+                                                            <li>Nom d’utilisateur : <span>réintroduisez votre nom d'utilisateur.</span></li>
+                                                            <li>Mot de passe : <span>introduisez votre mot de passe. Si vous le souhaitez, vous pouvez cocher la case " Mémoriser le mot de passe".</span></li>
+                                                        </ul>
+                                                        <li><span>Allez dans l’onglet Options avancées, complétez les champs comme décrit ci-dessous et cliquez sur le bouton OK.</span></li>
+                                                        <ul class="emailPara2">
+                                                            <li>Serveur entrant (IMAP) : <span>introduisez <b>110</b>.</span></li>
+                                                            <li>Ce serveur nécessite une connexion chiffrée (SSL) : <span>NE PAS cocher cette case</span></li>
+                                                            <li>Serveur sortant (SMTP) : <span>introduisez <b>25 ou 587</b>.</span></li>
+                                                            <li>Utilisez le type de connexion chiffrée suivant : <span>sélectionnez <b>aucune</b>.</span></li>
+                                                        </ul>
+                                                        <li><span>Cliquez sur Suivant, ensuite sur Terminer.</span></li>
+                                                        
+                                                        <li><span>Vous pouvez désormais envoyer et recevoir vos e-mails via Outlook 2007.</span></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                </div>
+                                
+                                <div class="emailItem" style="display: none;">
+                                    <table>
+                                        <tbody><tr>
+                                                <td style="text-align: center;width: 131px;">
+                                                    <img class="emailImg" src="../images/aide/apple_mail.png" data-realwidth="150" data-realheight="150">
+                                                </td>
+                                                <td><h3>Apple Mail</h3>
+                                                    
+                                                    <ul class="emailPara">		
+                                                        
+                                                        <li><span>Dans la barre de menu, cliquez sur Mail et ensuite sur Préférences.</span></li>
+                                                        <li><span>Sélectionnez l’onglet Comptes et cliquez sur le bouton "+".</span></li>
+                                                        <li><span>Remplissez les champs comme indiqué ci-dessous et cliquez sur le bouton Continuer.</span></li>
+                                                        <ul class="emailPara2">
+                                                            <li>Nom complet : <span>introduisez votre nom.</span></li>
+                                                            <li>Adresse e-mail: <span>ne complétez que la partie de votre adresse e-mail se trouvant avant le symbole @.</span></li>
+                                                            <li>Mot de passe :<span> introduisez votre mot de passe.</span></li>
+                                                        </ul>
+                                                        <li><span>Remplissez les champs comme indiqué ci-dessous et cliquez sur le bouton Continuer.</span></li>
+                                                        <ul class="emailPara2">
+                                                            <li>Type de compte : <span>sélectionnez <b>POP</b>.</span></li>
+                                                            <li>Description : <span>si vous le souhaitez, vous pouvez donner un nom à votre compte.</span></li>
+                                                            <li>Serveur de réception : <span>introduisez <b>pop.internet.lu</b> dans ce champ.</span></li>
+                                                            <li>Nom d'utilisateur : <span>introduisez votre nom d'utilisateur.</span></li>
+                                                            <li>Mot de passe : <span>si ce champ n'a pas été rempli automatiquement, réintroduisez ici votre mot de passe.</span></li>
+                                                        </ul>
+                                                        <li>Authentification : <span>Choisir <b>Mot de passe</b>.</span></li>
+                                                        <li><span>Remplissez les champs comme indiqué ci-dessous et cliquez sur le bouton Continuer.</span></li>
+                                                        <ul class="emailPara2">
+                                                            <li>Description : <span>si vous le souhaitez, vous pouvez donner un nom à votre compte.</span></li>
+                                                            <li>Serveur d’envoi : <span>introduisez <b>smtp.internet.lu</b> dans ce champ.</span></li>
+                                                            <li>N'utiliser que ce serveur : <span>cochez cette case.</span></li>
+                                                            <li>Nom d'utilisateur : <span>ne remplissez pas ce champ.</span></li>
+                                                            <li>Mot de passe : <span>ne remplissez pas ce champ.</span></li>
+                                                        </ul>
+                                                        <li>Authentification : <span>Choisir <b>Mot de passe</b>.</span></li>
+                                                        <li><span>Cliquez sur Créer.</span></li>
+                                                        <li><span>Sélectionnez votre compte dans l’onglet Comptes.</span></li>
+                                                        <li><span>Remplissez les champs comme indiqué ci-dessous.</span></li>
+                                                        <ul class="emailPara2">
+                                                            <li>Adresse électronique : <span>introduisez votre adresse e-mail.</span></li>
+                                                            <li>Serveur d’envoi (SMTP) : <span>sélectionnez Modifier la liste des serveurs SMTP dans le menu déroulant.</span></li>
+                                                        </ul>
+                                                        <li><span>Sélectionnez l’onglet Avancé, remplissez les champs comme indiqué ci-dessous et cliquez sur le bouton OK.</span></li>
+                                                        <ul class="emailPara2">
+                                                            <li>Utiliser le port personnalisé : <span>introduisez <b>25 ou 587</b>.</span></li>
+                                                            <li>Utiliser SSL : <span>NE PAS cocher cette case.</span></li>
+                                                            <li>Authentification : <span>sélectionnez Mot de passe dans le menu déroulant.</span></li>
+                                                            <li>Nom d’utilisateur : <span>introduisez votre adresse e-mail complète.</span></li>
+                                                            <li>Wachtwoord : <span>introduisez votre mot de passe.</span></li>
+                                                        </ul>
+                                                        <li><span>Vous pouvez désormais envoyer et recevoir vos e-mails via Apple Mail.</span></li>
+                                                        
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                </div>
+                                
+                                <div class="emailItem" style="display: none;">
+                                    <table>
+                                        <tbody><tr>
+                                                <td style="text-align: center;width: 131px;">
+                                                    <img class="emailImg" src="http://www.internet.lu/lolcloud/img/Aide/IOS/lolcloud_logo_ios.png" style="margin-right:20px;" data-realwidth="150" data-realheight="150">
+                                                </td>
+                                                <td><h3>iOS</h3>
+                                                    
+                                                    <a class="link-assistance" href="../documents/guides/mail_iphone.pdf" target="_blank">Configuration E-mail sous IOS</a>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                </div>
+                                
+                                <div class="emailItem" style="display: none;">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: center;width: 131px;">
+                                                    <img class="emailImg" src="http://www.internet.lu/lolcloud/img/Aide/Android/lolcloud_logo_android.png" style="margin-right:20px;" data-realwidth="150" data-realheight="150">
+                                                </td>
+                                                <td>
+                                                    <h3>Android</h3>
+                                                    
+                                                    <a class="link-assistance" href="../documents/guides/mail_android.pdf" target="_blank">Configuration E-mail sous Android</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="dropdown">
+                            <h2 data-trigger class="section-subtitle divers-subtitle"><span class="icon-right-arrow"></span> Configuration DATA/MMS</h2>
+                            <div class="content-assistance">
+                                <table>
+                                    <tbody><tr>
+                                            <td style="padding-top:10px;">
+                                                <table class="config">
+                                                    <tbody><tr><td colspan="2" style="font-weight:bold;font-size:10pt;border-bottom:1px solid #e1e1e1;">Configuration Data</td></tr>
+                                                        <tr><td>Nom:</td><td>LOL Internet</td></tr>
+                                                        <tr><td>APN:</td><td>orange.lu</td></tr>
+                                                        <tr><td>Serveur Proxy:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
+                                                        <tr><td>Port:</td><td>8080</td></tr>
+                                                        <tr><td>Nom d'utilisateur:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
+                                                        <tr><td>Mot de passe:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
+                                                        <tr><td>Serveur:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
+                                                        <tr><td>MMSC:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
+                                                        <tr><td>Proxy-MMS:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
+                                                        <tr><td>Port MMS:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
+                                                        <tr><td>MCC:</td><td>270</td></tr>
+                                                        <tr><td>MNC:</td><td>99</td></tr>
+                                                        <tr><td>Type d'authentification:</td><td>PAP ou CHAP</td></tr>
+                                                        <tr><td>Type APN:</td><td>default, supl</td></tr>
+                                                    </tbody></table>
+                                            </td>
+                                            <td style="width:100px;"></td>
+                                            <td style="padding-top:10px;">
+                                                <table class="config">
+                                                    <tbody><tr><td colspan="2" style="font-weight:bold;font-size:10pt;border-bottom:1px solid #e1e1e1;">Configuration MMS</td></tr>
+                                                        <tr><td>Nom:</td><td>LOL MMS</td></tr>
+                                                        <tr><td>APN:</td><td>orange.lu</td></tr>
+                                                        <tr><td>Serveur Proxy:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
+                                                        <tr><td>Port:</td><td>8080</td></tr>
+                                                        <tr><td>Nom d'utilisateur:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
+                                                        <tr><td>Mot de passe:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
+                                                        <tr><td>Serveur:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
+                                                        <tr><td>MMSC:</td><td>http://mms.orange.lu</td></tr>
+                                                        <tr><td>Proxy-MMS:</td><td>212.88.139.44</td></tr>
+                                                        <tr><td>Port MMS:</td><td>8080</td></tr>
+                                                        <tr><td>MCC:</td><td>270</td></tr>
+                                                        <tr><td>MNC:</td><td>99</td></tr>
+                                                        <tr><td>Type d'authentification:</td><td>PAP ou CHAP</td></tr>
+                                                        <tr><td>Type APN:</td><td>mms</td></tr>
+                                                    </tbody></table>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="dropdown">
+                            <h2 data-trigger class="section-subtitle divers-subtitle"><span class="icon-right-arrow"></span> Speed Test</h2>
+                            <div class="content-assistance">
+                                <iframe src="http://speedtest.internet.lu" width="638" height="590" style="border:none;"></iframe>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </section>
+            <footer>                
+                <div id="social-links" class="iner-shadow">
+                    <div class="container-wrapper">
+                        <div class="row">
+                            <div class="text">Rejoignez-nous sur: </div>
+                            <nav>
+                                <ul class="spread">
+                                    <li>
+                                        <a href="http://www.online.lu/">
+                                            <div class="social-icon lol"><span class="icon-icone-lol"></span></div>
+                                            <span class="brand-name">Online.lu</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.facebook.com/Luxembourg.Online">
+                                            <div class="social-icon facebook"><span class="icon-facebook"></span></div>
+                                            <span class="brand-name">Facebook</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/Lux_Online">
+                                            <div class="social-icon twitter"><span class="icon-twitter"></span></div>
+                                            <span class="brand-name">Twitter</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://plus.google.com/+internetlu">
+                                            <div class="social-icon google"><span class="icon-google"></span></div>
+                                            <span class="brand-name">Google+</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/company/2054058?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A2054058%2Cidx%3A2-1-2%2CtarId%3A1446712404024%2Ctas%3Aluxembourg%20online">
+                                            <div class="social-icon linkedin"><span class="icon-linkedin"></span></div>
+                                            <span class="brand-name">LinkedIn</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div id="contact">
+                    <div class="container-wrapper">
+                        <div class="row">
+                            <div class="text">Contactez-nous : </div>
+                            <ul class="contact-infos spread">
+                                <li>
+                                    <span class="icon-phone-icone"></span>2799 0000
+                                </li>
+                                <li>
+                                    <span class="icon-clock-icone"></span>Lu-Sa: 9h00-18h00
+                                </li>
+                                <li>
+                                    <span class="icon-internet-ico"></span>commercial@internet.lu
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="footer-links">
+                    <div class="container-wrapper">
+                        <div class="row">
+                            <a class="help-link" href="../divers/assistance.html">
+                                <span class="icon-info-icone"></span>
+                                <p>Accédez à l’espace assistance de Luxembourg Online (FAQ, informations, documents utiles, contrats, divers)</p>
+                                <span class="icon-right-arrow"></span>
+                            </a>
+                            <div class="separator hidden-phone hidden-tab"></div>
+                        </div>
+                        <div class="row hidden-phone hidden-tab">
+                            <div class="footer-top-links">
+                                <h4>internet : </h4>
+                                <nav>
+                                    <ul class="links">
+                                        <li><a href="../internet/offres.html">Nos offres</a></li>
+                                        <li><a href="../promos/fibre.html">Offre spéciale fibre</a></li>
+                                        <li><a href="../internet/equipements.html">Nos équipements</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="footer-top-links">
+                                <h4>téléphonie : </h4>
+                                <nav>
+                                    <ul class="links">
+                                        <li><a href="../telephonie/tarifs.html">Nos tarifs</a></li>
+                                        <li><a href="../telephonie/equipements.html">Nos téléphones</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="footer-top-links">
+                                <h4>tv : </h4>
+                                <nav>
+                                    <ul class="links">
+                                        <li><a href="../tv/offres.html">Notre offre</a></li>
+                                        <li><a href="../tv/offres.html">Nos chaînes</a></li>
+                                        <li><a href="../tv/equipements.html">Nos équipements</a></li>
+                                        <li><a href="../promos/internetTV.html">Offre spéciale TV</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="footer-top-links">
+                                <h4>mobile : </h4>
+                                <nav>
+                                    <ul class="links">
+                                        <li><a href="../mobile/abonnements.html">Nos offres</a></li>
+                                        <li><a href="../mobile/equipements.html">Nos téléphones</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="separator"></div>
+                            <div class="phone-12">
+                                <div class="display-phone copyright"><span class="icon-icone-lol"></span>&copy;2015 Luxembourg Online S.A</div>
+                                <nav class="hidden-phone">
+                                    <ul class="footer-bottom-links">
+                                        <li>
+                                            <span class="icon-icone-lol"></span>&copy;2015 Luxembourg Online S.A</li>
+                                        <li><a href="../documents/CONDITIONS GENERALES DES SERVICES LUXEMBOURG ONLINE.pdf">Mentions légales</a></li>
+                                        <li><a href="../divers/emploi.html">Offres d'emploi</a></li>
+                                        <li><a href="../divers/plan.html">Plan du site</a></li>
+                                        <li><a href="#">Cookies</a></li>
+                                        <li><a href="../divers/contact.html">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!--              ./FOOTER               -->
+        
+        <script src="../scripts/vendor/jquery.min.js"></script>
+        <script src="../scripts/main.js"></script>
+        <script>
+            $(function () {
+                //old
+                $(".icon").hover(function () {
+                    img = $(this).find("img");
+                    img.attr("src", img.attr("data-default"));
+                }, function () {
+                    img = $(this).find("img");
+                    img.attr("src", img.attr("data-hover"));
+                });
+
+                $(".socialIcon").hover(function () {
+                    groupTab = $(this).attr("data-groupTab");
+                    hoverId = $(this).attr("data-hover");
+                    $("." + groupTab).hide();
+                    $(this).parent().parent().find(".menuTabBack").css("visibility", "hidden");
+                    $(this).parent().next().css("visibility", "");
+                    $("#" + hoverId).show();
+                });
+                $(".loginOption").click(function () {
+                    $(".tabselected").removeClass("tabselected");
+                    $(this).addClass("tabselected");
+
+                });
+                $(".modemList").on("change", function () {
+                    $(".modemItem").hide();
+
+                    $(".modemItem").eq($(this).val()).show();
+                });
+                $(".modemList").change();
+
+                $(".emailList").on("change", function () {
+                    $(".emailItem").hide();
+
+                    $(".emailItem").eq($(this).val()).show();
+                });
+                $(".emailList").change();
+
+            });
+
+        </script>
+        
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function (b, o, i, l, e, r) {
+                b.GoogleAnalyticsObject = l;
+                b[l] || (b[l] =
+                        function () {
+                            (b[l].q = b[l].q || []).push(arguments)
+                });
+                b[l].l = +new Date;
+                e = o.createElement(i);
+                r = o.getElementsByTagName(i)[0];
+                e.src = 'https://www.google-analytics.com/analytics.js';
+                r.parentNode.insertBefore(e, r)
+            }(window, document, 'script', 'ga'));
+            ga('create', 'UA-XXXXX-X');
+            ga('send', 'pageview');
+        </script>
+    </body>
+    
+</html>

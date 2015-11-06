@@ -36,6 +36,11 @@
             }
         }
     }
+    .group-contact-details{
+        div[class^=phone-]:first-child{
+            margin-bottom: 20px;
+        }
+    }
 }
 @include media(phone){
     .equipement-item-blue, .equipement-item-orange{
@@ -69,6 +74,22 @@
     .logo{
         margin-right: 0px;
     }
+    .typeContainer{
+        text-align: center;  
+    }
+    .priceWrapperRight{
+        font-size: 20px;
+    }
+    .picContainer{
+        margin-bottom: 10px;
+    }
+    .hotcity-link{
+        .table-details{
+            td{
+                font-size: 16px;
+            }
+        }
+    }
 }
 @include media(tab){
     .container-wrapper{
@@ -91,10 +112,10 @@
             height: auto;
             padding-bottom: 135%;
             margin-bottom: 30px;
-            &#loldsl{background-image: url(../../images/index/640px/Offres/LOL_DSL.jpg);}
-            &#mobiles{background-image: url(../../images/index/640px/Offres/iphone6.jpg);}
-            &#installation{background-image: url(../../images/index/640px/Offres/Offre_TV.jpg);}
-            &#dispo{background-image: url(../../images/index/640px/Offres/Recherche_Offre.jpg);}
+            &#loldsl{background-image: url(../../images/Homepage/OFFRES/LOL_DSL_235x321px.jpg);}
+            &#mobiles{background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_235x321px.jpg);}
+            &#installation{background-image: url(../../images/Homepage/OFFRES/LOL_TV_235x321px.jpg);}
+            &#dispo{background-image: url(../../images/Homepage/OFFRES/Recherche_Offre.jpg);}
             .details{
                 font-size: 25px;
                 line-height: 25px;
@@ -246,14 +267,47 @@
             }
         }
     }
+    .descSubWrapperRight, .descSubWrapperLeft{
+        width: 50%;
+    }
+    .descSubWrapperRight{
+        padding-left: 20px;
+    }
+    .rightWrapper{
+        display: block;
+        width: 75%;
+    }
     .pdf-list-extended{
         height: 200px;
     }
+    .location-section{
+        .pull-left{
+            text-align: left;
+            margin-bottom: 0;
+        }
+        .pull-right{
+            text-align: right;
+        }
+    }
+    .contact-form-info{
+        .left-container{
+            padding-right: 20px;
+        }
+        .right-container{
+            padding-left: 20px;
+        }
+    }
     #anniv{
         background-image: url("../../images/Divers/A_propos/20ans_1056x162px.png");
+        .align-middle{
+            @include vertical-align-middle;
+        }
     }
     #fibre{
         background-image: url("../../images/Divers/A_propos/slider_1302x330px.jpg");
+        .align-middle{
+            @include vertical-align-middle;
+        }
     }
     #valeurs{
         background-image: url("../../images/Divers/A_propos/nosvaleurs_1056x300px.jpg");
@@ -404,10 +458,10 @@
         }
         .service{
             margin-bottom: 0;
-            &#loldsl{background-image: url(../../images/index/1024px/Offres/LOL_DSL.jpg);}
-            &#mobiles{background-image: url(../../images/index/1024px/Offres/iphone6.jpg);}
-            &#installation{background-image: url(../../images/index/1024px/Offres/Offre_TV.jpg);}
-            &#dispo{background-image: url(../../images/index/1024px/Offres/Recherche_Offre.jpg);}
+            &#loldsl{background-image: url(../../images/Homepage/OFFRES/LOL_DSL_297x406px.jpg);}
+            &#mobiles{background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_297x406px.jpg);}
+            &#installation{background-image: url(../../images/Homepage/OFFRES/LOL_TV_297x406px.jpg);}
+            &#dispo{background-image: url(../../images/Homepage/OFFRES/Recherche_Offre.jpg);}
             .infos{
                 padding: 0 15px 15px;
                 .details{
@@ -416,7 +470,7 @@
                 }
                 h3{
                     font-size: 1.4em;
-                    margin: 20px -11px 5px;
+                    margin: 20px -11px 15px;
                 }
             } 
         } 
@@ -629,29 +683,31 @@
         height: 450px;
     }
     .hotcity-link{
-        @include vertical-align-middle;
+        .table-details{
+            td{
+                font-size: 16px;
+            }
+        }
+        @include vertical-align-middle;         
     }
     #anniv{
         background-image: url("../../images/Divers/A_propos/20ans_1920x200px.png");
         h1{
-            margin-top: 131px;
             font-size: 80px;
+            margin: 0;            
         }
     }
     #fibre{
         background-image: url("../../images/Divers/A_propos/notre_reseau_1920x480px.jpg");
         h1{
-            margin-left: 57px;
-            margin-top: 111px;
             font-size: 60px;
+            margin: 0;
         }
     }
     #valeurs{
         height: 360px;
         background-image: url("../../images/Divers/A_propos/nosvaleurs_1920x360px.jpg");
         h1{
-            margin-right: 57px;
-            margin-top: 111px;
             font-size: 60px;
         }
     }
@@ -661,7 +717,37 @@
             margin-top: 80px;
         }
     }
+
+    .picContainer, .rightWrapper{
+        display: block;
+        width: 50%;
+    }
+    .descSubWrapperRight{
+        padding-left: 0;
+    }
+    .picContainer{
+        text-align: right;
+    }
+    .location-section{
+        .row>[class^=phone-]:first-child{
+            padding-right: 20px;
+        }
+        .row>[class^=phone-]:last-child{
+            padding-left: 20px;
+        }
+        .row>[class^=phone-]:not(:last-child){
+            margin-bottom: 0px;
+        }
+    }
+    .contact-form-info{
+        padding-right: 30px;
+        margin-bottom: 0px;
+    }
+    .contact-form-mess{
+        padding-left: 30px;
+    }
 }
+
 
 @include viewport(range, $min: 1056, $max: 1302){
     #offers-section div[class^=phone-]{
@@ -779,10 +865,10 @@
         }
         .service
         {
-            &#loldsl{background-image: url(../../images/index/1280px/Offres/LOL_DSL.jpg);}
-            &#mobiles{background-image: url(../../images/index/1280px/Offres/iphone6.jpg);}
-            &#installation{background-image: url(../../images/index/1280px/Offres/Offre_TV.jpg);}
-            &#dispo{background-image: url(../../images/index/1280px/Offres/Recherche_Offre.jpg);}
+            &#loldsl{background-image: url(../../images/Homepage/OFFRES/LOL_DSL_297x406px.jpg);}
+            &#mobiles{background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_297x406px.jpg);}
+            &#installation{background-image: url(../../images/Homepage/OFFRES/LOL_TV_297x406px.jpg);}
+            &#dispo{background-image: url(../../images/Homepage/OFFRES/Recherche_Offre.jpg);}
             .infos
             {
                 padding: 0 25px 15px;

@@ -30,31 +30,31 @@ function natSort(as, bs) {
 }
 var nonDispoTemplate = '<div class="not-dispo">Offre <br />indisponible <br />à votre adresse</div>';
 
-var checkDispoTemplate = '<section id="test-offres" class="clearfix">'+
-                '<div class="container-wrapper">'+
-                    '<div class="row">'+
-                        '<div class="text phone-12 desk-6"><span class="icon-internet-ico"></span>Quelles offres sont disponibles chez vous ?</div>'+
-                        '<div class="testDispo clearfix">'+
-                            '<div>'+
-                                '<input name="zipcode" value class="input-white" type="text" placeholder="Code Postal" maxlength="4"/>'+
-                            '</div>'+
-                            '<div>'+
-                                '<select name="ville" class="input-white select"></select>'+
-                            '</div>'+
-                            '<div>'+
-                                '<select name="rue" class="input-white select"></select>'+
-                            '</div>'+
-                            '<div>'+
-                                '<select name="numero" class="input-white select"></select>'+
-                            '</div>'+
-                            '<div class="btn-verif">'+
-                                '<button name="verifyCp" type="button" class="btn-orange btnVerify verifyCp">Vérifiez les disponibilités</button>'+
-                                '<button name="btnVerif2" type="button" class="btn-orange btnVerify btnVerif">Vérifiez les disponibilités</button>'+
-                            '</div>'+
-                        '</div>'+
-                    '</div>'+
-                '</div>'+
-            '</section>';
+var checkDispoTemplate = '<section id="test-offres" class="clearfix">' +
+        '<div class="container-wrapper">' +
+        '<div class="row">' +
+        '<div class="text phone-12 desk-6"><span class="icon-internet-ico"></span>Quelles offres sont disponibles chez vous ?</div>' +
+        '<div class="testDispo clearfix">' +
+        '<div>' +
+        '<input id="zipcode" value class="input-white" type="text" placeholder="Code Postal" maxlength="4"/>' +
+        '</div>' +
+        '<div>' +
+        '<select id="ville" class="input-white select"></select>' +
+        '</div>' +
+        '<div>' +
+        '<select id="rue" class="input-white select"></select>' +
+        '</div>' +
+        '<div>' +
+        '<select id="numero" class="input-white select"></select>' +
+        '</div>' +
+        '<div class="btn-verif">' +
+        '<button type="button" class="btn-orange verifyCp">Vérifiez les disponibilités</button>' +
+        '<button type="button" class="btn-orange btnVerif2">Vérifiez les disponibilités</button>' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '</section>';
 
 var popuptemplate = '<div id="testDispo" class="popup">' +
         '<div class="background-client"></div>' +
@@ -270,13 +270,15 @@ function checkDispo(homeId) {
                 }
                 //$("#adressLabel").html($("select[name=numero] option:selected").text() + "," + $("select[name=rue] option:selected").text() + "," + $("input[name=zipcode]").val() + " " + $("select[name=ville] option:selected").text());
                 //$(".btnVerif").fadeIn();
-                if ($('#offers-section')) {
-                    if (viewport().width>1055){
-                        $('#offers-section').before(checkDispoTemplate);
-                    }else{
-                        $('#offers-section').before(checkDispoTemplate);
+                /*if ($('#offers-section')) {
+                    if ($('#test-offres').length != 1) {
+                        if (viewport().width > 1055) {
+                            $('#offers-section').before(checkDispoTemplate);
+                        } else {
+                            $('#offers-section').after(checkDispoTemplate);
+                        }
                     }
-                }
+                }*/
             }
         });
     }
@@ -286,14 +288,16 @@ $(function () {
     createDispoPopup();
     try {
         vhash = (window.location.hash.split('#')[1]).split(";");
-
-
         if (window.location.hash.length > 2) {
             _cp = vhash[0];
             _ville = vhash[1];
             _rue = vhash[2];
             _nbr = vhash[3];
             checkDispo(_nbr);
+            setTimeout(function () {
+                $("#zipcode").val(_cp);
+                $(".verifyCp").click();
+            }, 1000);
         } else {
             $("input[name=zipcode]").val("");
         }
@@ -302,8 +306,9 @@ $(function () {
     }
     ;
     $("input[name=zipcode]").mask("L-9999");
+    $("#zipcode").mask("L-9999");
 
-    $("input[name=zipcode]").keypress(function () {
+    $("input[name=zipcode]").keypress(function (event) {
         if (event.which == 13) {//enter pressed
             $(".verifyCp").click();
         }
@@ -328,6 +333,7 @@ $(function () {
         $("select[name=rue]").hide();
         $("select[name=numero]").hide();
     });
+
     $("body").on('click', '.verifyCp', function () {
         $("select[name=ville]").hide();
         $("select[name=rue]").hide();
@@ -380,7 +386,7 @@ $(function () {
 
                         }
                     });
-                }else if ($('#dispo .icons').length) {
+                } else if ($('#dispo .icons').length) {
                     $("#dispo .icons").fadeOut(function () {
                         $("select[name=ville]").html(locality).fadeIn();
                         $("select[name=rue]").html(vhtml);
@@ -487,7 +493,9 @@ $(function () {
     $("body").on('click', '.btnVerif2', function (event) {
         var homeId = $("select[name=numero]").val();
         if (homeId !== "") {
-            PopupModule.closePopup(event); //main.js
+            if ($('#testDispo').hasClass('is-visible')) {
+                PopupModule.closePopup(event); //main.js
+            }
             checkDispo($("select[name=numero]").val());
         } else {
             alert('Entrez votre numéro de rue pour continuer...');

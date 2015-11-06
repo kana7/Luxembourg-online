@@ -30,7 +30,31 @@ function natSort(as, bs) {
 }
 var nonDispoTemplate = '<div class="not-dispo">Offre <br />indisponible <br />à votre adresse</div>';
 
-var checkDispoTemplate = "<section id='test-offres'><div class='container-wrapper'><div class='row'><div class='text display-phone phone-12'>Quelles offres sont <br/>disponibles chez vous ?</div><div class='text hidden-phone phone-12 desk-6'><span class='icon-internet-ico'></span>Quelles offres sont disponibles chez vous ?</div><form class='phone-12 desk-6' action=''><input class='input-white' type='text' placeholder='Code Postal'/><button class='btn-orange' type='submit'>Vérifiez les disponibilités</button></form></div></div></section>";
+var checkDispoTemplate = '<section id="test-offres" class="clearfix">'+
+                '<div class="container-wrapper">'+
+                    '<div class="row">'+
+                        '<div class="text phone-12 desk-6"><span class="icon-internet-ico"></span>Quelles offres sont disponibles chez vous ?</div>'+
+                        '<div class="testDispo clearfix">'+
+                            '<div>'+
+                                '<input name="zipcode" value class="input-white" type="text" placeholder="Code Postal" maxlength="4"/>'+
+                            '</div>'+
+                            '<div>'+
+                                '<select name="ville" class="input-white select"></select>'+
+                            '</div>'+
+                            '<div>'+
+                                '<select name="rue" class="input-white select"></select>'+
+                            '</div>'+
+                            '<div>'+
+                                '<select name="numero" class="input-white select"></select>'+
+                            '</div>'+
+                            '<div class="btn-verif">'+
+                                '<button name="verifyCp" type="button" class="btn-orange btnVerify verifyCp">Vérifiez les disponibilités</button>'+
+                                '<button name="btnVerif2" type="button" class="btn-orange btnVerify btnVerif">Vérifiez les disponibilités</button>'+
+                            '</div>'+
+                        '</div>'+
+                    '</div>'+
+                '</div>'+
+            '</section>';
 
 var popuptemplate = '<div id="testDispo" class="popup">' +
         '<div class="background-client"></div>' +
@@ -247,7 +271,11 @@ function checkDispo(homeId) {
                 //$("#adressLabel").html($("select[name=numero] option:selected").text() + "," + $("select[name=rue] option:selected").text() + "," + $("input[name=zipcode]").val() + " " + $("select[name=ville] option:selected").text());
                 //$(".btnVerif").fadeIn();
                 if ($('#offers-section')) {
-                    $('#offers-section').after(checkDispoTemplate);
+                    if (viewport().width>1055){
+                        $('#offers-section').before(checkDispoTemplate);
+                    }else{
+                        $('#offers-section').before(checkDispoTemplate);
+                    }
                 }
             }
         });

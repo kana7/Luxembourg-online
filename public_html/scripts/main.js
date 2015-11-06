@@ -1,7 +1,7 @@
 var encartDispoTemplate = '<div class="phone-12 tab-6 desk-3">' +
         '<div id="dispo" class="service">' +
         '<div class="infos" style="text-align: center;">' +
-        '<h3 class="white">Toutes nos offres disponibles' +
+        '<h3 class="white">Toutes nos offres disponibles ' +
         '<strong>chez vous</strong> : </h3>' +
         '<input value name="zipcode" class="input-white" type="text" placeholder="Code Postal" maxlength="4"/>' +
         '<select name="ville" value class="input-white select"></select>' +
@@ -40,7 +40,7 @@ var temp;
 // ON PAGE READY
 $(function () {
     MenuMobile.init();
-    ClientSpace.init();
+    PopupModule.init();
     if ($('.searchMenu:not(.mobile)')) {
         EquipementFilter.init();
     }
@@ -245,7 +245,7 @@ var MenuMobile = (function () {
     };
 })();
 
-var ClientSpace = (function () {
+var PopupModule = (function () {
     var $clientSpace = $('.popup');
     //var $clientSpacePannel = $clientSpace.find('.white-pannel');
     var $clientMenuItem = $clientSpace.find('.client-menu>li');
@@ -260,22 +260,22 @@ var ClientSpace = (function () {
     };
     var _bindEvents = function () {
         $openButton.on('click', function () {
-            _openClientSpace($(this));
+            _openPopup($(this));
         });
         $('body').on('click', '.pannel-close', function (event) {
-            _closeClientSpace(event);
+            closePopup(event);
         });
         $('body').on('click', '.background-client', function (event) {
-            _closeClientSpace(event);
+            closePopup(event);
         });
         $clientMenuItem.on('click', function () {
             _showForm($(this));
         });
     };
-    var _openClientSpace = function ($element) {
+    var _openPopup = function ($element) {
         $('#' + $popupIndex[$element.attr('data-popup')]).addClass('is-visible');
     };
-    var _closeClientSpace = function (event) {
+    var closePopup = function (event) {
         $(event.target).closest('.popup').removeClass('is-visible');
     };
     var _showForm = function (element) {
@@ -286,6 +286,7 @@ var ClientSpace = (function () {
     };
 
     return{
-        init: init
+        init: init,
+        closePopup: closePopup
     };
 })();

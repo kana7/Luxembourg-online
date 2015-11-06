@@ -2069,8 +2069,7 @@ header {
     height: 100%;
     padding: 11px 0 10px; }
   #mobileType .brandType {
-    height: 75%;
-    }
+    height: 75%; }
   #mobileType img {
     height: 100%;
     width: auto;
@@ -2887,7 +2886,8 @@ span[class^=icon-] {
 #offers-section .btn-outline-white {
   width: 100%;
   padding: 15px 0; }
-#offers-section div[class^=phone-] {
+
+.promo-offer-container div[class^=phone-], #offers-section div[class^=phone-] {
   text-align: center; }
 
 .equipementCat {

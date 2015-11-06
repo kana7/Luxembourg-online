@@ -37,10 +37,10 @@ var popuptemplate = '<div id="testDispo" class="popup">' +
         '<div class="white-pannel">' +
         '<button class="pannel-close"><span class="icon-x-icone"></span></button>' +
         '<h1>Tester la disponibilité</h1>' +
-        '<input name="zipcode" value class="input-white" type="text" placeholder="Code Postal" maxlength="4"/>' +
+        '<input value name="zipcode" class="input-white" type="text" placeholder="Code Postal" maxlength="4"/>' +
         '<select name="ville" value class="input-white select"></select>' +
         '<select name="rue" value class="input-white select"></select>' +
-        '<select name="numero" value class="input-white select"></select>' +
+        '<select name="numero" value class="input-white select numero"></select>' +
         '<button type="button" class="btn-orange btnVerify verifyCp">Vérifiez les disponibilités</button>' +
         '<button type="button" class="btn-orange btnVerify btnVerif2">Vérifiez les disponibilités</button>' +
         '</div>' +
@@ -57,7 +57,7 @@ var obj = {},
 
 //détecte le bouton pour offrir le test de dispo et ajoute la popup dans la page
 function createDispoPopup() {
-    if ($('.openPopup[data-popup=1]').length){
+    if ($('.openPopup[data-popup=1]').length) {
         $('body').prepend(popuptemplate);
     }
 }
@@ -165,7 +165,7 @@ function checkDispo(homeId) {
                         }
                     }
                 }
-                if (obj.Service[8]) { // D�groupage VDSL
+                if (obj.Service[8]) { // Dégroupage VDSL
                     articleObj = obj.Service[8].article;
                     if (obj.Service[8] && $(articleObj[0]).size() > 0) {//entry exists
                         for (i in articleObj) {
@@ -184,7 +184,7 @@ function checkDispo(homeId) {
                         }
                     }
                 }
-                if (obj.Service[2]) { // D�groupage Fibre
+                if (obj.Service[2]) { // Dégroupage Fibre
                     articleObj = obj.Service[2].article;
                     if (obj.Service[2] && $(articleObj[0]).size() > 0) {//entry exists
                         for (i in articleObj) {
@@ -252,7 +252,6 @@ function checkDispo(homeId) {
         });
     }
 }
-;
 
 $(function () {
     createDispoPopup();
@@ -313,7 +312,7 @@ $(function () {
                     streetList.Streets[i].streetNumbers.sort(natSort);//order streetNumbers numeric
                     arrLocality[streetList.Streets[i].idLocality] = streetList.Streets[i].azLocality;
                 }
-                for (idLocality in arrLocality) {
+                for (var idLocality in arrLocality) {
                     locality += "<option value='" + idLocality + "' title='" + arrLocality[idLocality] + "'>" + arrLocality[idLocality] + "</option>";
                 }
                 if ($(locality).length < 2 || $("input[name=zipcode]").val().substr(2, $("input[name=zipcode]").val().length - 1) < 1000) {
@@ -321,7 +320,7 @@ $(function () {
                 }
                 $(".verifyCp").hide();
                 $(".btnVerif2, .btnVerif").show();
-                if (("#dispo .icons")) {
+                if ($('#dispo .icons').length) {
                     $("#dispo .icons").fadeOut(function () {
                         $("select[name=ville]").html(locality).fadeIn();
                         $("select[name=rue]").html(vhtml);
@@ -377,7 +376,7 @@ $(function () {
         });
 
     });
-    $("body").on('change','select[name=ville]',function () {
+    $("body").on('change', 'select[name=ville]', function () {
         thisId = $(this).find("option:selected").val();
         $("select[name=rue] option").each(function () {
             if ($(this).attr("data-idLocality") == thisId || $(this).attr("data-idLocality") == "-1") {
@@ -389,7 +388,7 @@ $(function () {
         $("select[name=rue]").fadeIn();
     });
 
-    $("body").on('change','select[name=rue]',function () {
+    $("body").on('change', 'select[name=rue]', function () {
         for (i in streetList.Streets) {
             if (streetList.Streets[i].id == $("select[name=rue]").val()) {
                 streetNbr = streetList.Streets[i].streetNumbers;
@@ -418,10 +417,21 @@ $(function () {
         }
     });
     $("body").on('click', '.btnVerif', function () {
-        window.location.href = "internet/offres.html#" + $("input[name=zipcode]").val() + ";" + $("select[name=ville]").val() + ";" + $("select[name=rue]").val() + ";" + $("select[name=numero]").val();
+        var homeId = $("select[name=numero]").val();
+        if (homeId!="") {
+            window.location.href = "internet/offres.html#" + $("input[name=zipcode]").val() + ";" + $("select[name=ville]").val() + ";" + $("select[name=rue]").val() + ";" + $("select[name=numero]").val();
+        } else {
+            alert('Entrez votre numéro de rue pour continuer...');
+        }
     });
-    $("body").on('click', '.btnVerif2', function () {
-        checkDispo($("select[name=numero]").val());
+    $("body").on('click', '.btnVerif2', function (event) {
+        var homeId = $("select[name=numero]").val();
+        if (homeId !== "") {
+            PopupModule.closePopup(event); //main.js
+            checkDispo($("select[name=numero]").val());
+        } else {
+            alert('Entrez votre numéro de rue pour continuer...');
+        }
     });
 });
 

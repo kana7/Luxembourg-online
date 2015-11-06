@@ -135,7 +135,7 @@
       margin: 50px 0 0;
       font-size: 11px; }
 
-  .promo-offer-container div[class^=phone-]:first-child {
+  .item-header {
     padding-right: 15px; }
   .promo-offer-container div[class^=phone-]:last-child {
     padding-left: 15px; } }

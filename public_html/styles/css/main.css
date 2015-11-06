@@ -1618,6 +1618,9 @@ ul, li {
 
 @-ms-viewport {
   width: auto !important; }
+.answer li {
+  display: block; }
+
 .container-wrapper {
   margin-right: auto;
   margin-left: auto;

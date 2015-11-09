@@ -4676,10 +4676,11 @@ h2.contact-title {
     min-height: 787px; }
 
   .equipement-item-blue, .equipement-item-orange {
-    height: 275px;
+    height: 350px;
     text-align: right;
     padding: 0 40px 0 20px;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    }
     .equipement-item-blue .details, .equipement-item-orange .details {
       vertical-align: top;
       padding-left: 20px;

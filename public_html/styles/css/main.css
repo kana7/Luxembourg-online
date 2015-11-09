@@ -1899,7 +1899,8 @@ header {
     margin: 0; }
 
 .section-propos {
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.42); }
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.42);
+  }
   .section-propos p {
     color: #004994;
     text-align: justify;

@@ -1899,7 +1899,8 @@ header {
     margin: 0; }
 
 .section-propos {
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.42); }
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.42);
+  }
   .section-propos p {
     color: #004994;
     text-align: justify;
@@ -4735,7 +4736,14 @@ h2.contact-title {
       transform: translateY(-50%); }
 
   #valeurs {
-    background-image: url("../../images/Divers/A_propos/nosvaleurs_1056x300px.jpg"); } }
+    background-image: url("../../images/Divers/A_propos/nosvaleurs_1056x300px.jpg"); }
+    #valeurs .align-middle {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); } }
 @media screen and (min-width: 1056px) {
   #mobileType .flickity-prev-next-button {
     height: 35px; }

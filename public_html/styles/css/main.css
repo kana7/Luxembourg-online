@@ -3202,8 +3202,7 @@ span[class^=icon-] {
   border-radius: 6px;
   border: 1px solid #004994;
   text-align: center;
-  margin-bottom: 20px;
-  }
+  margin-bottom: 20px; }
   .offer-item-blue .item-header, .offer-item-blue .item-body, .offer-item-blue .item-footer, .equipement-item-blue .item-header, .equipement-item-blue .item-body, .equipement-item-blue .item-footer {
     display: block; }
   .offer-item-blue .item-header, .offer-item-blue .item-footer, .equipement-item-blue .item-header, .equipement-item-blue .item-footer {
@@ -3605,8 +3604,7 @@ span[class^=icon-] {
   margin: 0;
   display: inline-block;
   width: 100%;
-  margin-bottom: 30px;
-  }
+  margin-bottom: 30px; }
   .content-container .offer-item-blue .item-header, .content-container .offer-item-orange .item-header {
     padding: 12px 0;
     font-size: 21px; }

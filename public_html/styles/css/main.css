@@ -5137,7 +5137,10 @@ h2.contact-title {
     margin: 5px 0; }
 
   .repondeur-list p {
-    margin: 7px 0; } }
+    margin: 7px 0; }
+
+  .equipement-item-blue, .equipement-item-orange {
+    height: 350px; } }
 @media screen and (min-width: 1302px) {
   .container-wrapper {
     width: 1280px; }

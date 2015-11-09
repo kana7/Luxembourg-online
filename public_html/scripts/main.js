@@ -70,6 +70,8 @@ function printDispo() {
         $('#services .row').prepend(encartDispoTemplate);
     }
 }
+
+//Affiche un container au clique sur un élément dans un container .dropdown
 var DropDown = function (element) {
     var $dropdown = element;
     var $dropButton = $dropdown.children('[data-trigger]');
@@ -245,13 +247,14 @@ var MenuMobile = (function () {
     };
 })();
 
+//Gère les popups dans le site
 var PopupModule = (function () {
     var $clientSpace = $('.popup');
     var $clientMenuItem = $clientSpace.find('.client-menu>li');
     var $formGroup = $clientSpace.find('.pannel-forms');
     var $forms = $clientSpace.find('.pannel-forms>form');
     var $openButton = $('.openPopup');
-    var $popupIndex = ['clientSpace', 'testDispo'];
+    var $popupIndex = ['clientSpace', 'testDispo']; //index des ids des popups dans les pages
 
 
     var init = function () {

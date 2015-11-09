@@ -775,6 +775,9 @@
             margin: 7px 0;
         }
     }
+    .equipement-item-blue, .equipement-item-orange{
+        height: 350px;
+    }
 }
 
 @include media(lgdesk){

@@ -247,7 +247,8 @@
     width: auto; }
 
   .header-channel {
-    height: 200px; }
+    height: 350px;
+    }
     .header-channel > div[class^=phone-] {
       height: 100%; }
       .header-channel > div[class^=phone-] > * {

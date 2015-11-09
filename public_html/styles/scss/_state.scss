@@ -376,7 +376,7 @@
         float: left;
     }
     .section-layout{
-        height: 325px;
+        height: 350px;
         padding: 0;
         &.height-auto{height: auto;}
     }
@@ -590,6 +590,7 @@
         position: absolute;
     }
     .section-title {
+        margin-top: 0;
         font-size: 30px;
         line-height: 40px;
     }

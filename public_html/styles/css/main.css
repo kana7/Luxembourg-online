@@ -2326,6 +2326,9 @@ svg:not(:root) {
 .background-lightgrey {
   background-color: #f8f8f8; }
 
+.background-box {
+  background-color: #FBFBFB; }
+
 .background-border {
   border: 1px solid #d4d4d4;
   background-color: #fff;

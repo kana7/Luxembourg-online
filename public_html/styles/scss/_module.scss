@@ -48,6 +48,9 @@ svg:not(:root) {
 .background-lightgrey{
     background-color: $light-grey;
 }
+.background-box{
+    background-color: #FBFBFB;
+}
 .background-border{
     border: 1px solid lighten($grey, 8%);
     background-color: $white;

@@ -1490,27 +1490,19 @@ span[class^=icon-]
     {
         h3
         {
-            font-size: 1.7em;
+            font-size: 20px;
             font-weight: 400;
-            line-height: 25px;
-
-            margin: 15px -17px 5px;
-
+            margin: 15px -17px 15px;
             text-align: center;
             text-transform: uppercase;
         }
-        .details
+        .text
         {
-            font-size: 21px;
-            line-height: 28px;
-
-            text-align: left;
-
-            color: $blue;
-            li
-            {
-                display: block;
-            }
+            display: block;
+            font-size: 14px;
+            line-height: 18px;
+            color: darken($dark-grey, 35%);
+            margin-bottom: 10px;
         }
     }
     &#dispo h3{
@@ -1569,7 +1561,7 @@ span[class^=icon-]
 .bottom-info
 {
     font-size: 10pt;
-
+    color: darken($dark-grey, 35%);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1581,51 +1573,49 @@ span[class^=icon-]
     text-align: center;
 }
 
-.price-blue,
 .price-orange
 {
     font-weight: 800;
-
+    font-size: 44px;
+    color: $orange;
     position: relative;
-
-    display: block;
-
+    display: inline-block;
     span
     {
-        font-size: 11pt;
+        font-size: 16px;
     }
     div
     {
         position: absolute;
-    }
-}
-
-.price-blue
-{
-    font-size: 46px;
-
-    color: $blue;
-    margin-top: 14px;
-    div{
-        font-size: 11pt;
-        top: -12px;
-        left: 55px;
-    }
-}
-.price-orange
-{
-    font-size: 62px;
-    color: $orange;
-    margin-top: 23px;
-    div
-    {
         font-size: 14pt;
         font-weight: 600;
-        top: -15px;
-        left: 75px;
+        font-size: 14pt;
+        top: 5px;
+        left: 65px;
     }
 }
 
+/*
+#mobiles{
+    .sub-title{
+        color: #E75E0A;
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+    .details{
+        font-size: 17px;
+        line-height: 22px;
+    }
+}
+#installation{
+    .details{
+        font-size: 19px;
+        line-height: 25px;
+        text-align: left;
+        color: #004994;
+    }
+}
+*/
 #twenty-years{
     background-image: url(../../images/Homepage/CONTENU/1280px/20ans_LOL.jpg);
 }
@@ -2333,13 +2323,11 @@ h2.contact-title {
         cursor: pointer;
     }
     .select-arrow select {
-        background: transparent;
-        -webkit-appearance: none;
     }
     .select-arrow{
         display: inline-block;
         width: 100%;
-        background: url(../../images/Icone/Img/arrow.png) no-repeat;
+        /*background: url(../../images/Icone/Img/arrow.png) no-repeat;*/
         background-size: auto auto;
         background-position: 97% center;
     }

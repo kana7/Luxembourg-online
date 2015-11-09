@@ -1704,6 +1704,9 @@ ul, li {
 .align-right {
   text-align: right !important; }
 
+.align-left {
+  text-align: left !important; }
+
 .background-image-right {
   position: absolute;
   top: 0;
@@ -3771,19 +3774,17 @@ span[class^=icon-] {
   .service img {
     border-radius: inherit; }
   .service .infos h3 {
-    font-size: 1.7em;
+    font-size: 20px;
     font-weight: 400;
-    line-height: 25px;
-    margin: 15px -17px 5px;
+    margin: 15px -17px 15px;
     text-align: center;
     text-transform: uppercase; }
-  .service .infos .details {
-    font-size: 21px;
-    line-height: 28px;
-    text-align: left;
-    color: #004994; }
-    .service .infos .details li {
-      display: block; }
+  .service .infos .text {
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    color: #282828;
+    margin-bottom: 10px; }
   .service#dispo h3 {
     font-size: 1.3em; }
 
@@ -3829,6 +3830,7 @@ span[class^=icon-] {
 
 .bottom-info {
   font-size: 10pt;
+  color: #282828;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -3837,37 +3839,43 @@ span[class^=icon-] {
   margin-bottom: 10px;
   text-align: center; }
 
-.price-blue,
 .price-orange {
   font-weight: 800;
-  position: relative;
-  display: block; }
-  .price-blue span,
-  .price-orange span {
-    font-size: 11pt; }
-  .price-blue div,
-  .price-orange div {
-    position: absolute; }
-
-.price-blue {
-  font-size: 46px;
-  color: #004994;
-  margin-top: 14px; }
-  .price-blue div {
-    font-size: 11pt;
-    top: -12px;
-    left: 55px; }
-
-.price-orange {
-  font-size: 62px;
+  font-size: 44px;
   color: #e75e0a;
-  margin-top: 23px; }
+  position: relative;
+  display: inline-block; }
+  .price-orange span {
+    font-size: 16px; }
   .price-orange div {
+    position: absolute;
     font-size: 14pt;
     font-weight: 600;
-    top: -15px;
-    left: 75px; }
+    font-size: 14pt;
+    top: 5px;
+    left: 65px; }
 
+/*
+#mobiles{
+    .sub-title{
+        color: #E75E0A;
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+    .details{
+        font-size: 17px;
+        line-height: 22px;
+    }
+}
+#installation{
+    .details{
+        font-size: 19px;
+        line-height: 25px;
+        text-align: left;
+        color: #004994;
+    }
+}
+*/
 #twenty-years {
   background-image: url(../../images/Homepage/CONTENU/1280px/20ans_LOL.jpg); }
 
@@ -4410,13 +4418,10 @@ h2.contact-title {
     -o-box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
     -ms-box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
     cursor: pointer; }
-  .input-group .select-arrow select {
-    background: transparent;
-    -webkit-appearance: none; }
   .input-group .select-arrow {
     display: inline-block;
     width: 100%;
-    background: url(../../images/Icone/Img/arrow.png) no-repeat;
+    /*background: url(../../images/Icone/Img/arrow.png) no-repeat;*/
     background-size: auto auto;
     background-position: 97% center; }
   .input-group textarea {
@@ -4538,26 +4543,32 @@ h2.contact-title {
     width: auto;
     height: 230px; }
 
-  #services .row > div[class^=phone-] {
-    padding: 0 15px; }
-  #services .service {
-    height: auto;
-    padding-bottom: 135%;
-    margin-bottom: 30px; }
-    #services .service#loldsl {
-      background-image: url(../../images/Homepage/OFFRES/LOL_DSL_235x321px.jpg); }
-    #services .service#mobiles {
-      background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_235x321px.jpg); }
-    #services .service#installation {
-      background-image: url(../../images/Homepage/OFFRES/LOL_TV_235x321px.jpg); }
-    #services .service#dispo {
-      background-image: url(../../images/Homepage/OFFRES/Recherche_Offre.jpg); }
-    #services .service .details {
-      font-size: 25px;
-      line-height: 25px; }
-    #services .service h3 {
-      font-size: 1.4em;
-      margin: 20px -11px 5px; }
+  #services {
+    /*#mobiles{
+        .sub-title{
+            color: #E75E0A;
+            font-weight: 600;
+            margin-bottom: 7px;
+        }
+        .details{
+            font-size: 15px;
+            line-height: 19px;
+        }
+    }*/ }
+    #services .row > div[class^=phone-] {
+      padding: 0 15px; }
+    #services .service {
+      height: auto;
+      padding-bottom: 135%;
+      margin-bottom: 30px; }
+      #services .service#loldsl {
+        background-image: url(../../images/Homepage/OFFRES/LOL_DSL_297x406px.jpg); }
+      #services .service#mobiles {
+        background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_235x321px.jpg); }
+      #services .service#installation {
+        background-image: url(../../images/Homepage/OFFRES/LOL_TV_235x321px.jpg); }
+      #services .service#dispo {
+        background-image: url(../../images/Homepage/OFFRES/Recherche_Offre.jpg); }
 
   #offers-section div[class^=phone-] {
     margin-bottom: 35px;
@@ -4747,6 +4758,9 @@ h2.contact-title {
       -ms-transform: translateY(-50%);
       transform: translateY(-50%); } }
 @media screen and (min-width: 1056px) {
+  .logo {
+    height: auto; }
+
   #mobileType .flickity-prev-next-button {
     height: 35px; }
 
@@ -4888,6 +4902,15 @@ h2.contact-title {
       #services .service .infos h3 {
         font-size: 1.4em;
         margin: 20px -11px 15px; }
+  #services .price-orange {
+    margin-top: 0;
+    font-size: 52px; }
+    #services .price-orange span {
+      font-size: 16px; }
+  #services .price-orange div {
+    font-size: 14pt;
+    top: 5px;
+    left: 68px; }
 
   .section-subtitle {
     text-align: left; }
@@ -5215,6 +5238,28 @@ h2.contact-title {
     width: 145px; }
     #slider-ui .dots li {
       font-size: 8pt; }
+
+  .service {
+    border: 1px solid #e6e6e6;
+    border-radius: 2px; }
+    .service .infos h3 {
+      font-size: 24px;
+      font-weight: 400;
+      margin: 15px -17px 15px;
+      text-align: center;
+      text-transform: uppercase; }
+    .service .infos .text {
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 20px; }
+    .service .price-orange {
+      font-size: 52px; }
+      .service .price-orange span {
+        font-size: 16px; }
+      .service .price-orange div {
+        font-size: 16pt;
+        top: 5px;
+        left: 65px; }
 
   #services .row > div[class^=phone-] {
     padding: 0 7px; }

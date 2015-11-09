@@ -311,6 +311,9 @@
     }
     #valeurs{
         background-image: url("../../images/Divers/A_propos/nosvaleurs_1056x300px.jpg");
+        .align-middle{
+            @include vertical-align-middle;
+        }
     }
 }
 

@@ -2431,10 +2431,10 @@ svg:not(:root) {
   margin: 0 0 20px; }
 
 .section-text {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   margin: 0 0 30px;
-  line-height: 21px; }
+  line-height: 22px; }
 
 span[class^=icon-] {
   position: relative;
@@ -3783,7 +3783,7 @@ span[class^=icon-] {
     display: block;
     font-size: 14px;
     line-height: 18px;
-    color: #282828;
+    color: #004994;
     margin-bottom: 10px; }
   .service#dispo h3 {
     font-size: 1.3em; }
@@ -4187,7 +4187,7 @@ footer {
       font-size: 16px; }
     .white-pannel .pannel-close:focus {
       outline: 0; }
-  .white-pannel h1 {
+  .white-pannel h2 {
     font-size: 24px;
     padding-bottom: 15px;
     margin: 0;

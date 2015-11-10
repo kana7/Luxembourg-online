@@ -153,7 +153,9 @@
   font-size: 16px;
   line-height: 20px; }
   .achat span {
-    display: block; }
+    display: inline-block;
+    font-size: 0.8em;
+    }
 
 @media screen and (max-width: 671px) {
   .channels-language-links {

@@ -268,6 +268,9 @@ function checkDispo(homeId) {
                 }
                 if (ab[6] == "") {
                 }
+                if($('.main-gallery').length){
+                    $('.main-gallery').show().flickity('resize');
+                }
                 //$("#adressLabel").html($("select[name=numero] option:selected").text() + "," + $("select[name=rue] option:selected").text() + "," + $("input[name=zipcode]").val() + " " + $("select[name=ville] option:selected").text());
                 //$(".btnVerif").fadeIn();
                 /*if ($('#offers-section')) {

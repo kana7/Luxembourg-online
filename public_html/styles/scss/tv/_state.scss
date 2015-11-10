@@ -2,6 +2,13 @@
     .channels-language-links{
         @include display-flex-center;
     }
+    .header-channel{
+        img{
+            display: inline-block;
+            height: 180px;
+            width: auto;
+        }
+    }
     .footer-note {
         margin: 20px 0;
     }
@@ -17,6 +24,13 @@
     }
 }
 @include media(tab){
+    .header-channel{
+        img{
+            display: inline-block;
+            height: 230px;
+            width: auto;
+        }
+    }
     .channels-language-links:not(.radio){
         @include display-flex-spread;
     }
@@ -43,19 +57,25 @@
 }
 
 @include media(desk){
+    .header-channel{
+        margin-bottom: 0px;
+        .img-layout{
+            display: inline-block;
+            height: 100%;
+            width: auto;
+        }
+    }
+    .image-container{
+        text-align: initial
+    }
     .channels-language-links li{
         width: auto;
     }
     .text-highlight{
         font-size: 44px;
     }
-    .img-layout{
-        display: inline-block;
-        height: 100%;
-        width: auto;
-    }
     .header-channel{
-        height: 200px;
+        height: 300px;
         &>div[class^=phone-]{
             height: 100%;
             &>*{

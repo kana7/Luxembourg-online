@@ -3,7 +3,7 @@ var encartDispoTemplate = '<div class="phone-12 tab-6 desk-3">' +
         '<div class="infos" style="text-align: center;">' +
         '<h3 class="white">Toutes nos offres disponibles ' +
         '<strong>chez vous</strong> : </h3>' +
-        '<input value name="zipcode" class="input-white" type="text" placeholder="Code Postal" maxlength="4"/>' +
+        '<input value name="zipcode" class="input-white" type="text" placeholder="Code postal" maxlength="4"/>' +
         '<select name="ville" class="input-white select"></select>' +
         '<select name="rue" class="input-white select"></select>' +
         '<select name="numero" class="input-white select numero"></select>' +

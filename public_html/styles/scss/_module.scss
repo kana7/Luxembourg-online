@@ -1681,6 +1681,12 @@ footer
     color: $dark-grey;
     font-size: 18px;
     font-weight: 400;
+    li{
+        @include transition($transitionUi);
+    }
+    li:hover{
+       color: $blue; 
+    }
     span{
         position: absolute;
         top: 1px;
@@ -1689,6 +1695,7 @@ footer
     }
     .active{
         font-weight: bold;
+        color: $blue;
     }
 }
 
@@ -1784,7 +1791,7 @@ footer
 {
     margin: 0;
     background-color: #575757;
-    height: 2px;
+    height: 1px;
     border-color: #A2A2A2;
     @include box-shadow(0 1px 1px 0 rgba(255, 255, 255, 0.18));
 }
@@ -1853,6 +1860,7 @@ footer
     text-align: center;
     line-height: 35px;
     padding: 10px 0; 
+    font-weight: 300;
     li:first-child{
         padding-left: 30px;
     }

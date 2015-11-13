@@ -496,6 +496,11 @@ span[class^=icon-]
 
 // BUTTONS
 // --------------------------------------------------
+.btn-container{
+  display: block;
+  position: relative;
+  text-align: center;
+}
 @mixin btn
 {
     font-size: 15px;

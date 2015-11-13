@@ -1729,13 +1729,16 @@ footer
 #social-links
 {
     font-size: 11pt;
-
+    font-weight: 300;
     background-color: $white;
+    .brand-name{
+        @include transition($transitionUi);
+    }
     a:hover
         {
         .brand-name
         {
-            text-decoration: underline;
+            color: #0062c7;
         }
     }
 }

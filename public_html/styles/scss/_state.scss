@@ -616,18 +616,27 @@
     }
 
     #social-links{
-        padding: 20px 0 7px;
+        padding: 23px 0 12px;
     }
     #social-links .text, #contact .text{
         text-align: left;
         width: auto;
         margin: 0;
-        float: left;margin-top: 5px;
+        float: left;
     }
-    #social-links nav, #contact ul{
+    #contact .text{
+        margin-top: 5px;
+    }
+    #social-links .text{
+        margin-top: 8px;
+    }
+    #contact ul{
         width: 75%;
     }
-    
+    #social-links nav{
+        width: 80%;
+    }
+
     .help-link{
         font-size: 12pt;
         span[class^=icon-]{

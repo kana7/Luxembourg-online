@@ -3956,9 +3956,15 @@ footer {
 
 #social-links {
   font-size: 11pt;
+  font-weight: 300;
   background-color: #fff; }
+  #social-links .brand-name {
+    -moz-transition: background 0.4s ease-in-out, border 0.4s ease-in-out, color 0.4s ease-in-out;
+    -o-transition: background 0.4s ease-in-out, border 0.4s ease-in-out, color 0.4s ease-in-out;
+    -webkit-transition: background 0.4s ease-in-out, border 0.4s ease-in-out, color 0.4s ease-in-out;
+    transition: background 0.4s ease-in-out, border 0.4s ease-in-out, color 0.4s ease-in-out; }
   #social-links a:hover .brand-name {
-    text-decoration: underline; }
+    color: #0062c7; }
 
 #contact {
   font-size: 11pt;
@@ -5040,17 +5046,25 @@ h2.contact-title {
       font-size: 17px; }
 
   #social-links {
-    padding: 20px 0 7px; }
+    padding: 23px 0 12px; }
 
   #social-links .text, #contact .text {
     text-align: left;
     width: auto;
     margin: 0;
-    float: left;
+    float: left; }
+
+  #contact .text {
     margin-top: 5px; }
 
-  #social-links nav, #contact ul {
+  #social-links .text {
+    margin-top: 8px; }
+
+  #contact ul {
     width: 75%; }
+
+  #social-links nav {
+    width: 80%; }
 
   .help-link {
     font-size: 12pt; }

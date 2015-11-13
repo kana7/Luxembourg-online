@@ -56,7 +56,7 @@
     .table-details td, .table-details th{
         font-size: 12px;
     }
-
+    
     .content-container .offer-item-blue .info .data, .offer-item-orange .info .data{
         padding-left: 40px;
     }
@@ -145,7 +145,7 @@
         p.bottom-details{
             font-size: 10pt;
         }
-
+        
         .flickity-prev-next-button {
             position: absolute;
             top: 50%;
@@ -305,6 +305,97 @@
             @include vertical-align-middle;
         }
     }
+    //Page A propos - Historique
+    #history-extended{
+        height: 220px;
+    }
+    .history{
+        position: relative;
+        height: 200px;
+        .container-wrapper{
+            position: relative;
+        }
+        
+        #first{
+            //margin-top: 100px;
+        }
+        #last{
+            //margin-bottom: 100px;
+        }
+        .row{
+            height: 100%;
+        }
+        .rond{
+            z-index: 2;
+            margin: 0 auto;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #004494;
+            box-shadow: inset 0px -2px 15px rgba(0, 0, 0, 0.1),inset 0px 2px 15px rgba(0, 0, 0, 0.1), inset 2px 0px 15px rgba(0, 0, 0, 0.1), inset -2px 0px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            left: 0;
+            right: 0;
+            p{
+                margin: 0;
+                text-align: center;
+                color: white;
+                font-weight: 800;
+                font-size: 19px;
+                top: 50%;
+                position: relative;
+                transform: translateY(-50%);
+            }
+        }
+        .text{
+            width: 50%;
+            p{
+                font-size: 16px;
+                margin: 0;
+                line-height: 20px;
+            }
+        }
+        .history-text{
+            @include vertical-align-middle;
+        }
+        .right-block{
+            float: right;
+            padding: 0 0 0 70px;
+        }
+        .left-block{
+            padding: 0 50px 0 0;
+            .history-text{
+                float: right;
+                margin-right: 15px;
+            }
+        }
+        .history-element{
+            .icon-right{
+                text-align: center;
+                padding-left: 80px;
+            }
+            .icon-right-arrow{
+                font-size: 16px;
+                color:#004494;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .icon-left{
+                text-align: center;
+                padding-right: 105px;
+            }
+            .line-grey{
+                width: 3px;
+                height: 100%;
+                background-color: #B0B1B2;
+                margin: 0 auto;
+                left: 0;
+                right: 0;
+                position: absolute;
+            }
+        }
+    }
 }
 
 @include media(desk){
@@ -367,7 +458,7 @@
             top: 64px;
         }
     }
-
+    
     .bottom-menu-header-links{
         float: left;
     }
@@ -495,7 +586,7 @@
     .bottom-info{
         font-size: 8pt;
     }
-
+    
     .price-blue span, .price-orange span{
         font-size: 9.5pt;
     }
@@ -506,10 +597,10 @@
             font-size: 14pt;
             top: -17px;
             left: 68px;
-
+            
         }
     }
-
+    
     .price-blue{
         font-size: 34pt;
         div{
@@ -518,7 +609,7 @@
             left: 55px;
         }
     }
-
+    
     #dispo{
         h3{
             font-size: 12pt !important;
@@ -530,14 +621,14 @@
             font-size: 15px;
         }
     }
-
+    
     .right-orientation,
     .left-orientation{
         .row{
             position: relative;
         }
     }
-
+    
     .right-orientation .row > div:first-child,
         .left-orientation .row > div:last-child{
         left: 0;
@@ -563,7 +654,7 @@
     .left-orientation .row>div:last-child{
         text-align: left;
     }
-
+    
     .right-orientation .row > div:last-child, .left-orientation .row > div:last-child{
         @include vertical-align-middle;
         height: auto;
@@ -584,12 +675,12 @@
             }
         }
     }
-
+    
     .content-container .row>div[class^=phone-]{
         @include vertical-align-middle;
         height: auto;
     }
-
+    
     .section-layout img{
         height: 100% !important;
     }
@@ -601,7 +692,7 @@
         font-size: 30px;
         line-height: 40px;
     }
-
+    
     .bottom-link{
         margin: 18px 0;
         font-size: 19px;
@@ -611,7 +702,7 @@
             font-size: 17px;
         }
     }
-
+    
     #social-links{
         padding: 20px 0 7px;
     }
@@ -635,7 +726,7 @@
             &.icon-right-arrow{
                 margin-left: 5px;
                 font-size: 14pt;
-
+                
             }
         }
     }
@@ -725,7 +816,7 @@
             margin-top: 80px;
         }
     }
-
+    
     .picContainer, .rightWrapper{
         display: block;
         width: 50%;
@@ -823,9 +914,9 @@
             margin-right: 65px;
         }
     }
-
+    
     .offer-item-orange .offer-price div, .offer-item-blue .offer-price div{left: 162px;}
-
+    
     #slider-contents{
         .title{
             font-size: 37pt;
@@ -870,7 +961,7 @@
             li{font-size: 8pt;}
         }
     }
-
+    
     .service
     {
         border: 1px solid lighten($grey, 15%);
@@ -932,7 +1023,7 @@
             }
         }
     }
-
+    
     .section-title {
         font-size: 40px;
         line-height: 52px;
@@ -955,10 +1046,10 @@
             font-size: 14pt;
             top: -17px;
             left: 68px;
-
+            
         }
     }
-
+    
     .price-blue{
         font-size: 34pt;
         div{
@@ -987,7 +1078,7 @@
             &.icon-right-arrow{
                 margin-left: 7px;
                 font-size: 15pt;
-
+                
             }
         }
     }

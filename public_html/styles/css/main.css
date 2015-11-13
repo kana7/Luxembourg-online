@@ -1843,8 +1843,7 @@ header {
 
 .propos-title {
   position: relative;
-  padding: 50px 0;
-  }
+  padding: 50px 0; }
   .propos-title span {
     font-weight: 800; }
   .propos-title p {
@@ -2138,8 +2137,7 @@ header {
   text-align: center; }
   .section-layout .container-wrapper, .section-layout .row, .section-layout .row > div {
     position: relative;
-    height: 100%;
-    }
+    height: 100%; }
   .section-layout img {
     width: 80%;
     height: auto; }
@@ -4497,8 +4495,7 @@ h2.contact-title {
       font-size: 19px;
       top: 50%;
       position: relative;
-      transform: translateY(-50%);
-      }
+      transform: translateY(-50%); }
   .history .text {
     width: 50%;
     position: relative;
@@ -4510,16 +4507,14 @@ h2.contact-title {
     .history .text p {
       font-size: 16px;
       margin: 0;
-      line-height: 20px;
-      }
+      line-height: 20px; }
   .history .history-text {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    }
+    transform: translateY(-50%); }
   .history .right-block {
     float: right;
     width: 70%; }
@@ -4844,10 +4839,8 @@ h2.contact-title {
       box-shadow: inset 0px -2px 15px rgba(0, 0, 0, 0.1), inset 0px 2px 15px rgba(0, 0, 0, 0.1), inset 2px 0px 15px rgba(0, 0, 0, 0.1), inset -2px 0px 15px rgba(0, 0, 0, 0.1);
       position: relative;
       left: 0;
-      right: 0;
-      }
+      right: 0; }
       .history .rond p {
-        top: 0px;
         margin: 0;
         text-align: center;
         color: white;
@@ -4855,8 +4848,7 @@ h2.contact-title {
         font-size: 19px;
         top: 50%;
         position: relative;
-        transform: translateY(-50%);
-        }
+        transform: translateY(-50%); }
     .history .text {
       width: 50%; }
       .history .text p {

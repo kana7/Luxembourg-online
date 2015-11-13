@@ -2831,6 +2831,8 @@ span[class^=icon-] {
   background-color: #004994;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   margin: 0; }
+  .btn-blue:hover {
+    background-color: #0056ae; }
 
 .btn-orange, .input-group .custom-file-input::before {
   color: #fff;

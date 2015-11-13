@@ -35,7 +35,6 @@ var encartDispoTemplate = '<div class="phone-12 tab-6 desk-3">' +
         '</div>' +
         '</div>';
 
-
 var temp;
 // ON PAGE READY
 $(function () {
@@ -250,7 +249,7 @@ var MenuMobile = (function () {
 //Gère les popups dans le site
 var PopupModule = (function () {
     var $clientSpace = $('.popup');
-    var $clientMenuItem = $clientSpace.find('.client-menu>li');
+    var $clientMenuItem = $clientSpace.find('.client-menu>li[data-id]');
     var $formGroup = $clientSpace.find('.pannel-forms');
     var $forms = $clientSpace.find('.pannel-forms>form');
     var $openButton = $('.openPopup');

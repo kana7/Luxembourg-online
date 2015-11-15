@@ -2063,10 +2063,16 @@ footer
 // ESPACE CLIENT
 // --------------------------------------------------
 .popup{
-    visibility: hidden;
-    transition: opacity 2s linear;
+    display: block;
     &.is-visible{
-        visibility: visible;
+        .background-client{
+            opacity: 0.6;
+            visibility: visible;
+        }
+        .white-pannel{
+            opacity: 1;
+            visibility: visible;
+        }
     }
 }
 
@@ -2078,7 +2084,9 @@ footer
     left: 0;
     right: 0;
     background-color: $black;
-    opacity: 0.6;
+    visibility: hidden;
+    opacity: 0;
+    @include transition(opacity 0.3s linear);
     z-index: 10;
     cursor: pointer;
 }
@@ -2100,6 +2108,10 @@ footer
     background-color: $white;
     border-radius: 6px;
     z-index: 11;
+    visibility: hidden;
+    opacity:0;
+    @include transition(opacity 0.3s linear);
+    
     .pannel-close{
         display: block;
         position: absolute;

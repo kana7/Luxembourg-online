@@ -3027,7 +3027,9 @@ span[class^=icon-] {
 
 .os {
   display: inline-block;
-  float: right; }
+  float: right;
+  position: relative;
+  bottom: 4px; }
 
 .typeContainer {
   font-size: 30pt;
@@ -3483,6 +3485,8 @@ span[class^=icon-] {
       height: 5px;
       width: 100%;
       background-color: #004994; }
+    #mobileType .gallery-cell:hover .mobile-name {
+      color: #004994; }
     #mobileType .gallery-cell.selected .mobile-name {
       color: #004994;
       font-weight: 800; }
@@ -3492,7 +3496,11 @@ span[class^=icon-] {
       width: 100%;
       text-align: center;
       font-size: 16px;
-      font-weight: 600; }
+      font-weight: 600;
+      -moz-transition: background 0.4s ease-in-out, border 0.4s ease-in-out, color 0.4s ease-in-out;
+      -o-transition: background 0.4s ease-in-out, border 0.4s ease-in-out, color 0.4s ease-in-out;
+      -webkit-transition: background 0.4s ease-in-out, border 0.4s ease-in-out, color 0.4s ease-in-out;
+      transition: background 0.4s ease-in-out, border 0.4s ease-in-out, color 0.4s ease-in-out; }
   #mobileType .flickity-prev-next-button {
     background: none; }
     #mobileType .flickity-prev-next-button .arrow {

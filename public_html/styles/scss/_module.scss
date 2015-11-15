@@ -791,6 +791,8 @@ span[class^=icon-]
 .os{
     display: inline-block;
     float: right;
+    position: relative;
+    bottom: 4px;
 }
 .typeContainer {
     font-size: 30pt;
@@ -1171,6 +1173,11 @@ span[class^=icon-]
             width: 100%;
             background-color: $blue;
         }
+        &:hover{
+            .mobile-name{
+                color: $blue;
+            }
+        }
         &.selected{
             .mobile-name{
                 color: $blue;
@@ -1184,6 +1191,7 @@ span[class^=icon-]
             text-align: center;
             font-size: 16px;
             font-weight: 600;
+            @include transition($transitionUi);
         }
     }
     .flickity-prev-next-button {

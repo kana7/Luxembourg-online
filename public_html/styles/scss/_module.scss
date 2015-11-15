@@ -2335,7 +2335,7 @@ h2.contact-title {
     }
 }
 .input-group{
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     *{
         display: block;
     }
@@ -2374,10 +2374,10 @@ h2.contact-title {
     }
     textarea{
         border: none;
-        min-height: 183px;
+        min-height: 205px;
         resize: none;
         padding: 10px;
-        @include box-shadow(0 1px 5px 1px rgba(0,0,0,0.20));
+        border: 1px solid lighten($grey, 8%);
     }
     .custom-file-input:focus{
         outline: none;

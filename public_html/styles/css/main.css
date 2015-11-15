@@ -1828,7 +1828,7 @@ header {
   border: 1px solid #d4d4d4;
   min-height: 375px; }
   .boxmap.others {
-    min-height: 250px; }
+    min-height: 275px; }
   .boxmap h2 {
     text-align: center;
     text-transform: uppercase;
@@ -2139,7 +2139,7 @@ header {
 .section-layout {
   position: relative;
   display: block;
-  padding: 10px 0;
+  padding: 30px 0;
   width: 100%;
   height: auto;
   text-align: center; }
@@ -4430,7 +4430,7 @@ h2.contact-title {
     padding: 9px 30px 8px; }
 
 .input-group {
-  margin-bottom: 15px; }
+  margin-bottom: 25px; }
   .input-group * {
     display: block; }
   .input-group input, .input-group textarea, .input-group select {
@@ -4468,14 +4468,10 @@ h2.contact-title {
     background-position: 97% center; }
   .input-group textarea {
     border: none;
-    min-height: 183px;
+    min-height: 205px;
     resize: none;
     padding: 10px;
-    -webkit-box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
-    -o-box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
-    -ms-box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2); }
+    border: 1px solid #d4d4d4; }
   .input-group .custom-file-input:focus {
     outline: none; }
   .input-group .custom-file-input::-webkit-file-upload-button {

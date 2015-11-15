@@ -1505,6 +1505,9 @@ ul, li {
   margin: 0;
   padding: 0; }
 
+hr {
+  border-color: #d4d4d4; }
+
 @font-face {
   font-family: "luxonline-icons";
   src: url("../../fonts/luxonline-icons.eot");
@@ -1737,7 +1740,7 @@ header {
   position: relative;
   display: block;
   width: 100%;
-  z-index: 2; }
+  z-index: 3; }
 
 #top-menu-header {
   position: relative;
@@ -1978,8 +1981,7 @@ header {
 
 #slider-magazine {
   display: block;
-  position: relative;
-  height: 400px; }
+  position: relative; }
   #slider-magazine img {
     margin: 0 auto;
     display: block;
@@ -2001,7 +2003,8 @@ header {
       height: 100%;
       z-index: 2; }
   #slider-magazine figcaption {
-    margin: 10px 0; }
+    margin: 10px 0;
+    text-align: center; }
 
 #slider-contents .gallery-cell, #slider-magazine .gallery-cell {
   width: 100%; }
@@ -2128,15 +2131,15 @@ header {
   margin-top: 10px; }
 
 .section-padding {
-  padding: 60px 0 40px; }
+  padding: 60px 0 40px !important; }
 
 .padding {
-  padding: 40px 0; }
+  padding: 40px 0 !important; }
 
 .section-layout {
   position: relative;
   display: block;
-  padding: 30px 0;
+  padding: 10px 0;
   width: 100%;
   height: auto;
   text-align: center; }
@@ -2485,7 +2488,8 @@ span[class^=icon-] {
 
 .finance-list {
   text-align: left;
-  line-height: 20px; }
+  line-height: 20px;
+  font-size: 14px; }
   .finance-list li {
     display: block; }
 
@@ -4124,7 +4128,7 @@ footer {
   .table-details thead, .table-details tbody, .table-details tr {
     width: 100%; }
   .table-details tr {
-    border-bottom: 2px solid #d4d4d4; }
+    border-bottom: 1px solid #d4d4d4; }
   .table-details td, .table-details th {
     border-collapse: collapse;
     text-align: left;
@@ -4138,8 +4142,8 @@ footer {
     font-weight: 400; }
   .table-details td {
     font-size: 19px; }
-    .table-details td a {
-      border-bottom: 1px solid #004994; }
+    .table-details td a:hover {
+      text-decoration: underline; }
 
 .bottom-link {
   text-align: center;
@@ -4780,13 +4784,22 @@ h2.contact-title {
       transform: translateY(-50%);
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
-      transform: translateY(-50%); } }
+      transform: translateY(-50%); }
+
+  #slider-magazine img {
+    height: 550px; } }
 @media screen and (min-width: 1056px) {
+  .header-section-height {
+    height: 350px !important; }
+
   .logo {
     height: auto; }
 
   #mobileType .flickity-prev-next-button {
     height: 35px; }
+
+  .minix-info {
+    margin-top: 50px; }
 
   #equipement-section {
     padding-top: 70px;

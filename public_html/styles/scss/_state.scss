@@ -305,9 +305,17 @@
             @include vertical-align-middle;
         }
     }
+    #slider-magazine{
+        img{
+            height: 550px;
+        }
+    }
 }
 
 @include media(desk){
+    .header-section-height{
+        height: 350px !important;
+    }
     .logo{
         height: auto;
     }
@@ -315,6 +323,9 @@
         .flickity-prev-next-button{
             height: 35px;
         }
+    }
+    .minix-info{
+        margin-top: 50px;
     }
     #equipement-section{
         padding-top: 70px;

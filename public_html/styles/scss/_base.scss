@@ -29,6 +29,10 @@ ul, li{
     padding: 0;
 }
 
+hr{
+    border-color: lighten($grey, 8%);
+}
+
 @charset "UTF-8";
 
 @font-face {

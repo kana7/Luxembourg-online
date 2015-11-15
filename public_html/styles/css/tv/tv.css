@@ -156,6 +156,9 @@
     display: inline-block;
     font-size: 0.9em; }
 
+.minix-info-image img {
+  max-width: 100%; }
+
 @media screen and (max-width: 671px) {
   .channels-language-links {
     display: -ms-flexbox;
@@ -287,6 +290,9 @@
   .pull-right .section-subtitle {
     text-align: right; }
   .pull-right .img-layout {
-    float: right; } }
+    float: right; }
+
+  .minix-info-image img {
+    min-width: 350px; } }
 
 /*# sourceMappingURL=tv.css.map */

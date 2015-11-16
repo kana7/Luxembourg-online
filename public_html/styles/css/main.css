@@ -2481,7 +2481,8 @@ span[class^=icon-] {
 
 .section-info {
   margin-bottom: 45px; }
-  .section-info h1 {
+  .section-info h2 {
+    font-size: 2em;
     line-height: 35px;
     margin: 0 0 25px;
     font-weight: 400; }
@@ -3653,7 +3654,7 @@ span[class^=icon-] {
   margin-bottom: 30px; }
   .content-container .offer-item-blue .item-header, .content-container .offer-item-orange .item-header {
     padding: 12px 0;
-    font-size: 21px; }
+    font-size: 31px; }
   .content-container .offer-item-blue .item-body li, .content-container .offer-item-orange .item-body li {
     padding: 18px 0; }
     .content-container .offer-item-blue .item-body li:not(.description), .content-container .offer-item-orange .item-body li:not(.description) {

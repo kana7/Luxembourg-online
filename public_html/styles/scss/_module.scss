@@ -868,14 +868,16 @@ span[class^=icon-]
 }
 .square{
     float: left;
-    width: 45px;
-    height: 45px;
+    width: 47px;
+    height: 47px;
     text-align: center;
     margin-right: 10px;
     margin-right: 5px;
     margin-left: 5px;
     margin-bottom: 10px;
     color: white;
+    background-repeat : no-repeat;
+    background-size: 100% 100%;
     &.squareCam {
         background-image: url('../../images/equipment/mobile/squareCam.png');
         .squareCamText {

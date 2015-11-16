@@ -337,14 +337,16 @@
             left: 0;
             right: 0;
             p{
-                margin: 0;
+                margin: 0 auto;
                 text-align: center;
                 color: white;
                 font-weight: 800;
                 font-size: 19px;
                 top: 50%;
-                position: relative;
+                position: absolute;
                 transform: translateY(-50%);
+                left: 0;
+                right: 0;
             }
         }
         .text{
@@ -358,12 +360,18 @@
         .history-text{
             @include vertical-align-middle;
         }
+        .history-text-exeption{
+            @include vertical-align-middle;
+            float: right;
+            margin-right: 15px;
+        }
         .right-block{
             float: right;
             padding: 0 0 0 70px;
         }
         .left-block{
-            padding: 0 50px 0 0;
+            padding: 0 55px 0 0;
+            float: left;
             .history-text{
                 float: right;
                 margin-right: 15px;
@@ -383,7 +391,7 @@
             }
             .icon-left{
                 text-align: center;
-                padding-right: 105px;
+                padding-right: 170px;
             }
             .line-grey{
                 width: 3px;
@@ -724,7 +732,7 @@
     #social-links nav{
         width: 80%;
     }
-
+    
     .help-link{
         font-size: 12pt;
         span[class^=icon-]{

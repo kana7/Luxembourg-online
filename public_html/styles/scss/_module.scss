@@ -2435,7 +2435,8 @@ h2.contact-title {
     }
     .text{
         width: 50%;
-        @include vertical-align-middle;
+        position: relative;
+        top: 50%;
         p{
             font-size: 16px;
             margin: 0;

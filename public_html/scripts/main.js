@@ -292,3 +292,13 @@ var PopupModule = (function () {
         closePopup: closePopup
     };
 })();
+
+$(document).ready(function(){
+    if (viewport().width < 670){
+        $('.right-block, .left-block').addClass('wow animated fadeInRight');
+    }
+    else{
+        $('.right-block').addClass('wow animated fadeInRight');
+        $('.left-block').addClass('wow animated fadeInLeft');
+    }
+});

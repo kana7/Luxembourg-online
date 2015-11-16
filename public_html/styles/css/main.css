@@ -4505,11 +4505,7 @@ h2.contact-title {
   .history .text {
     width: 50%;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%); }
+    top: 50%; }
     .history .text p {
       font-size: 16px;
       margin: 0;
@@ -4847,14 +4843,16 @@ h2.contact-title {
       left: 0;
       right: 0; }
       .history .rond p {
-        margin: 0;
+        margin: 0 auto;
         text-align: center;
         color: white;
         font-weight: 800;
         font-size: 19px;
         top: 50%;
-        position: relative;
-        transform: translateY(-50%); }
+        position: absolute;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0; }
     .history .text {
       width: 50%; }
       .history .text p {
@@ -4868,11 +4866,21 @@ h2.contact-title {
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%); }
+    .history .history-text-exeption {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      float: right;
+      margin-right: 15px; }
     .history .right-block {
       float: right;
       padding: 0 0 0 70px; }
     .history .left-block {
-      padding: 0 50px 0 0; }
+      padding: 0 55px 0 0;
+      float: left; }
       .history .left-block .history-text {
         float: right;
         margin-right: 15px; }
@@ -4887,7 +4895,7 @@ h2.contact-title {
       transform: translateY(-50%); }
     .history .history-element .icon-left {
       text-align: center;
-      padding-right: 105px; }
+      padding-right: 170px; }
     .history .history-element .line-grey {
       width: 3px;
       height: 100%;

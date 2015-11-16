@@ -1,0 +1,1151 @@
+[33mcommit 7f1ec178990904dfe9db3a23c42179bd8d10cebb[m
+Author: gassma <matthieu.gassmann54@gmail.com>
+Date:   Mon Nov 16 08:11:39 2015 +0100
+
+    ceci_est_un_test
+
+[33mcommit e687d3ddc4f17d72937fed64f905d52293f23f5f[m
+Merge: eb43ce8 8322700
+Author: gassma <matthieu.gassmann54@gmail.com>
+Date:   Fri Nov 13 18:13:23 2015 +0100
+
+    Merge remote-tracking branch 'upstream/secondary_master' into secondary_master
+    
+    # Conflicts:
+    #	public_html/styles/css/main.css
+    #	public_html/styles/css/main.css.map
+    #	public_html/styles/scss/_module.scss
+
+[33mcommit eb43ce8ff4ef04cc1f2ec58851ce5cdc8bd6a555[m
+Merge: c6caab0 8dc53f9
+Author: gassma <matthieu.gassmann54@gmail.com>
+Date:   Fri Nov 13 17:40:25 2015 +0100
+
+    Fail du merge, ajout des images laissÃes par le revert
+
+[33mcommit 832270032b74e524fec008ce862595a3aca96085[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Nov 13 17:09:05 2015 +0100
+
+    Modification des liens sociaux dans le footer
+
+[33mcommit c6caab0284c731721f65b8ac3fc5f9df5ee68c9d[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Fri Nov 13 16:55:30 2015 +0100
+
+    ajout de l'historique
+
+[33mcommit 8dc53f98cefd01a0e118058a7b553ac38a28ae6a[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Nov 13 16:27:06 2015 +0100
+
+    Modification du slider pour le lol Cloud et ajout des images pour la section dans TV/equipements
+
+[33mcommit 45507a9a4eb69c64bd9e942ee421efd133bf2bf4[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Nov 13 16:00:37 2015 +0100
+
+    Modification de la popup pour l'espace client
+
+[33mcommit 8e216069dc018d43cc2c23e8c055460ab01eef8d[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Nov 13 15:01:17 2015 +0100
+
+    Ajout de toutes les versions d'images du 11 novembre
+
+[33mcommit fec294cb82cf7f2d859fc94d2128a27258272d68[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Nov 13 13:39:34 2015 +0100
+
+    Ajout d'images et ajout d'un scroll + rectification des liens et des labels dans le menu mobile
+
+[33mcommit 4d4bbe2b53a2bc48048a819ed08369c2ee697ccc[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Nov 13 10:20:33 2015 +0100
+
+    text de la page répondeur aligné à gauche
+
+[33mcommit 86e6928c05b2dfe24c6f8abce90bd155e7aafecd[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Nov 13 10:09:26 2015 +0100
+
+    Ajout des liens + transition sur les encarts
+
+[33mcommit 0450e8e425d989b807c7ca913ad81cffd9a70510[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Nov 12 17:36:33 2015 +0100
+
+    Changement de la transition dans les sous-pages des sections + inversion du lien hotcity avec document
+
+[33mcommit 87f01cd0bbea767ae076c36858c84c0d7891fd7f[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Nov 12 17:22:43 2015 +0100
+
+    Changement de la transition dans les sous-pages des sections + inversion du lien hotcity avec document
+
+[33mcommit ce1ef741d6a8fabfa0eb26bb2aaf9818e9ae07f8[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Nov 12 16:59:31 2015 +0100
+
+    Ajout du référencement pour les moteurs de recherche dans toutes les pages
+
+[33mcommit 9b004d3b9d80a35c0d361bf873ce2c0242317d96[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Nov 12 14:46:52 2015 +0100
+
+    Ajout du google analytics utiliser jusque maintenant sur le site actuel dans toutes les pages
+
+[33mcommit 96af719082352b8d9b27d84394e3534f64c3c0a7[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Wed Nov 11 16:46:51 2015 +0100
+
+    Ajout du lightbox (2eme)
+
+[33mcommit e60a52d5c78b633f9abdb01a5584a404d389aa6c[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Nov 11 14:43:42 2015 +0100
+
+    Changement du texte pour le lien assistance dans le footer
+    ajout du pdf réseau fibre luxembourg
+
+[33mcommit fa76f21752128b81d2049bb4759abc9283160adc[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Nov 11 08:58:13 2015 +0100
+
+    Correction et suppression de liens
+
+[33mcommit 44612c420e48f5878963dd080fb700d65c8103e1[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Tue Nov 10 16:56:55 2015 +0100
+
+    Correction des fautes d'orthographes
+
+[33mcommit def87ffd97b213084775e6e7b76457badd84a1e1[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Tue Nov 10 10:42:05 2015 +0100
+
+    Modification des encarts
+
+[33mcommit 5c8a2dac005c5fab100b9d0b521fb83667556221[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Nov 9 16:18:49 2015 +0100
+
+    Modification des encarts
+
+[33mcommit d35276ee1185a95ea481b72e501d8cd593ecbb46[m
+Merge: 86cfdc2 1b4056d
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Nov 9 12:37:56 2015 +0100
+
+    Corrections de la faute d'orthographe dans le menu mobile, correction du titre dans la page propos, correction des liens pdf dans une des pages abonnements
+
+[33mcommit 86cfdc2e6335f882bfb0bc43f65538616c683490[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Nov 9 11:58:23 2015 +0100
+
+    Changement des descriptions dans les sections accueil internet
+
+[33mcommit 1b4056d589d21edfae1a82254070d65ff814f7d9[m
+Merge: 091c78a 903a69e
+Author: Quentin Fonck <quentin.fonck@gmail.com>
+Date:   Mon Nov 9 11:55:29 2015 +0100
+
+    Merge pull request #9 from gassma/secondary_master
+    
+    Secondary master
+
+[33mcommit ea6a071c1cef6b0c9beecbf3d858a7b456124295[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Nov 9 11:49:45 2015 +0100
+
+    Changement de la margin pour les titres dans les sections
+
+[33mcommit 903a69e10c78ed5221bf6a389a9d12a4765684f1[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Mon Nov 9 11:34:08 2015 +0100
+
+    Correction pdf-list.
+
+[33mcommit ae9ae9d240f7fd5968a35fd419141c82aa1da0b6[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Nov 9 11:26:28 2015 +0100
+
+    Changement du  background-color de la partie fritz dans la page d'accueil
+
+[33mcommit 1bb6283bd96b42bd5676083bcb645a8e06a0f713[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Mon Nov 9 11:26:00 2015 +0100
+
+    Correction orthographe menu mobile.
+
+[33mcommit b8c81ab56f2753fc5c53a14f4accee50ccedf687[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Nov 9 11:16:02 2015 +0100
+
+    Corrections des bugs dans affichages telephones equipements
+
+[33mcommit 697fc62bf8b425c4bc31559effc35ab4f33a947d[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Mon Nov 9 11:09:53 2015 +0100
+
+    Correction titre propos.
+
+[33mcommit 091c78afdd9b8da06277394a831978b7e9d7f889[m
+Merge: a65e4ac fa2e4c1
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Nov 9 10:49:11 2015 +0100
+
+    Correction de tous les conflits entre master et pages mathieu
+
+[33mcommit a65e4ac6283bb42935f02805092fa42be2c45fb2[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Nov 9 10:14:22 2015 +0100
+
+    merge des nouvelles images
+
+[33mcommit fa2e4c120b181a47ab404383943aa98efdd3294f[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Nov 9 09:41:54 2015 +0100
+
+    Ajout de ces foutus fichiers images
+
+[33mcommit 948bcf9f364e8d4251bfa919d62281c524814aa0[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Nov 9 09:36:30 2015 +0100
+
+    merge des nouvelles images après pull request
+
+[33mcommit ce353c16d97929f65c23a55cba94f4420f72143a[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Nov 9 09:35:17 2015 +0100
+
+    merge des nouvelles images après pull request
+
+[33mcommit 6940c5b569ed7c74182b7ef8206b6791588dce9a[m
+Merge: 379eeb8 a0cf871
+Author: Quentin Fonck <quentin.fonck@gmail.com>
+Date:   Fri Nov 6 18:52:50 2015 +0100
+
+    Merge pull request #8 from gassma/links
+    
+    Links
+
+[33mcommit a0cf8715cd23c6fb4d9336c6edfbd901c4ecd25a[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Fri Nov 6 18:35:49 2015 +0100
+
+    Mise a jour des images et correction diverses.
+
+[33mcommit 7e1c62c0e86a4b22975bf21bc25c04e7c4ac2024[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Nov 6 18:35:26 2015 +0100
+
+    merge du  code actuelle
+
+[33mcommit c7bea938b704a26da1659a18b5bb498bef84d193[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Nov 6 17:06:12 2015 +0100
+
+    modification du template pour le controle de la dispo + ajout d'une fonction pour placer le test de dispo au bon endroit en fonction de l'écran
+
+[33mcommit 082a97e8a77e7f5ba1992564df679c5e61c1382f[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Nov 6 15:56:20 2015 +0100
+
+    Fin de la foutu mise en page test dispo de la page auccueil
+
+[33mcommit 527b7fcb365666f1c12b5200af053c6fe776c66e[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Nov 6 10:53:04 2015 +0100
+
+    Mise en page de la popup test dispo
+
+[33mcommit 930b61e9e54a56e8c428ee42297cd1a69d0da9fe[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Nov 6 10:24:29 2015 +0100
+
+    popup vérifier la dispo fonctionne dans toutes les pages. Faire la mise en page de la dispo et adapter le script pour le dropDown
+
+[33mcommit 0beeadc7676fa693cb3d89c14f24121ea9c86815[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Fri Nov 6 07:42:42 2015 +0100
+
+    Mise en place des liens et modification des FAQ.
+
+[33mcommit 69c3900617f9b8e8c777bdd6cbc8fb441a868f35[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Nov 5 18:04:37 2015 +0100
+
+    Correction apporté pour insérer la popup contenant le teste de disponibilités
+
+[33mcommit b1f097bf461ef5224ecc5a891a806f1269293250[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Nov 5 17:41:46 2015 +0100
+
+    Correction du problème des popups qui restaient tout le temps affiché
+
+[33mcommit 48da8e15cf8ce01cafabf8478e8ef4ab6c0c2902[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Nov 5 16:05:09 2015 +0100
+
+    Problème du formulaire test dispo réglé. Ajout de la fonction printDispo pour insérer le test au bonne endroit en fonction de la résolution
+
+[33mcommit 10e9767ba97d8607030c7fcb70ed68947e2c1cc5[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Nov 5 15:56:46 2015 +0100
+
+    modification du script pour accepter plusieurs requete de test dispo
+
+[33mcommit f322a8e3b144b357b3a45f64fefbe1706a1f7b0e[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Nov 5 14:17:19 2015 +0100
+
+    nettoyage de la fonction popup
+
+[33mcommit da0b70aa726b87a6a33c833c25849503e416e859[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Nov 5 14:11:21 2015 +0100
+
+    Ajout d'une fonction pour ouvrir différente popup dans une même page
+
+[33mcommit 2e274ad7b4b2ae8f53568187ce58287ffa21a3ac[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Nov 5 12:10:55 2015 +0100
+
+    Modification de la fonction popup pour afficher la dispo
+
+[33mcommit 7f68583d6ec96debe83cc1df107048a3da9e9f57[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Nov 5 10:41:05 2015 +0100
+
+    Ajout de la fonction pour vérifier la disponibilité sur la home Page
+
+[33mcommit cb8debddecba3c93d20ca4b3231778981a6d6133[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Nov 4 16:59:10 2015 +0100
+
+    Ajout des styles pour montrer les offres non-dispo
+
+[33mcommit 68b1ba4a9b583d1829818020d7add54e898421df[m
+Merge: 20503ab 379eeb8
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Nov 4 14:53:37 2015 +0100
+
+    Résolution des conflits après merge
+
+[33mcommit 20503ab8f38997cd163738b47e46d5509c2c4cbe[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Nov 4 14:28:33 2015 +0100
+
+    Ajout du script pour tester la disponibilité
+
+[33mcommit 379eeb83934dd286aaff5cdf362cb1e72c792c66[m
+Merge: 6d346b4 07a2782
+Author: Quentin Fonck <quentin.fonck@gmail.com>
+Date:   Wed Nov 4 14:11:49 2015 +0100
+
+    Merge pull request #5 from gassma/Pages-Mathieu
+    
+    Pages mathieu
+
+[33mcommit 07a27821faf8371c6a714643bee88ca2efcd72d1[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Wed Nov 4 12:13:48 2015 +0100
+
+    Ajout des pages A_propos et magazine
+
+[33mcommit 49d9bf1dbc3a7688802411a9c954fd8a97b1d923[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Tue Nov 3 17:10:04 2015 +0100
+
+    page assistance faite. Reste les rectifications du html pour le responsive.
+
+[33mcommit c0d550469a7bce16da73b746169fda4363a229d3[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Tue Nov 3 14:49:49 2015 +0100
+
+    Ajout d'un overflow sur les tableaux du tarifs détaillés
+
+[33mcommit 29175456433a4977ad3ef01284c55607531a8154[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Tue Nov 3 14:31:30 2015 +0100
+
+    Ajout de la page nos tarifs détaillés
+
+[33mcommit 2af3f005beca67a434db65d6c936663ef07706a2[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Tue Nov 3 10:48:25 2015 +0100
+
+    Ajout de la flèche pour le select dans le formulaire
+
+[33mcommit e002da70b53cf129105e6a2bd68e2074f3df5b81[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Tue Nov 3 10:12:45 2015 +0100
+
+    Intégrations des radios dans les offres TV
+
+[33mcommit 8d770b3e7f727f58f11b57821e9acec2a2260d75[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Nov 2 17:13:47 2015 +0100
+
+    Page contact terminé
+
+[33mcommit 008a42be6e030a22da10f5cc74140e7be819f8ba[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Nov 2 16:44:52 2015 +0100
+
+    Correction de la mise en page du formulaire
+
+[33mcommit 18f28705b3714894e0ae6fbf83ebdb420a78e218[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Nov 2 16:22:58 2015 +0100
+
+    Ajout du formulaire de contact
+
+[33mcommit 8e02dda29d097e0fcc5ef01cce10cfb1bb69958d[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Nov 2 13:54:33 2015 +0100
+
+    Ajout de la partie google Map dans  contact
+
+[33mcommit 6c71eeeaffe71f6845ae026c0ddeda63198c9ebc[m
+Merge: 1068194 0197067
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Oct 30 15:36:31 2015 +0100
+
+    merge de la branche page-mathieu dans le master
+
+[33mcommit 019706765f83152a36edbdde1f367764621361b0[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Oct 30 15:10:41 2015 +0100
+
+    Ajout des radios dans les images + modification du script pour intégrer les chaines radios
+
+[33mcommit 7221644a3140a87028a37e7bb2ce64e63ce2c345[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Oct 30 14:33:29 2015 +0100
+
+    Ajout des pages plan + hotcity + offres emploi + corrections
+
+[33mcommit 6d346b4b927a987073dc4b65ef813b943af2824b[m
+Merge: b296b30 744a977
+Author: Quentin Fonck <quentin.fonck@gmail.com>
+Date:   Fri Oct 30 11:52:38 2015 +0100
+
+    Merge pull request #4 from gassma/Pages-Mathieu
+    
+    Pages mathieu ---> Offre emploi + plan du site + hotcity
+
+[33mcommit 10681949fa9844307fff81236cc3b39466ef6515[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Oct 30 11:47:01 2015 +0100
+
+    Mise en page de la page contact
+
+[33mcommit b5cf3daf702d3caaed314e4eb3e6f0dfea9dce04[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Fri Oct 30 11:45:12 2015 +0100
+
+    Ajout du lien hotcity dans les pages Mobiles.
+
+[33mcommit 744a9776a8f9eb8fb05b9631faf1e947bdab3e97[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Fri Oct 30 11:32:46 2015 +0100
+
+    Création des pages Offre d'emploi, plan du site et hotcity
+
+[33mcommit 1793f99b67652c4bfac77aef424ce6b4ea39ddf2[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Oct 30 09:21:43 2015 +0100
+
+    Création des pages FAQ
+
+[33mcommit 65328bb9856e773fe617856ef0d429418f8ac4e6[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Oct 29 15:14:12 2015 +0100
+
+    Correction du script pour les mobiles
+
+[33mcommit d7e75c31172b969f7baab5c10b36bb7a212d4cb7[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Oct 29 15:12:13 2015 +0100
+
+    Ajustement d'un container dans la page nos mobiles
+
+[33mcommit 0dc83bc67380dafda5b913bcca740d1b6f4f116c[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Oct 29 15:08:53 2015 +0100
+
+    page equipement mobile faite
+
+[33mcommit 8c269482c0303715cb5712aaa1160d65d68a3f3e[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Thu Oct 29 11:57:44 2015 +0100
+
+    commit after merge
+
+[33mcommit 37b205722c33a9f4ed6e66237ebbd2ce71f48227[m
+Merge: 7764e93 b296b30
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Oct 29 11:07:57 2015 +0100
+
+    Intégration des pages: financement, parrainage et répondeur + correction des mises en page
+
+[33mcommit 7764e93f360e9354b9f23d84a9a9c20bb59c8b9c[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Oct 29 10:05:11 2015 +0100
+
+    Ajout des icones os + images mobiles
+
+[33mcommit b296b304698a7238ab6235fa6cb6460c522d9e31[m
+Merge: 31bee9d b5ead83
+Author: Quentin Fonck <quentin.fonck@gmail.com>
+Date:   Thu Oct 29 10:02:42 2015 +0100
+
+    Merge pull request #3 from gassma/Pages-Mathieu
+    
+    Pages mathieu
+
+[33mcommit b5ead83a6f28394df260a39bd676c12f33caadb2[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Thu Oct 29 09:43:13 2015 +0100
+
+    Creation de la page répondeur
+
+[33mcommit 1150176b82d9b267b61abca43a550e0ff04754bc[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Oct 28 18:17:35 2015 +0100
+
+    mise en page de la sélection des mobiles
+
+[33mcommit c6ee06664318f940233751181eb4f915fce5f653[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Wed Oct 28 16:08:28 2015 +0100
+
+    Creation de la page option de financement
+
+[33mcommit b5ed1e7f0976b13de4521b0a3e804b79f0927784[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Oct 28 16:01:54 2015 +0100
+
+    Nos mobiles --> Script terminé. Mise en page en cours.
+
+[33mcommit 65dc41be64d742da6954d391236a6634933d500f[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Wed Oct 28 15:17:16 2015 +0100
+
+    Creation de la page parrainage
+
+[33mcommit 31bee9d535c7e10a96d6303a4874681d60f9519d[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Oct 28 13:46:48 2015 +0100
+
+    changement taille bouttons
+
+[33mcommit c9afc1c29b55a71edfd1c9266e408bbf6d3e6068[m
+Merge: 03a0de7 5a437b8
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Oct 28 13:44:51 2015 +0100
+
+    Intégration des modifications de la branche compatibility-check dans master + Correction de la taille des boutons
+
+[33mcommit 03a0de7b3528e83a1247625748036ea10a0d7046[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Oct 28 13:11:25 2015 +0100
+
+    Page nos mobiles en cours: Créations des models de mobiles
+
+[33mcommit 5a437b8e3e97ca4e50ad49928020af8838466346[m
+Merge: b3be065 328f955
+Author: Quentin Fonck <quentin.fonck@gmail.com>
+Date:   Wed Oct 28 12:09:49 2015 +0100
+
+    Merge pull request #1 from gassma/Compatibility-check
+    
+    Compatibility check: Ajout des corrections d'affichage pour les différents navigateurs
+
+[33mcommit 328f95506cb3b27b7588113ac50a50fe3a8b2816[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Wed Oct 28 11:55:08 2015 +0100
+
+    Correction :  -> réajustement pdf list
+
+[33mcommit 940364b34f3047aac6e432a430f4b857d1632ad9[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Wed Oct 28 11:45:33 2015 +0100
+
+    Correction :  -> ajustement pdf list
+
+[33mcommit 802d275396bff79818c18c72b28bda61e4a00307[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Oct 28 11:07:24 2015 +0100
+
+    Debut de la page mobile equipement. Intégration du Js allMobilescript dans la page
+
+[33mcommit 4850071217a487b6b36f961b21f897a0e62a5b13[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Oct 28 10:18:56 2015 +0100
+
+    modification de la mise en page des pages équipements. Changement de la hauteur de .equipement-item
+
+[33mcommit 1d21968b24b23a80c4c166b44e4570d78c79c5fa[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Tue Oct 27 17:26:27 2015 +0100
+
+    modification de la mise en page de l'équipement en mobile
+
+[33mcommit 380347749db3706c7cd911009f73eb70493f9af3[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Tue Oct 27 16:59:46 2015 +0100
+
+    Correction :  -> ajustement des bontons "vérifié la disponibilité" mobile
+
+[33mcommit fcdec990d880e36a1262e24858e627b3917ff972[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Tue Oct 27 16:29:58 2015 +0100
+
+    Correction :  -> Supression ligne blanche au dessus d'une img format mobile
+
+[33mcommit b914a54d451acd5b8672fa9f4369af2a7ecd096d[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Tue Oct 27 15:53:51 2015 +0100
+
+    Correction :  -> Réajustement de la pdf-list
+
+[33mcommit 212b172d1979ea136c3b90c2487eedc3a020c891[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Tue Oct 27 15:33:15 2015 +0100
+
+    Fin équipements pour internet
+
+[33mcommit 0f40976640fb0ee292cbf3c10a3ffe00684fec54[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Tue Oct 27 15:00:36 2015 +0100
+
+    Correction :  -> Ajustement de la pdf-list
+
+[33mcommit b37437f4f4809d535a669a04ab11265503c89211[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Tue Oct 27 14:19:30 2015 +0100
+
+    Correction :  -> Ajustement de la taille des btn au format mobile
+
+[33mcommit 2af9e533efea674e2f51c1473aa84e06a893e578[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Tue Oct 27 11:43:07 2015 +0100
+
+    Ajout de la partie tab pour les équipements internet
+
+[33mcommit 2464f21c6a7271eac3c8faed145a22cadb92729d[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Tue Oct 27 11:40:21 2015 +0100
+
+    Correction :  -> Modification des separator du footer
+
+[33mcommit e42fe7a89e908adae109f29985425cbb6d4d25ab[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Tue Oct 27 11:02:34 2015 +0100
+
+    Ajout de la sélection des équipements dans la partie internet (version mobile)
+
+[33mcommit a2c313f6c5b5403187f90dc1cf7852d9f4271f73[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Tue Oct 27 09:35:49 2015 +0100
+
+    Correction :  -> Alignement des input sur IE
+
+[33mcommit b8ea1be6606d186fb162c0a51358614bff079e1a[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Oct 26 17:59:39 2015 +0100
+
+    Intégration partielle du philtre dans equipements
+
+[33mcommit d00a128541c8b2a1fe9cec7796a68e430e3cda9c[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Mon Oct 26 16:40:30 2015 +0100
+
+    Correction :  -> Modification de la scrollbar dans IE pour éviter qu'elle recouvre le contenu.
+
+[33mcommit fd5e8fa34e7c048e4c1aa1895736fec0fabab3e3[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Mon Oct 26 16:02:39 2015 +0100
+
+    Correction :  -> Supression du border noir sous la bar document-links
+
+[33mcommit 57e709b58684a572e5c94cafc9f9dae6fbeae036[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Mon Oct 26 15:40:26 2015 +0100
+
+    Correction :  -> Ajouts des box-shadow qui manquais.
+
+[33mcommit e42810970fc716d443612bbfec90a8dff9533fe3[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Oct 26 14:55:18 2015 +0100
+
+    Ajout des 3 catégories dans internet - equipements
+
+[33mcommit 58dd8727b49542a4dabcb6caf1f28344d8112605[m
+Author: lol <lol@DESKTOP-5V052KV>
+Date:   Mon Oct 26 14:41:36 2015 +0100
+
+    Correction de l'alignement du menu desktop.
+
+[33mcommit b3be0656d67da000f0c4c47eab09e734b0559310[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Oct 26 10:58:23 2015 +0100
+
+    Ajout des fichiers icones dans le master
+
+[33mcommit 513dc1869ac4f5bef28b977c9af4a9e53f60bfd7[m
+Merge: 77b07e4 33e18af
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Oct 26 10:56:04 2015 +0100
+
+    Merge branch 'loadHeaderFooter-Test'
+    
+    Conflicts:
+    	public_html/fonts/luxonline-icons.eot
+    	public_html/fonts/luxonline-icons.woff
+    	public_html/styles/css/main.css.map
+
+[33mcommit 33e18afbe627c9e521e709de9f2242bb342671f6[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Oct 26 10:43:48 2015 +0100
+
+    Modification des fichiers pour les icones
+
+[33mcommit 57e9b6929531c66e84e3d7833925c9c0b129d7dc[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Oct 26 10:36:25 2015 +0100
+
+    Ajout de l'item equipement pour mobile
+
+[33mcommit 77b07e4b121eed8af4b01fd478e3d2afcedb1f06[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Oct 23 18:25:40 2015 +0200
+
+    commit bidon pour résoudre les conflits
+
+[33mcommit 097db658e095131932e890f43f1642e4931e1ba0[m
+Merge: 78f49e9 6c993fe
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Oct 23 18:22:56 2015 +0200
+
+    Merge origin/master
+    
+    Conflicts:
+    	public_html/fonts/luxOnline-icons.eot
+    	public_html/fonts/luxOnline-icons.svg
+    	public_html/fonts/luxOnline-icons.ttf
+    	public_html/fonts/luxonline-icons.eot
+    	public_html/fonts/luxonline-icons.svg
+    	public_html/fonts/luxonline-icons.ttf
+    	public_html/mobile/abonnements.html
+    	public_html/styles/css/main.css.map
+    	public_html/styles/css/mobile/mobile.css
+    	public_html/styles/css/mobile/mobile.css.map
+    	public_html/styles/scss/_base.scss
+    	public_html/styles/scss/mobile/_module.scss
+    	public_html/styles/scss/mobile/_state.scss
+    	public_html/styles/scss/mobile/mobile.scss
+
+[33mcommit 78f49e98742900e47b8e0547b85cba3bbea15c97[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Oct 23 16:29:54 2015 +0200
+
+    reconfiguration de tous les liens
+
+[33mcommit bf7dd7170fafe78a8711e01b801ba28f20eb5b72[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Oct 23 14:36:34 2015 +0200
+
+    Ajout de la page equipement
+
+[33mcommit 3c3bdb1bd964911da400c52f7e3a89f60cfed47f[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Oct 22 17:49:00 2015 +0200
+
+    ajout des derniers css
+
+[33mcommit fe9b91970f1d34382bb65833284a01e41b249e6d[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Oct 22 17:29:53 2015 +0200
+
+    Ajout des fontes
+
+[33mcommit 96ec3b6e1adf7717bd451e047e4f35170164db62[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Oct 22 17:27:13 2015 +0200
+
+    Correction des liens + ajout des document liink pour la section tv
+
+[33mcommit c3d4b08616fda09a9fd675ef58f0c49afa824f70[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Oct 22 17:12:34 2015 +0200
+
+    Espace client fait
+
+[33mcommit 5f2b774738e8355291673c844871fd92e696129f[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Oct 22 12:23:21 2015 +0200
+
+    Ajout de l'espace client
+
+[33mcommit 99947628367ea980734fe89f3be5f46bc5b6f498[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Oct 21 17:09:12 2015 +0200
+
+    Page abonnez-vous faites, pas oublier de faire le responsive
+
+[33mcommit 30a93cdf95eb42a18a940eb2f1aee48fc0cc69e1[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Oct 21 16:50:55 2015 +0200
+
+    Abonnement telephonie fait
+
+[33mcommit cbd0d8192ea536fcd277f7f889e75bbdad2bd6d4[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Oct 21 16:36:24 2015 +0200
+
+    Abonnement mobile fait
+
+[33mcommit 25762c23e05e7d57b5696c18f7a7b57771921223[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Oct 21 16:26:14 2015 +0200
+
+    Abonnement internet fait
+
+[33mcommit 69341e10584a98f42ff5f79540d664b03b09c3fd[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Oct 21 14:18:05 2015 +0200
+
+    Ajout abonnement internet
+
+[33mcommit 87a804cd2a4dc94dc4c58a21521c8a6236cea328[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Oct 21 12:59:48 2015 +0200
+
+    Mise en place du script pour les chaines TV. Attente des photos en bonnes résolution et des images pour les chaines radios.
+
+[33mcommit ab9346fc092b4019be96f1dd6f66d0283ce3af5d[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Tue Oct 20 15:17:40 2015 +0200
+
+    offre tv  section supérieur faite
+
+[33mcommit c9c5da72c4f849d440fe265c75b9439803d8a6e2[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Tue Oct 20 14:28:23 2015 +0200
+
+    Récupération du offer-item dans la page tarifs
+
+[33mcommit 7510fecfeb0939696dbd0c217694bbb65582d598[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Tue Oct 20 14:16:04 2015 +0200
+
+    transition du code css
+
+[33mcommit 932452b6d838f272e22e7dd5d2ca0361b73dd964[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Tue Oct 20 13:59:55 2015 +0200
+
+    Correction de la consistance entre les pages d'offres
+
+[33mcommit bebbee389171278922c112aecfc4ced6a3d012e9[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Tue Oct 20 13:44:43 2015 +0200
+
+    Ajout de la page offre tv
+
+[33mcommit 6e76ea9d8e3c870c2bef6387fc6fce544287dd1c[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Tue Oct 20 11:46:47 2015 +0200
+
+    fin de la page des tarifs dans téléphone
+
+[33mcommit be57985796182637da16da3e01a6929380e85f28[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Tue Oct 20 11:09:57 2015 +0200
+
+    page desktop nos trafis téléphonie faite
+
+[33mcommit 7d47efefcf76689bb71556b77af7bdf63482d7ee[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Tue Oct 20 10:12:11 2015 +0200
+
+    Section détails des communications dans page téléphonie
+
+[33mcommit b216943c51bd87b083856f581e41ae401caacfb6[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Oct 19 16:20:55 2015 +0200
+
+    Ajout de la page tarifs
+    + ajout des nouvelles set icones
+
+[33mcommit 16f3a3dbbaffc6b09b6cf758736f880f2dc462f0[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Oct 19 15:36:04 2015 +0200
+
+    retour à la ligne pour les footer notes
+
+[33mcommit c2135fa87c67e4434bc82f8c75915efd07758575[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Oct 19 12:05:58 2015 +0200
+
+    Ajout des font files pour les icones
+
+[33mcommit 863ea05703b860b13c5c57802a395c085808e8ac[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Oct 19 11:58:19 2015 +0200
+
+    Page abonnements mobile terminé
+
+[33mcommit db5cfa89091e76134ca00bdfde55ba4f972a8846[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Oct 19 11:10:21 2015 +0200
+
+    Page mobile abonnements desktop terminé
+
+[33mcommit 8c605a14c1e67be23c841db66ab4ea40db47071b[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Oct 19 09:43:40 2015 +0200
+
+    menu header sur abonnements - mobile
+
+[33mcommit b172ca31322767e06b756c3c75194e5b9944213e[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Oct 19 09:39:28 2015 +0200
+
+    menu mobile sur abonnements - mobile
+
+[33mcommit 6c993fea678e66c95e880d0dd77cb1f4619cc16e[m
+Author: kana_7 <quentin.fonck.001@uni.lu>
+Date:   Sun Oct 18 21:55:25 2015 +0200
+
+    changement des marges pour les offres
+
+[33mcommit 48ce95511fb5907d8824e19b2f5cccc5d3c215c9[m
+Author: kana_7 <quentin.fonck.001@uni.lu>
+Date:   Sun Oct 18 21:10:57 2015 +0200
+
+    Création option de financement dans abonnements page mobile
+    
+    Align left pour les sections en orientation à droite.
+    
+    Correction des icones
+
+[33mcommit f4b3afbf9d66ab05e5a5412251032ae74a8fdf80[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Oct 16 17:14:08 2015 +0200
+
+    Ajout des fonts pour les icones
+
+[33mcommit 6514649ca8dd643eeb1bcafe38325c2133579042[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Oct 16 17:10:32 2015 +0200
+
+    Ajout du nouveau set d'icones
+
+[33mcommit 742bd6834de5c52dfcb25f23f88517551a6c2b75[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Oct 15 15:47:18 2015 +0200
+
+    modification accueil tv
+
+[33mcommit 83e57e007ee495d136a3cbb6983f0ef02d9175b9[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Oct 15 15:40:06 2015 +0200
+
+    Mise en page des pages accueil de toutes les sections
+
+[33mcommit 5bf23365c0655f13c5be0519d3a8634e9d3902a3[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Oct 15 14:19:44 2015 +0200
+
+    Accueil TV fait
+
+[33mcommit 9eee7fc66654b82a86f39cf64c9640f481b8e12f[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Oct 15 13:56:59 2015 +0200
+
+    Changement des liens header et mobile header
+
+[33mcommit 1711500e61741a044efeeada3ac6f08784fbb7e2[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Oct 15 11:11:36 2015 +0200
+
+    Ajout du border active sur les onglets
+
+[33mcommit 44ea439b83e4570701acc1b9f38c2e874a0aa70f[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Oct 15 10:49:02 2015 +0200
+
+    menu mobile terminé. Copier dans les autres pages et mettre les bons liens.
+
+[33mcommit 60deb29247d9f42a3b6fbb928dc26c0096a12063[m
+Author: kana_7 <quentin.fonck.001@uni.lu>
+Date:   Wed Oct 14 23:56:14 2015 +0200
+
+    Ajout des sliders pour le menu mobile
+
+[33mcommit 5bb3f5e89feb4ca964c39eef8b16a5040dda71c4[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Oct 14 18:15:37 2015 +0200
+
+    Ajout des photos pour les pages d'accueil des autres sections
+
+[33mcommit d6eb6c4a6f6f87e2b0e17ff7abb4f8ae02127fb5[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Oct 14 18:09:42 2015 +0200
+
+    début du reste de l'interactivité du menu
+
+[33mcommit 995d4b9cf9754beea988367a33b176be68f6ba66[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Oct 14 16:55:31 2015 +0200
+
+    rectification du arrow...
+
+[33mcommit 6da36b1e52a11a10a576a4a0d594b9e07ac28a34[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Oct 14 16:46:31 2015 +0200
+
+    arrow modifié, je n'y touche plus
+
+[33mcommit a8f1126bfa0fcf1e27027f222f8c548e054a7cff[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Oct 14 12:28:26 2015 +0200
+
+    Sliders faits
+
+[33mcommit 6bb3b7aedb5657f0ca77c6595def64fb917d2758[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Oct 14 10:21:41 2015 +0200
+
+    mise en place du responsive pour la section promos
+
+[33mcommit 043b5bb7d7343d14e9f33fe78fd11705f80015e3[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Tue Oct 13 09:57:22 2015 +0200
+
+    section promos ok quelques petites rectifications à faire au niveau du responsive
+
+[33mcommit 918deb65cfefd9e459c6bb03e47334ac939a278b[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Oct 9 18:08:09 2015 +0200
+
+    debut de la page d'offre mobile
+
+[33mcommit 340bfe3be44544bf5f97a29bcabd9160d623a8e1[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Oct 9 17:47:08 2015 +0200
+
+    rectification index
+
+[33mcommit ad61112de712ead79607761fde81ab2a056f372c[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Oct 9 17:43:01 2015 +0200
+
+    menu responsive index fait ok
+
+[33mcommit fd04385576bcc0b597862592f2c9ffbf3cd24e07[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Oct 9 17:36:29 2015 +0200
+
+    menu responsive offre ok
+
+[33mcommit a76f86f4f7c78b9a979d261ec0f009a4b7089829[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Oct 9 17:33:36 2015 +0200
+
+    menu responsive intégré dans page équipements
+
+[33mcommit 47952e893866a7c4fad844f42d0cf1c0638c0c55[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Oct 9 16:35:49 2015 +0200
+
+    Menu mobile fait sur l'accueil internet
+
+[33mcommit 316a534ba73904ff103fa44400a2829ce0616561[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Oct 9 09:26:22 2015 +0200
+
+    Exemples pages équipements fait
+
+[33mcommit 7927e3b5c182d5d023f5b4632221b763291bb23b[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Thu Oct 8 15:31:09 2015 +0200
+
+    3 page: index, accueil, offres. Equipements en cours + créer le menu mobile
+
+[33mcommit 65dfc9edd53b4c34e3e053a9e89c028a289416f5[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Oct 7 17:21:38 2015 +0200
+
+    Modification de la page  équipements - internet
+
+[33mcommit dafc987fc109cc98245261ec65b2bcbf29935d45[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Oct 7 12:42:02 2015 +0200
+
+    page des offres terminés
+
+[33mcommit 43e5a469525de2ffa60674efcf6197957bbb866c[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Wed Oct 7 12:05:30 2015 +0200
+
+    page des offres faites. Adapter l'affichage en résolution 1024px
+
+[33mcommit 794c13668ea3e7fb87276bcad3e1c8d848d05124[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Tue Oct 6 15:39:42 2015 +0200
+
+    Rectification de l'interactivité du sous-menu
+
+[33mcommit ee5edcd53872970c84106f173b0886878c8fb00a[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Tue Oct 6 15:12:41 2015 +0200
+
+    Fin de la page accueil Internet
+
+[33mcommit 44e6d71e85751508ef39bfc233d51284c49d4a86[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Oct 5 17:16:58 2015 +0200
+
+    document link done
+
+[33mcommit a2bf089adf3b9f0bd5009e7e9858aa598cd58a5a[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Oct 5 16:57:05 2015 +0200
+
+    création de la page d'accueil pour la partie internet
+
+[33mcommit d323ec6244e058c6f9cf66aa01f2aaa7b89805cf[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Mon Oct 5 11:40:59 2015 +0200
+
+    Fin de la première page + création des autres pages
+
+[33mcommit 3a7917ca4e1f3e4591441e7bd5790ed853d5482a[m
+Author: kana_7 <quentin.fonck.001@uni.lu>
+Date:   Sun Oct 4 20:35:08 2015 +0200
+
+    modification de la structure du css + design en mobile first
+
+[33mcommit 4501efc2b672fb758b8122badfd072b60d2305a8[m
+Author: kana_7 <quentin.fonck.001@uni.lu>
+Date:   Fri Oct 2 21:34:16 2015 +0200
+
+    header pour mobile fait
+
+[33mcommit b113a20e6fef913a842e7ad7b3c569ba55d1e365[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Oct 2 17:34:20 2015 +0200
+
+    Changement de la structure des fichiers. Mise en place du Responsive.
+
+[33mcommit 78c171b605a0524638d5a9a8a72b1fdac942b9c5[m
+Author: Quentin FONCK <quentin.fonck@internet.lu>
+Date:   Fri Sep 25 18:13:10 2015 +0200
+
+    First commit avec le main header mis en place

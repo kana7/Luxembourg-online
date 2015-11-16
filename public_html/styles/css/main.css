@@ -1622,6 +1622,9 @@ hr {
 .icon-hotcity:before {
   content: "h"; }
 
+.icon-left-arrow:before {
+  content: "i"; }
+
 @-ms-viewport {
   width: auto !important; }
 .answer li {
@@ -4577,7 +4580,7 @@ h2.contact-title {
     width: 70%; }
   .history .history-element .icon-right {
     padding-left: 60px; }
-  .history .history-element .icon-right-arrow {
+  .history .history-element .icon-right-arrow, .history .history-element .icon-left-arrow {
     font-size: 16px;
     color: #004494;
     position: absolute;
@@ -4695,11 +4698,13 @@ h2.contact-title {
       background-image: url(../../images/Homepage/OFFRES/LOL_TV_288x392px.jpg); }
 
   #offers-section div[class^=phone-] {
-    margin-bottom: 35px;
-    padding: 0 10px; }
+    margin-bottom: 10px;
+    padding: 0 10px;
+    }
 
   .footer-note {
-    margin: -14px 0 30px; }
+    margin: -14px 0 20px;
+    }
 
   .content-container .content-title, .content-container .content-subtitle {
     font-size: 26px;

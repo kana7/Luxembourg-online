@@ -280,7 +280,7 @@ $(function () {
             _nbr = vhash[3];
             checkDispo(_nbr);
             setTimeout(function () {
-                $("#zipcode").val(_cp);
+                $("input[name=zipcode]").val(_cp);
                 $(".verifyCp").click();
             }, 1000);
         } else {

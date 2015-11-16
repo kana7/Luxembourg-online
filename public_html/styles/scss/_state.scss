@@ -355,7 +355,8 @@
         width: 1024px;
     }
     .content-container{
-        margin-top: 100px;
+        padding-top: 100px !important;
+        margin-bottom: 40px !important;
     }
     .section-layout.content-container{
         height: 400px;

@@ -2092,7 +2092,7 @@ header {
     max-width: 100%; }
 
 #services {
-  padding: 18px 0;
+  padding: 25px 0;
   text-align: center; }
   #services .row > div[class^=phone-] {
     padding: 0 7px;
@@ -4838,7 +4838,8 @@ h2.contact-title {
     width: 1024px; }
 
   .content-container {
-    margin-top: 100px; }
+    padding-top: 100px !important;
+    margin-bottom: 40px !important; }
 
   .section-layout.content-container {
     height: 400px; }

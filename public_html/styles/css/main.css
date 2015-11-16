@@ -2469,10 +2469,10 @@ span[class^=icon-] {
 .footer-note {
   text-align: center;
   font-size: 13px;
-  margin: 30px 0;
+  margin: 15px 0;
   line-height: 15px; }
   .footer-note span {
-    display: block; }
+    display: inline-block; }
 
 .extra-bold {
   font-weight: 800; }
@@ -4698,13 +4698,8 @@ h2.contact-title {
       background-image: url(../../images/Homepage/OFFRES/LOL_TV_288x392px.jpg); }
 
   #offers-section div[class^=phone-] {
-    margin-bottom: 10px;
-    padding: 0 10px;
-    }
-
-  .footer-note {
-    margin: -14px 0 20px;
-    }
+    margin-bottom: 35px;
+    padding: 0 10px; }
 
   .content-container .content-title, .content-container .content-subtitle {
     font-size: 26px;

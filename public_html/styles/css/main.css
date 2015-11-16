@@ -2718,18 +2718,25 @@ span[class^=icon-] {
 .bottom-menu-header-links .main-menu li {
   text-align: center; }
   .bottom-menu-header-links .main-menu li .active-border {
-    display: none;
+    display: block;
     position: absolute;
     top: -11px;
     height: 69px;
     width: 100%;
     background-color: #fff;
-    border-bottom: 3px solid #004994; }
+    border-bottom: 0px solid #004994;
+    -moz-transition: border-width 0.14s linear;
+    -o-transition: border-width 0.14s linear;
+    -webkit-transition: border-width 0.14s linear;
+    transition: border-width 0.14s linear; }
+  .bottom-menu-header-links .main-menu li:hover .active-border {
+    border-bottom-width: 4px; }
   .bottom-menu-header-links .main-menu li.active {
     font-weight: 600;
     color: #676767; }
     .bottom-menu-header-links .main-menu li.active .active-border {
-      display: block; }
+      display: block;
+      border-bottom-width: 4px; }
 
 .sub-menu {
   font-size: 15px;

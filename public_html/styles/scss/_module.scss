@@ -465,19 +465,26 @@ span[class^=icon-]
     .main-menu li{
         text-align: center;
         .active-border{
-            display: none;
+            display: block;
             position: absolute;
             top: -11px;
             height: 69px;
             width: 100%;
             background-color: $white;
-            border-bottom: 3px solid $blue;
+            border-bottom: 0px solid $blue;
+            @include transition(border-width 0.14s linear);
+        }
+        &:hover{
+            .active-border{
+                border-bottom-width: 4px;
+            }
         }
         &.active{
             font-weight: 600;
             color: $footer-grey;
             .active-border{
                 display: block;
+                border-bottom-width: 4px;
             }
         }
     }

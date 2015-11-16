@@ -777,6 +777,9 @@
     .contact-form-mess{
         padding-left: 30px;
     }
+    .footer-bottom-links{
+        @include display-flex-spread;
+    }
 }
 
 

@@ -232,28 +232,28 @@ function checkDispo(homeId) {
                 }
                 $('.k24, .k30, .k100, .k200').next().remove();
                 if (ab[0] == "") {
-                    $(nonDispoTemplate).fadeIn(500).css("display","inline-block").prependTo('.k24');
+                    $(nonDispoTemplate).fadeIn(500, function(){$(this).css("display","inline-block").css("opacity","1");}).prependTo('.k24');
                 } else {
                     $('.k24').find('.not-dispo').remove();
-                    $(buttonDispoTempate).fadeIn(500).css("display","inline-block").insertAfter($('.k24'));
+                    $(buttonDispoTempate).fadeIn(500, function(){$(this).css("display","inline-block").css("opacity","1");}).insertAfter($('.k24'));
                 }
                 if (ab[1] == "") {
-                    $(nonDispoTemplate).fadeIn(500).css("display","inline-block").prependTo('.k30');
+                    $(nonDispoTemplate).fadeIn(500, function(){$(this).css("display","inline-block").css("opacity","1");}).prependTo('.k30');
                 } else {
                     $('.k30').find('.not-dispo').remove();
-                    $(buttonDispoTempate).fadeIn(500).css("display","inline-block").insertAfter($('.k30'));
+                    $(buttonDispoTempate).fadeIn(500, function(){$(this).css("display","inline-block").css("opacity","1");}).insertAfter($('.k30'));
                 }
                 if (ab[2] == "") {
-                    $(nonDispoTemplate).fadeIn(500).css("display","inline-block").prependTo('.k100');
+                    $(nonDispoTemplate).fadeIn(500, function(){$(this).css("display","inline-block").css("opacity","1");}).prependTo('.k100');
                 } else {
                     $('.k100').find('.not-dispo').remove();
-                    $(buttonDispoTempate).fadeIn(500).css("display","inline-block").insertAfter($('.k100'));
+                    $(buttonDispoTempate).fadeIn(500, function(){$(this).css("display","inline-block").css("opacity","1");}).insertAfter($('.k100'));
                 }
                 if (ab[3] == "") {
-                    $(nonDispoTemplate).fadeIn(500).css("display","inline-block").prependTo('.k200');
+                    $(nonDispoTemplate).fadeIn(500, function(){$(this).css("display","inline-block").css("opacity","1");}).prependTo('.k200');
                 } else {
                     $('.k200').find('.not-dispo').remove();
-                   $(buttonDispoTempate).fadeIn(500).css("display","inline-block").insertAfter($('.k200'));
+                   $(buttonDispoTempate).fadeIn(500, function(){$(this).css("display","inline-block").css("opacity","1");}).insertAfter($('.k200'));
                 }
                 if (ab[4] == "") {
                 }
@@ -264,17 +264,6 @@ function checkDispo(homeId) {
                 if($('.main-gallery').length){
                     $('.main-gallery').show().flickity('resize');
                 }
-                //$("#adressLabel").html($("select[name=numero] option:selected").text() + "," + $("select[name=rue] option:selected").text() + "," + $("input[name=zipcode]").val() + " " + $("select[name=ville] option:selected").text());
-                //$(".btnVerif").fadeIn();
-                /*if ($('#offers-section')) {
-                    if ($('#test-offres').length != 1) {
-                        if (viewport().width > 1055) {
-                            $('#offers-section').before(checkDispoTemplate);
-                        } else {
-                            $('#offers-section').after(checkDispoTemplate);
-                        }
-                    }
-                }*/
             }
         });
     }

@@ -90,6 +90,16 @@
             }
         }
     }
+    #services .service#dispo{
+        position: relative;
+        margin: 0;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        height: 100%;
+        .infos{
+            position: relative;
+        }
+    }
 }
 @include media(tab){
     .container-wrapper{
@@ -811,6 +821,17 @@
     }
     .equipement-item-blue, .equipement-item-orange{
         height: 350px;
+    }
+    .service#dispo{
+        h3{
+            margin: 15px -11px 10px !important;
+        }
+        .input-white {
+            height: 40px;
+        }
+        .input-white.select{
+            margin: 5px 0;
+        }
     }
 }
 

@@ -2124,10 +2124,11 @@ header {
       bottom: 0; }
 
 #dispo .input-white {
-  width: 75%;
+  width: 100%;
   height: 45px; }
 #dispo .btn-orange, #dispo .input-group .custom-file-input::before, .input-group #dispo .custom-file-input::before {
   position: relative;
+  width: 100%;
   margin-top: 10px; }
 
 .section-padding {
@@ -3821,7 +3822,8 @@ span[class^=icon-] {
   .service .infos h3 {
     font-size: 20px;
     font-weight: 400;
-    margin: 15px -17px 15px;
+    margin: 15px 0px 15px;
+    line-height: 20px;
     text-align: center;
     text-transform: uppercase; }
   .service .infos .text {
@@ -4587,7 +4589,16 @@ h2.contact-title {
     margin-bottom: 10px; }
 
   .hotcity-link .table-details td {
-    font-size: 16px; } }
+    font-size: 16px; }
+
+  #services .service#dispo {
+    position: relative;
+    margin: 0;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    height: 100%; }
+    #services .service#dispo .infos {
+      position: relative; } }
 @media screen and (min-width: 672px) {
   .container-wrapper {
     width: 640px; }
@@ -5253,7 +5264,14 @@ h2.contact-title {
     margin: 7px 0; }
 
   .equipement-item-blue, .equipement-item-orange {
-    height: 350px; } }
+    height: 350px; }
+
+  .service#dispo h3 {
+    margin: 15px -11px 10px !important; }
+  .service#dispo .input-white {
+    height: 40px; }
+  .service#dispo .input-white.select {
+    margin: 5px 0; } }
 @media screen and (min-width: 1302px) {
   .container-wrapper {
     width: 1280px; }

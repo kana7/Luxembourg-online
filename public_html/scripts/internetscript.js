@@ -282,7 +282,7 @@ $(function () {
             setTimeout(function () {
                 $("input[name=zipcode]").val(_cp);
                 $(".verifyCp").click();
-            }, 1000);
+            }, 500);
         } else {
             $("input[name=zipcode]").val("");
         }

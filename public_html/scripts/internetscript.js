@@ -232,28 +232,28 @@ function checkDispo(homeId) {
                 }
                 $('.k24, .k30, .k100, .k200').next().remove();
                 if (ab[0] == "") {
-                    $(nonDispoTemplate).fadeIn(500, function(){$(this).css("display","inline-block").css("opacity","1");}).prependTo('.k24');
+                    $(nonDispoTemplate).prependTo('.k24').css('visibility', 'visible').animate({opacity: 1.0}, 500);
                 } else {
                     $('.k24').find('.not-dispo').remove();
-                    $(buttonDispoTempate).fadeIn(500, function(){$(this).css("display","inline-block").css("opacity","1");}).insertAfter($('.k24'));
+                    $(buttonDispoTempate).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                 }
                 if (ab[1] == "") {
-                    $(nonDispoTemplate).fadeIn(500, function(){$(this).css("display","inline-block").css("opacity","1");}).prependTo('.k30');
+                    $(nonDispoTemplate).prependTo('.k30').css('visibility', 'visible').animate({opacity: 1.0}, 500);
                 } else {
                     $('.k30').find('.not-dispo').remove();
-                    $(buttonDispoTempate).fadeIn(500, function(){$(this).css("display","inline-block").css("opacity","1");}).insertAfter($('.k30'));
+                    $(buttonDispoTempate).insertAfter($('.k30')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                 }
                 if (ab[2] == "") {
-                    $(nonDispoTemplate).fadeIn(500, function(){$(this).css("display","inline-block").css("opacity","1");}).prependTo('.k100');
+                    $(nonDispoTemplate).prependTo('.k100').css('visibility', 'visible').animate({opacity: 1.0}, 500);
                 } else {
                     $('.k100').find('.not-dispo').remove();
-                    $(buttonDispoTempate).fadeIn(500, function(){$(this).css("display","inline-block").css("opacity","1");}).insertAfter($('.k100'));
+                    $(buttonDispoTempate).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                 }
                 if (ab[3] == "") {
-                    $(nonDispoTemplate).fadeIn(500, function(){$(this).css("display","inline-block").css("opacity","1");}).prependTo('.k200');
+                    $(nonDispoTemplate).prependTo('.k200').css('visibility', 'visible').animate({opacity: 1.0}, 500);
                 } else {
                     $('.k200').find('.not-dispo').remove();
-                   $(buttonDispoTempate).fadeIn(500, function(){$(this).css("display","inline-block").css("opacity","1");}).insertAfter($('.k200'));
+                   $(buttonDispoTempate).insertAfter($('.k200')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                 }
                 if (ab[4] == "") {
                 }

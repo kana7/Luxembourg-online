@@ -625,6 +625,9 @@ span[class^=icon-]
 }
 
 .btn-blue.btn-subscription, .btn-orange.btn-subscription{
+    display: inline-block;
+    visibility: hidden;
+    opacity: 0;
     @include box-shadow(none);
     margin: 0;
     padding: 13px 50px;
@@ -1130,6 +1133,8 @@ span[class^=icon-]
     position: relative;
     .not-dispo{
         display: block;
+        visibility: hidden;
+        opacity: 0;
         position: absolute;
         z-index: 2;
         top: 0;

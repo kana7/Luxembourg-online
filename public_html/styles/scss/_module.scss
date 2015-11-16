@@ -602,18 +602,11 @@ span[class^=icon-]
 .btn-orange
 {
     color: $white;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e75e0a+0,d8520a+100 */
-    background: #e75e0a; /* Old browsers */
-    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U3NWUwYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkODUyMGEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-    background:    -moz-linear-gradient(top,  #e75e0a 0%, #d8520a 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e75e0a), color-stop(100%,#d8520a)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #e75e0a 0%,#d8520a 100%); /* Chrome10+,Safari5.1+ */
-    background:      -o-linear-gradient(top,  #e75e0a 0%,#d8520a 100%); /* Opera 11.10+ */
-    background:     -ms-linear-gradient(top,  #e75e0a 0%,#d8520a 100%); /* IE10+ */
-    background:         linear-gradient(to bottom,  #e75e0a 0%,#d8520a 100%); /* W3C */
+    background-color: $orange;
     @include box-shadow(0px 2px 4px 0 lighten($black, 15%));
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e75e0a', endColorstr='#d8520a',GradientType=0 ); /* IE6-8 */
+    &:hover{
+        background-color: lighten($orange, 5%);
+    }
 }
 
 .btn-blue.btn-subscription, .btn-orange.btn-subscription{
@@ -1119,39 +1112,34 @@ span[class^=icon-]
 .k24, .k30, .k100, .k200{
     position: relative;
     .not-dispo{
-        display: none;
+        display: block;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+    .not-dispo-info{
         position: absolute;
         width: 100%;
         height: 100px;
-        @include vertical-align-middle(absolute);
+        @include vertical-align-middle();
         left: 0;
         right: 0;
         padding: 8px 30px;
         background-color: $blue;
         color: $white;
+        z-index: 3;
         text-align: center;
         font-size: 21px;
         line-height: 28px;
         text-transform: uppercase;
-        z-index: 25;
-    }
-    &.is-not{
-        .not-dispo{
-            display: block;
-        }
-        &:after{
-            content: " ";
-            display: block;
-            position: absolute;
-            z-index: 2;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255,255,255,0.60);
-        }
+        z-index: 3;
+
     }
 }
 
@@ -2111,7 +2099,7 @@ footer
     visibility: hidden;
     opacity:0;
     @include transition(opacity 0.3s linear);
-    
+
     .pannel-close{
         display: block;
         position: absolute;
@@ -2259,7 +2247,7 @@ footer
     }
 }
 .answer {
-    padding: 10px;
+    padding: 20px 15px;
     font-size: 0.9em;
     background-color: #e7e9ec;
     margin: 0;

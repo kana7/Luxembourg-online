@@ -28,7 +28,8 @@ function natSort(as, bs) {
     }
     return a.length - b.length;
 }
-var nonDispoTemplate = '<div class="not-dispo">Offre <br />indisponible <br />à votre adresse</div>';
+var nonDispoTemplate = '<div class="not-dispo"><div class="not-dispo-info">Offre <br />indisponible <br />à votre adresse</div></div>';
+var buttonDispoTempate ='<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_FR.pdf" target="_blank">Abonnez-vous</a>';
 
 var checkDispoTemplate = '<section id="test-offres" class="clearfix">' +
         '<div class="container-wrapper">' +
@@ -231,36 +232,28 @@ function checkDispo(homeId) {
                 }
                 $('.k24, .k30, .k100, .k200').next().remove();
                 if (ab[0] == "") {
-                    $('.k24').addClass('is-not');
-                    $('.k24').prepend(nonDispoTemplate);
+                    $(nonDispoTemplate).fadeIn(500).css("display","inline-block").prependTo('.k24');
                 } else {
-                    $('.k24').removeClass('is-not');
                     $('.k24').find('.not-dispo').remove();
-                    $('.k24').after('<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_FR.pdf" target="_blank">Abonnez-vous</a>');
+                    $(buttonDispoTempate).fadeIn(500).css("display","inline-block").insertAfter($('.k24'));
                 }
                 if (ab[1] == "") {
-                    $('.k30').addClass('is-not');
-                    $('.k30').prepend(nonDispoTemplate);
+                    $(nonDispoTemplate).fadeIn(500).css("display","inline-block").prependTo('.k30');
                 } else {
-                    $('.k30').removeClass('is-not');
                     $('.k30').find('.not-dispo').remove();
-                    $('.k30').after('<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_FR.pdf" target="_blank">Abonnez-vous</a>');
+                    $(buttonDispoTempate).fadeIn(500).css("display","inline-block").insertAfter($('.k30'));
                 }
                 if (ab[2] == "") {
-                    $('.k100').addClass('is-not');
-                    $('.k100').prepend(nonDispoTemplate);
+                    $(nonDispoTemplate).fadeIn(500).css("display","inline-block").prependTo('.k100');
                 } else {
-                    $('.k100').removeClass('is-not');
                     $('.k100').find('.not-dispo').remove();
-                    $('.k100').after('<a class="btn-orange btn-subscription" href="../documents/LOLFIBERDSL_FR.pdf" target="_blank">Abonnez-vous</a>');
+                    $(buttonDispoTempate).fadeIn(500).css("display","inline-block").insertAfter($('.k100'));
                 }
                 if (ab[3] == "") {
-                    $('.k200').addClass('is-not');
-                    $('.k200').prepend(nonDispoTemplate);
+                    $(nonDispoTemplate).fadeIn(500).css("display","inline-block").prependTo('.k200');
                 } else {
-                    $('.k200').removeClass('is-not');
                     $('.k200').find('.not-dispo').remove();
-                    $('.k200').after('<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_FR.pdf" target="_blank">Abonnez-vous</a>');
+                   $(buttonDispoTempate).fadeIn(500).css("display","inline-block").insertAfter($('.k200'));
                 }
                 if (ab[4] == "") {
                 }

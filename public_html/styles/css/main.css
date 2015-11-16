@@ -2840,30 +2840,14 @@ span[class^=icon-] {
 
 .btn-orange, .input-group .custom-file-input::before {
   color: #fff;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e75e0a+0,d8520a+100 */
-  background: #e75e0a;
-  /* Old browsers */
-  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U3NWUwYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkODUyMGEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top, #e75e0a 0%, #d8520a 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e75e0a), color-stop(100%, #d8520a));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #e75e0a 0%, #d8520a 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #e75e0a 0%, #d8520a 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #e75e0a 0%, #d8520a 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, #e75e0a 0%, #d8520a 100%);
-  /* W3C */
+  background-color: #e75e0a;
   -webkit-box-shadow: 0px 2px 4px 0 #262626;
   -moz-box-shadow: 0px 2px 4px 0 #262626;
   box-shadow: 0px 2px 4px 0 #262626;
   -o-box-shadow: 0px 2px 4px 0 #262626;
-  -ms-box-shadow: 0px 2px 4px 0 #262626;
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e75e0a', endColorstr='#d8520a',GradientType=0 );
-  /* IE6-8 */ }
+  -ms-box-shadow: 0px 2px 4px 0 #262626; }
+  .btn-orange:hover, .input-group .custom-file-input:hover::before {
+    background-color: #f56a16; }
 
 .btn-blue.btn-subscription, .btn-orange.btn-subscription, .input-group .btn-subscription.custom-file-input::before {
   -webkit-box-shadow: none;
@@ -3437,30 +3421,6 @@ span[class^=icon-] {
 .k24, .k30, .k100, .k200 {
   position: relative; }
   .k24 .not-dispo, .k30 .not-dispo, .k100 .not-dispo, .k200 .not-dispo {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    left: 0;
-    right: 0;
-    padding: 8px 30px;
-    background-color: #004994;
-    color: #fff;
-    text-align: center;
-    font-size: 21px;
-    line-height: 28px;
-    text-transform: uppercase;
-    z-index: 25; }
-  .k24.is-not .not-dispo, .k30.is-not .not-dispo, .k100.is-not .not-dispo, .k200.is-not .not-dispo {
-    display: block; }
-  .k24.is-not:after, .k30.is-not:after, .k100.is-not:after, .k200.is-not:after {
-    content: " ";
     display: block;
     position: absolute;
     z-index: 2;
@@ -3471,6 +3431,27 @@ span[class^=icon-] {
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.6); }
+  .k24 .not-dispo-info, .k30 .not-dispo-info, .k100 .not-dispo-info, .k200 .not-dispo-info {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    padding: 8px 30px;
+    background-color: #004994;
+    color: #fff;
+    z-index: 3;
+    text-align: center;
+    font-size: 21px;
+    line-height: 28px;
+    text-transform: uppercase;
+    z-index: 3; }
 
 #mobileType {
   background-color: #fff;
@@ -4375,7 +4356,7 @@ footer {
       font-weight: 600; }
 
 .answer {
-  padding: 10px;
+  padding: 20px 15px;
   font-size: 0.9em;
   background-color: #e7e9ec;
   margin: 0; }

@@ -1850,7 +1850,7 @@ header {
 
 .propos-title {
   position: relative;
-  padding: 50px 0; }
+  padding: 0; }
   .propos-title span {
     font-weight: 800; }
   .propos-title p {
@@ -1909,7 +1909,7 @@ header {
     margin: 0; }
 
 .section-propos {
-  /*box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.42);*/ }
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); }
   .section-propos p {
     color: #004994;
     text-align: justify;
@@ -1926,7 +1926,7 @@ header {
   .history-banner h1 {
     text-shadow: 3px 5px 7px rgba(38, 38, 38, 0.5);
     color: white;
-    font-size: 57px;
+    font-size: 40px;
     text-transform: uppercase;
     font-weight: 800;
     padding: 70px 0;
@@ -4522,6 +4522,77 @@ h2.contact-title {
 .dropdown > [data-trigger] {
   cursor: pointer; }
 
+#history-extended {
+  height: 220px; }
+
+.history {
+  position: relative;
+  height: 200px; }
+  .history .container-wrapper {
+    position: relative; }
+  .history .row {
+    height: 100%; }
+  .history .round-center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  .history .rond {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #004494;
+    box-shadow: inset 0px -2px 15px rgba(0, 0, 0, 0.1), inset 0px 2px 15px rgba(0, 0, 0, 0.1), inset 2px 0px 15px rgba(0, 0, 0, 0.1), inset -2px 0px 15px rgba(0, 0, 0, 0.1); }
+    .history .rond p {
+      margin: 0;
+      text-align: center;
+      color: white;
+      font-weight: 800;
+      font-size: 19px;
+      top: 50%;
+      position: relative;
+      transform: translateY(-50%); }
+  .history .text {
+    width: 50%;
+    position: relative;
+    top: 50%; }
+    .history .text p {
+      font-size: 16px;
+      margin: 0;
+      line-height: 20px; }
+  .history .history-text {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  .history .right-block {
+    float: right;
+    width: 70%; }
+  .history .left-block {
+    float: right;
+    width: 70%; }
+  .history .history-element .icon-right {
+    padding-left: 60px; }
+  .history .history-element .icon-right-arrow {
+    font-size: 16px;
+    color: #004494;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+  .history .history-element .icon-left {
+    padding-left: 60px; }
+  .history .history-element .line-grey {
+    width: 3px;
+    height: 100%;
+    background-color: #B0B1B2;
+    margin: 0 auto;
+    left: 32px;
+    position: absolute; }
+
 @media screen and (max-width: 1301px) {
   .header-icon {
     display: none !important; }
@@ -4783,36 +4854,99 @@ h2.contact-title {
 
   #anniv {
     background-image: url("../../images/Divers/A_propos/20ans_1056x162px.png"); }
-    #anniv .align-middle {
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%); }
 
   #fibre {
     background-image: url("../../images/Divers/A_propos/slider_1302x330px.jpg"); }
-    #fibre .align-middle {
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%); }
 
   #valeurs {
     background-image: url("../../images/Divers/A_propos/nosvaleurs_1056x300px.jpg"); }
-    #valeurs .align-middle {
+
+  #slider-magazine img {
+    height: 550px; }
+
+  #history-extended {
+    height: 220px; }
+
+  .history {
+    position: relative;
+    height: 200px; }
+    .history .container-wrapper {
+      position: relative; }
+    .history .row {
+      height: 100%; }
+    .history .rond {
+      z-index: 2;
+      margin: 0 auto;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #004494;
+      box-shadow: inset 0px -2px 15px rgba(0, 0, 0, 0.1), inset 0px 2px 15px rgba(0, 0, 0, 0.1), inset 2px 0px 15px rgba(0, 0, 0, 0.1), inset -2px 0px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+      left: 0;
+      right: 0; }
+      .history .rond p {
+        margin: 0 auto;
+        text-align: center;
+        color: white;
+        font-weight: 800;
+        font-size: 19px;
+        top: 50%;
+        position: absolute;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0; }
+    .history .text {
+      width: 50%; }
+      .history .text p {
+        font-size: 16px;
+        margin: 0;
+        line-height: 20px; }
+    .history .history-text {
       position: relative;
       top: 50%;
       transform: translateY(-50%);
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%); }
-
-  #slider-magazine img {
-    height: 550px; } }
+    .history .history-text-exeption {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      float: right;
+      margin-right: 15px; }
+    .history .right-block {
+      float: right;
+      padding: 0 0 0 70px; }
+    .history .left-block {
+      padding: 0 55px 0 0;
+      float: left; }
+      .history .left-block .history-text {
+        float: right;
+        margin-right: 15px; }
+    .history .history-element .icon-right {
+      text-align: center;
+      padding-left: 80px; }
+    .history .history-element .icon-right-arrow {
+      font-size: 16px;
+      color: #004494;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); }
+    .history .history-element .icon-left {
+      text-align: center;
+      padding-right: 170px; }
+    .history .history-element .line-grey {
+      width: 3px;
+      height: 100%;
+      background-color: #B0B1B2;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      position: absolute; } }
 @media screen and (min-width: 1056px) {
   .header-section-height {
     height: 350px !important; }
@@ -5174,23 +5308,47 @@ h2.contact-title {
     .hotcity-link .table-details td {
       font-size: 16px; }
 
+  .history-banner h1 {
+    font-size: 60px; }
+
   #anniv {
     background-image: url("../../images/Divers/A_propos/20ans_1920x200px.png"); }
     #anniv h1 {
       font-size: 80px;
       margin: 0; }
+    #anniv .align-middle {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
 
   #fibre {
     background-image: url("../../images/Divers/A_propos/notre_reseau_1920x480px.jpg"); }
     #fibre h1 {
       font-size: 60px;
       margin: 0; }
+    #fibre .align-middle {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
 
   #valeurs {
     height: 360px;
     background-image: url("../../images/Divers/A_propos/nosvaleurs_1920x360px.jpg"); }
     #valeurs h1 {
       font-size: 60px; }
+    #valeurs .align-middle {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
 
   .section-propos {
     height: 200px !important; }
@@ -5240,7 +5398,11 @@ h2.contact-title {
     align-content: flex-start;
     -webkit-align-items: center;
     -ms-flex-align: center;
-    align-items: center; } }
+    align-items: center; }
+
+  .propos-title {
+    position: relative;
+    padding: 50px 0; } }
 @media screen and (min-width: 1056px) and (max-width: 1302px) {
   #offers-section div[class^=phone-] {
     padding: 0 5px; }

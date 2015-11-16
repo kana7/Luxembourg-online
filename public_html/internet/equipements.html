@@ -1,13 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <title>Internet : Equipements – Luxembourg Online</title>
-        <meta name="description" content="Des équipements de qualité pour votre Internet : bénéficiez de la performance de nos modems wifi qui vous garantissent une connexion ultra haut débit." />
+        <title>Luxembourg Online : Internet - Accueil</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <link rel="shortcut icon" href="/favicon.ico">
 
+        <link rel="stylesheet" href="../styles/css/lightbox.css" />
         <link rel="stylesheet" href="../styles/css/vendor/flickity.min.css">
         <link rel="stylesheet" href="../styles/css/main.css">
 
@@ -22,19 +24,17 @@
                 <h2>Espace Client</h2>
                 <ul class="client-menu">
                     <li class="active" data-id="mail">Email</li>
-                    <li>|</li>
                     <li data-id="account">Mon compte</li>
-                    <li>|</li>
                     <li data-id="homepage">Homepage</li>
                 </ul>
                 <div class="pannel-forms">
                     <form id="mail" class="clearfix is-visible" name="ServiceLogin1" method="POST" action="https://email.internet.lu/Scripts/sql.exe?_selection=10">
                         <input type="hidden" name="Sql" value="Default.phs">  
                         <input type="hidden" name="SqlDB" value="OMS2">  
-                        <div class="phone-6 input-left">
+                        <div class="phone-6">
                             <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
                         </div>
-                        <div class="phone-6 input-right">
+                        <div class="phone-6">
                             <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
                         </div>
                         <button class="btn-blue" type="submit">Se connecter</button>
@@ -42,10 +42,10 @@
                     <form id="account" class="clearfix" name="LoginPhone" method="POST" action="http://shop.internet.lu/Scripts/sql.exe?LoginScript=LoginClient.phs&NextScript=DisplayAccount.phs&_Login=">
                         <input type="hidden" name="Sql" value="LoginClient_Login.phs">  
                         <input type="hidden" name="SqlDB" value="LOLShop">  
-                        <div class="phone-6 input-left">
+                        <div class="phone-6">
                             <input type="text" name="_Username" placeholder="Nom d'utilisateur"/>
                         </div>
-                        <div class="phone-6 input-right">
+                        <div class="phone-6">
                             <input class="pull-right" type="password" name="_Password" placeholder="Mot de passe"/>
                         </div>
                         <button class="btn-blue" type="submit">Se connecter</button>
@@ -53,10 +53,10 @@
                     <form id="homepage" class="clearfix" name="ServiceLogin3" method="POST" action="http://sites.internet.lu/Scripts/sql.exe">
                         <input type="hidden" name="Sql" value="default.phs">  
                         <input type="hidden" name="SqlDB" value="OHPS">  
-                        <div class="phone-6 input-left">
+                        <div class="phone-6">
                             <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
                         </div>
-                        <div class="phone-6 input-right">
+                        <div class="phone-6">
                             <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
                         </div>
                         <button class="btn-blue" type="submit">Se connecter</button>
@@ -87,7 +87,7 @@
         </div>
         <nav class="mobile-side-menu">
             <ul class="menu">
-                <li class="menu-item link"><a href="../index.html">Accueil</a></li>
+                <li class="menu-item"><a href="../index.html">Accueil</a></li>
                 <li class="menu-item" data-id='internet'>Internet<span class="icon-right-arrow"></span></li>
                 <li class="menu-item" data-id='telephone'>Téléphonie <span class="icon-right-arrow"></span></li>
                 <li class="menu-item" data-id='tv'>TV <span class="icon-right-arrow"></span></li>
@@ -95,20 +95,20 @@
                 <li class="menu-item" data-id='promo'>Promos <span class="icon-right-arrow"></span></li>
                 <li class="sous-nav">
                     <ul class="menu">
-                        <li class="menu-item link"><a href="../divers/assistance.html">Assistance</a></li>
-                        <li class="menu-item link"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOL CLOUD</a></li>
-                        <li class="menu-item link"><a href="../divers/magazine.html">Magazine</a></li>
-                        <li class="menu-item link"><a href="../divers/propos.html">À propos</a></li>
-                        <li class="menu-item link"><a href="../divers/contact.html">Contact</a></li>
-                        <li class="menu-item link"><a href="../divers/emploi.html">Offres d'emploi</a></li>
-                        <li class="menu-item link"><a href="../divers/plan.html">Plan du site</a></li>
+                        <li class="menu-item"><a href="../divers/assistance.html">Assistance</a></li>
+                        <li class="menu-item"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOL CLOUD</a></li>
+                        <li class="menu-item"><a href="../divers/magazine.html">Magazine</a></li>
+                        <li class="menu-item"><a href="../divers/propos.html">À propos</a></li>
+                        <li class="menu-item"><a href="../divers/contact.html">Contact</a></li>
+                        <li class="menu-item"><a href="../divers/emploi.html">Offres d'emploi</a></li>
+                        <li class="menu-item"><a href="../divers/plan.html">Plan du site</a></li>
                     </ul>
                 </li>
             </ul>
             <div class="menu-links-wrapper">
                 <ul class="menu-links" id="internet">
                     <li class="menu-item back"><span class="icon-right-arrow"></span>Internet</li>
-                    <li class="menu-item"><a href="../internet/accueil.html">Accueil Internet</a></li>
+                    <li class="menu-item"><a href="../internet/accueil.html">Accueil</a></li>
                     <li class="menu-item"><a href="../internet/offres.html">Nos offres</a></li>
                     <li class="menu-item"><a href="../internet/equipements.html">Nos équipements</a></li>
                     <li class="menu-item"><a href="../internet/abonnement.html">Abonnez-vous</a></li>
@@ -117,7 +117,7 @@
             <div class="menu-links-wrapper">
                 <ul class="menu-links" id="telephone">
                     <li class="menu-item back"><span class="icon-right-arrow"></span>Téléphonie</li>
-                    <li class="menu-item"><a href="../telephonie/accueil.html">Accueil Téléphonie</a></li>
+                    <li class="menu-item"><a href="../telephonie/accueil.html">Accueil</a></li>
                     <li class="menu-item"><a href="../telephonie/tarifs.html">Nos tarifs</a></li>
                     <li class="menu-item"><a href="../telephonie/equipements.html">Nos téléphones</a></li>
                     <li class="menu-item"><a href="../telephonie/abonnement.html">Abonnez-vous</a></li>
@@ -126,7 +126,7 @@
             <div class="menu-links-wrapper">
                 <ul class="menu-links" id="tv">
                     <li class="menu-item back"><span class="icon-right-arrow"></span>TV</li>
-                    <li class="menu-item"><a href="../tv/accueil.html">Accueil TV</a></li>
+                    <li class="menu-item"><a href="../tv/accueil.html">Accueil</a></li>
                     <li class="menu-item"><a href="../tv/offres.html">Notre offre TV</a></li>
                     <li class="menu-item"><a href="../tv/equipements.html">Nos équipements</a></li>
                     <li class="menu-item"><a href="../tv/abonnement.html">Abonnez-vous</a></li>
@@ -135,7 +135,7 @@
             <div class="menu-links-wrapper">
                 <ul class="menu-links" id="mobile">
                     <li class="menu-item back"><span class="icon-right-arrow"></span>Mobile</li>
-                    <li class="menu-item"><a href="../mobile/accueil.html">Accueil Mobile</a></li>
+                    <li class="menu-item"><a href="../mobile/accueil.html">Accueil</a></li>
                     <li class="menu-item"><a href="../mobile/abonnements.html">Nos abonnements</a></li>
                     <li class="menu-item"><a href="../mobile/equipements.html">Nos téléphones</a></li>
                     <li class="menu-item"><a href="../mobile/abonnement.html">Abonnez-vous</a></li>
@@ -144,7 +144,7 @@
             <div class="menu-links-wrapper">
                 <ul class="menu-links" id="promo">
                     <li class="menu-item back"><span class="icon-right-arrow"></span>Promos</li>
-                    <li class="menu-item"><a href="../promos/accueil.html">Accueil Promos</a></li>
+                    <li class="menu-item"><a href="../promos/accueil.html">Accueil</a></li>
                     <li class="menu-item"><a href="../promos/fibre.html">Offre spéciale fibre</a></li>
                     <li class="menu-item"><a href="../promos/internetTV.html">offre spéciale TV</a></li>
                 </ul>
@@ -278,12 +278,17 @@
                             <div id="modemMobile" class="main-gallery equipementCat">
                                 <div class="gallery-cell">
                                     <div class="equipement-item-blue">
-                                        <ul class="phone-12">
-                                            <li class="main-image"><img src="../images/equipment/modem/3272/3272.png" alt="FRITZ!BOX 3272" /></li>
+                                        <ul class="phone-12 popup-gallery">
+                                            <li class="main-image">
+                                                <a href="../images/equipment/modem/3272/3272_big1.png" title="FRITZ!BOX 3272 - front">
+                                                    <img src="../images/equipment/modem/3272/3272.png" alt="FRITZ!BOX 3272" />
+                                                </a>
+                                            </li>
                                             <li class="thumbnails">
                                                 <div class="thumbnails-wrapper clearfix">
-                                                    <div class="thumb"><img src="../images/equipment/modem/3272/3272_small1.png" alt="FRITZ!BOX 3272 - front" /></div>
-                                                    <div class="thumb"><img src="../images/equipment/modem/3272/3272_small2.png" alt="FRITZ!BOX 3272 - back" /></div>
+                                                    <a href="../images/equipment/modem/3272/3272_back2.png" title="FRITZ!BOX 3272 - back">
+                                                        <div class="thumb"><img src="../images/equipment/modem/3272/3272_small2.png" alt="FRITZ!BOX 3272 - back" /></div>
+                                                    </a>                                                    
                                                 </div>
                                             </li>
                                         </ul>
@@ -312,7 +317,7 @@
                                                         <div>€</div>
                                                         6<span> /mois</span>
                                                     </div>
-                                                    <a class="link" href="../documents/datasheets/3272.pdf">Voir plus de détails</a>
+                                                    <a class="link" href="../documents/datasheets/3272.pdf" target="blank_">Voir plus de détails</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -320,12 +325,20 @@
                                 </div>
                                 <div class="gallery-cell">
                                     <div class="equipement-item-blue">
-                                        <ul class="phone-12">
-                                            <li class="main-image"><img src="../images/equipment/modem/7360/7360.png" alt="FRITZ!BOX 7630" /></li>
+                                        <ul class="phone-12 popup-gallery">
+                                            <li class="main-image">
+                                                <a href="../images/equipment/modem/7360/7360_big1.png" title="FRITZ!BOX 7630">
+                                                    <img src="../images/equipment/modem/7360/7360.png" alt="FRITZ!BOX 7630"/>
+                                                </a>
+                                            </li>
                                             <li class="thumbnails">
                                                 <div class="thumbnails-wrapper clearfix">
-                                                    <div class="thumb"><img src="../images/equipment/modem/7360/7360_small1.png" alt="FRITZ!BOX 7630 - front" /></div>
-                                                    <div class="thumb"><img src="../images/equipment/modem/7360/7360_small2.png" alt="FRITZ!BOX 7360 - back" /></div>
+                                                    <a href="../images/equipment/modem/7360/7390_big2.png" title="FRITZ!BOX 7360 - back">
+                                                        <div class="thumb"><img src="../images/equipment/modem/7360/7390_small2.png" alt="FRITZ!BOX 7360 - back" /></div>
+                                                    </a>
+                                                    <a href="../images/equipment/modem/7360/7360_back2.png" title="FRITZ!BOX 7360 - back">
+                                                        <div class="thumb"><img src="../images/equipment/modem/7360/7360_small2.png" alt="FRITZ!BOX 7360 - back" /></div>
+                                                    </a>
                                                 </div>
                                             </li>
                                         </ul>
@@ -358,7 +371,7 @@
                                                         <div>€</div>
                                                         4<span> /mois</span>
                                                     </div>
-                                                    <a class="link" href="../documents/datasheets/7360.pdf">Voir plus de détails</a>
+                                                    <a class="link" href="../documents/datasheets/7360.pdf" target="blank_">Voir plus de détails</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -366,12 +379,20 @@
                                 </div>
                                 <div class="gallery-cell">
                                     <div class="equipement-item-blue">
-                                        <ul class="phone-12">
-                                            <li class="main-image"><img src="../images/equipment/modem/7360/7360.png" alt="FRITZ!BOX 3272" /></li>
+                                        <ul class="phone-12 popup-gallery">
+                                            <li class="main-image">
+                                                <a href="../images/equipment/modem/7390/7360_big1.png" title="FRITZ!BOX 7490">
+                                                    <img src="../images/equipment/modem/7390/7360.png" alt="FRITZ!BOX 7490"/>
+                                                </a>
+                                            </li>
                                             <li class="thumbnails">
                                                 <div class="thumbnails-wrapper clearfix">
-                                                    <div class="thumb"><img src="../images/equipment/modem/7360/7360_small1.png" alt="FRITZ!BOX 7630 - front" /></div>
-                                                    <div class="thumb"><img src="../images/equipment/modem/7360/7360_small2.png" alt="FRITZ!BOX 7630 - back" /></div>
+                                                    <a href="../images/equipment/modem/7390/7390_big2.png" title="FRITZ!BOX 7490 - front">
+                                                        <div class="thumb"><img src="../images/equipment/modem/7360/7390_small2.png" alt="FRITZ!BOX 7490 - front" /></div>
+                                                    </a>
+                                                    <a href="../images/equipment/modem/7390/7390_back2.png" title="FRITZ!BOX 7360 - back">
+                                                        <div class="thumb"><img src="../images/equipment/modem/7390/7390_small3.png" alt="FRITZ!BOX 7490 - back" /></div>
+                                                    </a>
                                                 </div>
                                             </li>
                                         </ul>
@@ -404,7 +425,7 @@
                                                         <div>€</div>
                                                         6<span> /mois</span>
                                                     </div>
-                                                    <a class="link" href="../documents/datasheets/7490.pdf">Voir plus de détails</a>
+                                                    <a class="link" href="../documents/datasheets/7490.pdf" target="blank_">Voir plus de détails</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -414,11 +435,17 @@
                             <div id="wlanMobile" class="main-gallery equipementCat is-hidden">
                                 <div class="gallery-cell">
                                     <div class="equipement-item-blue">
-                                        <ul class="phone-12">
-                                            <li class="main-image fillHeight"><img src="../images/equipment/modem/r450e/r450e_small1.png" alt="FRITZ!WLAN Repeater 450E" /></li>
+                                        <ul class="phone-12 popup-gallery">
+                                            <li class="main-image fillHeight">
+                                                <a href="../images/equipment/modem/r450e/r450e_big1.png" title="FRITZ!WLAN Repeater 450E">
+                                                    <img src="../images/equipment/modem/r450e/r450e_small1.png" alt="FRITZ!WLAN Repeater 450E" />
+                                                </a>
+                                            </li>
                                             <li class="thumbnails">
                                                 <div class="thumbnails-wrapper clearfix">
-                                                    <div class="thumb"><img src="../images/equipment/modem/r450e/r450e_small2.png" alt="FRITZ!WLAN Repeater 450E - plan" /></div>
+                                                    <a href="../images/equipment/modem/r450e/r450e_big2.png" title="FRITZ!WLAN Repeater 450E - plan">
+                                                        <div class="thumb"><img src="../images/equipment/modem/r450e/r450e_small2.png" alt="FRITZ!WLAN Repeater 450E - plan" /></div>
+                                                    </a>
                                                 </div>
                                             </li>
                                         </ul>
@@ -447,7 +474,7 @@
                                                         <div>€</div>
                                                         6<span> /mois</span>
                                                     </div>
-                                                    <a class="link" href="../documents/datasheets/r450e.pdf">Voir plus de détails</a>
+                                                    <a class="link" href="../documents/datasheets/r450e.pdf" target="blank_">Voir plus de détails</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -455,11 +482,17 @@
                                 </div>
                                 <div class="gallery-cell">
                                     <div class="equipement-item-blue">
-                                        <ul class="phone-12">
-                                            <li class="main-image fillHeight"><img src="../images/equipment/modem/r1750e/r1750e_small1.png" alt="FRITZ!WLAN Repeater 450E" /></li>
+                                        <ul class="phone-12 popup-gallery">
+                                            <li class="main-image fillHeight">
+                                                <a href="../images/equipment/modem/r1750e/r1750e_big1.png" title="FRITZ!WLAN Repeater r1750E">
+                                                    <img src="../images/equipment/modem/r1750e/r1750e_small1.png" alt="FRITZ!WLAN Repeater 1750E" />
+                                                </a>
+                                            </li>
                                             <li class="thumbnails">
                                                 <div class="thumbnails-wrapper clearfix">
-                                                    <div class="thumb"><img src="../images/equipment/modem/r1750e/r1750e_small2.png" alt="FRITZ!WLAN Repeater 450E - plan" /></div>
+                                                    <a href="../images/equipment/modem/r1750e/r1750e_big2.png" title="FRITZ!WLAN Repeater 1750E - plan">
+                                                        <div class="thumb"><img src="../images/equipment/modem/r1750e/r1750e_small2.png" alt="FRITZ!WLAN Repeater 1750E - plan" /></div>
+                                                    </a>
                                                 </div>
                                             </li>
                                         </ul>
@@ -489,7 +522,7 @@
                                                         6<span> /mois</span>
                                                     </div>
                                                 </div>
-                                                <a class="link" href="../documents/datasheets/r1750e.pdf">Voir plus de détails</a>
+                                                <a class="link" href="../documents/datasheets/r1750e.pdf" target="blank_">Voir plus de détails</a>
                                             </div>
                                         </div>
                                     </div>
@@ -498,11 +531,17 @@
                             <div id="powerMobile" class="main-gallery equipementCat is-hidden">
                                 <div class="gallery-cell">
                                     <div class="equipement-item-blue">
-                                        <ul class="phone-12">
-                                            <li class="main-image fillHeight"><img src="../images/equipment/modem/pl520eset/pl520eset_small1.png" alt="FRITZ!Powerline 520E Set" /></li>
+                                        <ul class="phone-12 popup-gallery">
+                                            <li class="main-image fillHeight">
+                                                <a href="../images/equipment/modem/pl520eset/pl520eset_big1.png" title="FRITZ!Powerline 520E Set">
+                                                    <img src="../images/equipment/modem/pl520eset/pl520eset_small1.png" alt="FRITZ!Powerline 520E Set" />
+                                                </a>
+                                            </li>
                                             <li class="thumbnails">
                                                 <div class="thumbnails-wrapper clearfix">
-                                                    <div class="thumb"><img src="../images/equipment/modem/pl520eset/pl520eset_small2.png" alt="FRITZ!Powerline 520E Set - plan" /></div>
+                                                    <a href="../images/equipment/modem/pl520eset/pl520eset_big2.png" title="FRITZ!Powerline 520E Set">
+                                                        <div class="thumb"><img src="../images/equipment/modem/pl520eset/pl520eset_small2.png" alt="FRITZ!Powerline 520E Set - plan" /></div>
+                                                    </a>
                                                 </div>
                                             </li>
                                         </ul>
@@ -527,7 +566,7 @@
                                                         <div>€</div>
                                                         6<span> /mois</span>
                                                     </div>
-                                                    <a class="link" href="../documents/datasheets/pl520e.pdf">Voir plus de détails</a>
+                                                    <a class="link" href="../documents/datasheets/pl520e.pdf" target="blank_">Voir plus de détails</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -535,11 +574,17 @@
                                 </div>
                                 <div class="gallery-cell">
                                     <div class="equipement-item-blue">
-                                        <ul class="phone-12">
-                                            <li class="main-image fillHeight"><img src="../images/equipment/modem/pl520e/pl520e_small1.png" alt="FRITZ!Powerline 520E" /></li>
+                                        <ul class="phone-12 popup-gallery">
+                                            <li class="main-image fillHeight">
+                                                <a href="../images/equipment/modem/pl520e/pl520e_big1.png" title="FRITZ!Powerline 520E">
+                                                    <img src="../images/equipment/modem/pl520e/pl520e_small1.png" alt="FRITZ!Powerline 520E" />
+                                                </a>
+                                            </li>
                                             <li class="thumbnails">
                                                 <div class="thumbnails-wrapper clearfix">
-                                                    <div class="thumb"><img src="../images/equipment/modem/pl520eset/pl520eset_small2.png" alt="FRITZ!Powerline 520E - plan" /></div>
+                                                    <a href="../images/equipment/modem/pl520e/pl520eset_big2.png" title="FRITZ!Powerline 520E">
+                                                        <div class="thumb"><img src="../images/equipment/modem/pl520eset/pl520eset_small2.png" alt="FRITZ!Powerline 520E - plan" /></div>
+                                                    </a>
                                                 </div>
                                             </li>
                                         </ul>
@@ -564,7 +609,7 @@
                                                         <div>€</div>
                                                         6<span> /mois</span>
                                                     </div>
-                                                    <a class="link" href="../documents/datasheets/pl520e.pdf">Voir plus de détails</a>
+                                                    <a class="link" href="../documents/datasheets/pl520e.pdf" target="blank_">Voir plus de détails</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -572,12 +617,20 @@
                                 </div>
                                 <div class="gallery-cell">
                                     <div class="equipement-item-blue">
-                                        <ul class="phone-12">
-                                            <li class="main-image fillHeight"><img src="../images/equipment/modem/pl546e/pl546e.png" alt="FRITZ!Powerline 546E" /></li>
+                                        <ul class="phone-12 popup-gallery">
+                                            <li class="main-image fillHeight">
+                                                <a href="../images/equipment/modem/pl546e/pl546e_big1.png" title="FRITZ!Powerline 546E">
+                                                    <img src="../images/equipment/modem/pl546e/pl546e.png" alt="FRITZ!Powerline 546E" />
+                                                </a>
+                                            </li>
                                             <li class="thumbnails">
                                                 <div class="thumbnails-wrapper clearfix">
-                                                    <div class="thumb"><img src="../images/equipment/modem/pl546e/pl546e_small2.png" alt="FRITZ!Powerline 546E - demo" /></div>
-                                                    <div class="thumb"><img src="../images/equipment/modem/pl546e/pl546e_small3.png" alt="FRITZ!Powerline 546E - plan" /></div>
+                                                    <a href="../images/equipment/modem/pl546e/pl546e_big2.png" title="FRITZ!Powerline 546E - demo">
+                                                        <div class="thumb"><img src="../images/equipment/modem/pl546e/pl546e_small2.png" alt="FRITZ!Powerline 546E - demo" /></div>
+                                                    </a>
+                                                    <a href="../images/equipment/modem/pl546e/pl546e_big3.png" title="FRITZ!Powerline 546E - plan">
+                                                        <div class="thumb"><img src="../images/equipment/modem/pl546e/pl546e_small3.png" alt="FRITZ!Powerline 546E - plan" /></div>
+                                                    </a>
                                                 </div>
                                             </li>
                                         </ul>
@@ -606,7 +659,7 @@
                                                         <div>€</div>
                                                         6<span> /mois</span>
                                                     </div>
-                                                    <a class="link" href="../documents/datasheets/pl546e.pdf">Voir plus de détails</a>
+                                                    <a class="link" href="../documents/datasheets/pl546e.pdf" target="blank_">Voir plus de détails</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -616,11 +669,17 @@
                             <div id="usbMobile" class="main-gallery equipementCat is-hidden">
                                 <div class="gallery-cell">
                                     <div class="equipement-item-blue">
-                                        <ul class="phone-12">
-                                            <li class="main-image fillHeight"><img src="../images/equipment/modem/wlansac/wlansac_small.png" alt="FRITZ!WLAN Repeater 450E" /></li>
+                                        <ul class="phone-12 popup-gallery">
+                                            <li class="main-image fillHeight">
+                                                <a href="../images/equipment/modem/wlansac/wlansac_big.png" title="">
+                                                    <img src="../images/equipment/modem/wlansac/wlansac_small.png" alt="FRITZ!WLAN Repeater 450E" />
+                                                </a>
+                                            </li>
                                             <li class="thumbnails">
                                                 <div class="thumbnails-wrapper clearfix">
-                                                    <div class="thumb"><img src="../images/equipment/modem/wlansac/wlansac_small2.png" alt="FRITZ!WLAN Repeater 450E - plan" /></div>
+                                                    <a href="../images/equipment/modem/wlansac/wlansac_big2.png" title="">
+                                                        <div class="thumb"><img src="../images/equipment/modem/wlansac/wlansac_small2.png" alt="FRITZ!WLAN Repeater 450E - plan" /></div>
+                                                    </a>
                                                 </div>
                                             </li>
                                         </ul>
@@ -645,7 +704,7 @@
                                                         <div>€</div>
                                                         6<span> /mois</span>
                                                     </div>
-                                                    <a class="link" href="../documents/datasheets/wlansac.pdf">Voir plus de détails</a>
+                                                    <a class="link" href="../documents/datasheets/wlansac.pdf" target="blank_">Voir plus de détails</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -669,12 +728,17 @@
                             <div id="modem" class="equipementCat">
 
                                 <div class="equipement-item-blue">
-                                    <ul class="phone-4 lgdesk-3 vertical-align-middle">
-                                        <li class="main-image"><img src="../images/equipment/modem/3272/3272.png" alt="FRITZ!BOX 3272" /></li>
+                                    <ul class="phone-4 lgdesk-3 vertical-align-middle popup-gallery">
+                                        <li class="main-image">
+                                            <a href="../images/equipment/modem/3272/3272_big1.png" title="FRITZ!BOX 3272 - front">
+                                                <img src="../images/equipment/modem/3272/3272.png" alt="FRITZ!BOX 3272" />
+                                            </a>
+                                        </li>
                                         <li class="thumbnails">
                                             <div class="thumbnails-wrapper clearfix">
-                                                <div class="thumb"><img src="../images/equipment/modem/3272/3272_small1.png" alt="FRITZ!BOX 3272 - front" /></div>
-                                                <div class="thumb"><img src="../images/equipment/modem/3272/3272_small2.png" alt="FRITZ!BOX 3272 - back" /></div>
+                                                <a href="../images/equipment/modem/3272/3272_back2.png" title="FRITZ!BOX 3272 - back">
+                                                    <div class="thumb"><img src="../images/equipment/modem/3272/3272_small2.png" alt="FRITZ!BOX 3272 - back" /></div>
+                                                </a>
                                             </div>
                                         </li>
                                     </ul>
@@ -702,18 +766,26 @@
                                                 <div>€</div>
                                                 6<span> /mois</span>
                                             </div>
-                                            <a class="link" href="../documents/datasheets/3272.pdf">Voir plus de détails</a>
+                                            <a class="link" href="../documents/datasheets/3272.pdf" target="blank_">Voir plus de détails</a>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="equipement-item-blue">
-                                    <ul class="phone-4 lgdesk-3 vertical-align-middle">
-                                        <li class="main-image"><img src="../images/equipment/modem/7360/7360.png" alt="FRITZ!BOX 7630" /></li>
+                                    <ul class="phone-4 lgdesk-3 vertical-align-middle popup-gallery">
+                                        <li class="main-image">
+                                            <a href="../images/equipment/modem/7360/7360_big1.png" title="FRITZ!BOX 7630">
+                                                <img src="../images/equipment/modem/7360/7360.png" alt="FRITZ!BOX 7630"/>
+                                            </a>
+                                        </li>
                                         <li class="thumbnails">
                                             <div class="thumbnails-wrapper clearfix">
-                                                <div class="thumb"><img src="../images/equipment/modem/7360/7360_small1.png" alt="FRITZ!BOX 7630 - front" /></div>
-                                                <div class="thumb"><img src="../images/equipment/modem/7360/7360_small2.png" alt="FRITZ!BOX 7360 - back" /></div>
+                                                <a href="../images/equipment/modem/7360/7390_big2.png" title="FRITZ!BOX 7360 - back">
+                                                    <div class="thumb"><img src="../images/equipment/modem/7360/7390_small2.png" alt="FRITZ!BOX 7360 - back" /></div>
+                                                </a>
+                                                <a href="../images/equipment/modem/7360/7360_back2.png" title="FRITZ!BOX 7360 - back">
+                                                    <div class="thumb"><img src="../images/equipment/modem/7360/7360_small2.png" alt="FRITZ!BOX 7360 - back" /></div>
+                                                </a>
                                             </div>
                                         </li>
                                     </ul>
@@ -745,18 +817,26 @@
                                                 <div>€</div>
                                                 4<span> /mois</span>
                                             </div>
-                                            <a class="link" href="../documents/datasheets/7360.pdf">Voir plus de détails</a>
+                                            <a class="link" href="../documents/datasheets/7360.pdf" target="blank_">Voir plus de détails</a>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="equipement-item-blue">
-                                    <ul class="phone-4 lgdesk-3 vertical-align-middle">
-                                        <li class="main-image"><img src="../images/equipment/modem/7360/7360.png" alt="FRITZ!BOX 3272" /></li>
+                                    <ul class="phone-4 lgdesk-3 vertical-align-middle popup-gallery">
+                                        <li class="main-image">
+                                            <a href="../images/equipment/modem/7390/7360_big1.png" title="FRITZ!BOX 7490">
+                                                <img src="../images/equipment/modem/7390/7360.png" alt="FRITZ!BOX 7490"/>
+                                            </a>
+                                        </li>
                                         <li class="thumbnails">
                                             <div class="thumbnails-wrapper clearfix">
-                                                <div class="thumb"><img src="../images/equipment/modem/7360/7360_small1.png" alt="FRITZ!BOX 7630 - front" /></div>
-                                                <div class="thumb"><img src="../images/equipment/modem/7360/7360_small2.png" alt="FRITZ!BOX 7630 - back" /></div>
+                                                <a href="../images/equipment/modem/7390/7390_big2.png" title="FRITZ!BOX 7490 - front">
+                                                    <div class="thumb"><img src="../images/equipment/modem/7360/7390_small2.png" alt="FRITZ!BOX 7490 - front" /></div>
+                                                </a>
+                                                <a href="../images/equipment/modem/7390/7390_back2.png" title="FRITZ!BOX 7360 - back">
+                                                    <div class="thumb"><img src="../images/equipment/modem/7390/7390_small3.png" alt="FRITZ!BOX 7490 - back" /></div>
+                                                </a>
                                             </div>
                                         </li>
                                     </ul>
@@ -788,18 +868,24 @@
                                                 <div>€</div>
                                                 6<span> /mois</span>
                                             </div>
-                                            <a class="link" href="../documents/datasheets/7490.pdf">Voir plus de détails</a>
+                                            <a class="link" href="../documents/datasheets/7490.pdf" target="blank_">Voir plus de détails</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div id="wlan" class="equipementCat is-hidden">
                                 <div class="equipement-item-blue">
-                                    <ul class="phone-4 lgdesk-3 vertical-align-middle">
-                                        <li class="main-image fillHeight"><img src="../images/equipment/modem/r450e/r450e_small1.png" alt="FRITZ!WLAN Repeater 450E" /></li>
+                                    <ul class="phone-4 lgdesk-3 vertical-align-middle popup-gallery">
+                                        <li class="main-image fillHeight">
+                                            <a href="../images/equipment/modem/r450e/r450e_big1.png" title="FRITZ!WLAN Repeater 450E">
+                                                <img src="../images/equipment/modem/r450e/r450e_small1.png" alt="FRITZ!WLAN Repeater 450E" />
+                                            </a>
+                                        </li>
                                         <li class="thumbnails">
                                             <div class="thumbnails-wrapper clearfix">
-                                                <div class="thumb"><img src="../images/equipment/modem/r450e/r450e_small2.png" alt="FRITZ!WLAN Repeater 450E - plan" /></div>
+                                                <a href="../images/equipment/modem/r450e/r450e_big2.png" title="FRITZ!WLAN Repeater 450E - plan">
+                                                    <div class="thumb"><img src="../images/equipment/modem/r450e/r450e_small2.png" alt="FRITZ!WLAN Repeater 450E - plan" /></div>
+                                                </a>
                                             </div>
                                         </li>
                                     </ul>
@@ -827,16 +913,22 @@
                                                 <div>€</div>
                                                 6<span> /mois</span>
                                             </div>
-                                            <a class="link" href="../documents/datasheets/r450e.pdf">Voir plus de détails</a>
+                                            <a class="link" href="../documents/datasheets/r450e.pdf" target="blank_">Voir plus de détails</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="equipement-item-blue">
-                                    <ul class="phone-4 lgdesk-3 vertical-align-middle">
-                                        <li class="main-image fillHeight"><img src="../images/equipment/modem/r1750e/r1750e_small1.png" alt="FRITZ!WLAN Repeater 450E" /></li>
+                                    <ul class="phone-4 lgdesk-3 vertical-align-middle popup-gallery">
+                                        <li class="main-image fillHeight">
+                                            <a href="../images/equipment/modem/r1750e/r1750e_big1.png" title="FRITZ!WLAN Repeater r1750E">
+                                                <img src="../images/equipment/modem/r1750e/r1750e_small1.png" alt="FRITZ!WLAN Repeater 1750E" />
+                                            </a>
+                                        </li>
                                         <li class="thumbnails">
                                             <div class="thumbnails-wrapper clearfix">
-                                                <div class="thumb"><img src="../images/equipment/modem/r1750e/r1750e_small2.png" alt="FRITZ!WLAN Repeater 450E - plan" /></div>
+                                                <a href="../images/equipment/modem/r1750e/r1750e_big2.png" title="FRITZ!WLAN Repeater 1750E - plan">
+                                                    <div class="thumb"><img src="../images/equipment/modem/r1750e/r1750e_small2.png" alt="FRITZ!WLAN Repeater 1750E - plan" /></div>
+                                                </a>
                                             </div>
                                         </li>
                                     </ul>
@@ -864,18 +956,24 @@
                                                 <div>€</div>
                                                 6<span> /mois</span>
                                             </div>
-                                            <a class="link" href="../documents/datasheets/r1750e.pdf">Voir plus de détails</a>
+                                            <a class="link" href="../documents/datasheets/r1750e.pdf" target="blank_">Voir plus de détails</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div id="power" class="equipementCat is-hidden">
                                 <div class="equipement-item-blue">
-                                    <ul class="phone-4 lgdesk-3 vertical-align-middle">
-                                        <li class="main-image fillHeight"><img src="../images/equipment/modem/pl520eset/pl520eset_small1.png" alt="FRITZ!Powerline 520E Set" /></li>
+                                    <ul class="phone-4 lgdesk-3 vertical-align-middle popup-gallery">
+                                        <li class="main-image fillHeight">
+                                            <a href="../images/equipment/modem/pl520eset/pl520eset_big1.png" title="FRITZ!Powerline 520E Set">
+                                                <img src="../images/equipment/modem/pl520eset/pl520eset_small1.png" alt="FRITZ!Powerline 520E Set" />
+                                            </a>
+                                        </li>
                                         <li class="thumbnails">
                                             <div class="thumbnails-wrapper clearfix">
-                                                <div class="thumb"><img src="../images/equipment/modem/pl520eset/pl520eset_small2.png" alt="FRITZ!Powerline 520E Set - plan" /></div>
+                                                <a href="../images/equipment/modem/pl520eset/pl520eset_big2.png" title="FRITZ!Powerline 520E Set">
+                                                    <div class="thumb"><img src="../images/equipment/modem/pl520eset/pl520eset_small2.png" alt="FRITZ!Powerline 520E Set - plan" /></div>
+                                                </a>
                                             </div>
                                         </li>
                                     </ul>
@@ -899,16 +997,22 @@
                                                 <div>€</div>
                                                 6<span> /mois</span>
                                             </div>
-                                            <a class="link" href="../documents/datasheets/pl520e.pdf">Voir plus de détails</a>
+                                            <a class="link" href="../documents/datasheets/pl520e.pdf" target="blank_">Voir plus de détails</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="equipement-item-blue">
-                                    <ul class="phone-4 lgdesk-3 vertical-align-middle">
-                                        <li class="main-image fillHeight"><img src="../images/equipment/modem/pl520e/pl520e_small1.png" alt="FRITZ!Powerline 520E" /></li>
+                                    <ul class="phone-4 lgdesk-3 vertical-align-middle popup-gallery">
+                                        <li class="main-image fillHeight">
+                                            <a href="../images/equipment/modem/pl520e/pl520e_big1.png" title="FRITZ!Powerline 520E">
+                                                <img src="../images/equipment/modem/pl520e/pl520e_small1.png" alt="FRITZ!Powerline 520E" />
+                                            </a>
+                                        </li>
                                         <li class="thumbnails">
                                             <div class="thumbnails-wrapper clearfix">
-                                                <div class="thumb"><img src="../images/equipment/modem/pl520eset/pl520eset_small2.png" alt="FRITZ!Powerline 520E - plan" /></div>
+                                                <a href="../images/equipment/modem/pl520e/pl520eset_big2.png" title="FRITZ!Powerline 520E">
+                                                    <div class="thumb"><img src="../images/equipment/modem/pl520eset/pl520eset_small2.png" alt="FRITZ!Powerline 520E - plan" /></div>
+                                                </a>
                                             </div>
                                         </li>
                                     </ul>
@@ -932,17 +1036,25 @@
                                                 <div>€</div>
                                                 6<span> /mois</span>
                                             </div>
-                                            <a class="link" href="../documents/datasheets/pl520e.pdf">Voir plus de détails</a>
+                                            <a class="link" href="../documents/datasheets/pl520e.pdf" target="blank_">Voir plus de détails</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="equipement-item-blue">
-                                    <ul class="phone-4 lgdesk-3 vertical-align-middle">
-                                        <li class="main-image fillHeight"><img src="../images/equipment/modem/pl546e/pl546e.png" alt="FRITZ!Powerline 546E" /></li>
+                                    <ul class="phone-4 lgdesk-3 vertical-align-middle popup-gallery">
+                                        <li class="main-image fillHeight">
+                                            <a href="../images/equipment/modem/pl546e/pl546e_big1.png" title="FRITZ!Powerline 546E">
+                                                <img src="../images/equipment/modem/pl546e/pl546e.png" alt="FRITZ!Powerline 546E" />
+                                            </a>
+                                        </li>
                                         <li class="thumbnails">
                                             <div class="thumbnails-wrapper clearfix">
-                                                <div class="thumb"><img src="../images/equipment/modem/pl546e/pl546e_small2.png" alt="FRITZ!Powerline 546E - demo" /></div>
-                                                <div class="thumb"><img src="../images/equipment/modem/pl546e/pl546e_small3.png" alt="FRITZ!Powerline 546E - plan" /></div>
+                                                <a href="../images/equipment/modem/pl546e/pl546e_big2.png" title="FRITZ!Powerline 546E - demo">
+                                                    <div class="thumb"><img src="../images/equipment/modem/pl546e/pl546e_small2.png" alt="FRITZ!Powerline 546E - demo" /></div>
+                                                </a>
+                                                <a href="../images/equipment/modem/pl546e/pl546e_big3.png" title="FRITZ!Powerline 546E - plan">
+                                                    <div class="thumb"><img src="../images/equipment/modem/pl546e/pl546e_small3.png" alt="FRITZ!Powerline 546E - plan" /></div>
+                                                </a>
                                             </div>
                                         </li>
                                     </ul>
@@ -970,18 +1082,24 @@
                                                 <div>€</div>
                                                 6<span> /mois</span>
                                             </div>
-                                            <a class="link" href="../documents/datasheets/pl546e.pdf">Voir plus de détails</a>
+                                            <a class="link" href="../documents/datasheets/pl546e.pdf" target="blank_">Voir plus de détails</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div id="usb" class="equipementCat is-hidden">
                                 <div class="equipement-item-blue">
-                                    <ul class="phone-4 lgdesk-3 vertical-align-middle">
-                                        <li class="main-image fillHeight"><img src="../images/equipment/modem/wlansac/wlansac_small.png" alt="FRITZ!WLAN Repeater 450E" /></li>
+                                    <ul class="phone-4 lgdesk-3 vertical-align-middle popup-gallery">
+                                        <li class="main-image fillHeight">
+                                            <a href="../images/equipment/modem/wlansac/wlansac_big.png" title="">
+                                                <img src="../images/equipment/modem/wlansac/wlansac_small.png" alt="FRITZ!WLAN Repeater 450E" />
+                                            </a>
+                                        </li>
                                         <li class="thumbnails">
                                             <div class="thumbnails-wrapper clearfix">
-                                                <div class="thumb"><img src="../images/equipment/modem/wlansac/wlansac_small2.png" alt="FRITZ!WLAN Repeater 450E - plan" /></div>
+                                                <a href="../images/equipment/modem/wlansac/wlansac_big2.png" title="">
+                                                    <div class="thumb"><img src="../images/equipment/modem/wlansac/wlansac_small2.png" alt="FRITZ!WLAN Repeater 450E - plan" /></div>
+                                                </a>
                                             </div>
                                         </li>
                                     </ul>
@@ -1005,7 +1123,7 @@
                                                 <div>€</div>
                                                 6<span> /mois</span>
                                             </div>
-                                            <a class="link" href="../documents/datasheets/wlansac.pdf">Voir plus de détails</a>
+                                            <a class="link" href="../documents/datasheets/wlansac.pdf" target="blank_">Voir plus de détails</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1161,19 +1279,40 @@
         <!--              ./FOOTER               -->
 
         <script src="../scripts/vendor/jquery.min.js"></script>
+        <script src="../scripts/vendor/lightbox.js"></script>
         <script src="../scripts/vendor/flickity.pkgd.min.js"></script>
         <script src="../scripts/main.js"></script>
-        <script type="text/javascript">
-            $('.main-gallery').flickity({
-                // options
-                cellAlign: 'center',
-                contain: true,
-                wrapAround: true,
-                prevNextButtons: false,
-                autoPlay: 2500
+        <script>
+            $(document).ready(function () {
+                $('.main-gallery').flickity({
+                    // options
+                    cellAlign: 'center',
+                    contain: true,
+                    wrapAround: true,
+                    prevNextButtons: false,
+                    autoPlay: 2500
+                });
+                $('.popup-gallery').each(function () {
+                    $(this).magnificPopup({
+                        delegate: 'a',
+                        type: 'image',
+                        tLoading: 'Loading image #%curr%...',
+                        mainClass: 'mfp-img-mobile',
+                        gallery: {
+                            enabled: true,
+                            navigateByImgClick: true,
+                            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+                        },
+                        image: {
+                            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                            titleSrc: function (item) {
+                                return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+                            }
+                        }
+                    });
+                });
             });
         </script>
-
         <script type="text/javascript" src="../scripts/analytics.js"></script>
     </body>
 

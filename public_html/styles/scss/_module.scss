@@ -2450,3 +2450,93 @@ h2.contact-title {
     }
 }
 
+// PAGE A PROPOS HISTORIQUE
+// --------------------------------------------------
+
+#history-extended{
+    height: 220px;
+}
+.history{
+    position: relative;
+    height: 200px;
+    .container-wrapper{
+        position: relative;
+    }
+
+    #first{
+        //margin-top: 100px;
+    }
+    #last{
+        //margin-bottom: 100px;
+    }
+    .row{
+        height: 100%;
+    }
+    .round-center{
+        @include vertical-align-middle;
+    }
+    .rond{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #004494;
+        box-shadow: inset 0px -2px 15px rgba(0, 0, 0, 0.1),
+            inset 0px 2px 15px rgba(0, 0, 0, 0.1),
+            inset 2px 0px 15px rgba(0, 0, 0, 0.1),
+            inset -2px 0px 15px rgba(0, 0, 0, 0.1);        
+        p{
+            margin: 0;
+            text-align: center;
+            color: white;
+            font-weight: 800;
+            font-size: 19px;
+            top: 50%;
+            position: relative;
+            transform: translateY(-50%);
+        }
+    }
+    .text{
+        width: 50%;
+        position: relative;
+        top: 50%;
+        p{
+            font-size: 16px;
+            margin: 0;
+            line-height: 20px;
+        }
+    }
+    .history-text{
+        @include vertical-align-middle;
+    }
+    .right-block{
+        float: right;
+        width: 70%;
+    }
+    .left-block{
+        float: right;
+        width: 70%;
+    }
+    .history-element{
+        .icon-right{
+            padding-left: 60px;
+        }
+        .icon-right-arrow{
+            font-size: 16px;
+            color:#004494;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .icon-left{
+            padding-left: 60px;
+        }
+        .line-grey{
+            width: 3px;
+            height: 100%;
+            background-color: #B0B1B2;
+            margin: 0 auto;
+            left: 32px;
+            position: absolute;
+        }
+    }
+}

@@ -197,7 +197,7 @@ header{
 }
 .propos-title{
     position: relative;
-    padding: 50px 0;
+    padding: 0;
     span{
         font-weight: 800;
     }
@@ -260,7 +260,7 @@ header{
     }
 }
 .section-propos{   
-    /*box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.42);*/
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
     p{
         color: #004994;
         text-align: justify;
@@ -279,7 +279,7 @@ header{
     h1{
         text-shadow: 3px 5px 7px rgba(38, 38, 38, 0.5);
         color: white;
-        font-size: 57px;
+        font-size: 40px;
         text-transform: uppercase;
         font-weight: 800;
         padding: 70px 0;

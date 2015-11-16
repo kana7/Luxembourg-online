@@ -299,25 +299,115 @@
     }
     #anniv{
         background-image: url("../../images/Divers/A_propos/20ans_1056x162px.png");
-        .align-middle{
-            @include vertical-align-middle;
-        }
     }
     #fibre{
         background-image: url("../../images/Divers/A_propos/slider_1302x330px.jpg");
-        .align-middle{
-            @include vertical-align-middle;
-        }
     }
     #valeurs{
         background-image: url("../../images/Divers/A_propos/nosvaleurs_1056x300px.jpg");
-        .align-middle{
-            @include vertical-align-middle;
-        }
     }
     #slider-magazine{
         img{
             height: 550px;
+        }
+    }
+    //Page A propos - Historique
+    #history-extended{
+        height: 220px;
+    }
+    .history{
+        position: relative;
+        height: 200px;
+        .container-wrapper{
+            position: relative;
+        }
+
+        #first{
+            //margin-top: 100px;
+        }
+        #last{
+            //margin-bottom: 100px;
+        }
+        .row{
+            height: 100%;
+        }
+        .rond{
+            z-index: 2;
+            margin: 0 auto;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #004494;
+            box-shadow: inset 0px -2px 15px rgba(0, 0, 0, 0.1),inset 0px 2px 15px rgba(0, 0, 0, 0.1), inset 2px 0px 15px rgba(0, 0, 0, 0.1), inset -2px 0px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            left: 0;
+            right: 0;
+            p{
+                margin: 0 auto;
+                text-align: center;
+                color: white;
+                font-weight: 800;
+                font-size: 19px;
+                top: 50%;
+                position: absolute;
+                transform: translateY(-50%);
+                left: 0;
+                right: 0;
+            }
+        }
+        .text{
+            width: 50%;
+            p{
+                font-size: 16px;
+                margin: 0;
+                line-height: 20px;
+            }
+        }
+        .history-text{
+            @include vertical-align-middle;
+        }
+        .history-text-exeption{
+            @include vertical-align-middle;
+            float: right;
+            margin-right: 15px;
+        }
+        .right-block{
+            float: right;
+            padding: 0 0 0 70px;
+        }
+        .left-block{
+            padding: 0 55px 0 0;
+            float: left;
+            .history-text{
+                float: right;
+                margin-right: 15px;
+            }
+        }
+        .history-element{
+            .icon-right{
+                text-align: center;
+                padding-left: 80px;
+            }
+            .icon-right-arrow{
+                font-size: 16px;
+                color:#004494;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .icon-left{
+                text-align: center;
+                padding-right: 170px;
+            }
+            .line-grey{
+                width: 3px;
+                height: 100%;
+                background-color: #B0B1B2;
+                margin: 0 auto;
+                left: 0;
+                right: 0;
+                position: absolute;
+            }
         }
     }
 }
@@ -730,11 +820,17 @@
         }
         @include vertical-align-middle;         
     }
+    .history-banner h1{
+        font-size: 60px;
+    }
     #anniv{
         background-image: url("../../images/Divers/A_propos/20ans_1920x200px.png");
         h1{
             font-size: 80px;
             margin: 0;            
+        }
+        .align-middle{
+            @include vertical-align-middle;
         }
     }
     #fibre{
@@ -743,12 +839,18 @@
             font-size: 60px;
             margin: 0;
         }
+        .align-middle{
+            @include vertical-align-middle;
+        }
     }
     #valeurs{
         height: 360px;
         background-image: url("../../images/Divers/A_propos/nosvaleurs_1920x360px.jpg");
         h1{
             font-size: 60px;
+        }
+        .align-middle{
+            @include vertical-align-middle;
         }
     }
     .section-propos{
@@ -789,6 +891,10 @@
     }
     .footer-bottom-links{
         @include display-flex-spread;
+    }
+    .propos-title {
+        position: relative;
+        padding: 50px 0;
     }
 }
 

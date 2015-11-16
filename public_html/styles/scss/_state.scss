@@ -289,21 +289,15 @@
     }
     #anniv{
         background-image: url("../../images/Divers/A_propos/20ans_1056x162px.png");
-        .align-middle{
-            @include vertical-align-middle;
-        }
+        
     }
     #fibre{
         background-image: url("../../images/Divers/A_propos/slider_1302x330px.jpg");
-        .align-middle{
-            @include vertical-align-middle;
-        }
+        
     }
     #valeurs{
         background-image: url("../../images/Divers/A_propos/nosvaleurs_1056x300px.jpg");
-        .align-middle{
-            @include vertical-align-middle;
-        }
+        
     }
     //Page A propos - Historique
     #history-extended{
@@ -812,6 +806,9 @@
             font-size: 80px;
             margin: 0;            
         }
+        .align-middle{
+            @include vertical-align-middle;
+        }
     }
     #fibre{
         background-image: url("../../images/Divers/A_propos/notre_reseau_1920x480px.jpg");
@@ -819,12 +816,18 @@
             font-size: 60px;
             margin: 0;
         }
+        .align-middle{
+            @include vertical-align-middle;
+        }
     }
     #valeurs{
         height: 360px;
         background-image: url("../../images/Divers/A_propos/nosvaleurs_1920x360px.jpg");
         h1{
             font-size: 60px;
+        }
+        .align-middle{
+            @include vertical-align-middle;
         }
     }
     .section-propos{
@@ -861,6 +864,9 @@
     }
     .contact-form-mess{
         padding-left: 30px;
+    }
+    .history-banner h1{
+        font-size: 60px;
     }
 }
 

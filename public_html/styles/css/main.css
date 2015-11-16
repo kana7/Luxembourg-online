@@ -1919,7 +1919,7 @@ header {
   .history-banner h1 {
     text-shadow: 3px 5px 7px rgba(38, 38, 38, 0.5);
     color: white;
-    font-size: 57px;
+    font-size: 40px;
     text-transform: uppercase;
     font-weight: 800;
     padding: 70px 0;
@@ -4793,33 +4793,12 @@ h2.contact-title {
 
   #anniv {
     background-image: url("../../images/Divers/A_propos/20ans_1056x162px.png"); }
-    #anniv .align-middle {
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%); }
 
   #fibre {
     background-image: url("../../images/Divers/A_propos/slider_1302x330px.jpg"); }
-    #fibre .align-middle {
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%); }
 
   #valeurs {
     background-image: url("../../images/Divers/A_propos/nosvaleurs_1056x300px.jpg"); }
-    #valeurs .align-middle {
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%); }
 
   #history-extended {
     height: 220px; }
@@ -5263,18 +5242,39 @@ h2.contact-title {
     #anniv h1 {
       font-size: 80px;
       margin: 0; }
+    #anniv .align-middle {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
 
   #fibre {
     background-image: url("../../images/Divers/A_propos/notre_reseau_1920x480px.jpg"); }
     #fibre h1 {
       font-size: 60px;
       margin: 0; }
+    #fibre .align-middle {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
 
   #valeurs {
     height: 360px;
     background-image: url("../../images/Divers/A_propos/nosvaleurs_1920x360px.jpg"); }
     #valeurs h1 {
       font-size: 60px; }
+    #valeurs .align-middle {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
 
   .section-propos {
     height: 200px !important; }
@@ -5303,7 +5303,10 @@ h2.contact-title {
     margin-bottom: 0px; }
 
   .contact-form-mess {
-    padding-left: 30px; } }
+    padding-left: 30px; }
+
+  .history-banner h1 {
+    font-size: 60px; } }
 @media screen and (min-width: 1056px) and (max-width: 1302px) {
   #offers-section div[class^=phone-] {
     padding: 0 5px; }

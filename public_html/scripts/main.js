@@ -137,8 +137,12 @@ var EquipementFilter = (function () {
             $searchDeskMenuItem.removeClass('is-active');
             element.addClass('is-active');
         }
-        $('#' + element.attr('data-cat') + '').removeClass('is-hidden');
-        $('#' + element.attr('data-cat') + '').show().flickity('resize');
+        if (element.attr('data-cat') === 'tous'){
+            $categories.removeClass('is-hidden');
+        }else{
+            $('#' + element.attr('data-cat') + '').removeClass('is-hidden');
+            $('#' + element.attr('data-cat') + '').show().flickity('resize');
+        }
         _closeMenu();
     };
 

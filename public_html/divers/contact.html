@@ -6,14 +6,14 @@
         <meta name="description" content="Vous êtes intéressé par une de nos offres ou vous désirez en savoir plus sur nos produits ? Contactez-nous par téléphone ou par email, ou complétez notre formulaire en ligne. " />
         <meta name="keywords" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <link rel="shortcut icon" href="/favicon.ico">
-        
+
         <link rel="stylesheet" href="../styles/css/main.css">
-        
+
         <script src="../scripts/vendor/picturefill.min.js"></script>
     </head>
-    
+
     <body>
         <div id="clientSpace" class="popup">
             <div class="background-client"></div>
@@ -173,7 +173,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div id="bottom-menu-header">
                     <nav class="bottom-menu-header-links mobile display-phone display-tab">
                         <div class="pull-left">
@@ -242,9 +242,9 @@
                         </div>
                     </div>
                 </div>
-                
+
             </header>
-            
+
             <section class="section-layout left-orientation background-lightgrey header-section-height">
                 <div class="container-wrapper">
                     <div class="row">
@@ -337,60 +337,70 @@
                     <div class="row">
                         <h2 class="contact-title">Formulaire de contact</h2>
                         <div class="background-border clearfix">
-                            <form action="">
+                            <form ENCTYPE="multipart/form-data" id="frmContact" name="frmContact" method="post" action="/Scripts/sql.exe">
+                                <input type="hidden" name="SqlDB" value="internet">		
+                                <input type="hidden" name="Sql" value="contact.uhs">
                                 <div class="contact-form-info phone-12 desk-6">
                                     <h3>Vos coordonnées</h3>
-                                    <div class="left-container phone-12 tab-6">
-                                        <div class="input-group">
-                                            <label for="">Nom*</label>
-                                            <input type="text" />
-                                        </div>
-                                    </div>
-                                    <div class="right-container phone-12 tab-6">
-                                        <div class="input-group">
-                                            <label for="">Prénom*</label>
-                                            <input type="text" />
+                                    <div class="left-container phone-12">
+                                        <div style="margin-bottom: 20px;" class="input-group">
+                                            <label style="line-height: 20px;">Êtes-vous client chez Luxembourg Online?</label>
+                                            <input id="Client" type="radio" name="_client" value="oui"><label for="Client">Oui</label>
+                                            <input id="NotClient" type="radio" name="_client" value="non"><label for="NotClient">Non</label>
                                         </div>
                                     </div>
                                     <div class="left-container phone-12 tab-6">
                                         <div class="input-group">
-                                            <label for="">Adresse*</label>
-                                            <input type="text" />
+                                            <label for="Nom">Nom<span class="red">*</span></label>
+                                            <input id="Nom" name="_nom" type="text" required/>
                                         </div>
                                     </div>
                                     <div class="right-container phone-12 tab-6">
                                         <div class="input-group">
-                                            <label for="">Code postal*</label>
-                                            <input type="text" />
+                                            <label for="prenom">Prénom<span class="red">*</span></label>
+                                            <input id="Prenom" name="_prenom" type="text" required/>
                                         </div>
                                     </div>
                                     <div class="left-container phone-12 tab-6">
                                         <div class="input-group">
-                                            <label for="">Localité*</label>
-                                            <input type="text" />
+                                            <label for="Adresse">Adresse<span class="red">*</span></label>
+                                            <input id="Adresse" name="_adresse" type="text" required/>
                                         </div>
                                     </div>
                                     <div class="right-container phone-12 tab-6">
                                         <div class="input-group">
-                                            <label for="">Téléphone*</label>
-                                            <input type="text" />
+                                            <label for="Cp">Code postal<span class="red">*</span></label>
+                                            <input id="Cp" name="_cp" type="text" required/>
                                         </div>
                                     </div>
                                     <div class="left-container phone-12 tab-6">
                                         <div class="input-group">
-                                            <label for="">E-mail</label>
-                                            <input type="text" />
+                                            <label for="Localite">Localité<span class="red">*</span></label>
+                                            <input id="Localite" name="_localite" type="text" required/>
                                         </div>
                                     </div>
                                     <div class="right-container phone-12 tab-6">
                                         <div class="input-group">
-                                            <label for="">Mobile</label>
-                                            <input type="text" />
+                                            <label for="Tel">Téléphone<span class="red">*</span></label>
+                                            <input id="Tel" name="_tel" type="text" required/>
+                                        </div>
+                                    </div>
+                                    <div class="left-container phone-12 tab-6">
+                                        <div class="input-group">
+                                            <label for="Email">E-mail</label>
+                                            <input id="Email" name="_email" type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="right-container phone-12 tab-6">
+                                        <div class="input-group">
+                                            <label for="Mobile">Mobile</label>
+                                            <input id="Mobile" name="_mobile" type="text" />
                                         </div>
                                     </div>
                                     <div class="left-container phone-12 tab-6">
                                         <div class="input-group file">
-                                            <input type="file" class="custom-file-input" />
+                                            <input type="hidden" id="_PhotoName1" NAME="_PhotoName1" value="" />
+                                            <input name="_FileName1" type="file" class="custom-file-input" />
                                             <ul>
                                                 <li></li>
                                             </ul>
@@ -399,25 +409,34 @@
                                     <div class="right-container phone-12 tab-6">
                                         <span class="input-file-info hidden-phone">Taille maximale : 5 Mo</span>
                                     </div>
+                                    <div class="phone-12 hidden-phone hidden-tab">
+                                        <p style="margin: 0;" class="red">*Obligatoire</p>
+                                    </div>
                                 </div>
                                 <div class="contact-form-mess pull-right phone-12 desk-6">
                                     <h3>Votre demande</h3>
                                     <div class="input-group select">
-                                        <label for="">Objet*</label>
+                                        <label for="Object">Objet<span class="red">*</span></label>
                                         <div class="select-arrow">
-                                            <select name="" id="">
-                                                <option value="" selected="selected"></option>
-                                                <option value="">test 1</option>
-                                                <option value="">test 2</option>
-                                                <option value="">test 3</option>
+                                            <select id="Object" name="_object" required>
+                                                <option value="aucun" selected="selected">-- Sélectionnez un objet --</option>
+                                                <option value="Demande d'informations commerciales">Demande d'informations commerciales</option>
+                                                <option value="Suivi de commande">Suivi de commande</option>
+                                                <option value="Problème technique">Problème technique</option>
+                                                <option value="Facturation">Facturation</option>
+                                                <option value="Candidature">Candidature</option>
+                                                <option value="Autres">Autres</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="input-group">
-                                        <label for="">Message*</label>
-                                        <textarea name="" id=""></textarea>
+                                        <label for="Message">Message<span class="red">*</span></label>
+                                        <textarea name="_message" id="Message" required></textarea>
                                     </div>
-                                    <input type="submit" class="btn-blue pull-right" value="Envoyer"/>
+                                    <div class="phone-6 display-phone display-tab">
+                                        <p style="margin: 0;" class="red">*Obligatoire</p>
+                                    </div>
+                                    <a href="#" style="padding: 13px 30px;" class="btnMoreInfo btnSubmitForm btn-blue pull-right" data-form="frmContact">Envoyer</a>
                                 </div>
                             </form>
                         </div>
@@ -530,7 +549,7 @@
                                 <nav>
                                     <ul class="links">
                                         <li><a href="../tv/offres.html">Notre offre</a></li>
-                                        
+
                                         <li><a href="../tv/equipements.html">Nos équipements</a></li>
                                         <li><a href="../promos/internetTV.html">Offre spéciale TV</a></li>
                                     </ul>
@@ -552,12 +571,12 @@
                                 <div class="display-phone copyright"><span class="icon-icone-lol"></span>&copy;2015 Luxembourg Online S.A</div>
                                 <nav class="hidden-phone">
                                     <ul class="footer-bottom-links">
-                                       <li>
+                                        <li>
                                             <span class="icon-icone-lol"></span>&copy;2015 Luxembourg Online S.A</li>
                                         <li><a href="../documents/CONDITIONS GENERALES DES SERVICES LUXEMBOURG ONLINE.pdf" target="blank_">Mentions légales</a></li>
                                         <li><a href="../divers/emploi.html">Offres d'emploi</a></li>
                                         <li><a href="../divers/plan.html">Plan du site</a></li>
-                                        
+
                                         <li><a href="../divers/contact.html">Contact</a></li>
                                     </ul>
                                 </nav>
@@ -568,7 +587,7 @@
             </footer>
         </div>
         <!--              ./FOOTER               -->
-        
+
         <script src="../scripts/vendor/jquery.min.js"></script>
         <script src="../scripts/main.js"></script>
         <script type="text/javascript">
@@ -613,8 +632,8 @@
         <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuu7e1_LY895Sdb36SLlyE77QmBZ_5zss&callback=initMap&language=fr">
         </script>
-        
+
         <script type="text/javascript" src="../scripts/analytics.js"></script>
     </body>
-    
+
 </html>

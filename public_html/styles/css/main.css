@@ -2332,6 +2332,9 @@ svg:not(:root) {
 .grey {
   color: #818181; }
 
+.red {
+  color: #DC0000; }
+
 .background-green {
   background-color: #e3eee3; }
 
@@ -4455,12 +4458,25 @@ h2.contact-title {
 
 .input-group {
   margin-bottom: 25px; }
-  .input-group * {
+  .input-group *:not(span) {
     display: block; }
-  .input-group input, .input-group textarea, .input-group select {
+  .input-group input:not([type=radio]), .input-group textarea, .input-group select {
     width: 100%;
     border-radius: 4px;
     border: none; }
+  .input-group #NotClient {
+    margin-left: 15px; }
+  .input-group input[type="radio"] + label {
+    padding-left: 8px;
+    margin: 0;
+    display: inline;
+    cursor: pointer; }
+  .input-group input[type="radio"]:checked + label {
+    color: #004994;
+    font-weight: 600; }
+  .input-group input[type=radio] {
+    display: inline;
+    cursor: pointer; }
   .input-group label {
     color: #8b8b8b;
     font-size: 1.1em;

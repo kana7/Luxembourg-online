@@ -37,6 +37,9 @@ svg:not(:root) {
 .grey{
     color: $dark-grey;
 }
+.red{
+    color: #DC0000;
+}
 // BACKGROUND-COLOR CLASS
 // --------------------------------------------------
 .background-green{
@@ -2361,13 +2364,22 @@ h2.contact-title {
 }
 .input-group{
     margin-bottom: 25px;
-    *{
+    *:not(span){
         display: block;
     }
-    input, textarea, select{
+    input:not([type=radio]), textarea, select{
         width: 100%;
         border-radius: 4px;
         border: none;
+    }
+    #NotClient{
+        margin-left: 15px;
+    }
+    input[type="radio"]+label{ padding-left: 8px; margin: 0; display: inline; cursor: pointer;} 
+    input[type="radio"]:checked+label{ color: $blue; font-weight: 600;} 
+    input[type=radio]{
+        display: inline;
+        cursor: pointer;
     }
     label{
         color: lighten($dark-grey, 4%);

@@ -231,6 +231,7 @@ function checkDispo(homeId) {
                     }
                 }
                 $('.k24, .k30, .k100, .k200').next().remove();
+                $('.k24, .k30, .k100, .k200').find('.not-dispo').remove();
                 if (ab[0] == "") {
                     $(nonDispoTemplate).prependTo('.k24').css('visibility', 'visible').animate({opacity: 1.0}, 500);
                 } else {

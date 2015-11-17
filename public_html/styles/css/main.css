@@ -2502,7 +2502,8 @@ span[class^=icon-] {
 .finance-list {
   text-align: left;
   line-height: 20px;
-  font-size: 14px; }
+  font-size: 14px;
+  color: #004994; }
   .finance-list li {
     display: block; }
 

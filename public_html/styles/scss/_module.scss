@@ -2393,6 +2393,9 @@ h2.contact-title {
         background-color: $light-grey;
         @include box-shadow(inset 0 1px 5px 1px rgba(0,0,0,0.20));
     }
+    .not-fill{
+            border: 1px solid #DC0000 !important;
+    }
     select{
         height: 35px;
         padding-left: 10px;
@@ -2400,8 +2403,7 @@ h2.contact-title {
         @include box-shadow(0 1px 5px 1px rgba(0,0,0,0.20));
         cursor: pointer;
     }
-    .select-arrow select {
-    }
+
     .select-arrow{
         display: inline-block;
         width: 100%;

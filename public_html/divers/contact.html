@@ -339,7 +339,7 @@
                         <div class="background-border clearfix">
                             <form ENCTYPE="multipart/form-data" id="frmContact" name="frmContact" method="post" action="/Scripts/sql.exe">
                                 <input type="hidden" name="SqlDB" value="internet">		
-                                <input type="hidden" name="Sql" value="contact.uhs">
+                                <input type="hidden" name="Sql" value="../contact.uhs">
                                 <div class="contact-form-info phone-12 desk-6">
                                     <h3>Vos coordonnées</h3>
                                     <div class="left-container phone-12">
@@ -399,7 +399,7 @@
                                     </div>
                                     <div class="left-container phone-12 tab-6">
                                         <div class="input-group file">
-                                            <input type="hidden" id="_PhotoName1" NAME="_PhotoName1" value="" />
+                                            <input type="hidden" id="_DocumentName1" name="_documentName1" value="" />
                                             <input name="_FileName1" type="file" class="custom-file-input" />
                                             <ul>
                                                 <li></li>
@@ -419,7 +419,7 @@
                                         <label for="Object">Objet<span class="red">*</span></label>
                                         <div class="select-arrow">
                                             <select id="Object" name="_object" required>
-                                                <option value="aucun" selected="selected">-- Sélectionnez un objet --</option>
+                                                <option value="" selected="selected">-- Sélectionnez un objet --</option>
                                                 <option value="Demande d'informations commerciales">Demande d'informations commerciales</option>
                                                 <option value="Suivi de commande">Suivi de commande</option>
                                                 <option value="Problème technique">Problème technique</option>
@@ -436,7 +436,7 @@
                                     <div class="phone-6 display-phone display-tab">
                                         <p style="margin: 0;" class="red">*Obligatoire</p>
                                     </div>
-                                    <a href="#" style="padding: 13px 30px;" class="btnMoreInfo btnSubmitForm btn-blue pull-right" data-form="frmContact">Envoyer</a>
+                                    <button type="button" style="padding: 13px 30px;" class="btnSubmitForm btn-blue pull-right" data-form="frmContact">Envoyer</button>
                                 </div>
                             </form>
                         </div>
@@ -628,6 +628,44 @@
                 trafficLayer.setMap(map);
                 trafficLayer.setMap(map2);
             }
+            $(function () {
+                $('input[required], textarea[required], select[required]').blur(function () {
+                    $(this).removeClass('not-fill');
+                });
+                $(".btnSubmitForm").click(function (e) {
+                    var flag = 0;
+                    e.preventDefault();
+                    var vform = $(this).attr("data-form");
+                    var mail = $("#" + vform).find("input[name=_email]");
+                    if (mail.val()) {
+                        if (!testEmail(mail.val())) {
+                            alert("E-mail invalide! Assurez-vous d'avoir correctement saisi votre adresse électronique.");
+                            return false;
+                        }
+                    }
+                    $('#' + vform).find('[required]').each(function () {
+                        console.log($(this).val());
+                        if (!$(this).val()) {
+                            flag = 1;
+                            $(this).addClass('not-fill');
+                        }
+                    });
+                    if (flag) {
+                        alert("Veuillez entrer tout les champs dans le formulaire.");
+                        flag = 0;
+                    } else {
+                        //submit form
+                        var filename;
+                        for (i = 1; i <= 1; i++) {
+                            filename = $("#" + vform).find('[name=_FileName'+i+']').value;
+                            filename = filename.substr(filename.lastIndexOf("\\") + 1);
+                            $("#" + vform).find('[name=_documentName'+i+']').value = filename;
+                        }
+                        $("#" + vform).submit();
+
+                    }
+                });
+            });
         </script>
         <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuu7e1_LY895Sdb36SLlyE77QmBZ_5zss&callback=initMap&language=fr">

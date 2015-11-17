@@ -1,0 +1,36 @@
+«IF @strlen("«_documentName1»")>0 » 
+	«FILE UPLOAD «_FileName1»;upload/«_documentName1»»
+«ENDIF»
+
+«MAIL SERVER mail.internet.lu»
+
+«MAIL TO quentin.fonck@internet.lu»
+
+
+«MAIL FROM contact@internet.lu»
+«MAIL SUBJECT Demande de contact»
+«OUTPUT MAIL»
+
+Internet.lu Demande de contact
+
+Nom : «_nom»
+Prénom : «_prenom»
+Addresse : «_adresse»
+Code Postal : «_cp»
+Localité : «_localite»
+Tél : «_tel»
+Mobile : «_mobile»
+E-mail : «_email»
+Déjà client: «_client»
+
+«IF @strlen("«_documentName1»")>0 »Image Url1: www.internet.lu/upload/«_documentName1»«ENDIF»
+
+
+Objet du message : «_object»
+
+Message :
+«__message»
+
+«/OUTPUT»
+«MAIL SEND»
+<META http-equiv="refresh" content="0;URL=http://www.internet.lu/lolcloud/inscription_confirm.html">

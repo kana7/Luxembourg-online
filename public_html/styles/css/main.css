@@ -2473,8 +2473,7 @@ span[class^=icon-] {
   text-align: center;
   font-size: 13px;
   margin: 15px 0;
-  line-height: 15px;
-  }
+  line-height: 15px; }
   .footer-note span {
     display: inline-block; }
 
@@ -4548,6 +4547,15 @@ h2.contact-title {
   position: relative;
   top: 16px; }
 
+.docItem .single-line {
+  display: inline-block;
+  margin-left: 10px; }
+.docItem ul, .docItem li {
+  display: block;
+  margin-bottom: 15px; }
+.docItem .link span {
+  display: block; }
+
 .dropdown > [data-trigger] {
   cursor: pointer; }
 
@@ -4725,8 +4733,7 @@ h2.contact-title {
 
   #offers-section div[class^=phone-] {
     margin-bottom: 20px;
-    padding: 0 10px;
-    }
+    padding: 0 10px; }
 
   .content-container .content-title, .content-container .content-subtitle {
     font-size: 26px;

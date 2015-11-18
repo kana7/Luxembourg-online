@@ -338,8 +338,8 @@
                         <h2 class="contact-title">Formulaire de contact</h2>
                         <div class="background-border clearfix">
                             <form ENCTYPE="multipart/form-data" id="frmContact" name="frmContact" method="post" action="/Scripts/sql.exe">
-                                <input type="hidden" name="SqlDB" value="internet">		
-                                <input type="hidden" name="Sql" value="../contact.uhs">
+                                <input type="hidden" name="SqlDB" value="LOLPublic">		
+                                <input type="hidden" name="Sql" value="contact.uhs">
                                 <div class="contact-form-info phone-12 desk-6">
                                     <h3>Vos coordonnées</h3>
                                     <div class="left-container phone-12">
@@ -398,16 +398,20 @@
                                         </div>
                                     </div>
                                     <div class="left-container phone-12 tab-6">
-                                        <div class="input-group file">
+                                        <div id="fileUpload" class="input-group file">
+                                            <button type="button" id="fileButton">Joindre un fichier</button>
                                             <input type="hidden" id="_DocumentName1" name="_documentName1" value="" />
-                                            <input name="_FileName1" type="file" class="custom-file-input" />
-                                            <ul>
-                                                <li></li>
+                                            <input type="hidden" id="_DocumentName2" name="_documentName2" value="" />
+                                            <input type="hidden" id="_DocumentName3" name="_documentName3" value="" />
+                                            <input style="display: none;" name="_FileName1" type="file" class="custom-file-input" />
+                                            <input style="display: none;" name="_FileName2" type="file" class="custom-file-input" />
+                                            <input style="display: none;" name="_FileName3" type="file" class="custom-file-input" />
+                                            <ul id="fileList">
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="right-container phone-12 tab-6">
-                                        <span class="input-file-info hidden-phone">Taille maximale : 5 Mo</span>
+                                        <span class="input-file-info hidden-phone">3 fichiers maximum</span>
                                     </div>
                                     <div class="phone-12 hidden-phone hidden-tab">
                                         <p style="margin: 0;" class="red">*Obligatoire</p>
@@ -420,9 +424,9 @@
                                         <div class="select-arrow">
                                             <select id="Object" name="_object" required>
                                                 <option value="" selected="selected">-- Sélectionnez un objet --</option>
-                                                <option value="Demande d'informations commerciales">Demande d'informations commerciales</option>
+                                                <option value="demande infos commerciales">Demande d'informations commerciales</option>
                                                 <option value="Suivi de commande">Suivi de commande</option>
-                                                <option value="Problème technique">Problème technique</option>
+                                                <option value="Probleme technique">Problème technique</option>
                                                 <option value="Facturation">Facturation</option>
                                                 <option value="Candidature">Candidature</option>
                                                 <option value="Autres">Autres</option>
@@ -592,9 +596,64 @@
         <script src="../scripts/main.js"></script>
         <script type="text/javascript">
             $(function () {
-                $('.custom-file-input').on('change', function () {
-                    $('.input-group.file ul').find('li').remove();
-                    $('.input-group.file ul').append('<li>' + this.value.replace("C:\\fakepath\\", "") + '</li>');
+                $('input[name^="_FileName"').on('change', function () {
+                    $('#fileList').append('<li data-input="' + $(this).attr('name') + '" title="destroy">' + this.value.replace("C:\\fakepath\\", "") + '<span class="icon-x-icone"></span></li>');
+                    console.log($('#fileList>li').length);
+                    if ($('#fileList>li').length === 3) {
+                        $('#fileButton').addClass('disabled');
+                    }
+                });
+                $('#fileButton').click(function () {
+                    $('input[name^="_FileName"').each(function () {
+                        if (!$(this).val()) {
+                            $(this).trigger('click');
+                            return false;
+                        }
+                    });
+                });
+                $('#fileList').on('click', 'li', function () {
+                    $('input[name=' + $(this).attr('data-input') + ']').val('');
+                    $(this).remove();
+                    console.log($('#fileList>li').length);
+                    if ($('#fileList>li').length < 3) {
+                        $('#fileButton').removeClass('disabled');
+                    }
+                });
+
+                $('input[required], textarea[required], select[required]').blur(function () {
+                    $(this).removeClass('not-fill');
+                });
+                $(".btnSubmitForm").click(function (e) {
+                    var flag = 0;
+                    e.preventDefault();
+                    var vform = $(this).attr("data-form");
+                    var mail = $("#" + vform).find("input[name=_email]");
+                    if (mail.val()) {
+                        if (!testEmail(mail.val())) {
+                            alert("E-mail invalide! Assurez-vous d'avoir correctement saisi votre adresse électronique.");
+                            return false;
+                        }
+                    }
+                    $('#' + vform).find('[required]').each(function () {
+                        if (!$(this).val()) {
+                            flag = 1;
+                            $(this).addClass('not-fill');
+                        }
+                    });
+                    if (flag) {
+                        alert("Veuillez entrer tout les champs dans le formulaire.");
+                        flag = 0;
+                    } else {
+                        //submit form
+                        var filename;
+                        for (i = 1; i <= 3; i++) {
+                            if ($("#" + vform).find('[name=_FileName' + i + ']').val()) {
+                                filename = $("#" + vform).find('[name=_FileName' + i + ']').val();
+                                $("#" + vform).find('[name=_documentName' + i + ']').val(filename);
+                            }
+                        }
+                        $("#" + vform).submit();
+                    }
                 });
             });
         </script>
@@ -628,44 +687,6 @@
                 trafficLayer.setMap(map);
                 trafficLayer.setMap(map2);
             }
-            $(function () {
-                $('input[required], textarea[required], select[required]').blur(function () {
-                    $(this).removeClass('not-fill');
-                });
-                $(".btnSubmitForm").click(function (e) {
-                    var flag = 0;
-                    e.preventDefault();
-                    var vform = $(this).attr("data-form");
-                    var mail = $("#" + vform).find("input[name=_email]");
-                    if (mail.val()) {
-                        if (!testEmail(mail.val())) {
-                            alert("E-mail invalide! Assurez-vous d'avoir correctement saisi votre adresse électronique.");
-                            return false;
-                        }
-                    }
-                    $('#' + vform).find('[required]').each(function () {
-                        console.log($(this).val());
-                        if (!$(this).val()) {
-                            flag = 1;
-                            $(this).addClass('not-fill');
-                        }
-                    });
-                    if (flag) {
-                        alert("Veuillez entrer tout les champs dans le formulaire.");
-                        flag = 0;
-                    } else {
-                        //submit form
-                        var filename;
-                        for (i = 1; i <= 1; i++) {
-                            filename = $("#" + vform).find('[name=_FileName'+i+']').value;
-                            filename = filename.substr(filename.lastIndexOf("\\") + 1);
-                            $("#" + vform).find('[name=_documentName'+i+']').value = filename;
-                        }
-                        $("#" + vform).submit();
-
-                    }
-                });
-            });
         </script>
         <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuu7e1_LY895Sdb36SLlyE77QmBZ_5zss&callback=initMap&language=fr">

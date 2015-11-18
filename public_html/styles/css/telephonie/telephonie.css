@@ -30,6 +30,9 @@
     font-size: 41px; } }
 @media screen and (min-width: 1056px) {
   .text-highlight {
-    font-size: 44px; } }
+    font-size: 44px; }
+
+  .footer-note {
+    margin: 0 0 15px; } }
 
 /*# sourceMappingURL=telephonie.css.map */

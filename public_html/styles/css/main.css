@@ -2473,7 +2473,8 @@ span[class^=icon-] {
   text-align: center;
   font-size: 13px;
   margin: 15px 0;
-  line-height: 15px; }
+  line-height: 15px;
+  }
   .footer-note span {
     display: inline-block; }
 
@@ -2935,6 +2936,14 @@ span[class^=icon-] {
 
 .promo-offer-container div[class^=phone-], #offers-section div[class^=phone-], #promoFiber-content div[class^=phone-] {
   text-align: center; }
+
+.btn-abo {
+  position: relative;
+  margin: 0 auto;
+  width: 100%; }
+  .btn-abo a {
+    width: 100%;
+    margin: 10px 0; }
 
 .equipementCat {
   display: block; }
@@ -4715,8 +4724,9 @@ h2.contact-title {
       background-image: url(../../images/Homepage/OFFRES/LOL_TV_288x392px.jpg); }
 
   #offers-section div[class^=phone-] {
-    margin-bottom: 35px;
-    padding: 0 10px; }
+    margin-bottom: 20px;
+    padding: 0 10px;
+    }
 
   .content-container .content-title, .content-container .content-subtitle {
     font-size: 26px;
@@ -4963,8 +4973,22 @@ h2.contact-title {
       margin: 0 auto;
       left: 0;
       right: 0;
-      position: absolute; } }
+      position: absolute; }
+
+  .btn-abo {
+    width: 47%; }
+
+  .table-details a {
+    font-size: 16px; } }
 @media screen and (min-width: 1056px) {
+  .center-tab {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+
   .header-section-height {
     height: 350px !important; }
 
@@ -5419,7 +5443,10 @@ h2.contact-title {
 
   .propos-title {
     position: relative;
-    padding: 50px 0; } }
+    padding: 50px 0; }
+
+  .btn-abo {
+    width: 23%; } }
 @media screen and (min-width: 1056px) and (max-width: 1302px) {
   #offers-section div[class^=phone-] {
     padding: 0 5px; }

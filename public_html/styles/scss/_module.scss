@@ -267,6 +267,14 @@ span[class^=icon-]
     font-size: 0.8em !important;
 }
 
+.base-link{
+    font-weight: 600;
+    &:hover{
+        text-decoration: underline;
+    }
+    
+}
+
 // FIXED ELEMENT
 // --------------------------------------------------
 #siteWrap{

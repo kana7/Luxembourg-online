@@ -29,7 +29,9 @@ function natSort(as, bs) {
     return a.length - b.length;
 }
 var nonDispoTemplate = '<div class="not-dispo"><div class="not-dispo-info">Offre <br />indisponible <br />à votre adresse</div></div>';
-var buttonDispoTempate ='<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_FR.pdf" target="_blank">Abonnez-vous</a>';
+var buttonDispoTempate = '<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_FR.pdf" target="_blank">Abonnez-vous</a>';
+var buttonPromoFibre = '<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_OFFRE2_FR.pdf" target="_blank">Abonnez-vous</a>';
+var buttonPromoTv = '<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_OFFRE1_FR.pdf" target="_blank">Abonnez-vous</a>';
 
 var checkDispoTemplate = '<section id="test-offres" class="clearfix">' +
         '<div class="container-wrapper">' +
@@ -62,7 +64,7 @@ var popuptemplate = '<div id="testDispo" class="popup">' +
         '<div class="white-pannel">' +
         '<button class="pannel-close"><span class="icon-x-icone"></span></button>' +
         '<h2>Tester la disponibilité</h2>' +
-        '<input value name="zipcode" class="input-white" type="text" placeholder="Code postal" maxlength="4"/>' +
+        '<input value name="zipcode" class="input-white" type="text" placeholder="Code postal"/>' +
         '<select name="ville" value class="input-white select"></select>' +
         '<select name="rue" value class="input-white select"></select>' +
         '<select name="numero" value class="input-white select numero"></select>' +
@@ -89,10 +91,10 @@ function createDispoPopup() {
     }
 }
 
-function checkDispo(homeId) {
-    if ($("select[name=ville]").val() == 98 || $("select[name=ville]").val() == 428 || $("select[name=ville]").val() == 159 || $("select[name=ville]").val() == 174) {
+function checkDispo(homeId, boolean) {
+    /*if ($("select[name=ville]").val() == 98 || $("select[name=ville]").val() == 428 || $("select[name=ville]").val() == 159 || $("select[name=ville]").val() == 174) {
         window.location.href = "http://www.internet.lu/internet/tarifs_detailles.html";
-    }
+    }*/
     if (homeId !== undefined || homeId !== null || homeId !== '') {
         $.ajax({
             url: "http://shop.internet.lu/Scripts/sql.exe?SqlDB=LOLShop&Sql=FOServiceMap:FOServiceListNew.phs&_HomeId=" + homeId,
@@ -232,37 +234,58 @@ function checkDispo(homeId) {
                 }
                 $('.k24, .k30, .k100, .k200').next().remove();
                 $('.k24, .k30, .k100, .k200').find('.not-dispo').remove();
-                if (ab[0] == "") {
-                    $(nonDispoTemplate).prependTo('.k24').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                if (boolean) {
+                    if (ab[0] == "") {
+                        $(nonDispoTemplate).prependTo('.k24').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    } else {
+                        $('.k24').find('.not-dispo').remove();
+                        $(buttonPromoTv).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    }
+                    if (ab[1] == "") {
+                        $(nonDispoTemplate).prependTo('.k30').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    } else {
+                        $('.k30').find('.not-dispo').remove();
+                        $(buttonPromoTv).insertAfter($('.k30')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    }
+                    if (ab[2] == "") {
+                        $(nonDispoTemplate).prependTo('.k100').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    } else {
+                        $('.k100').find('.not-dispo').remove();
+                        $(buttonPromoFibre).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    }
+                    if (ab[3] == "") {
+                        $(nonDispoTemplate).prependTo('.k200').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    } else {
+                        $('.k200').find('.not-dispo').remove();
+                        $(buttonPromoFibre).insertAfter($('.k200')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    }
                 } else {
-                    $('.k24').find('.not-dispo').remove();
-                    $(buttonDispoTempate).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    if (ab[0] == "") {
+                        $(nonDispoTemplate).prependTo('.k24').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    } else {
+                        $('.k24').find('.not-dispo').remove();
+                        $(buttonDispoTempate).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    }
+                    if (ab[1] == "") {
+                        $(nonDispoTemplate).prependTo('.k30').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    } else {
+                        $('.k30').find('.not-dispo').remove();
+                        $(buttonDispoTempate).insertAfter($('.k30')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    }
+                    if (ab[2] == "") {
+                        $(nonDispoTemplate).prependTo('.k100').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    } else {
+                        $('.k100').find('.not-dispo').remove();
+                        $(buttonDispoTempate).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    }
+                    if (ab[3] == "") {
+                        $(nonDispoTemplate).prependTo('.k200').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    } else {
+                        $('.k200').find('.not-dispo').remove();
+                        $(buttonDispoTempate).insertAfter($('.k200')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    }
                 }
-                if (ab[1] == "") {
-                    $(nonDispoTemplate).prependTo('.k30').css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                } else {
-                    $('.k30').find('.not-dispo').remove();
-                    $(buttonDispoTempate).insertAfter($('.k30')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                }
-                if (ab[2] == "") {
-                    $(nonDispoTemplate).prependTo('.k100').css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                } else {
-                    $('.k100').find('.not-dispo').remove();
-                    $(buttonDispoTempate).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                }
-                if (ab[3] == "") {
-                    $(nonDispoTemplate).prependTo('.k200').css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                } else {
-                    $('.k200').find('.not-dispo').remove();
-                   $(buttonDispoTempate).insertAfter($('.k200')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                }
-                if (ab[4] == "") {
-                }
-                if (ab[5] == "") {
-                }
-                if (ab[6] == "") {
-                }
-                if($('.main-gallery').length){
+                if ($('.main-gallery').length) {
                     $('.main-gallery').show().flickity('resize');
                 }
             }
@@ -279,7 +302,7 @@ $(function () {
             _ville = vhash[1];
             _rue = vhash[2];
             _nbr = vhash[3];
-            checkDispo(_nbr);
+            checkDispo(_nbr, false);
             setTimeout(function () {
                 $("input[name=zipcode]").val(_cp);
                 $(".verifyCp").click();
@@ -482,7 +505,7 @@ $(function () {
             if ($('#testDispo').hasClass('is-visible')) {
                 PopupModule.closePopup(event); //main.js
             }
-            checkDispo($("select[name=numero]").val());
+            checkDispo($("select[name=numero]").val(), true);
         } else {
             alert('Entrez votre numéro de rue pour continuer...');
         }

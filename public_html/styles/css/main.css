@@ -2545,6 +2545,11 @@ span[class^=icon-] {
 .equipement-item-blue .price span.big-euro, .equipement-item-orange .price span.big-euro {
   font-size: 0.8em !important; }
 
+.base-link {
+  font-weight: 600; }
+  .base-link:hover {
+    text-decoration: underline; }
+
 #siteWrap {
   position: relative;
   min-width: 100%;
@@ -5480,7 +5485,11 @@ h2.contact-title {
     padding: 50px 0; }
 
   .btn-abo {
-    width: 23%; } }
+    width: 23%; }
+
+  .offer-item-blue .item-header, .equipement-item-blue .item-header {
+    padding: 18px 5px 15px;
+    font-size: 22px; } }
 @media screen and (min-width: 1056px) and (max-width: 1302px) {
   #offers-section div[class^=phone-] {
     padding: 0 5px; }

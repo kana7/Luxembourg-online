@@ -56,7 +56,7 @@
     .table-details td, .table-details th{
         font-size: 12px;
     }
-    
+
     .content-container .offer-item-blue .info .data, .offer-item-orange .info .data{
         padding-left: 40px;
     }
@@ -152,7 +152,7 @@
         p.bottom-details{
             font-size: 10pt;
         }
-        
+
         .flickity-prev-next-button {
             position: absolute;
             top: 50%;
@@ -318,7 +318,7 @@
         .container-wrapper{
             position: relative;
         }
-        
+
         #first{
             //margin-top: 100px;
         }
@@ -415,7 +415,7 @@
             font-size: 16px;
         }
     }
-    
+
 }
 
 @include media(desk){
@@ -491,7 +491,7 @@
             top: 74px;
         }
     }
-    
+
     .bottom-menu-header-links{
         float: left;
     }
@@ -619,7 +619,7 @@
     .bottom-info{
         font-size: 8pt;
     }
-    
+
     .price-blue span, .price-orange span{
         font-size: 9.5pt;
     }
@@ -630,10 +630,10 @@
             font-size: 14pt;
             top: -17px;
             left: 68px;
-            
+
         }
     }
-    
+
     .price-blue{
         font-size: 34pt;
         div{
@@ -642,7 +642,7 @@
             left: 55px;
         }
     }
-    
+
     #dispo{
         h3{
             font-size: 12pt !important;
@@ -654,14 +654,14 @@
             font-size: 15px;
         }
     }
-    
+
     .right-orientation,
     .left-orientation{
         .row{
             position: relative;
         }
     }
-    
+
     .right-orientation .row > div:first-child,
         .left-orientation .row > div:last-child{
         left: 0;
@@ -687,7 +687,7 @@
     .left-orientation .row>div:last-child{
         text-align: left;
     }
-    
+
     .right-orientation .row > div:last-child, .left-orientation .row > div:last-child{
         @include vertical-align-middle;
         height: auto;
@@ -708,12 +708,12 @@
             }
         }
     }
-    
+
     .content-container .row>div[class^=phone-]{
         @include vertical-align-middle;
         height: auto;
     }
-    
+
     .section-layout img{
         height: 100% !important;
     }
@@ -725,7 +725,7 @@
         font-size: 30px;
         line-height: 40px;
     }
-    
+
     .bottom-link{
         margin: 18px 0;
         font-size: 19px;
@@ -735,7 +735,7 @@
             font-size: 17px;
         }
     }
-    
+
     #social-links{
         padding: 23px 0 12px;
     }
@@ -757,7 +757,7 @@
     #social-links nav{
         width: 80%;
     }
-    
+
     .help-link{
         font-size: 12pt;
         span[class^=icon-]{
@@ -768,7 +768,7 @@
             &.icon-right-arrow{
                 margin-left: 5px;
                 font-size: 14pt;
-                
+
             }
         }
     }
@@ -817,7 +817,7 @@
     .finance-list{
         line-height: none;
     }
-    
+
     .section-height-extention{
         height: 450px;
     }
@@ -868,7 +868,7 @@
             margin-top: 80px;
         }
     }
-    
+
     .picContainer, .rightWrapper{
         display: block;
         width: 50%;
@@ -907,6 +907,10 @@
     }
     .btn-abo{
         width: 23%;
+    }
+    .offer-item-blue .item-header, .equipement-item-blue .item-header {
+        padding: 18px 5px 15px;
+        font-size: 22px;
     }
 }
 
@@ -988,9 +992,9 @@
             margin-right: 65px;
         }
     }
-    
+
     .offer-item-orange .offer-price div, .offer-item-blue .offer-price div{left: 162px;}
-    
+
     #slider-contents{
         .title{
             font-size: 37pt;
@@ -1035,7 +1039,7 @@
             li{font-size: 8pt;}
         }
     }
-    
+
     .service
     {
         border: 1px solid lighten($grey, 15%);
@@ -1097,7 +1101,7 @@
             }
         }
     }
-    
+
     .section-title {
         font-size: 40px;
         line-height: 52px;
@@ -1120,10 +1124,10 @@
             font-size: 14pt;
             top: -17px;
             left: 68px;
-            
+
         }
     }
-    
+
     .price-blue{
         font-size: 34pt;
         div{
@@ -1152,7 +1156,7 @@
             &.icon-right-arrow{
                 margin-left: 7px;
                 font-size: 15pt;
-                
+
             }
         }
     }

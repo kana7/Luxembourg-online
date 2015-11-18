@@ -596,9 +596,17 @@
         <script src="../scripts/main.js"></script>
         <script type="text/javascript">
             $(function () {
+                var hash = document.URL.substr(document.URL.indexOf('#')+1);
+                if(hash==="success"){
+                    alert('Votre formulaire a été envoyé avec succès. ');
+                }
+                if(hash==="emploi"){
+                    $('#Object').val('Candidature');
+                    scrollToElement($('#form'));
+                }
+                
                 $('input[name^="_FileName"').on('change', function () {
                     $('#fileList').append('<li data-input="' + $(this).attr('name') + '" title="destroy">' + this.value.replace("C:\\fakepath\\", "") + '<span class="icon-x-icone"></span></li>');
-                    console.log($('#fileList>li').length);
                     if ($('#fileList>li').length === 3) {
                         $('#fileButton').addClass('disabled');
                     }
@@ -614,7 +622,6 @@
                 $('#fileList').on('click', 'li', function () {
                     $('input[name=' + $(this).attr('data-input') + ']').val('');
                     $(this).remove();
-                    console.log($('#fileList>li').length);
                     if ($('#fileList>li').length < 3) {
                         $('#fileButton').removeClass('disabled');
                     }

@@ -57,6 +57,11 @@ function testEmail(emailAddress) {
     return pattern.test(emailAddress);
 }
 
+//deplace la fenêtre jusqu'à un élément précis dans la page
+function scrollToElement(ele) {
+    $(window).scrollTop(ele.offset().top).scrollLeft(ele.offset().left);
+}
+
 //size of viewport
 function viewport() {
     var e = window, a = 'inner';

@@ -167,9 +167,9 @@ svg:not(:root) {
 span[class^=icon-]
 {
     position: relative;
-    
+
     display: inline-block;
-    
+
     margin-right: 13px;
 }
 .exponent{
@@ -263,6 +263,10 @@ span[class^=icon-]
     }
 }
 
+.equipement-item-blue .price span.big-euro, .equipement-item-orange .price span.big-euro{
+    font-size: 0.8em !important;
+}
+
 // FIXED ELEMENT
 // --------------------------------------------------
 #siteWrap{
@@ -273,7 +277,7 @@ span[class^=icon-]
     bottom: 100%;
     left: 0;
     z-index: 1;
-    
+
     background-color: $white;
     -webkit-transition: -webkit-transform 0.4s ease; /* Changed here */ 
     -moz-transition: -moz-transform 0.4s ease;
@@ -385,7 +389,7 @@ span[class^=icon-]
             }
         }
     }
-    
+
 }
 .white-fixed-option,.blue-fixed-option{
     background-color: $grey;
@@ -432,7 +436,7 @@ span[class^=icon-]
     background: -webkit-linear-gradient(top,  #fff 0%,#fff 90%,#f7f7f7 100%); /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
     background: -webkit-linear-gradient(top, #fff 0%, #fff 90%, #f7f7f7 100%);
     background:         linear-gradient(to bottom,  #fff 0%,#fff 90%,#f7f7f7 100%); /* W3C */
-    
+
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f7f7f7',GradientType=0 ); /* IE6-9 */
     &:after{
         content: "";
@@ -451,9 +455,9 @@ span[class^=icon-]
 {
     font-size: 13px;
     font-weight: 400;
-    
+
     padding: 9px 0 8px;
-    
+
     color: $white;
     text-shadow: 0 1px 5px $dark-grey;
     &.left li
@@ -470,9 +474,9 @@ span[class^=icon-]
     .main-menu{
         font-size: 16px;
         font-weight: 400;
-        
+
         box-sizing: border-box;
-        
+
         color: lighten($footer-grey, 20%);
     }
     .main-menu li{
@@ -517,7 +521,7 @@ span[class^=icon-]
         display: inline;
         padding-bottom: 3px;
     }
-    
+
     li:not(.active):hover{
         .link{
             border-bottom: 2px dotted $grey;
@@ -536,27 +540,27 @@ span[class^=icon-]
 {
     font-size: 15px;
     font-weight: 600;
-    
+
     position: relative;
-    
+
     display: inline-block;
-    
+
     margin: 3px 0;
     padding: 12px 15px;
-    
+
     cursor: pointer;
     -webkit-transition: $transitionUi;
     transition: $transitionUi;
     text-align: center;
     vertical-align: middle;
     white-space: nowrap;
-    
+
     border: 1px solid transparent;
     border-radius: $border-radius;
     background-image: none;
-    
+
     z-index: 2;
-    
+
     @include noselect();
     &:focus
         {
@@ -646,7 +650,7 @@ span[class^=icon-]
     font-size: 18px;
     padding: 12px 15px;
     @include box-shadow(0 2px 4px 0 lighten($black, 15%));
-    
+
     background: rgb(214,214,214);
     background: -moz-linear-gradient(top, rgb(214,214,214) 0%, rgb(255,255,255) 50%, rgb(214,214,214) 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgb(214,214,214)), color-stop(50%, rgb(255,255,255)), color-stop(100%, rgb(214,214,214)));
@@ -973,15 +977,15 @@ span[class^=icon-]
 @mixin input
 {
     /*line-height: 35px;*/
-    
+
     position: relative;
-    
+
     display: inline-block;
-    
+
     padding: 5px 10px;
-    
+
     text-align: center;
-    
+
     border-radius: $border-radius;
     &:focus
         {
@@ -1175,7 +1179,7 @@ span[class^=icon-]
         line-height: 28px;
         text-transform: uppercase;
         z-index: 3;
-        
+
     }
 }
 
@@ -1286,7 +1290,7 @@ span[class^=icon-]
             .btnLightBox{
                 border: none;
                 background: none;
-                
+
             }
         }
         img{
@@ -1573,22 +1577,22 @@ span[class^=icon-]
 .icons
 {
     position: relative;
-    
+
     display: block;
-    
+
     width: 50%;
     margin: 0 auto;
     margin-top: 13%;
-    
+
     @include clearfix;
     li
     {
         display: inline-block;
         float: left;
-        
+
         width: 50%;
         margin-bottom: 16px;
-        
+
         text-align: center;
     }
 }
@@ -1596,25 +1600,25 @@ span[class^=icon-]
 .dispo-icon
 {
     position: relative;
-    
+
     display: inline-block;
-    
+
     width: 46px;
     height: 46px;
-    
+
     border-radius: 50%;
     background-color: $orange;
     @include box-shadow(0 2px 4px 0 lighten($black, 15%));
     span[class^=icon-]
     {
         font-size: 22px;
-        
+
         position: absolute;
         top: 25%;
         left: 11px;
-        
+
         margin: 0;
-        
+
         color: #fff;
     }
 }
@@ -1626,11 +1630,11 @@ span[class^=icon-]
     position: absolute;
     bottom: 0;
     left: 0;
-    
+
     width: 100%;
     margin: 0;
     margin-bottom: 10px;
-    
+
     text-align: center;
 }
 
@@ -1688,7 +1692,7 @@ span[class^=icon-]
     &:hover
         {
         text-decoration: underline;
-        
+
         color: lighten($grey, 10%);
     }
 }
@@ -1706,13 +1710,13 @@ footer
     span[class^=icon-]
     {
         font-size: 17px;
-        
+
         position: absolute;
         top: 25%;
         left: 25%;
-        
+
         margin: 0;
-        
+
         color: $white;
     }
     &.lol
@@ -1780,16 +1784,16 @@ footer
 #contact
 {
     font-size: 11pt;
-    
+
     color: darken($white, 15%);
     background-color: $blue;
-    
+
     span[class^=icon-]
     {
         font-size: 15pt;
-        
+
         top: 4px;
-        
+
         color: $white;
     }
 }
@@ -1808,12 +1812,12 @@ footer
     font-size: 16px;
     line-height: 20px;
     font-weight: 300;
-    
+
     display: inline-block;
-    
+
     width: 100%;
     padding: 7px 0 20px;
-    
+
     text-align: center;
     &:hover
         {
@@ -1826,15 +1830,15 @@ footer
     p
     {
         display: inline;
-        
+
         margin: 0;
     }
-    
+
     span[class^=icon-]
     {
         display: inline;
         position: relative;
-        
+
         display: inline-block;
         &.icon-info-icone{
             margin-right: 8px;
@@ -1847,7 +1851,7 @@ footer
             font-size: 16px;
             top: 4px;
         }
-        
+
     }
 }
 
@@ -1863,18 +1867,18 @@ footer
 .footer-top-links
 {
     font-weight: 300;
-    
+
     display: inline-block;
     float: left;
-    
+
     width: 25%;
     margin-bottom: 30px;
     h4
     {
         font-size: 11pt;
-        
+
         margin: 30px 0 20px;
-        
+
         text-transform: uppercase;
     }
     a
@@ -1887,24 +1891,24 @@ footer
 {
     font-size: 10pt;
     line-height: 53px;
-    
+
     width: 100%;
-    
+
     .icon-icone-lol
     {
         font-size: 17pt;
-        
+
         position: relative;
         top: 5px;
-        
+
         display: inline-block;
-        
+
         margin-right: 10px;
     }
     a
     {
         display: block;
-        
+
         @include link-hover;
     }
 }
@@ -1913,7 +1917,7 @@ footer
     li
     {
         display: block;
-        
+
         padding: 5px 0;
     }
 }
@@ -2136,7 +2140,7 @@ footer
     visibility: hidden;
     opacity:0;
     @include transition(opacity 0.3s linear);
-    
+
     .pannel-close{
         display: block;
         position: absolute;
@@ -2249,7 +2253,7 @@ footer
     padding: 15px 40px;
     font-size: 67px;
     font-weight: 800;
-    
+
     .price{
         position: relative;
         div{
@@ -2277,7 +2281,7 @@ footer
     .question_q{
         border-bottom: 2px solid lighten($grey, 10%);
         padding: 20px 0;
-        
+
         &.is-active{
             font-weight: 600;
         }
@@ -2395,7 +2399,7 @@ h2.contact-title {
         font-size: 1.1em;
         margin-bottom: 10px;
     }
-    
+
     input[type="text"]{
         height: 35px;
         padding-left: 10px;
@@ -2428,8 +2432,8 @@ h2.contact-title {
         }
     }
     .disabled{
-            background-color: #BDBDBD !important;
-            cursor: default !important;
+        background-color: #BDBDBD !important;
+        cursor: default !important;
     }
     select{
         height: 35px;
@@ -2512,7 +2516,7 @@ h2.contact-title {
     .container-wrapper{
         position: relative;
     }
-    
+
     #first{
         //margin-top: 100px;
     }

@@ -471,7 +471,7 @@ $(function () {
     $("body").on('click', '.btnVerif', function () {
         var homeId = $("select[name=numero]").val();
         if (homeId != "") {
-            window.location.href = "/LuxembourgOnline/internet/offres.html#" + $("input[name=zipcode]").val() + ";" + $("select[name=ville]").val() + ";" + $("select[name=rue]").val() + ";" + $("select[name=numero]").val();
+            window.location.href = "/internet/offres.html#" + $("input[name=zipcode]").val() + ";" + $("select[name=ville]").val() + ";" + $("select[name=rue]").val() + ";" + $("select[name=numero]").val();
         } else {
             alert('Entrez votre numéro de rue pour continuer...');
         }

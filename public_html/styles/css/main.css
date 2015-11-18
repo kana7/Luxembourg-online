@@ -4588,6 +4588,15 @@ h2.contact-title {
   position: relative;
   top: 16px; }
 
+.docItem .single-line {
+  display: inline-block;
+  margin-left: 10px; }
+.docItem ul, .docItem li {
+  display: block;
+  margin-bottom: 15px; }
+.docItem .link span {
+  display: block; }
+
 .dropdown > [data-trigger] {
   cursor: pointer; }
 

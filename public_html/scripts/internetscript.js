@@ -505,7 +505,6 @@ $(function () {
             if ($('#testDispo').hasClass('is-visible')) {
                 PopupModule.closePopup(event); //main.js
             }
-            alert($(this).attr('data-bool'));
             checkDispo($("select[name=numero]").val(), $(this).data('bool'));
         } else {
             alert('Entrez votre numéro de rue pour continuer...');

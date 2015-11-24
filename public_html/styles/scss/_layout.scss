@@ -422,10 +422,13 @@ header{
         }
         .arrow{
             fill: $grey;
+            opacity: 0.4;
+            @include transition(opacity 0.3s ease-in);
         }
         &:hover{
             .arrow{
-                fill: $dark-grey;
+                fill: $grey;
+                opacity: 1;
             }
         }
     }

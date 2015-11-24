@@ -2033,8 +2033,8 @@ header {
 #slider-contents .flickity-prev-next-button, #slider-magazine .flickity-prev-next-button {
   position: absolute;
   top: 50%;
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
   border: none;
   border-radius: 50%;
   background: none;
@@ -2042,14 +2042,21 @@ header {
   cursor: pointer;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
+  transform: translateY(-50%);
+  }
   #slider-contents .flickity-prev-next-button:focus, #slider-magazine .flickity-prev-next-button:focus {
     outline: 0;
     box-shadow: none; }
   #slider-contents .flickity-prev-next-button .arrow, #slider-magazine .flickity-prev-next-button .arrow {
-    fill: #c0c0c0; }
+    fill: #c0c0c0;
+    opacity: 0.4;
+    -moz-transition: opacity 0.3s ease-in;
+    -o-transition: opacity 0.3s ease-in;
+    -webkit-transition: opacity 0.3s ease-in;
+    transition: opacity 0.3s ease-in; }
   #slider-contents .flickity-prev-next-button:hover .arrow, #slider-magazine .flickity-prev-next-button:hover .arrow {
-    fill: #818181; }
+    fill: #c0c0c0;
+    opacity: 1; }
 
 #offers-section .gallery-cell, #equipement-section .gallery-cell, #promoFiber-content .gallery-cell {
   width: 100%;

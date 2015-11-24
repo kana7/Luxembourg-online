@@ -70,7 +70,7 @@ var popuptemplate = '<div id="testDispo" class="popup">' +
         '<select name="numero" value class="input-white select numero"></select>' +
         '<div style="text-align: center;">' +
         '<button type="button" class="btn-orange btnVerify verifyCp">Vérifiez les disponibilités</button>' +
-        '<button type="button" class="btn-orange btnVerify btnVerif2">Vérifiez les disponibilités</button>' +
+        '<button type="button" data-bool="true" class="btn-orange btnVerify btnVerif2">Vérifiez les disponibilités</button>' +
         '</div>' +
         '</div>' +
         '</div>' +
@@ -505,7 +505,7 @@ $(function () {
             if ($('#testDispo').hasClass('is-visible')) {
                 PopupModule.closePopup(event); //main.js
             }
-            checkDispo($("select[name=numero]").val(), true);
+            checkDispo($("select[name=numero]").val(), $(this).data('bool'));
         } else {
             alert('Entrez votre numéro de rue pour continuer...');
         }

@@ -1952,6 +1952,7 @@ footer
 }
 .table-tarifs{
     width: 100%;
+    margin-bottom: 15px;
     thead, tbody, tr{
         width: 100%;
     }
@@ -1985,7 +1986,6 @@ footer
         th{
             text-align: left;
             font-weight: 400;
-            width: 20%;
         }
         td{
             color: $dark-grey;
@@ -2001,12 +2001,17 @@ footer
             color: $blue;
             text-align: left;
             padding-left: 0;
+            padding-bottom: 0;
         }
+    }
+    th[data-zone]:hover, td[data-zone]:hover{
+        cursor: help;
     }
 }
 
 .table-details{
     width: 100%;
+    margin-bottom: 10px;
     thead, tbody, tr{
         width: 100%;
     }
@@ -2521,6 +2526,7 @@ h2.contact-title {
 .dropdown{
     &>[data-trigger]{
         cursor: pointer;
+        @include noselect;
     }
 }
 
@@ -2613,4 +2619,18 @@ h2.contact-title {
             position: absolute;
         }
     }
+}
+
+.zone {
+    display: none;
+    position: absolute;
+    top: 0px;
+    background: #FFF;
+    border: 1px solid $blue;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: left;
+    z-index: 999999;
+    max-width: 500px;
+    min-width: 300px;
 }

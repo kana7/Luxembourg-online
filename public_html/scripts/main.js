@@ -91,7 +91,7 @@ var DropDown = function (element) {
         _bindEvents();
     };
     var _bindEvents = function () {
-        $dropButton.on('click', _triggerDrop.bind(this));
+        $dropButton.on('click', _triggerDrop);
     };
     var _triggerDrop = function () {
         $dropButton.toggleClass('is-active');
@@ -198,11 +198,11 @@ var MenuMobile = (function () {
         _bindEvents();
     };
     var _bindEvents = function () {
-        $mobileButton.on('click', _toggleSideMenu.bind(this));
+        $mobileButton.on('click', _toggleSideMenu);
         $menuItems.on('click', function (event) {
             _showSubMenu(this, event);
         });
-        $backButtons.on('click', _hideSubMenu.bind(this));
+        $backButtons.on('click', _hideSubMenu);
         $document.on('click', function () {
             if (flag != "0") {
                 _closeSideMenu();
@@ -213,7 +213,7 @@ var MenuMobile = (function () {
         });
     };
 
-    var _toggleSideMenu = function (event) {
+    var _toggleSideMenu = function () {
         flag = "0";
         if ($contentSite.hasClass('open')) {
             _closeSideMenu();

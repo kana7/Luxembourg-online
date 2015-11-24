@@ -13,6 +13,9 @@
         <link rel="stylesheet" href="../styles/css/telephonie/telephonie.css">
         
         <script src="../scripts/vendor/picturefill.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
     </head>
     
     <body>
@@ -278,7 +281,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section-layout left-orientation section-shadow">
+            <section id="tarif-details" class="section-layout left-orientation section-shadow">
                 <div class="container-wrapper">
                     <div class="row clearfix">
                         <div class="phone-12 desk-6">
@@ -307,9 +310,14 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td><strong>National mobile</strong></td>
+                                                <td><strong>National fixe</strong></td>
                                                 <td>0,0314 <span class="exponent">€/minute</span></td>
                                                 <td>0,0157 <span class="exponent">€/minute</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>National mobile</strong></td>
+                                                <td>0,1892 <span class="exponent">€/minute</span></td>
+                                                <td>0,1639 <span class="exponent">€/minute</span></td>
                                             </tr>
                                             <tr>
                                                 <td><strong>International</strong></td>

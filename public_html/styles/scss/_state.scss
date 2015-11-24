@@ -491,7 +491,6 @@
             top: 74px;
         }
     }
-
     .bottom-menu-header-links{
         float: left;
     }
@@ -642,7 +641,6 @@
             left: 55px;
         }
     }
-
     #dispo{
         h3{
             font-size: 12pt !important;
@@ -911,6 +909,17 @@
     .offer-item-blue .item-header, .equipement-item-blue .item-header {
         padding: 18px 5px 15px;
         font-size: 22px;
+    }
+    #tarif-details{
+        height: 400px !important;
+        .section-subtitle{
+            font-size: 26px;
+        }
+    }
+    .table-tarifs{
+        &.table-tarifs-display-half{
+            width: 50%;
+        }
     }
 }
 

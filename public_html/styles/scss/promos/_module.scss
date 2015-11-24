@@ -1,11 +1,13 @@
 #promo-fibre{
-    background-image: url(../../../images/Promos/Accueil/Offre_Fibre4.jpg);
+    background-image: url(../../../images/Promos/Accueil/Promo_Fibre_672x320px.jpg);
 }
 #promo-internetTV{
-    background-image: url(../../../images/Promos/Accueil/Offre_internettv_4.jpg);
+    background-image: url(../../../images/Promos/Accueil/Promo_TV_672x320px.jpg);
 }
 
 #promo-fibre, #promo-internetTV{
+    background-position: center top;
+    background-size: auto 170px;
     .section-title{
         font-size: 33px;
         margin: 10px 0;

@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,400italic);
 #slider-contents .infos {
-  background-size: auto 320px; }
+  background-size: 672px auto; }
   #slider-contents .infos.image-1 {
     background-image: url(../../images/Homepage/SLIDER/Slider_672x320px.jpg); }
   #slider-contents .infos.image-2 {
@@ -12,7 +12,7 @@
 
 @media screen and (min-width: 672px) {
   #slider-contents .infos {
-    background-size: auto 450px; }
+    background-size: 1056px auto; }
     #slider-contents .infos.image-1 {
       background-image: url(../../images/Homepage/SLIDER/Slider_1056x450px.jpg); }
     #slider-contents .infos.image-2 {
@@ -23,7 +23,7 @@
       background-image: url(../../images/Homepage/SLIDER/Slider4_1056x450px.jpg); } }
 @media screen and (min-width: 1056px) {
   #slider-contents .infos {
-    background-size: auto 330px; }
+    background-size: 1302px auto; }
     #slider-contents .infos.image-1 {
       background-image: url(../../images/Homepage/SLIDER/Slider_1302x330px.jpg); }
     #slider-contents .infos.image-2 {

@@ -14,33 +14,28 @@
     }
 }
 
-
-@include media(phone){
-    #promo-fibre, #promo-internetTV{
-        background-size: auto 160px !important;
-    }
-}
 @include media(tab){
     #promo-fibre{
-        background-image: url(../../../images/Promos/Accueil/Offre_Fibre3.jpg);
+        background-image: url(../../../images/Promos/Accueil/Promo_Fibre_1056x450px.jpg);
     }
     #promo-internetTV{
-        background-image: url(../../../images/Promos/Accueil/Offre_internettv_3.jpg);
+        background-image: url(../../../images/Promos/Accueil/Promo_TV_1056x450px.jpg);
     }
-    #promo-fibre, #promo-internetTV{
-        background-size: auto 160px !important;
-    }
+
 }
 
 @include media(desk){
     #promo-fibre{
-        background-image: url(../../../images/Promos/Accueil/Offre_Fibre2.jpg);
+        background-image: url(../../../images/Promos/Accueil/Promo_Fibre_1920x400px.jpg);
     }
     #promo-internetTV{
-        background-image: url(../../../images/Promos/Accueil/Offre_internettv_2.jpg);
+        background-image: url(../../../images/Promos/Accueil/Promo_TV_1920x400px.jpg);
     }
     #promo-fibre, #promo-internetTV{
-        background-size: auto 100% !important;
+        background-size: 1920px auto;
+        height: 400px !important;
+    }
+    #promo-fibre, #promo-internetTV{
         .section-title{
             font-size: 50px;
             margin: 10px 0 15px;
@@ -51,9 +46,6 @@
             strong{
                 display: block;
             }
-        }
-        &.section-layout{
-            height: 400px !important;
         }
     }
     .promo-info{
@@ -109,13 +101,5 @@
 
 }
 @include media(lgdesk){
-    #promo-fibre{
-        background-image: url(../../../images/Promos/Accueil/Offre_Fibre1.jpg);
-    }
-    #promo-internetTV{
-        background-image: url(../../../images/Promos/Accueil/Offre_internettv_1.jpg);
-    }
-    #promo-fibre, #promo-internetTV{
-        background-size: auto 100% !important;
-    }
+
 }

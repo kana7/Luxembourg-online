@@ -3,7 +3,7 @@
 
 #slider-contents{
     .infos{
-        background-size: auto 320px;
+        background-size: 672px auto;
         &.image-1{
             background-image: url(../../images/Homepage/SLIDER/Slider_672x320px.jpg);
         }
@@ -22,7 +22,7 @@
 @include media(tab){
     #slider-contents{
         .infos{
-            background-size: auto 450px;
+            background-size: 1056px auto;
             &.image-1{
                 background-image: url(../../images/Homepage/SLIDER/Slider_1056x450px.jpg);
             }
@@ -41,7 +41,7 @@
 @include media(desk){
     #slider-contents{
         .infos{
-            background-size: auto 330px;
+            background-size: 1302px auto;
             &.image-1{
                 background-image: url(../../images/Homepage/SLIDER/Slider_1302x330px.jpg);
             }

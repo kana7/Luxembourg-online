@@ -8,6 +8,8 @@
         <link rel="shortcut icon" href="/favicon.ico">
         
         <link rel="stylesheet" href="../styles/css/main.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../styles/css/lightbox.css" />
         
         <script src="../scripts/vendor/picturefill.min.js"></script>
         <!--[if lt IE 9]>
@@ -284,14 +286,16 @@
                                     Les vitesses annoncées représentent le débit maximum envisageable et ne sont pas garanties.
                                     Le débit réel dépend :<br/>
                                     - de la distance entre l'adresse d'installation et la centrale téléphonique<br/>
-                                    - de votre installation interne (câblage, équipements).<br/>
-                                    Légalement, nous avons une obligation de moyen et non de résultat. Toutefois, si vous rencontrez des difficultés avec votre vitesse,
-                                    <a href="../divers/contact.html#form" target="blank_">contactez-nous</a></p>
+                                    - de votre installation interne (câblage, équipements, connexion par câble ou par wifi, distances entre les appareils...).<br/>
+                                    Pour plus d'information, vous pouvez consulter la <a href="../divers/assistance.html#document;3;" target="blank_">fiche signalétique</a>.
+                                    Si toutefois vous rencontrez des difficultés avec votre vitesse,
+                                    <a href="../divers/contact.html#form" target="blank_">contactez-nous</a>. Notre service Helpdesk vous
+                                    apportera toute l'aide dont vous avez besoin.</p>
                             </div>
                             
                             <div class="question dropdown">
                                 <div data-trigger class="question_q">Que signifient « upstream » (débit montant) », « downstream » (débit descendant) et Mbit/s ?</div>
-                                <p class="answer">Le terme « upstream » (ou débit montant) correspond à la vitesse à laquelle les données sont envoyées de votre ordinateur
+                                <p class="answer">« Upstream » (ou débit montant) correspond à la vitesse à laquelle les données sont envoyées de votre ordinateur
                                     vers Internet, c'est-à-dire à votre vitesse d’envoi.<br/>
                                     « Downstream » (ou débit descendant) désigne la vitesse de téléchargement, ou en d'autres termes la vitesse à laquelle les
                                     données provenant d’Internet se chargent sur votre ordinateur.<br/>
@@ -299,18 +303,18 @@
                                     megabit par seconde correspond à un volume de données transmis en une seconde. Les vitesses de connexion internet
                                     proposées par Luxembourg Online sont exprimées en Mbit/s.</p>
                             </div>
-                            
                             <div class="question dropdown">
-                                <div data-trigger class="question_q">A quoi sert le filtre (splitter) ?</div>
-                                <p class="answer">Le filtre se présente sous la forme d'un boîtier en plastique, livré systématiquement lorsque vous souscrivez à l'offre
-                                    LOL DSL 24.<br/>
+                                <div data-trigger class="question_q">À quoi sert le filtre (splitter) ?</div>
+                                <div class="answer popup-gallery">Le filtre se présente sous la forme d'un boîtier en plastique, livré systématiquement lorsque vous souscrivez à l'offre
+                                    LOL DSL 24 
+                                    <div class="popup-gallery" style="display: inline-block;"><a href="../images/internet/faq/filtre.jpg"><i class="fa fa-picture-o" style="color:#e75e0a;font-size: 18px;"></i></a></div>.<br/>
                                     Ce dispositif permet de séparer le signal entre les basses fréquences, utilisées par les appareils téléphoniques et les hautes
                                     fréquences, dédiées à la navigation Internet, à la téléphonie et à la TV.<br/>
                                     Sans filtre, des perturbations peuvent subvenir, rendant le réseau téléphonique et Internet très instable (grésillements, voix
                                     inaudibles, coupures). Il est donc indispensable de placer un filtre sur chaque prise murale sur laquelle est branché un
                                     équipement téléphonique.<br/>
                                     Par ailleurs, il est déconseillé d'utiliser plus de 3 téléphones sur une même ligne, car cela provoque un affaiblissement du
-                                    signal.</p>
+                                    signal.</div>
                             </div>
                             <div class="question dropdown">
                                 <div data-trigger class="question_q">Puis-je utiliser un modem provenant d'un autre fournisseur ?</div>
@@ -323,7 +327,7 @@
                                 <div data-trigger class="question_q">Que signifie « fair use » ?</div>
                                 <p class="answer">« Fair use » peut se traduire par « usage équitable » ou « usage raisonnable ». Cette politique vise à garantir une qualité de
                                     service équivalente pour tous, en limitant l'écart d'utilisation entre les utilisateurs. Cela signifie qu'en cas d'utilisation abusive,
-                                    Luxembourg Online se réserve le droit de suspendre ou de limiter votre accès aux services et ce, jusqu’à la fin de la période
+                                    Luxembourg Online se réserve le droit de suspendre ou de limiter votre accès aux services, et ce jusqu’à la fin de la période
                                     de facturation en cours.<br/>
                                     Afin d'éviter cela, pensez à vérifier régulièrement votre consommation dans votre <a href="#" class="openPopup" data-popup="0">Espace client</a>.</p>
                             </div>
@@ -334,7 +338,7 @@
                                     votre contrat sera résilié après la période de préavis.<br/>
                                     Vous pouvez également <a href="../documents/Transfert_Contrat_Internet.pdf" target="blank_">transférer votre contrat</a> à une tierce personne, qui reprendra les droits et les obligations liés à votre
                                     abonnement.<br/>
-                                    Pour plus d'information, <a href="../divers/contact.html#form" target="blank_">contactez-nous</a></p>
+                                    Pour plus d'information, <a href="../divers/contact.html#form" target="blank_">contactez-nous</a>.</p>
                             </div>
                         </div>
                     </div>
@@ -489,8 +493,31 @@
         
         <script src="../scripts/vendor/jquery.min.js"></script>
         <script src="../scripts/main.js"></script>
-        
+        <script src="../scripts/vendor/lightbox.js"></script>
         <script type="text/javascript" src="../scripts/analytics.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.popup-gallery').each(function () {
+                    $(this).magnificPopup({
+                        delegate: 'a',
+                        type: 'image',
+                        tLoading: 'Loading image #%curr%...',
+                        mainClass: 'mfp-img-mobile',
+                        gallery: {
+                            enabled: true,
+                            navigateByImgClick: true,
+                            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+                        },
+                        image: {
+                            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                            titleSrc: function (item) {
+                                return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+                            }
+                        }
+                    });
+                });
+            });
+        </script>
     </body>
     
 </html>

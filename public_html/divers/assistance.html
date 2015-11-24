@@ -259,7 +259,7 @@
             <section class="padding">
                 <div class="container-wrapper">
                     <div class="row">
-                        <div class="dropdown">
+                        <div class="dropdown" id="install-modem">
                             <h2 data-trigger class="section-subtitle divers-subtitle"><span class="icon-right-arrow"></span> Guide d'installation et d'utilisation</h2>
                             <div class="content-assistance">
                                 
@@ -353,6 +353,11 @@
                                         padding: 0 0 25px;
                                         padding-left: 40px;
                                     }
+                                    .tuto img{
+                                        height: 400px;
+                                        width: auto;
+                                        border: 1px solid;
+                                    }
                                 </style>
                                 
                                 Séléctionnez le guide:
@@ -413,7 +418,7 @@
                             </div>
                         </div>
                         <hr>
-                        <div class="dropdown">
+                        <div class="dropdown" id="config-email">
                             <h2 data-trigger class="section-subtitle divers-subtitle"><span class="icon-right-arrow"></span> Configuration E-mail</h2>
                             <div class="content-assistance">
                                 Séléctionnez la configuration:
@@ -565,9 +570,7 @@
                                                     <img class="emailImg" src="../images/aide/apple_mail.png" data-realwidth="150" data-realheight="150">
                                                 </td>
                                                 <td><h3>Apple Mail</h3>
-                                                    
-                                                    <ul class="emailPara">		
-                                                        
+                                                    <ul class="emailPara">
                                                         <li><span>Ouvrir l'application Mail. S'il s'agit de la première fois, vous serez directement invité à ajouter un compte. Si ce n'est pas le cas, sélectionner l'onglet Mail, puis Ajouter un compte.</span></li>
                                                         <li><span>La fenêtre "Choisir un compte mail à ajouter..." s'affiche. Sélectionnez "Ajouter un autre compte mail..." et cliquez sur Continuer.</span></li>
                                                         <li><span>Entrez vos informations comme indiqué ci-dessous puis cliquez sur Continuer</span></li>
@@ -596,7 +599,6 @@
                                             </tr>
                                         </tbody></table>
                                 </div>
-                                
                                 <div class="emailItem" style="display: none;">
                                     <table>
                                         <tbody><tr>
@@ -608,7 +610,8 @@
                                                     <a class="link-assistance" href="../documents/guides/mail_iphone.pdf" target="_blank">Configuration E-mail sous IOS</a>
                                                 </td>
                                             </tr>
-                                        </tbody></table>
+                                        </tbody>
+                                    </table>
                                 </div>
                                 
                                 <div class="emailItem" style="display: none;">
@@ -631,68 +634,157 @@
                             </div>
                         </div>
                         <hr>
-                        <div class="dropdown">
+                        <div class="dropdown" id="config-data">
                             <h2 data-trigger class="section-subtitle divers-subtitle"><span class="icon-right-arrow"></span> Configuration DATA/MMS</h2>
                             <div class="content-assistance">
-                                <table>
-                                    <tbody><tr>
-                                            <td style="padding-top:10px;">
-                                                <table class="config">
-                                                    <tbody><tr><td colspan="2" style="font-weight:bold;font-size:10pt;border-bottom:1px solid #e1e1e1;">Configuration Data</td></tr>
-                                                        <tr><td>Nom:</td><td>LOL Internet</td></tr>
-                                                        <tr><td>APN:</td><td>orange.lu</td></tr>
-                                                        <tr><td>Serveur Proxy:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
-                                                        <tr><td>Port:</td><td>8080</td></tr>
-                                                        <tr><td>Nom d'utilisateur:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
-                                                        <tr><td>Mot de passe:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
-                                                        <tr><td>Serveur:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
-                                                        <tr><td>MMSC:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
-                                                        <tr><td>Proxy-MMS:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
-                                                        <tr><td>Port MMS:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
-                                                        <tr><td>MCC:</td><td>270</td></tr>
-                                                        <tr><td>MNC:</td><td>99</td></tr>
-                                                        <tr><td>Type d'authentification:</td><td>PAP ou CHAP</td></tr>
-                                                        <tr><td>Type APN:</td><td>default, supl</td></tr>
-                                                    </tbody></table>
-                                            </td>
-                                            <td style="width:100px;"></td>
-                                            <td style="padding-top:10px;">
-                                                <table class="config">
-                                                    <tbody><tr><td colspan="2" style="font-weight:bold;font-size:10pt;border-bottom:1px solid #e1e1e1;">Configuration MMS</td></tr>
-                                                        <tr><td>Nom:</td><td>LOL MMS</td></tr>
-                                                        <tr><td>APN:</td><td>orange.lu</td></tr>
-                                                        <tr><td>Serveur Proxy:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
-                                                        <tr><td>Port:</td><td>8080</td></tr>
-                                                        <tr><td>Nom d'utilisateur:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
-                                                        <tr><td>Mot de passe:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
-                                                        <tr><td>Serveur:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
-                                                        <tr><td>MMSC:</td><td>http://mms.orange.lu</td></tr>
-                                                        <tr><td>Proxy-MMS:</td><td>212.88.139.44</td></tr>
-                                                        <tr><td>Port MMS:</td><td>8080</td></tr>
-                                                        <tr><td>MCC:</td><td>270</td></tr>
-                                                        <tr><td>MNC:</td><td>99</td></tr>
-                                                        <tr><td>Type d'authentification:</td><td>PAP ou CHAP</td></tr>
-                                                        <tr><td>Type APN:</td><td>mms</td></tr>
-                                                    </tbody></table>
-                                            </td>
-                                        </tr>
-                                    </tbody></table>
+                                Séléctionnez la configuration:
+                                <select class="dataList">
+                                    <option value="0">Paramètres de base</option>
+                                    <option value="1">Android</option>
+                                    <option value="2">Windows phone</option>
+                                    <option value="3">IOS</option>
+                                </select>
+                                <div class="dataItem">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding-top:10px;">
+                                                    <table class="config">
+                                                        <tbody><tr><td colspan="2" style="font-weight:bold;font-size:10pt;border-bottom:1px solid #e1e1e1;">Configuration Data</td></tr>
+                                                            <tr><td>Nom:</td><td>LOL Internet</td></tr>
+                                                            <tr><td>APN:</td><td>orange.lu</td></tr>
+                                                            <tr><td>Serveur Proxy:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
+                                                            <tr><td>Port:</td><td>8080</td></tr>
+                                                            <tr><td>Nom d'utilisateur:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
+                                                            <tr><td>Mot de passe:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
+                                                            <tr><td>Serveur:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
+                                                            <tr><td>MMSC:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
+                                                            <tr><td>Proxy-MMS:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
+                                                            <tr><td>Port MMS:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
+                                                            <tr><td>MCC:</td><td>270</td></tr>
+                                                            <tr><td>MNC:</td><td>99</td></tr>
+                                                            <tr><td>Type d'authentification:</td><td>PAP ou CHAP</td></tr>
+                                                            <tr><td>Type APN:</td><td>default, supl</td></tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td style="width:100px;"></td>
+                                                <td style="padding-top:10px;">
+                                                    <table class="config">
+                                                        <tbody><tr><td colspan="2" style="font-weight:bold;font-size:10pt;border-bottom:1px solid #e1e1e1;">Configuration MMS</td></tr>
+                                                            <tr><td>Nom:</td><td>LOL MMS</td></tr>
+                                                            <tr><td>APN:</td><td>orange.lu</td></tr>
+                                                            <tr><td>Serveur Proxy:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
+                                                            <tr><td>Port:</td><td>8080</td></tr>
+                                                            <tr><td>Nom d'utilisateur:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
+                                                            <tr><td>Mot de passe:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
+                                                            <tr><td>Serveur:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
+                                                            <tr><td>MMSC:</td><td>http://mms.orange.lu</td></tr>
+                                                            <tr><td>Proxy-MMS:</td><td>212.88.139.44</td></tr>
+                                                            <tr><td>Port MMS:</td><td>8080</td></tr>
+                                                            <tr><td>MCC:</td><td>270</td></tr>
+                                                            <tr><td>MNC:</td><td>99</td></tr>
+                                                            <tr><td>Type d'authentification:</td><td>PAP ou CHAP</td></tr>
+                                                            <tr><td>Type APN:</td><td>mms</td></tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="dataItem">
+                                    <div class="phone-12">
+                                        <h3>Activer les données mobiles</h3>
+                                        <ul class="emailPara">
+                                            <li><span>Appuyez sur le lanceur d'applications.</span></li>
+                                            <li><span>Sélectionnez :</span> "Paramètres" ou "Réglages".</li>
+                                            <li><span>En fonction de la marque et de la version Android de votre mobile, sélectionnez :</span></li> 
+                                            <ul class="emailPara2">
+                                                <li><span>"Sans fil et réseaux"</span></li>
+                                                <li><span>ou "Plus..."</span></li>
+                                                <li><span>ou "Données mobiles"</span></li>
+                                                <li><span>ou "Paramètres supplémentaires"</span></li>
+                                                <li><span>ou "Plus de réseaux" (depuis l'onglet "Connexions")</span></li>
+                                                <li><span>ou "Réseaux et partage de connexion"(depuis l'onglet "Réseaux").</span></li>
+                                            </ul>                                            
+                                            <li><span>Sélectionnez :</span> "Réseaux mobiles".</li>
+                                            <li><span>Assurez-vous que la première ligne "Données mobiles", "Données mobiles activées",
+                                                "Données activées" ou "Trafic de données mobiles" est bien cochée.</span></li>
+                                        </ul>
+                                        <h3>Activer l'itinérance des donées (roaming)</h3>
+                                        <ul class="emailPara">
+                                            <li><span>Rendez-vous dans "Paramètres" > "Réseaux Mobiles".</span></li>
+                                            <li><span>La case "Données mobiles" ou "Itinérance" doit être cochée.</span></li>
+                                        </ul><br/>
+                                        Si vous cochez cette case, un message d'information à propos vous informera des risques de facturation de la data
+                                        à l’étranger.<br/>
+                                        Attention, la data à l'étranger n'est pas toujours incluse dans votre forfait, vérifiez cela
+                                        avant d'activer l’itinérance.
+                                        <h3>Configuration des paramètres APN</h3>
+                                        <p>L'APN (Access Point Name) est le point d’accès qu'utilise votre téléphone pour accéder
+                                            au réseau Internet mobile de votre opérateur.</p><br/>
+                                        <h4>Etape 1 : accédez aux paramètres APN</h4>
+                                        <ul class="emailPara">
+                                            <li><span>Appuyez sur le lanceur d'applications.</span></li>
+                                            <li><span>Sélectionnez : </span>"Paramètres" ou "Réglages".</li>
+                                            <li><span>Suivant la marque et la version Android de votre mobile, sélectionnez :</span></li>
+                                            <ul class="emailPara2">
+                                                <li><span>"Sans fil et réseaux"</span></li>
+                                                <li><span>ou "Plus..."</span></li>
+                                                <li><span>ou "Données mobiles"</span></li>
+                                                <li><span>ou "Paramètres supplémentaires"</span></li>
+                                                <li><span>ou "Plus de réseaux" (depuis l'onglet "Connexions")</span></li>
+                                                <li><span>ou "Réseaux et partage de connexion"(depuis l'onglet "Réseaux").</span></li>
+                                            </ul>
+                                            <li>Sélectionnez :<span> "Réseaux mobiles".</span></li>
+                                            <li>Sélectionnez ensuite :<span>"Nom des points d'accès"</span>.</li>
+                                        </ul>
+                                        <p style="font-weight: bold;">Plusieurs cas sont possibles lorsque vous êtes sur la page de configuration des
+                                            paramètres APN :</p>
+                                        <p>- soit vous pouvez modifier les APN existants en appuyant simplement dessus et en renseignant les informations ci-après,</p>
+                                        <p>- soit vous enregistrez de nouveaux APN et supprimez les anciens APN déjà paramétrés.</p>
+                                        <h4>Etape 2 : configurer les paramètres APN LOL</h4>
+                                        <p>Renseignez les informations présentes dans la configuration <a class="link-assistance" href="../divers/assistance.html#config-data;0;" target="blank_">Paramètre de base</a>.</p>
+                                        <p>En cas de difficultés, faites appel à notre <a class="link-assistance" href="../divers/contact.html#helpdesk" target="blank_">service Helpdesk.</a></p>
+                                        <h3>Exemple sur un Samsung Galaxy S5</h3>
+                                        <div class="row tuto">
+                                            <div class="phone-12 desk-4">
+                                                <img src="../images/Divers/Assistance/Samsung1.png" alt=""/>
+                                            </div>
+                                            <div class="phone-12 desk-4">
+                                                <img src="../images/Divers/Assistance/Samsung2.png" alt=""/>
+                                            </div>
+                                            <div class="phone-12 desk-4">
+                                                <img src="../images/Divers/Assistance/Samsung3.png" alt=""/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dataItem">
+                                    <div class="phone-12">
+                                        <h3>Activer les données mobiles</h3>
+                                        <h3>Activer l'itinérance des donées (roaming)</h3>
+                                        <h3>Configuration des paramètres APN</h3>
+                                        <h3>Exemple sur un Windows Phone</h3>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <hr>
-                        <div class="dropdown">
+                        <div class="dropdown" id="speedtest">
                             <h2 data-trigger class="section-subtitle divers-subtitle"><span class="icon-right-arrow"></span> Speed Test</h2>
                             <div class="content-assistance">
                                 <iframe src="http://speedtest.internet.lu" width="638" height="590" style="border:none;"></iframe>
                             </div>
                         </div>
                         <hr>
-                        <div class="dropdown">
+                        <div class="dropdown" id="document">
                             <h2 data-trigger class="section-subtitle divers-subtitle"><span class="icon-right-arrow"></span>Documents utiles</h2>
                             <div class="content-assistance">
                                 Type de documents :
                                 <select class="docList" style="margin-top: 10px;">
-                                    <option value="0">Contrats d'abonement</option>
+                                    <option value="0">Contrats d'abonnement</option>
                                     <option value="1">Divers</option>
                                     <option value="2">Condition générales et particulières</option>
                                     <option value="3">Fiches signalétiques</option>
@@ -701,7 +793,7 @@
                                     <table>
                                         <tbody>
                                             <tr>
-                                                <td><h3>Contrats d'abonement</h3>
+                                                <td><h3>Contrats d'abonnement</h3>
                                                     <ul>
                                                         <li><a href="../documents/LOLFIBERDSL_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOL FIBER</div></a></li>
                                                         <li><a href="../documents/LOLCABLE_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOL CABLE</div></a></li>
@@ -926,6 +1018,7 @@
         
         <script src="../scripts/vendor/jquery.min.js"></script>
         <script src="../scripts/main.js"></script>
+        
         <script>
             $(function () {
                 //old
@@ -969,12 +1062,44 @@
 
                     $(".docItem").eq($(this).val()).show();
                 });
-                $(".docList").change();
-            });
+                $(".dataList").change();
+                $(".dataList").on("change", function () {
+                    $(".dataItem").hide();
 
+                    $(".dataItem").eq($(this).val()).show();
+                });
+                $(".dataList").change();
+                
+              
+                var vhash = (window.location.hash.split('#')[1]).split(";");
+                
+                if(vhash[0]==="install-modem"){
+                    $('#install-modem').find('.section-subtitle').addClass('is-active');
+                    $('#install-modem').find('.content-assistance').addClass('is-visible');
+                    $('.modemList').val(vhash[1]).change();
+                }
+                if(vhash[0]==="config-email"){
+                    $('#config-email').find('.section-subtitle').addClass('is-active');
+                    $('#config-email').find('.content-assistance').addClass('is-visible');
+                    $('.emailList').val(vhash[1]).change();
+                }
+                if(vhash[0]==="config-data"){
+                    $('#config-data').find('.section-subtitle').addClass('is-active');
+                    $('#config-data').find('.content-assistance').addClass('is-visible');
+                    $('.dataList').val(vhash[1]).change();
+                }
+                if(vhash[0]==="speedtest"){
+                    $('#speedtest').find('.section-subtitle').addClass('is-active');
+                    $('#speedtest').find('.content-assistance').addClass('is-visible');
+                    
+                }
+                if(vhash[0]==="document"){
+                    $('#document').find('.section-subtitle').addClass('is-active');
+                    $('#document').find('.content-assistance').addClass('is-visible');
+                    $('.docList').val(vhash[1]).change();
+                }
+            });
         </script>
-        
         <script type="text/javascript" src="../scripts/analytics.js"></script>
     </body>
-    
 </html>

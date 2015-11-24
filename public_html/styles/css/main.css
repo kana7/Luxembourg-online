@@ -2033,8 +2033,8 @@ header {
 #slider-contents .flickity-prev-next-button, #slider-magazine .flickity-prev-next-button {
   position: absolute;
   top: 50%;
-  width: 50px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
   border: none;
   border-radius: 50%;
   background: none;
@@ -2042,8 +2042,7 @@ header {
   cursor: pointer;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  }
+  transform: translateY(-50%); }
   #slider-contents .flickity-prev-next-button:focus, #slider-magazine .flickity-prev-next-button:focus {
     outline: 0;
     box-shadow: none; }
@@ -2478,7 +2477,7 @@ span[class^=icon-] {
 
 .footer-note {
   text-align: center;
-  font-size: 13px;
+  font-size: 12px;
   margin: 15px 0;
   line-height: 15px; }
   .footer-note span {

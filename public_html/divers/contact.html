@@ -604,6 +604,10 @@
                     $('#Object').val('Candidature');
                     scrollToElement($('#form'));
                 }
+                if(hash==="helpdesk"){
+                    $('#Object').val('Probleme_technique');
+                    scrollToElement($('#form'));
+                }
                 
                 $('input[name^="_FileName"').on('change', function () {
                     $('#fileList').append('<li data-input="' + $(this).attr('name') + '" title="destroy">' + this.value.replace("C:\\fakepath\\", "") + '<span class="icon-x-icone"></span></li>');

@@ -350,6 +350,11 @@
                                         padding: 0 0 25px;
                                         padding-left: 40px;
                                     }
+                                    .tuto img{
+                                        height: 400px;
+                                        width: auto;
+                                        border: 1px solid;
+                                    }
                                 </style>
                                 
                                 Séléctionnez le guide:
@@ -562,9 +567,7 @@
                                                     <img class="emailImg" src="../images/aide/apple_mail.png" data-realwidth="150" data-realheight="150">
                                                 </td>
                                                 <td><h3>Apple Mail</h3>
-                                                    
-                                                    <ul class="emailPara">		
-                                                        
+                                                    <ul class="emailPara">
                                                         <li><span>Ouvrir l'application Mail. S'il s'agit de la première fois, vous serez directement invité à ajouter un compte. Si ce n'est pas le cas, sélectionner l'onglet Mail, puis Ajouter un compte.</span></li>
                                                         <li><span>La fenêtre "Choisir un compte mail à ajouter..." s'affiche. Sélectionnez "Ajouter un autre compte mail..." et cliquez sur Continuer.</span></li>
                                                         <li><span>Entrez vos informations comme indiqué ci-dessous puis cliquez sur Continuer</span></li>
@@ -593,7 +596,6 @@
                                             </tr>
                                         </tbody></table>
                                 </div>
-                                
                                 <div class="emailItem" style="display: none;">
                                     <table>
                                         <tbody><tr>
@@ -605,7 +607,8 @@
                                                     <a class="link-assistance" href="../documents/guides/mail_iphone.pdf" target="_blank">Configuration E-mail sous IOS</a>
                                                 </td>
                                             </tr>
-                                        </tbody></table>
+                                        </tbody>
+                                    </table>
                                 </div>
                                 
                                 <div class="emailItem" style="display: none;">
@@ -631,13 +634,13 @@
                         <div class="dropdown" id="config-data">
                             <h2 data-trigger class="section-subtitle divers-subtitle"><span class="icon-right-arrow"></span> Configuration DATA/MMS</h2>
                             <div class="content-assistance">
-                                <!--Séléctionnez la configuration:
+                                Séléctionnez la configuration:
                                 <select class="dataList">
                                     <option value="0">Paramètres de base</option>
-                                    <option value="1">Adroid</option>
+                                    <option value="1">Android</option>
                                     <option value="2">Windows phone</option>
                                     <option value="3">IOS</option>
-                                </select>-->
+                                </select>
                                 <div class="dataItem">
                                     <table>
                                         <tbody>
@@ -687,18 +690,82 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <!--<div class="dataItem">
+                                <div class="dataItem">
                                     <div class="phone-12">
-                                        <h3>Android</h3>
-                                        La façon d'accéder aux paramètre de configuration diffère selon les mobiles.
-                                        <ul>
-                                            <li>Etape 1 : accédez au paramètre APN</li>
+                                        <h3>Activer les données mobiles</h3>
+                                        <ul class="emailPara">
+                                            <li><span>Appuyez sur le lanceur d'applications.</span></li>
+                                            <li><span>Sélectionnez :</span> "Paramètres" ou "Réglages".</li>
+                                            <li><span>En fonction de la marque et de la version Android de votre mobile, sélectionnez :</span></li> 
+                                            <ul class="emailPara2">
+                                                <li><span>"Sans fil et réseaux"</span></li>
+                                                <li><span>ou "Plus..."</span></li>
+                                                <li><span>ou "Données mobiles"</span></li>
+                                                <li><span>ou "Paramètres supplémentaires"</span></li>
+                                                <li><span>ou "Plus de réseaux" (depuis l'onglet "Connexions")</span></li>
+                                                <li><span>ou "Réseaux et partage de connexion"(depuis l'onglet "Réseaux").</span></li>
+                                            </ul>                                            
+                                            <li><span>Sélectionnez :</span> "Réseaux mobiles".</li>
+                                            <li><span>Assurez-vous que la première ligne "Données mobiles", "Données mobiles activées",
+                                                "Données activées" ou "Trafic de données mobiles" est bien cochée.</span></li>
                                         </ul>
+                                        <h3>Activer l'itinérance des donées (roaming)</h3>
+                                        <ul class="emailPara">
+                                            <li><span>Rendez-vous dans "Paramètres" > "Réseaux Mobiles".</span></li>
+                                            <li><span>La case "Données mobiles" ou "Itinérance" doit être cochée.</span></li>
+                                        </ul><br/>
+                                        Si vous cochez cette case, un message d'information à propos vous informera des risques de facturation de la data
+                                        à l’étranger.<br/>
+                                        Attention, la data à l'étranger n'est pas toujours incluse dans votre forfait, vérifiez cela
+                                        avant d'activer l’itinérance.
+                                        <h3>Configuration des paramètres APN</h3>
+                                        <p>L'APN (Access Point Name) est le point d’accès qu'utilise votre téléphone pour accéder
+                                            au réseau Internet mobile de votre opérateur.</p><br/>
+                                        <h4>Etape 1 : accédez aux paramètres APN</h4>
+                                        <ul class="emailPara">
+                                            <li><span>Appuyez sur le lanceur d'applications.</span></li>
+                                            <li><span>Sélectionnez : </span>"Paramètres" ou "Réglages".</li>
+                                            <li><span>Suivant la marque et la version Android de votre mobile, sélectionnez :</span></li>
+                                            <ul class="emailPara2">
+                                                <li><span>"Sans fil et réseaux"</span></li>
+                                                <li><span>ou "Plus..."</span></li>
+                                                <li><span>ou "Données mobiles"</span></li>
+                                                <li><span>ou "Paramètres supplémentaires"</span></li>
+                                                <li><span>ou "Plus de réseaux" (depuis l'onglet "Connexions")</span></li>
+                                                <li><span>ou "Réseaux et partage de connexion"(depuis l'onglet "Réseaux").</span></li>
+                                            </ul>
+                                            <li>Sélectionnez :<span> "Réseaux mobiles".</span></li>
+                                            <li>Sélectionnez ensuite :<span>"Nom des points d'accès"</span>.</li>
+                                        </ul>
+                                        <p style="font-weight: bold;">Plusieurs cas sont possibles lorsque vous êtes sur la page de configuration des
+                                            paramètres APN :</p>
+                                        <p>- soit vous pouvez modifier les APN existants en appuyant simplement dessus et en renseignant les informations ci-après,</p>
+                                        <p>- soit vous enregistrez de nouveaux APN et supprimez les anciens APN déjà paramétrés.</p>
+                                        <h4>Etape 2 : configurer les paramètres APN LOL</h4>
+                                        <p>Renseignez les informations présentes dans la configuration <a class="link-assistance" href="../divers/assistance.html#config-data;0;" target="blank_">Paramètre de base</a>.</p>
+                                        <p>En cas de difficultés, faites appel à notre <a class="link-assistance" href="../divers/contact.html#helpdesk" target="blank_">service Helpdesk.</a></p>
+                                        <h3>Exemple sur un Samsung Galaxy S5</h3>
+                                        <div class="row tuto">
+                                            <div class="phone-12 desk-4">
+                                                <img src="../images/Divers/Assistance/Samsung1.png" alt=""/>
+                                            </div>
+                                            <div class="phone-12 desk-4">
+                                                <img src="../images/Divers/Assistance/Samsung2.png" alt=""/>
+                                            </div>
+                                            <div class="phone-12 desk-4">
+                                                <img src="../images/Divers/Assistance/Samsung3.png" alt=""/>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="dataItem">
-                                    Windows phone : 
-                                </div>-->
+                                    <div class="phone-12">
+                                        <h3>Activer les données mobiles</h3>
+                                        <h3>Activer l'itinérance des donées (roaming)</h3>
+                                        <h3>Configuration des paramètres APN</h3>
+                                        <h3>Exemple sur un Windows Phone</h3>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <hr>
@@ -1006,22 +1073,22 @@
                 if(vhash[0]==="install-modem"){
                     $('#install-modem').find('.section-subtitle').addClass('is-active');
                     $('#install-modem').find('.content-assistance').addClass('is-visible');
-                    $('.docList').val(vhash[1]).change();
+                    $('.modemList').val(vhash[1]).change();
                 }
                 if(vhash[0]==="config-email"){
                     $('#config-email').find('.section-subtitle').addClass('is-active');
                     $('#config-email').find('.content-assistance').addClass('is-visible');
-                    $('.docList').val(vhash[1]).change();
+                    $('.emailList').val(vhash[1]).change();
                 }
                 if(vhash[0]==="config-data"){
                     $('#config-data').find('.section-subtitle').addClass('is-active');
                     $('#config-data').find('.content-assistance').addClass('is-visible');
-                    $('.docList').val(vhash[1]).change();
+                    $('.dataList').val(vhash[1]).change();
                 }
                 if(vhash[0]==="speedtest"){
                     $('#speedtest').find('.section-subtitle').addClass('is-active');
                     $('#speedtest').find('.content-assistance').addClass('is-visible');
-                    $('.docList').val(vhash[1]).change();
+                    
                 }
                 if(vhash[0]==="document"){
                     $('#document').find('.section-subtitle').addClass('is-active');

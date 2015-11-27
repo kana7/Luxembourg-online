@@ -92,9 +92,6 @@ function createDispoPopup() {
 }
 
 function checkDispo(homeId, boolean) {
-    /*if ($("select[name=ville]").val() == 98 || $("select[name=ville]").val() == 428 || $("select[name=ville]").val() == 159 || $("select[name=ville]").val() == 174) {
-        window.location.href = "http://www.internet.lu/internet/tarifs_detailles.html";
-    }*/
     if (homeId !== undefined || homeId !== null || homeId !== '') {
         $.ajax({
             url: "http://shop.internet.lu/Scripts/sql.exe?SqlDB=LOLShop&Sql=FOServiceMap:FOServiceListNew.phs&_HomeId=" + homeId,
@@ -493,21 +490,29 @@ $(function () {
     });
     $("body").on('click', '.btnVerif', function () {
         var homeId = $("select[name=numero]").val();
-        if (homeId != "") {
-            window.location.href = "/internet/offres.html#" + $("input[name=zipcode]").val() + ";" + $("select[name=ville]").val() + ";" + $("select[name=rue]").val() + ";" + $("select[name=numero]").val();
+        if ($("select[name=ville]").val() == 98 || $("select[name=ville]").val() == 428 || $("select[name=ville]").val() == 159 || $("select[name=ville]").val() == 174) {
+            window.location.href = "http://www.internet.lu/internet/cable.html";
         } else {
-            alert('Entrez votre numéro de rue pour continuer...');
+            if (homeId != "") {
+                window.location.href = "/internet/offres.html#" + $("input[name=zipcode]").val() + ";" + $("select[name=ville]").val() + ";" + $("select[name=rue]").val() + ";" + $("select[name=numero]").val();
+            } else {
+                alert('Entrez votre numéro de rue pour continuer...');
+            }
         }
     });
     $("body").on('click', '.btnVerif2', function (event) {
         var homeId = $("select[name=numero]").val();
-        if (homeId !== "") {
-            if ($('#testDispo').hasClass('is-visible')) {
-                PopupModule.closePopup(event); //main.js
-            }
-            checkDispo($("select[name=numero]").val(), $(this).data('bool'));
+        if ($("select[name=ville]").val() == 98 || $("select[name=ville]").val() == 428 || $("select[name=ville]").val() == 159 || $("select[name=ville]").val() == 174) {
+            window.location.href = "http://www.internet.lu/internet/cable.html";
         } else {
-            alert('Entrez votre numéro de rue pour continuer...');
+            if (homeId !== "") {
+                if ($('#testDispo').hasClass('is-visible')) {
+                    PopupModule.closePopup(event); //main.js
+                }
+                checkDispo($("select[name=numero]").val(), $(this).data('bool'));
+            } else {
+                alert('Entrez votre numéro de rue pour continuer...');
+            }
         }
     });
 });

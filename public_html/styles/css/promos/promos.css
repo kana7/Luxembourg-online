@@ -7,7 +7,8 @@
 
 #promo-fibre, #promo-internetTV {
   background-position: center top;
-  background-size: auto 170px; }
+  background-size: 100% auto;
+  }
   #promo-fibre .section-title, #promo-internetTV .section-title {
     font-size: 33px;
     margin: 10px 0; }

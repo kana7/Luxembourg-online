@@ -2017,6 +2017,7 @@ header {
 #slider-contents .flickity-page-dots, #slider-magazine .flickity-page-dots {
   width: 100%;
   bottom: -28px;
+  top: auto;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -4777,7 +4778,21 @@ h2.contact-title {
     padding-bottom: 15px;
     height: 100%; }
     #services .service#dispo .infos {
-      position: relative; } }
+      position: relative; }
+
+  .center-phone {
+    text-align: center; }
+
+  .center-phone-img {
+    float: none;
+    display: inline-block; }
+
+  .text-align-left {
+    text-align: left; }
+
+  .detailsTableCable {
+    margin-left: auto;
+    margin-right: auto; } }
 @media screen and (min-width: 672px) {
   .container-wrapper {
     width: 640px; }

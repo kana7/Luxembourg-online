@@ -97,6 +97,20 @@
             position: relative;
         }
     }
+    .center-phone{
+        text-align: center;
+    }
+    .center-phone-img{
+        float: none;
+        display: inline-block;
+    }
+    .text-align-left{
+        text-align: left;
+    }
+    .detailsTableCable{
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 @include media(tab){
     .container-wrapper{

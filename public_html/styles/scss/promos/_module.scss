@@ -1,13 +1,29 @@
 #promo-fibre{
-    background-image: url(../../../images/Promos/Accueil/Promo_Fibre_672x460px.jpg);
+    &:not(.not-accueil){
+        background-image: url(../../../images/promos/Accueil/Promo_Fibre_672x460px.jpg);
+    }
+    .not-accueil{
+        background-image: url(../../../images/promos/Promo_Fibre/Promo_Fibre_672x335px.jpg);
+    }
 }
 #promo-internetTV{
-    background-image: url(../../../images/Promos/Accueil/Promo_TV_672x460px.jpg);
+    &:not(.not-accueil){
+        background-image: url(../../../images/promos/Accueil/Promo_TV_672x460px.jpg);
+    }
+    &.not-accueil{
+        background-image: url(../../../images/promos/Promos_TVInternet/Promo_TV_672x335px.jpg);
+    }
 }
 
 #promo-fibre, #promo-internetTV{
     background-size: 672px auto;
-    height: 460px;
+    &:not(.not-accueil){
+        height: 460px;        
+    }
+    background-position: center top;
+    &.not-accueil{
+        height: 335px !important;
+    }
     .section-title{
         font-size: 28px;
         margin: 10px 0;

@@ -16,32 +16,37 @@
 
 @include media(tab){
     #promo-fibre{
-        background-image: url(../../../images/Promos/Accueil/Promo_Fibre_1056x450px.jpg);
+        background-image: url(../../../images/Promos/Accueil/Promo_Fibre_1056x430px.jpg);
     }
     #promo-internetTV{
-        background-image: url(../../../images/Promos/Accueil/Promo_TV_1056x450px.jpg);
+        background-image: url(../../../images/Promos/Accueil/Promo_TV_1056x430px.jpg);
     }
-
+    #promo-fibre, #promo-internetTV{
+        background-size: 1056px auto;
+        height: 430px !important;
+        padding: 5px 0 30px;
+    }
 }
 
 @include media(desk){
     #promo-fibre{
-        background-image: url(../../../images/Promos/Accueil/Promo_Fibre_1920x400px.jpg);
+        background-image: url(../../../images/Promos/Accueil/Promo_Fibre_1302x370px.jpg);
     }
     #promo-internetTV{
-        background-image: url(../../../images/Promos/Accueil/Promo_TV_1920x400px.jpg);
+        background-image: url(../../../images/Promos/Accueil/Promo_TV_1302x370px.jpg);
     }
     #promo-fibre, #promo-internetTV{
-        background-size: 1920px auto;
-        height: 400px !important;
+        background-size: 1302px auto;
+        height: 370px !important;
+        padding: 40px 0 30px;
     }
     #promo-fibre, #promo-internetTV{
         .section-title{
-            font-size: 50px;
+            font-size: 43px;
             margin: 10px 0 15px;
         }
         .section-description{
-            font-size: 27px;
+            font-size: 24px;
             line-height: 35px;
             strong{
                 display: block;
@@ -101,5 +106,15 @@
 
 }
 @include media(lgdesk){
-
+    #promo-fibre{
+        background-image: url(../../../images/Promos/Accueil/Promo_Fibre_1920x400px.jpg);
+    }
+    #promo-internetTV{
+        background-image: url(../../../images/Promos/Accueil/Promo_TV_1920x400px.jpg);
+    }
+    #promo-fibre, #promo-internetTV{
+        background-size: 1920px auto;
+        height: 400px !important;
+        padding: 30px 0;
+    }
 }

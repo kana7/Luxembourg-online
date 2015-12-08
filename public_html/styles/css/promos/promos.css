@@ -1,20 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,400italic);
 #promo-fibre {
-  background-image: url(../../../images/Promos/Accueil/Promo_Fibre_672x320px.jpg); }
+  background-image: url(../../../images/Promos/Accueil/Promo_Fibre_672x460px.jpg); }
 
 #promo-internetTV {
-  background-image: url(../../../images/Promos/Accueil/Promo_TV_672x320px.jpg); }
+  background-image: url(../../../images/Promos/Accueil/Promo_TV_672x460px.jpg); }
 
 #promo-fibre, #promo-internetTV {
-  background-position: center top;
-  background-size: 100% auto;
-  }
+  background-size: 672px auto;
+  height: 460px; }
   #promo-fibre .section-title, #promo-internetTV .section-title {
-    font-size: 33px;
+    font-size: 28px;
     margin: 10px 0; }
   #promo-fibre .section-description, #promo-internetTV .section-description {
     font-weight: 300;
-    font-size: 24px;
+    font-size: 21px;
     margin: 0 0 17px;
     line-height: 27px; }
     #promo-fibre .section-description strong, #promo-internetTV .section-description strong {
@@ -76,26 +75,32 @@
     padding-left: 5px !important; } }
 @media screen and (min-width: 672px) {
   #promo-fibre {
-    background-image: url(../../../images/Promos/Accueil/Promo_Fibre_1056x450px.jpg); }
+    background-image: url(../../../images/Promos/Accueil/Promo_Fibre_1056x430px.jpg); }
 
   #promo-internetTV {
-    background-image: url(../../../images/Promos/Accueil/Promo_TV_1056x450px.jpg); } }
-@media screen and (min-width: 1056px) {
-  #promo-fibre {
-    background-image: url(../../../images/Promos/Accueil/Promo_Fibre_1920x400px.jpg); }
-
-  #promo-internetTV {
-    background-image: url(../../../images/Promos/Accueil/Promo_TV_1920x400px.jpg); }
+    background-image: url(../../../images/Promos/Accueil/Promo_TV_1056x430px.jpg); }
 
   #promo-fibre, #promo-internetTV {
-    background-size: 1920px auto;
-    height: 400px !important; }
+    background-size: 1056px auto;
+    height: 430px !important;
+    padding: 5px 0 30px; } }
+@media screen and (min-width: 1056px) {
+  #promo-fibre {
+    background-image: url(../../../images/Promos/Accueil/Promo_Fibre_1302x370px.jpg); }
+
+  #promo-internetTV {
+    background-image: url(../../../images/Promos/Accueil/Promo_TV_1302x370px.jpg); }
+
+  #promo-fibre, #promo-internetTV {
+    background-size: 1302px auto;
+    height: 370px !important;
+    padding: 40px 0 30px; }
 
   #promo-fibre .section-title, #promo-internetTV .section-title {
-    font-size: 50px;
+    font-size: 43px;
     margin: 10px 0 15px; }
   #promo-fibre .section-description, #promo-internetTV .section-description {
-    font-size: 27px;
+    font-size: 24px;
     line-height: 35px; }
     #promo-fibre .section-description strong, #promo-internetTV .section-description strong {
       display: block; }
@@ -137,5 +142,16 @@
     padding-right: 15px; }
   .promo-offer-container div[class^=phone-]:last-child {
     padding-left: 15px; } }
+@media screen and (min-width: 1302px) {
+  #promo-fibre {
+    background-image: url(../../../images/Promos/Accueil/Promo_Fibre_1920x400px.jpg); }
+
+  #promo-internetTV {
+    background-image: url(../../../images/Promos/Accueil/Promo_TV_1920x400px.jpg); }
+
+  #promo-fibre, #promo-internetTV {
+    background-size: 1920px auto;
+    height: 400px !important;
+    padding: 30px 0; } }
 
 /*# sourceMappingURL=promos.css.map */

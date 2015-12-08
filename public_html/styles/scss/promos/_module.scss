@@ -1,20 +1,20 @@
 #promo-fibre{
-    background-image: url(../../../images/Promos/Accueil/Promo_Fibre_672x320px.jpg);
+    background-image: url(../../../images/Promos/Accueil/Promo_Fibre_672x460px.jpg);
 }
 #promo-internetTV{
-    background-image: url(../../../images/Promos/Accueil/Promo_TV_672x320px.jpg);
+    background-image: url(../../../images/Promos/Accueil/Promo_TV_672x460px.jpg);
 }
 
 #promo-fibre, #promo-internetTV{
-    background-position: center top;
-    background-size: auto 170px;
+    background-size: 672px auto;
+    height: 460px;
     .section-title{
-        font-size: 33px;
+        font-size: 28px;
         margin: 10px 0;
     }
     .section-description{
         font-weight: 300;
-        font-size: 24px;
+        font-size: 21px;
         margin: 0 0 17px;
         line-height: 27px;
         strong{

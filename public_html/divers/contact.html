@@ -281,9 +281,9 @@
                             <div class="contact-details align-center">
                                 <div class="title">E-mail : </div>
                                 <ul>
-                                    <li>Commercial : <span class="extra-bold">commercial@internet.lu</span></li>
-                                    <li>Helpdesk : <span class="extra-bold">helpdesk@internet.lu</span></li>
-                                    <li>Comptabilité : <span class="extra-bold">compta@internet.lu</span></li>
+                                    <li>Commercial : <span class="extra-bold"><a href="contact.html#demande_infos_commerciales">commercial@internet.lu</a></span></li>
+                                    <li>Helpdesk : <span class="extra-bold"><a href="contact.html#Probleme_technique">helpdesk@internet.lu</a></span></li>
+                                    <li>Comptabilité : <span class="extra-bold"><a href="contact.html#Facturation">compta@internet.lu</a></span></li>
                                 </ul>
                             </div>
                         </div>
@@ -515,7 +515,7 @@
                                     <span class="icon-clock-icone"></span>Lu-Sa: 9h00-18h00
                                 </li>
                                 <li>
-                                    <span class="icon-internet-ico"></span>commercial@internet.lu
+                                    <span class="icon-internet-ico"></span><a href="../divers/contact.html#demande_infos_commerciales" target="_blank">commercial@internet.lu</a>
                                 </li>
                             </ul>
                         </div>
@@ -599,19 +599,15 @@
         <script src="../scripts/main.js"></script>
         <script type="text/javascript">
             $(function () {
-                var hash = document.URL.substr(document.URL.indexOf('#')+1);
-                if(hash==="success"){
-                    alert('Votre formulaire a été envoyé avec succès. ');
+                var hash = document.URL.substr(document.URL.indexOf('#') + 1);
+                if (window.location.hash) {
+                    if (hash === "success") {
+                        alert('Votre formulaire a été envoyé avec succès. ');
+                    }else{
+                        $('#Object').val(hash);
+                        scrollToElement($('#form'));
+                    }
                 }
-                if(hash==="emploi"){
-                    $('#Object').val('Candidature');
-                    scrollToElement($('#form'));
-                }
-                if(hash==="helpdesk"){
-                    $('#Object').val('Probleme_technique');
-                    scrollToElement($('#form'));
-                }
-                
                 $('input[name^="_FileName"').on('change', function () {
                     $('#fileList').append('<li data-input="' + $(this).attr('name') + '" title="destroy">' + this.value.replace("C:\\fakepath\\", "") + '<span class="icon-x-icone"></span></li>');
                     if ($('#fileList>li').length === 3) {

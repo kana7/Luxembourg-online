@@ -58,8 +58,8 @@ function testEmail(emailAddress) {
 }
 
 //deplace la fenêtre jusqu'à un élément précis dans la page
-function scrollToElement(ele) {
-    $(window).scrollTop(ele.offset().top).scrollLeft(ele.offset().left);
+function scrollToElement(element) {
+    $(window).scrollTop(element.offset().top).scrollLeft(element.offset().left);
 }
 
 //size of viewport

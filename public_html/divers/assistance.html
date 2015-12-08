@@ -349,15 +349,33 @@
                                     .config td {
                                         padding: 5px;
                                     }
-                                    .content-assistance{
+                                    /*.content-assistance{
                                         padding: 0 0 25px;
                                         padding-left: 40px;
-                                    }
+                                    }*/
                                     .tuto img{
                                         height: 400px;
                                         width: auto;
                                         border: 1px solid;
+                                        margin-bottom: 10px;
                                     }
+                                    .dataItem .bold{
+                                        margin: 25px 15px;
+                                        font-size: 18px;
+                                    }
+                                    h3{                                        
+                                        margin: 20px 0 10px;
+                                        font-size: 16px;
+                                        font-weight: 400;
+                                        line-height: 20px;
+                                    }
+                                    p{
+                                        line-height: 23px;
+                                    }
+                                    .rTable { display: table; }
+                                    .rTableRow { display: table-row; }
+                                    .rTableBody { display: table-row-group;clear: both; }
+                                    .rTableCell, .rTableHead { display: table-cell; padding: 5px;}
                                 </style>
                                 
                                 Séléctionnez le guide:
@@ -421,7 +439,7 @@
                         <div class="dropdown" id="config-email">
                             <h2 data-trigger class="section-subtitle divers-subtitle"><span class="icon-right-arrow"></span> Configuration E-mail</h2>
                             <div class="content-assistance">
-                                Séléctionnez la configuration:
+                                <p>Séléctionnez la configuration :</p>
                                 <select class="emailList">
                                     <option value="0">Paramètres de base</option>
                                     <option value="1">Windows Mail</option>
@@ -432,203 +450,175 @@
                                     <option value="6">Android</option>
                                     
                                 </select>
-                                <div class="emailItem" style="display: block;">
-                                    <table>
-                                        <tbody><tr>
-                                                <td style="text-align: center;width: 131px;">
-                                                    <img class="emailImg" src="http://www.internet.lu/images/logo_blue2.png" style="margin-right:20px;" data-realwidth="110" data-realheight="35">
-                                                </td>
-                                                <td><h3>Paramètres de base</h3>
-                                                    
-                                                    <ul class="emailPara">
-                                                        <li><span>Serveur de courrier entrant (POP) : <b>pop.internet.lu</b></span></li>
-                                                        <li><span>Port: <b>110/connexion sans SSL</b></span></li>
-                                                        <li><span>Serveur de courrier sortant (SMTP) : <b>smtp.internet.lu</b></span></li>
-                                                        <li><span>Port SMTP: <b>25 ou 587 avec authentification activée/connexion sans SSL</b></span></li><b>
-                                                            <li><span>Adresse email : <b>votre adresse @internet.lu</b></span></li>
-                                                            <li><span>Nom d'utilisateur (username) : <b>votre username</b></span></li>
-                                                            <li><span>Mot de passe (password) : <b>votre password</b></span></li>
-                                                        </b></ul><b>
-                                                    </b></td>
-                                            </tr>
-                                        </tbody></table>
+                                <div class="emailItem" style="display: block;">                                    
+                                    <div class="phone-12 center-phone">
+                                        <div class="phone-12 desk-2 center-phone-img" style="text-align: center;width: 131px;display: inline-block">
+                                            <img class="emailImg" src="http://www.internet.lu/images/logo_blue2.png" style="margin-right:20px;" data-realwidth="110" data-realheight="35" alt="">
+                                        </div>
+                                        <div class="phone-12 desk-10 text-align-left" style="display: inline-block;margin-bottom: 20px;"><h3>Paramètres de base</h3>                                            
+                                            <ul class="emailPara">
+                                                <li><span>Serveur de courrier entrant (POP) : <b>pop.internet.lu</b></span></li>
+                                                <li><span>Port: <b>110/connexion sans SSL</b></span></li>
+                                                <li><span>Serveur de courrier sortant (SMTP) : <b>smtp.internet.lu</b></span></li>
+                                                <li><span>Port SMTP: <b>25 ou 587 avec authentification activée/connexion sans SSL</b></span></li>
+                                                <li><span>Adresse email : <b>votre adresse @internet.lu</b></span></li>
+                                                <li><span>Nom d'utilisateur (username) : <b>votre username</b></span></li>
+                                                <li><span>Mot de passe (password) : <b>votre password</b></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>                                    
+                                </div>                                
+                                <div class="emailItem" style="display: none;">
+                                    <div class="phone-12 center-phone">               
+                                        <div class="phone-12 desk-2 center-phone-img" style="text-align: center;width: 131px;">
+                                            <img class="emailImg" src="../images/aide/win_mail.png" data-realwidth="150" data-realheight="150" alt="">
+                                        </div>
+                                        <div class="phone-12 desk-10 text-align-left"><h3>Windows 10 Mail</h3>
+                                            <ul class="emailPara">
+                                                <li><span>Ouvrez l'application Mail (Courrier en francais), cliquez sur l'icone "Paramètres" puis "Comptes".</span></li>
+                                                <li><span>Cliquez ensuite sur "Ajouter un compte".</span></li>
+                                                <li><span>Sélectionnez "Autre compte".</span></li>
+                                                <li><span>Entrez l’adresse email et le mot de passe correspondant et selectionnez "Ouverture de session".</span></li>
+                                                <li><span>Cliquez sur "Terminé".</span></li>
+                                            </ul><br>
+                                            <p>Une fenêtre de confirmation apparait : votre compte est configuré ! Vous pouvez maintenant
+                                                envoyer et recevoir vos emails via Windows Mail 10.</p>
+                                            <p>Pour plus d'information : <a class="link-assistance" target="blank" href="https://support.office.com/fr-fr/article/Configurer-votre-compte-dans-lapplication-Courrier-pour-Windows-10-7ff79e8b-439b-4b47-8ff9-3f9a33166c60">Assistance Microsoft</a></p>
+                                            <div><h3>Windows 8 Mail</h3>
+                                                <p>L'application Windows 8 Mail n'est malheureusement pas compatible car elle ne supporte pas le protocole POP3 avec le service Mail Luxembourg Online.<br>
+                                                    Pour consulter vos emails, veuillez utiliser un autre client mail (Thunderbird, Outlook, ...) ou accéder à l'espace client du site www.internet.lu.</p>
+                                            </div>
+                                        </div>
+                                    </div>                             
+                                </div>
+                                <div class="emailItem" style="display: none;">
+                                    <div class="phone-12 center-phone">
+                                        <div class="phone-12 desk-2 center-phone-img" style="text-align: center;width: 131px;">
+                                            <img class="emailImg" src="../images/aide/outlook_2013.png" data-realwidth="150" data-realheight="147" alt="">
+                                        </div>
+                                        <div class="phone-12 desk-10 text-align-left"><h3>Outlook (valable pour Outlook 2010,2013 et 2016)</h3>                                            
+                                            <ul class="emailPara">
+                                                <li><span>Démarrez Outlook.</span></li>
+                                                <li><span>Dans la barre de menu, cliquez sur Fichier et ensuite sur Ajouter un compte.</span></li>                                                        
+                                                <li><span>Cochez la case "Configuration manuelle ou types de serveurs supplémentaires" et cliquez sur Suivant.</span></li>
+                                                <li><span>Cochez la case "POP ou IMAP" et cliquez sur Suivant.</span></li>
+                                                <li><span>Remplissez les champs comme indiqué ci-dessous et cliquez sur le bouton "Paramètres supplémentaires".</span></li>
+                                                <ul class="emailPara2">
+                                                    <li>Votre nom : <span>introduisez votre prénom et votre nom de famille.</span></li>
+                                                    <li>Adresse de messagerie : <span>introduisez votre adresse e-mail.</span></li>
+                                                    <li>Type de compte : <span>sélectionnez <b>POP</b> dans le menu déroulant.</span></li>
+                                                    <li>Serveur de courrier entrant : <span>introduisez <b>pop.internet.lu</b> dans ce champ.</span></li>
+                                                    <li>Serveur de courrier sortant (SMTP) : <span>introduisez <b>smtp.internet.lu</b> dans ce champ.</span></li>
+                                                    <li>Nom d'utilisateur : <span>introduisez votre nom d'utilisateur.</span></li>
+                                                    <li>Mot de passe : <span>introduisez votre mot de passe. Si vous le souhaitez, vous pouvez cocher la case "Mémoriser le mot de passe".</span></li>
+                                                </ul>
+                                                <li><span>Cliquez ensuite sur "Paramètres supplémentaires ..."</span></li>
+                                                <ul class="emailPara2">
+                                                    <li>Allez dans l'onglet Options avancées, remplissez les champs comme indiqué ci-dessous et cliquez sur le bouton OK.</li>
+                                                    <li>Utilisez le type de connexion chiffrée suivant : <span>sélectionnez <b>aucun</b>.</span></li>
+                                                    <li>Serveur entrant (POP) : <span>introduisez <b>110</b></span>.</li>
+                                                    <li>Serveur de courrier sortant (SMTP) : <span>introduisez <b>25 ou 587</b>.</span></li>                                                            
+                                                </ul>
+                                                <li><span>Cliquez sur Suivant, puis sur Fermer et ensuite sur Terminer.</span></li>                                                
+                                                <li><span>Vous pouvez désormais envoyer et recevoir vos e-mails via Outlook.</span></li>                                                
+                                            </ul>
+                                            <p>Pour plus d'information : <a class="link-assistance" target="blank" href="https://support.microsoft.com/fr-fr/kb/286197">Assistance Microsoft</a></p>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                <div class="emailItem" style="display: none;">
+                                    <div class="phone-12 center-phone">
+                                        <div class="phone-12 desk-2 center-phone-img" style="text-align: center;width: 131px;">
+                                            <img class="emailImg" src="../images/aide/outlook_2007.png" data-realwidth="150" data-realheight="137" alt="">
+                                        </div>
+                                        <div class="phone-12 desk-10 text-align-left"><h3>Outlook 2007</h3>
+                                            <ul class="emailPara" style="margin-bottom:20px;">
+                                                <li><span>Dans la barre de menu, cliquez sur Outils et ensuite sur Paramètres du compte.</span></li>
+                                                <li><span>Allez dans l'onglet Messagerie et cliquez sur Nouveau.</span></li>
+                                                <li><span>Cochez la case "Microsoft Exchange, POP3, IMAP ou HTTP" et cliquez sur Suivant.</span></li>
+                                                <li><span>Cochez la case "Configurer manuellement les paramètres du serveur ou les types de serveurs supplémentaires" et cliquez sur Suivant.</span></li>
+                                                <li><span>Cochez la case "Messagerie Internet" et cliquez sur Suivant.</span></li>
+                                                <li><span>Remplissez les champs comme indiqué ci-dessous et cliquez sur le bouton "Paramètres supplémentaires".</span></li>
+                                                <ul class="emailPara2">
+                                                    <li>Votre nom : <span>introduisez votre nom.</span></li>
+                                                    <li>Adresse de messagerie : <span>introduisez votre adresse e-mail.</span></li>
+                                                    <li>Type de compte : <span>sélectionnez <b>POP3</b> dans le menu déroulant.</span></li>
+                                                    <li>Serveur de courrier entrant : <span>introduisez <b>pop.internet.lu</b> dans ce champ.</span></li>
+                                                    <li>Serveur de courrier sortant (SMTP) : <span>introduisez <b>smtp.internet.lu</b> dans ce champ.</span></li>
+                                                    <li>Nom d’utilisateur : <span>réintroduisez votre nom d'utilisateur.</span></li>
+                                                    <li>Mot de passe : <span>introduisez votre mot de passe. Si vous le souhaitez, vous pouvez cocher la case " Mémoriser le mot de passe".</span></li>
+                                                </ul>
+                                                <li><span>Allez dans l’onglet Options avancées, complétez les champs comme décrit ci-dessous et cliquez sur le bouton OK.</span></li>
+                                                <ul class="emailPara2">
+                                                    <li>Serveur entrant (IMAP) : <span>introduisez <b>110</b>.</span></li>
+                                                    <li>Ce serveur nécessite une connexion chiffrée (SSL) : <span>NE PAS cocher cette case</span></li>
+                                                    <li>Serveur sortant (SMTP) : <span>introduisez <b>25 ou 587</b>.</span></li>
+                                                    <li>Utilisez le type de connexion chiffrée suivant : <span>sélectionnez <b>aucune</b>.</span></li>
+                                                </ul>
+                                                <li><span>Cliquez sur Suivant, ensuite sur Terminer.</span></li>
+                                                
+                                                <li><span>Vous pouvez désormais envoyer et recevoir vos e-mails via Outlook 2007.</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>                                        
                                 </div>
                                 
                                 <div class="emailItem" style="display: none;">
-                                    <table>
-                                        <tbody><tr>
-                                                <td style="text-align: center;width: 131px;">
-                                                    <img class="emailImg" src="../images/aide/win_mail.png" data-realwidth="150" data-realheight="150">
-                                                </td>
-                                                <td><h3>Windows 10 Mail</h3>
-                                                    <ul class="emailPara">				
-                                                        <li><span>Ouvrez l'application Mail (Courrier en francais), cliquez sur l'icone "Paramètres" puis "Comptes".</span></li>
-                                                        <li><span>Cliquez ensuite sur "Ajouter un compte".</span></li>
-                                                        <li><span>Sélectionnez "Autre compte".</span></li>
-                                                        <li><span>Entrez l’adresse email et le mot de passe correspondant et selectionnez "Ouverture de session".</span></li>
-                                                        <li><span>Cliquez sur "Terminé".</span></li>
-                                                    </ul><br>
-                                                    <p>Une fenêtre de confirmation apparait : votre compte est configuré ! Vous pouvez maintenant
-                                                        envoyer et recevoir vos emails via Windows Mail 10.</p>
-                                                    <p>Pour plus d'information : <a class="link-assistance" target="blank" href="https://support.office.com/fr-fr/article/Configurer-votre-compte-dans-lapplication-Courrier-pour-Windows-10-7ff79e8b-439b-4b47-8ff9-3f9a33166c60">Assistance Microsoft</a></p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td><h3>Windows 8 Mail</h3>
-                                                    <p>L'application Windows 8 Mail n'est malheureusement pas compatible car elle ne supporte pas le protocole POP3 avec le service Mail Luxembourg Online.<br>
-                                                        Pour consulter vos emails, veuillez utiliser un autre client mail (Thunderbird, Outlook, ...) ou accéder à l'espace client du site www.internet.lu.</p>
-                                                </td>
-                                            </tr>
-                                        </tbody></table>
+                                    <div class="phone-12 center-phone">
+                                        <div class="phone-12 desk-2 center-phone-img" style="text-align: center;width: 131px;">
+                                            <img class="emailImg" src="../images/aide/apple_mail.png" data-realwidth="150" data-realheight="150" alt="">
+                                        </div>
+                                        <div class="phone-12 desk-10 text-align-left"><h3>Apple Mail</h3>
+                                            <ul class="emailPara">
+                                                <li><span>Ouvrir l'application Mail. S'il s'agit de la première fois, vous serez directement invité à ajouter un compte. Si ce n'est pas le cas, sélectionner l'onglet Mail, puis Ajouter un compte.</span></li>
+                                                <li><span>La fenêtre "Choisir un compte mail à ajouter..." s'affiche. Sélectionnez "Ajouter un autre compte mail..." et cliquez sur Continuer.</span></li>
+                                                <li><span>Entrez vos informations comme indiqué ci-dessous puis cliquez sur Continuer</span></li>
+                                                <ul class="emailPara2">
+                                                    <li>Nom complet : <span> introduisez votre nom tel que vous souhaitez qu'il apparaisse.</span></li>
+                                                    <li>Adresse e-mail : <span>introduisez votre adresse e-mail complète.</span></li>
+                                                    <li>Mot de passe: introduisez le mot de passe associé à votre compte de messagerie.</li>
+                                                </ul>
+                                                <li><span>Mot de passe: introduisez le mot de passe associé à votre compte de messagerie.</span></li>
+                                                <ul class="emailPara2">
+                                                    <li>Type de compte : <span>sélectionnez <b>POP</b>.</span></li>
+                                                    <li>Description : <span>vous pouvez donner un nom à votre compte (facultatif)</span></li>
+                                                    <li>Serveur de réception : <span>introduisez <b>pop.internet.lu</b> dans ce champ.</span></li>
+                                                    <li>Nom d'utilisateur : <span>introduisez votre adresse e-mail</span></li>
+                                                    <li>Mot de passe : <span>si ce champ n'a pas été rempli automatiquement, réintroduisez ici votre mot de passe.</span></li>
+                                                </ul>
+                                                <li><span>A la fin, selectionner à nouveau Continuer</span></li>
+                                                <li><span>Des informations supplémentaires vous sont demandées. Saisissez-les comme indiqué ci-dessous.</span></li>
+                                                <ul class="emailPara2">
+                                                    <li>Path prefix : <span>laisser ce champ vide.</span></li>
+                                                </ul>
+                                                <li><span>Vous pouvez désormais envoyer et recevoir vos e-mails via Apple Mail.</span></li>                                                        
+                                            </ul>
+                                            <p>Pour pour d'information : <a class="link-assistance" target="blank" href="https://support.apple.com/kb/PH22275?viewlocale=fr_FR&locale=fr_FR">Assistance mail Apple</a></p>
+                                        </div>
+                                    </div>                                    
                                 </div>
                                 <div class="emailItem" style="display: none;">
-                                    <table>
-                                        <tbody><tr>
-                                                <td style="text-align: center;width: 131px;">
-                                                    <img class="emailImg" src="../images/aide/outlook_2013.png" data-realwidth="150" data-realheight="147">
-                                                </td>
-                                                <td><h3>Outlook (valable pour Outlook 2010,2013 et 2016)</h3>
-                                                    
-                                                    <ul class="emailPara">
-                                                        <li><span>Démarrez Outlook.</span></li>
-                                                        <li><span>Dans la barre de menu, cliquez sur Fichier et ensuite sur Ajouter un compte.</span></li>                                                        
-                                                        <li><span>Cochez la case "Configuration manuelle ou types de serveurs supplémentaires" et cliquez sur Suivant.</span></li>
-                                                        <li><span>Cochez la case "POP ou IMAP" et cliquez sur Suivant.</span></li>
-                                                        <li><span>Remplissez les champs comme indiqué ci-dessous et cliquez sur le bouton "Paramètres supplémentaires".</span></li>
-                                                        <ul class="emailPara2">
-                                                            <li>Votre nom : <span>introduisez votre prénom et votre nom de famille.</span></li>
-                                                            <li>Adresse de messagerie : <span>introduisez votre adresse e-mail.</span></li>
-                                                            <li>Type de compte : <span>sélectionnez <b>POP</b> dans le menu déroulant.</span></li>
-                                                            <li>Serveur de courrier entrant : <span>introduisez <b>pop.internet.lu</b> dans ce champ.</span></li>
-                                                            <li>Serveur de courrier sortant (SMTP) : <span>introduisez <b>smtp.internet.lu</b> dans ce champ.</span></li>
-                                                            <li>Nom d'utilisateur : <span>introduisez votre nom d'utilisateur.</span></li>
-                                                            <li>Mot de passe : <span>introduisez votre mot de passe. Si vous le souhaitez, vous pouvez cocher la case "Mémoriser le mot de passe".</span></li>
-                                                        </ul>
-                                                        <li><span>Cliquez ensuite sur "Paramètres supplémentaires ..."</span></li>
-                                                        <ul class="emailPara2">
-                                                            <li>Allez dans l'onglet Options avancées, remplissez les champs comme indiqué ci-dessous et cliquez sur le bouton OK.</li>
-                                                            <li>Utilisez le type de connexion chiffrée suivant : <span>sélectionnez <b>aucun</b>.</span></li>
-                                                            <li>Serveur entrant (POP) : <span>introduisez <b>110</b></span>.</li>
-                                                            <li>Serveur de courrier sortant (SMTP) : <span>introduisez <b>25 ou 587</b>.</span></li>                                                            
-                                                        </ul>
-                                                        <li><span>Cliquez sur Suivant, puis sur Fermer et ensuite sur Terminer.</span></li>
-                                                        
-                                                        <li><span>Vous pouvez désormais envoyer et recevoir vos e-mails via Outlook.</span></li>
-                                                        
-                                                    </ul>
-                                                    <p>Pour plus d'information : <a class="link-assistance" target="blank" href="https://support.microsoft.com/fr-fr/kb/286197">Assistance Microsoft</a></p>
-                                                </td>
-                                            </tr>
-                                        </tbody></table>
-                                </div>
-                                <div class="emailItem" style="display: none;">
-                                    <table>
-                                        <tbody><tr>
-                                                <td style="text-align: center;width: 131px;">
-                                                    <img class="emailImg" src="../images/aide/outlook_2007.png" data-realwidth="150" data-realheight="137">
-                                                </td>
-                                                <td><h3>Outlook 2007</h3>
-                                                    
-                                                    
-                                                    <ul class="emailPara">
-                                                        <li><span>Dans la barre de menu, cliquez sur Outils et ensuite sur Paramètres du compte.</span></li>
-                                                        <li><span>Allez dans l'onglet Messagerie et cliquez sur Nouveau.</span></li>
-                                                        <li><span>Cochez la case "Microsoft Exchange, POP3, IMAP ou HTTP" et cliquez sur Suivant.</span></li>
-                                                        <li><span>Cochez la case "Configurer manuellement les paramètres du serveur ou les types de serveurs supplémentaires" et cliquez sur Suivant.</span></li>
-                                                        <li><span>Cochez la case "Messagerie Internet" et cliquez sur Suivant.</span></li>
-                                                        <li><span>Remplissez les champs comme indiqué ci-dessous et cliquez sur le bouton "Paramètres supplémentaires".</span></li>
-                                                        <ul class="emailPara2">
-                                                            <li>Votre nom : <span>introduisez votre nom.</span></li>
-                                                            <li>Adresse de messagerie : <span>introduisez votre adresse e-mail.</span></li>
-                                                            <li>Type de compte : <span>sélectionnez <b>POP3</b> dans le menu déroulant.</span></li>
-                                                            <li>Serveur de courrier entrant : <span>introduisez <b>pop.internet.lu</b> dans ce champ.</span></li>
-                                                            <li>Serveur de courrier sortant (SMTP) : <span>introduisez <b>smtp.internet.lu</b> dans ce champ.</span></li>
-                                                            <li>Nom d’utilisateur : <span>réintroduisez votre nom d'utilisateur.</span></li>
-                                                            <li>Mot de passe : <span>introduisez votre mot de passe. Si vous le souhaitez, vous pouvez cocher la case " Mémoriser le mot de passe".</span></li>
-                                                        </ul>
-                                                        <li><span>Allez dans l’onglet Options avancées, complétez les champs comme décrit ci-dessous et cliquez sur le bouton OK.</span></li>
-                                                        <ul class="emailPara2">
-                                                            <li>Serveur entrant (IMAP) : <span>introduisez <b>110</b>.</span></li>
-                                                            <li>Ce serveur nécessite une connexion chiffrée (SSL) : <span>NE PAS cocher cette case</span></li>
-                                                            <li>Serveur sortant (SMTP) : <span>introduisez <b>25 ou 587</b>.</span></li>
-                                                            <li>Utilisez le type de connexion chiffrée suivant : <span>sélectionnez <b>aucune</b>.</span></li>
-                                                        </ul>
-                                                        <li><span>Cliquez sur Suivant, ensuite sur Terminer.</span></li>
-                                                        
-                                                        <li><span>Vous pouvez désormais envoyer et recevoir vos e-mails via Outlook 2007.</span></li>
-                                                    </ul>
-                                                </td>
-                                            </tr>
-                                        </tbody></table>
+                                    <div class="phone-12 center-phone">
+                                        <div class="phone-12 desk-2 center-phone-img" style="text-align: center;width: 131px;">
+                                            <img class="emailImg" src="http://www.internet.lu/lolcloud/img/Aide/IOS/lolcloud_logo_ios.png" style="margin-right:20px;" data-realwidth="150" data-realheight="150" alt="">
+                                        </div>
+                                        <div class="phone-12 desk-10 text-align-left" style="margin-bottom: 20px"><h3>iOS</h3>                                            
+                                            <a class="link-assistance" href="../documents/guides/mail_iphone.pdf" target="_blank">Configuration E-mail sous IOS</a>
+                                        </div>
+                                    </div>                                    
                                 </div>
                                 
-                                <div class="emailItem" style="display: none;">
-                                    <table>
-                                        <tbody><tr>
-                                                <td style="text-align: center;width: 131px;">
-                                                    <img class="emailImg" src="../images/aide/apple_mail.png" data-realwidth="150" data-realheight="150">
-                                                </td>
-                                                <td><h3>Apple Mail</h3>
-                                                    <ul class="emailPara">
-                                                        <li><span>Ouvrir l'application Mail. S'il s'agit de la première fois, vous serez directement invité à ajouter un compte. Si ce n'est pas le cas, sélectionner l'onglet Mail, puis Ajouter un compte.</span></li>
-                                                        <li><span>La fenêtre "Choisir un compte mail à ajouter..." s'affiche. Sélectionnez "Ajouter un autre compte mail..." et cliquez sur Continuer.</span></li>
-                                                        <li><span>Entrez vos informations comme indiqué ci-dessous puis cliquez sur Continuer</span></li>
-                                                        <ul class="emailPara2">
-                                                            <li>Nom complet : <span> introduisez votre nom tel que vous souhaitez qu'il apparaisse.</span></li>
-                                                            <li>Adresse e-mail : <span>introduisez votre adresse e-mail complète.</span></li>
-                                                            <li>Mot de passe: introduisez le mot de passe associé à votre compte de messagerie.</li>
-                                                        </ul>
-                                                        <li><span>Mot de passe: introduisez le mot de passe associé à votre compte de messagerie.</span></li>
-                                                        <ul class="emailPara2">
-                                                            <li>Type de compte : <span>sélectionnez <b>POP</b>.</span></li>
-                                                            <li>Description : <span>vous pouvez donner un nom à votre compte (facultatif)</span></li>
-                                                            <li>Serveur de réception : <span>introduisez <b>pop.internet.lu</b> dans ce champ.</span></li>
-                                                            <li>Nom d'utilisateur : <span>introduisez votre adresse e-mail</span></li>
-                                                            <li>Mot de passe : <span>si ce champ n'a pas été rempli automatiquement, réintroduisez ici votre mot de passe.</span></li>
-                                                        </ul>
-                                                        <li><span>A la fin, selectionner à nouveau Continuer</span></li>
-                                                        <li><span>Des informations supplémentaires vous sont demandées. Saisissez-les comme indiqué ci-dessous.</span></li>
-                                                        <ul class="emailPara2">
-                                                            <li>Path prefix : <span>laisser ce champ vide.</span></li>
-                                                        </ul>
-                                                        <li><span>Vous pouvez désormais envoyer et recevoir vos e-mails via Apple Mail.</span></li>                                                        
-                                                    </ul>
-                                                    <p>Pour pour d'information : <a class="link-assistance" target="blank" href="https://support.apple.com/kb/PH22275?viewlocale=fr_FR&locale=fr_FR">Assistance mail Apple</a></p>
-                                                </td>
-                                            </tr>
-                                        </tbody></table>
-                                </div>
-                                <div class="emailItem" style="display: none;">
-                                    <table>
-                                        <tbody><tr>
-                                                <td style="text-align: center;width: 131px;">
-                                                    <img class="emailImg" src="http://www.internet.lu/lolcloud/img/Aide/IOS/lolcloud_logo_ios.png" style="margin-right:20px;" data-realwidth="150" data-realheight="150">
-                                                </td>
-                                                <td><h3>iOS</h3>
-                                                    
-                                                    <a class="link-assistance" href="../documents/guides/mail_iphone.pdf" target="_blank">Configuration E-mail sous IOS</a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                
-                                <div class="emailItem" style="display: none;">
-                                    <table>
-                                        <tbody>
-                                            <tr>
-                                                <td style="text-align: center;width: 131px;">
-                                                    <img class="emailImg" src="http://www.internet.lu/lolcloud/img/Aide/Android/lolcloud_logo_android.png" style="margin-right:20px;" data-realwidth="150" data-realheight="150">
-                                                </td>
-                                                <td>
-                                                    <h3>Android</h3>
-                                                    
-                                                    <a class="link-assistance" href="../documents/guides/mail_android.pdf" target="_blank">Configuration E-mail sous Android</a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <div class="emailItem" style="display: none;">                                    
+                                    <div class="phone-12 center-phone">
+                                        <div class="phone-12 desk-2 center-phone-img" style="text-align: center;width: 131px;">
+                                            <img class="emailImg" src="http://www.internet.lu/lolcloud/img/Aide/Android/lolcloud_logo_android.png" style="margin-right:20px;" data-realwidth="150" data-realheight="150" alt="">
+                                        </div>
+                                        <div class="phone-12 desk-10" style="margin-bottom: 20px">
+                                            <h3>Android</h3>
+                                            
+                                            <a class="link-assistance" href="../documents/guides/mail_android.pdf" target="_blank">Configuration E-mail sous Android</a>
+                                        </div>
+                                    </div>                                        
                                 </div>
                                 <br>
                             </div>
@@ -637,7 +627,7 @@
                         <div class="dropdown" id="config-data">
                             <h2 data-trigger class="section-subtitle divers-subtitle"><span class="icon-right-arrow"></span> Configuration DATA/MMS</h2>
                             <div class="content-assistance">
-                                Séléctionnez la configuration:
+                                <p>Séléctionnez la configuration :</p>
                                 <select class="dataList">
                                     <option value="0">Paramètres de base</option>
                                     <option value="1">Android</option>
@@ -645,57 +635,61 @@
                                     <option value="3">IOS</option>
                                 </select>
                                 <div class="dataItem">
-                                    <table>
-                                        <tbody>
-                                            <tr>
-                                                <td style="padding-top:10px;">
-                                                    <table class="config">
-                                                        <tbody><tr><td colspan="2" style="font-weight:bold;font-size:10pt;border-bottom:1px solid #e1e1e1;">Configuration Data</td></tr>
-                                                            <tr><td>Nom:</td><td>LOL Internet</td></tr>
-                                                            <tr><td>APN:</td><td>orange.lu</td></tr>
-                                                            <tr><td>Serveur Proxy:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
-                                                            <tr><td>Port:</td><td>8080</td></tr>
-                                                            <tr><td>Nom d'utilisateur:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
-                                                            <tr><td>Mot de passe:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
-                                                            <tr><td>Serveur:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
-                                                            <tr><td>MMSC:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
-                                                            <tr><td>Proxy-MMS:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
-                                                            <tr><td>Port MMS:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
-                                                            <tr><td>MCC:</td><td>270</td></tr>
-                                                            <tr><td>MNC:</td><td>99</td></tr>
-                                                            <tr><td>Type d'authentification:</td><td>PAP ou CHAP</td></tr>
-                                                            <tr><td>Type APN:</td><td>default, supl</td></tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                                <td style="width:100px;"></td>
-                                                <td style="padding-top:10px;">
-                                                    <table class="config">
-                                                        <tbody><tr><td colspan="2" style="font-weight:bold;font-size:10pt;border-bottom:1px solid #e1e1e1;">Configuration MMS</td></tr>
-                                                            <tr><td>Nom:</td><td>LOL MMS</td></tr>
-                                                            <tr><td>APN:</td><td>orange.lu</td></tr>
-                                                            <tr><td>Serveur Proxy:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
-                                                            <tr><td>Port:</td><td>8080</td></tr>
-                                                            <tr><td>Nom d'utilisateur:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
-                                                            <tr><td>Mot de passe:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
-                                                            <tr><td>Serveur:</td><td><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></td></tr>
-                                                            <tr><td>MMSC:</td><td>http://mms.orange.lu</td></tr>
-                                                            <tr><td>Proxy-MMS:</td><td>212.88.139.44</td></tr>
-                                                            <tr><td>Port MMS:</td><td>8080</td></tr>
-                                                            <tr><td>MCC:</td><td>270</td></tr>
-                                                            <tr><td>MNC:</td><td>99</td></tr>
-                                                            <tr><td>Type d'authentification:</td><td>PAP ou CHAP</td></tr>
-                                                            <tr><td>Type APN:</td><td>mms</td></tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <div class="rTable">
+                                        <div class="rTableBody">
+                                            <div class="rTableRow">
+                                                <div class="rTableCell phone-12 tab-6 " style="padding-top:10px; border: 0;display: inline-block;">
+                                                    <div class="rTable config">
+                                                        <div class="rTableBody">
+                                                            <div class="rTableRow"><div class="rTableCell" style="font-weight:bold;font-size:13px;border-bottom:1px solid #e1e1e1;">Configuration Data</div>
+                                                                <div class="rTableCell" style="font-weight:bold;font-size:10pt;border-bottom:1px solid #e1e1e1;"></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Nom:</div><div class="rTableCell">LOL Internet</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">APN:</div><div class="rTableCell">orange.lu</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Serveur Proxy:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Port:</div><div class="rTableCell">8080</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Nom d'utilisateur:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Mot de passe:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Serveur:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">MMSC:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Proxy-MMS:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Port MMS:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">MCC:</div><div class="rTableCell">270</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">MNC:</div><div class="rTableCell">99</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Type d'authentification:</div><div class="rTableCell">PAP ou CHAP</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Type APN:</div><div class="rTableCell">default, supl</div></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="rTableCell phone-12 tab-6 " style="padding-top:10px; border: 0;display: inline-block;">
+                                                    <div class="rTable config">
+                                                        <div class="rTableBody">
+                                                            <div class="rTableRow"><div class="rTableCell" style="font-weight:bold;font-size:13px;border-bottom:1px solid #e1e1e1;">Configuration MMS</div>
+                                                                <div class="rTableCell" style="font-weight:bold;font-size:10pt;border-bottom:1px solid #e1e1e1;"></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Nom:</div><div class="rTableCell">LOL MMS</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">APN:</div><div class="rTableCell">orange.lu</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Serveur Proxy:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Port:</div><div class="rTableCell">8080</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Nom d'utilisateur:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Mot de passe:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Serveur:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">MMSC:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>http://mms.orange.lu</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Proxy-MMS:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>212.88.139.44</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Port MMS:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>8080</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">MCC:</div><div class="rTableCell">270</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">MNC:</div><div class="rTableCell">99</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Type d'authentification:</div><div class="rTableCell">PAP ou CHAP</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Type APN:</div><div class="rTableCell">mms</div></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="dataItem">
                                     <div class="phone-12">
-                                        <h3>Activer les données mobiles</h3>
+                                        <h3 class="bold">Activer les données mobiles</h3>
                                         <ul class="emailPara">
                                             <li><span>Appuyez sur le lanceur d'applications.</span></li>
                                             <li><span>Sélectionnez :</span> "Paramètres" ou "Réglages".</li>
@@ -710,21 +704,21 @@
                                             </ul>                                            
                                             <li><span>Sélectionnez :</span> "Réseaux mobiles".</li>
                                             <li><span>Assurez-vous que la première ligne "Données mobiles", "Données mobiles activées",
-                                                "Données activées" ou "Trafic de données mobiles" est bien cochée.</span></li>
+                                                    "Données activées" ou "Trafic de données mobiles" est bien cochée.</span></li>
                                         </ul>
-                                        <h3>Activer l'itinérance des donées (roaming)</h3>
+                                        <h3 class="bold">Activer l'itinérance des données (roaming)</h3>
                                         <ul class="emailPara">
                                             <li><span>Rendez-vous dans "Paramètres" > "Réseaux Mobiles".</span></li>
                                             <li><span>La case "Données mobiles" ou "Itinérance" doit être cochée.</span></li>
                                         </ul><br/>
-                                        Si vous cochez cette case, un message d'information à propos vous informera des risques de facturation de la data
-                                        à l’étranger.<br/>
-                                        Attention, la data à l'étranger n'est pas toujours incluse dans votre forfait, vérifiez cela
-                                        avant d'activer l’itinérance.
-                                        <h3>Configuration des paramètres APN</h3>
+                                        <p>Si vous cochez cette case, un message d'information à propos vous informera des risques de facturation de la data
+                                            à l’étranger.<br/>
+                                        <p style="font-weight:bold">Attention, la data à l'étranger n'est pas toujours incluse dans votre forfait, vérifiez cela
+                                            avant d'activer l’itinérance.</p>
+                                        <h3 class="bold">Configuration des paramètres APN</h3>
                                         <p>L'APN (Access Point Name) est le point d’accès qu'utilise votre téléphone pour accéder
-                                            au réseau Internet mobile de votre opérateur.</p><br/>
-                                        <h4>Etape 1 : accédez aux paramètres APN</h4>
+                                            au réseau Internet mobile de votre opérateur.</p>
+                                        <h3>Etape 1 : accédez aux paramètres APN</h3>
                                         <ul class="emailPara">
                                             <li><span>Appuyez sur le lanceur d'applications.</span></li>
                                             <li><span>Sélectionnez : </span>"Paramètres" ou "Réglages".</li>
@@ -744,18 +738,18 @@
                                             paramètres APN :</p>
                                         <p>- soit vous pouvez modifier les APN existants en appuyant simplement dessus et en renseignant les informations ci-après,</p>
                                         <p>- soit vous enregistrez de nouveaux APN et supprimez les anciens APN déjà paramétrés.</p>
-                                        <h4>Etape 2 : configurer les paramètres APN LOL</h4>
+                                        <h3>Etape 2 : configurer les paramètres APN LOL</h3>
                                         <p>Renseignez les informations présentes dans la configuration <a class="link-assistance" href="../divers/assistance.html#config-data;0;" target="blank_">Paramètre de base</a>.</p>
                                         <p>En cas de difficultés, faites appel à notre <a class="link-assistance" href="../divers/contact.html#helpdesk" target="blank_">service Helpdesk.</a></p>
-                                        <h3>Exemple sur un Samsung Galaxy S5</h3>
-                                        <div class="row tuto">
-                                            <div class="phone-12 desk-4">
+                                        <h3 class="bold">Exemple sur un Samsung Galaxy S5</h3>
+                                        <div class="row tuto" style="padding-left: 10px;">
+                                            <div class="phone-12 tab-6 desk-3">
                                                 <img src="../images/Divers/Assistance/Samsung1.png" alt=""/>
                                             </div>
-                                            <div class="phone-12 desk-4">
+                                            <div class="phone-12 tab-6 desk-3">
                                                 <img src="../images/Divers/Assistance/Samsung2.png" alt=""/>
                                             </div>
-                                            <div class="phone-12 desk-4">
+                                            <div class="phone-12 tab-6 desk-3">
                                                 <img src="../images/Divers/Assistance/Samsung3.png" alt=""/>
                                             </div>
                                         </div>
@@ -763,10 +757,63 @@
                                 </div>
                                 <div class="dataItem">
                                     <div class="phone-12">
-                                        <h3>Activer les données mobiles</h3>
-                                        <h3>Activer l'itinérance des donées (roaming)</h3>
-                                        <h3>Configuration des paramètres APN</h3>
-                                        <h3>Exemple sur un Windows Phone</h3>
+                                        <h3 class="bold">Configuration des paramètres APN</h3>
+                                        <p style="margin-bottom:0;">L'APN (Access Point Name) est le point d’accès qu'utilise votre téléphone pour accéder
+                                            au réseau Internet mobile de votre opérateur.</p><br/>
+                                        <h3>Etape 1 : accédez aux paramètres APN</h3>
+                                        <ul class="emailPara">
+                                            <li><span>Depuis l'écran d'accueil, appuyez sur la flèche en bas à droite de l'écran (ou faites
+                                                    défiler l'écran vers la gauche) pour accéder à la liste des applications.</span>
+                                            </li>
+                                            <li><span>Sélectionnez : </span>"Paramètres".</li>
+                                            <li><span>Sélectionnez ensuite : </span>"réseau cellulaire" ou "réseau mobile".</li>
+                                            <li><span>En fonction de la version de Windows de votre mobile, appuyez sur</span> "ajouter un
+                                                APN internet"<span> (ou "ajouter un APN mms", suivant l'APN que vous souhaitez
+                                                    renseigner) ou sélectionnez </span>"modifier APN".</li>
+                                        </ul>
+                                        <p style="font-weight: bold;">Plusieurs cas sont possibles lorsque vous êtes sur la page de configuration des
+                                            paramètres APN :</p>
+                                        <p>- soit vous pouvez modifier les APN existants en appuyant simplement dessus et en renseignant les informations ci-après,</p>
+                                        <p>- soit vous enregistrez de nouveaux APN et supprimez les anciens APN déjà paramétrés.</p>
+                                        <h3>Etape 2 : configurer les paramètres APN LOL</h3>
+                                        <p>Renseignez les informations présentes dans la configuration <a class="link-assistance" href="../divers/assistance.html#config-data;0;" target="blank_">Paramètre de base</a>.</p>
+                                        <h3 class="bold">Exemple sur un Windows Phone</h3>
+                                        <div class="row tuto" style="padding-left: 10px;">
+                                            <div class="phone-12 tab-6 desk-3">
+                                                <img src="../images/Divers/Assistance/WindowsPhone1.jpg" alt=""/>
+                                            </div>
+                                            <div class="phone-12 tab-6 desk-3">
+                                                <img src="../images/Divers/Assistance/WindowsPhone2.png" alt=""/>
+                                            </div>
+                                            <div class="phone-12 tab-6 desk-3">
+                                                <img src="../images/Divers/Assistance/WindowsPhone3.png" alt=""/>
+                                            </div>
+                                            <div class="phone-12 tab-6 desk-3">
+                                                <img src="../images/Divers/Assistance/WindowsPhone4.png" alt=""/>
+                                            </div>
+                                        </div>
+                                        <div class="row tuto" style="padding-left: 10px;">
+                                            <div class="phone-12 tab-6 desk-3">
+                                                <img src="../images/Divers/Assistance/WindowsPhone5.png" alt=""/>
+                                            </div>
+                                            <div class="phone-12 tab-6 desk-3">
+                                                <img src="../images/Divers/Assistance/WindowsPhone6.png" alt=""/>
+                                            </div>
+                                            <div class="phone-12 tab-6 desk-3">
+                                                <img src="../images/Divers/Assistance/WindowsPhone7.png" alt=""/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dataItem">
+                                    <div class="phone-12">
+                                        <h3 class="bold">Activez l'itinérance des données (roaming)</h3>
+                                        <ul class="emailPara">
+                                            <li><span>allez dans</span> "Réglages" > "Général" > "Réseau"</li>
+                                            <li><span>activez les données à l’étranger (curseur gris O).</span></li>
+                                        </ul>
+                                        <p style="font-weight: bold;">Attention, la data à l'étranger n'est pas toujours incluse dans votre forfait, vérifiez cela
+                                            avant d'activer l’itinérance.</p>
                                     </div>
                                 </div>
                             </div>
@@ -775,7 +822,7 @@
                         <div class="dropdown" id="speedtest">
                             <h2 data-trigger class="section-subtitle divers-subtitle"><span class="icon-right-arrow"></span> Speed Test</h2>
                             <div class="content-assistance">
-                                <iframe src="http://speedtest.internet.lu" width="638" height="590" style="border:none;"></iframe>
+                                <iframe src="http://speedtest.internet.lu" height="590" style="border:none;width: 100%;"></iframe>
                             </div>
                         </div>
                         <hr>
@@ -793,7 +840,7 @@
                                     <table>
                                         <tbody>
                                             <tr>
-                                                <td><h3>Contrats d'abonnement</h3>
+                                                <td><h2>Contrats d'abonnement</h2>
                                                     <ul>
                                                         <li><a href="../documents/LOLFIBERDSL_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOL FIBER</div></a></li>
                                                         <li><a href="../documents/LOLCABLE_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOL CABLE</div></a></li>
@@ -810,13 +857,13 @@
                                     <table>
                                         <tbody>
                                             <tr>
-                                                <td><h3>Divers</h3>
+                                                <td><h2>Divers</h2>
                                                     <ul>
                                                         <li><a href="../documents/demenag_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Déclaration de déménagement</div></a></li>
                                                         <li><a href="../documents/Bon_FR2.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Bon de parrainage</div></a></li>
-                                                        <li><a href="../documents/raccordement.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Commande de raccordement analogique ou ISDN</div></a></li>
+                                                        <li><a href="../documents/raccordement.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Commande de raccordement <span>analogique ou ISDN</span> </div></a></li>
                                                         <li><a href="../documents/domiciliationnew_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Domiciliation bancaire</div></a></li>
-                                                        <li><a href="../documents/Transfert_Contrat_Internet.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Transfert de contrat Internet et/ou téléphonie</div></a></li>
+                                                        <li><a href="../documents/Transfert_Contrat_Internet.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Transfert de contrat <span>Internet et/ou téléphonie</span></div></a></li>
                                                         <li><a href="../documents/RUSH_ORDER_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Rush Order</div></a></li>
                                                         <li><a href="../documents/LISTE_DES_PRIX.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Liste des prix<span>(nouvelle version depuis 01/05/2015)</span></div></a></li>
                                                     </ul>
@@ -829,13 +876,13 @@
                                     <table>
                                         <tbody>
                                             <tr>
-                                                <td><h3>Condition générales et particulières</h3>
+                                                <td><h2>Condition générales et particulières</h2>
                                                     <ul>
                                                         <li><a href="../documents/CONDITIONS%20GENERALES%20DES%20SERVICES%20LUXEMBOURG%20ONLINE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Condition générales<span>(nouvelle version depuis 09/01/2014)</span></div></a></li>
                                                         <li><a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20ACCES%20%20INTERNET%20HAUT%20DEBIT%20ET%20TRES%20HAUT%20DEBIT.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Condition particulières xDSL/Fibre<span>(nouvelle version depuis 12/03/2012)</span></div></a></li>
-                                                        <li><a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20ACCES%20INTERNET%20HAUT%20DE%20DEBIT%20PAR%20CABLE%20CATV.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Condition particulières Internet par câble<span>(nouvelle version depuis 12/03/2012)</span></div></a></li>
+                                                        <li><a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20ACCES%20INTERNET%20HAUT%20DE%20DEBIT%20PAR%20CABLE%20CATV.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Condition particulières <span>Internet par câble </span><span>(nouvelle version depuis 12/03/2012)</span></div></a></li>
                                                         <li><a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20DE%20TELEPHONIE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Condition particulières téléphonie fixe<span>(nouvelle version depuis 12/03/2012)</span></div></a></li>
-                                                        <li><a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20DE%20TELEPHONIE%20MOBILE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Condition particulières téléphonie mobile<span>(nouvelle version depuis 01/05/2015)</span></div></a></li>
+                                                        <li><a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20DE%20TELEPHONIE%20MOBILE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Condition particulières<span> téléphonie mobile</span><span>(nouvelle version depuis 01/05/2015)</span></div></a></li>
                                                     </ul>
                                                 </td>
                                             </tr>
@@ -848,7 +895,7 @@
                                             <tr>
                                                 <td><h1>Fiches signalétiques</h1>
                                                     <div class="tab-adjust-2">
-                                                        <h3>Luxembourg Online SA</h3>
+                                                        <h2>Luxembourg Online SA</h2>
                                                         <ul>
                                                             <li><a href="../documents/feuille_type_fix.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Téléphonie fixe</div></a></li>
                                                             <li><a href="../documents/feuille_type_mobile_mobilefamily.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOL MOBILE Family</div></a></li>
@@ -863,7 +910,7 @@
                                                         </ul>
                                                     </div>
                                                     <div class="tab-adjust-2">
-                                                        <h3>Luxembourg Online Mobile SARL</h3>
+                                                        <h2>Luxembourg Online Mobile SARL</h2>
                                                         <ul>
                                                             <li><a href="../documents/feuille_type_mobile_mobilefamily.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOL MOBILE Family</div></a></li>
                                                             <li><a href="../documents/feuille_type_mobile_mobilehome.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOL MOBILE Home</div></a></li>

@@ -288,6 +288,13 @@ header{
 }
 .logo
 {
+    &.noel{
+        bottom: 9px;
+        height: auto;
+        img{
+            max-height: 50px;
+        }
+    }
     position: relative;
 
     display: inline-block;

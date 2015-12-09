@@ -438,6 +438,12 @@
     }
     .logo{
         height: auto;
+        &.noel{
+            bottom: 19px;
+            img{
+                max-height: 75px;
+            }
+        }
     }
     #mobileType{
         .flickity-prev-next-button{

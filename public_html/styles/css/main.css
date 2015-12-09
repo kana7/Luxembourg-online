@@ -1945,6 +1945,11 @@ header {
   width: auto;
   height: 100%;
   margin-right: 30px; }
+  .logo.noel {
+    bottom: 9px;
+    height: auto; }
+    .logo.noel img {
+      max-height: 50px; }
   .logo img {
     width: auto;
     height: 100%;
@@ -5087,6 +5092,10 @@ h2.contact-title {
 
   .logo {
     height: auto; }
+    .logo.noel {
+      bottom: 19px; }
+      .logo.noel img {
+        max-height: 75px; }
 
   #mobileType .flickity-prev-next-button {
     height: 35px; }

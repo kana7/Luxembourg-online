@@ -505,6 +505,9 @@
     .bottom-menu-header-links{
         float: left;
     }
+    #fibrelu.section-layout{
+        height: 425px;
+    }
     .section-layout{
         height: 350px;
         padding: 0;
@@ -988,6 +991,9 @@
     .btn-black{
         margin-bottom: 10px;
     }
+    #fibrelu.section-layout{
+        height: 450px;
+    }
     .section-layout{
         height: 400px;
         &.height-auto{
@@ -1147,7 +1153,6 @@
 
         }
     }
-
     .price-blue{
         font-size: 34pt;
         div{

@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,400italic);
 #promo-fibre:not(.not-accueil) {
   background-image: url(../../../images/promos/Accueil/Promo_Fibre_672x460px.jpg); }
-#promo-fibre .not-accueil {
+#promo-fibre.not-accueil {
   background-image: url(../../../images/promos/Promo_Fibre/Promo_Fibre_672x335px.jpg); }
 
 #promo-internetTV:not(.not-accueil) {

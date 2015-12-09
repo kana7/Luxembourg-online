@@ -2,7 +2,7 @@
     &:not(.not-accueil){
         background-image: url(../../../images/promos/Accueil/Promo_Fibre_672x460px.jpg);
     }
-    .not-accueil{
+    &.not-accueil{
         background-image: url(../../../images/promos/Promo_Fibre/Promo_Fibre_672x335px.jpg);
     }
 }

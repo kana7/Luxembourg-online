@@ -16,6 +16,12 @@
         &.image-4{
             background-image: url(../../images/Homepage/SLIDER/Slider4_672x320px.jpg);
         }
+        &.image-5{
+            background-image: url(../../images/Homepage/SLIDER/Slider_672x320px_Noel1.jpg);
+        }
+        &.image-6{
+            background-image: url(../../images/Homepage/SLIDER/Slider_672x320px_Noel2.jpg);
+        }
     }
 }
 
@@ -34,6 +40,12 @@
             }
             &.image-4{
                 background-image: url(../../images/Homepage/SLIDER/Slider4_1056x450px.jpg);
+            }
+            &.image-5{
+                background-image: url(../../images/Homepage/SLIDER/Slider_1056x450px_Noel1.jpg);
+            }
+            &.image-6{
+                background-image: url(../../images/Homepage/SLIDER/Slider_1056x450px_Noel2.jpg);
             }
         }
     } 
@@ -54,6 +66,12 @@
             &.image-4{
                 background-image: url(../../images/Homepage/SLIDER/Slider4_1302x330px.jpg);
             }
+            &.image-5{
+                background-image: url(../../images/Homepage/SLIDER/Slider_1302x330px_Noel1.jpg);
+            }
+            &.image-6{
+                background-image: url(../../images/Homepage/SLIDER/Slider_1302x330px_Noel2.jpg);
+            }
         }
     }
 }
@@ -73,7 +91,76 @@
             &.image-4{
                 background-image: url(../../images/Homepage/SLIDER/Slider4_1920x360px.jpg);
             }
+            &.image-5{
+                background-image: url(../../images/Homepage/SLIDER/Slider_1920x360px_Noel1.jpg);
+            }
+            &.image-6{
+                background-image: url(../../images/Homepage/SLIDER/Slider_1920x360px_Noel2.jpg);
+            }
         }
     }
 }
 
+
+// SLIDER STYLES
+//-------------------------------------------------------------------------------
+
+
+#slider-contents .infos.image-6 .title{
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 671px) {
+    #slider-contents .infos.image-4 .title{font-size: 18pt !important;}
+    #slider-contents .infos.image-4 .top-details{margin-bottom: 12px !important;}
+
+    #slider-contents .infos.image-4 .phone-12.desk-10{
+        text-align: center !important;
+    }
+    #slider-contents .infos.image-6 .title{
+        line-height: 35px !important;
+    }
+    #slider-contents .infos.image-5 .title{
+        line-height: 40px !important;
+    }
+}
+
+@media screen and (max-width: 1055px) {
+    #slider-contents .infos.image-4 .title{font-size: 24pt;}
+    #slider-contents .infos.image-4 .top-details{margin-bottom: 18px;}
+
+    #slider-contents .infos.image-4 .phone-12.desk-10{
+        text-align: center !important;
+    }
+    #slider-contents .infos.image-6 .title{
+        line-height: 55px;
+    }
+    #slider-contents .infos.image-5 .row{
+        @include vertical-align-middle;
+        .title{
+            position: relative;
+            bottom: 35px;
+            line-height: 55px;
+        }
+    }
+}
+@media screen and (min-width: 1056px) {
+    #slider-contents .infos.image-4 .title{font-size: 34px;}
+    #slider-contents .infos.image-4 .top-details{margin-bottom: 25px;}
+    #slider-contents .infos.image-4 .bottom-details{font-size: 11pt;}
+    #slider-contents .infos.image-6 .title{
+        line-height: 52px;
+    }
+    #slider-contents .infos.image-5 .title{
+        position: relative;
+        bottom: 35px;
+        line-height: 65px;
+    }
+}
+@media screen and (min-width: 1302px) {
+    #slider-contents .infos.image-4 .title{font-size: 46px;}
+    #slider-contents .infos.image-4 .bottom-details{font-size: 13pt;}
+    #slider-contents .infos.image-6 .title{
+        line-height: 58px;
+    }
+}

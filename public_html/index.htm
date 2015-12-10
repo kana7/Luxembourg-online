@@ -255,33 +255,6 @@
             <!--            ./HEADER                -->
 
             <!--            SLIDER             -->
-            <style type="text/css">
-                @media screen and (max-width: 671px) {
-                    #slider-contents .infos.image-4 .title{font-size: 18pt !important;}
-                    #slider-contents .infos.image-4 .top-details{margin-bottom: 12px !important;}
-                    
-                    #slider-contents .infos.image-4 .phone-12.desk-10{
-                            text-align: center !important;
-                        }
-                }
-                @media screen and (max-width: 1055px) {
-                    #slider-contents .infos.image-4 .title{font-size: 24pt;}
-                    #slider-contents .infos.image-4 .top-details{margin-bottom: 18px;}
-                    
-                    #slider-contents .infos.image-4 .phone-12.desk-10{
-                            text-align: center !important;
-                        }
-                }
-                @media screen and (min-width: 1056px) {
-                    #slider-contents .infos.image-4 .title{font-size: 34px;}
-                    #slider-contents .infos.image-4 .top-details{margin-bottom: 25px;}
-                    #slider-contents .infos.image-4 .bottom-details{font-size: 11pt;}
-                }
-                @media screen and (min-width: 1302px) {
-                    #slider-contents .infos.image-4 .title{font-size: 46px;}
-                    #slider-contents .infos.image-4 .bottom-details{font-size: 13pt;}
-                }
-            </style>
             <div id="slider">
                 <div id="slider-contents" class="main-gallery">
                     <div class="gallery-cell">
@@ -289,7 +262,7 @@
                             <div class="container-wrapper">
                                 <div class="row">
                                     <div class="phone-12 desk-10 pull-right align-right">
-                                        <h1 class="title">Dimanche 6, 13 et 20 décembre 2015</h1>
+                                        <h2 class="title">Dimanche 6, 13 et 20 décembre 2015</h2>
                                         <p style="color: #004994; " class="top-details">Retrouvez-nous en boutique<br/>
                                             <strong>de 14H à 18h</strong>
                                         </p>
@@ -305,7 +278,7 @@
                             <div class="container-wrapper">
                                 <div class="row">
                                     <div class="phone-12 desk-10">
-                                        <h1 class="title">offre spéciale</h1>
+                                        <h2 class="title">offre spéciale</h2>
                                         <p class="top-details">Frais d'installation et de câblage fibre<br/>
                                             <strong>offerts!</strong>
                                         </p>
@@ -321,7 +294,7 @@
                             <div class="container-wrapper">
                                 <div class="row">
                                     <div class="phone-12 desk-10 pull-right align-right">
-                                        <h1 class="title">Internet + lol tv</h1>
+                                        <h2 class="title">Internet + lol tv</h2>
                                         <p class="top-details"><strong>Installation offerte</strong></p>
                                         <div class="section-price blue">
                                             <div>,90€</div>
@@ -338,7 +311,7 @@
                             <div class="container-wrapper">
                                 <div class="row">
                                     <div class="phone-12 desk-10">
-                                        <h1 style="color: white;" class="title">LOL<span style="font-weight: 300;">CLOUD</span> : Vos fichiers,<br /> partout où vous voulez!</h1>
+                                        <h2 style="color: white;" class="title">LOL<span style="font-weight: 300;">CLOUD</span> : Vos fichiers,<br /> partout où vous voulez!</h2>
                                         <p style="color: #004994;" class="top-details"><span class="bold">5 GB de stockage offerts</span></p>
                                     </div>
                                 </div>
@@ -699,6 +672,7 @@
 
         <script type="text/javascript">
             printDispo();
+            $('.main-gallery').prepend(randomizeSlider[Math.round(Math.random())]);
             $(function () {
                 $('.main-gallery').flickity({
                     // options
@@ -706,7 +680,8 @@
                     contain: true,
                     wrapAround: true,
                     arrowShape: "M74,99.5c-2.7,2.7-7.3,2.7-10,0L21.7,56.8c-2.7-2.7-2.7-7.3,0-10L64,4.2c1.5-1.9,3.1-2.7,5-2.7c1.9,0,3.5,0.8,5,1.9c2.7,2.7,2.7,7.3,0,10L36.7,51.1l37.3,38C76.7,92.2,76.7,96.4,74,99.5z",
-                    autoPlay: true
+                    autoPlay: true,
+                    initialIndex: 0
                 });
             });
         </script>

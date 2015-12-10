@@ -1711,7 +1711,8 @@ hr {
   align-items: flex-start; }
 
 .align-center {
-  text-align: center; }
+  text-align: center;
+  }
 
 .align-right {
   text-align: right !important; }
@@ -2334,19 +2335,19 @@ svg:not(:root) {
     border: 2px solid #004994; }
 
 .orange {
-  color: #e75e0a; }
+  color: #e75e0a !important; }
 
 .white {
-  color: #fff; }
+  color: #fff !important; }
 
 .blue {
-  color: #004994; }
+  color: #004994 !important; }
 
 .grey {
-  color: #818181; }
+  color: #818181 !important; }
 
 .red {
-  color: #DC0000; }
+  color: #DC0000 !important; }
 
 .background-green {
   background-color: #e3eee3; }
@@ -2491,13 +2492,17 @@ span[class^=icon-] {
     display: inline-block; }
 
 .extra-bold {
-  font-weight: 800; }
+  font-weight: 800 !important; }
 
 .bold {
-  font-weight: 600; }
+  font-weight: 600 !important;
+  }
 
 .normal {
-  font-weight: 400; }
+  font-weight: 400 !important; }
+
+.light {
+  font-weight: 300 !important; }
 
 .section-info {
   margin-bottom: 45px; }

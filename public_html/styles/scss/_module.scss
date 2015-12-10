@@ -24,20 +24,20 @@ svg:not(:root) {
 // --------------------------------------------------
 .orange
 {
-    color: $orange;
+    color: $orange !important;
 }
 .white
 {
-    color: $white;
+    color: $white !important;
 }
 .blue{
-    color: $blue;
+    color: $blue !important;
 }
 .grey{
-    color: $dark-grey;
+    color: $dark-grey !important;
 }
 .red{
-    color: #DC0000;
+    color: #DC0000 !important;
 }
 // BACKGROUND-COLOR CLASS
 // --------------------------------------------------
@@ -187,13 +187,16 @@ span[class^=icon-]
     }
 }
 .extra-bold{
-    font-weight: 800;
+    font-weight: 800 !important;
 }
 .bold{
-    font-weight: 600;
+    font-weight: 600 !important;
 }
 .normal{
-    font-weight: 400;
+    font-weight: 400 !important;
+}
+.light{
+    font-weight: 300 !important;
 }
 
 .section-info{

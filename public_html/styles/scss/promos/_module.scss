@@ -14,8 +14,16 @@
         background-image: url(../../../images/promos/Promos_TVInternet/Promo_TV_672x335px.jpg);
     }
 }
+#promo-noel{
+    &:not(.not-accueil){
+        background-image: url(../../../images/promos/Accueil/Promo_TV_Noel_672x460px.jpg);
+    }
+    &.not-accueil{
+        background-image: url(../../../images/promos/Promo_TVNoel/Offre_TV_672x335px.jpg);
+    }
+}
 
-#promo-fibre, #promo-internetTV{
+#promo-fibre, #promo-internetTV, #promo-noel{
     background-size: 672px auto;
     &:not(.not-accueil){
         height: 460px;        

@@ -1,3 +1,81 @@
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+// mapping des noms de classe avec leur attribut css
+$space-prefixes : (
+p  : padding,
+pt : padding-top,
+pr : padding-right,
+pb : padding-bottom,
+pl : padding-left,
+m  : margin,
+mt : margin-top,
+mr : margin-right,
+mb : margin-bottom,
+ml : margin-left,
+) !default;
+
+// tableau de valeurs des margins et paddings
+$space-values : (
+0,
+5,
+10,
+15,
+20,
+30,
+40,
+50
+) !default;
+
+// change these values if its not imported into bootstrap
+$grid-breakpoints: (
+phone: 0,
+// Small screen / phone
+tab: $tab,
+// Medium screen / tablet
+desk: $desk,
+// Large screen / desktop
+lgdesk: $lgdesk
+// Extra large screen / wide desktop
+) !default;
+
+$breakpoints : $grid-breakpoints;
+
+
+// main function definition
+@mixin make-space($values, $prefixes, $breakpoints) {
+  @each $breakpoint-name, $breakpoint-value in $breakpoints {
+    // if xs value = 0, set it global without media queries
+    @if($breakpoint-value == 0) {
+      @each $attr-short, $attr-long in $prefixes {
+        @each $value in $values {
+          .#{$breakpoint-name}-#{$attr-short}-#{$value} {
+            #{$attr-long}: #{$value + px !important};
+          }
+        }
+      }
+    }
+    // breakpoint values that not equal to 0
+    @else {
+      @media screen and (min-width: $breakpoint-value + px) {
+        @each $attr-short, $attr-long in $prefixes {
+          @each $value in $values {
+            .#{$breakpoint-name}-#{$attr-short}-#{$value} {
+              #{$attr-long}: #{$value + px !important};
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include make-space($space-values, $space-prefixes, $breakpoints);
+
 // GRID classes
 // --------------------------------------------------
 /*Definition container de taille fixe*/

@@ -31,7 +31,15 @@
             background-image: url(../../../images/promos/Promos_TVInternet/Promo_TV_1056x290px.jpg);
         }
     }
-    #promo-fibre, #promo-internetTV{
+    #promo-noel{
+        &:not(.not-accueil){
+            background-image: url(../../../images/promos/Accueil/Promo_TV_Noel_1056x430px.jpg);
+        }
+        &.not-accueil{
+            background-image: url(../../../images/promos/Promos_TVInternet/Promo_TV_1056x290px.jpg);
+        }
+    }
+    #promo-fibre, #promo-internetTV, #promo-noel{
         background-size: 1056px auto;
         &:not(.not-accueil){
             height: 430px !important;
@@ -60,7 +68,15 @@
             background-image: url(../../../images/Promos/Accueil/Promo_TV_1302x370px.jpg);
         }
     }
-    #promo-fibre, #promo-internetTV{
+    #promo-noel{
+        &:not(.not-accueil){
+            background-image: url(../../../images/promos/Accueil/Promo_TV_Noel_1302x370px.jpg);
+        }
+        &.not-accueil{
+            background-image: url(../../../images/promos/Accueil/Promo_TV_Noel_1302x370px.jpg);
+        }
+    }
+    #promo-fibre, #promo-internetTV, #promo-noel{
         background-size: 1302px auto;
         &:not(.not-accueil), &.not-accueil{
             height: 370px !important;
@@ -147,7 +163,15 @@
             background-image: url(../../../images/Promos/Accueil/Promo_TV_1920x400px.jpg);
         }
     }
-    #promo-fibre, #promo-internetTV{
+    #promo-noel{
+        &:not(.not-accueil){
+            background-image: url(../../../images/promos/Accueil/Promo_TV_Noel_1920x400px.jpg);
+        }
+        &.not-accueil{
+            background-image: url(../../../images/promos/Accueil/Promo_TV_Noel_1920x400px.jpg);
+        }
+    }
+    #promo-fibre, #promo-internetTV, #promo-noel{
         background-size: 1920px auto;
         padding: 30px 0;
         &:not(.not-accueil), &.not-accueil{

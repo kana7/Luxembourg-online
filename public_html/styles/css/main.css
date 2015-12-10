@@ -1711,8 +1711,7 @@ hr {
   align-items: flex-start; }
 
 .align-center {
-  text-align: center;
-  }
+  text-align: center; }
 
 .align-right {
   text-align: right !important; }
@@ -1953,7 +1952,7 @@ header {
       max-height: 50px; }
   .logo img {
     width: auto;
-    height: 100%;
+    height: auto;
     max-height: 44px; }
 
 #slider {
@@ -2495,8 +2494,7 @@ span[class^=icon-] {
   font-weight: 800 !important; }
 
 .bold {
-  font-weight: 600 !important;
-  }
+  font-weight: 600 !important; }
 
 .normal {
   font-weight: 400 !important; }

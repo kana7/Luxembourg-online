@@ -3393,17 +3393,17 @@ svg:not(:root) {
   .section-title strong {
     display: block; }
 
-.section-subtitle {
+.section-subtitle, .moveArrow {
   font-size: 23px;
   line-height: 27px;
   margin: 25px 0;
   font-weight: 400;
   text-align: center; }
-  .section-subtitle.divers-subtitle {
+  .section-subtitle.divers-subtitle, .moveArrow.divers-subtitle {
     font-size: 19px; }
-    .section-subtitle.divers-subtitle.is-active {
+    .section-subtitle.divers-subtitle.is-active, .moveArrow.divers-subtitle.is-active {
       font-weight: 600; }
-  .section-subtitle[data-trigger] span[class^=icon] {
+  .section-subtitle[data-trigger] span[class^=icon], .moveArrow[data-trigger] span[class^=icon] {
     font-size: 0.75em;
     transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
@@ -3413,12 +3413,12 @@ svg:not(:root) {
     -o-transition: transform 0.1s ease-in;
     -webkit-transition: transform 0.1s ease-in;
     transition: transform 0.1s ease-in; }
-  .section-subtitle[data-trigger].is-active span[class^=icon] {
+  .section-subtitle[data-trigger].is-active span[class^=icon], .moveArrow[data-trigger].is-active span[class^=icon] {
     transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg); }
-  .section-subtitle[data-trigger]:hover {
+  .section-subtitle[data-trigger]:hover, .moveArrow[data-trigger]:hover {
     color: #0062c7; }
 
 .lowercase {

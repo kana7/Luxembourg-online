@@ -3967,7 +3967,10 @@ span[class^=icon-] {
 }
 */
 #twenty-years {
-  background-image: url(../../images/Homepage/CONTENU/1280px/20ans_LOL.jpg); }
+  background-image: url(../../images/Homepage/CONTENU/320px/20ans_LOL.jpg);
+  background-position: center top;
+  background-size: 312px auto;
+  padding-top: 135px; }
 
 footer {
   border-bottom: 2px solid #676767;
@@ -5080,7 +5083,12 @@ h2.contact-title {
     width: 47%; }
 
   .table-details a {
-    font-size: 16px; } }
+    font-size: 16px; }
+
+  #twenty-years {
+    background-image: url(../../images/Homepage/CONTENU/640px/20ans_LOL.jpg);
+    background-size: 583px auto;
+    padding-top: 205px; } }
 @media screen and (min-width: 1056px) {
   .center-tab {
     position: relative;
@@ -5566,7 +5574,13 @@ h2.contact-title {
       font-size: 26px; }
 
   .table-tarifs.table-tarifs-display-half {
-    width: 50%; } }
+    width: 50%; }
+
+  #twenty-years {
+    background-image: url(../../images/Homepage/CONTENU/1024px/20ans_LOL.jpg);
+    background-size: 752px auto;
+    background-position: right top;
+    padding-top: 0; } }
 @media screen and (min-width: 1056px) and (max-width: 1302px) {
   #offers-section div[class^=phone-] {
     padding: 0 5px; }
@@ -5750,7 +5764,12 @@ h2.contact-title {
       font-size: 15pt; }
 
   .footer-bottom-links li {
-    margin-right: 111px; } }
+    margin-right: 111px; }
+
+  #twenty-years {
+    background-image: url(../../images/Homepage/CONTENU/1280px/20ans_LOL.jpg);
+    background-size: 926px auto;
+    background-position: right top; } }
 @media screen and (min-width: 1400px) {
   .container-wrapper {
     width: 1344px; }

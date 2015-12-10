@@ -370,7 +370,20 @@
                                         line-height: 20px;
                                     }
                                     p{
-                                        line-height: 23px;
+                                        line-height: 20px;
+                                        margin: 0;
+                                    }
+                                    .dropdown-list{
+                                        margin: 15px 25px;
+                                        padding: 0 15px;
+                                    }
+                                    .dropdown-content{
+                                        margin-left: 40px;
+                                        border-left: 1px solid #004494;
+                                        padding: 0 20px;
+                                    }
+                                    .moveArrow{
+                                        text-align: left;
                                     }
                                     .rTable { display: table; }
                                     .rTableRow { display: table-row; }
@@ -627,7 +640,9 @@
                         <div class="dropdown" id="config-data">
                             <h2 data-trigger class="section-subtitle divers-subtitle"><span class="icon-right-arrow"></span> Configuration DATA/MMS</h2>
                             <div class="content-assistance">
-                                <p>Séléctionnez la configuration :</p>
+                                <p style="margin-bottom: 10px;">Le plus souvent, votre téléphone mobile récupère les paramètres de configuration Internet depuis la SIM, ou les reçoit automatiquement via le réseau. Il est également possible de faire la configuration manuellement pour avoir accès à Internet. 
+                                    Séléctionnez la configuration correspondant à votre système d’exploitation et suivez les instructions.</p>
+                                <p style="margin-bottom: 10px;">Séléctionnez la configuration :</p>
                                 <select class="dataList">
                                     <option value="0">Paramètres de base</option>
                                     <option value="1">Android</option>
@@ -688,132 +703,158 @@
                                     </div>
                                 </div>
                                 <div class="dataItem">
-                                    <div class="phone-12">
-                                        <h3 class="bold">Activer les données mobiles</h3>
-                                        <ul class="emailPara">
-                                            <li><span>Appuyez sur le lanceur d'applications.</span></li>
-                                            <li><span>Sélectionnez :</span> "Paramètres" ou "Réglages".</li>
-                                            <li><span>En fonction de la marque et de la version Android de votre mobile, sélectionnez :</span></li> 
-                                            <ul class="emailPara2">
-                                                <li><span>"Sans fil et réseaux"</span></li>
-                                                <li><span>ou "Plus..."</span></li>
-                                                <li><span>ou "Données mobiles"</span></li>
-                                                <li><span>ou "Paramètres supplémentaires"</span></li>
-                                                <li><span>ou "Plus de réseaux" (depuis l'onglet "Connexions")</span></li>
-                                                <li><span>ou "Réseaux et partage de connexion"(depuis l'onglet "Réseaux").</span></li>
-                                            </ul>                                            
-                                            <li><span>Sélectionnez :</span> "Réseaux mobiles".</li>
-                                            <li><span>Assurez-vous que la première ligne "Données mobiles", "Données mobiles activées",
-                                                    "Données activées" ou "Trafic de données mobiles" est bien cochée.</span></li>
-                                        </ul>
-                                        <h3 class="bold">Activer l'itinérance des données (roaming)</h3>
-                                        <ul class="emailPara">
-                                            <li><span>Rendez-vous dans "Paramètres" > "Réseaux Mobiles".</span></li>
-                                            <li><span>La case "Données mobiles" ou "Itinérance" doit être cochée.</span></li>
-                                        </ul><br/>
-                                        <p>Si vous cochez cette case, un message d'information à propos vous informera des risques de facturation de la data
-                                            à l’étranger.<br/>
-                                        <p style="font-weight:bold">Attention, la data à l'étranger n'est pas toujours incluse dans votre forfait, vérifiez cela
-                                            avant d'activer l’itinérance.</p>
-                                        <h3 class="bold">Configuration des paramètres APN</h3>
-                                        <p>L'APN (Access Point Name) est le point d’accès qu'utilise votre téléphone pour accéder
-                                            au réseau Internet mobile de votre opérateur.</p>
-                                        <h3>Etape 1 : accédez aux paramètres APN</h3>
-                                        <ul class="emailPara">
-                                            <li><span>Appuyez sur le lanceur d'applications.</span></li>
-                                            <li><span>Sélectionnez : </span>"Paramètres" ou "Réglages".</li>
-                                            <li><span>Suivant la marque et la version Android de votre mobile, sélectionnez :</span></li>
-                                            <ul class="emailPara2">
-                                                <li><span>"Sans fil et réseaux"</span></li>
-                                                <li><span>ou "Plus..."</span></li>
-                                                <li><span>ou "Données mobiles"</span></li>
-                                                <li><span>ou "Paramètres supplémentaires"</span></li>
-                                                <li><span>ou "Plus de réseaux" (depuis l'onglet "Connexions")</span></li>
-                                                <li><span>ou "Réseaux et partage de connexion"(depuis l'onglet "Réseaux").</span></li>
-                                            </ul>
-                                            <li>Sélectionnez :<span> "Réseaux mobiles".</span></li>
-                                            <li>Sélectionnez ensuite :<span>"Nom des points d'accès"</span>.</li>
-                                        </ul>
-                                        <p style="font-weight: bold;">Plusieurs cas sont possibles lorsque vous êtes sur la page de configuration des
-                                            paramètres APN :</p>
-                                        <p>- soit vous pouvez modifier les APN existants en appuyant simplement dessus et en renseignant les informations ci-après,</p>
-                                        <p>- soit vous enregistrez de nouveaux APN et supprimez les anciens APN déjà paramétrés.</p>
-                                        <h3>Etape 2 : configurer les paramètres APN LOL</h3>
-                                        <p>Renseignez les informations présentes dans la configuration <a class="link-assistance" href="../divers/assistance.html#config-data;0;" target="blank_">Paramètre de base</a>.</p>
-                                        <p>En cas de difficultés, faites appel à notre <a class="link-assistance" href="../divers/contact.html#Probleme_technique" target="blank_">service Helpdesk.</a></p>
-                                        <h3 class="bold">Exemple sur un Samsung Galaxy S5</h3>
-                                        <div class="row tuto" style="padding-left: 10px;">
-                                            <div class="phone-12 tab-6 desk-3">
-                                                <img src="../images/Divers/Assistance/Samsung1.png" alt=""/>
-                                            </div>
-                                            <div class="phone-12 tab-6 desk-3">
-                                                <img src="../images/Divers/Assistance/Samsung2.png" alt=""/>
-                                            </div>
-                                            <div class="phone-12 tab-6 desk-3">
-                                                <img src="../images/Divers/Assistance/Samsung3.png" alt=""/>
+                                    <div class="phone-12 dropdown-list">
+                                        <div class="dropdown">
+                                            <h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Activer les données mobiles</h3>
+                                            <div class="dropdown-content">
+                                                <ul class="emailPara">
+                                                    <li><span>Appuyez sur le lanceur d'applications.</span></li>
+                                                    <li><span>Sélectionnez </span> "Paramètres" ou "Réglages".</li>
+                                                    <li><span>En fonction de la marque et de la version Android de votre mobile, sélectionnez :</span></li>
+                                                    <ul class="emailPara2">
+                                                        <li><span>"Sans fil et réseaux"</span></li>
+                                                        <li><span>ou "Plus..."</span></li>
+                                                        <li><span>ou "Données mobiles"</span></li>
+                                                        <li><span>ou "Paramètres supplémentaires"</span></li>
+                                                        <li><span>ou "Plus de réseaux" (depuis l'onglet "Connexions")</span></li>
+                                                        <li><span>ou "Réseaux et partage de connexion"(depuis l'onglet "Réseaux").</span></li>
+                                                    </ul>
+                                                    <li><span>Sélectionnez </span> "Réseaux mobiles".</li>
+                                                    <li><span>Assurez-vous que la première ligne "Données mobiles", "Données mobiles activées",
+                                                            "Données activées" ou "Trafic de données mobiles" est bien cochée.</span></li>
+                                                </ul>
                                             </div>
                                         </div>
+                                        <div class="dropdown">
+                                            <h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Activer l'itinérance des données (roaming)</h3>
+                                            <div class="dropdown-content">
+                                                <ul class="emailPara">
+                                                    <li><span>Rendez-vous dans "Paramètres" > "Réseaux Mobiles".</span></li>
+                                                    <li><span>La case "Données mobiles" ou "Itinérance" doit être cochée.</span></li>
+                                                </ul><br/>
+                                                <p>Si vous cochez cette case, un message d'information à propos vous informera des risques de facturation de la data
+                                                    à l’étranger.<br/>
+                                                <p style="font-weight: bold;">Attention : pour éviter les mauvaises surprises, consultez nos <a class="link-assistance" href="../mobile/tarifs_detailles.html" target="blank_">tarifs détaillés</a></p>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Configuration des paramètres APN</h3>
+                                            <div class="dropdown-content">
+                                                <p>L'APN (Access Point Name) est le point d’accès qu'utilise votre téléphone pour accéder
+                                                    au réseau Internet mobile de votre opérateur.</p>
+                                                <h3>Etape 1 : accédez aux paramètres APN</h3>
+                                                <ul class="emailPara">
+                                                    <li><span>Appuyez sur le lanceur d'applications.</span></li>
+                                                    <li><span>Sélectionnez </span>"Paramètres" ou "Réglages".</li>
+                                                    <li><span>Suivant la marque et la version Android de votre mobile, sélectionnez :</span></li>
+                                                    <ul class="emailPara2">
+                                                        <li><span>"Sans fil et réseaux"</span></li>
+                                                        <li><span>ou "Plus..."</span></li>
+                                                        <li><span>ou "Données mobiles"</span></li>
+                                                        <li><span>ou "Paramètres supplémentaires"</span></li>
+                                                        <li><span>ou "Plus de réseaux" (depuis l'onglet "Connexions")</span></li>
+                                                        <li><span>ou "Réseaux et partage de connexion"(depuis l'onglet "Réseaux").</span></li>
+                                                    </ul>
+                                                    <li>Sélectionnez <span> "Réseaux mobiles".</span></li>
+                                                    <li>Sélectionnez ensuite <span>"Nom des points d'accès"</span>.</li>
+                                                </ul>
+                                                <p style="font-weight: bold;">Plusieurs cas sont possibles lorsque vous êtes sur la page de configuration des
+                                                    paramètres APN :</p>
+                                                <p>- soit vous pouvez modifier les APN existants en appuyant simplement dessus et en renseignant les informations ci-après,</p>
+                                                <p>- soit vous enregistrez de nouveaux APN et supprimez les anciens APN déjà paramétrés.</p>
+                                                <h3>Etape 2 : configurer les paramètres APN LOL</h3>
+                                                <p>Renseignez les informations présentes dans la configuration <a class="link-assistance" href="../divers/assistance.html#config-data;0;" target="blank_">Paramètre de base</a>.</p>
+                                                <p>En cas de difficultés, faites appel à notre <a class="link-assistance" href="../divers/contact.html#Probleme_technique" target="blank_">service Helpdesk.</a></p>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Exemple sur un Samsung Galaxy S5</h3>
+                                            <div class="dropdown-content">
+                                                <div class="row tuto" style="padding-left: 10px;">
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/Samsung1.png" alt=""/>
+                                                    </div>
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/Samsung2.png" alt=""/>
+                                                    </div>
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/Samsung3.png" alt=""/>
+                                                    </div>
+                                                </div>
+                                            </div>                                            
+                                        </div>                                        
                                     </div>
                                 </div>
                                 <div class="dataItem">
-                                    <div class="phone-12">
-                                        <h3 class="bold">Configuration des paramètres APN</h3>
-                                        <p style="margin-bottom:0;">L'APN (Access Point Name) est le point d’accès qu'utilise votre téléphone pour accéder
-                                            au réseau Internet mobile de votre opérateur.</p><br/>
-                                        <h3>Etape 1 : accédez aux paramètres APN</h3>
-                                        <ul class="emailPara">
-                                            <li><span>Depuis l'écran d'accueil, appuyez sur la flèche en bas à droite de l'écran (ou faites
-                                                    défiler l'écran vers la gauche) pour accéder à la liste des applications.</span>
-                                            </li>
-                                            <li><span>Sélectionnez : </span>"Paramètres".</li>
-                                            <li><span>Sélectionnez ensuite : </span>"réseau cellulaire" ou "réseau mobile".</li>
-                                            <li><span>En fonction de la version de Windows de votre mobile, appuyez sur</span> "ajouter un
-                                                APN internet"<span> (ou "ajouter un APN mms", suivant l'APN que vous souhaitez
-                                                    renseigner) ou sélectionnez </span>"modifier APN".</li>
-                                        </ul>
-                                        <p style="font-weight: bold;">Plusieurs cas sont possibles lorsque vous êtes sur la page de configuration des
-                                            paramètres APN :</p>
-                                        <p>- soit vous pouvez modifier les APN existants en appuyant simplement dessus et en renseignant les informations ci-après,</p>
-                                        <p>- soit vous enregistrez de nouveaux APN et supprimez les anciens APN déjà paramétrés.</p>
-                                        <h3>Etape 2 : configurer les paramètres APN LOL</h3>
-                                        <p>Renseignez les informations présentes dans la configuration <a class="link-assistance" href="../divers/assistance.html#config-data;0;" target="blank_">Paramètre de base</a>.</p>
-                                        <h3 class="bold">Exemple sur un Windows Phone</h3>
-                                        <div class="row tuto" style="padding-left: 10px;">
-                                            <div class="phone-12 tab-6 desk-3">
-                                                <img src="../images/Divers/Assistance/WindowsPhone1.jpg" alt=""/>
-                                            </div>
-                                            <div class="phone-12 tab-6 desk-3">
-                                                <img src="../images/Divers/Assistance/WindowsPhone2.png" alt=""/>
-                                            </div>
-                                            <div class="phone-12 tab-6 desk-3">
-                                                <img src="../images/Divers/Assistance/WindowsPhone3.png" alt=""/>
-                                            </div>
-                                            <div class="phone-12 tab-6 desk-3">
-                                                <img src="../images/Divers/Assistance/WindowsPhone4.png" alt=""/>
+                                    <div class="phone-12 dropdown-list">
+                                        <div class="dropdown">
+                                            <h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Configuration des paramètres APN</h3>
+                                            <div class="dropdown-content">
+                                                <p style="margin-bottom:0;">L'APN (Access Point Name) est le point d’accès qu'utilise votre téléphone pour accéder
+                                                    au réseau Internet mobile de votre opérateur.</p><br/>
+                                                <h3>Etape 1 : accédez aux paramètres APN</h3>
+                                                <ul class="emailPara">
+                                                    <li><span>Depuis l'écran d'accueil, appuyez sur la flèche en bas à droite de l'écran (ou faites
+                                                            défiler l'écran vers la gauche) pour accéder à la liste des applications.</span>
+                                                    </li>
+                                                    <li><span>Sélectionnez </span>"Paramètres".</li>
+                                                    <li><span>Sélectionnez ensuite </span>"réseau cellulaire" ou "réseau mobile".</li>
+                                                    <li><span>En fonction de la version de Windows de votre mobile, appuyez sur</span> "ajouter un
+                                                        APN internet"<span> (ou "ajouter un APN mms", suivant l'APN que vous souhaitez
+                                                            renseigner) ou sélectionnez </span>"modifier APN".</li>
+                                                </ul>
+                                                <p style="font-weight: bold;">Plusieurs cas sont possibles lorsque vous êtes sur la page de configuration des
+                                                    paramètres APN :</p>
+                                                <p>- soit vous pouvez modifier les APN existants en appuyant simplement dessus et en renseignant les informations ci-après,</p>
+                                                <p>- soit vous enregistrez de nouveaux APN et supprimez les anciens APN déjà paramétrés.</p>
+                                                <h3>Etape 2 : configurer les paramètres APN LOL</h3>
+                                                <p>Renseignez les informations présentes dans la configuration <a class="link-assistance" href="../divers/assistance.html#config-data;0;" target="blank_">Paramètre de base</a>.</p>
                                             </div>
                                         </div>
-                                        <div class="row tuto" style="padding-left: 10px;">
-                                            <div class="phone-12 tab-6 desk-3">
-                                                <img src="../images/Divers/Assistance/WindowsPhone5.png" alt=""/>
-                                            </div>
-                                            <div class="phone-12 tab-6 desk-3">
-                                                <img src="../images/Divers/Assistance/WindowsPhone6.png" alt=""/>
-                                            </div>
-                                            <div class="phone-12 tab-6 desk-3">
-                                                <img src="../images/Divers/Assistance/WindowsPhone7.png" alt=""/>
-                                            </div>
+                                        <div class="dropdown">
+                                            <h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Exemple sur un Windows Phone</h3>
+                                            <div class="dropdown-content">
+                                                <div class="row tuto" style="padding-left: 10px;">
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/WindowsPhone1.jpg" alt=""/>
+                                                    </div>
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/WindowsPhone2.png" alt=""/>
+                                                    </div>
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/WindowsPhone3.png" alt=""/>
+                                                    </div>
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/WindowsPhone4.png" alt=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="row tuto" style="padding-left: 10px;">
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/WindowsPhone5.png" alt=""/>
+                                                    </div>
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/WindowsPhone6.png" alt=""/>
+                                                    </div>
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/WindowsPhone7.png" alt=""/>
+                                                    </div>
+                                                </div>
+                                            </div>                                            
                                         </div>
-                                    </div>
+                                    </div>                                    
                                 </div>
                                 <div class="dataItem">
-                                    <div class="phone-12">
-                                        <h3 class="bold">Activez l'itinérance des données (roaming)</h3>
-                                        <ul class="emailPara">
+                                    <div class="phone-12 dropdown-list">
+                                        <div class="dropdown">
+                                            <h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Activez l'itinérance des données (roaming)</h3>
+                                            <div class="dropdown-content">
+                                                <ul class="emailPara">
                                             <li><span>allez dans</span> "Réglages" > "Général" > "Réseau"</li>
                                             <li><span>activez les données à l’étranger (curseur gris O).</span></li>
                                         </ul>
-                                        <p style="font-weight: bold;">Attention, la data à l'étranger n'est pas toujours incluse dans votre forfait, vérifiez cela
-                                            avant d'activer l’itinérance.</p>
+                                        <p style="font-weight: bold;">Attention : pour éviter les mauvaises surprises, consultez nos <a class="link-assistance" href="../mobile/tarifs_detailles.html" target="blank_">tarifs détaillés</a></p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

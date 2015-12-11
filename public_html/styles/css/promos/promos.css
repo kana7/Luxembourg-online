@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,400italic);
 #promo-fibre:not(.not-accueil) {
-  background-image: url(../../../images/promos/Accueil/Promo_Fibre_672x460px.jpg); }
+  background-image: url("../../../images/promos/Promo Fibre Noel/Accueil/Promo_Fibre_Noel_672x460px.jpg"); }
 #promo-fibre.not-accueil {
-  background-image: url(../../../images/promos/Promo_Fibre/Promo_Fibre_672x335px.jpg); }
+  background-image: url("../../../images/promos/Promo Fibre Noel/Promo Fibre Noel/Promo_Fibre_Noel_672x335px.jpg"); }
 
 #promo-internetTV:not(.not-accueil) {
   background-image: url(../../../images/promos/Accueil/Promo_TV_672x460px.jpg); }
@@ -88,9 +88,9 @@
     padding-left: 5px !important; } }
 @media screen and (min-width: 672px) {
   #promo-fibre:not(.not-accueil) {
-    background-image: url(../../../images/Promos/Accueil/Promo_Fibre_1056x430px.jpg); }
+    background-image: url("../../../images/promos/Promo Fibre Noel/Accueil/Promo_Fibre_Noel_1056x430px.jpg"); }
   #promo-fibre.not-accueil {
-    background-image: url(../../../images/promos/Promo_Fibre/Promo_Fibre_1056x290px.jpg); }
+    background-image: url("../../../images/promos/Promo Fibre Noel/Promo Fibre Noel/Promo_Fibre_Noel_1056x290px.jpg"); }
 
   #promo-internetTV:not(.not-accueil) {
     background-image: url(../../../images/promos/Accueil/Promo_TV_1056x430px.jpg); }
@@ -111,9 +111,9 @@
       height: 290px !important; } }
 @media screen and (min-width: 1056px) {
   #promo-fibre:not(.not-accueil) {
-    background-image: url(../../../images/Promos/Accueil/Promo_Fibre_1302x370px.jpg); }
+    background-image: url("../../../images/promos/Promo Fibre Noel/Accueil/Promo_Fibre_Noel_1302x370px.jpg"); }
   #promo-fibre.not-accueil {
-    background-image: url(../../../images/Promos/Accueil/Promo_Fibre_1302x370px.jpg); }
+    background-image: url("../../../images/promos/Promo Fibre Noel/Promo Fibre Noel/Promo_Fibre_Noel_1302x370px.jpg"); }
 
   #promo-internetTV:not(.not-accueil) {
     background-image: url(../../../images/Promos/Accueil/Promo_TV_1302x370px.jpg); }
@@ -157,8 +157,7 @@
     .promo-info .promo-price {
       font-weight: 800;
       font-size: 35px;
-      margin-bottom: 60px;
-      }
+      margin-bottom: 60px; }
       .promo-info .promo-price .price {
         font-size: 75px;
         margin-bottom: 15px; }
@@ -179,9 +178,9 @@
     padding-left: 15px; } }
 @media screen and (min-width: 1302px) {
   #promo-fibre:not(.not-accueil) {
-    background-image: url(../../../images/Promos/Accueil/Promo_Fibre_1920x400px.jpg); }
+    background-image: url("../../../images/promos/Promo Fibre Noel/Accueil/Promo_Fibre_Noel_1920x400px.jpg"); }
   #promo-fibre.not-accueil {
-    background-image: url(../../../images/Promos/Accueil/Promo_Fibre_1920x400px.jpg); }
+    background-image: url("../../../images/promos/Promo Fibre Noel/Promo Fibre Noel/Promo_Fibre_Noel_1920x400px.jpg"); }
 
   #promo-internetTV:not(.not-accueil) {
     background-image: url(../../../images/Promos/Accueil/Promo_TV_1920x400px.jpg); }

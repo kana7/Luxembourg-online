@@ -100,7 +100,7 @@
   #promo-noel:not(.not-accueil) {
     background-image: url(../../../images/promos/Accueil/Promo_TV_Noel_1056x430px.jpg); }
   #promo-noel.not-accueil {
-    background-image: url(../../../images/promos/Promos_TVInternet/Promo_TV_1056x290px.jpg); }
+    background-image: url(../../../images/promos/Promo_TVNoel/Offre_TV_1056x290px.jpg); }
 
   #promo-fibre, #promo-internetTV, #promo-noel {
     background-size: 1056px auto;
@@ -134,9 +134,8 @@
       font-size: 43px;
       margin: 10px 0 15px; }
     #promo-fibre .section-description, #promo-internetTV .section-description, #promo-noel .section-description {
-      font-size: 28px;
-      line-height: 35px;
-      }
+      font-size: 24px;
+      line-height: 35px; }
       #promo-fibre .section-description strong, #promo-internetTV .section-description strong, #promo-noel .section-description strong {
         display: block; }
 
@@ -158,7 +157,8 @@
     .promo-info .promo-price {
       font-weight: 800;
       font-size: 35px;
-      margin-bottom: 60px; }
+      margin-bottom: 60px;
+      }
       .promo-info .promo-price .price {
         font-size: 75px;
         margin-bottom: 15px; }

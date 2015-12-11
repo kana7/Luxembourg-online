@@ -3757,6 +3757,8 @@ span[class^=icon-] {
     padding-bottom: 3px; }
   .sub-menu li:not(.active):hover .link {
     border-bottom: 2px dotted #c0c0c0; }
+  .sub-menu.white li:not(.active):hover .link {
+    border-bottom: 2px dotted #fff; }
 
 .btn-container {
   display: block;
@@ -4260,8 +4262,7 @@ span[class^=icon-] {
   .offer-item-blue .item-header, .offer-item-blue .item-footer, .equipement-item-blue .item-header, .equipement-item-blue .item-footer {
     background-color: #004994;
     padding: 10px 0;
-    color: #fff;
-    }
+    color: #fff; }
   .offer-item-blue .item-header, .equipement-item-blue .item-header {
     border-radius: 4px 4px 0px 0px;
     padding: 18px 0 15px;
@@ -4286,8 +4287,7 @@ span[class^=icon-] {
       position: absolute;
       font-size: 32px;
       top: 3px;
-      left: 150px;
-      }
+      left: 150px; }
     .offer-item-blue .offer-price span, .equipement-item-blue .offer-price span {
       font-size: 22px;
       padding-left: 6px; }
@@ -6612,8 +6612,7 @@ h2.contact-title {
       margin-right: 65px; }
 
   .offer-item-orange .offer-price div, .offer-item-blue .offer-price div {
-    left: 152px;
-    }
+    left: 162px; }
 
   #slider-contents .title {
     font-size: 37pt;

@@ -177,5 +177,16 @@
         &:not(.not-accueil), &.not-accueil{
             height: 400px !important;
         }
+        .section-title{
+            font-size: 48px;
+            margin: 10px 0 15px;
+        }
+        .section-description{
+            font-size: 28px;
+            line-height: 40px;
+            strong{
+                display: block;
+            }
+        }
     }
 }

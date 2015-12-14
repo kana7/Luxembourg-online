@@ -88,7 +88,7 @@ svg:not(:root) {
 // SHADOW CLASS
 // --------------------------------------------------
 .iner-shadow{
-    @include box-shadow(inset 0 4px 15px 2px lighten($black, 75%));
+    @include box-shadow(inset 0 4px 15px 2px rgba(0, 0, 0, 0.2));
 }
 .section-shadow{
     position: relative;

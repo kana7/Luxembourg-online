@@ -1160,6 +1160,13 @@ span[class^=icon-]
 #equipement-section{
     padding-bottom: 40px;
 }
+#panier{
+    border: 1px solid $blue; 
+    .header{
+        background-color: $blue;
+        padding: 5px 0;
+    }
+}
 .k24, .k30, .k100, .k200{
     position: relative;
     .not-dispo{

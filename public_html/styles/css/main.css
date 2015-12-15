@@ -4360,8 +4360,7 @@ span[class^=icon-] {
         position: relative;
         top: 2px;
         margin-right: 25px;
-        font-size: 16px;
-        }
+        font-size: 16px; }
 
 .offer-item-orange, .equipement-item-orange {
   display: block;
@@ -4464,6 +4463,12 @@ span[class^=icon-] {
 
 #equipement-section {
   padding-bottom: 40px; }
+
+#panier {
+  border: 1px solid #004994; }
+  #panier .header {
+    background-color: #004994;
+    padding: 5px 0; }
 
 .k24, .k30, .k100, .k200 {
   position: relative; }

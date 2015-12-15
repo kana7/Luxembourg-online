@@ -1,7 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,400italic);
 #test-offres {
-  background-color: #004994;
-  }
+  background-color: #004994; }
   #test-offres .text {
     font-size: 22px;
     font-weight: 400;
@@ -29,6 +28,31 @@
     margin-bottom: 15px; }
   #test-offres .btn-orange {
     font-size: 18px; }
+
+#step-list {
+  background-color: #004994;
+  padding: 10px 0; }
+  #step-list ul {
+    display: block;
+    text-align: justify;
+    width: 100%;
+    line-height: 0; }
+    #step-list ul:after {
+      content: '';
+      display: inline-block;
+      width: 100%; }
+  #step-list li {
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    font-size: 16px;
+    line-height: 30px;
+    color: white; }
+    #step-list li .icon-right-arrow {
+      position: relative;
+      margin: 0;
+      top: 1px;
+      font-size: 0.75em; }
 
 #test-offres {
   text-align: center;

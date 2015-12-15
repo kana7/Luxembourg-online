@@ -91,6 +91,10 @@ function createDispoPopup() {
     }
 }
 
+function insertLink(id){
+    return '<a class="btn-blue btn-subscription" href="../shop/inscription.html#'+id+'">Abonnez-vous</a>';
+};
+
 function checkDispo(homeId, boolean) {
     if (homeId !== undefined || homeId !== null || homeId !== '') {
         $.ajax({
@@ -231,57 +235,30 @@ function checkDispo(homeId, boolean) {
                 }
                 $('.k24, .k30, .k100, .k200').next().remove();
                 $('.k24, .k30, .k100, .k200').find('.not-dispo').remove();
-                if (boolean) {
                     if (ab[0] == "") {
                         $(nonDispoTemplate).prependTo('.k24').css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     } else {
                         $('.k24').find('.not-dispo').remove();
-                        $(buttonPromoTv).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                        $(insertLink(ab[0])).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     }
                     if (ab[1] == "") {
                         $(nonDispoTemplate).prependTo('.k30').css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     } else {
                         $('.k30').find('.not-dispo').remove();
-                        $(buttonPromoTv).insertAfter($('.k30')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                        $(insertLink(ab[1])).insertAfter($('.k30')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     }
                     if (ab[2] == "") {
                         $(nonDispoTemplate).prependTo('.k100').css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     } else {
                         $('.k100').find('.not-dispo').remove();
-                        $(buttonPromoFibre).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                        $(insertLink(ab[2])).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     }
                     if (ab[3] == "") {
                         $(nonDispoTemplate).prependTo('.k200').css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     } else {
                         $('.k200').find('.not-dispo').remove();
-                        $(buttonPromoFibre).insertAfter($('.k200')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                        $(insertLink(ab[3])).insertAfter($('.k200')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     }
-                } else {
-                    if (ab[0] == "") {
-                        $(nonDispoTemplate).prependTo('.k24').css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    } else {
-                        $('.k24').find('.not-dispo').remove();
-                        $(buttonDispoTempate).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    }
-                    if (ab[1] == "") {
-                        $(nonDispoTemplate).prependTo('.k30').css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    } else {
-                        $('.k30').find('.not-dispo').remove();
-                        $(buttonDispoTempate).insertAfter($('.k30')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    }
-                    if (ab[2] == "") {
-                        $(nonDispoTemplate).prependTo('.k100').css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    } else {
-                        $('.k100').find('.not-dispo').remove();
-                        $(buttonDispoTempate).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    }
-                    if (ab[3] == "") {
-                        $(nonDispoTemplate).prependTo('.k200').css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    } else {
-                        $('.k200').find('.not-dispo').remove();
-                        $(buttonDispoTempate).insertAfter($('.k200')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    }
-                }
                 if ($('.main-gallery').length) {
                     $('.main-gallery').show().flickity('resize');
                 }

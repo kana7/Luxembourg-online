@@ -38,3 +38,32 @@
         font-size: 18px; 
     }
 }
+#step-list{
+    background-color: $blue;
+    padding: 10px 0;
+    ul{
+        display: block;
+        text-align: justify;
+        width: 100%;
+        line-height: 0;
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 100%;
+        }
+    }
+    li{
+        display: inline-block;
+        position: relative;
+        top: 3px;
+        font-size: 16px;
+        line-height: 30px;
+        color: white;
+        .icon-right-arrow{
+            position: relative;
+            margin: 0;
+            top: 1px;
+            font-size: 0.75em;
+        }
+    }
+}

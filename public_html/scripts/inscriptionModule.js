@@ -6,6 +6,7 @@ var StepTransition = (function () {
     var currentStep = 0;
     //INIT doit construire les différente partie des slides
     var init = function () {
+        
         _bindEvents();
     };
     var _bindEvents = function () {
@@ -28,6 +29,8 @@ var StepTransition = (function () {
 })();
 var Card = (function () {
 
+
+var templatePanier ='';
     //Le panier contient le prix ainsi que les objets avec leur ID respectifs
     var Panier = {
         item: {
@@ -83,34 +86,45 @@ var Materiel = function (id, name, price, isMonthlyCost, commentaire, link) {
     this.link = link;
 };
 //objet abonnement internet
-var Abonnement = function (id, name, price, isMonthlyCost, commentaire, ipt, tech, service, installation, activation, modems) {
+var Abonnement = function (id, name, price, isMonthlyCost, commentaire, ipt, tech, service, installation, activation, materiels) {
     Abonnement.super_.call(this, id, name, price, isMonthlyCost, commentaire);
     this.ipt = ipt;
     this.tech = tech;
     this.service = service;
     this.installation = installation;
     this.activation = activation;
-    this.modems = modems;
+    this.materiels = materiels;
 };
 inherits(Abonnement, Item);
 inherits(Materiel, Item);
 
 
-var install = new Item("5313", "Installation", 89.00, false, "");
-var remiseInstall = new Item("5313", "Installation", -89.00, false, "");
-var selfInstall = new Item("5612", "Self-install Kit", 25.00, false, "");
+var install = new Item("5313", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.");
+var remiseInstall = new Item("5313", "PROMO : installation offerte", -89.00, false, "");
+
+var selfInstall = new Item("5612", "Installation par Self-Install-Kit", 25.00, false, "Je fais l'installation moi-même à l'aide du kit d'installation");
+
 var activation = new Item("5610", "Activation", 85.00, false, "");
 var remiseActivation = new Item("5611", "Remise activation", -85.00, false, "");
 
 
 var modem_List1 = {
-    "5291": new Materiel("5291", "Location FRITZ!Box 3272", 4, true, "", "../images/equipment/modem/3272/3272.png"),
-    "5294": new Materiel("5294", "Location FRITZ!Box 7490", 6, true, "", "../images/equipment/modem/3272/3272.png")
+    "5291": new Materiel("5291", "Location FRITZ!Box 3272", 4.00, true, "", "../images/equipment/modem/3272/3272.png"),
+    "5294": new Materiel("5294", "Location FRITZ!Box 7490", 6.00, true, "", "../images/equipment/modem/3272/3272.png")
 };
 var modem_List2 = {
-    "5292": new Materiel("5292", "Location FRITZ!Box 7360", 4, true, "", "../images/equipment/modem/7360/7360.png"),
-    "5294": new Materiel("5294", "Location FRITZ!Box 7490", 6, true, "", "../images/equipment/modem/7390/7360.png")
+    "5292": new Materiel("5292", "Location FRITZ!Box 7360", 4.00, true, "", "../images/equipment/modem/7360/7360.png"),
+    "5294": new Materiel("5294", "Location FRITZ!Box 7490", 6.00, true, "", "../images/equipment/modem/7390/7360.png")
 };
+
+var lolTv = {
+    "2848" : new Abonnement("2848", "LOLTV", 17.00, true, "", "LOL", "TV", null, null, null, {
+        "5137": new Materiel("5137", "Location LOLTV MiniX Neo X7 (4,50€/mois)", 4.50, true, "", "../images/TV/320px/Minix_Equipement.jpg"),
+        "5304": new Materiel("5304", "Location LOLTV MiniX Neo X7 (5,50€/mois)", 5.50, true, "", "../images/TV/320px/Minix_Equipement.jpg")
+    })
+};
+var lolTVRemise =  new Item("5611", "6 mois gratuits", -17.00, true, "après 17€/mois");
+
 var typeInstall = [install, selfInstall];
 
 var abonnements_list = {
@@ -143,6 +157,9 @@ var abonnements_list = {
     },
     "42": {
         "5263": new Abonnement("5263", "LOL FIBER 100", 54.90, true, "", "EPT", "VDSL2", 42, {type: install, remise: remiseInstall, isRemise: true}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2)
+    },
+    getAbo : function(service, id){
+        return abonnements_list[service][id];
     }
 };
 

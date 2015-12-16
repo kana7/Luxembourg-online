@@ -56,7 +56,7 @@
         display: inline-block;
         position: relative;
         top: 3px;
-        font-size: 16px;
+        font-size: 15px;
         line-height: 30px;
         color: white;
         .icon-right-arrow{
@@ -64,6 +64,174 @@
             margin: 0;
             top: 1px;
             font-size: 0.75em;
+        }
+        &.active{
+            border-bottom: 1px solid $white;
+            &~li{
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+#panier{
+    display: block;
+    border: 1px solid $blue;
+    color: $black;
+    &>li{
+        padding: 15px 0;
+        padding-left: 20px;
+    }
+    li{
+        display: block;
+        width: 100%;
+    }
+    h3, h4{
+        margin: 0;
+    }
+    [class^=icon-]{
+        color: $orange;
+        position: relative;
+        top: 2px;
+    }
+    .header{
+        background-color: $blue;
+        padding: 15px 0;
+        h3{
+            font-weight: 800;
+            font-size: 1.3em;
+            color: $white;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+    .abo{
+        margin-bottom: 15px;
+    }
+    .abo, .options{
+        ul{
+            padding-left: 5px;
+        }
+        li{
+            line-height: 20px;
+        }
+    }
+    .prices{
+        padding: 10px 0;
+        border-top: 1px solid $blue;
+        ul{
+            display: block;
+            padding: 0 15px;
+            text-align: center;
+            li{
+                @include clearfix;
+                line-height: 25px;
+            }
+        }
+        .prices-label, .prices-price{
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+        .prices-label{
+            float: left;
+        }
+        .prices-price{
+            float: right;
+            color: $orange;
+            font-weight: 800;
+            font-size: 1.1em;
+        }
+    }
+    h4{
+        font-size: 1.3em;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+}
+
+#steps{
+    .step-title{
+        margin: 0;
+        font-size: 1.8em;
+        font-weight: 800;
+    }
+    .step-description{
+        font-size: 1.31em;
+        margin: 10px 0;
+    }
+    .btn-blue, .btn-orange{
+        font-size: 1.1em;
+        [class^=icon-]{
+            font-size: 0.8em;
+            top: 1px;
+        }
+    }
+    .btn-blue{
+        text-shadow: none;
+        [class^=icon-]{
+            margin-right: 10px;
+        }
+    }
+    .btn-orange{
+        @include box-shadow(none);
+        [class^=icon-]{
+            margin: 0;
+            margin-left: 10px;
+        }
+        &[disabled]{
+            background-color: $grey;
+        }
+    }
+}
+
+.shop-item{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    min-height: 189px;
+    padding: 15px 0 0 20px;
+    background-color: $white;
+    border: 2px solid $blue;
+    border-radius: 6px;
+    @include box-shadow( 0 0 5px 0 rgba(0,0,0,0.4));
+    @include clearfix;
+    font-size: 14px;
+    cursor: pointer;
+    &:hover{
+        opacity: 0.8;
+    }
+    li{
+        display: block;
+    }
+}
+.shop-item-name{
+    margin: 0 0 15px;
+    font-size: 1.4em;
+    font-weight: 800;
+}
+.shop-item-description{
+    line-height: 21px;
+    font-size: 1.15em;
+}
+.shop-item-img{
+    display: inline-block;
+    float: right;
+    height: auto;
+    width: auto;
+}
+
+.shop-item-price{
+    position: absolute;
+    top: 80px;
+    line-height: 20px;
+    font-size: 1.1em;
+    .price{
+        font-size: 1.25em;
+    }
+    &.promo{
+        .price{
+            text-decoration: line-through;
         }
     }
 }

@@ -3393,6 +3393,9 @@ svg:not(:root) {
   -o-box-shadow: 0 2px 13px 2px rgba(0, 0, 0, 0.2);
   -ms-box-shadow: 0 2px 13px 2px rgba(0, 0, 0, 0.2); }
 
+.delete-price {
+  text-decoration: cancel-line-through; }
+
 .section-layout {
   color: #004994; }
 
@@ -4463,12 +4466,6 @@ span[class^=icon-] {
 
 #equipement-section {
   padding-bottom: 40px; }
-
-#panier {
-  border: 1px solid #004994; }
-  #panier .header {
-    background-color: #004994;
-    padding: 5px 0; }
 
 .k24, .k30, .k100, .k200 {
   position: relative; }

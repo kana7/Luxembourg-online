@@ -290,6 +290,7 @@
                                         <div class="clearfix phone-mt-40">
                                             <div class="phone-12 tab-6 tab-pr-40">
                                                 <div class="shop-item">
+                                                    <input type="radio" name="_install" value="4321" hidden>
                                                     <h3 class="shop-item-name">Installation par Self-Instal Kit</h3>
                                                     <div class="phone-6">
                                                         <ul class="shop-item-description">
@@ -305,7 +306,8 @@
                                                 </div>
                                             </div>
                                             <div class="phone-12 tab-6 tab-pl-30">
-                                                <div class="shop-item selected">
+                                                <div class="shop-item">
+                                                    <input type="radio" name="_install" value="1234" hidden>
                                                     <h3 class="shop-item-name">Installation par une équipe</h3>
                                                     <div class="phone-6">
                                                         <ul class="shop-item-description">
@@ -526,6 +528,22 @@
                 wrapAround: true,
                 prevNextButtons: false,
                 autoPlay: 2500
+            });
+        </script>
+        <script type="text/javascript">
+            $(function () {
+                $('.shop-item').on('click', function () {
+                    $(this).toggleClass('selected');
+                    if( $(this).find('input[type="radio"]:checked').length > 0){
+                        $(this).find('input[type="radio"]').prop('checked', 'checked').change();
+                    }else{
+                        
+                    }
+                    $(this).find('input[type="radio"]').prop('checked', false).change();
+                });
+                $('input[type="radio"]').on('change', function () {
+                    $('input[type="radio"][name="' + $(this).attr('name') + '"]').parent('.shop-item').not($(this).closest('.shop-item')).removeClass('selected');
+                });
             });
         </script>
         <script type="text/javascript" src="../scripts/analytics.js"></script>

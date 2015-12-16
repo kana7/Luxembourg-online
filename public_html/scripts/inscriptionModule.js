@@ -74,20 +74,21 @@ var inherits = function (ctor, superCtor) {
         }
     });
 };
-var Item = function (id, name, price, isMonthlyCost, commentaire) {
+var Item = function (id, name, price, isMonthlyCost, commentaire, isDefaut) {
     this.id = id;
     this.name = name;
     this.price = price;
     this.isMonthlyCost = isMonthlyCost;
     this.commentaire = commentaire;
+    this.isDefaut = isDefaut;
 };
-var Materiel = function (id, name, price, isMonthlyCost, commentaire, link) {
-    Materiel.super_.call(this, id, name, price, isMonthlyCost, commentaire);
+var Materiel = function (id, name, price, isMonthlyCost, commentaire, isDefaut, link) {
+    Materiel.super_.call(this, id, name, price, isMonthlyCost, commentaire, isDefaut);
     this.link = link;
 };
 //objet abonnement internet
-var Abonnement = function (id, name, price, isMonthlyCost, commentaire, ipt, tech, service, installation, activation, materiels) {
-    Abonnement.super_.call(this, id, name, price, isMonthlyCost, commentaire);
+var Abonnement = function (id, name, price, isMonthlyCost, commentaire, isDefaut, ipt, tech, service, installation, activation, materiels) {
+    Abonnement.super_.call(this, id, name, price, isMonthlyCost, commentaire, isDefaut);
     this.ipt = ipt;
     this.tech = tech;
     this.service = service;
@@ -99,67 +100,70 @@ inherits(Abonnement, Item);
 inherits(Materiel, Item);
 
 
-var install = new Item("5313", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.");
-var remiseInstall = new Item("5313", "PROMO : installation offerte", -89.00, false, "");
+var install = new Item("5313", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true);
+var remiseInstall = new Item("5313", "PROMO : installation offerte", -89.00, false, "", true);
 
-var selfInstall = new Item("5612", "Installation par Self-Install-Kit", 25.00, false, "Je fais l'installation moi-même à l'aide du kit d'installation");
+var selfInstall = new Item("5612", "Installation par Self-Install-Kit", 25.00, false, "Je fais l'installation moi-même à l'aide du kit d'installation", false);
 
-var activation = new Item("5610", "Activation", 85.00, false, "");
-var remiseActivation = new Item("5611", "Remise activation", -85.00, false, "");
+var activation = new Item("5610", "Activation", 85.00, false, "", true);
+var remiseActivation = new Item("5611", "Remise activation", -85.00, false, "", true);
 
 
 var modem_List1 = {
-    "5291": new Materiel("5291", "Location FRITZ!Box 3272", 4.00, true, "", "../images/equipment/modem/3272/3272.png"),
-    "5294": new Materiel("5294", "Location FRITZ!Box 7490", 6.00, true, "", "../images/equipment/modem/3272/3272.png")
+    "5291": new Materiel("5291", "Location FRITZ!Box 3272", 4.00, true, "", true, "../images/equipment/modem/3272/3272.png"),
+    "5294": new Materiel("5294", "Location FRITZ!Box 7490", 6.00, true, "", false, "../images/equipment/modem/3272/3272.png")
 };
 var modem_List2 = {
-    "5292": new Materiel("5292", "Location FRITZ!Box 7360", 4.00, true, "", "../images/equipment/modem/7360/7360.png"),
-    "5294": new Materiel("5294", "Location FRITZ!Box 7490", 6.00, true, "", "../images/equipment/modem/7390/7360.png")
+    "5292": new Materiel("5292", "Location FRITZ!Box 7360", 4.00, true, "", true, "../images/equipment/modem/7360/7360.png"),
+    "5294": new Materiel("5294", "Location FRITZ!Box 7490", 6.00, true, "", false, "../images/equipment/modem/7390/7360.png")
 };
 
 var lolTv = {
-    "2848" : new Abonnement("2848", "LOLTV", 17.00, true, "", "LOL", "TV", null, null, null, {
-        "5137": new Materiel("5137", "Location LOLTV MiniX Neo X7 (4,50€/mois)", 4.50, true, "", "../images/TV/320px/Minix_Equipement.jpg"),
-        "5304": new Materiel("5304", "Location LOLTV MiniX Neo X7 (5,50€/mois)", 5.50, true, "", "../images/TV/320px/Minix_Equipement.jpg")
+    "2848" : new Abonnement("2848", "LOLTV", 17.00, true, "", true, "LOL", "TV", null, null, null, {
+        "5137": new Materiel("5137", "Location LOLTV MiniX Neo X7 (4,50€/mois)", 4.50, true, "", true, "../images/TV/320px/Minix_Equipement.jpg"),
+        "5304": new Materiel("5304", "Location LOLTV MiniX Neo X7 (5,50€/mois)", 5.50, true, "", false, "../images/TV/320px/Minix_Equipement.jpg")
     })
 };
-var lolTVRemise =  new Item("5611", "6 mois gratuits", -17.00, true, "après 17€/mois");
+var lolTVRemise =  new Item("5611", "6 mois gratuits", -17.00, true, "après 17€/mois", true);
 
 var typeInstall = [install, selfInstall];
 
 var abonnements_list = {
     "2": {
-        "5272": new Abonnement("5272", "LOL FIBER 30", 44.90, true, "", "LOL", "FIBRE", 2, {type: install, remise: null, isRemise: false}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2),
-        "5275": new Abonnement("5275", "LOL FIBER 100", 54.90, true, "", "LOL", "FIBRE", 2, {type: install, remise: remiseInstall, isRemise: true}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2),
-        "5276": new Abonnement("5276", "LOL FIBER 200", 71.90, true, "", "LOL", "FIBRE", 2, {type: install, remise: remiseInstall, isRemise: true}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2)
+        "5272": new Abonnement("5272", "LOL FIBER 30", 44.90, true, "", true, "LOL", "FIBRE", 2, {type: install, remise: null, isRemise: false}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2),
+        "5275": new Abonnement("5275", "LOL FIBER 100", 54.90, true, "", true, "LOL", "FIBRE", 2, {type: install, remise: remiseInstall, isRemise: true}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2),
+        "5276": new Abonnement("5276", "LOL FIBER 200", 71.90, true, "", true, "LOL", "FIBRE", 2, {type: install, remise: remiseInstall, isRemise: true}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2)
     },
     "3": {
-        "?": new Abonnement("?", "LOL DSL 20", null, true, "", "EPT", "ADSL", 3, {type: null, remise: null, isRemise: false}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List1)
+        "?": new Abonnement("?", "LOL DSL 20", null, true, "", true, "EPT", "ADSL", 3, {type: null, remise: null, isRemise: false}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List1)
     },
     "4": {
-        "5262": new Abonnement("5262", "LOL FIBER 30", 44.90, true, "", "EPT", "VDSL", 4, {type: install, remise: null, isRemise: false}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2)
+        "5262": new Abonnement("5262", "LOL FIBER 30", 44.90, true, "", true, "EPT", "VDSL", 4, {type: install, remise: null, isRemise: false}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2)
     },
     "5": {
-        "5262": new Abonnement("5262", "LOL FIBER 30", 44.90, true, "", "EPT", "FIBRE", 5, {type: install, remise: null, isRemise: false}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2),
-        "5263": new Abonnement("5263", "LOL FIBER 100", 54.90, true, "", "EPT", "FIBRE", 5, {type: install, remise: remiseInstall, isRemise: true}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2),
-        "5264": new Abonnement("5264", "LOL FIBER 200", 71.90, true, "", "EPT", "FIBRE", 5, {type: install, remise: remiseInstall, isRemise: true}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2)
+        "5262": new Abonnement("5262", "LOL FIBER 30", 44.90, true, "", true, "EPT", "FIBRE", 5, {type: install, remise: null, isRemise: false}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2),
+        "5263": new Abonnement("5263", "LOL FIBER 100", 54.90, true, "", true, "EPT", "FIBRE", 5, {type: install, remise: remiseInstall, isRemise: true}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2),
+        "5264": new Abonnement("5264", "LOL FIBER 200", 71.90, true, "", true, "EPT", "FIBRE", 5, {type: install, remise: remiseInstall, isRemise: true}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2)
     },
     "6": {
-        "5257": new Abonnement("5257", "LOL DSL 24", 34.90, true, "", "LOL", "ADSL", 6, {type: null, remise: null, isRemise: false}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List1)
+        "5257": new Abonnement("5257", "LOL DSL 24", 34.90, true, "", true, "LOL", "ADSL", 6, {type: null, remise: null, isRemise: false}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List1)
     },
     "8": {
-        "5273": new Abonnement("5273", "LOL FIBER 30", 44.90, true, "", "LOL", "VDSL", 8, {type: install, remise: null, isRemise: false}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2),
-        "5274": new Abonnement("5274", "LOL FIBER 100", 54.90, true, "", "LOL", "VDSL", 8, {type: install, remise: remiseInstall, isRemise: true}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2),
-        "5336": new Abonnement("5336", "LOL FIBER 100", 54.90, true, "", "LOL", "VDSL", 8, {type: install, remise: remiseInstall, isRemise: true}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2)
+        "5273": new Abonnement("5273", "LOL FIBER 30", 44.90, true, "", true, "LOL", "VDSL", 8, {type: install, remise: null, isRemise: false}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2),
+        "5274": new Abonnement("5274", "LOL FIBER 100", 54.90, true, "", true, "LOL", "VDSL", 8, {type: install, remise: remiseInstall, isRemise: true}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2),
+        "5336": new Abonnement("5336", "LOL FIBER 100", 54.90, true, "", true, "LOL", "VDSL", 8, {type: install, remise: remiseInstall, isRemise: true}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2)
     },
     "41": {
-        "5263": new Abonnement("5263", "LOL FIBER 100", 54.90, true, "", "EPT", "VDSL1", 41, {type: install, remise: remiseInstall, isRemise: true}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2)
+        "5263": new Abonnement("5263", "LOL FIBER 100", 54.90, true, "", true, "EPT", "VDSL1", 41, {type: install, remise: remiseInstall, isRemise: true}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2)
     },
     "42": {
-        "5263": new Abonnement("5263", "LOL FIBER 100", 54.90, true, "", "EPT", "VDSL2", 42, {type: install, remise: remiseInstall, isRemise: true}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2)
+        "5263": new Abonnement("5263", "LOL FIBER 100", 54.90, true, "", true, "EPT", "VDSL2", 42, {type: install, remise: remiseInstall, isRemise: true}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2)
     },
     getAbo : function(service, id){
         return abonnements_list[service][id];
+    },
+    setComment : function(service, id, commentaire){
+        this.getAbo(service, id).commentaire = commentaire;
     }
 };
 

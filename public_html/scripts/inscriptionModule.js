@@ -2,22 +2,10 @@
 // MODULE
 //------------------------------------------------------------------------------
 var StepTransition = (function () {
-    //Récupérer l'abo lors de l'init dans l'url pour ensuite remplir la liste des items disponible au choix.
-
-    var currentItems_list = {
-        abo: null,
-        installation: null,
-        activation: null,
-        modems: null,
-        tv: null,
-        materiels: null
-    };
-
     //stock la position du slide visible
     var currentStep = 0;
 
     var init = function () {
-        _initCurrentItem();
         //TODO - Construire toutes les étapes
         _bindEvents();
     };
@@ -28,23 +16,7 @@ var StepTransition = (function () {
     var _showSlider = function () {
 
     };
-    var _initCurrentItem = function () {
-        var vhash;
-        if (window.location.hash) {
-            vhash = (window.location.hash.split('#')[1]).split(";");
-            if (window.location.hash.length > 2) {
-                currentItems_list['abo'] = abonnements_list.getAbo(vhash[0], vhash[1]);
-                currentItems_list['installation'] = currentItems_list['abo']['installation'];
-                currentItems_list['activation'] = currentItems_list['abo']['activation'];
-                currentItems_list['modems'] = currentItems_list['abo']['materiels'];
-                currentItems_list['tv'] = lolTv;
-                currentItems_list['materiels'] = materiel_list;
-                console.log(currentItems_list);
-            }
-        } else {
-            window.location.replace("offres.html");
-        }
-    };
+
     var next = function () {
         //passer au slide suivant
     };
@@ -62,14 +34,21 @@ var Cart = (function () {
 
 
     var templatePanier = '';
-    //Le panier contient le prix ainsi que les objets avec leur ID respectifs
+
+    //Contient la liste de tous les choix possibles lors de l'inscription
+    var currentItems_list = {
+        abo: null,
+        installation: null,
+        activation: null,
+        modem: null,
+        tv: null,
+        materiels: null
+    };
+
+    //Le panier contient le prix ainsi que les objets avec leur ID respectifs --> cet objet est envoyé au serveur à la fin du script
     var Panier = {
         item: {
-            abo: null,
-            modem: null,
-            materiel: null,
-            telephonie: null
-
+            materiels: []
         },
         price: {
             unique: 0,
@@ -80,12 +59,36 @@ var Cart = (function () {
     events.on('useCart', _useCard);
 
     var init = function () {
+        _initCurrentItem();
         //abo est un objet venant de abonnements_list 
         //Panier.item.abo = abo;
     };
+
+    var _initCurrentItem = function () {
+        var vhash;
+        if (window.location.hash) {
+            vhash = (window.location.hash.split('#')[1]).split(";");
+            if (window.location.hash.length > 2) {
+                currentItems_list['abo'] = abonnements_list.getAbo(vhash[0], vhash[1]);
+                Panier['item']['abo'] = currentItems_list['abo'];
+                currentItems_list['installation'] = currentItems_list['abo']['installation'];
+                currentItems_list['activation'] = currentItems_list['abo']['activation'];
+                currentItems_list['modem'] = currentItems_list['abo']['materiels'];
+                currentItems_list['tv'] = lolTv;
+                currentItems_list['materiels'] = materiel_list;
+
+
+                console.log(currentItems_list);
+            }
+        } else {
+            window.location.replace("offres.html");
+        }
+    };
+
     var _render = function () {
         //Reconstruire le shopping card quand les données sont mises à jour - TODO Mettre en place un template
     };
+
     function _useCard(data) {
         console.log(data);
         if (data['isAdding']) {
@@ -93,13 +96,50 @@ var Cart = (function () {
         } else {
             _removeItem(data['cat'], data['id']);
         }
-    };
+    }
+    ;
+
     var _addItem = function (cat, id) {
-        alert("j'ajoute !");
+        console.log("j'ajoute !");
+        console.log(currentItems_list);
+        console.log('categorie : ' + cat + '; id : ' + id + ';');
+        if (cat == 'materiels') {
+            //many possible
+            Panier['item'][cat].push(currentItems_list[cat][id]);
+        } else {
+            //adding unique element
+            Panier['item'][cat] = currentItems_list[cat];
+        }
+        _computePrice();
     };
+
     var _removeItem = function (cat, id) {
-        //enlève un item du panier
-        alert("j'enlève !");
+        console.log("je supprime!");
+        console.log('categorie : ' + cat + '; id : ' + id + ';');
+        if (cat == 'materiels') {
+            // is a array with several choices possible
+            var index = Panier['item'][cat].indexOf(_findInArray(Panier['item'][cat], id));
+            Panier['item'][cat] = Panier['item'][cat].splice(index, 1);
+        } else {
+            //is unique
+            delete Panier['item'][cat];
+        }
+        _computePrice();
+    };
+
+    // loop a travers un tableau pour sélectionner un objet selon un id dans les properties
+    var _findInArray = function (array, id) {
+        for (var i = 0, len = array.length; i < len; i++) {
+            if (array[i].id === id)
+                return array[i];
+        }
+        return null; // The object was not found
+    };
+
+    var _computePrice = function () {
+        console.log(Panier);
+        //Boucle à travers l'objet panier.item et calcule le prix unique et le prix au mois
+        //Re render le panier une fois que c'est fait
     };
     return{
         init: init
@@ -164,12 +204,10 @@ var modem_List2 = {
 };
 
 var lolTVRemise = new Item("5611", "6 mois gratuits", -17.00, true, "après 17€/mois", true);
-var lolTv = {
-    "2848": new Abonnement("2848", "LOLTV", 17.00, true, "", true, "LOL", "TV", null, null, {type: null, remise: lolTVRemise, isRemise: true}, {
-        "5137": new Materiel("5137", "Location LOLTV MiniX Neo X7 (4,50€/mois)", 4.50, true, "", true, "../images/TV/320px/Minix_Equipement.jpg"),
-        "5304": new Materiel("5304", "Location LOLTV MiniX Neo X7 (5,50€/mois)", 5.50, true, "", false, "../images/TV/320px/Minix_Equipement.jpg")
-    })
-};
+var lolTv = new Abonnement("2848", "LOLTV", 17.00, true, "", true, "LOL", "TV", null, null, {type: null, remise: lolTVRemise, isRemise: true}, {
+    "5137": new Materiel("5137", "Location LOLTV MiniX Neo X7 (4,50€/mois)", 4.50, true, "", true, "../images/TV/320px/Minix_Equipement.jpg"),
+    "5304": new Materiel("5304", "Location LOLTV MiniX Neo X7 (5,50€/mois)", 5.50, true, "", false, "../images/TV/320px/Minix_Equipement.jpg")
+});
 
 var typeInstall = [install, selfInstall];
 

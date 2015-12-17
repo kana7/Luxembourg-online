@@ -284,13 +284,13 @@
                         <div class="row">
                             <div class="phone-9 phone-pr-50">
                                 <div id="steps">
-                                    <div id="installation" data-step="0">
+                                    <div id="installation" class="step" data-step="0">
                                         <h2 class="step-title">Installation</h2>
                                         <p class="step-description">Merci de choisir le type d'installation souhaité</p>
                                         <div class="clearfix phone-mt-40">
                                             <div class="phone-12 tab-6 tab-pr-40">
                                                 <div class="shop-item">
-                                                    <input type="radio" name="_install" value="4321" hidden>
+                                                    <input id="pintade" type="radio" name="install" value="4321" hidden required>
                                                     <h3 class="shop-item-name">Installation par Self-Instal Kit</h3>
                                                     <div class="phone-6">
                                                         <ul class="shop-item-description">
@@ -307,7 +307,7 @@
                                             </div>
                                             <div class="phone-12 tab-6 tab-pl-30">
                                                 <div class="shop-item">
-                                                    <input type="radio" name="_install" value="1234" hidden>
+                                                    <input id="choucroute" type="radio" name="install" value="1234" hidden>
                                                     <h3 class="shop-item-name">Installation par une équipe</h3>
                                                     <div class="phone-6">
                                                         <ul class="shop-item-description">
@@ -328,16 +328,16 @@
                                             <button class="btn-blue previous pull-left">
                                                 <span class="icon-left-arrow"></span> Retour
                                             </button>
-                                            <button class="btn-orange next pull-right">
+                                            <button class="btn-orange next pull-right" disabled>
                                                 Suivant <span class="icon-right-arrow"></span>
                                             </button>
                                         </div>
                                     </div>
-                                    <div id="materiel" data-step="1"></div>
-                                    <div id="telephonie" data-step="2"></div>
-                                    <div id="tv" data-step="3"></div>
-                                    <div id="infos" data-step="4"></div>
-                                    <div id="confirm" data-step="5"></div>
+                                    <div id="materiel" class="step" data-step="1"></div>
+                                    <div id="telephonie" class="step" data-step="2"></div>
+                                    <div id="tv" class="step" data-step="3"></div>
+                                    <div id="infos" class="step" data-step="4"></div>
+                                    <div id="confirm" class='step' data-step="5"></div>
                                 </div>
                             </div>
                             <div class="phone-3">
@@ -532,19 +532,45 @@
         </script>
         <script type="text/javascript">
             $(function () {
+                $('.step').each(function () {
+                    verifyStep($(this));
+                });
+
                 $('.shop-item').on('click', function () {
+                    var input = $(this).find('input[type="radio"]');
                     $(this).toggleClass('selected');
-                    if( $(this).find('input[type="radio"]:checked').length > 0){
-                        $(this).find('input[type="radio"]').prop('checked', 'checked').change();
-                    }else{
-                        
+                    if (input.is(':checked')) {
+                        input.prop("checked", false).change();
+                    } else {
+                        input.prop("checked", "checked").change();
                     }
-                    $(this).find('input[type="radio"]').prop('checked', false).change();
                 });
                 $('input[type="radio"]').on('change', function () {
+                    //enlève toute les items selected du même groupe
                     $('input[type="radio"][name="' + $(this).attr('name') + '"]').parent('.shop-item').not($(this).closest('.shop-item')).removeClass('selected');
+                    verifyStep($(this).parents('.step'));
                 });
             });
+
+            var verifyStep = function ($element) {
+                var currentStep = $element;
+                var flag = true;
+                var name;
+
+                //vérifie si required est select
+                currentStep.find('input[required]').each(function () {
+                    name = $(this).attr('name');
+                    console.log(currentStep.find("input[name='" + name + "']").is(':checked'));
+                    if (!currentStep.find("input[name='" + name + "']").is(':checked')) {
+                        currentStep.find('button.next').prop('disabled', 'disabled');
+                        flag = false;
+                        return false;
+                    }
+                });
+                if (flag) {
+                    currentStep.find('button.next').removeAttr("disabled");
+                }
+            };
         </script>
         <script type="text/javascript" src="../scripts/analytics.js"></script>
     </body>

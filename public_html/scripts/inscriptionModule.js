@@ -2,7 +2,7 @@
 // MODULE
 //------------------------------------------------------------------------------
 var StepTransition = (function () {
-
+    var currentAbo = null;
     var currentStep = 0;
     //INIT doit construire les différente partie des slides
     var init = function () {
@@ -35,8 +35,10 @@ var templatePanier ='';
     var Panier = {
         item: {
             abo: null,
-            options: {
-            }
+            modem: null,
+            materiel: null,
+            telephonie: null
+            
         },
         price: {
             unique: 0,
@@ -119,7 +121,7 @@ var modem_List2 = {
 };
 
 var lolTv = {
-    "2848" : new Abonnement("2848", "LOLTV", 17.00, true, "", true, "LOL", "TV", null, null, null, {
+    "2848" : new Abonnement("2848", "LOLTV", 17.00, true, "", true, "LOL", "TV", null, null, {type: null, remise: lolTVRemise, isRemise: true}, {
         "5137": new Materiel("5137", "Location LOLTV MiniX Neo X7 (4,50€/mois)", 4.50, true, "", true, "../images/TV/320px/Minix_Equipement.jpg"),
         "5304": new Materiel("5304", "Location LOLTV MiniX Neo X7 (5,50€/mois)", 5.50, true, "", false, "../images/TV/320px/Minix_Equipement.jpg")
     })
@@ -168,13 +170,13 @@ var abonnements_list = {
 };
 
 var materiel_list = {
-    "5436": new Materiel("5436", "FRITZ!WLAN Repeater 450E", 52.00, false, "", "../images/equipment/modem/r450e/r450e_small1.png"),
-    "5437": new Materiel("5437", "FRITZ!WLAN Repeater 1750E", 84.00, false, "", "../images/equipment/modem/r1750e/r1750e_small1.png"),
-    "4570": new Materiel("4570", "FRITZ!Powerline 520E Set", 89.00, false, "", "../images/equipment/modem/pl520eset/pl520eset_small1.png"),
-    "4450": new Materiel("4450", "FRITZ!Powerline 520E Single", 49.00, false, "", "../images/equipment/modem/pl520e/pl520e_small1.png"),
-    "3148": new Materiel("3148", "FRITZ!Powerline 546E", 95.00, false, "", "../images/equipment/modem/pl546e/pl546e.png"),
-    "5439": new Materiel("5439", "FRITZ!WLAN Stick AC", 28.00, false, "", "../images/equipment/modem/wlansac/wlansac_small.png"),
-    "5395": new Materiel("5395", "Motorola T201", 31.00, false, "", "../images/equipment/telephone/motorola/t201/motorola_t201_small1.png"),
-    "5396": new Materiel("5396", "Motorola T202", 48.00, false, "", "../images/equipment/telephone/motorola/t202/motorola_t202_small1.png"),
-    "5397": new Materiel("5397", "Motorola T203", 65.00, false, "", "../images/equipment/telephone/motorola/t203/motorola_t203_small1.png")
+    "5436": new Materiel("5436", "FRITZ!WLAN Repeater 450E", 52.00, false, "", false,  "../images/equipment/modem/r450e/r450e_small1.png"),
+    "5437": new Materiel("5437", "FRITZ!WLAN Repeater 1750E", 84.00, false, "", false, "../images/equipment/modem/r1750e/r1750e_small1.png"),
+    "4570": new Materiel("4570", "FRITZ!Powerline 520E Set", 89.00, false, "", false, "../images/equipment/modem/pl520eset/pl520eset_small1.png"),
+    "4450": new Materiel("4450", "FRITZ!Powerline 520E Single", 49.00, false, "", false, "../images/equipment/modem/pl520e/pl520e_small1.png"),
+    "3148": new Materiel("3148", "FRITZ!Powerline 546E", 95.00, false, "", false, "../images/equipment/modem/pl546e/pl546e.png"),
+    "5439": new Materiel("5439", "FRITZ!WLAN Stick AC", 28.00, false, "", false,  "../images/equipment/modem/wlansac/wlansac_small.png"),
+    "5395": new Materiel("5395", "Motorola T201", 31.00, false, "", false, "../images/equipment/telephone/motorola/t201/motorola_t201_small1.png"),
+    "5396": new Materiel("5396", "Motorola T202", 48.00, false, "", false, "../images/equipment/telephone/motorola/t202/motorola_t202_small1.png"),
+    "5397": new Materiel("5397", "Motorola T203", 65.00, false, "", false, "../images/equipment/telephone/motorola/t203/motorola_t203_small1.png")
 };

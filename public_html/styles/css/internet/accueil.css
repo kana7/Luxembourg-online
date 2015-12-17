@@ -172,7 +172,11 @@
     content: "";
     display: table;
     clear: both; }
-  .shop-item:hover {
+  .shop-item.disabled {
+    border-color: #c0c0c0;
+    opacity: 0.5;
+    cursor: default; }
+  .shop-item:not(.disabled):hover {
     opacity: 0.8; }
   .shop-item li {
     display: block; }

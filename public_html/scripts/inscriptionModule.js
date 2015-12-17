@@ -2,18 +2,48 @@
 // MODULE
 //------------------------------------------------------------------------------
 var StepTransition = (function () {
-    var currentAbo = null;
+    //Récupérer l'abo lors de l'init dans l'url pour ensuite remplir la liste des items disponible au choix.
+
+    var currentItems_list = {
+        abo: null,
+        installation: null,
+        activation: null,
+        modems: null,
+        tv: null,
+        materiels: null
+    };
+
+    //stock la position du slide visible
     var currentStep = 0;
-    //INIT doit construire les différente partie des slides
+
     var init = function () {
-        
+        _initCurrentItem();
+        //TODO - Construire toutes les étapes
         _bindEvents();
     };
     var _bindEvents = function () {
-
+        //bind next et previous sur les bouttons
+        //bind liste sur le current step au clic sur bouton précédent ou suivant
     };
     var _showSlider = function () {
 
+    };
+    var _initCurrentItem = function () {
+        var vhash;
+        if (window.location.hash) {
+            vhash = (window.location.hash.split('#')[1]).split(";");
+            if (window.location.hash.length > 2) {
+                currentItems_list['abo'] = abonnements_list.getAbo(vhash[0], vhash[1]);
+                currentItems_list['installation'] = currentItems_list['abo']['installation'];
+                currentItems_list['activation'] = currentItems_list['abo']['activation'];
+                currentItems_list['modems'] = currentItems_list['abo']['materiels'];
+                currentItems_list['tv'] = lolTv;
+                currentItems_list['materiels'] = materiel_list;
+                console.log(currentItems_list);
+            }
+        } else {
+            window.location.replace("offres.html");
+        }
     };
     var next = function () {
         //passer au slide suivant
@@ -27,10 +57,11 @@ var StepTransition = (function () {
         previous: previous
     };
 })();
-var Card = (function () {
+
+var Cart = (function () {
 
 
-var templatePanier ='';
+    var templatePanier = '';
     //Le panier contient le prix ainsi que les objets avec leur ID respectifs
     var Panier = {
         item: {
@@ -38,25 +69,37 @@ var templatePanier ='';
             modem: null,
             materiel: null,
             telephonie: null
-            
+
         },
         price: {
             unique: 0,
             month: 0
         }
     };
-    var init = function (abo) {
+
+    events.on('useCart', _useCard);
+
+    var init = function () {
         //abo est un objet venant de abonnements_list 
-        Panier.item.abo = abo;
+        //Panier.item.abo = abo;
     };
     var _render = function () {
         //Reconstruire le shopping card quand les données sont mises à jour - TODO Mettre en place un template
     };
-    var _addItem = function (item) {
-        //ajoute un item dans le panier
+    function _useCard(data) {
+        console.log(data);
+        if (data['isAdding']) {
+            _addItem(data['cat'], data['id']);
+        } else {
+            _removeItem(data['cat'], data['id']);
+        }
     };
-    var _removeItem = function (item) {
+    var _addItem = function (cat, id) {
+        alert("j'ajoute !");
+    };
+    var _removeItem = function (cat, id) {
         //enlève un item du panier
+        alert("j'enlève !");
     };
     return{
         init: init
@@ -120,13 +163,13 @@ var modem_List2 = {
     "5294": new Materiel("5294", "Location FRITZ!Box 7490", 6.00, true, "", false, "../images/equipment/modem/7390/7360.png")
 };
 
+var lolTVRemise = new Item("5611", "6 mois gratuits", -17.00, true, "après 17€/mois", true);
 var lolTv = {
-    "2848" : new Abonnement("2848", "LOLTV", 17.00, true, "", true, "LOL", "TV", null, null, {type: null, remise: lolTVRemise, isRemise: true}, {
+    "2848": new Abonnement("2848", "LOLTV", 17.00, true, "", true, "LOL", "TV", null, null, {type: null, remise: lolTVRemise, isRemise: true}, {
         "5137": new Materiel("5137", "Location LOLTV MiniX Neo X7 (4,50€/mois)", 4.50, true, "", true, "../images/TV/320px/Minix_Equipement.jpg"),
         "5304": new Materiel("5304", "Location LOLTV MiniX Neo X7 (5,50€/mois)", 5.50, true, "", false, "../images/TV/320px/Minix_Equipement.jpg")
     })
 };
-var lolTVRemise =  new Item("5611", "6 mois gratuits", -17.00, true, "après 17€/mois", true);
 
 var typeInstall = [install, selfInstall];
 
@@ -161,22 +204,28 @@ var abonnements_list = {
     "42": {
         "5263": new Abonnement("5263", "LOL FIBER 100", 54.90, true, "", true, "EPT", "VDSL2", 42, {type: install, remise: remiseInstall, isRemise: true}, {type: activation, remise: remiseActivation, isRemise: true}, modem_List2)
     },
-    getAbo : function(service, id){
+    getAbo: function (service, id) {
         return abonnements_list[service][id];
     },
-    setComment : function(service, id, commentaire){
+    setComment: function (service, id, commentaire) {
         this.getAbo(service, id).commentaire = commentaire;
     }
 };
 
 var materiel_list = {
-    "5436": new Materiel("5436", "FRITZ!WLAN Repeater 450E", 52.00, false, "", false,  "../images/equipment/modem/r450e/r450e_small1.png"),
+    "5436": new Materiel("5436", "FRITZ!WLAN Repeater 450E", 52.00, false, "", false, "../images/equipment/modem/r450e/r450e_small1.png"),
     "5437": new Materiel("5437", "FRITZ!WLAN Repeater 1750E", 84.00, false, "", false, "../images/equipment/modem/r1750e/r1750e_small1.png"),
     "4570": new Materiel("4570", "FRITZ!Powerline 520E Set", 89.00, false, "", false, "../images/equipment/modem/pl520eset/pl520eset_small1.png"),
     "4450": new Materiel("4450", "FRITZ!Powerline 520E Single", 49.00, false, "", false, "../images/equipment/modem/pl520e/pl520e_small1.png"),
     "3148": new Materiel("3148", "FRITZ!Powerline 546E", 95.00, false, "", false, "../images/equipment/modem/pl546e/pl546e.png"),
-    "5439": new Materiel("5439", "FRITZ!WLAN Stick AC", 28.00, false, "", false,  "../images/equipment/modem/wlansac/wlansac_small.png"),
+    "5439": new Materiel("5439", "FRITZ!WLAN Stick AC", 28.00, false, "", false, "../images/equipment/modem/wlansac/wlansac_small.png"),
     "5395": new Materiel("5395", "Motorola T201", 31.00, false, "", false, "../images/equipment/telephone/motorola/t201/motorola_t201_small1.png"),
     "5396": new Materiel("5396", "Motorola T202", 48.00, false, "", false, "../images/equipment/telephone/motorola/t202/motorola_t202_small1.png"),
     "5397": new Materiel("5397", "Motorola T203", 65.00, false, "", false, "../images/equipment/telephone/motorola/t203/motorola_t203_small1.png")
 };
+
+
+$(function () {
+    Cart.init();
+    StepTransition.init();
+});

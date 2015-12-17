@@ -290,7 +290,7 @@
                                         <div class="clearfix phone-mt-40">
                                             <div class="phone-12 tab-6 tab-pr-40">
                                                 <div class="shop-item">
-                                                    <input id="pintade" type="radio" name="install" value="4321" hidden required>
+                                                    <input id="pintade" type="radio" name="install" data-cat="installation" value="4321" hidden required>
                                                     <h3 class="shop-item-name">Installation par Self-Instal Kit</h3>
                                                     <div class="phone-6">
                                                         <ul class="shop-item-description">
@@ -307,7 +307,7 @@
                                             </div>
                                             <div class="phone-12 tab-6 tab-pl-30">
                                                 <div class="shop-item">
-                                                    <input id="choucroute" type="radio" name="install" value="1234" hidden>
+                                                    <input id="choucroute" type="radio" data-cat="installation" name="install" value="1234" hidden>
                                                     <h3 class="shop-item-name">Installation par une équipe</h3>
                                                     <div class="phone-6">
                                                         <ul class="shop-item-description">
@@ -519,8 +519,9 @@
         <script type="text/javascript" src="../scripts/vendor/jquery.min.js"></script>
         <script type="text/javascript" src="../scripts/vendor/flickity.pkgd.min.js"></script>
         <script type="text/javascript" src="../scripts/main.js"></script>
+        <script type="text/javascript" src="../scripts/pubSub.js"></script>
         <script type="text/javascript" src="../scripts/inscriptionModule.js"></script>
-        <script type="text/javascript">
+        <!--<script type="text/javascript">
             $('.main-gallery').flickity({
                 // options
                 cellAlign: 'center',
@@ -529,19 +530,32 @@
                 prevNextButtons: false,
                 autoPlay: 2500
             });
-        </script>
+        </script>-->
         <script type="text/javascript">
             $(function () {
+                //Verify required input and block next button if required
                 $('.step').each(function () {
                     verifyStep($(this));
                 });
 
+                //on click sur un élément que l'on peut ajouter dans le panier
                 $('.shop-item').on('click', function () {
                     var input = $(this).find('input[type="radio"]');
                     $(this).toggleClass('selected');
                     if (input.is(':checked')) {
+                        //TODO remove from card
+                        events.emit('useCart', {
+                            id: input.val(),
+                            cat: input.attr('data-cat'),
+                            isAdding: false
+                        });
                         input.prop("checked", false).change();
                     } else {
+                        events.emit('useCart', {
+                            id: input.val(),
+                            cat: input.attr('data-cat'),
+                            isAdding: true
+                        });
                         input.prop("checked", "checked").change();
                     }
                 });

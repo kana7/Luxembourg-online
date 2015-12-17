@@ -272,7 +272,7 @@ function checkDispo(homeId, boolean) {
 $(function () {
     createDispoPopup();
     try {
-        vhash = (window.location.hash.split('#')[1]).split(";");
+        var vhash = (window.location.hash.split('#')[1]).split(";");
         if (window.location.hash.length > 2) {
             _cp = vhash[0];
             _ville = vhash[1];

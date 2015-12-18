@@ -70,13 +70,14 @@ var Cart = (function () {
             vhash = (window.location.hash.split('#')[1]).split(";");
             if (window.location.hash.length > 2) {
                 currentItems_list['abo'] = abonnements_list.getAbo(vhash[0], vhash[1]);
-                Panier['items']['abo'] = currentItems_list['abo'];
                 currentItems_list['installation'] = currentItems_list['abo']['installation'];
                 currentItems_list['activation'] = currentItems_list['abo']['activation'];
                 currentItems_list['modem'] = currentItems_list['abo']['materiels'];
                 currentItems_list['tv'] = lolTv;
                 currentItems_list['materiels'] = materiel_list;
-
+                
+                Panier['items']['abo'] = currentItems_list['abo'];
+                Panier['items']['activation'] = currentItems_list['activation'];
 
                 console.log(currentItems_list);
             }

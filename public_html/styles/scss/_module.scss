@@ -103,8 +103,8 @@ svg:not(:root) {
 }
 // FONT CLASS
 // --------------------------------------------------
-.delete-price{
-    text-decoration: cancel-line-through;  
+.price-delete{
+    text-decoration: line-through;  
 }
 .section-layout{
     color: $blue;

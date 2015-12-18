@@ -58,64 +58,83 @@
       #step-list li.active ~ li {
         opacity: 0.5; }
 
-#panier {
+#panier > ul {
   display: block;
   border: 1px solid #004994;
-  color: #000; }
-  #panier > li {
-    padding: 15px 0;
-    padding-left: 20px; }
-  #panier li {
+  color: #000;
+  border-radius: 6px; }
+  #panier > ul li {
     display: block;
     width: 100%; }
-  #panier h3, #panier h4 {
+  #panier > ul h3, #panier > ul h4 {
     margin: 0; }
-  #panier [class^=icon-] {
+  #panier > ul [class^=icon-] {
     color: #e75e0a;
     position: relative;
     top: 2px; }
-  #panier .header {
+  #panier > ul .header {
     background-color: #004994;
-    padding: 15px 0; }
-    #panier .header h3 {
-      font-weight: 800;
-      font-size: 1.3em;
+    padding: 13px 0; }
+    #panier > ul .header h3 {
+      font-weight: 400;
+      font-size: 1.4em;
       color: #fff;
       text-transform: uppercase;
       text-align: center; }
-  #panier .abo {
-    margin-bottom: 15px; }
-  #panier .abo ul, #panier .options ul {
-    padding-left: 5px; }
-  #panier .abo li, #panier .options li {
-    line-height: 20px; }
-  #panier .prices {
+  #panier > ul .month {
+    border-bottom: 1px solid #004994; }
+  #panier > ul .month, #panier > ul .unique {
+    padding: 15px 15px; }
+    #panier > ul .month ul, #panier > ul .unique ul {
+      display: block; }
+    #panier > ul .month li, #panier > ul .unique li {
+      display: block;
+      line-height: 20px;
+      padding: 0 0 0 10px; }
+      #panier > ul .month li:before, #panier > ul .unique li:before {
+        content: "";
+        display: table; }
+      #panier > ul .month li:after, #panier > ul .unique li:after {
+        content: "";
+        display: table;
+        clear: both; }
+    #panier > ul .month .label, #panier > ul .month .price, #panier > ul .unique .label, #panier > ul .unique .price {
+      font-size: 1.2em; }
+    #panier > ul .month .price, #panier > ul .unique .price {
+      float: right;
+      text-align: right;
+      font-weight: 800; }
+    #panier > ul .month .remise-name, #panier > ul .unique .remise-name {
+      color: #e75e0a;
+      font-size: 1.05em; }
+  #panier > ul .prices {
     padding: 10px 0;
-    border-top: 1px solid #004994; }
-    #panier .prices ul {
+    background-color: #004994;
+    color: #fff; }
+    #panier > ul .prices ul {
       display: block;
       padding: 0 15px;
       text-align: center; }
-      #panier .prices ul li {
+      #panier > ul .prices ul li {
         line-height: 25px; }
-        #panier .prices ul li:before {
+        #panier > ul .prices ul li:before {
           content: "";
           display: table; }
-        #panier .prices ul li:after {
+        #panier > ul .prices ul li:after {
           content: "";
           display: table;
           clear: both; }
-    #panier .prices .prices-label, #panier .prices .prices-price {
+    #panier > ul .prices .prices-label, #panier > ul .prices .prices-price {
       font-size: 15px;
       text-transform: uppercase; }
-    #panier .prices .prices-label {
+    #panier > ul .prices .prices-label {
       float: left; }
-    #panier .prices .prices-price {
+    #panier > ul .prices .prices-price {
       float: right;
-      color: #e75e0a;
+      color: #fff;
       font-weight: 800;
       font-size: 1.1em; }
-  #panier h4 {
+  #panier > ul h4 {
     font-size: 1.3em;
     text-transform: uppercase;
     font-weight: 600;

@@ -342,40 +342,44 @@
                                 </div>
                             </div>
                             <div class="phone-3">
-                                <ul id="panier">
-                                    <li class="header"><h3>Votre sélection</h3></li>
-                                    <li class="items">
-                                        <div class="abo">
-                                            <h4>LOL FIBER 30</h4>
+                                <div id="panier">
+                                    <ul>
+                                        <li class="header"><h3>Récapitulatif</h3></li>
+                                        <li class="items">
+                                            <div class="month">
+                                                <h4>Coûts mensuels</h4>
+                                                <ul>
+                                                    <li>
+                                                        <span class="label">Coûts uniques</span>
+                                                        <span class="price price-delete">89.00 €</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="unique">
+                                                <h4>Coûts uniques</h4>
+                                                <ul>
+                                                    <li>
+                                                        <span class="label">Coûts uniques</span>
+                                                        <span class="price">89.00 €</span>
+                                                        <div class="remise-name"><span class="bold">PROMO</span> : installation offerte</div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="prices">
                                             <ul>
-                                                <li><span class="icon-check-ico"></span>Internet 30MB</li>
-                                                <li><span class="icon-check-ico"></span>Abonnement téléphonique</li>
-                                                <li><span class="icon-check-ico"></span>Appels nationaux fixes</li>
-                                                <li><span class="icon-check-ico"></span>Appels vers mobile LOL</li>
-                                                <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe</li>
-                                                <li><span class="icon-check-ico"></span>Installation par équipe</li>
+                                                <li id="monthlyPrice">
+                                                    <span class="prices-label">Coûts mensuels :</span>
+                                                    <span class="prices-price">89.00 €<span class="normal lowercase">/mois</span></span>
+                                                </li>
+                                                <li id="uniquePrice">
+                                                    <span class="prices-label">Coûts Unique :</span>
+                                                    <span class="prices-price">44.90 €</span>
+                                                </li>
                                             </ul>
-                                        </div>
-                                        <div class="options">
-                                            <h4>OPTIONS</h4>
-                                            <ul>
-                                                <li><span class="icon-check-ico"></span>LOL CLOUD 5GB</li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="prices">
-                                        <ul>
-                                            <li id="monthlyPrice">
-                                                <span class="prices-label">Coûts uniques</span>
-                                                <span class="prices-price">89.00 €</span>
-                                            </li>
-                                            <li id="uniquePrice">
-                                                <span class="prices-label">Coûts Mensuels</span>
-                                                <span class="prices-price">44.90 €</span>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -519,6 +523,7 @@
 
         <script type="text/javascript" src="../scripts/vendor/jquery.min.js"></script>
         <script type="text/javascript" src="../scripts/vendor/flickity.pkgd.min.js"></script>
+        <script type="text/javascript" src="../scripts/vendor/mustache.min.js"></script>
         <script type="text/javascript" src="../scripts/main.js"></script>
         <script type="text/javascript" src="../scripts/pubSub.js"></script>
         <script type="text/javascript" src="../scripts/inscriptionModule.js"></script>

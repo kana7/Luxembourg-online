@@ -32,9 +32,6 @@ var StepTransition = (function () {
 
 var Cart = (function () {
 
-
-    var templatePanier = '';
-
     //Contient la liste de tous les choix possibles lors de l'inscription
     var currentItems_list = {
         abo: null,
@@ -47,14 +44,54 @@ var Cart = (function () {
 
     //Le panier contient le prix ainsi que les objets avec leur ID respectifs --> cet objet est envoyé au serveur à la fin du script
     var Panier = {
-        items: {
-            materiels: []
-        },
+        items: [],
         price: {
             unique: 0,
             month: 0
         }
     };
+    var tplItem = '<li class="items">' +
+            '<div class="month">' +
+            '<h4>Coûts mensuels</h4>' +
+            '<ul>' +
+            '{{#items}}' +
+            '{{#isMonthlyCost}}' +
+            '<li>' +
+            '<span class="label">{{name}}</span>' +
+            '<span class="price">{{price}} €/mois</span>' +
+            '</li>' +
+            '{{/isMonthlyCost}}' +
+            '{{/items}}' +
+            '</ul>' +
+            '</div>' +
+            '<div class="unique">' +
+            '<h4>Coûts uniques</h4>' +
+            '<ul>' +
+            '{{#items}}' +
+            '{{^isMonthlyCost}}' +
+            '<li>' +
+            '<span class="label">{{name}}</span>' +
+            '<span class="price">{{price}} €</span>' +
+            '</li>' +
+            '{{/isMonthlyCost}}' +
+            '{{/items}}' +
+            '</ul>' +
+            '</div>' +
+            '</li>';
+
+    var tplPrice = '<li class="prices">' +
+            '<ul>' +
+            '<li id="monthlyPrice">' +
+            '<span class="prices-label">Coûts mensuels :</span>' +
+            '<span class="prices-price">{{month}} €<span class="normal lowercase">/mois</span></span>' +
+            '</li>' +
+            '<li id="uniquePrice">' +
+            '<span class="prices-label">Coûts Unique :</span>' +
+            '<span class="prices-price">{{unique}} €</span>' +
+            '</li>' +
+            '</ul>' +
+            '</li>';
+
 
     events.on('useCart', _useCard);
 
@@ -75,9 +112,9 @@ var Cart = (function () {
                 currentItems_list['modem'] = currentItems_list['abo']['materiels'];
                 currentItems_list['tv'] = lolTv;
                 currentItems_list['materiels'] = materiel_list;
-                
-                Panier['items']['abo'] = currentItems_list['abo'];
-                Panier['items']['activation'] = currentItems_list['activation'];
+
+                Panier['items'].push(currentItems_list['abo']);
+                Panier['items'].push(currentItems_list['activation']);
 
                 console.log(currentItems_list);
             }
@@ -87,8 +124,13 @@ var Cart = (function () {
     };
 
     var _render = function () {
-        //Reconstruire le shopping card quand les données sont mises à jour - TODO Mettre en place un template
         console.log(Panier);
+        //Reconstruire le shopping card quand les données sont mises à jour - TODO Mettre en place un template
+        var html = '<ul><li class="header"><h3>Récapitulatif</h3></li>';
+        html += Mustache.render(tplItem, Panier);
+        html += Mustache.render(tplPrice, Panier.price);
+        '</ul>';
+        $('#panier').html(html);
     };
 
     function _useCard(data) {
@@ -106,10 +148,10 @@ var Cart = (function () {
         console.log(currentItems_list);
         if (cat == 'materiels') {
             //many possible
-            Panier['items'][cat].push(currentItems_list[cat][id]);
+            Panier['items'].push(currentItems_list[cat][id]);
         } else {
             //adding unique element
-            Panier['items'][cat] = currentItems_list[cat];
+            Panier['items'].push(currentItems_list[cat]);
         }
 
         Panier.price.unique = 0;
@@ -120,14 +162,7 @@ var Cart = (function () {
 
     var _removeItem = function (cat, id) {
         console.log("je supprime!");
-        if (cat == 'materiels') {
-            // is a array with several choices possible
-            var index = Panier['items'][cat].indexOf(_findInArray(Panier['item'][cat], id));
-            Panier['items'][cat] = Panier['item'][cat].splice(index, 1);
-        } else {
-            //is unique
-            delete Panier['items'][cat];
-        }
+        Panier['items'].splice(Panier['items'].indexOf(_findInArray(currentItems_list[cat], id)), 1);
         Panier.price.unique = 0;
         Panier.price.month = 0;
         _computePrice(Panier['items']);

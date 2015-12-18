@@ -74,14 +74,11 @@
     }
 }
 
-#panier{
+#panier>ul{
     display: block;
     border: 1px solid $blue;
     color: $black;
-    &>li{
-        padding: 15px 0;
-        padding-left: 20px;
-    }
+    border-radius: 6px;
     li{
         display: block;
         width: 100%;
@@ -96,29 +93,44 @@
     }
     .header{
         background-color: $blue;
-        padding: 15px 0;
+        padding: 13px 0;
         h3{
-            font-weight: 800;
-            font-size: 1.3em;
+            font-weight: 400;
+            font-size: 1.4em;
             color: $white;
             text-transform: uppercase;
             text-align: center;
         }
     }
-    .abo{
-        margin-bottom: 15px;
+    .month{
+        border-bottom: 1px solid $blue;
     }
-    .abo, .options{
-        ul{
-            padding-left: 5px;
-        }
+    .month, .unique{
+        padding: 15px 15px;
+        ul{display: block;}
         li{
+            display: block;
             line-height: 20px;
+            padding: 0 0 0 10px;
+            @include clearfix;
+        }
+        .label, .price{
+            font-size: 1.2em;
+        }
+        .price{
+            float: right;
+            text-align: right;
+            font-weight: 800;
+        }
+        .remise-name{
+            color: $orange;
+            font-size: 1.05em;
         }
     }
     .prices{
         padding: 10px 0;
-        border-top: 1px solid $blue;
+        background-color: $blue;
+        color: $white;
         ul{
             display: block;
             padding: 0 15px;
@@ -137,7 +149,7 @@
         }
         .prices-price{
             float: right;
-            color: $orange;
+            color: $white;
             font-weight: 800;
             font-size: 1.1em;
         }

@@ -87,6 +87,7 @@ var Cart = (function () {
 
     var _render = function () {
         //Reconstruire le shopping card quand les données sont mises à jour - TODO Mettre en place un template
+        console.log(Panier);
     };
 
     function _useCard(data) {
@@ -102,7 +103,6 @@ var Cart = (function () {
     var _addItem = function (cat, id) {
         console.log("j'ajoute !");
         console.log(currentItems_list);
-        console.log('categorie : ' + cat + '; id : ' + id + ';');
         if (cat == 'materiels') {
             //many possible
             Panier['items'][cat].push(currentItems_list[cat][id]);
@@ -110,12 +110,15 @@ var Cart = (function () {
             //adding unique element
             Panier['items'][cat] = currentItems_list[cat];
         }
-        _computePrice();
+
+        Panier.price.unique = 0;
+        Panier.price.month = 0;
+        _computePrice(Panier['items']);
+        _render();
     };
 
     var _removeItem = function (cat, id) {
         console.log("je supprime!");
-        console.log('categorie : ' + cat + '; id : ' + id + ';');
         if (cat == 'materiels') {
             // is a array with several choices possible
             var index = Panier['items'][cat].indexOf(_findInArray(Panier['item'][cat], id));
@@ -124,7 +127,10 @@ var Cart = (function () {
             //is unique
             delete Panier['items'][cat];
         }
-        _computePrice();
+        Panier.price.unique = 0;
+        Panier.price.month = 0;
+        _computePrice(Panier['items']);
+        _render();
     };
 
     // loop a travers un tableau pour sélectionner un objet selon un id dans les properties
@@ -135,12 +141,25 @@ var Cart = (function () {
         }
         return null; // The object was not found
     };
-
-    var _computePrice = function () {
-        console.log(Panier);
-        //Boucle à travers l'objet panier.item et calcule le prix unique et le prix au mois
-        //Re render le panier une fois que c'est fait
+    //Fonction recursive qui détecte si il y a une propriété prix dans un objet sinon le fonction regarde si il y a un autre object dans la liste des propriétés 
+    var _computePrice = function (object) {
+        if ("price" in object) {
+            if (object["isMonthlyCost"]) {
+                Panier.price.month += object["price"];
+            } else {
+                Panier.price.unique += object["price"];
+            }
+        } else {
+            for (var property in object) {
+                if (object.hasOwnProperty(property)) {
+                    if (typeof object[property] == 'object' && object[property] != null) {
+                        _computePrice(object[property]);
+                    }
+                }
+            }
+        }
     };
+
     return{
         init: init
     };

@@ -3,30 +3,55 @@
 //------------------------------------------------------------------------------
 var StepTransition = (function () {
     //stock la position du slide visible
+    var StepsContainer = $('#steps');
+    ;
+    var currentItems_list;
     var currentStep = 0;
+    var stepList = StepsContainer.find('.step');
+    $(stepList).not(stepList[0]);
 
-    var init = function () {
+    events.on('getCurrent', init);
+
+    function init(current) {
+        currentItems_list = current;
+        alert('patate');
         //TODO - Construire toutes les étapes
+
         _bindEvents();
-    };
+    }
+
     var _bindEvents = function () {
         //bind next et previous sur les bouttons
+        stepList.on('click', 'button.previous', function () {
+            _previous();
+        });
+        stepList.on('click', 'button.next', function () {
+            _next();
+        });
         //bind liste sur le current step au clic sur bouton précédent ou suivant
     };
-    var _showSlider = function () {
+    
+    function _showSlider(index) {
+        stepList.fadeOut(function () {
+            $(stepList[index]).fadeIn();
+        });
+    }
 
-    };
+    function _next() {
+        console.log('jambon');
+        if (currentStep != stepList.length - 1) {
+            _showSlider(++currentStep);
+        }
+    }
 
-    var next = function () {
-        //passer au slide suivant
-    };
-    var previous = function () {
-        //retourner au slider précédent
-    };
+    function _previous() {
+        if (currentStep != 0) {
+            _showSlider(currentStep);
+        }
+    }
+
     return{
-        init: init,
-        next: next,
-        previous: previous
+        init: init
     };
 })();
 
@@ -146,6 +171,8 @@ var Cart = (function () {
                     isAdding: true
                 });
 
+                events.emit('getCurrent', currentItems_list);
+
                 console.log(currentItems_list);
                 console.log(Panier);
                 console.log('-----------------------------------------');
@@ -232,8 +259,7 @@ var Cart = (function () {
     };
 
     return{
-        init: init,
-        supp: _removeItem
+        init: init
     };
 })();
 // DATA
@@ -375,5 +401,4 @@ var materiel_list = {
 
 $(function () {
     Cart.init();
-    StepTransition.init();
 });

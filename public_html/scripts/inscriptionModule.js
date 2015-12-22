@@ -3,34 +3,99 @@
 //------------------------------------------------------------------------------
 var StepTransition = (function () {
     //stock la position du slide visible
+    var html;
+    var tpl;
     var StepsContainer = $('#steps');
-    ;
     var currentItems_list;
     var currentStep = 0;
     var stepList = StepsContainer.find('.step');
-    $(stepList).not(stepList[0]);
+    $(stepList).not(stepList[0]).css('display', 'none');
+
+    var installTpl = $('#installation');
 
     events.on('getCurrent', init);
 
     function init(current) {
         currentItems_list = current;
-        alert('patate');
         //TODO - Construire toutes les étapes
-
+        //_render();
         _bindEvents();
     }
 
-    var _bindEvents = function () {
+    function _render() {
+        tpl = '<h2 class="step-title">Installation</h2>' +
+                '<p class="step-description">Merci de choisir le type d\'installation souhaité</p>' +
+                '<div class="clearfix phone-mt-40">' +
+                '<div class="phone-12 tab-6 tab-pr-40">' +
+                '<div class="shop-item">' +
+                '<input type="radio" name="install" data-cat="installation1" value="5612" hidden required>' +
+                '<h3 class="shop-item-name">Installation par Self-Instal Kit</h3>' +
+                '<div class="phone-6">' +
+                '<ul class="shop-item-description">' +
+                '<li>je fais l\'intallation moi-même à l\'aide d\'un kit d\'installation.</li>' +
+                '</ul>' +
+                '<ul class="shop-item-price orange">' +
+                '<li class="extra-bold price">25.00 €</li>' +
+                '</ul>' +
+                '</div>' +
+                '<div class="phone-6 pull-right">' +
+                '<img class="shop-item-img" src="../images/Shop/self-install.png" alt="luxembourg online self-installation" />' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '<div class="phone-12 tab-6 tab-pl-30">' +
+                '<div class="shop-item">' +
+                '<input type="radio" data-cat="installation2" name="install" value="5313" hidden>' +
+                '<h3 class="shop-item-name">Installation par une équipe</h3>' +
+                '<div class="phone-6">' +
+                '<ul class="shop-item-description">' +
+                '<li>Je souhaite qu\'une équipe spécialisée s\'occupe de l\'installation. </li>' +
+                '</ul>' +
+                '<ul class="shop-item-price promo orange">' +
+                '<li class="extra-bold price">89.00 €</li>' +
+                '<li>PROMO : installation offerte</li>' +
+                '</ul>' +
+                '</div>' +
+                '<div class="phone-6">' +
+                '<img class="shop-item-img" src="../images/Shop/install-equip.png" alt="luxembourg online installation equipe" />' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '<div class="clearfix phone-mt-40">' +
+                '<button class="btn-blue previous pull-left">' +
+                '<span class="icon-left-arrow"></span> Retour' +
+                '</button>' +
+                '<button class="btn-orange next pull-right" disabled>' +
+                'Suivant <span class="icon-right-arrow"></span>' +
+                '</button>' +
+                '</div>';
+
+        stepList.each(function () {
+            var titre;
+            if ($(this).attr('id') == 'installation') {
+                titre = "installation";
+                html = '<h2 class="step-title">' + titre + '</h2>' +
+                        '<p class="step-description">Merci de choisir le type d\'' + titre + ' souhaité</p>' +
+                        '<div class="clearfix phone-mt-40">';
+
+                //on parse le html générer par le code dans la bonne step
+                $(this).html(html);
+            }
+        });
+    }
+
+    function _bindEvents() {
         //bind next et previous sur les bouttons
-        stepList.on('click', 'button.previous', function () {
+        StepsContainer.on('click', 'button.previous', function () {
             _previous();
         });
-        stepList.on('click', 'button.next', function () {
+        StepsContainer.on('click', 'button.next', function () {
             _next();
         });
         //bind liste sur le current step au clic sur bouton précédent ou suivant
-    };
-    
+    }
+
     function _showSlider(index) {
         stepList.fadeOut(function () {
             $(stepList[index]).fadeIn();
@@ -138,11 +203,11 @@ var Cart = (function () {
 
     events.on('useCart', _useCard);
 
-    var init = function () {
+    function init() {
         _initCurrentItem();
-    };
+    }
 
-    var _initCurrentItem = function () {
+    function _initCurrentItem() {
         var vhash;
         if (window.location.hash) {
             vhash = (window.location.hash.split('#')[1]).split(";");
@@ -180,16 +245,16 @@ var Cart = (function () {
         } else {
             window.location.replace("offres.html");
         }
-    };
+    }
 
-    var _render = function () {
+    function _render() {
         //Reconstruire le shopping card quand les données sont mises à jour - TODO Mettre en place un template
         var html = '<ul><li class="header"><h3>Récapitulatif</h3></li>';
         html += Mustache.render(tplItem, Panier);
         html += Mustache.render(tplPrice, Panier.price);
         '</ul>';
         $('#panier').html(html);
-    };
+    }
 
     function _useCard(data) {
         if (data['isAdding']) {
@@ -205,9 +270,8 @@ var Cart = (function () {
         _computePrice(Panier['items']);
         _render();
     }
-    ;
 
-    var _addItem = function (cat, id) {
+    function _addItem(cat, id) {
         console.log("j'ajoute ! : " + cat + ' ' + id);
         if (cat == 'materiels') {
             //many possible
@@ -217,9 +281,9 @@ var Cart = (function () {
             Panier['items'].push(currentItems_list[cat]);
         }
 
-    };
+    }
 
-    var _removeItem = function (id) {
+    function _removeItem(id) {
         var objectToDelete = _findInArray(Panier['items'], id);
         console.log(id);
         console.log("je supprime! : " + objectToDelete);
@@ -228,19 +292,19 @@ var Cart = (function () {
         } else {
             console.log("Le produit n'a pas été trouvé dans le panier : supression annulé");
         }
-    };
+    }
 
     // loop a travers un tableau pour sélectionner un objet selon un id dans les properties
-    var _findInArray = function (array, id) {
+    function _findInArray(array, id) {
         for (var i = 0, len = array.length; i < len; i++) {
             if (array[i].id == id)
                 return array[i];
         }
         return null; // l'objet n'a pas été trouvé
-    };
+    }
 
     //Fonction recursive qui détecte si il y a une propriété prix dans un objet sinon le fonction regarde si il y a un autre object dans la liste des propriétés 
-    var _computePrice = function (object) {
+    function _computePrice(object) {
         if ("price" in object) {
             if (object["isMonthlyCost"]) {
                 Panier.price.month += object["price"];
@@ -256,7 +320,7 @@ var Cart = (function () {
                 }
             }
         }
-    };
+    }
 
     return{
         init: init

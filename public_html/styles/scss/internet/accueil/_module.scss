@@ -168,9 +168,19 @@
         font-size: 1.8em;
         font-weight: 800;
     }
+    .step-subtitle{
+        margin: 0;
+        font-size: 1.4em;
+        font-weight: 800;
+    }
     .step-description{
         font-size: 1.31em;
         margin: 10px 0;
+    }
+    .step-subdescription{
+        font-size: 1.2em;
+        margin: 10px 0;
+        color: $dark-grey;
     }
     .btn-blue, .btn-orange{
         font-size: 1.1em;

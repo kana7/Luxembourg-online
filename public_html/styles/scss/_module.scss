@@ -2538,6 +2538,23 @@ h2.contact-title {
         cursor: pointer;
         @include noselect;
     }
+    [data-trigger]{
+        span[class^=icon]{
+            top: 1px;
+            margin-left: 5px;
+            font-size: 0.75em;
+            @include transform(rotate(0deg));
+            @include transition(transform 0.1s ease-in);
+        }
+        &.is-active{
+            span[class^=icon]{
+                @include transform(rotate(90deg));
+            }
+        }
+    }
+    [data-trigger]:hover{
+        color: lighten($blue, 10%)
+    }
 }
 
 // PAGE A PROPOS HISTORIQUE

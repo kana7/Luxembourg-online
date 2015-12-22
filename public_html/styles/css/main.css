@@ -5612,6 +5612,25 @@ h2.contact-title {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
+.dropdown [data-trigger] span[class^=icon] {
+  top: 1px;
+  margin-left: 5px;
+  font-size: 0.75em;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -moz-transition: transform 0.1s ease-in;
+  -o-transition: transform 0.1s ease-in;
+  -webkit-transition: transform 0.1s ease-in;
+  transition: transform 0.1s ease-in; }
+.dropdown [data-trigger].is-active span[class^=icon] {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg); }
+.dropdown [data-trigger]:hover {
+  color: #0062c7; }
 
 #history-extended {
   height: 220px; }

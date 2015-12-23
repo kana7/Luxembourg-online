@@ -2,7 +2,7 @@
 // MODULE
 //------------------------------------------------------------------------------
 var StepTransition = (function () {
-    //stock la position du slide visible
+//stock la position du slide visible
     var html;
     var tpl;
     var StepsContainer = $('#steps');
@@ -10,11 +10,8 @@ var StepTransition = (function () {
     var currentStep = 0;
     var stepList = StepsContainer.find('.step');
     $(stepList).not(stepList[0]).css('display', 'none');
-
     var installTpl = $('#installation');
-
     events.on('getCurrent', init);
-
     function init(current) {
         currentItems_list = current;
         //TODO - Construire toutes les étapes
@@ -70,7 +67,6 @@ var StepTransition = (function () {
                 'Suivant <span class="icon-right-arrow"></span>' +
                 '</button>' +
                 '</div>';
-
         stepList.each(function () {
             var titre;
             if ($(this).attr('id') == 'installation') {
@@ -78,7 +74,6 @@ var StepTransition = (function () {
                 html = '<h2 class="step-title">' + titre + '</h2>' +
                         '<p class="step-description">Merci de choisir le type d\'' + titre + ' souhaité</p>' +
                         '<div class="clearfix phone-mt-40">';
-
                 //on parse le html générer par le code dans la bonne step
                 $(this).html(html);
             }
@@ -86,7 +81,7 @@ var StepTransition = (function () {
     }
 
     function _bindEvents() {
-        //bind next et previous sur les bouttons
+//bind next et previous sur les bouttons
         StepsContainer.on('click', 'button.previous', function () {
             _previous();
         });
@@ -119,21 +114,29 @@ var StepTransition = (function () {
         init: init
     };
 })();
-
 var Cart = (function () {
 
     //Contient la liste de tous les choix possibles lors de l'inscription
     var currentItems_list = {};
-
     //Le panier contient le prix ainsi que les objets avec leur ID respectifs --> cet objet est envoyé au serveur à la fin du script
     var Panier = {
         items: [],
         price: {
             unique: 0,
             month: 0
+        },
+        formatPrice: function (price, c, d, t) {
+            //format euros
+            var n = price,
+                    c = isNaN(c = Math.abs(c)) ? 2 : c,
+                    d = d == undefined ? "," : d,
+                    t = t == undefined ? "." : t,
+                    s = n < 0 ? "-" : "",
+                    i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "",
+                    j = (j = i.length) > 3 ? j % 3 : 0;
+            return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
         }
     };
-
     var tplItem = '<li class="items">' +
             '<div class="month">' +
             '<h4>Coûts mensuels</h4>' +
@@ -143,17 +146,17 @@ var Cart = (function () {
             '{{#isRemise}}' +
             '<li>' +
             '<span class="label">{{name}}</span>' +
-            '<span class="price-delete">{{fullPrice}} €/mois</span>' +
+            '<span class="price-delete">{{#formatPrice}}{{fullPrice}}{{/formatPrice}} €/mois</span>' +
             '<div class="remise-name">' +
             '<span class="label"><span class="bold">PROMO</span> : installation offerte</span>' +
-            '<span class="price">{{price}} €</span>' +
+            '<span class="price">{{#formatPrice}}{{price}}{{/formatPrice}} €</span>' +
             '</div>' +
             '</li>' +
             '{{/isRemise}}' +
             '{{^isRemise}}' +
             '<li>' +
             '<span class="label">{{name}}</span>' +
-            '<span class="price">{{price}} €/mois</span>' +
+            '<span class="price">{{#formatPrice}}{{price}}{{/formatPrice}} €/mois</span>' +
             '</li>' +
             '{{/isRemise}}' +
             '{{/isMonthlyCost}}' +
@@ -168,17 +171,17 @@ var Cart = (function () {
             '{{#isRemise}}' +
             '<li>' +
             '<span class="label">{{name}}</span>' +
-            '<span class="price price-delete">{{fullPrice}} €</span>' +
+            '<span class="price price-delete">{{#formatPrice}}{{fullPrice}}{{/formatPrice}} €</span>' +
             '<div class="remise-name">' +
             '<span class="label"><span class="bold">PROMO</span> : installation offerte</span>' +
-            '<span class="price">{{price}} €</span>' +
+            '<span class="price">{{#formatPrice}}{{price}}{{/formatPrice}} €</span>' +
             '</div>' +
             '</li>' +
             '{{/isRemise}}' +
             '{{^isRemise}}' +
             '<li>' +
             '<span class="label">{{name}}</span>' +
-            '<span class="price">{{price}} €</span>' +
+            '<span class="price">{{#formatPrice}}{{price}}{{/formatPrice}} €</span>' +
             '</li>' +
             '{{/isRemise}}' +
             '{{/isMonthlyCost}}' +
@@ -191,18 +194,17 @@ var Cart = (function () {
             '<ul>' +
             '<li id="monthlyPrice">' +
             '<span class="prices-label">Coûts mensuels :</span>' +
-            '<span class="prices-price">{{month}} €<span class="normal lowercase">/mois</span></span>' +
+            '<span class="prices-price">{{price.month}} €<span class="normal lowercase"> /mois</span></span>' +
             '</li>' +
             '<li id="uniquePrice">' +
             '<span class="prices-label">Coûts Unique :</span>' +
-            '<span class="prices-price">{{unique}} €</span>' +
+            '<span class="prices-price">{{price.unique}} €</span>' +
             '</li>' +
             '</ul>' +
             '</li>';
-
-
+    
     events.on('useCart', _useCard);
-
+    
     function init() {
         _initCurrentItem();
     }
@@ -223,7 +225,6 @@ var Cart = (function () {
                 currentItems_list['modem'] = currentItems_list['abo']['materiels'];
                 currentItems_list['tv'] = lolTv;
                 currentItems_list['materiels'] = materiel_list;
-
                 //ajout de l'abo et de l'activation dans le panier à l'ouverture de la page
                 _useCard({
                     id: 5257,
@@ -235,12 +236,7 @@ var Cart = (function () {
                     cat: 'activation',
                     isAdding: true
                 });
-
                 events.emit('getCurrent', currentItems_list);
-
-                console.log(currentItems_list);
-                console.log(Panier);
-                console.log('-----------------------------------------');
             }
         } else {
             window.location.replace("offres.html");
@@ -251,7 +247,7 @@ var Cart = (function () {
         //Reconstruire le shopping card quand les données sont mises à jour - TODO Mettre en place un template
         var html = '<ul><li class="header"><h3>Récapitulatif</h3></li>';
         html += Mustache.render(tplItem, Panier);
-        html += Mustache.render(tplPrice, Panier.price);
+        html += Mustache.render(tplPrice, Panier);
         '</ul>';
         $('#panier').html(html);
     }
@@ -264,10 +260,11 @@ var Cart = (function () {
         }
         console.log(Panier);
         console.log('-----------------------------------------');
-
         Panier.price.unique = 0;
         Panier.price.month = 0;
         _computePrice(Panier['items']);
+        Panier.price.month = Panier.formatPrice(Panier.price.month);
+        Panier.price.unique = Panier.formatPrice(Panier.price.unique);
         _render();
     }
 
@@ -340,7 +337,6 @@ var inherits = function (ctor, superCtor) {
         }
     });
 };
-
 var Item = function (id, name, price, isMonthlyCost, commentaire, isDefaut) {
     this.id = id;
     this.name = name;
@@ -349,6 +345,21 @@ var Item = function (id, name, price, isMonthlyCost, commentaire, isDefaut) {
     this.commentaire = commentaire;
     this.isDefaut = isDefaut;
 };
+
+Item.prototype.formatPrice = function () {
+    //format euros
+    return function (val, render) {
+        var n = render(val),
+                    c = isNaN(c = Math.abs(c)) ? 2 : c,
+                    d = d == undefined ? "," : d,
+                    t = t == undefined ? "." : t,
+                    s = n < 0 ? "-" : "",
+                    i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "",
+                    j = (j = i.length) > 3 ? j % 3 : 0;
+            return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+    };
+};
+
 var Materiel = function (id, name, price, isMonthlyCost, commentaire, isDefaut, link) {
     Materiel.super_.call(this, id, name, price, isMonthlyCost, commentaire, isDefaut);
     this.link = link;
@@ -366,15 +377,6 @@ var Abonnement = function (id, name, price, isMonthlyCost, commentaire, isDefaut
 inherits(Abonnement, Item);
 inherits(Materiel, Item);
 
-var modem_List1 = {
-    "5291": new Materiel("5291", "Location FRITZ!Box 3272", 4.00, true, "", true, "../images/equipment/modem/3272/3272.png"),
-    "5294": new Materiel("5294", "Location FRITZ!Box 7490", 6.00, true, "", false, "../images/equipment/modem/3272/3272.png")
-};
-var modem_List2 = {
-    "5292": new Materiel("5292", "Location FRITZ!Box 7360", 4.00, true, "", true, "../images/equipment/modem/7360/7360.png"),
-    "5294": new Materiel("5294", "Location FRITZ!Box 7490", 6.00, true, "", false, "../images/equipment/modem/7390/7360.png")
-};
-
 var SellProduct = function (id, name, price, isMonthlyCost, commentaire, isDefaut, isRemise, remise) {
     SellProduct.super_.call(this, id, name, price, isMonthlyCost, commentaire, isDefaut);
     this.setPrice = function (productPrice, remise) {
@@ -389,8 +391,16 @@ var SellProduct = function (id, name, price, isMonthlyCost, commentaire, isDefau
     this.fullPrice = price;
     this.price = this.setPrice(price, remise);
 };
-
 inherits(SellProduct, Item);
+
+var modem_List1 = {
+    "5291": new Materiel("5291", "Location FRITZ!Box 3272", 4.00, true, "", true, "../images/equipment/modem/3272/3272.png"),
+    "5294": new Materiel("5294", "Location FRITZ!Box 7490", 6.00, true, "", false, "../images/equipment/modem/3272/3272.png")
+};
+var modem_List2 = {
+    "5292": new Materiel("5292", "Location FRITZ!Box 7360", 4.00, true, "", true, "../images/equipment/modem/7360/7360.png"),
+    "5294": new Materiel("5294", "Location FRITZ!Box 7490", 6.00, true, "", false, "../images/equipment/modem/7390/7360.png")
+};
 
 var lolTVRemise = new Item("5611", "6 mois gratuits", -17.00, true, "après 17€/mois", true);
 var lolTv = new Abonnement("2848", "LOLTV", 17.00, true, "", true, "LOL", "TV", null, null, {type: null, remise: lolTVRemise, isRemise: true}, {
@@ -399,16 +409,11 @@ var lolTv = new Abonnement("2848", "LOLTV", 17.00, true, "", true, "LOL", "TV", 
 });
 
 var remiseInstall = new Item("5313", "installation offerte", -89.00, false, "", true);
-
 var installNoRemise = new SellProduct("5313", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, false, null);
 var installRemise = new SellProduct("5313", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, true, remiseInstall);
-
 var selfInstall = new SellProduct("5612", "Installation par Self-Install-Kit", 25.00, false, "Je fais l'installation moi-même à l'aide du kit d'installation", false, false, null);
-
 var remiseActivation = new Item("5611", "Remise activation", -85.00, false, "", true);
 var activation = new SellProduct("5610", "Activation", 85.00, false, "", true, true, remiseActivation);
-
-
 var typeInstall = [selfInstall, installNoRemise];
 
 var abonnements_list = {
@@ -449,7 +454,6 @@ var abonnements_list = {
         this.getAbo(service, id).commentaire = commentaire;
     }
 };
-
 var materiel_list = {
     "5436": new Materiel("5436", "FRITZ!WLAN Repeater 450E", 52.00, false, "", false, "../images/equipment/modem/r450e/r450e_small1.png"),
     "5437": new Materiel("5437", "FRITZ!WLAN Repeater 1750E", 84.00, false, "", false, "../images/equipment/modem/r1750e/r1750e_small1.png"),
@@ -461,8 +465,6 @@ var materiel_list = {
     "5396": new Materiel("5396", "Motorola T202", 48.00, false, "", false, "../images/equipment/telephone/motorola/t202/motorola_t202_small1.png"),
     "5397": new Materiel("5397", "Motorola T203", 65.00, false, "", false, "../images/equipment/telephone/motorola/t203/motorola_t203_small1.png")
 };
-
-
 $(function () {
     Cart.init();
 });

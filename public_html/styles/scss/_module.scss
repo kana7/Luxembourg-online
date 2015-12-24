@@ -89,18 +89,23 @@ svg:not(:root) {
 // --------------------------------------------------
 .iner-shadow{
     @include box-shadow(inset 0 4px 15px 2px lighten($black, 75%));
+    @include box-shadow(inset 0 4px 15px 2px rgba(0, 0, 0, 0.15));
 }
 .section-shadow{
     position: relative;
     @include box-shadow(0 2px 25px 2px lighten($black, 83%));
+    @include box-shadow(0 2px 25px 2px rgba(0, 0, 0, 0.2));
     z-index: 2;
 }
 .drop-shadow{
     @include box-shadow(0 2px 13px 2px #B5B5B5);
+    @include box-shadow(0 2px 13px 2px rgba(0, 0, 0, 0.2));
 }
 // FONT CLASS
 // --------------------------------------------------
-
+.price-delete{
+    text-decoration: line-through;  
+}
 .section-layout{
     color: $blue;
 }
@@ -274,7 +279,7 @@ span[class^=icon-]
     &:hover{
         text-decoration: underline;
     }
-    
+
 }
 
 // FIXED ELEMENT
@@ -2539,6 +2544,23 @@ h2.contact-title {
     &>[data-trigger]{
         cursor: pointer;
         @include noselect;
+    }
+    [data-trigger]{
+        span[class^=icon]{
+            top: 1px;
+            margin-left: 5px;
+            font-size: 0.75em;
+            @include transform(rotate(0deg));
+            @include transition(transform 0.1s ease-in);
+        }
+        &.is-active{
+            span[class^=icon]{
+                @include transform(rotate(90deg));
+            }
+        }
+    }
+    [data-trigger]:hover{
+        color: lighten($blue, 10%)
     }
 }
 

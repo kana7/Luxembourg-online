@@ -1,0 +1,101 @@
+
+@include media(phone){
+
+}
+@include media(tab){
+    #test-offres{
+        padding: 6px 0 10px;
+        .btn-orange, .input-white{
+            width: 290px;
+            vertical-align: top;
+        }
+        .btn-orange{
+            vertical-align: top;
+            top: 3px;
+            float: right;
+        }
+        .input-white{
+            float: left;
+        }
+        .text{
+            position: relative;
+            font-size: 19px;
+            margin-bottom: 30px;
+            span[class^=icon-]{
+                display: inline-block;
+                position: relative;
+                top: 15px;
+                font-size: 45px;
+                margin-right: 31px;
+                -ms-transform: rotate(-20deg); /* IE 9 */
+                -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
+                transform: rotate(-20deg);
+            }
+        }
+        .testDispo{
+            &>div{
+                width: 50%;
+            }
+        }
+    }
+}
+@include media(desk){
+    #test-offres{
+        padding: 5px 0 6px;
+        .text{
+            width: 45% !important;
+            display: inline-block;
+            margin-bottom: 22px;
+        }
+        .row{
+            position: relative;
+        }
+        .testDispo{
+            @include display-flex-center;
+            width: auto;
+            margin: 4px 0;
+            &>div{
+                max-width: 217px;
+                width: auto;
+                select, input, .btn-orange{
+                    font-size: 15px !important;
+                    margin: 0;
+                }
+                .btn-orange{
+                    padding: 12px 8px;
+                }
+            }
+        }
+        .btn-orange, .input-white{
+            margin: 0;
+        }
+        .btn-orange{
+            top: 2px;
+            width: 270px;
+        }
+        .input-white{
+            width: 200px;
+        }
+    }
+}
+@include media(lgdesk){
+    #test-offres{
+        .input-white{width: 250px;}
+        .btn-orange{
+            float: left;
+            margin-left: 30px;
+        }
+        .testDispo{
+            &>div{
+                max-width: none;
+                select, input, .btn-orange{
+                    font-size: 15px !important;
+                    margin: 0;
+                }
+                .btn-orange{
+                    padding: 12px 15px;
+                }
+            }
+        }
+    }
+}

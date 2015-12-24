@@ -91,6 +91,10 @@ function createDispoPopup() {
     }
 }
 
+function insertLink(id, service){
+    return '<a class="btn-blue btn-subscription" href="../shop/inscription.html#'+service+';'+id+'">Abonnez-vous</a>';
+};
+
 function checkDispo(homeId, boolean) {
     if (homeId !== undefined || homeId !== null || homeId !== '') {
         $.ajax({
@@ -106,7 +110,7 @@ function checkDispo(homeId, boolean) {
                         for (i in articleObj) {
                             for (b in articleObj) {
                                 if (articleObj[b].idObject == "5257" && ab[0] == "") {// LOL DSL 24
-                                    ab[0] = articleObj[b].idObject;
+                                    ab[0] = [articleObj[b].idObject, 6];
                                 }
                             }
 
@@ -120,13 +124,13 @@ function checkDispo(homeId, boolean) {
                         for (i in articleObj) {
                             for (b in articleObj) {
                                 if (articleObj[b].idObject == "5262" && ab[1] == "") {//Fiber 30
-                                    ab[1] = articleObj[b].idObject;
+                                    ab[1] = [articleObj[b].idObject, 5];
                                 }
                                 if (articleObj[b].idObject == "5263" && ab[2] == "") {//Fiber 100
-                                    ab[2] = articleObj[b].idObject;
+                                    ab[2] = [articleObj[b].idObject, 5];
                                 }
                                 if (articleObj[b].idObject == "5264" && ab[3] == "") {//Fiber 200
-                                    ab[3] = articleObj[b].idObject;
+                                    ab[3] = [articleObj[b].idObject, 5];
                                 }
                             }
 
@@ -140,7 +144,7 @@ function checkDispo(homeId, boolean) {
                         for (i in articleObj) {
                             for (b in articleObj) {
                                 if (articleObj[b].idObject == "5262" && ab[1] == "") {//Fiber 30
-                                    ab[1] = articleObj[b].idObject;
+                                    ab[1] = [articleObj[b].idObject, 4];
                                 }
 
                             }
@@ -154,7 +158,7 @@ function checkDispo(homeId, boolean) {
                         for (i in articleObj) {
                             for (b in articleObj) {
                                 if (articleObj[b].idObject == "5263" && ab[2] == "") {//Fiber 100 1 paire
-                                    ab[2] = articleObj[b].idObject;
+                                    ab[2] = [articleObj[b].idObject, 41];
                                 }
                             }
 
@@ -167,7 +171,7 @@ function checkDispo(homeId, boolean) {
                         for (i in articleObj) {
                             for (b in articleObj) {
                                 if (articleObj[b].idObject == "5263" && ab[2] == "") {//Fiber 100 2 paires
-                                    ab[2] = articleObj[b].idObject;
+                                    ab[2] = [articleObj[b].idObject, 42];
                                 }
                             }
                         }
@@ -179,13 +183,13 @@ function checkDispo(homeId, boolean) {
                         for (i in articleObj) {
                             for (b in articleObj) {
                                 if (articleObj[b].idObject == "2188" && ab[4] == "") {//LOL KOMPLETT Start
-                                    ab[4] = articleObj[b].idObject;
+                                    ab[4] = [articleObj[b].idObject, 3];
                                 }
                                 if (articleObj[b].idObject == "2189" && ab[5] == "") {//LOL KOMPLETT Run
-                                    ab[5] = articleObj[b].idObject;
+                                    ab[5] = [articleObj[b].idObject, 3];
                                 }
                                 if (articleObj[b].idObject == "2190" && ab[6] == "") {//LOL KOMPLETT Professionnal
-                                    ab[6] = articleObj[b].idObject;
+                                    ab[6] = [articleObj[b].idObject, 3];
                                 }
                             }
                         }
@@ -197,13 +201,13 @@ function checkDispo(homeId, boolean) {
                         for (i in articleObj) {
                             for (b in articleObj) {
                                 if (articleObj[b].idObject == "5273" && ab[1] == "") {//Fiber 30
-                                    ab[1] = articleObj[b].idObject;
+                                    ab[1] = [articleObj[b].idObject, 8];
                                 }
                                 if (articleObj[b].idObject == "5274" && ab[2] == "") {//Fiber 100 1 paire
-                                    ab[2] = articleObj[b].idObject;
+                                    ab[2] = [articleObj[b].idObject, 8];
                                 }
                                 if (articleObj[b].idObject == "5336" && ab[2] == "") {//Fiber 100 2 paires
-                                    ab[2] = articleObj[b].idObject;
+                                    ab[2] = [articleObj[b].idObject, 8];
                                 }
                             }
 
@@ -216,13 +220,13 @@ function checkDispo(homeId, boolean) {
                         for (i in articleObj) {
                             for (b in articleObj) {
                                 if (articleObj[b].idObject == "5272" && ab[1] == "") {//Fiber 30 dégroupé
-                                    ab[1] = articleObj[b].idObject;
+                                    ab[1] = [articleObj[b].idObject, 2];
                                 }
                                 if (articleObj[b].idObject == "5275" && ab[2] == "") {//Fiber 100 dégroupé
-                                    ab[2] = articleObj[b].idObject;
+                                    ab[2] = [articleObj[b].idObject, 2];
                                 }
                                 if (articleObj[b].idObject == "5276" && ab[2] == "") {//Fiber 200 dégroupé
-                                    ab[3] = articleObj[b].idObject;
+                                    ab[3] = [articleObj[b].idObject, 2];
                                 }
                             }
 
@@ -231,57 +235,30 @@ function checkDispo(homeId, boolean) {
                 }
                 $('.k24, .k30, .k100, .k200').next().remove();
                 $('.k24, .k30, .k100, .k200').find('.not-dispo').remove();
-                if (boolean) {
                     if (ab[0] == "") {
                         $(nonDispoTemplate).prependTo('.k24').css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     } else {
                         $('.k24').find('.not-dispo').remove();
-                        $(buttonPromoTv).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                        $(insertLink(ab[0][0], ab[0][1])).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     }
                     if (ab[1] == "") {
                         $(nonDispoTemplate).prependTo('.k30').css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     } else {
                         $('.k30').find('.not-dispo').remove();
-                        $(buttonPromoTv).insertAfter($('.k30')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                        $(insertLink(ab[1][0], ab[1][1])).insertAfter($('.k30')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     }
                     if (ab[2] == "") {
                         $(nonDispoTemplate).prependTo('.k100').css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     } else {
                         $('.k100').find('.not-dispo').remove();
-                        $(buttonPromoFibre).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                        $(insertLink(ab[2][0], ab[2][1])).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     }
                     if (ab[3] == "") {
                         $(nonDispoTemplate).prependTo('.k200').css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     } else {
                         $('.k200').find('.not-dispo').remove();
-                        $(buttonPromoFibre).insertAfter($('.k200')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                        $(insertLink(ab[3][0], ab[3][1])).insertAfter($('.k200')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     }
-                } else {
-                    if (ab[0] == "") {
-                        $(nonDispoTemplate).prependTo('.k24').css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    } else {
-                        $('.k24').find('.not-dispo').remove();
-                        $(buttonDispoTempate).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    }
-                    if (ab[1] == "") {
-                        $(nonDispoTemplate).prependTo('.k30').css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    } else {
-                        $('.k30').find('.not-dispo').remove();
-                        $(buttonDispoTempate).insertAfter($('.k30')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    }
-                    if (ab[2] == "") {
-                        $(nonDispoTemplate).prependTo('.k100').css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    } else {
-                        $('.k100').find('.not-dispo').remove();
-                        $(buttonDispoTempate).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    }
-                    if (ab[3] == "") {
-                        $(nonDispoTemplate).prependTo('.k200').css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    } else {
-                        $('.k200').find('.not-dispo').remove();
-                        $(buttonDispoTempate).insertAfter($('.k200')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    }
-                }
                 if ($('.main-gallery').length) {
                     $('.main-gallery').show().flickity('resize');
                 }
@@ -293,7 +270,7 @@ function checkDispo(homeId, boolean) {
 $(function () {
     createDispoPopup();
     try {
-        vhash = (window.location.hash.split('#')[1]).split(";");
+        var vhash = (window.location.hash.split('#')[1]).split(";");
         if (window.location.hash.length > 2) {
             _cp = vhash[0];
             _ville = vhash[1];

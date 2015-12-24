@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Shop : Inscription – Luxembourg Online</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="shortcut icon" href="/favicon.ico">
+
+        <link rel="stylesheet" href="../styles/css/vendor/flickity.min.css">
+        <link rel="stylesheet" href="../styles/css/internet/accueil.css">
+        <link rel="stylesheet" href="../styles/css/main.css">
+        <script src="../scripts/vendor/picturefill.min.js"></script>
+    </head>
+
+    <body>
+        <div id="clientSpace" class="popup">
+            <div class="background-client"></div>
+            <div class="white-pannel">
+                <button class="pannel-close"><span class="icon-x-icone"></span></button>
+                <h2>Espace Client</h2>
+                <ul class="client-menu">
+                    <li class="active" data-id="mail">Email</li>
+                    <li>|</li>
+                    <li data-id="account">Mon compte</li>
+                    <li>|</li>
+                    <li data-id="homepage">Homepage</li>
+                </ul>
+                <div class="pannel-forms">
+                    <form id="mail" class="clearfix is-visible" name="ServiceLogin1" method="POST" action="https://email.internet.lu/Scripts/sql.exe?_selection=10">
+                        <input type="hidden" name="Sql" value="Default.phs">  
+                        <input type="hidden" name="SqlDB" value="OMS2">  
+                        <div class="phone-6 input-left">
+                            <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
+                        </div>
+                        <div class="phone-6 input-right">
+                            <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
+                        </div>
+                        <button class="btn-blue" type="submit">Se connecter</button>
+                    </form>
+                    <form id="account" class="clearfix" name="LoginPhone" method="POST" action="http://shop.internet.lu/Scripts/sql.exe?LoginScript=LoginClient.phs&NextScript=DisplayAccount.phs&_Login=">
+                        <input type="hidden" name="Sql" value="LoginClient_Login.phs">  
+                        <input type="hidden" name="SqlDB" value="LOLShop">  
+                        <div class="phone-6 input-left">
+                            <input type="text" name="_Username" placeholder="Nom d'utilisateur"/>
+                        </div>
+                        <div class="phone-6 input-right">
+                            <input class="pull-right" type="password" name="_Password" placeholder="Mot de passe"/>
+                        </div>
+                        <button class="btn-blue" type="submit">Se connecter</button>
+                    </form>
+                    <form id="homepage" class="clearfix" name="ServiceLogin3" method="POST" action="http://sites.internet.lu/Scripts/sql.exe">
+                        <input type="hidden" name="Sql" value="default.phs">  
+                        <input type="hidden" name="SqlDB" value="OHPS">  
+                        <div class="phone-6 input-left">
+                            <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
+                        </div>
+                        <div class="phone-6 input-right">
+                            <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
+                        </div>
+                        <button class="btn-blue" type="submit">Se connecter</button>
+                    </form>
+                    <div class="contact-infos hidden-phone">
+                        Helpdesk: 2799 0000
+                        <span>Lu-Ve: 8h00-19h00  l  Sa: 9h00-18h00</span>
+                    </div>
+                    <div class="contact-infos display-phone">
+                        Helpdesk: 2799 0000
+                        <span>Lu-Ve: 8h00-19h00<br/>Sa: 9h00-18h00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fixed-options hidden-phone hidden-tab">
+            <a href="#">
+                <div class="white-fixed-option">
+                    <div class="icon-call-me"></div>
+                    <p>Veuillez me rappeler</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="blue-fixed-option">
+                    <p>Abonnez-vous<br/> <strong>en ligne </strong><span class="icon-right-arrow"></span></p>
+                </div>
+            </a>
+        </div>
+
+        <nav class="mobile-side-menu">
+            <ul class="menu">
+                <li class="menu-item link"><a href="../index.htm">Accueil</a></li>
+                <li class="menu-item" data-id='internet'>Internet<span class="icon-right-arrow"></span></li>
+                <li class="menu-item" data-id='telephone'>Téléphonie <span class="icon-right-arrow"></span></li>
+                <li class="menu-item" data-id='tv'>TV <span class="icon-right-arrow"></span></li>
+                <li class="menu-item" data-id='mobile'>Mobile<span class="icon-right-arrow"></span></li>
+                <li class="menu-item" data-id='promo'>Promos <span class="icon-right-arrow"></span></li>
+                <li class="sous-nav">
+                    <ul class="menu">
+                        <li class="menu-item link"><a href="../divers/assistance.html">Assistance</a></li>
+                        <li class="menu-item link"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOL CLOUD</a></li>
+                        <li class="menu-item link"><a href="../divers/magazine.html">Magazine</a></li>
+                        <li class="menu-item link"><a href="../divers/propos.html">À propos</a></li>
+                        <li class="menu-item link"><a href="../divers/contact.html">Contact</a></li>
+                        <li class="menu-item link"><a href="../divers/emploi.html">Offres d'emploi</a></li>
+                        <li class="menu-item link"><a href="../divers/plan.html">Plan du site</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="menu-links-wrapper">
+                <ul class="menu-links" id="internet">
+                    <li class="menu-item back"><span class="icon-right-arrow"></span>Internet</li>
+                    <li class="menu-item"><a href="../internet/accueil.html">Accueil Internet</a></li>
+                    <li class="menu-item"><a href="../internet/offres.html">Nos offres</a></li>
+                    <li class="menu-item"><a href="../internet/equipements.html">Nos équipements</a></li>
+                    <li class="menu-item"><a href="../internet/abonnement.html">Abonnez-vous</a></li>
+                </ul>
+            </div>
+            <div class="menu-links-wrapper">
+                <ul class="menu-links" id="telephone">
+                    <li class="menu-item back"><span class="icon-right-arrow"></span>Téléphonie</li>
+                    <li class="menu-item"><a href="../telephonie/accueil.html">Accueil Téléphonie</a></li>
+                    <li class="menu-item"><a href="../telephonie/tarifs.html">Nos tarifs</a></li>
+                    <li class="menu-item"><a href="../telephonie/equipements.html">Nos téléphones</a></li>
+                    <li class="menu-item"><a href="../telephonie/abonnement.html">Abonnez-vous</a></li>
+                </ul>
+            </div>
+            <div class="menu-links-wrapper">
+                <ul class="menu-links" id="tv">
+                    <li class="menu-item back"><span class="icon-right-arrow"></span>TV</li>
+                    <li class="menu-item"><a href="../tv/accueil.html">Accueil TV</a></li>
+                    <li class="menu-item"><a href="../tv/offres.html">Notre offre TV</a></li>
+                    <li class="menu-item"><a href="../tv/equipements.html">Nos équipements</a></li>
+                    <li class="menu-item"><a href="../tv/abonnement.html">Abonnez-vous</a></li>
+                </ul>
+            </div>
+            <div class="menu-links-wrapper">
+                <ul class="menu-links" id="mobile">
+                    <li class="menu-item back"><span class="icon-right-arrow"></span>Mobile</li>
+                    <li class="menu-item"><a href="../mobile/accueil.html">Accueil Mobile</a></li>
+                    <li class="menu-item"><a href="../mobile/abonnements.html">Nos abonnements</a></li>
+                    <li class="menu-item"><a href="../mobile/equipements.html">Nos téléphones</a></li>
+                    <li class="menu-item"><a href="../mobile/abonnement.html">Abonnez-vous</a></li>
+                </ul>
+            </div>
+            <div class="menu-links-wrapper">
+                <ul class="menu-links" id="promo">
+                    <li class="menu-item back"><span class="icon-right-arrow"></span>Promos</li>
+                    <li class="menu-item"><a href="../promos/accueil.html">Accueil Promos</a></li>
+                    <li class="menu-item"><a href="../promos/fibre.html">Offre spéciale fibre</a></li>
+                    <li class="menu-item"><a href="../promos/offreloltv.html">Offre spéciale LOL TV</a></li>
+                    <li class="menu-item"><a href="../promos/internetTV.html">Offre spéciale Internet + TV</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="siteWrap">
+            <header>
+                <div id="top-menu-header" class="hidden-phone hidden-tab">
+                    <div class="container-wrapper">
+                        <div class="row">
+                            <nav class="pull-left">
+                                <ul class="top-menu-header-links left">
+                                    <li><a href="../index.htm">Particuliers</a></li>
+                                    <li><a href="http://www.internet.lu/business/" target="blank_">Business</a></li>
+                                </ul>
+                            </nav>
+                            <nav class="pull-right">
+                                <ul class="top-menu-header-links right">
+                                    <li><a href="../divers/assistance.html">Assistance</a></li>
+                                    <li><a href="http://www.internet.lu/lolcloud/index.htm" target="_blank">LOL CLOUD</a></li>
+                                    <li><a href="../divers/magazine.html">Magazine</a></li>
+                                    <li><a href="../divers/propos.html">À propos</a></li>
+                                    <li><a href="../divers/contact.html">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="bottom-menu-header">
+                    <nav class="bottom-menu-header-links mobile display-phone display-tab">
+                        <div class="pull-left">
+                            <div class="logo noel">
+                                <a href="../index.htm"><img src="../images/Icone/Img/Logo-LOL-noel.png" alt="logo LOL" /></a>
+                            </div>
+                        </div>
+                        <div class="mobile-menu-button">
+                            <button id="openClientSpaceMobile" class="mobile-button-blue openPopup" data-popup="0">
+                                <span class="icon-account-icone"></span>
+                            </button>
+                            <button class="mobile-button-white">
+                                <span class="icon-menu-icone"></span>
+                            </button>
+                        </div>
+                    </nav>
+                    <div class="container-wrapper hidden-phone hidden-tab">
+                        <div class="row">
+                            <div class="pull-left">
+                                <div class="logo noel">
+                                    <a href="../index.htm"><img src="../images/Icone/img/Logo-LOL-noel.png" alt="logo LOL" /></a>
+                                </div><!--
+                                --><nav class="bottom-menu-header-links">
+                                    <ul class="main-menu">
+                                        <li class="active">
+                                            <div class="active-border"></div>
+                                            <a href="../internet/accueil.html">
+                                                <img class="header-icon" src="../images/Icone/img/internet.png" alt="Internet" />
+                                                <div class="link">Internet</div>
+                                            </a>
+                                        </li><!--
+                                        --><li>
+                                            <div class="active-border"></div>
+                                            <a href="../telephonie/accueil.html">
+                                                <img class="header-icon" src="../images/Icone/img/telephonie.png" alt="Téléphonie" />
+                                                <div class="link">Téléphonie</div>
+                                            </a>
+                                        </li><!--
+                                        --><li>
+                                            <div class="active-border"></div>
+                                            <a href="../tv/accueil.html">
+                                                <img class="header-icon" src="../images/Icone/img/tv.png" alt="Tv" />
+                                                <div class="link">TV</div>
+                                            </a>
+                                        </li><!--
+                                        --><li>
+                                            <div class="active-border"></div>
+                                            <a href="../mobile/accueil.html">
+                                                <img class="header-icon" src="../images/Icone/img/mobile.png" alt="Mobile" />
+                                                <div class="link">Mobile</div>
+                                            </a>
+                                        </li><!--
+                                        --><li>
+                                            <div class="active-border"></div>
+                                            <a href="../promos/accueil.html">
+                                                <img class="header-icon" src="../images/Icone/img/promos.png" alt="Promos" />
+                                                <div class="link">Promos</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="pull-right hidden-phone hidden-tab">
+                                <button id="openClientSpace" class="btn-blue openPopup" data-popup="0">Espace client</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </header>
+            <!--            ./HEADER                -->
+            <section class="drop-shadow background-lightgrey">
+                <div class="container-wrapper">
+                    <div class="row clearfix">
+                        <div class="align-center phone-12">
+                            <h1 class="plan-title-padding section-title normal lowercase"><span class="bold">Inscription en ligne</span> Luxembourg Online</h1>                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="inscription">
+                <div id="step-list" class="iner-shadow">
+                    <div class="container-wrapper">
+                        <div class="row">
+                            <ul>
+                                <li>Choix de l'abonnement</li>
+                                <li><span class="icon-right-arrow"></span></li>
+                                <li class="active">Installation</li>
+                                <li><span class="icon-right-arrow"></span></li>
+                                <li>Matériel</li>
+                                <li><span class="icon-right-arrow"></span></li>
+                                <li>Téléphonie Fixe</li>
+                                <li><span class="icon-right-arrow"></span></li>
+                                <li>Télévision</li>
+                                <li><span class="icon-right-arrow"></span></li>
+                                <li>Informations</li>
+                                <li><span class="icon-right-arrow"></span></li>
+                                <li>Confirmation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="phone-p-30">
+                    <div class="container-wrapper">
+                        <div class="row">
+                            <div class="phone-9 phone-pr-50">
+                                <div id="steps">
+                                    <div id="installation" class="step" data-step="0">
+                                        <h2 class="step-title">Installation</h2>
+                                        <p class="step-description">Merci de choisir le type d'installation souhaité</p>
+                                        <!--<div class="clearfix phone-mt-40">
+                                            <div class="phone-12 tab-6 tab-pr-40">
+                                                <div class="shop-item">
+                                                    <input type="radio" name="install" data-cat="installation1" value="5612" hidden required>
+                                                    <h3 class="shop-item-name">Installation par Self-Instal Kit</h3>
+                                                    <div class="phone-6">
+                                                        <ul class="shop-item-description">
+                                                            <li>je fais l'intallation moi-même à l'aide d'un kit d'installation.</li>
+                                                        </ul>
+                                                        <ul class="shop-item-price orange">
+                                                            <li class="extra-bold price">25.00 €</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="phone-6 pull-right">
+                                                        <img class="shop-item-img" src="../images/Shop/self-install.png" alt="luxembourg online self-installation" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="phone-12 tab-6 tab-pl-30">
+                                                <div class="shop-item">
+                                                    <input type="radio" data-cat="installation2" name="install" value="5313" hidden>
+                                                    <h3 class="shop-item-name">Installation par une équipe</h3>
+                                                    <div class="phone-6">
+                                                        <ul class="shop-item-description">
+                                                            <li>Je souhaite qu'une équipe spécialisée s'occupe de l'installation. </li>
+                                                        </ul>
+                                                        <ul class="shop-item-price promo orange">
+                                                            <li class="extra-bold price">89.00 €</li>
+                                                            <li>PROMO : installation offerte</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="phone-6">
+                                                        <img class="shop-item-img" src="../images/Shop/install-equip.png" alt="luxembourg online installation equipe" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>-->
+                                        <div class="clearfix phone-mt-40 phone-mb-20">
+                                            <button class="btn-blue previous pull-left">
+                                                <span class="icon-left-arrow"></span> Retour
+                                            </button>
+                                            <button class="btn-orange next pull-right" disabled>
+                                                Suivant <span class="icon-right-arrow"></span>
+                                            </button>
+                                        </div>
+                                        <!--<div class="clearfix dropdown">
+                                            <div class="phone-mb-30" data-trigger>
+                                                <h3 class="step-subtitle">Installation fibre <span class="icon-right-arrow"></span></h3>
+                                                <p class="step-subdescription">Merci de remplir les champs supplémentaires concernant le cablage interne de la fibre dans votre habitation</p>
+                                            </div>
+                                            <div>
+                                                <div class="phone-6 phone-pr-20">
+                                                    <div class="input-group">
+                                                        <label for="Nom">Nom, Prénom<span class="red">*</span></label>
+                                                        <input id="Nom" name="_nom" type="text" required>
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <label for="Nom">Adresse<span class="red">*</span></label>
+                                                        <input id="Nom" name="_nom" type="text" required>
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <label for="Nom">Ville<span class="red">*</span></label>
+                                                        <input id="Nom" name="_nom" type="text" required>
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <label for="Nom">Téléphone<span class="red">*</span></label>
+                                                        <input id="Nom" name="_nom" type="text" required>
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <label for="Nom">Nom du syndic de copropriété</label>
+                                                        <input id="Nom" name="_nom" type="text" required>
+                                                    </div>
+                                                </div>
+                                                <div class="phone-6 phone-pl-20">
+                                                    <div class="input-group">
+                                                        <label for="Nom">Matricule<span class="red">*</span></label>
+                                                        <input id="Nom" name="_nom" type="text" required>
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <label for="Nom">Étage<span class="red">*</span></label>
+                                                        <input id="Nom" name="_nom" type="text" required>
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <label for="Nom">Code Postal<span class="red">*</span></label>
+                                                        <input id="Nom" name="_nom" type="text" required="">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <label for="Nom">Mobile</label>
+                                                        <input id="Nom" name="_nom" type="text">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <label for="Nom">Téléphone du syndic</label>
+                                                        <input id="Nom" name="_nom" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="phone-12">
+                                                    <div class="input-group">
+                                                        <input id="Cablage" type="radio" name="_client" value="oui"><label for="Cablage">Mon cablâge interne est conforme pour le raccordement internet via la Fibre Optique.</label>
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <input id="NotCablage" type="radio" name="_client" value="non"><label for="NotCablage">Mon cablâge interne n'est pas conforme et je demande à Luxembourg Online d'entreprendre les travaux nécessaires. </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>-->
+                                    </div>
+                                    <div id="materiel" class="step" data-step="1">
+                                        <h2 class="step-title">Modem</h2>
+                                        <p class="step-description">Merci de choisir un modem (obligatoire).</p>
+                                        <div class="clearfix phone-mt-40 phone-mb-20">
+                                            <button class="btn-blue previous pull-left">
+                                                <span class="icon-left-arrow"></span> Retour
+                                            </button>
+                                            <button class="btn-orange next pull-right" disabled>
+                                                Suivant <span class="icon-right-arrow"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div id="telephonie" class="step" data-step="2">
+                                        <h2 class="step-title">Modem</h2>
+                                        <p class="step-description">Merci de choisir un modem (obligatoire).</p>
+                                        <div class="clearfix phone-mt-40 phone-mb-20">
+                                            <button class="btn-blue previous pull-left">
+                                                <span class="icon-left-arrow"></span> Retour
+                                            </button>
+                                            <button class="btn-orange next pull-right" disabled>
+                                                Suivant <span class="icon-right-arrow"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div id="tv" class="step" data-step="3">
+                                        <h2 class="step-title">Modem</h2>
+                                        <p class="step-description">Merci de choisir un modem (obligatoire).</p>
+                                        <div class="clearfix phone-mt-40 phone-mb-20">
+                                            <button class="btn-blue previous pull-left">
+                                                <span class="icon-left-arrow"></span> Retour
+                                            </button>
+                                            <button class="btn-orange next pull-right" disabled>
+                                                Suivant <span class="icon-right-arrow"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div id="infos" class="step" data-step="4">
+                                        <h2 class="step-title">Modem</h2>
+                                        <p class="step-description">Merci de choisir un modem (obligatoire).</p>
+                                        <div class="clearfix phone-mt-40 phone-mb-20">
+                                            <button class="btn-blue previous pull-left">
+                                                <span class="icon-left-arrow"></span> Retour
+                                            </button>
+                                            <button class="btn-orange next pull-right" disabled>
+                                                Suivant <span class="icon-right-arrow"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div id="confirm" class='step' data-step="5">
+                                        <h2 class="step-title">Modem</h2>
+                                        <p class="step-description">Merci de choisir un modem (obligatoire).</p>
+                                        <div class="clearfix phone-mt-40 phone-mb-20">
+                                            <button class="btn-blue previous pull-left">
+                                                <span class="icon-left-arrow"></span> Retour
+                                            </button>
+                                            <button class="btn-orange next pull-right" disabled>
+                                                Suivant <span class="icon-right-arrow"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="phone-3">
+                                <div id="panier">
+                                    <ul>
+                                        <li class="header"><h3>Récapitulatif</h3></li>
+                                        <li class="items">
+                                            <div class="month">
+                                                <h4>Coûts mensuels</h4>
+                                                <ul>
+                                                    <li>
+                                                        <span class="label">Coûts uniques</span>
+                                                        <span class="price">89.00 €</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="unique">
+                                                <h4>Coûts uniques</h4>
+                                                <ul>
+                                                    <li>
+                                                        <span class="label">Coûts uniques</span>
+                                                        <span class="price price-delete">89.00 €</span>
+                                                        <div class="remise-name">
+                                                            <span class="label"><span class="bold">PROMO</span> : installation offerte</span>
+                                                            <span class="price price-delete">89.00 €</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="prices">
+                                            <ul>
+                                                <li id="monthlyPrice">
+                                                    <span class="prices-label">Coûts mensuels :</span>
+                                                    <span class="prices-price">89.00 €<span class="normal lowercase">/mois</span></span>
+                                                </li>
+                                                <li id="uniquePrice">
+                                                    <span class="prices-label">Coûts Unique :</span>
+                                                    <span class="prices-price">44.90 €</span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <!--              FOOTER               -->
+            <footer>
+                <div id="social-links" class="iner-shadow">
+                    <div class="container-wrapper">
+                        <div class="row">
+                            <div class="text">Rejoignez-nous sur: </div>
+                            <nav>
+                                <ul class="spread">
+                                    <li>
+                                        <a href="http://www.online.lu/" target="blank_">
+                                            <div class="social-icon lol"><span class="icon-icone-lol"></span></div>
+                                            <span class="brand-name">Online.lu</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.facebook.com/Luxembourg.Online" target="blank_">
+                                            <div class="social-icon facebook"><span class="icon-facebook"></span></div>
+                                            <span class="brand-name">Facebook</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/Lux_Online" target="blank_">
+                                            <div class="social-icon twitter"><span class="icon-twitter"></span></div>
+                                            <span class="brand-name">Twitter</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://plus.google.com/+internetlu" target="blank_">
+                                            <div class="social-icon google"><span class="icon-google"></span></div>
+                                            <span class="brand-name">Google+</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/company/2054058?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A2054058%2Cidx%3A2-1-2%2CtarId%3A1446712404024%2Ctas%3Aluxembourg%20online" target="blank_">
+                                            <div class="social-icon linkedin"><span class="icon-linkedin"></span></div>
+                                            <span class="brand-name">LinkedIn</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div id="contact">
+                    <div class="container-wrapper">
+                        <div class="row">
+                            <div class="text">Contactez-nous : </div>
+                            <ul class="contact-infos spread">
+                                <li>
+                                    <span class="icon-phone-icone"></span><a href="tel://2799 0000">2799 0000</a>
+                                </li>
+                                <li>
+                                    <span class="icon-clock-icone"></span>Lu-Sa: 9h00-18h00
+                                </li>
+                                <li>
+                                    <span class="icon-internet-ico"></span><a href="../divers/contact.html#demande_infos_commerciales" target="_blank">commercial@internet.lu</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="footer-links">
+                    <div class="container-wrapper">
+                        <div class="row">
+                            <a class="help-link" href="../divers/assistance.html">
+                                <span class="icon-info-icone"></span>
+                                <p>Besoin d'aide ? Accédez à l’espace assistance de Luxembourg Online (FAQ, informations, guides et documents utiles, contrats, divers)</p>
+                                <span class="icon-right-arrow"></span>
+                            </a>
+                            <div class="separator hidden-phone hidden-tab"></div>
+                        </div>
+                        <div class="row hidden-phone hidden-tab">
+                            <div class="footer-top-links">
+                                <h4>internet : </h4>
+                                <nav>
+                                    <ul class="links">
+                                        <li><a href="../internet/offres.html">Nos offres</a></li>
+                                        <li><a href="../promos/fibre.html">Offre spéciale fibre</a></li>
+                                        <li><a href="../internet/equipements.html">Nos équipements</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="footer-top-links">
+                                <h4>téléphonie : </h4>
+                                <nav>
+                                    <ul class="links">
+                                        <li><a href="../telephonie/tarifs.html">Nos tarifs</a></li>
+                                        <li><a href="../telephonie/equipements.html">Nos téléphones</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="footer-top-links">
+                                <h4>tv : </h4>
+                                <nav>
+                                    <ul class="links">
+                                        <li><a href="../tv/offres.html">Notre offre</a></li>
+
+                                        <li><a href="../tv/equipements.html">Nos équipements</a></li>
+                                        <li><a href="../promos/internetTV.html">Offre spéciale TV</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="footer-top-links">
+                                <h4>mobile : </h4>
+                                <nav>
+                                    <ul class="links">
+                                        <li><a href="../mobile/abonnements.html">Nos offres</a></li>
+                                        <li><a href="../mobile/equipements.html">Nos téléphones</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="separator"></div>
+                            <div class="phone-12">
+                                <div class="display-phone copyright"><span class="icon-icone-lol"></span>&copy;2015 Luxembourg Online S.A</div>
+                                <nav class="hidden-phone">
+                                    <ul class="footer-bottom-links">
+                                        <li>
+                                            <span class="icon-icone-lol"></span>&copy;2015 Luxembourg Online S.A</li>
+                                        <li><a href="../documents/CONDITIONS GENERALES DES SERVICES LUXEMBOURG ONLINE.pdf" target="blank_">Mentions légales</a></li>
+                                        <li><a href="../divers/emploi.html">Offres d'emploi</a></li>
+                                        <li><a href="../divers/plan.html">Plan du site</a></li>
+
+                                        <li><a href="../divers/contact.html">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!--              ./FOOTER               -->
+        </div>
+
+        <script type="text/javascript" src="../scripts/vendor/jquery.min.js"></script>
+        <script type="text/javascript" src="../scripts/vendor/flickity.pkgd.min.js"></script>
+        <script type="text/javascript" src="../scripts/vendor/mustache.min.js"></script>
+        <script type="text/javascript" src="../scripts/main.js"></script>
+        <script type="text/javascript" src="../scripts/pubSub.js"></script>
+        <script type="text/javascript" src="../scripts/inscriptionModule.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                //Verify required input and block next button if required
+                $('.step').each(function () {
+                    verifyStep($(this));
+                });
+
+                //on click sur un élément que l'on peut ajouter dans le panier
+                $('.shop-item:not(.disabled)').on('click', function () {
+                    var input = $(this).find('input[type="radio"]');
+                    $(this).toggleClass('selected');
+                    if (input.is(':checked')) {
+                        //TODO remove from card
+                        events.emit('useCart', {
+                            id: input.val(),
+                            cat: input.attr('data-cat'),
+                            isAdding: false
+                        });
+                        input.prop("checked", false).change();
+                    } else {
+                        events.emit('useCart', {
+                            id: input.val(),
+                            cat: input.attr('data-cat'),
+                            isAdding: true
+                        });
+                        input.prop("checked", "checked").change();
+                    }
+                });
+                $('input[type="radio"]').on('change', function () {
+                    var radioName = $(this).attr('name');
+                    //enlève toute les items selected du même groupe
+                    $('input[type="radio"][name="' + radioName + '"]').parent('.shop-item').not($(this).closest('.shop-item')).removeClass('selected');
+                    //Enlève du panier les produits du même groupe
+                    $('input[type="radio"][name="' + radioName + '"]:not(:checked)').each(function () {
+                        events.emit('useCart', {
+                            id: $(this).val(),
+                            cat: $(this).attr('data-cat'),
+                            isAdding: false
+                        });
+                    });
+                    verifyStep($(this).parents('.step'));
+                });
+            });
+
+            var verifyStep = function ($element) {
+                var currentStep = $element;
+                var flag = true;
+                var name;
+
+                //vérifie si required est select
+                currentStep.find('input[required]').each(function () {
+                    name = $(this).attr('name');
+                    if (!currentStep.find("input[name='" + name + "']").is(':checked')) {
+                        currentStep.find('button.next').prop('disabled', 'disabled');
+                        flag = false;
+                        return false;
+                    }
+                });
+                if (flag) {
+                    currentStep.find('button.next').removeAttr("disabled");
+                }
+            };
+        </script>
+        <script type="text/javascript" src="../scripts/analytics.js"></script>
+    </body>
+
+</html>

@@ -140,6 +140,9 @@
     font-weight: 600;
     margin-bottom: 10px; }
 
+#inscription {
+  min-height: 520px; }
+
 #steps .step {
   display: none; }
 #steps .step-title {
@@ -241,7 +244,8 @@
 
 .shop-item-description {
   line-height: 21px;
-  font-size: 1.15em; }
+  font-size: 1.1em;
+  }
 
 .shop-item-img {
   display: inline-block;

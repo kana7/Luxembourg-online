@@ -13,24 +13,26 @@ var StepTransition = (function () {
             '<h3 class="shop-item-name">{{name}}</h3>' +
             '<div class="phone-6">' +
             '<ul class="shop-item-description">' +
-            '<li>{{commentaire}}</li>' +
+            '{{#commentaire}}'+
+            '<li>{{.}}</li>' +
+            '{{/commentaire}}'+
             '</ul>' +
             '{{#isSellProduct}}' +
             '{{^isRemise}}' +
             '<ul class="shop-item-price orange">' +
-            '<li class="extra-bold price">{{#formatPrice}}{{fullPrice}}{{/formatPrice}} €</li>' +
+            '<li class="extra-bold price">{{#formatPrice}}{{fullPrice}}{{/formatPrice}} €{{#isMonthlyCost}}/mois{{/isMonthlyCost}}</li>' +
             '</ul>' +
             '{{/isRemise}}' +
             '{{#isRemise}}' +
             '<ul class="shop-item-price promo orange">' +
-            '<li class="extra-bold price">{{#formatPrice}}{{fullPrice}}{{/formatPrice}} €</li>' +
+            '<li class="extra-bold price">{{#formatPrice}}{{fullPrice}}{{/formatPrice}} €{{#isMonthlyCost}}/mois{{/isMonthlyCost}}</li>' +
             '<li>PROMO : {{remise.name}}</li>' +
             '</ul>' +
             '{{/isRemise}}' +
             '{{/isSellProduct}}' +
             '{{^isSellProduct}}' +
             '<ul class="shop-item-price orange">' +
-            '<li class="extra-bold price">{{#formatPrice}}{{price}}{{/formatPrice}}</li>' +
+            '<li class="extra-bold price">{{#formatPrice}}{{price}}{{/formatPrice}} €{{#isMonthlyCost}}/mois{{/isMonthlyCost}}</li>' +
             '</ul>' +
             '{{/isSellProduct}}' +
             '</div>' +
@@ -64,7 +66,9 @@ var StepTransition = (function () {
                     //Ajouter la partie detail installation fibre
                 }
                 $(this).find('.step-description').after(html);
-            } else {
+            }
+            if ($(this).attr('id') == 'materiel') {
+                html = Mustache.render(tplItem, {required: true, isSellProduct: false, group: 'modem', items: currentItems_list['modem']});
                 $(this).find('.step-description').after(html);
             }
         });
@@ -83,8 +87,8 @@ var StepTransition = (function () {
     }
 
     function _showSlider(index) {
-        stepList.not(stepList[index]).fadeOut('10000');
-        $(stepList[index]).delay(700).fadeIn('10000');
+        stepList.not(stepList[index]).hide();
+        $(stepList[index]).fadeIn('800');
     }
 
     function _next() {
@@ -266,17 +270,22 @@ var Cart = (function () {
             Panier['items'].push(currentItems_list[cat][id]);
         } else {
             //adding unique element
-            Panier['items'].push(currentItems_list[cat]);
+            if (Object.prototype.toString.call(currentItems_list[cat]) === '[object Array]') {
+                var objToAdd = _findInArray(currentItems_list[cat], id);
+                Panier['items'].push(objToAdd);
+            } else {
+                Panier['items'].push(currentItems_list[cat]);
+            }
         }
 
     }
 
     function _removeItem(id) {
-        var objectToDelete = _findInArray(Panier['items'], id);
+        var objToDelete = _findInArray(Panier['items'], id);
         console.log(id);
-        console.log("je supprime! : " + objectToDelete);
-        if (objectToDelete != null) {
-            Panier['items'].splice(Panier['items'].indexOf(objectToDelete), 1);
+        console.log("je supprime! : " + objToDelete);
+        if (objToDelete != null) {
+            Panier['items'].splice(Panier['items'].indexOf(objToDelete), 1);
         } else {
             console.log("Le produit n'a pas été trouvé dans le panier : supression annulé");
         }
@@ -381,20 +390,24 @@ var SellProduct = function (id, type, name, price, isMonthlyCost, commentaire, i
 };
 inherits(SellProduct, Item);
 
-var modem_List1 = {
-    "5291": new Item("5291", "modem", "Location FRITZ!Box 3272", 4.00, true, "", true, "../images/equipment/modem/3272/3272.png"),
-    "5294": new Item("5294", "modem", "Location FRITZ!Box 7490", 6.00, true, "", false, "../images/equipment/modem/3272/3272.png")
-};
-var modem_List2 = {
-    "5292": new Item("5292", "modem", "Location FRITZ!Box 7360", 4.00, true, "", true, "../images/equipment/modem/7360/7360.png"),
-    "5294": new Item("5294", "modem", "Location FRITZ!Box 7490", 6.00, true, "", false, "../images/equipment/modem/7390/7360.png")
-};
+
+var modem7490 = new Item("5294", "modem", "Location FRITZ!Box 7490", 6.00, true, ["Modem-routeur pro", "LAN : 4 x Gigabit", "WLAN : jusqu'à 1300Mbits/s", "Téléphone : 2 x analogique, 1 x ISDN"], false, "../images/equipment/modem/7390/7360.png");
+
+var modem_List1 = [
+    new Item("5291", "modem", "Location FRITZ!Box 3272", 4.00, true, ["Modem-routeur standard", "LAN :  2 x Gigabit, 2 x fast Ethernet", "WLAN :  jusqu'à 300Mbit/s"], true, "../images/equipment/modem/3272/3272.png"),
+    modem7490
+];
+var modem_List2 = [
+    new Item("5292", "modem", "Location FRITZ!Box 7360", 4.00, true, ["Modem-routeur standard", "LAN :  2 x Gigabit, 2 x fast Ethernet", "WLAN : jusqu'à 300Mbit/s", "Téléphone :  1 x analogique, DECT"], true, "../images/equipment/modem/7360/7360.png"),
+    modem7490 
+];
 
 var lolTVRemise = new Item("5611", "tv", "6 mois gratuits", -17.00, true, "après 17€/mois", true, null);
-var lolTv = new Abonnement("2848", "tv", "LOLTV", 17.00, true, "", true, null, "LOL", "TV", null, null, {type: null, remise: lolTVRemise, isRemise: true}, {
-    "5137": new Item("5137", "tv", "Location LOLTV MiniX Neo X7 (4,50€/mois)", 4.50, true, "", true, "../images/TV/320px/Minix_Equipement.jpg"),
-    "5304": new Item("5304", "tv", "Location LOLTV MiniX Neo X7 (5,50€/mois)", 5.50, true, "", false, "../images/TV/320px/Minix_Equipement.jpg")
-});
+var lolTv = new Abonnement("2848", "tv", "LOLTV", 17.00, true, "", true, null, "LOL", "TV", null, null, {type: null, remise: lolTVRemise, isRemise: true},
+[
+    new Item("5137", "tv", "Location LOLTV MiniX Neo X7 (4,50€/mois)", 4.50, true, "", true, "../images/TV/320px/Minix_Equipement.jpg"),
+    new Item("5304", "tv", "Location LOLTV MiniX Neo X7 (5,50€/mois)", 5.50, true, "", false, "../images/TV/320px/Minix_Equipement.jpg")
+]);
 
 var remiseInstall = new Item("5313", "installation", "installation offerte", -89.00, false, "", true, null);
 var installNoRemise = new SellProduct("5313", "installation2", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", false, null);

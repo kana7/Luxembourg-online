@@ -17,10 +17,10 @@
 @include media(tab){
     #promo-fibre{
         &:not(.not-accueil){
-            background-image: url(../../../images/Promos/Accueil/Promo_Fibre_1056x430px.jpg);
+            background-image: url('../../../images/promos/Promo Fibre Noel/Accueil/Promo_Fibre_Noel_1056x430px.jpg');
         }
         &.not-accueil{
-            background-image: url(../../../images/promos/Promo_Fibre/Promo_Fibre_1056x290px.jpg);
+            background-image: url('../../../images/promos/Promo Fibre Noel/Promo Fibre Noel/Promo_Fibre_Noel_1056x290px.jpg');
         }
     }
     #promo-internetTV{
@@ -54,10 +54,10 @@
 @include media(desk){
     #promo-fibre{
         &:not(.not-accueil){
-            background-image: url(../../../images/Promos/Accueil/Promo_Fibre_1302x370px.jpg);
+            background-image: url('../../../images/promos/Promo Fibre Noel/Accueil/Promo_Fibre_Noel_1302x370px.jpg');
         }
         &.not-accueil{
-            background-image: url(../../../images/Promos/Accueil/Promo_Fibre_1302x370px.jpg);
+            background-image: url('../../../images/promos/Promo Fibre Noel/Promo Fibre Noel/Promo_Fibre_Noel_1302x370px.jpg');
         }
     }
     #promo-internetTV{
@@ -149,10 +149,10 @@
 @include media(lgdesk){
     #promo-fibre{
         &:not(.not-accueil){
-            background-image: url(../../../images/Promos/Accueil/Promo_Fibre_1920x400px.jpg);
+            background-image: url('../../../images/promos/Promo Fibre Noel/Accueil/Promo_Fibre_Noel_1920x400px.jpg');
         }
         &.not-accueil{
-            background-image: url(../../../images/Promos/Accueil/Promo_Fibre_1920x400px.jpg);
+            background-image: url('../../../images/promos/Promo Fibre Noel/Promo Fibre Noel/Promo_Fibre_Noel_1920x400px.jpg');
         }
     }
     #promo-internetTV{

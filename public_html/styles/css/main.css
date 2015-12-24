@@ -3092,11 +3092,11 @@ header {
     background-position: center;
     background-size: cover; }
     #services .service#loldsl {
-      background-image: url(../../images/Homepage/OFFRES/LOL_DSL_296x233px.jpg); }
+      background-image: url(../../images/Homepage/OFFRES/LOL_DSL_296x233px_Noel.jpg); }
     #services .service#mobiles {
       background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_296x233px.jpg); }
     #services .service#installation {
-      background-image: url(../../images/Homepage/OFFRES//LOL_TV_296x233px.jpg); }
+      background-image: url(../../images/Homepage/OFFRES//LOL_TV_296x233px_Noel.jpg); }
     #services .service#dispo {
       background-image: url(../../images/Homepage/OFFRES/Recherche_Offre.jpg); }
     #services .service .infos {
@@ -4260,8 +4260,7 @@ span[class^=icon-] {
   .offer-item-blue .item-header, .offer-item-blue .item-footer, .equipement-item-blue .item-header, .equipement-item-blue .item-footer {
     background-color: #004994;
     padding: 10px 0;
-    color: #fff;
-    }
+    color: #fff; }
   .offer-item-blue .item-header, .equipement-item-blue .item-header {
     border-radius: 4px 4px 0px 0px;
     padding: 18px 0 15px;
@@ -4286,8 +4285,7 @@ span[class^=icon-] {
       position: absolute;
       font-size: 32px;
       top: 3px;
-      left: 150px;
-      }
+      left: 150px; }
     .offer-item-blue .offer-price span, .equipement-item-blue .offer-price span {
       font-size: 22px;
       padding-left: 6px; }
@@ -5771,7 +5769,12 @@ h2.contact-title {
 
   .detailsTableCable {
     margin-left: auto;
-    margin-right: auto; } }
+    margin-right: auto; }
+
+  .dropdown-content {
+    margin-left: 0px;
+    border-left: 1px solid #004494;
+    padding: 0 10px; } }
 @media screen and (min-width: 672px) {
   .container-wrapper {
     width: 640px; }
@@ -5790,11 +5793,11 @@ h2.contact-title {
     padding-bottom: 135%;
     margin-bottom: 30px; }
     #services .service#loldsl {
-      background-image: url(../../images/Homepage/OFFRES/LOL_DSL_288x392px.jpg); }
+      background-image: url(../../images/Homepage/OFFRES/LOL_DSL_288x392px_Noel.jpg); }
     #services .service#mobiles {
       background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_288x392px.jpg); }
     #services .service#installation {
-      background-image: url(../../images/Homepage/OFFRES/LOL_TV_288x392px.jpg); }
+      background-image: url(../../images/Homepage/OFFRES/LOL_TV_288x392px_Noel.jpg); }
 
   #offers-section div[class^=phone-] {
     margin-bottom: 20px;
@@ -6056,8 +6059,18 @@ h2.contact-title {
   #twenty-years {
     background-image: url(../../images/Homepage/CONTENU/640px/20ans_LOL.jpg);
     background-size: 583px auto;
-    padding-top: 205px; } }
+    padding-top: 205px; }
+
+  .dropdown-content {
+    margin-left: 30px;
+    border-left: 1px solid #004494;
+    padding: 0 35px; } }
 @media screen and (min-width: 1056px) {
+  .dropdown-content {
+    margin-left: 30px;
+    border-left: 1px solid #004494;
+    padding: 0 35px; }
+
   .center-tab {
     position: relative;
     top: 50%;
@@ -6212,11 +6225,11 @@ h2.contact-title {
   #services .service {
     margin-bottom: 0; }
     #services .service#loldsl {
-      background-image: url(../../images/Homepage/OFFRES/LOL_DSL_240x327px.jpg); }
+      background-image: url(../../images/Homepage/OFFRES/LOL_DSL_240x327px_Noel.jpg); }
     #services .service#mobiles {
       background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_240x327px.jpg); }
     #services .service#installation {
-      background-image: url(../../images/Homepage/OFFRES/LOL_TV_240x327px.jpg); }
+      background-image: url(../../images/Homepage/OFFRES/LOL_TV_240x327px_Noel.jpg); }
     #services .service .infos {
       padding: 0 15px 15px; }
       #services .service .infos .details {
@@ -6579,8 +6592,68 @@ h2.contact-title {
   .service#dispo .input-white {
     height: 40px; }
   .service#dispo .input-white.select {
-    margin: 5px 0; } }
+    margin: 5px 0; }
+
+  .notif-one {
+    width: 315px;
+    height: 115px;
+    top: 1%;
+    left: 52%; }
+
+  .notif-two {
+    width: 315px;
+    height: 135px;
+    top: 17%;
+    left: 52%; }
+
+  .notif-three {
+    width: 730px;
+    height: 210px;
+    top: 38%;
+    left: 4%; }
+
+  .notif-four {
+    width: 720px;
+    height: 90px;
+    top: 66%;
+    left: 4%; }
+
+  .notif-five {
+    width: 700px;
+    height: 85px;
+    top: 90%;
+    left: 6%; } }
 @media screen and (min-width: 1302px) {
+  .notif-one {
+    width: 315px;
+    height: 115px;
+    top: 1%;
+    left: 52%; }
+
+  .notif-two {
+    width: 315px;
+    height: 135px;
+    top: 17%;
+    left: 52%; }
+
+  .notif-three {
+    width: 730px;
+    height: 280px;
+    top: 38%;
+    left: 4%; }
+
+  .notif-four {
+    width: 720px;
+    height: 125px;
+    top: 66%;
+    left: 4%; }
+
+  .notif-five {
+    width: 700px;
+    height: 85px;
+    top: 90%;
+    left: 6%; }
+
   .container-wrapper {
     width: 1280px; }
 
@@ -6612,8 +6685,7 @@ h2.contact-title {
       margin-right: 65px; }
 
   .offer-item-orange .offer-price div, .offer-item-blue .offer-price div {
-    left: 152px;
-    }
+    left: 162px; }
 
   #slider-contents .title {
     font-size: 37pt;
@@ -6673,11 +6745,11 @@ h2.contact-title {
   #services .row > div[class^=phone-] {
     padding: 0 7px; }
   #services .service#loldsl {
-    background-image: url(../../images/Homepage/OFFRES/LOL_DSL_320x437px.jpg); }
+    background-image: url(../../images/Homepage/OFFRES/LOL_DSL_320x437px_Noel.jpg); }
   #services .service#mobiles {
     background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_320x437px.jpg); }
   #services .service#installation {
-    background-image: url(../../images/Homepage/OFFRES/LOL_TV_320x437px.jpg); }
+    background-image: url(../../images/Homepage/OFFRES/LOL_TV_320x437px_Noel.jpg); }
   #services .service .infos {
     padding: 0 25px 15px; }
     #services .service .infos h3 {

@@ -103,7 +103,6 @@ function checkDispo(homeId, boolean) {
             success: function (data) {
                 obj = data;
                 ab = ["", "", "", "", "", "", ""];
-                
 
                 if (obj.Service[6]) {  // Dégroupage DSL
                     articleObj = obj.Service[6].article;
@@ -111,7 +110,6 @@ function checkDispo(homeId, boolean) {
                         for (i in articleObj) {
                             for (b in articleObj) {
                                 if (articleObj[b].idObject == "5257" && ab[0] == "") {// LOL DSL 24
-                                    console.log(obj.Service[6]);
                                     ab[0] = [articleObj[b].idObject, 6];
                                 }
                             }

@@ -4,101 +4,90 @@
 var StepTransition = (function () {
 //stock la position du slide visible
     var html;
-    var tpl;
+    var tplItem =
+            '<div class="clearfix phone-mt-40">' +
+            '{{#items}}' +
+            '<div class="phone-12 tab-6">' +
+            '<div class="shop-item">' +
+            '<input type="radio" name="{{group}}" data-cat="{{type}}" value="{{id}}" hidden {{#required}}required{{/required}} {{#isDefaut}}selected{{/isDefaut}}>' +
+            '<h3 class="shop-item-name">{{name}}</h3>' +
+            '<div class="phone-6">' +
+            '<ul class="shop-item-description">' +
+            '<li>{{commentaire}}</li>' +
+            '</ul>' +
+            '{{#isSellProduct}}' +
+            '{{^isRemise}}' +
+            '<ul class="shop-item-price orange">' +
+            '<li class="extra-bold price">{{#formatPrice}}{{fullPrice}}{{/formatPrice}} €</li>' +
+            '</ul>' +
+            '{{/isRemise}}' +
+            '{{#isRemise}}' +
+            '<ul class="shop-item-price promo orange">' +
+            '<li class="extra-bold price">{{#formatPrice}}{{fullPrice}}{{/formatPrice}} €</li>' +
+            '<li>PROMO : {{remise.name}}</li>' +
+            '</ul>' +
+            '{{/isRemise}}' +
+            '{{/isSellProduct}}' +
+            '{{^isSellProduct}}' +
+            '<ul class="shop-item-price orange">' +
+            '<li class="extra-bold price">{{#formatPrice}}{{price}}{{/formatPrice}}</li>' +
+            '</ul>' +
+            '{{/isSellProduct}}' +
+            '</div>' +
+            '<div class="phone-6 pull-right">' +
+            '<img class="shop-item-img" src="{{link}}" alt="{{name}} shop LOL"/>' +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+            '{{/items}}' +
+            '</div>';
+
     var StepsContainer = $('#steps');
     var currentItems_list;
     var currentStep = 0;
     var stepList = StepsContainer.find('.step');
-    $(stepList).not(stepList[0]).css('display', 'none');
-    var installTpl = $('#installation');
+
     events.on('getCurrent', init);
     function init(current) {
         currentItems_list = current;
-        //TODO - Construire toutes les étapes
-        //_render();
+        _render();
         _bindEvents();
+        _showSlider(currentStep);
     }
 
     function _render() {
-        tpl = '<h2 class="step-title">Installation</h2>' +
-                '<p class="step-description">Merci de choisir le type d\'installation souhaité</p>' +
-                '<div class="clearfix phone-mt-40">' +
-                '<div class="phone-12 tab-6 tab-pr-40">' +
-                '<div class="shop-item">' +
-                '<input type="radio" name="install" data-cat="installation1" value="5612" hidden required>' +
-                '<h3 class="shop-item-name">Installation par Self-Instal Kit</h3>' +
-                '<div class="phone-6">' +
-                '<ul class="shop-item-description">' +
-                '<li>je fais l\'intallation moi-même à l\'aide d\'un kit d\'installation.</li>' +
-                '</ul>' +
-                '<ul class="shop-item-price orange">' +
-                '<li class="extra-bold price">25.00 €</li>' +
-                '</ul>' +
-                '</div>' +
-                '<div class="phone-6 pull-right">' +
-                '<img class="shop-item-img" src="../images/Shop/self-install.png" alt="luxembourg online self-installation" />' +
-                '</div>' +
-                '</div>' +
-                '</div>' +
-                '<div class="phone-12 tab-6 tab-pl-30">' +
-                '<div class="shop-item">' +
-                '<input type="radio" data-cat="installation2" name="install" value="5313" hidden>' +
-                '<h3 class="shop-item-name">Installation par une équipe</h3>' +
-                '<div class="phone-6">' +
-                '<ul class="shop-item-description">' +
-                '<li>Je souhaite qu\'une équipe spécialisée s\'occupe de l\'installation. </li>' +
-                '</ul>' +
-                '<ul class="shop-item-price promo orange">' +
-                '<li class="extra-bold price">89.00 €</li>' +
-                '<li>PROMO : installation offerte</li>' +
-                '</ul>' +
-                '</div>' +
-                '<div class="phone-6">' +
-                '<img class="shop-item-img" src="../images/Shop/install-equip.png" alt="luxembourg online installation equipe" />' +
-                '</div>' +
-                '</div>' +
-                '</div>' +
-                '</div>' +
-                '<div class="clearfix phone-mt-40">' +
-                '<button class="btn-blue previous pull-left">' +
-                '<span class="icon-left-arrow"></span> Retour' +
-                '</button>' +
-                '<button class="btn-orange next pull-right" disabled>' +
-                'Suivant <span class="icon-right-arrow"></span>' +
-                '</button>' +
-                '</div>';
         stepList.each(function () {
-            var titre;
+            //Faire pour chaque ID un if
             if ($(this).attr('id') == 'installation') {
-                titre = "installation";
-                html = '<h2 class="step-title">' + titre + '</h2>' +
-                        '<p class="step-description">Merci de choisir le type d\'' + titre + ' souhaité</p>' +
-                        '<div class="clearfix phone-mt-40">';
-                //on parse le html générer par le code dans la bonne step
-                $(this).html(html);
+                html = Mustache.render(tplItem, {required: true, isSellProduct: true, group: 'install', items: [selfInstall, installRemise]});
+                if (currentItems_list['abo']['tech'] == "FIBRE") {
+                    //Ajouter la partie detail installation fibre
+                }
+                $(this).find('.step-description').after(html);
+            } else {
+                $(this).find('.step-description').after(html);
             }
         });
+
+        //TODO - METTRE LES DISABLED AUX BONS ENDROITS
+        //TODO - INSERER DANS PANIER ELEMENT SELECTED
     }
 
     function _bindEvents() {
-//bind next et previous sur les bouttons
         StepsContainer.on('click', 'button.previous', function () {
             _previous();
         });
         StepsContainer.on('click', 'button.next', function () {
             _next();
         });
-        //bind liste sur le current step au clic sur bouton précédent ou suivant
     }
 
     function _showSlider(index) {
-        stepList.fadeOut(function () {
-            $(stepList[index]).fadeIn();
-        });
+        stepList.not(stepList[index]).fadeOut('10000');
+        $(stepList[index]).delay(700).fadeIn('10000');
     }
 
     function _next() {
-        console.log('jambon');
         if (currentStep != stepList.length - 1) {
             _showSlider(++currentStep);
         }
@@ -106,7 +95,7 @@ var StepTransition = (function () {
 
     function _previous() {
         if (currentStep != 0) {
-            _showSlider(currentStep);
+            _showSlider(--currentStep);
         }
     }
 
@@ -202,9 +191,9 @@ var Cart = (function () {
             '</li>' +
             '</ul>' +
             '</li>';
-    
+
     events.on('useCart', _useCard);
-    
+
     function init() {
         _initCurrentItem();
     }
@@ -219,7 +208,7 @@ var Cart = (function () {
                     currentItems_list['installation1'] = typeInstall[0];
                     currentItems_list['installation2'] = typeInstall[1];
                 } else {
-                    currentItems_list['installation2'] = currentItems_list['abo']['installation'];
+                    currentItems_list['installation'] = currentItems_list['abo']['installation'];
                 }
                 currentItems_list['activation'] = currentItems_list['abo']['activation'];
                 currentItems_list['modem'] = currentItems_list['abo']['materiels'];
@@ -237,6 +226,8 @@ var Cart = (function () {
                     isAdding: true
                 });
                 events.emit('getCurrent', currentItems_list);
+                console.log(currentItems_list);
+                console.log(Panier);
             }
         } else {
             window.location.replace("offres.html");
@@ -337,36 +328,34 @@ var inherits = function (ctor, superCtor) {
         }
     });
 };
-var Item = function (id, name, price, isMonthlyCost, commentaire, isDefaut) {
+var Item = function (id, type, name, price, isMonthlyCost, commentaire, isDefaut, link) {
     this.id = id;
+    this.type = type;
     this.name = name;
     this.price = price;
     this.isMonthlyCost = isMonthlyCost;
     this.commentaire = commentaire;
     this.isDefaut = isDefaut;
+    this.link = link;
 };
 
 Item.prototype.formatPrice = function () {
     //format euros
     return function (val, render) {
         var n = render(val),
-                    c = isNaN(c = Math.abs(c)) ? 2 : c,
-                    d = d == undefined ? "," : d,
-                    t = t == undefined ? "." : t,
-                    s = n < 0 ? "-" : "",
-                    i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "",
-                    j = (j = i.length) > 3 ? j % 3 : 0;
-            return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+                c = isNaN(c = Math.abs(c)) ? 2 : c,
+                d = d == undefined ? "," : d,
+                t = t == undefined ? "." : t,
+                s = n < 0 ? "-" : "",
+                i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "",
+                j = (j = i.length) > 3 ? j % 3 : 0;
+        return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
     };
 };
 
-var Materiel = function (id, name, price, isMonthlyCost, commentaire, isDefaut, link) {
-    Materiel.super_.call(this, id, name, price, isMonthlyCost, commentaire, isDefaut);
-    this.link = link;
-};
 //objet abonnement internet
-var Abonnement = function (id, name, price, isMonthlyCost, commentaire, isDefaut, ipt, tech, service, installation, activation, materiels) {
-    Abonnement.super_.call(this, id, name, price, isMonthlyCost, commentaire, isDefaut);
+var Abonnement = function (id, type, name, price, isMonthlyCost, commentaire, isDefaut, link, ipt, tech, service, installation, activation, materiels) {
+    Abonnement.super_.call(this, id, type, name, price, isMonthlyCost, commentaire, isDefaut, link);
     this.ipt = ipt;
     this.tech = tech;
     this.service = service;
@@ -375,10 +364,9 @@ var Abonnement = function (id, name, price, isMonthlyCost, commentaire, isDefaut
     this.materiels = materiels;
 };
 inherits(Abonnement, Item);
-inherits(Materiel, Item);
 
-var SellProduct = function (id, name, price, isMonthlyCost, commentaire, isDefaut, isRemise, remise) {
-    SellProduct.super_.call(this, id, name, price, isMonthlyCost, commentaire, isDefaut);
+var SellProduct = function (id, type, name, price, isMonthlyCost, commentaire, isDefaut, link, isRemise, remise) {
+    SellProduct.super_.call(this, id, type, name, price, isMonthlyCost, commentaire, isDefaut, link);
     this.setPrice = function (productPrice, remise) {
         if (remise == null) {
             return productPrice;
@@ -394,76 +382,74 @@ var SellProduct = function (id, name, price, isMonthlyCost, commentaire, isDefau
 inherits(SellProduct, Item);
 
 var modem_List1 = {
-    "5291": new Materiel("5291", "Location FRITZ!Box 3272", 4.00, true, "", true, "../images/equipment/modem/3272/3272.png"),
-    "5294": new Materiel("5294", "Location FRITZ!Box 7490", 6.00, true, "", false, "../images/equipment/modem/3272/3272.png")
+    "5291": new Item("5291", "modem", "Location FRITZ!Box 3272", 4.00, true, "", true, "../images/equipment/modem/3272/3272.png"),
+    "5294": new Item("5294", "modem", "Location FRITZ!Box 7490", 6.00, true, "", false, "../images/equipment/modem/3272/3272.png")
 };
 var modem_List2 = {
-    "5292": new Materiel("5292", "Location FRITZ!Box 7360", 4.00, true, "", true, "../images/equipment/modem/7360/7360.png"),
-    "5294": new Materiel("5294", "Location FRITZ!Box 7490", 6.00, true, "", false, "../images/equipment/modem/7390/7360.png")
+    "5292": new Item("5292", "modem", "Location FRITZ!Box 7360", 4.00, true, "", true, "../images/equipment/modem/7360/7360.png"),
+    "5294": new Item("5294", "modem", "Location FRITZ!Box 7490", 6.00, true, "", false, "../images/equipment/modem/7390/7360.png")
 };
 
-var lolTVRemise = new Item("5611", "6 mois gratuits", -17.00, true, "après 17€/mois", true);
-var lolTv = new Abonnement("2848", "LOLTV", 17.00, true, "", true, "LOL", "TV", null, null, {type: null, remise: lolTVRemise, isRemise: true}, {
-    "5137": new Materiel("5137", "Location LOLTV MiniX Neo X7 (4,50€/mois)", 4.50, true, "", true, "../images/TV/320px/Minix_Equipement.jpg"),
-    "5304": new Materiel("5304", "Location LOLTV MiniX Neo X7 (5,50€/mois)", 5.50, true, "", false, "../images/TV/320px/Minix_Equipement.jpg")
+var lolTVRemise = new Item("5611", "tv", "6 mois gratuits", -17.00, true, "après 17€/mois", true, null);
+var lolTv = new Abonnement("2848", "tv", "LOLTV", 17.00, true, "", true, null, "LOL", "TV", null, null, {type: null, remise: lolTVRemise, isRemise: true}, {
+    "5137": new Item("5137", "tv", "Location LOLTV MiniX Neo X7 (4,50€/mois)", 4.50, true, "", true, "../images/TV/320px/Minix_Equipement.jpg"),
+    "5304": new Item("5304", "tv", "Location LOLTV MiniX Neo X7 (5,50€/mois)", 5.50, true, "", false, "../images/TV/320px/Minix_Equipement.jpg")
 });
 
-var remiseInstall = new Item("5313", "installation offerte", -89.00, false, "", true);
-var installNoRemise = new SellProduct("5313", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, false, null);
-var installRemise = new SellProduct("5313", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, true, remiseInstall);
-var selfInstall = new SellProduct("5612", "Installation par Self-Install-Kit", 25.00, false, "Je fais l'installation moi-même à l'aide du kit d'installation", false, false, null);
-var remiseActivation = new Item("5611", "Remise activation", -85.00, false, "", true);
-var activation = new SellProduct("5610", "Activation", 85.00, false, "", true, true, remiseActivation);
+var remiseInstall = new Item("5313", "installation", "installation offerte", -89.00, false, "", true, null);
+var installNoRemise = new SellProduct("5313", "installation2", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", false, null);
+var installRemise = new SellProduct("5313", "installation", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", true, remiseInstall);
+var selfInstall = new SellProduct("5612", "installation1", "Installation par Self-Install-Kit", 25.00, false, "Je fais l'installation moi-même à l'aide du kit d'installation", false, "../images/Shop/self-install.png", false, null);
+
+var remiseActivation = new Item("5611", "activation", "Remise activation", -85.00, false, "", true, null);
+var activation = new SellProduct("5610", "activation", "Activation", 85.00, false, "", true, null, true, remiseActivation);
 var typeInstall = [selfInstall, installNoRemise];
 
 var abonnements_list = {
     "2": {
-        "5272": new Abonnement("5272", "LOL FIBER 30", 44.90, true, "", true, "LOL", "FIBRE", 2, installNoRemise, activation, modem_List2),
-        "5275": new Abonnement("5275", "LOL FIBER 100", 54.90, true, "", true, "LOL", "FIBRE", 2, installRemise, activation, modem_List2),
-        "5276": new Abonnement("5276", "LOL FIBER 200", 71.90, true, "", true, "LOL", "FIBRE", 2, installRemise, activation, modem_List2)
+        "5272": new Abonnement("5272", "abo", "LOL FIBER 30", 44.90, true, "", true, null, "LOL", "FIBRE", 2, installNoRemise, activation, modem_List2),
+        "5275": new Abonnement("5275", "abo", "LOL FIBER 100", 54.90, true, "", true, null, "LOL", "FIBRE", 2, installRemise, activation, modem_List2),
+        "5276": new Abonnement("5276", "abo", "LOL FIBER 200", 71.90, true, "", true, null, "LOL", "FIBRE", 2, installRemise, activation, modem_List2)
     },
     "3": {
-        "?": new Abonnement("?", "LOL DSL 20", null, true, "", true, "EPT", "ADSL", 3, installNoRemise, activation, modem_List1)
+        "?": new Abonnement("5619", "abo", "LOL DSL 20", null, true, "", true, null, "EPT", "ADSL", 3, installNoRemise, activation, modem_List1)
     },
     "4": {
-        "5262": new Abonnement("5262", "LOL FIBER 30", 44.90, true, "", true, "EPT", "VDSL", 4, installNoRemise, activation, modem_List2)
+        "5262": new Abonnement("5262", "abo", "LOL FIBER 30", 44.90, true, "", true, null, "EPT", "VDSL", 4, installNoRemise, activation, modem_List2)
     },
     "5": {
-        "5262": new Abonnement("5262", "LOL FIBER 30", 44.90, true, "", true, "EPT", "FIBRE", 5, installNoRemise, activation, modem_List2),
-        "5263": new Abonnement("5263", "LOL FIBER 100", 54.90, true, "", true, "EPT", "FIBRE", 5, installRemise, activation, modem_List2),
-        "5264": new Abonnement("5264", "LOL FIBER 200", 71.90, true, "", true, "EPT", "FIBRE", 5, installRemise, activation, modem_List2)
+        "5262": new Abonnement("5262", "abo", "LOL FIBER 30", 44.90, true, "", true, null, "EPT", "FIBRE", 5, installNoRemise, activation, modem_List2),
+        "5263": new Abonnement("5263", "abo", "LOL FIBER 100", 54.90, true, "", true, null, "EPT", "FIBRE", 5, installRemise, activation, modem_List2),
+        "5264": new Abonnement("5264", "abo", "LOL FIBER 200", 71.90, true, "", true, null, "EPT", "FIBRE", 5, installRemise, activation, modem_List2)
     },
     "6": {
-        "5257": new Abonnement("5257", "LOL DSL 24", 34.90, true, "", true, "LOL", "ADSL", 6, null, activation, modem_List1)
+        "5257": new Abonnement("5257", "abo", "LOL DSL 24", 34.90, true, "", true, null, "LOL", "ADSL", 6, null, activation, modem_List1)
     },
     "8": {
-        "5273": new Abonnement("5273", "LOL FIBER 30", 44.90, true, "", true, "LOL", "VDSL", 8, installNoRemise, activation, modem_List2),
-        "5274": new Abonnement("5274", "LOL FIBER 100", 54.90, true, "", true, "LOL", "VDSL", 8, installRemise, activation, modem_List2),
-        "5336": new Abonnement("5336", "LOL FIBER 100", 54.90, true, "", true, "LOL", "VDSL", 8, installRemise, activation, modem_List2)
+        "5273": new Abonnement("5273", "abo", "LOL FIBER 30", 44.90, true, "", true, null, "LOL", "VDSL", 8, installNoRemise, activation, modem_List2),
+        "5274": new Abonnement("5274", "abo", "LOL FIBER 100", 54.90, true, "", true, null, "LOL", "VDSL", 8, installRemise, activation, modem_List2),
+        "5336": new Abonnement("5336", "abo", "LOL FIBER 100", 54.90, true, "", true, null, "LOL", "VDSL", 8, installRemise, activation, modem_List2)
     },
     "41": {
-        "5263": new Abonnement("5263", "LOL FIBER 100", 54.90, true, "", true, "EPT", "VDSL1", 41, installRemise, activation, modem_List2)
+        "5263": new Abonnement("5263", "abo", "LOL FIBER 100", 54.90, true, "", true, null, "EPT", "VDSL1", 41, installRemise, activation, modem_List2)
     },
     "42": {
-        "5263": new Abonnement("5263", "LOL FIBER 100", 54.90, true, "", true, "EPT", "VDSL2", 42, installRemise, activation, modem_List2)
+        "5263": new Abonnement("5263", "abo", "LOL FIBER 100", 54.90, true, "", true, null, "EPT", "VDSL2", 42, installRemise, activation, modem_List2)
     },
     getAbo: function (service, id) {
         return abonnements_list[service][id];
-    },
-    setComment: function (service, id, commentaire) {
-        this.getAbo(service, id).commentaire = commentaire;
     }
 };
 var materiel_list = {
-    "5436": new Materiel("5436", "FRITZ!WLAN Repeater 450E", 52.00, false, "", false, "../images/equipment/modem/r450e/r450e_small1.png"),
-    "5437": new Materiel("5437", "FRITZ!WLAN Repeater 1750E", 84.00, false, "", false, "../images/equipment/modem/r1750e/r1750e_small1.png"),
-    "4570": new Materiel("4570", "FRITZ!Powerline 520E Set", 89.00, false, "", false, "../images/equipment/modem/pl520eset/pl520eset_small1.png"),
-    "4450": new Materiel("4450", "FRITZ!Powerline 520E Single", 49.00, false, "", false, "../images/equipment/modem/pl520e/pl520e_small1.png"),
-    "3148": new Materiel("3148", "FRITZ!Powerline 546E", 95.00, false, "", false, "../images/equipment/modem/pl546e/pl546e.png"),
-    "5439": new Materiel("5439", "FRITZ!WLAN Stick AC", 28.00, false, "", false, "../images/equipment/modem/wlansac/wlansac_small.png"),
-    "5395": new Materiel("5395", "Motorola T201", 31.00, false, "", false, "../images/equipment/telephone/motorola/t201/motorola_t201_small1.png"),
-    "5396": new Materiel("5396", "Motorola T202", 48.00, false, "", false, "../images/equipment/telephone/motorola/t202/motorola_t202_small1.png"),
-    "5397": new Materiel("5397", "Motorola T203", 65.00, false, "", false, "../images/equipment/telephone/motorola/t203/motorola_t203_small1.png")
+    "5436": new Item("5436", "materiels", "FRITZ!WLAN Repeater 450E", 52.00, false, "", false, "../images/equipment/modem/r450e/r450e_small1.png"),
+    "5437": new Item("5437", "materiels", "FRITZ!WLAN Repeater 1750E", 84.00, false, "", false, "../images/equipment/modem/r1750e/r1750e_small1.png"),
+    "4570": new Item("4570", "materiels", "FRITZ!Powerline 520E Set", 89.00, false, "", false, "../images/equipment/modem/pl520eset/pl520eset_small1.png"),
+    "4450": new Item("4450", "materiels", "FRITZ!Powerline 520E Single", 49.00, false, "", false, "../images/equipment/modem/pl520e/pl520e_small1.png"),
+    "3148": new Item("3148", "materiels", "FRITZ!Powerline 546E", 95.00, false, "", false, "../images/equipment/modem/pl546e/pl546e.png"),
+    "5439": new Item("5439", "materiels", "FRITZ!WLAN Stick AC", 28.00, false, "", false, "../images/equipment/modem/wlansac/wlansac_small.png"),
+    "5395": new Item("5395", "materiels", "Motorola T201", 31.00, false, "", false, "../images/equipment/telephone/motorola/t201/motorola_t201_small1.png"),
+    "5396": new Item("5396", "materiels", "Motorola T202", 48.00, false, "", false, "../images/equipment/telephone/motorola/t202/motorola_t202_small1.png"),
+    "5397": new Item("5397", "materiels", "Motorola T203", 65.00, false, "", false, "../images/equipment/telephone/motorola/t203/motorola_t203_small1.png")
 };
 $(function () {
     Cart.init();

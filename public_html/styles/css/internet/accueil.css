@@ -140,6 +140,8 @@
     font-weight: 600;
     margin-bottom: 10px; }
 
+#steps .step {
+  display: none; }
 #steps .step-title {
   margin: 0;
   font-size: 1.8em;

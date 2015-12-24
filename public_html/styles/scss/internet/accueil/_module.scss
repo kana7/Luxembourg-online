@@ -163,6 +163,9 @@
 }
 
 #steps{
+    .step{
+        display: none;
+    }
     .step-title{
         margin: 0;
         font-size: 1.8em;

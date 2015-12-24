@@ -5769,7 +5769,12 @@ h2.contact-title {
 
   .detailsTableCable {
     margin-left: auto;
-    margin-right: auto; } }
+    margin-right: auto; }
+
+  .dropdown-content {
+    margin-left: 0px;
+    border-left: 1px solid #004494;
+    padding: 0 10px; } }
 @media screen and (min-width: 672px) {
   .container-wrapper {
     width: 640px; }
@@ -6054,8 +6059,18 @@ h2.contact-title {
   #twenty-years {
     background-image: url(../../images/Homepage/CONTENU/640px/20ans_LOL.jpg);
     background-size: 583px auto;
-    padding-top: 205px; } }
+    padding-top: 205px; }
+
+  .dropdown-content {
+    margin-left: 30px;
+    border-left: 1px solid #004494;
+    padding: 0 35px; } }
 @media screen and (min-width: 1056px) {
+  .dropdown-content {
+    margin-left: 30px;
+    border-left: 1px solid #004494;
+    padding: 0 35px; }
+
   .center-tab {
     position: relative;
     top: 50%;
@@ -6577,8 +6592,68 @@ h2.contact-title {
   .service#dispo .input-white {
     height: 40px; }
   .service#dispo .input-white.select {
-    margin: 5px 0; } }
+    margin: 5px 0; }
+
+  .notif-one {
+    width: 315px;
+    height: 115px;
+    top: 1%;
+    left: 52%; }
+
+  .notif-two {
+    width: 315px;
+    height: 135px;
+    top: 17%;
+    left: 52%; }
+
+  .notif-three {
+    width: 730px;
+    height: 210px;
+    top: 38%;
+    left: 4%; }
+
+  .notif-four {
+    width: 720px;
+    height: 90px;
+    top: 66%;
+    left: 4%; }
+
+  .notif-five {
+    width: 700px;
+    height: 85px;
+    top: 90%;
+    left: 6%; } }
 @media screen and (min-width: 1302px) {
+  .notif-one {
+    width: 315px;
+    height: 115px;
+    top: 1%;
+    left: 52%; }
+
+  .notif-two {
+    width: 315px;
+    height: 135px;
+    top: 17%;
+    left: 52%; }
+
+  .notif-three {
+    width: 730px;
+    height: 280px;
+    top: 38%;
+    left: 4%; }
+
+  .notif-four {
+    width: 720px;
+    height: 125px;
+    top: 66%;
+    left: 4%; }
+
+  .notif-five {
+    width: 700px;
+    height: 85px;
+    top: 90%;
+    left: 6%; }
+
   .container-wrapper {
     width: 1280px; }
 

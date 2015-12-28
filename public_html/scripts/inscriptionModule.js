@@ -96,8 +96,23 @@ var StepTransition = (function () {
                 $(this).find('.step-description').after(html);
             }
             if ($(this).attr('id') == 'telephonie') {
-                html = Mustache.render(tplItem, {input: "checkbox", required: true, isSellProduct: false, group: 'tel', items: currentItems_list['telephone']});
+                html = Mustache.render(tplItem, {input: "checkbox", required: false, isSellProduct: false, group: 'tel', items: currentItems_list['telephone']});
                 html += tplbtn;
+                $(this).find('.step-description').after(html);
+            }
+            if ($(this).attr('id') == 'tv') {
+                html = Mustache.render(tplItem, {input: "checkbox", required: false, isSellProduct: true, group: 'tv', items: currentItems_list['tv']});
+                html += tplbtn;
+                html += '<div class="clearfix dropdown">' +
+                        '<div class="phone-mb-30" data-trigger>' +
+                        '<h3 class="step-subtitle">Location décodeur<span class="icon-right-arrow"> </span></h3>' +
+                        '<p class="step-subdescription">Accédez à notre service LOLTV gràce à notre décodeur Minix.</p>' +
+                        '</div>' +
+                        '<div>';
+                html += Mustache.render(tplItem, {input: "radio", required: false, isSellProduct: false, group: 'minix', items: currentItems_list['tv_materiel']});
+                html += '</div>' +
+                        '</div>' +
+                        '</div>';
                 $(this).find('.step-description').after(html);
             }
         });
@@ -195,6 +210,7 @@ var StepTransition = (function () {
         init: init
     };
 })();
+
 var Cart = (function () {
 
     //Contient la liste de tous les choix possibles lors de l'inscription
@@ -231,7 +247,7 @@ var Cart = (function () {
             '{{#isRemise}}' +
             '<li>' +
             '<span class="label">{{name}}</span>' +
-            '<span class="price-delete">{{#formatPrice}}{{fullPrice}}{{/formatPrice}} €/mois</span>' +
+            '<span class="price price-delete">{{#formatPrice}}{{fullPrice}}{{/formatPrice}} €/mois</span>' +
             '<div class="remise-name">' +
             '<span class="label"><span class="bold">PROMO</span> : {{remise.name}}</span>' +
             '<span class="price">{{#formatPrice}}{{price}}{{/formatPrice}} €</span>' +
@@ -310,6 +326,7 @@ var Cart = (function () {
                 currentItems_list['modem'] = currentItems_list['abo']['materiels'];
                 currentItems_list['telephone'] = aboTel;
                 currentItems_list['tv'] = lolTv;
+                currentItems_list['tv_materiel'] = lolTv_materielList;
                 currentItems_list['materiels'] = materiel_list;
 
                 //ajout de l'abo et de l'activation dans le panier à l'ouverture de la page
@@ -497,11 +514,12 @@ var modem_List2 = [
 var aboTel = new Item("5138", "telephone", "Abo téléphonique", 0, true, "Inclus dans votre abonnement", true, "../images/equipment/telephone/motorola/t201/motorola_t201_small1.png");
 
 var lolTVRemise = new Item("5611", "tv", "6 mois gratuits", -17.00, true, "après 17€/mois", true, null);
-var lolTv = new Abonnement("2848", "tv", "LOLTV", 17.00, true, "", true, null, "LOL", "TV", null, null, {type: null, remise: lolTVRemise, isRemise: true},
-[
-    new Item("5137", "tv", "Location LOLTV MiniX Neo X7 (4,50€/mois)", 4.50, true, "", true, "../images/TV/320px/Minix_Equipement.jpg"),
-    new Item("5304", "tv", "Location LOLTV MiniX Neo X7 (5,50€/mois)", 5.50, true, "", false, "../images/TV/320px/Minix_Equipement.jpg")
-]);
+var lolTv = new SellProduct("2848", "tv", "LOLTV", 17.00, true, ["+110 Chaînes TV", "20 chaînes HD", "40 chaînes radio"], true, "../images/TV/320px/TV_Offre.jpg", true, lolTVRemise);
+
+var lolTv_materielList = [
+    new Item("5137", "tv_materiel", "Location 1x LOLTV MiniX", 4.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD"], true, "../images/TV/320px/Minix_Equipement_1.jpg"), 
+    new Item("5304", "tv_materiel", "Location 2x LOLTV MiniX", 5.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD"], false, "../images/TV/320px/Minix_Equipement_1.jpg")
+];
 
 var remiseInstall = new Item("5313", "installation", "Installation offerte", -89.00, false, "", true, null);
 var installNoRemise = new SellProduct("5313", "installation2", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", false, null);

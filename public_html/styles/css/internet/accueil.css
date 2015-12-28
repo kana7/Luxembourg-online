@@ -250,7 +250,8 @@
   display: inline-block;
   float: right;
   height: auto;
-  width: auto; }
+  width: auto;
+  }
 
 .shop-item-price {
   display: inline-block;

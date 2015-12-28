@@ -605,69 +605,6 @@
         <script type="text/javascript" src="../scripts/pubSub.js"></script>
         <script type="text/javascript" src="../scripts/inscriptionModule.js"></script>
         <script type="text/javascript" src="../scripts/main.js"></script>
-        <script type="text/javascript">
-            $(function () {
-                //Verify required input and block next button if required
-                $('.step').each(function () {
-                    verifyStep($(this));
-                });
-
-                //on click sur un élément que l'on peut ajouter dans le panier
-                $('.shop-item:not(.disabled)').on('click', function () {
-                    var input = $(this).find('input[type="radio"]');
-                    $(this).toggleClass('selected');
-                    if (input.is(':checked')) {
-                        //TODO remove from card
-                        events.emit('useCart', {
-                            id: input.val(),
-                            cat: input.attr('data-cat'),
-                            isAdding: false
-                        });
-                        input.prop("checked", false).change();
-                    } else {
-                        events.emit('useCart', {
-                            id: input.val(),
-                            cat: input.attr('data-cat'),
-                            isAdding: true
-                        });
-                        input.prop("checked", "checked").change();
-                    }
-                });
-                $('input[type="radio"]').on('change', function () {
-                    var radioName = $(this).attr('name');
-                    //enlève toute les items selected du même groupe
-                    $('input[type="radio"][name="' + radioName + '"]').parent('.shop-item').not($(this).closest('.shop-item')).removeClass('selected');
-                    //Enlève du panier les produits du même groupe
-                    $('input[type="radio"][name="' + radioName + '"]:not(:checked)').each(function () {
-                        events.emit('useCart', {
-                            id: $(this).val(),
-                            cat: $(this).attr('data-cat'),
-                            isAdding: false
-                        });
-                    });
-                    verifyStep($(this).parents('.step'));
-                });
-            });
-
-            var verifyStep = function ($element) {
-                var currentStep = $element;
-                var flag = true;
-                var name;
-
-                //vérifie si required est select
-                currentStep.find('input[required]').each(function () {
-                    name = $(this).attr('name');
-                    if (!currentStep.find("input[name='" + name + "']").is(':checked')) {
-                        currentStep.find('button.next').prop('disabled', 'disabled');
-                        flag = false;
-                        return false;
-                    }
-                });
-                if (flag) {
-                    currentStep.find('button.next').removeAttr("disabled");
-                }
-            };
-        </script>
         <script type="text/javascript" src="../scripts/analytics.js"></script>
     </body>
 

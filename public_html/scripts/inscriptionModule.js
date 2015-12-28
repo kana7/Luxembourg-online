@@ -62,6 +62,10 @@ var StepTransition = (function () {
         currentItems_list = current;
         _render();
         _bindEvents();
+        //Verify required input and block next button if required
+        $('.step').each(function () {
+            _verifyStep($(this));
+        });
         _showSlider(currentStep);
     }
 
@@ -92,7 +96,7 @@ var StepTransition = (function () {
                 $(this).find('.step-description').after(html);
             }
             if ($(this).attr('id') == 'telephonie') {
-                html = Mustache.render(tplItem, {input: "checkbox", required: true, isSellProduct: false, group: false, items: currentItems_list['telephone']});
+                html = Mustache.render(tplItem, {input: "checkbox", required: true, isSellProduct: false, group: 'tel', items: currentItems_list['telephone']});
                 html += tplbtn;
                 $(this).find('.step-description').after(html);
             }
@@ -107,6 +111,12 @@ var StepTransition = (function () {
         });
         StepsContainer.on('click', 'button.next', function () {
             _next();
+        });
+        StepsContainer.on('click', '.shop-item:not(.disabled)', function () {
+            _selectItem($(this));
+        });
+        StepsContainer.on('change', 'input:not([type="text"])', function () {
+            _deselectItem($(this));
         });
     }
 
@@ -127,6 +137,60 @@ var StepTransition = (function () {
         }
     }
 
+    function _selectItem(shopItem) {
+        var input = shopItem.find('input:not([type="text"])');
+        shopItem.toggleClass('selected');
+        if (input.is(':checked')) {
+            events.emit('useCart', {
+                id: input.val(),
+                cat: input.attr('data-cat'),
+                isAdding: false
+            });
+            input.prop("checked", false).change();
+        } else {
+            events.emit('useCart', {
+                id: input.val(),
+                cat: input.attr('data-cat'),
+                isAdding: true
+            });
+            input.prop("checked", "checked").change();
+        }
+    }
+
+    function _deselectItem(input) {
+        var radioName = input.attr('name');
+        //enlève toute les items selected du même groupe pour les radio
+        $('input[type="radio"][name="' + radioName + '"]').parent('.shop-item').not(input.closest('.shop-item')).removeClass('selected');
+        //Enlève du panier les produits du même groupe
+        $('input[name="' + radioName + '"]:not(:checked):not([type="text"])').each(function () {
+            events.emit('useCart', {
+                id: $(this).val(),
+                cat: $(this).attr('data-cat'),
+                isAdding: false
+            });
+        });
+        _verifyStep(input.parents('.step'));
+    }
+
+    var _verifyStep = function ($element) {
+        var currentStep = $element;
+        var flag = true;
+        var name;
+
+        //vérifie si required est select
+        currentStep.find('input[required]').each(function () {
+            name = $(this).attr('name');
+            if (!currentStep.find("input[name='" + name + "']").is(':checked')) {
+                currentStep.find('button.next').prop('disabled', 'disabled');
+                flag = false;
+                return false;
+            }
+        });
+        if (flag) {
+            currentStep.find('button.next').removeAttr("disabled");
+        }
+    };
+
     return{
         init: init
     };
@@ -144,14 +208,18 @@ var Cart = (function () {
         },
         formatPrice: function (price, c, d, t) {
             //format euros
-            var n = price,
-                    c = isNaN(c = Math.abs(c)) ? 2 : c,
-                    d = d == undefined ? "," : d,
-                    t = t == undefined ? "." : t,
-                    s = n < 0 ? "-" : "",
-                    i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "",
-                    j = (j = i.length) > 3 ? j % 3 : 0;
-            return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+            if ($.isNumeric(price)) {
+                var n = price,
+                        c = isNaN(c = Math.abs(c)) ? 2 : c,
+                        d = d == undefined ? "," : d,
+                        t = t == undefined ? "." : t,
+                        s = n < 0 ? "-" : "",
+                        i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "",
+                        j = (j = i.length) > 3 ? j % 3 : 0;
+                return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+            } else {
+                return price;
+            }
         }
     };
     var tplItem = '<li class="items">' +
@@ -371,14 +439,18 @@ var Item = function (id, type, name, price, isMonthlyCost, commentaire, isDefaut
 Item.prototype.formatPrice = function () {
     //format euros
     return function (val, render) {
-        var n = render(val),
-                c = isNaN(c = Math.abs(c)) ? 2 : c,
-                d = d == undefined ? "," : d,
-                t = t == undefined ? "." : t,
-                s = n < 0 ? "-" : "",
-                i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "",
-                j = (j = i.length) > 3 ? j % 3 : 0;
-        return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+        var n = render(val);
+        if ($.isNumeric(n)) {
+            var c = isNaN(c = Math.abs(c)) ? 2 : c,
+                    d = d == undefined ? "," : d,
+                    t = t == undefined ? "." : t,
+                    s = n < 0 ? "-" : "",
+                    i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "",
+                    j = (j = i.length) > 3 ? j % 3 : 0;
+            return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+        } else {
+            return n;
+        }
     };
 };
 
@@ -422,7 +494,7 @@ var modem_List2 = [
     modem7490
 ];
 
-var aboTel = new Item("5138", "telephone", "Abonnement téléphonique", 15.00, true, "", true, "../images/equipment/telephone/motorola/t201/motorola_t201_small1.png");
+var aboTel = new Item("5138", "telephone", "Abo téléphonique", 0, true, "Inclus dans votre abonnement", true, "../images/equipment/telephone/motorola/t201/motorola_t201_small1.png");
 
 var lolTVRemise = new Item("5611", "tv", "6 mois gratuits", -17.00, true, "après 17€/mois", true, null);
 var lolTv = new Abonnement("2848", "tv", "LOLTV", 17.00, true, "", true, null, "LOL", "TV", null, null, {type: null, remise: lolTVRemise, isRemise: true},

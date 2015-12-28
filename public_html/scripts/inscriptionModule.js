@@ -4,19 +4,31 @@
 var StepTransition = (function () {
 //stock la position du slide visible
     var html;
+    var tplbtn = '<div class="clearfix phone-mt-40 phone-mb-20 buttons-next-previous">' +
+            '<button class="btn-blue previous pull-left">' +
+            '<span class="icon-left-arrow"></span> Retour' +
+            '</button>' +
+            '<button class="btn-orange next pull-right" disabled>' +
+            'Suivant <span class="icon-right-arrow"></span>' +
+            '</button>' +
+            '</div>';
     var tplItem =
             '<div class="clearfix phone-mt-40">' +
             '{{#items}}' +
             '<div class="phone-12 tab-6">' +
             '<div class="shop-item">' +
-            '<input type="radio" name="{{group}}" data-cat="{{type}}" value="{{id}}" hidden {{#required}}required{{/required}} {{#isDefaut}}selected{{/isDefaut}}>' +
+            '<input type="radio" {{#group}}name="{{group}}"{{/group}} data-cat="{{type}}" value="{{id}}" hidden {{#required}}required{{/required}} {{#isDefaut}}selected{{/isDefaut}}>' +
             '<h3 class="shop-item-name">{{name}}</h3>' +
-            '<div class="phone-6">' +
+            '<div class="phone-8">' +
             '<ul class="shop-item-description">' +
-            '{{#commentaire}}'+
+            '{{#commentaire}}' +
             '<li>{{.}}</li>' +
-            '{{/commentaire}}'+
+            '{{/commentaire}}' +
             '</ul>' +
+            '</div>' +
+            '<div class="phone-4 pull-right">' +
+            '<img class="shop-item-img" src="{{link}}" alt="{{name}} shop LOL"/>' +
+            '</div>' +
             '{{#isSellProduct}}' +
             '{{^isRemise}}' +
             '<ul class="shop-item-price orange">' +
@@ -35,10 +47,6 @@ var StepTransition = (function () {
             '<li class="extra-bold price">{{#formatPrice}}{{price}}{{/formatPrice}} €{{#isMonthlyCost}}/mois{{/isMonthlyCost}}</li>' +
             '</ul>' +
             '{{/isSellProduct}}' +
-            '</div>' +
-            '<div class="phone-6 pull-right">' +
-            '<img class="shop-item-img" src="{{link}}" alt="{{name}} shop LOL"/>' +
-            '</div>' +
             '</div>' +
             '</div>' +
             '{{/items}}' +
@@ -62,6 +70,7 @@ var StepTransition = (function () {
             //Faire pour chaque ID un if
             if ($(this).attr('id') == 'installation') {
                 html = Mustache.render(tplItem, {required: true, isSellProduct: true, group: 'install', items: [selfInstall, installRemise]});
+                html += tplbtn;
                 if (currentItems_list['abo']['tech'] == "FIBRE") {
                     //Ajouter la partie detail installation fibre
                 }
@@ -69,10 +78,20 @@ var StepTransition = (function () {
             }
             if ($(this).attr('id') == 'materiel') {
                 html = Mustache.render(tplItem, {required: true, isSellProduct: false, group: 'modem', items: currentItems_list['modem']});
+                html += tplbtn;
+                html += '<div class="clearfix dropdown">' +
+                        '<div class="phone-mb-30" data-trigger>' +
+                        '<h3 class="step-subtitle">Ajoutez du Matériel Optionnel<span class="icon-right-arrow"> </span></h3>' +
+                        '<p class="step-subdescription">Si besoin vous trouverez ci-dessous de l\'équipement auxiliaire pour améliorer ou élargir votre réseau interne.</p>' +
+                        '</div>' +
+                        '<div>';
+                html += Mustache.render(tplItem, {required: false, isSellProduct: false, group: false, items: currentItems_list['materiels']});
+                html += '</div>' +
+                        '</div>' +
+                        '</div>';
                 $(this).find('.step-description').after(html);
             }
         });
-
         //TODO - METTRE LES DISABLED AUX BONS ENDROITS
         //TODO - INSERER DANS PANIER ELEMENT SELECTED
     }
@@ -265,19 +284,13 @@ var Cart = (function () {
 
     function _addItem(cat, id) {
         console.log("j'ajoute ! : " + cat + ' ' + id);
-        if (cat == 'materiels') {
-            //many possible
-            Panier['items'].push(currentItems_list[cat][id]);
+        //adding unique element
+        if (Object.prototype.toString.call(currentItems_list[cat]) === '[object Array]') {
+            var objToAdd = _findInArray(currentItems_list[cat], id);
+            Panier['items'].push(objToAdd);
         } else {
-            //adding unique element
-            if (Object.prototype.toString.call(currentItems_list[cat]) === '[object Array]') {
-                var objToAdd = _findInArray(currentItems_list[cat], id);
-                Panier['items'].push(objToAdd);
-            } else {
-                Panier['items'].push(currentItems_list[cat]);
-            }
+            Panier['items'].push(currentItems_list[cat]);
         }
-
     }
 
     function _removeItem(id) {
@@ -391,15 +404,15 @@ var SellProduct = function (id, type, name, price, isMonthlyCost, commentaire, i
 inherits(SellProduct, Item);
 
 
-var modem7490 = new Item("5294", "modem", "Location FRITZ!Box 7490", 6.00, true, ["Modem-routeur pro", "LAN : 4 x Gigabit", "WLAN : jusqu'à 1300Mbits/s", "Téléphone : 2 x analogique, 1 x ISDN"], false, "../images/equipment/modem/7390/7360.png");
+var modem7490 = new Item("5294", "modem", "Location FRITZ!Box 7490", 6.00, true, ["LAN : 4 x Gigabit", "WLAN : jusqu'à 1300Mbits/s", "Téléphone : 2 x analogique, 1 x ISDN"], false, "../images/equipment/modem/7390/7360.png");
 
 var modem_List1 = [
-    new Item("5291", "modem", "Location FRITZ!Box 3272", 4.00, true, ["Modem-routeur standard", "LAN :  2 x Gigabit, 2 x fast Ethernet", "WLAN :  jusqu'à 300Mbit/s"], true, "../images/equipment/modem/3272/3272.png"),
+    new Item("5291", "modem", "Location FRITZ!Box 3272", 4.00, true, ["LAN :  2 x Gigabit, 2 x fast Ethernet", "WLAN :  jusqu'à 300Mbit/s"], true, "../images/equipment/modem/3272/3272.png"),
     modem7490
 ];
 var modem_List2 = [
-    new Item("5292", "modem", "Location FRITZ!Box 7360", 4.00, true, ["Modem-routeur standard", "LAN :  2 x Gigabit, 2 x fast Ethernet", "WLAN : jusqu'à 300Mbit/s", "Téléphone :  1 x analogique, DECT"], true, "../images/equipment/modem/7360/7360.png"),
-    modem7490 
+    new Item("5292", "modem", "Location FRITZ!Box 7360", 4.00, true, ["LAN :  2 x Gigabit, 2 x fast Ethernet", "WLAN : jusqu'à 300Mbit/s", "Téléphone :  1 x analogique, DECT"], true, "../images/equipment/modem/7360/7360.png"),
+    modem7490
 ];
 
 var lolTVRemise = new Item("5611", "tv", "6 mois gratuits", -17.00, true, "après 17€/mois", true, null);
@@ -453,17 +466,17 @@ var abonnements_list = {
         return abonnements_list[service][id];
     }
 };
-var materiel_list = {
-    "5436": new Item("5436", "materiels", "FRITZ!WLAN Repeater 450E", 52.00, false, "", false, "../images/equipment/modem/r450e/r450e_small1.png"),
-    "5437": new Item("5437", "materiels", "FRITZ!WLAN Repeater 1750E", 84.00, false, "", false, "../images/equipment/modem/r1750e/r1750e_small1.png"),
-    "4570": new Item("4570", "materiels", "FRITZ!Powerline 520E Set", 89.00, false, "", false, "../images/equipment/modem/pl520eset/pl520eset_small1.png"),
-    "4450": new Item("4450", "materiels", "FRITZ!Powerline 520E Single", 49.00, false, "", false, "../images/equipment/modem/pl520e/pl520e_small1.png"),
-    "3148": new Item("3148", "materiels", "FRITZ!Powerline 546E", 95.00, false, "", false, "../images/equipment/modem/pl546e/pl546e.png"),
-    "5439": new Item("5439", "materiels", "FRITZ!WLAN Stick AC", 28.00, false, "", false, "../images/equipment/modem/wlansac/wlansac_small.png"),
-    "5395": new Item("5395", "materiels", "Motorola T201", 31.00, false, "", false, "../images/equipment/telephone/motorola/t201/motorola_t201_small1.png"),
-    "5396": new Item("5396", "materiels", "Motorola T202", 48.00, false, "", false, "../images/equipment/telephone/motorola/t202/motorola_t202_small1.png"),
-    "5397": new Item("5397", "materiels", "Motorola T203", 65.00, false, "", false, "../images/equipment/telephone/motorola/t203/motorola_t203_small1.png")
-};
+var materiel_list = [
+    new Item("5436", "materiels", "FRITZ!WLAN Repeater 450E", 52.00, false, "", false, "../images/equipment/modem/r450e/r450e_small1.png"),
+    new Item("5437", "materiels", "FRITZ!WLAN Repeater 1750E", 84.00, false, "", false, "../images/equipment/modem/r1750e/r1750e_small1.png"),
+    new Item("4570", "materiels", "FRITZ!Powerline 520E Set", 89.00, false, "", false, "../images/equipment/modem/pl520eset/pl520eset_small1.png"),
+    new Item("4450", "materiels", "FRITZ!Powerline 520E Single", 49.00, false, "", false, "../images/equipment/modem/pl520e/pl520e_small1.png"),
+    new Item("3148", "materiels", "FRITZ!Powerline 546E", 95.00, false, "", false, "../images/equipment/modem/pl546e/pl546e.png"),
+    new Item("5439", "materiels", "FRITZ!WLAN Stick AC", 28.00, false, "", false, "../images/equipment/modem/wlansac/wlansac_small.png"),
+    new Item("5395", "materiels", "Motorola T201", 31.00, false, "", false, "../images/equipment/telephone/motorola/t201/motorola_t201_small1.png"),
+    new Item("5396", "materiels", "Motorola T202", 48.00, false, "", false, "../images/equipment/telephone/motorola/t202/motorola_t202_small1.png"),
+    new Item("5397", "materiels", "Motorola T203", 65.00, false, "", false, "../images/equipment/telephone/motorola/t203/motorola_t203_small2.png")
+];
 $(function () {
     Cart.init();
 });

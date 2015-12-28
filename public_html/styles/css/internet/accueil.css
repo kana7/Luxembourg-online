@@ -240,24 +240,25 @@
 .shop-item-name {
   margin: 0 0 15px;
   font-size: 1.4em;
-  font-weight: 800; }
+  font-weight: 800;
+  }
 
 .shop-item-description {
-  line-height: 21px;
-  font-size: 1.1em;
-  }
+  line-height: 20px;
+  font-size: 1.05em; }
 
 .shop-item-img {
   display: inline-block;
   float: right;
-  height: auto;
-  width: auto; }
+  height: 100%;
+  width: auto;
+  }
 
 .shop-item-price {
   display: inline-block;
   position: absolute;
-  left: 0;
-  top: 80px;
+  left: 20px;
+  top: 72%;
   line-height: 20px;
   font-size: 1em; }
   .shop-item-price .price {

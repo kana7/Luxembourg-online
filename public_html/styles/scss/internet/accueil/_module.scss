@@ -272,8 +272,8 @@
     font-weight: 800;
 }
 .shop-item-description{
-    line-height: 21px;
-    font-size: 1.15em;
+    line-height: 20px;
+    font-size: 1.05em;
 }
 .shop-item-img{
     display: inline-block;
@@ -285,8 +285,8 @@
 .shop-item-price{
     display: inline-block;
     position: absolute;
-    left: 0;
-    top: 80px;
+    left: 20px;
+    top: 72%;
     line-height: 20px;
     font-size: 1em;
     .price{

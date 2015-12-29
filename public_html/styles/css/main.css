@@ -5508,7 +5508,7 @@ h2.contact-title {
     color: #8b8b8b;
     font-size: 1.1em;
     margin-bottom: 10px; }
-  .input-group input[type="text"] {
+  .input-group input[type="text"], .input-group input[type="password"], .input-group input[type="number"] {
     height: 35px;
     padding-left: 10px;
     background-color: #f8f8f8;

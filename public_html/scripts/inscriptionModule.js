@@ -53,8 +53,9 @@ var StepTransition = (function () {
             '</div>';
 
     var StepsContainer = $('#steps');
+    var headerStepList = $('#step-list ul');
     var currentItems_list;
-    var currentStep = 4;
+    var currentStep = 0;
     var stepList = StepsContainer.find('.step');
 
     events.on('getCurrent', init);
@@ -74,7 +75,15 @@ var StepTransition = (function () {
             //Faire pour chaque ID un if
             if ($(this).attr('id') == 'installation') {
                 html = Mustache.render(tplItem, {input: "radio", required: true, isSellProduct: true, group: 'install', items: [selfInstall, installRemise]});
-                html += tplbtn;
+                html += '<div class="clearfix phone-mt-30 phone-mb-30 buttons-next-previous">' +
+                        '<a class="btn-blue pull-left" href="offres.html">' +
+                        '<span class="icon-left-arrow"></span> Retour' +
+                        '</a>' +
+                        '<button class="btn-orange next pull-right" disabled>' +
+                        'Suivant <span class="icon-right-arrow"></span>' +
+                        '</button>' +
+                        '</div>';
+                ;
                 if (currentItems_list['abo']['tech'] == "FIBRE") {
                     //Ajouter la partie detail installation fibre
                 }
@@ -85,7 +94,7 @@ var StepTransition = (function () {
                 html += tplbtn;
                 html += '<div class="clearfix dropdown">' +
                         '<div class="phone-mb-30" data-trigger>' +
-                        '<h3 class="step-subtitle">Ajoutez du Matériel Optionnel<span class="icon-right-arrow"> </span></h3>' +
+                        '<h3 class="step-subtitle">Ajoutez du Matériels Optionnels<span class="icon-right-arrow"> </span></h3>' +
                         '<p class="step-subdescription">Si besoin vous trouverez ci-dessous de l\'équipement auxiliaire pour améliorer ou élargir votre réseau interne.</p>' +
                         '</div>' +
                         '<div>';
@@ -104,11 +113,11 @@ var StepTransition = (function () {
                 html = Mustache.render(tplItem, {input: "checkbox", required: false, isSellProduct: true, group: 'tv', items: currentItems_list['tv']});
                 html += tplbtn;
                 html += '<div class="clearfix dropdown">' +
-                        '<div class="phone-mb-30" data-trigger>' +
+                        '<div class="phone-mb-30 is-active" data-trigger>' +
                         '<h3 class="step-subtitle">Location décodeur<span class="icon-right-arrow"> </span></h3>' +
                         '<p class="step-subdescription">Accédez à notre service LOLTV gràce à notre décodeur Minix.</p>' +
                         '</div>' +
-                        '<div>';
+                        '<div class="is-visible">';
                 html += Mustache.render(tplItem, {input: "radio", required: false, isSellProduct: false, group: 'minix', items: currentItems_list['tv_materiel']});
                 html += '</div>' +
                         '</div>' +
@@ -136,6 +145,8 @@ var StepTransition = (function () {
     }
 
     function _showSlider(index) {
+        $(headerStepList).find('li:not(.step-separator)').removeClass('active');
+        $(headerStepList).find('li:not(.step-separator)').eq(1 + index).addClass('active');
         stepList.not(stepList[index]).hide();
         $(stepList[index]).fadeIn('800');
     }
@@ -517,7 +528,7 @@ var lolTVRemise = new Item("5611", "tv", "6 mois gratuits", -17.00, true, "aprè
 var lolTv = new SellProduct("2848", "tv", "LOLTV", 17.00, true, ["+110 Chaînes TV", "20 chaînes HD", "40 chaînes radio"], true, "../images/TV/320px/TV_Offre.jpg", true, lolTVRemise);
 
 var lolTv_materielList = [
-    new Item("5137", "tv_materiel", "Location 1x LOLTV MiniX", 4.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD"], true, "../images/TV/320px/Minix_Equipement_1.jpg"), 
+    new Item("5137", "tv_materiel", "Location 1x LOLTV MiniX", 4.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD"], true, "../images/TV/320px/Minix_Equipement_1.jpg"),
     new Item("5304", "tv_materiel", "Location 2x LOLTV MiniX", 5.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD"], false, "../images/TV/320px/Minix_Equipement_1.jpg")
 ];
 

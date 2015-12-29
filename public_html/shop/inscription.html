@@ -392,21 +392,39 @@
                                     </div>
                                     <div id="telephonie" class="step" data-step="2">
                                         <h2 class="step-title">Ligne téléphonique</h2>
-                                        <p class="step-description">Merci de choisir un modem (obligatoire).</p>
+                                        <p class="step-description">Merci de choisir un modem.</p>
                                     </div>
                                     <div id="tv" class="step" data-step="3">
                                         <h2 class="step-title">Abonnement LOL TV</h2>
-                                        <p class="step-description">Merci de choisir un modem (obligatoire).</p>
+                                        <p class="step-description">Merci de choisir un modem.</p>
                                     </div>
                                     <div id="infos" class="step" data-step="4">
                                         <h2 class="step-title">Informations</h2>
                                         <p class="step-description">Veuillez continuer avec l'une des options suivantes.</p>
+                                        <div class="clearfix phone-mt-30">
+                                            <input id="client" type="radio" name="client" value="true" required>
+                                            <label class="blue extra-bold client-label" for="client">Je suis déjà client :</label>
+                                            <div class="phone-pt-15 phone-pb-30">
+                                                <form name="ClientService" method="POST" action="#ToPageShopLogClient">
+                                                    <input type="hidden" name="Sql" value="Default.phs">  
+                                                    <input type="hidden" name="SqlDB" value="OMS2">  
+                                                    <input class="form-input phone-mr-10" type="text" name="xuser" placeholder="Nom d'utilisateur">
+                                                    <input class="form-input" type="password" name="xpw" placeholder="Mot de passe">
+                                                    <button style="display: block; padding-left: 30px; padding-right: 30px;" class="btn-blue phone-mt-15" type="submit">Se connecter</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                            <input id="notClient" type="radio" name="client" value="false">
+                                            <label class="blue extra-bold client-label" for="notClient">Je suis un nouveau client :</label>
+                                            <div class="phone-pt-15">
+                                                <a style="padding-left: 16.5px; padding-right: 16.5px;" class="btn-blue" href="#ToPageDuShopAddClient">Créer un compte</a>
+                                            </div>
+                                        </div>
+
                                         <div class="clearfix phone-mt-40 phone-mb-20 buttons-next-previous">
                                             <button class="btn-blue previous pull-left">
                                                 <span class="icon-left-arrow"></span> Retour
-                                            </button>
-                                            <button class="btn-orange next pull-right" disabled>
-                                                Suivant <span class="icon-right-arrow"></span>
                                             </button>
                                         </div>
                                     </div>
@@ -605,6 +623,20 @@
         <script type="text/javascript" src="../scripts/pubSub.js"></script>
         <script type="text/javascript" src="../scripts/inscriptionModule.js"></script>
         <script type="text/javascript" src="../scripts/main.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                if (!$('input[name="client"]').is(':checked')) {
+                    $('input[name="client"]').siblings('div').addClass('is-disabled');
+                    $('input[name="client"]').siblings('div').find('button, input').attr("disabled", "disabled");
+                }
+                $('input[name="client"]').on('change', function () {
+                    $(this).siblings('div').removeClass('is-disabled');
+                    $(this).siblings('div').find('button, input').removeAttr('disabled');
+                    $('input[name="client"]').not(this).siblings('div').addClass('is-disabled');
+                    $('input[name="client"]').not(this).siblings('div').find('button, input').attr("disabled", "disabled");
+                });
+            });
+        </script>
         <script type="text/javascript" src="../scripts/analytics.js"></script>
     </body>
 

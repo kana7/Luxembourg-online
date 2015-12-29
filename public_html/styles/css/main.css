@@ -3871,7 +3871,7 @@ span[class^=icon-] {
   background-color: #004994;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   margin: 0; }
-  .btn-blue:hover {
+  .btn-blue:hover:not([disabled]) {
     background-color: #0056ae; }
 
 .btn-orange, .input-group #fileButton, .input-group .custom-file-input::before {
@@ -3882,7 +3882,7 @@ span[class^=icon-] {
   box-shadow: 0px 2px 4px 0 #262626;
   -o-box-shadow: 0px 2px 4px 0 #262626;
   -ms-box-shadow: 0px 2px 4px 0 #262626; }
-  .btn-orange:hover, .input-group #fileButton:hover, .input-group .custom-file-input:hover::before {
+  .btn-orange:hover:not([disabled]), .input-group #fileButton:hover:not([disabled]), .input-group .custom-file-input:hover:not([disabled])::before {
     background-color: #f56a16; }
 
 .btn-blue.btn-subscription, .btn-orange.btn-subscription, .input-group .btn-subscription#fileButton, .input-group .btn-subscription.custom-file-input::before {
@@ -3934,7 +3934,7 @@ span[class^=icon-] {
   border: 2px solid #fff;
   background-color: #07040D;
   color: #fff; }
-  .btn-outline-black:hover {
+  .btn-outline-black:hover:not([disabled]) {
     background-color: #fff;
     color: #07040D; }
 

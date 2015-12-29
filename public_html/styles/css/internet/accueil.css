@@ -250,8 +250,7 @@
   display: inline-block;
   float: right;
   height: auto;
-  width: auto;
-  }
+  width: auto; }
 
 .shop-item-price {
   display: inline-block;
@@ -264,6 +263,39 @@
     font-size: 1.25em; }
   .shop-item-price.promo .price {
     text-decoration: line-through; }
+
+.form-input {
+  display: inline-block;
+  background-color: #f8f8f8;
+  -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.7);
+  -o-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.7);
+  -ms-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.7);
+  border-radius: 6px;
+  border: none;
+  height: 45px;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #818181; }
+
+.is-disabled {
+  opacity: 0.3; }
+  .is-disabled a {
+    pointer-events: none;
+    cursor: default; }
+
+.client-label {
+  position: relative;
+  bottom: 1px;
+  padding: 5px;
+  font-size: 1.3em; }
+  .client-label {
+    cursor: pointer; }
+
+input[name="client"] {
+  cursor: pointer; }
 
 #test-offres {
   text-align: center;

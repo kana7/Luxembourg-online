@@ -54,7 +54,7 @@ var StepTransition = (function () {
 
     var StepsContainer = $('#steps');
     var currentItems_list;
-    var currentStep = 0;
+    var currentStep = 4;
     var stepList = StepsContainer.find('.step');
 
     events.on('getCurrent', init);

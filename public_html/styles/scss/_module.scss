@@ -2398,9 +2398,21 @@ h2.contact-title {
         padding: 9px 30px 8px;
     }
 }
+.input-group-table{
+    display: table;
+    .input-group.inline{
+        *:not(span) {
+            display: initial;
+        }
+        display: table-row;
+        &>label, &>input, &>.input-group-cell{
+            display: table-cell;
+        }
+    }
+}
 .input-group{
     margin-bottom: 25px;
-    *:not(span){
+    &:not(.inline) *:not(span){
         display: block;
     }
     input:not([type=radio]), textarea, select{

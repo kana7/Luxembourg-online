@@ -287,7 +287,7 @@
                                 <div id="steps">
                                     <div id="installation" class="step" data-step="0">
                                         <h2 class="step-title">Installation</h2>
-                                        <p class="step-description">Merci de choisir le type d'installation souhaité</p>
+                                        <p class="step-description">Merci de choisir le type d'installation souhaité (obligatoire)</p>
                                         <!--<div class="clearfix phone-mt-40">
                                             <div class="phone-12 tab-6 tab-pr-40">
                                                 <div class="shop-item">
@@ -393,6 +393,69 @@
                                     <div id="telephonie" class="step" data-step="2">
                                         <h2 class="step-title">Ligne téléphonique</h2>
                                         <p class="step-description">Merci de choisir un modem.</p>
+                                        <div class="clearfix dropdown">
+                                            <div class="phone-mb-30" data-trigger>
+                                                <h3 class="step-subtitle">Numéro de téléphone <span class="icon-right-arrow"></span></h3>
+                                            </div>
+                                            <div class="is-visible">
+                                                <div class="phone-12 phone-pr-20">
+                                                    <div class="input-group">
+                                                        <input id="NewNum" name="_portabilite" type="radio" value="false">
+                                                        <label for="NewNum">Je souhaite un nouveau numéro de téléphone</label>
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <input id="NewNum" name="_portabilite" type="radio" value="false">
+                                                        <label for="NewNum">Je souhaite garder mon numéro de téléphone existant</label>
+                                                    </div>
+                                                </div>
+                                                <div class="phone-6 phone-pl-20">
+                                                    <div class="input-group-table">
+                                                        <div class="input-group inline">
+                                                            <label for="Nom">Type de la ligne existante :</label>
+                                                            <div class="input-group-cell">
+                                                                <input id="Analog" name="_lineType" type="radio" value="analogique">
+                                                                <label for="Analog">analogique</label>
+                                                                <input id="Isdn" name="_lineType" type="radio" value="isdn">
+                                                                <label for="Isdn">ISDN</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="input-group inline">
+                                                            <label for="Nom">Titulaire de la ligne : </label>
+                                                            <input id="Nom" name="_nom" type="text">
+                                                        </div>
+                                                        <div class="input-group inline">
+                                                            <label for="Nom">N° de téléphone à porter : </label>
+                                                            <input id="Nom" name="_nom" type="text" >
+                                                        </div>
+                                                        <div class="input-group inline">
+                                                            <label for="Nom">N° de compte opérateur d'origine : </label>
+                                                            <input id="Nom" name="_nom" type="text">
+                                                        </div>
+                                                    </div>
+                                                    <h4 class="substep-title">Informations supplémentaires sur la ligne téléphonique</h4>
+                                                    <div class="input-group-table">
+                                                        <div class="input-group inline">
+                                                            <label>Je possède une alarme: </label>
+                                                            <div class="input-group-cell">
+                                                                <input type="radio" name="alarm" value="true"/>
+                                                                <label for="">oui</label>
+                                                                <input type="radio" name="alarm" value="false"/>
+                                                                <label for="">non</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="input-group inline">
+                                                            <label>je possède un fax: </label>
+                                                            <div class="input-group-cell">
+                                                                <input type="radio" name="fax" value="true"/>
+                                                                <label for="">oui</label>
+                                                                <input type="radio" name="fax" value="false"/>
+                                                                <label for="">non</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div id="tv" class="step" data-step="3">
                                         <h2 class="step-title">Abonnement LOL TV</h2>

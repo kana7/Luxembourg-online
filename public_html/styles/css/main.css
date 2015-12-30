@@ -5483,9 +5483,20 @@ h2.contact-title {
     font-size: 1.1em;
     padding: 9px 30px 8px; }
 
+.input-group-table {
+  display: table; }
+  .input-group-table .input-group.inline {
+    display: table-row;
+    margin: 10px 0;
+    }
+    .input-group-table .input-group.inline *:not(span) {
+      display: initial; }
+    .input-group-table .input-group.inline > label, .input-group-table .input-group.inline > input, .input-group-table .input-group.inline > .input-group-cell {
+      display: table-cell; }
+
 .input-group {
   margin-bottom: 25px; }
-  .input-group *:not(span) {
+  .input-group:not(.inline) *:not(span) {
     display: block; }
   .input-group input:not([type=radio]), .input-group textarea, .input-group select {
     width: 100%;

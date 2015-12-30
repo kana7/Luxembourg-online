@@ -51,6 +51,68 @@ var StepTransition = (function () {
             '</div>' +
             '{{/items}}' +
             '</div>';
+    var tplFormFiber = '<div class="clearfix dropdown">' +
+            '<div class="phone-mb-30 is-active" data-trigger>' +
+            '<h3 class="step-subtitle">Installation fibre <span class="icon-right-arrow"></span></h3>' +
+            '<p class="step-subdescription">Merci de remplir les champs supplémentaires concernant le câblage interne de la fibre dans votre habitation</p>' +
+            '</div>' +
+            '<div class="is-visible">' +
+            '<div data-form="fibre" class="step-form clearfix">' +
+            '<div class="phone-6 phone-pr-20">' +
+            '<div class="input-group">' +
+            '<label for="Nom">Nom, Prénom<span class="red">*</span></label>' +
+            '<input id="Nom" name="nom" type="text" required>' +
+            '</div>' +
+            '<div class="input-group">' +
+            '<label for="Adresse">Adresse<span class="red">*</span></label>' +
+            '<input id="Adresse" name="adresse" type="text" required>' +
+            '</div>' +
+            '<div class="input-group">' +
+            '<label for="Ville">Ville<span class="red">*</span></label>' +
+            '<input id="Ville" name="ville" type="text" required>' +
+            '</div>' +
+            '<div class="input-group">' +
+            '<label for="Tel">Téléphone<span class="red">*</span></label>' +
+            '<input id="Tel" name="tel" type="text" required>' +
+            '</div>' +
+            '<div class="input-group">' +
+            '<label for="Syndic">Nom du syndic de copropriété</label>' +
+            '<input id="Syndic" name="syndic" type="text" required>' +
+            '</div>' +
+            '</div>' +
+            '<div class="phone-6 phone-pl-20">' +
+            '<div class="input-group">' +
+            '<label for="Matricule">Matricule<span class="red">*</span></label>' +
+            '<input id="Matricule" name="matricule" type="text" required>' +
+            '</div>' +
+            '<div class="input-group">' +
+            '<label for="Etage">Étage<span class="red">*</span></label>' +
+            '<input id="Etage" name="etage" type="text" required>' +
+            '</div>' +
+            '<div class="input-group">' +
+            '<label for="Cpl">Code Postal<span class="red">*</span></label>' +
+            '<input id="Cpl" name="codePostal" type="text" required="">' +
+            '</div>' +
+            '<div class="input-group">' +
+            '<label for="Mobile">Mobile</label>' +
+            '<input id="Mobile" name="mobile" type="text">' +
+            '</div>' +
+            '<div class="input-group">' +
+            '<label for="TelSyndic">Téléphone du syndic</label>' +
+            '<input id="TelSyndic" name="telSyndic" type="text">' +
+            '</div>' +
+            '</div>' +
+            '<div class="phone-12">' +
+            '<div class="input-group">' +
+            '<input id="Cablage" type="radio" name="client" value="oui" required><label for="Cablage">Mon cablâge interne est conforme pour le raccordement internet via la Fibre Optique.</label>' +
+            '</div>' +
+            '<div class="input-group">' +
+            '<input id="NotCablage" type="radio" name="client" value="non"><label for="NotCablage">Mon cablâge interne n\'est pas conforme et je demande à Luxembourg Online d\'entreprendre les travaux nécessaires. </label>' +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+            '</div>';
 
     var StepsContainer = $('#steps');
     var headerStepList = $('#step-list ul');
@@ -83,9 +145,8 @@ var StepTransition = (function () {
                         'Suivant <span class="icon-right-arrow"></span>' +
                         '</button>' +
                         '</div>';
-                ;
                 if (currentItems_list['abo']['tech'] == "FIBRE") {
-                    //Ajouter la partie detail installation fibre
+                    html += tplFormFiber;
                 }
                 $(this).find('.step-description').after(html);
             }
@@ -135,12 +196,16 @@ var StepTransition = (function () {
         });
         StepsContainer.on('click', 'button.next', function () {
             _next();
+            _collectDataForm($(this).parents('.step').find('.step-form'));
         });
         StepsContainer.on('click', '.shop-item:not(.disabled)', function () {
             _selectItem($(this));
         });
-        StepsContainer.on('change', 'input:not([type="text"])', function () {
+        StepsContainer.on('change', '.shop-item:not(.disabled) input:not([type="text"])', function () {
             _deselectItem($(this));
+        });
+        StepsContainer.on('change', 'input[required]', function () {
+            _verifyStep($(stepList[currentStep]));
         });
     }
 
@@ -198,6 +263,20 @@ var StepTransition = (function () {
         _verifyStep(input.parents('.step'));
     }
 
+    function _collectDataForm($form) {
+        if ($form){
+            var id = $form.attr('data-form');
+            var object = {};
+            $form.find('input').each(function () {
+                object[$(this).attr('name')] = $(this).val();
+            });
+            console.log(object);
+            events.emit('addForm', {id: id, object: object});
+        }else{
+            console.log('pas de formulaire à collecter');
+        }
+    }
+
     var _verifyStep = function ($element) {
         var currentStep = $element;
         var flag = true;
@@ -206,10 +285,18 @@ var StepTransition = (function () {
         //vérifie si required est select
         currentStep.find('input[required]').each(function () {
             name = $(this).attr('name');
-            if (!currentStep.find("input[name='" + name + "']").is(':checked')) {
-                currentStep.find('button.next').prop('disabled', 'disabled');
-                flag = false;
-                return false;
+            if ($(this).attr('type') == 'radio') {
+                if (!currentStep.find("input[name='" + name + "']").is(':checked')) {
+                    currentStep.find('button.next').prop('disabled', 'disabled');
+                    flag = false;
+                    return false;
+                }
+            } else {
+                if (!$(this).val()) {
+                    currentStep.find('button.next').prop('disabled', 'disabled');
+                    flag = false;
+                    return false;
+                }
             }
         });
         if (flag) {
@@ -229,6 +316,7 @@ var Cart = (function () {
     //Le panier contient le prix ainsi que les objets avec leur ID respectifs --> cet objet est envoyé au serveur à la fin du script
     var Panier = {
         items: [],
+        info: {},
         price: {
             unique: 0,
             month: 0
@@ -316,6 +404,7 @@ var Cart = (function () {
             '</li>';
 
     events.on('useCart', _useCard);
+    events.on('addForm', _addForm);
 
     function init() {
         _initCurrentItem();
@@ -354,13 +443,13 @@ var Cart = (function () {
                 events.emit('getCurrent', currentItems_list);
                 console.log(currentItems_list);
                 console.log(Panier);
-                
+
                 //supprime le hash de l'url une fois terminé
-                if (window.history && window.history.pushState) {
-                    window.history.pushState('', '', window.location.pathname);
-                } else {
-                    window.location.href = window.location.href.replace(/#.*$/, '#');
-                }
+                /*if (window.history && window.history.pushState) {
+                 window.history.pushState('', '', window.location.pathname);
+                 } else {
+                 window.location.href = window.location.href.replace(/#.*$/, '#');
+                 }*/
             }
         } else {
             window.location.replace("offres.html");
@@ -391,6 +480,11 @@ var Cart = (function () {
         Panier.price.unique = Panier.formatPrice(Panier.price.unique);
         _render();
     }
+
+    function _addForm(data) {
+        Panier['info'][data['id']] = data['object'];
+    }
+    ;
 
     function _addItem(cat, id) {
         console.log("j'ajoute ! : " + cat + ' ' + id);

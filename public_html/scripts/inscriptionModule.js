@@ -125,9 +125,14 @@ var StepTransition = (function () {
         currentItems_list = current;
         _render();
         _bindEvents();
-        //Verify required input and block next button if required
+        //verifie chaque etape et switch le bouton next si une action requise n'est pas effectué
         $('.step').each(function () {
             _verifyStep($(this));
+        });
+        
+        //Ajoute les articles pré-selectionnés dans le panier au lancement
+        $('.step .shop-item').find('input[type="radio"][selected]').each(function(){
+            _selectItem($(this).parents('.shop-item'));
         });
         _showSlider(currentStep);
     }

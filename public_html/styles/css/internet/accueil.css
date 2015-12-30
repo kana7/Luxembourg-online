@@ -33,14 +33,7 @@
   background-color: #004994;
   padding: 10px 0; }
   #step-list ul {
-    display: block;
-    text-align: justify;
-    width: 100%;
-    line-height: 0; }
-    #step-list ul:after {
-      content: '';
-      display: inline-block;
-      width: 100%; }
+    text-align: center; }
   #step-list li {
     display: inline-block;
     position: relative;
@@ -57,88 +50,95 @@
       border-bottom: 1px solid #fff; }
       #step-list li.active ~ li {
         opacity: 0.5; }
+  #step-list li:not(:last-child) {
+    margin-right: 4px; }
 
-#panier > ul {
+#panier > ul, .shop-list > ul {
   display: block;
   border: 1px solid #004994;
   color: #000;
   border-radius: 6px; }
-  #panier > ul li {
+  #panier > ul li, .shop-list > ul li {
     display: block;
     width: 100%; }
-  #panier > ul h3, #panier > ul h4 {
+  #panier > ul h3, #panier > ul h4, .shop-list > ul h3, .shop-list > ul h4 {
     margin: 0; }
-  #panier > ul [class^=icon-] {
+  #panier > ul [class^=icon-], .shop-list > ul [class^=icon-] {
     color: #e75e0a;
     position: relative;
     top: 2px; }
-  #panier > ul .header {
+  #panier > ul .header, .shop-list > ul .header {
     background-color: #004994;
     padding: 13px 0; }
-    #panier > ul .header h3 {
+    #panier > ul .header h3, .shop-list > ul .header h3 {
       font-weight: 400;
       font-size: 1.4em;
       color: #fff;
       text-transform: uppercase;
       text-align: center; }
-  #panier > ul .month {
+  #panier > ul .month, #panier > ul .section:not(:last-child), .shop-list > ul .month, .shop-list > ul .section:not(:last-child) {
     border-bottom: 1px solid #004994; }
-  #panier > ul .month, #panier > ul .unique {
+  #panier > ul .month, #panier > ul .unique, #panier > ul .section, .shop-list > ul .month, .shop-list > ul .unique, .shop-list > ul .section {
     padding: 15px 15px; }
-    #panier > ul .month ul, #panier > ul .unique ul {
+    #panier > ul .month ul, #panier > ul .unique ul, #panier > ul .section ul, .shop-list > ul .month ul, .shop-list > ul .unique ul, .shop-list > ul .section ul {
       display: block; }
-    #panier > ul .month li, #panier > ul .unique li {
+    #panier > ul .month li, #panier > ul .unique li, #panier > ul .section li, .shop-list > ul .month li, .shop-list > ul .unique li, .shop-list > ul .section li {
       display: block;
       line-height: 20px;
       padding: 0 0 0 10px; }
-      #panier > ul .month li:before, #panier > ul .unique li:before {
+      #panier > ul .month li:before, #panier > ul .unique li:before, #panier > ul .section li:before, .shop-list > ul .month li:before, .shop-list > ul .unique li:before, .shop-list > ul .section li:before {
         content: "";
         display: table; }
-      #panier > ul .month li:after, #panier > ul .unique li:after {
+      #panier > ul .month li:after, #panier > ul .unique li:after, #panier > ul .section li:after, .shop-list > ul .month li:after, .shop-list > ul .unique li:after, .shop-list > ul .section li:after {
         content: "";
         display: table;
         clear: both; }
-    #panier > ul .month .label, #panier > ul .month .price, #panier > ul .unique .label, #panier > ul .unique .price {
+    #panier > ul .month .label, #panier > ul .month .price, #panier > ul .unique .label, #panier > ul .unique .price, #panier > ul .section .label, #panier > ul .section .price, .shop-list > ul .month .label, .shop-list > ul .month .price, .shop-list > ul .unique .label, .shop-list > ul .unique .price, .shop-list > ul .section .label, .shop-list > ul .section .price {
       font-size: 1.2em; }
-    #panier > ul .month .price, #panier > ul .unique .price {
+    #panier > ul .month .price, #panier > ul .unique .price, #panier > ul .section .price, .shop-list > ul .month .price, .shop-list > ul .unique .price, .shop-list > ul .section .price {
       float: right;
       text-align: right;
       font-weight: 800; }
-    #panier > ul .month .remise-name, #panier > ul .unique .remise-name {
+    #panier > ul .month .remise-name, #panier > ul .unique .remise-name, #panier > ul .section .remise-name, .shop-list > ul .month .remise-name, .shop-list > ul .unique .remise-name, .shop-list > ul .section .remise-name {
       color: #e75e0a;
       font-size: 1.05em; }
-  #panier > ul .prices {
+  #panier > ul .prices, .shop-list > ul .prices {
     padding: 10px 0;
     background-color: #004994;
     color: #fff; }
-    #panier > ul .prices ul {
+    #panier > ul .prices ul, .shop-list > ul .prices ul {
       display: block;
       padding: 0 15px;
       text-align: center; }
-      #panier > ul .prices ul li {
+      #panier > ul .prices ul li, .shop-list > ul .prices ul li {
         line-height: 25px; }
-        #panier > ul .prices ul li:before {
+        #panier > ul .prices ul li:before, .shop-list > ul .prices ul li:before {
           content: "";
           display: table; }
-        #panier > ul .prices ul li:after {
+        #panier > ul .prices ul li:after, .shop-list > ul .prices ul li:after {
           content: "";
           display: table;
           clear: both; }
-    #panier > ul .prices .prices-label, #panier > ul .prices .prices-price {
+    #panier > ul .prices .prices-label, #panier > ul .prices .prices-price, .shop-list > ul .prices .prices-label, .shop-list > ul .prices .prices-price {
       font-size: 15px;
       text-transform: uppercase; }
-    #panier > ul .prices .prices-label {
+    #panier > ul .prices .prices-label, .shop-list > ul .prices .prices-label {
       float: left; }
-    #panier > ul .prices .prices-price {
+    #panier > ul .prices .prices-price, .shop-list > ul .prices .prices-price {
       float: right;
       color: #fff;
       font-weight: 800;
       font-size: 1.1em; }
-  #panier > ul h4 {
+  #panier > ul h4, .shop-list > ul h4 {
     font-size: 1.3em;
     text-transform: uppercase;
     font-weight: 600;
     margin-bottom: 10px; }
+
+.shop-list > ul {
+  max-width: 375px; }
+  .shop-list > ul .month .price, .shop-list > ul .unique .price {
+    font-weight: 400; }
 
 #inscription {
   min-height: 520px; }
@@ -155,7 +155,8 @@
   font-weight: 800; }
 #steps .step-description {
   font-size: 1.31em;
-  margin: 10px 0; }
+  margin: 10px 0;
+  line-height: 20px; }
 #steps .step-subdescription {
   font-size: 1.2em;
   margin: 10px 0;
@@ -380,7 +381,20 @@ input[name="client"] {
     padding-right: 15px; }
   .shop-item-list [class$="-6"]:nth-child(even) {
     padding-left: 15px;
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+
+  #personalData > ul {
+    max-width: 280px; }
+
+  #step-list ul {
+    display: block;
+    text-align: justify;
+    width: 100%;
+    line-height: 0; }
+    #step-list ul:after {
+      content: '';
+      display: inline-block;
+      width: 100%; } }
 @media screen and (min-width: 1302px) {
   #test-offres .input-white {
     width: 250px; }

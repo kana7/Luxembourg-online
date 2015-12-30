@@ -354,6 +354,13 @@ var Cart = (function () {
                 events.emit('getCurrent', currentItems_list);
                 console.log(currentItems_list);
                 console.log(Panier);
+                
+                //supprime le hash de l'url une fois terminé
+                if (window.history && window.history.pushState) {
+                    window.history.pushState('', '', window.location.pathname);
+                } else {
+                    window.location.href = window.location.href.replace(/#.*$/, '#');
+                }
             }
         } else {
             window.location.replace("offres.html");

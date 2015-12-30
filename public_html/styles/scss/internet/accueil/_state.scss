@@ -86,6 +86,24 @@
             margin-bottom: 20px;
         }
     }
+    #personalData{
+        &>ul{
+            max-width: 280px;    
+        }
+    }
+    #step-list{
+        ul{
+            display: block;
+            text-align: justify;
+            width: 100%;
+            line-height: 0;
+            &:after {
+                content: '';
+                display: inline-block;
+                width: 100%;
+            }
+        }
+    }
 }
 @include media(lgdesk){
     #test-offres{

@@ -273,9 +273,9 @@
                                 <li class="step-separator"><span class="icon-right-arrow"></span></li>
                                 <li>Télévision</li>
                                 <li class="step-separator"><span class="icon-right-arrow"></span></li>
-                                <li class="active">Informations</li>
+                                <li>Informations</li>
                                 <li class="step-separator"><span class="icon-right-arrow"></span></li>
-                                <li>Confirmation</li>
+                                <li class="active">Confirmation</li>
                             </ul>
                         </div>
                     </div>
@@ -283,54 +283,117 @@
                 <div class="phone-p-30">
                     <div class="container-wrapper">
                         <div class="row">
-                            <div id="steps" class="phone-9">
-                                <h2 class="step-title">Informations (suite)</h2>
-                                <p class="step-description">Veuillez continuer avec l'une des options suivantes.</p>
-                                <form method="GET" action="">
-                                    <div class="clearfix phone-mt-30">
-                                        <div class="phone-12">
-                                            <h3 class="step-subtitle">Livraison : </h3>
-                                            <div class="input-group phone-mt-15">
-                                                <input type="radio" name="livraison" value="false" required/>
-                                                <label for="">Pas de livraison (récupération du matériel en boutique)</label>
+                            <div id="steps" class="phone-12 lgdesk-9">
+                                <h2 class="step-title">Votre commande</h2>
+                                <p class="step-description">Veuillez trouver ci-dessous un résumé de votre commande.</p>
+                                <div id="personalData" class="shop-list phone-12 desk-4 phone-mt-20 tab-mt-30">
+                                    <ul>
+                                        <li style="font-size: 12px;" class="items">
+                                            <div class="section">
+                                                <h4>Vos données</h4>
+                                                <ul>
+                                                    <li><span class="label">Herrn</span></li>
+                                                    <li><span class="label">Kremer Marc</span></li>
+                                                    <li><span class="label">42-44, Avenue de la Gare</span></li>
+                                                    <li><span class="label">2550 Luxembourg</span></li>
+                                                    <li><span class="label">Luxembourg</span></li>
+                                                    <li><span class="label">E-mail: mkremer@internet.lu</span></li>
+                                                </ul>
                                             </div>
-                                            <div class="input-group">
-                                                <input type="radio" name="livraison" value="true"/>
-                                                <label for="">Livraison par UPS (9,00€)</label>
+                                            <div class="section">
+                                                <h4>Livraison</h4>
+                                                <ul>
+                                                    <li><span class="label">Pas de livraison</span></li>
+                                                </ul>
                                             </div>
-                                        </div>
-                                        <div class="phone-12">
-                                            <h3 class="step-subtitle">Mode de paiement : </h3>
-                                            <div class="input-group phone-mt-15">
-                                                <input type="radio" name="paiement" value="false" required/>
-                                                <label for="">Par domiciliation</label>
+                                            <div class="section">
+                                                <h4>Mode de paiement</h4>
+                                                <ul>
+                                                    <li>
+                                                        <span class="label">Par domiciliation</span>
+                                                    </li>
+                                                </ul>
                                             </div>
-                                            <div class="input-group">
-                                                <input type="radio" name="paiement" value="true"/>
-                                                <label for="">Contre facture (supplément de 1,50 € par facture)</label>
+                                            <div class="section">
+                                                <h4>Mode de facturation</h4>
+                                                <ul>
+                                                    <li>
+                                                        <span class="label">Par e-mail</span>
+                                                    </li>
+                                                </ul>
                                             </div>
-                                        </div>
-                                        <div class="phone-12">
-                                            <h3 class="step-subtitle">Mode de facturation : </h3>
-                                            <div class="input-group phone-mt-15">
-                                                <input type="radio" name="facturation" value="false" required/>
-                                                <label for="">Par email</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="shop-list phone-12 desk-5 phone-mt-30">
+                                    <ul>
+                                        <li class="header"><h3>Votre commande</h3></li>
+                                        <li class="items">
+                                            <div class="month">
+                                                <h4>Coûts mensuels</h4>
+                                                <ul>
+                                                    <li>
+                                                        <span class="label">LOL FIBER 100</span><span class="price">54,90 €/mois</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="label">Location FRITZ!Box 7490</span><span class="price">6,00 €/mois</span>
+                                                    </li>
+                                                </ul>
                                             </div>
-                                            <div class="input-group">
-                                                <input type="radio" name="facturation" value="true"/>
-                                                <label for="">Par courrier (supplément de 1,50 € par courrier)</label>
+                                            <div class="unique"><h4>Coûts uniques</h4>
+                                                <ul>
+                                                    <li>
+                                                        <span class="label">FRITZ!WLAN Repeater 450E</span>
+                                                        <span class="price">52,00 €</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="label">FRITZ!Powerline 520E Single</span>
+                                                        <span class="price">49,00 €</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="label">FRITZ!Powerline 520E Set</span>
+                                                        <span class="price">89,00 €</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="label">FRITZ!WLAN Stick AC</span>
+                                                        <span class="price">28,00 €</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="label">Motorola T202</span>
+                                                        <span class="price">48,00 €</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="label">Motorola T201</span>
+                                                        <span class="price">31,00 €</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="label">FRITZ!WLAN Repeater 1750E</span>
+                                                        <span class="price">84,00 €</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="label">FRITZ!Powerline 546E</span><span class="price">95,00 €</span>
+                                                    </li>
+                                                </ul>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix phone-mt-20 phone-mb-20">
-                                        <button class="btn-blue pull-left">
-                                            <span class="icon-left-arrow"></span> Retour
-                                        </button>
-                                        <button type="submit" style="margin: 0;" class="btn-orange pull-right">
-                                            Finalisez la commande
-                                        </button>
-                                    </div>
-                                </form>
+                                        </li>
+                                        <li class="prices">
+                                            <ul>
+                                                <li id="monthlyPrice">
+                                                    <span class="prices-label">Coûts mensuels :</span>
+                                                    <span class="prices-price">58,90 €<span class="normal lowercase"> /mois</span></span>
+                                                </li>
+                                                <li id="uniquePrice">
+                                                    <span class="prices-label">Coûts Unique :</span><span class="prices-price">476,00 €</span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="clearfix phone-12 phone-mt-30">
+                                    <a style="margin: 0;" class="btn-orange" href="#">
+                                        Confirmer la commande
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

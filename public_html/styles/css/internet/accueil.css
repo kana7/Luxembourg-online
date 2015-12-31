@@ -135,10 +135,8 @@
     font-weight: 600;
     margin-bottom: 10px; }
 
-.shop-list > ul {
-  max-width: 375px; }
-  .shop-list > ul .month .price, .shop-list > ul .unique .price {
-    font-weight: 400; }
+.shop-list > ul .month .price, .shop-list > ul .unique .price {
+  font-weight: 400; }
 
 #inscription {
   min-height: 520px; }
@@ -157,9 +155,7 @@
   display: block;
   font-weight: 600;
   color: #000;
-  font-size: 1.05em;
-  width: 100%;
-  }
+  font-size: 1.05em; }
 #steps .step-description {
   font-size: 1.31em;
   margin: 10px 0;
@@ -309,6 +305,9 @@ input[name="client"] {
   text-align: center;
   padding: 20px 0; }
 
+@media screen and (max-width: 671px) {
+  .shop-list > ul {
+    font-size: 12px; } }
 @media screen and (min-width: 672px) {
   #test-offres {
     padding: 6px 0 10px; }

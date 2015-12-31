@@ -2400,6 +2400,8 @@ h2.contact-title {
 }
 .input-group-table{
     display: table;
+    width: 100%;
+    table-layout: fixed;
     .input-group.inline{
         *:not(span) {
             display: initial;
@@ -2407,6 +2409,10 @@ h2.contact-title {
         display: table-row;
         &>label, &>input, &>.input-group-cell{
             display: table-cell;
+            margin: 5px 0;
+        }
+        .input-group-cell input[type="radio"]:not(:first-child){
+                margin-left: 30px;
         }
     }
 }
@@ -2433,6 +2439,7 @@ h2.contact-title {
         color: lighten($dark-grey, 4%);
         font-size: 1.1em;
         margin-bottom: 10px;
+        line-height: 20px;
     }
 
     input[type="text"], input[type="password"], input[type="number"]{

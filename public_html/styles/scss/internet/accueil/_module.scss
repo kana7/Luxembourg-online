@@ -66,7 +66,7 @@
         margin-right: 4px;
     }
 }
-
+ 
 #panier>ul, .shop-list>ul{
     display: block;
     border: 1px solid $blue;
@@ -156,7 +156,6 @@
 }
 
 .shop-list>ul{
-    max-width: 375px;
     .month .price, .unique .price{
         font-weight: 400;
     }

@@ -1,6 +1,8 @@
 
 @include media(phone){
-
+    .shop-list > ul{
+        font-size: 12px;
+    }
 }
 @include media(tab){
     #test-offres{

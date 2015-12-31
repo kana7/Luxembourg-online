@@ -8,9 +8,9 @@
   #slider-contents .infos.image-3 {
     background-image: url(../../images/Homepage/SLIDER/Slider3_672x320px.jpg); }
   #slider-contents .infos.image-5 {
-    background-image: url(../../images/Homepage/SLIDER/Slider_672x320px_Noel1.jpg); }
+    background-image: url(../../images/Homepage/SLIDER/Slider_672x320px_nouvelan1.jpg); }
   #slider-contents .infos.image-6 {
-    background-image: url(../../images/Homepage/SLIDER/Slider_672x320px_Noel2.jpg); }
+    background-image: url(../../images/Homepage/SLIDER/Slider_672x320px_nouvelan2.jpg); }
 
 @media screen and (min-width: 672px) {
   #slider-contents .infos {
@@ -22,9 +22,9 @@
     #slider-contents .infos.image-3 {
       background-image: url(../../images/Homepage/SLIDER/Slider3_1056x450px.jpg); }
     #slider-contents .infos.image-5 {
-      background-image: url(../../images/Homepage/SLIDER/Slider_1056x450px_Noel1.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Slider_1056x450px_nouvelan1.jpg); }
     #slider-contents .infos.image-6 {
-      background-image: url(../../images/Homepage/SLIDER/Slider_1056x450px_Noel2.jpg); } }
+      background-image: url(../../images/Homepage/SLIDER/Slider_1056x450px_nouvelan2.jpg); } }
 @media screen and (min-width: 1056px) {
   #slider-contents .infos {
     background-size: 1302px auto; }
@@ -35,9 +35,9 @@
     #slider-contents .infos.image-3 {
       background-image: url(../../images/Homepage/SLIDER/Slider3_1302x330px.jpg); }
     #slider-contents .infos.image-5 {
-      background-image: url(../../images/Homepage/SLIDER/Slider_1302x330px_Noel1.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Slider_1302x330px_nouvelan1.jpg); }
     #slider-contents .infos.image-6 {
-      background-image: url(../../images/Homepage/SLIDER/Slider_1302x330px_Noel2.jpg); } }
+      background-image: url(../../images/Homepage/SLIDER/Slider_1302x330px_nouvelan2.jpg); } }
 @media screen and (min-width: 1302px) {
   #slider-contents .infos {
     background-size: 1920px auto; }
@@ -48,9 +48,9 @@
     #slider-contents .infos.image-3 {
       background-image: url(../../images/Homepage/SLIDER/Slider3_1920x360px.jpg); }
     #slider-contents .infos.image-5 {
-      background-image: url(../../images/Homepage/SLIDER/Slider_1920x360px_Noel1.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Slider_1920x360px_nouvelan1.jpg); }
     #slider-contents .infos.image-6 {
-      background-image: url(../../images/Homepage/SLIDER/Slider_1920x360px_Noel2.jpg); } }
+      background-image: url(../../images/Homepage/SLIDER/Slider_1920x360px_nouvelan2.jpg); } }
 #slider-contents .infos.image-6 .title {
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.8); }
 
@@ -59,7 +59,10 @@
     line-height: 35px !important; }
 
   #slider-contents .infos.image-5 .title {
-    line-height: 40px !important; } }
+    line-height: 40px !important; }
+
+  #slider-contents .infos.image-2 .row > div {
+    top: 0px !important; } }
 @media screen and (max-width: 1055px) {
   #slider-contents .infos.image-6 .title {
     line-height: 55px; }
@@ -73,18 +76,24 @@
     transform: translateY(-50%); }
     #slider-contents .infos.image-5 .row .title {
       position: relative;
-      bottom: 35px;
-      line-height: 55px; } }
+      line-height: 55px; }
+
+  #slider-contents .infos.image-2 .row > div {
+    top: 20px;
+    text-align: center !important; } }
 @media screen and (min-width: 1056px) {
   #slider-contents .infos.image-6 .title {
-    line-height: 52px; }
+    position: relative;
+    line-height: 52px;
+    bottom: 20px; }
 
   #slider-contents .infos.image-5 .title {
     position: relative;
-    bottom: 35px;
     line-height: 65px; } }
 @media screen and (min-width: 1302px) {
   #slider-contents .infos.image-6 .title {
-    line-height: 58px; } }
+    position: relative;
+    line-height: 58px;
+    bottom: 35px; } }
 
 /*# sourceMappingURL=slider_src.css.map */

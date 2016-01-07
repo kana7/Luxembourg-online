@@ -280,10 +280,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="phone-p-30">
+                <div class="phone-pt-30 desk-pb-30">
                     <div class="container-wrapper">
                         <div class="row">
-                            <div class="phone-9 phone-pr-50">
+                            <div class="phone-12 desk-9 desk-pr-10">
                                 <form name="frmShopping" action="/Scripts/sql.exe" method="get">
                                     <input type="hidden" name="SqlDB" value="SESDispo" />
                                     <input type="hidden" name="Sql" value="SESDispo:CreateSubscription.phs" />
@@ -317,7 +317,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="phone-7 phone-pl-20 hidden">
+                                                    <div id="porta-form" class="phone-7 phone-pl-20 hidden">
                                                         <div class="input-group-table">
                                                             <div class="input-group inline">
                                                                 <label for="Nom">Type de la ligne existante :</label>
@@ -399,7 +399,7 @@
                                     </div>
                                 </form>
                             </div>
-                            <div class="phone-3">
+                            <div class="phone-12 desk-3 desk-pl-10">
                                 <div id="panier">
                                     <ul>
                                         <li class="header"><h3>Récapitulatif</h3></li>
@@ -599,6 +599,13 @@
                     $(this).siblings('div').find('button, input').removeAttr('disabled');
                     $('input[name="client"]').not(this).siblings('div').addClass('is-disabled');
                     $('input[name="client"]').not(this).siblings('div').find('button, input').attr("disabled", "disabled");
+                });
+                $('input[name="portabilite"]').on('change', function () {
+                    if ($(this).val() != 0) {
+                        $('#porta-form').removeClass('hidden');
+                    } else {
+                        $('#porta-form').addClass('hidden');
+                    }
                 });
             });
         </script>

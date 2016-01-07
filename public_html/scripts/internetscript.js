@@ -91,9 +91,9 @@ function createDispoPopup() {
     }
 }
 
-function insertLink(id, service){
-    return '<a class="btn-blue btn-subscription" href="../shop/inscription.html#'+service+';'+id+'">Abonnez-vous</a>';
-};
+function insertLink(id, service) {
+    return '<a class="btn-blue btn-subscription" href="../shop/inscription.html#' + service + ';' + id + '">Abonnez-vous</a>';
+}
 
 function checkDispo(homeId, boolean) {
     if (homeId !== undefined || homeId !== null || homeId !== '') {
@@ -118,6 +118,73 @@ function checkDispo(homeId, boolean) {
 
                     }
                 }
+
+                if (obj.Service[8]) { // Dégroupage VDSL
+                    articleObj = obj.Service[8].article;
+                    if (obj.Service[8] && $(articleObj[0]).size() > 0) {//entry exists
+                        for (i in articleObj) {
+                            for (b in articleObj) {
+                                if (articleObj[b].idObject == "5273" && ab[1] == "") {//Fiber 30
+                                    ab[1] = [articleObj[b].idObject, 8];
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+                if (obj.Service[2]) { // Dégroupage Fibre
+                    articleObj = obj.Service[2].article;
+                    if (obj.Service[2] && $(articleObj[0]).size() > 0) {//entry exists
+                        for (i in articleObj) {
+                            for (b in articleObj) {
+                                if (articleObj[b].idObject == "5272" && ab[1] == "") {//Fiber 30 dégroupé
+                                    ab[1] = [articleObj[b].idObject, 2];
+                                }
+                                if (articleObj[b].idObject == "5275" && ab[2] == "") {//Fiber 100 dégroupé
+                                    ab[2] = [articleObj[b].idObject, 2];
+                                }
+                                if (articleObj[b].idObject == "5276" && ab[2] == "") {//Fiber 200 dégroupé
+                                    ab[3] = [articleObj[b].idObject, 2];
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+                if (obj.Service[8]) { // Dégroupage VDSL
+                    articleObj = obj.Service[8].article;
+                    if (obj.Service[8] && $(articleObj[0]).size() > 0) {//entry exists
+                        for (i in articleObj) {
+                            for (b in articleObj) {
+                                if (articleObj[b].idObject == "5274" && ab[2] == "") {//Fiber 100 1 paire
+                                    ab[2] = [articleObj[b].idObject, 8];
+                                }
+                                if (articleObj[b].idObject == "5336" && ab[2] == "") {//Fiber 100 2 paires
+                                    ab[2] = [articleObj[b].idObject, 8];
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+                if (obj.Service[4]) { // Revente VDSL 30
+                    articleObj = obj.Service[4].article;
+                    if (obj.Service[4] && $(articleObj[0]).size() > 0) {//entry exists
+                        for (i in articleObj) {
+                            for (b in articleObj) {
+                                if (articleObj[b].idObject == "5262" && ab[1] == "") {//Fiber 30
+                                    ab[1] = [articleObj[b].idObject, 4];
+                                }
+
+                            }
+
+                        }
+                    }
+                }
+
                 if (obj.Service[5]) { // Revente Fibre
                     articleObj = obj.Service[5].article;
                     if (obj.Service[5] && $(articleObj[0]).size() > 0) {//entry exists
@@ -138,20 +205,7 @@ function checkDispo(homeId, boolean) {
 
                     }
                 }
-                if (obj.Service[4]) { // Revente VDSL 30
-                    articleObj = obj.Service[4].article;
-                    if (obj.Service[4] && $(articleObj[0]).size() > 0) {//entry exists
-                        for (i in articleObj) {
-                            for (b in articleObj) {
-                                if (articleObj[b].idObject == "5262" && ab[1] == "") {//Fiber 30
-                                    ab[1] = [articleObj[b].idObject, 4];
-                                }
 
-                            }
-
-                        }
-                    }
-                }
                 if (obj.Service[41]) { // Revente VDSL 100 1 paire
                     articleObj = obj.Service[41].article;
                     if (obj.Service[41] && $(articleObj[0]).size() > 0) {//entry exists
@@ -165,6 +219,7 @@ function checkDispo(homeId, boolean) {
                         }
                     }
                 }
+
                 if (obj.Service[42]) { // Revente VDSL 100 2 paires
                     articleObj = obj.Service[42].article;
                     if (obj.Service[42] && $(articleObj[0]).size() > 0) {//entry exists
@@ -177,91 +232,40 @@ function checkDispo(homeId, boolean) {
                         }
                     }
                 }
-                if (obj.Service[3]) {
-                    articleObj = obj.Service[3].article;
-                    if (obj.Service[3] && $(articleObj[0]).size() > 0) {//entry exists
-                        for (i in articleObj) {
-                            for (b in articleObj) {
-                                if (articleObj[b].idObject == "2188" && ab[4] == "") {//LOL KOMPLETT Start
-                                    ab[4] = [articleObj[b].idObject, 3];
-                                }
-                                if (articleObj[b].idObject == "2189" && ab[5] == "") {//LOL KOMPLETT Run
-                                    ab[5] = [articleObj[b].idObject, 3];
-                                }
-                                if (articleObj[b].idObject == "2190" && ab[6] == "") {//LOL KOMPLETT Professionnal
-                                    ab[6] = [articleObj[b].idObject, 3];
-                                }
-                            }
-                        }
-                    }
-                }
-                if (obj.Service[8]) { // Dégroupage VDSL
-                    articleObj = obj.Service[8].article;
-                    if (obj.Service[8] && $(articleObj[0]).size() > 0) {//entry exists
-                        for (i in articleObj) {
-                            for (b in articleObj) {
-                                if (articleObj[b].idObject == "5273" && ab[1] == "") {//Fiber 30
-                                    ab[1] = [articleObj[b].idObject, 8];
-                                }
-                                if (articleObj[b].idObject == "5274" && ab[2] == "") {//Fiber 100 1 paire
-                                    ab[2] = [articleObj[b].idObject, 8];
-                                }
-                                if (articleObj[b].idObject == "5336" && ab[2] == "") {//Fiber 100 2 paires
-                                    ab[2] = [articleObj[b].idObject, 8];
-                                }
-                            }
 
-                        }
-                    }
-                }
-                if (obj.Service[2]) { // Dégroupage Fibre
-                    articleObj = obj.Service[2].article;
-                    if (obj.Service[2] && $(articleObj[0]).size() > 0) {//entry exists
-                        for (i in articleObj) {
-                            for (b in articleObj) {
-                                if (articleObj[b].idObject == "5272" && ab[1] == "") {//Fiber 30 dégroupé
-                                    ab[1] = [articleObj[b].idObject, 2];
-                                }
-                                if (articleObj[b].idObject == "5275" && ab[2] == "") {//Fiber 100 dégroupé
-                                    ab[2] = [articleObj[b].idObject, 2];
-                                }
-                                if (articleObj[b].idObject == "5276" && ab[2] == "") {//Fiber 200 dégroupé
-                                    ab[3] = [articleObj[b].idObject, 2];
-                                }
-                            }
 
-                        }
-                    }
-                }
                 $('.k24, .k30, .k100, .k200').next().remove();
                 $('.k24, .k30, .k100, .k200').find('.not-dispo').remove();
-                    if (ab[0] == "") {
-                        $(nonDispoTemplate).prependTo('.k24').css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    } else {
-                        $('.k24').find('.not-dispo').remove();
-                        $(insertLink(ab[0][0], ab[0][1])).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    }
-                    if (ab[1] == "") {
-                        $(nonDispoTemplate).prependTo('.k30').css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    } else {
-                        $('.k30').find('.not-dispo').remove();
-                        $(insertLink(ab[1][0], ab[1][1])).insertAfter($('.k30')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    }
-                    if (ab[2] == "") {
-                        $(nonDispoTemplate).prependTo('.k100').css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    } else {
-                        $('.k100').find('.not-dispo').remove();
-                        $(insertLink(ab[2][0], ab[2][1])).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    }
-                    if (ab[3] == "") {
-                        $(nonDispoTemplate).prependTo('.k200').css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    } else {
-                        $('.k200').find('.not-dispo').remove();
-                        $(insertLink(ab[3][0], ab[3][1])).insertAfter($('.k200')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    }
+                if (ab[0] == "") {
+                    $(nonDispoTemplate).prependTo('.k24').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                } else {
+                    $('.k24').find('.not-dispo').remove();
+                    $(insertLink(ab[0][0], ab[0][1])).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                }
+                if (ab[1] == "") {
+                    $(nonDispoTemplate).prependTo('.k30').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                } else {
+                    $('.k30').find('.not-dispo').remove();
+                    $(insertLink(ab[1][0], ab[1][1])).insertAfter($('.k30')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                }
+                if (ab[2] == "") {
+                    $(nonDispoTemplate).prependTo('.k100').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                } else {
+                    $('.k100').find('.not-dispo').remove();
+                    $(insertLink(ab[2][0], ab[2][1])).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                }
+                if (ab[3] == "") {
+                    $(nonDispoTemplate).prependTo('.k200').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                } else {
+                    $('.k200').find('.not-dispo').remove();
+                    $(insertLink(ab[3][0], ab[3][1])).insertAfter($('.k200')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                }
                 if ($('.main-gallery').length) {
                     $('.main-gallery').show().flickity('resize');
                 }
+                $('html, body').animate({
+                    scrollTop: $('#offers-section').offset().top
+                }, 650);
             }
         });
     }
@@ -309,20 +313,20 @@ $(function () {
     $("select[name=rue]").hide();
     $("select[name=numero]").hide();
 
-    $("input[name=zipcode]").keyup(function () {
+    $("input[name='zipcode']").keyup(function () {
         $(".verifyCp").show();
         $(".btnVerif2, .btnVerif").hide();
-        $("select[name=ville]").hide();
-        $("select[name=rue]").hide();
-        $("select[name=numero]").hide();
+        $("select[name='ville']").hide();
+        $("select[name='rue']").hide();
+        $("select[name='numero']").hide();
     });
 
     $("body").on('click', '.verifyCp', function () {
-        $("select[name=ville]").hide();
-        $("select[name=rue]").hide();
-        $("select[name=numero]").hide();
+        $("select[name='ville']").hide();
+        $("select[name='rue']").hide();
+        $("select[name='numero']").hide();
         $.ajax({
-            url: 'http://shop.internet.lu/Scripts/sql.exe?SqlDB=LOLShop&Sql=cpList.phs&_iZip=' + $("input[name=zipcode]").val().substr(2, $("input[name=zipcode]").val().length - 1),
+            url: 'http://shop.internet.lu/Scripts/sql.exe?SqlDB=LOLShop&Sql=cpList.phs&_iZip=' + $("input[name='zipcode']").val().substr(2, $("input[name='zipcode']").val().length - 1),
             dataType: 'jsonp',
             success: function (data) {
                 streetList = data;
@@ -355,7 +359,7 @@ $(function () {
                             $("select[name=rue]").prop("selectedIndex", 1).change();
                             $("select[name=rue] option").first().remove();
                         }
-                        if (vhash.length != 0) {
+                        if ($(vhash).length != 0) {
                             $("select[name=ville] option").each(function () {
                                 if ($(this).val() == _ville) {
                                     $(this).parent().prop("selectedIndex", $(this).index()).change();
@@ -451,7 +455,7 @@ $(function () {
                 }
                 $("select[name=numero]").html(vhtml).fadeIn();
 
-                if (vhash.length != 0) {
+                if ($(vhash).length != 0) {
                     $("select[name=numero] option").each(function () {
                         if ($(this).val() == _nbr) {
                             $(this).parent().prop("selectedIndex", $(this).index()).change();

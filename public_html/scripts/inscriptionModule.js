@@ -16,7 +16,7 @@ var StepTransition = (function () {
             '<div class="clearfix phone-mt-30 shop-item-list">' +
             '{{#items}}' +
             '<div class="phone-12 tab-6">' +
-            '<div class="shop-item">' +
+            '<div class="shop-item {{#isFixed}}fixed{{/isFixed}}">' +
             '<input type="{{input}}" {{#group}}name="{{group}}"{{/group}} data-cat="{{type}}" value="{{id}}" hidden {{#required}}required{{/required}} {{#isDefaut}}selected{{/isDefaut}}>' +
             '<h3 class="shop-item-name">{{name}}</h3>' +
             '<div class="phone-8">' +
@@ -160,7 +160,7 @@ var StepTransition = (function () {
                 $(this).find('.step-description').after(html);
             }
             if ($(this).attr('id') == 'telephonie') {
-                html = Mustache.render(tplItem, {input: "checkbox", required: false, isSellProduct: false, group: 'tel', items: currentItems_list['telephone']});
+                html = Mustache.render(tplItem, {input: "checkbox", required: false, isFixed: true, isSellProduct: false, group: 'tel', items: currentItems_list['telephone']});
                 $(this).find('.step-description').after(html);
                 $(this).append(tplbtn);
             }
@@ -186,10 +186,10 @@ var StepTransition = (function () {
             _next();
             _collectDataForm($(this).parents('.step').find('.step-form'));
         });
-        StepsContainer.on('click', '.shop-item:not(.disabled)', function () {
+        StepsContainer.on('click', '.shop-item:not(.disabled):not(.fixed)', function () {
             _selectItem($(this));
         });
-        StepsContainer.on('change', '.shop-item:not(.disabled) input:not([type="text"])', function () {
+        StepsContainer.on('change', '.shop-item:not(.disabled):not(.fixed) input:not([type="text"])', function () {
             _deselectItem($(this));
         });
         StepsContainer.on('change', 'input[required]', function () {

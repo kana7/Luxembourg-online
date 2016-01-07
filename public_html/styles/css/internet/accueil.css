@@ -79,7 +79,7 @@
   #panier > ul .month, #panier > ul .section:not(:last-child), .shop-list > ul .month, .shop-list > ul .section:not(:last-child) {
     border-bottom: 1px solid #004994; }
   #panier > ul .month, #panier > ul .unique, #panier > ul .section, .shop-list > ul .month, .shop-list > ul .unique, .shop-list > ul .section {
-    padding: 15px 15px; }
+    padding: 15px 10px; }
     #panier > ul .month ul, #panier > ul .unique ul, #panier > ul .section ul, .shop-list > ul .month ul, .shop-list > ul .unique ul, .shop-list > ul .section ul {
       display: block; }
     #panier > ul .month li, #panier > ul .unique li, #panier > ul .section li, .shop-list > ul .month li, .shop-list > ul .unique li, .shop-list > ul .section li {
@@ -94,11 +94,12 @@
         display: table;
         clear: both; }
     #panier > ul .month .label, #panier > ul .month .price, #panier > ul .unique .label, #panier > ul .unique .price, #panier > ul .section .label, #panier > ul .section .price, .shop-list > ul .month .label, .shop-list > ul .month .price, .shop-list > ul .unique .label, .shop-list > ul .unique .price, .shop-list > ul .section .label, .shop-list > ul .section .price {
-      font-size: 1.2em; }
+      font-size: 1.1em; }
     #panier > ul .month .price, #panier > ul .unique .price, #panier > ul .section .price, .shop-list > ul .month .price, .shop-list > ul .unique .price, .shop-list > ul .section .price {
       float: right;
+      color: #E75E0A;
       text-align: right;
-      font-weight: 800; }
+      font-weight: 600; }
     #panier > ul .month .remise-name, #panier > ul .unique .remise-name, #panier > ul .section .remise-name, .shop-list > ul .month .remise-name, .shop-list > ul .unique .remise-name, .shop-list > ul .section .remise-name {
       color: #e75e0a;
       font-size: 1.05em; }
@@ -384,9 +385,9 @@ input[name="client"] {
       width: 200px; }
 
   .shop-item-list [class$="-6"]:nth-child(odd) {
-    padding-right: 15px; }
+    padding-right: 10px; }
   .shop-item-list [class$="-6"]:nth-child(even) {
-    padding-left: 15px;
+    padding-left: 10px;
     margin-bottom: 20px; }
 
   #personalData > ul {

@@ -15,7 +15,7 @@ var StepTransition = (function () {
     var tplItem =
             '<div class="clearfix phone-mt-30 shop-item-list">' +
             '{{#items}}' +
-            '<div class="phone-12 tab-6">' +
+            '<div class="phone-mb-15 phone-12 tab-6">' +
             '<div class="shop-item {{#isFixed}}fixed{{/isFixed}}">' +
             '<input type="{{input}}" {{#group}}name="{{group}}"{{/group}} data-cat="{{type}}" value="{{id}}" hidden {{#required}}required{{/required}} {{#isDefaut}}selected{{/isDefaut}}>' +
             '<h3 class="shop-item-name">{{name}}</h3>' +
@@ -51,64 +51,18 @@ var StepTransition = (function () {
             '</div>' +
             '{{/items}}' +
             '</div>';
-    var tplFormFiber = '<div class="clearfix dropdown">' +
-            '<div class="phone-mb-30 is-active" data-trigger>' +
-            '<h3 class="step-subtitle">Installation fibre <span class="icon-right-arrow"></span></h3>' +
+    var tplFormFiber = '<div class="clearfix">' +
+            '<div class="phone-mb-30 phone-mt-30">' +
+            '<h3 class="step-subtitle">Installation fibre</h3>' +
             '<p class="step-subdescription">Merci de remplir les champs supplémentaires concernant le câblage interne de la fibre dans votre habitation</p>' +
             '</div>' +
-            '<div class="is-visible">' +
             '<div data-form="fibre" class="step-form clearfix">' +
-            '<div class="phone-6 phone-pr-20">' +
-            '<div class="input-group">' +
-            '<label for="Nom">Nom, Prénom<span class="red">*</span></label>' +
-            '<input id="Nom" name="nom" type="text" required>' +
-            '</div>' +
-            '<div class="input-group">' +
-            '<label for="Adresse">Adresse<span class="red">*</span></label>' +
-            '<input id="Adresse" name="adresse" type="text" required>' +
-            '</div>' +
-            '<div class="input-group">' +
-            '<label for="Ville">Ville<span class="red">*</span></label>' +
-            '<input id="Ville" name="ville" type="text" required>' +
-            '</div>' +
-            '<div class="input-group">' +
-            '<label for="Tel">Téléphone<span class="red">*</span></label>' +
-            '<input id="Tel" name="tel" type="text" required>' +
-            '</div>' +
-            '<div class="input-group">' +
-            '<label for="Syndic">Nom du syndic de copropriété</label>' +
-            '<input id="Syndic" name="syndic" type="text" required>' +
-            '</div>' +
-            '</div>' +
-            '<div class="phone-6 phone-pl-20">' +
-            '<div class="input-group">' +
-            '<label for="Matricule">Matricule social<span class="red">*</span></label>' +
-            '<input id="Matricule" name="matricule" type="text" required>' +
-            '</div>' +
-            '<div class="input-group">' +
-            '<label for="Etage">Étage<span class="red">*</span></label>' +
-            '<input id="Etage" name="etage" type="text" required>' +
-            '</div>' +
-            '<div class="input-group">' +
-            '<label for="Cpl">Code Postal<span class="red">*</span></label>' +
-            '<input id="Cpl" name="codePostal" type="text" required="">' +
-            '</div>' +
-            '<div class="input-group">' +
-            '<label for="Mobile">Mobile</label>' +
-            '<input id="Mobile" name="mobile" type="text">' +
-            '</div>' +
-            '<div class="input-group">' +
-            '<label for="TelSyndic">Téléphone du syndic</label>' +
-            '<input id="TelSyndic" name="telSyndic" type="text">' +
-            '</div>' +
-            '</div>' +
             '<div class="phone-12">' +
             '<div class="input-group">' +
             '<input id="Cablage" type="radio" name="client" value="true" required><label for="Cablage">Mon cablâge interne est conforme pour le raccordement internet via la Fibre Optique.</label>' +
             '</div>' +
             '<div class="input-group">' +
             '<input id="NotCablage" type="radio" name="client" value="false" required><label for="NotCablage">Mon cablâge interne n\'est pas conforme et je demande à Luxembourg Online d\'entreprendre les travaux nécessaires. </label>' +
-            '</div>' +
             '</div>' +
             '</div>' +
             '</div>' +
@@ -138,16 +92,16 @@ var StepTransition = (function () {
         stepList.each(function () {
             if ($(this).attr('id') == 'installation') {
                 html = Mustache.render(tplItem, {input: "radio", required: true, isSellProduct: true, group: 'install', items: currentItems_list['installation']});
-                html += tplbtn;
                 if (currentItems_list['abo']['tech'] == "FIBRE") {
                     html += tplFormFiber;
                 }
+                html += tplbtn;
                 $(this).find('.step-description').after(html);
             }
             if ($(this).attr('id') == 'materiel') {
                 html = Mustache.render(tplItem, {input: "radio", required: true, isSellProduct: false, group: 'modem', items: currentItems_list['modem']});
                 html += '<div class="clearfix dropdown">' +
-                        '<div class="phone-mb-30" data-trigger>' +
+                        '<div class="phone-mb-30 phone-mt-30" data-trigger>' +
                         '<h3 class="step-subtitle">Ajoutez du Matériel Optionnel<span class="icon-right-arrow"></span></h3>' +
                         '<p class="step-subdescription">Si besoin vous trouverez ci-dessous de l\'équipement auxiliaire pour améliorer ou élargir votre réseau interne.</p>' +
                         '</div>' +
@@ -169,11 +123,13 @@ var StepTransition = (function () {
                 html += '<div class="phone-mb-30 phone-mt-30">' +
                         '<h3 class="step-subtitle">Location décodeur</h3>' +
                         '</div>';
-                html += Mustache.render(tplItem, {input: "radio", required: false, isSellProduct: false, group: 'minix', items: currentItems_list['tv_materiel']});
+                html += Mustache.render(tplItem, {input: "radio", required: false, isSellProduct: false, group: false, items: currentItems_list['tv_materiel']});
                 html += tplbtn;
                 html += '</div>';
                 html += '</div>';
                 $(this).find('.step-description').after(html);
+                $('input[value="5137"], input[value="5304"]').parents('.shop-item').addClass('fixed');
+                
             }
         });
     }
@@ -187,6 +143,22 @@ var StepTransition = (function () {
             _collectDataForm($(this).parents('.step').find('.step-form'));
         });
         StepsContainer.on('click', '.shop-item:not(.disabled):not(.fixed)', function () {
+            if ($(this).find('input').val() == 2848) {
+                if (!$(this).find('input').is(':checked')) {
+                    $('input[value="5304"]').parents('.shop-item').removeClass('fixed');
+                    if (!$('input[value="5137"]').is(':checked')) {
+                        _selectItem($('input[value="5137"]').parents('.shop-item:not(.disabled)'));
+                    }
+                } else {
+                    $('input[value="5137"], input[value="5304"]').parents('.shop-item').addClass('fixed');
+                    if ($('input[value="5137"]').is(':checked')) {
+                        _selectItem($('input[value="5137"]').parents('.shop-item:not(.disabled)'));
+                    }
+                    if ($('input[value="5304"]').is(':checked')) {
+                        _selectItem($('input[value="5304"]').parents('.shop-item:not(.disabled)'));
+                    }
+                }
+            }
             _selectItem($(this));
         });
         StepsContainer.on('change', '.shop-item:not(.disabled):not(.fixed) input:not([type="text"])', function () {
@@ -217,38 +189,43 @@ var StepTransition = (function () {
     }
 
     function _selectItem(shopItem) {
-        var input = shopItem.find('input:not([type="text"])');
-        shopItem.toggleClass('selected');
-        if (input.is(':checked')) {
-            events.emit('useCart', {
-                id: input.val(),
-                cat: input.attr('data-cat'),
-                isAdding: false
-            });
-            input.prop("checked", false).change();
-        } else {
-            events.emit('useCart', {
-                id: input.val(),
-                cat: input.attr('data-cat'),
-                isAdding: true
-            });
-            input.prop("checked", "checked").change();
+        if (shopItem != 'undefined') {
+            var input = shopItem.find('input:not([type="text"])');
+            shopItem.toggleClass('selected');
+            if (input.is(':checked')) {
+                events.emit('useCart', {
+                    id: input.val(),
+                    cat: input.attr('data-cat'),
+                    isAdding: false
+                });
+                input.prop("checked", false);
+            } else {
+                events.emit('useCart', {
+                    id: input.val(),
+                    cat: input.attr('data-cat'),
+                    isAdding: true
+                });
+                input.prop("checked", true);
+            }
+            input.change();
         }
     }
 
     function _deselectItem(input) {
-        var radioName = input.attr('name');
-        //enlève toute les items selected du même groupe pour les radio
-        $('input[type="radio"][name="' + radioName + '"]').parent('.shop-item').not(input.closest('.shop-item')).removeClass('selected');
-        //Enlève du panier les produits du même groupe
-        $('input[name="' + radioName + '"]:not(:checked):not([type="text"])').each(function () {
-            events.emit('useCart', {
-                id: $(this).val(),
-                cat: $(this).attr('data-cat'),
-                isAdding: false
+        if (typeof input != 'undefined') {
+            var radioName = input.attr('name');
+            //enlève toute les items selected du même groupe pour les radio
+            $('input[type="radio"][name="' + radioName + '"]').parent('.shop-item').not(input.closest('.shop-item')).removeClass('selected');
+            //Enlève du panier les produits du même groupe
+            $('input[name="' + radioName + '"]:not(:checked):not([type="text"])').each(function () {
+                events.emit('useCart', {
+                    id: $(this).val(),
+                    cat: $(this).attr('data-cat'),
+                    isAdding: false
+                });
             });
-        });
-        _verifyStep(input.parents('.step'));
+            _verifyStep(input.parents('.step'));
+        }
     }
 
     function _collectDataForm($form) {
@@ -322,7 +299,7 @@ var Cart = (function () {
             }
         }
     };
-    
+
     var tplItem = '<li class="items">' +
             '<div class="month">' +
             '<h4>Coûts mensuels</h4>' +
@@ -387,10 +364,10 @@ var Cart = (function () {
             '</li>' +
             '</ul>' +
             '</li>';
-    
+
     events.on('useCart', _useCard);
     events.on('addForm', _addForm);
-    
+
     function init() {
         _initCurrentItem();
     }
@@ -598,8 +575,8 @@ var aboTel = new Item("5138", "telephone", "Abo téléphonique", 0, true, "Inclu
 var lolTVRemise = new Item("5611", "tv", "6 mois gratuits", -17.00, true, "après 17€/mois", true, null);
 var lolTv = new SellProduct("2848", "tv", "LOLTV", 17.00, true, ["+110 Chaînes TV", "20 chaînes HD", "40 chaînes radio"], false, "../images/TV/320px/TV_Offre.jpg", true, lolTVRemise);
 var lolTv_materielList = [
-    new Item("5137", "tv_materiel", "Location 1x LOLTV MiniX", 4.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD"], false, "../images/TV/320px/Minix_Equipement_1.jpg"),
-    new Item("5304", "tv_materiel", "Location 2x LOLTV MiniX", 5.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD"], false, "../images/TV/320px/Minix_Equipement_1.jpg")
+    new Item("5137", "tv_materiel", "Location décodeur (requis)", 4.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD"], false, "../images/TV/320px/Minix_Equipement_1.jpg"),
+    new Item("5304", "tv_materiel", "Location décodeur 2ème TV", 5.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD"], false, "../images/TV/320px/Minix_Equipement_1.jpg")
 ];
 var remiseInstall = new Item("5313", "installation", "Installation offerte", -89.00, false, "", true, null);
 var installNoRemise = new SellProduct("5313", "installation", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", false, null);

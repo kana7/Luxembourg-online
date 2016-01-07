@@ -228,25 +228,25 @@
     min-height: 189px;
     padding: 15px 0 0 20px;
     background-color: $white;
-    border: 2px solid $blue;
+    border: 1px solid $blue;
     border-radius: 6px;
     @include box-shadow( 0 0 5px 0 rgba(0,0,0,0.4));
     @include clearfix;
     font-size: 14px;
-    cursor: pointer;
+    &:not(.disabled):not(.fixed){cursor: pointer;}
     &.disabled{
         border-color: $grey;
         opacity: 0.5;
         cursor: default;
     }
-    &:not(.disabled):hover{
+    &:not(.disabled):not(.fixed):hover{
         opacity: 0.8;
     }
     li{
         display: block;
     }
     &.selected{
-        border-color: $orange;
+        border: 1px solid $orange;
         &:before{
             content: "\65";
             position: absolute;

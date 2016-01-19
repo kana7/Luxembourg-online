@@ -211,6 +211,7 @@
     }
     .btn-orange{
         @include box-shadow(none);
+        margin: 0;
         [class^=icon-]{
             margin: 0;
             margin-left: 10px;
@@ -224,15 +225,25 @@
 .shop-item{
     display: block;
     position: relative;
+    text-align: center;
     overflow: hidden;
     min-height: 189px;
-    padding: 15px 0 0 20px;
+    padding: 15px;
     background-color: $white;
     border: 1px solid $blue;
     border-radius: 6px;
     @include box-shadow( 0 0 5px 0 rgba(0,0,0,0.4));
     @include clearfix;
     font-size: 14px;
+    .btn-blue{
+        height: 50px;
+        line-height: 50px;
+        padding: 0 30px;
+        font-size: 1.2em !important;
+        &:before{
+            content : "Choisir";
+        }
+    }
     &:not(.disabled):not(.fixed){cursor: pointer;}
     &.disabled{
         border-color: $grey;
@@ -247,35 +258,34 @@
     }
     &.selected{
         border: 1px solid $orange;
-        &:before{
-            content: "\65";
-            position: absolute;
-            top: 0;
-            right: 0;
-            z-index: 2;
+        .btn-blue{
             background-color: $orange;
-            border-radius: 0 0 0 6px;
-            color: $white;
-            padding: 5px 15px;
-            line-height: 40px !important;
-            font-size: 1.5em;
-            text-align: center;
+            font-size: 2em !important;
+            padding: 0 10px;
 
-            font-family: "luxonline-icons" !important;
-            font-style: normal !important;
-            font-weight: normal !important;
-            font-variant: normal !important;
-            text-transform: none !important;
-            speak: none;
-            line-height: 1;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            &:hover{
+                background-color: $orange;
+            }
+            &:before{
+                position: relative;
+                top: 1px;
+                font-family: "luxonline-icons" !important;
+                font-style: normal !important;
+                font-weight: normal !important;
+                font-variant: normal !important;
+                text-transform: none !important;
+                speak: none;
+                line-height: 1;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                content: "\45";
+            }
         }
     }
 }
 .shop-item-name{
     margin: 0 0 15px;
-    font-size: 1.4em;
+    font-size: 1.32em;
     font-weight: 800;
 }
 .shop-item-description{
@@ -284,16 +294,15 @@
 }
 .shop-item-img{
     display: inline-block;
-    float: right;
-    height: auto;
+    height: 125px;
     width: auto;
 }
 
 .shop-item-price{
     display: inline-block;
-    position: absolute;
-    left: 20px;
-    top: 72%;
+    position: relative;
+    float: left;
+    text-align: left;
     line-height: 20px;
     font-size: 1em;
     .price{

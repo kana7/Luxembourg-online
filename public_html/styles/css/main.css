@@ -2594,6 +2594,9 @@ hr {
 .icon-cable-ico:before {
   content: "\44"; }
 
+.icon-check-icone:before {
+  content: "\45"; }
+
 @-ms-viewport {
   width: auto !important; }
 .answer li {

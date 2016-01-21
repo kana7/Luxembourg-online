@@ -177,7 +177,7 @@
     }
     .step-subtitle{
         margin: 0;
-        font-size: 1.4em;
+        font-size: 1.3em;
         font-weight: 800;
     }
     .substep-title{
@@ -292,9 +292,12 @@
     line-height: 20px;
     font-size: 1.05em;
 }
+.shop-item-container-img{
+    overflow: hidden;
+}
 .shop-item-img{
     display: inline-block;
-    height: 125px;
+    height: 100%;
     width: auto;
 }
 

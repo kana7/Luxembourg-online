@@ -286,18 +286,26 @@
                             <div id="steps" class="phone-12 desk-6">
                                 <h2 class="step-title">Informations (suite)</h2>
                                 <p class="step-description">Veuillez entrer vos informations personnelles pour continuer.</p>
-                                <form class="phone-mt-40" name="ClientService" method="GET" action="livraison.html">
+                                <form id="clientInscription" class="phone-mt-40" name="ClientService" method="GET" action="livraison.html">
                                     <div class="clearfix">
+                                        <div class="clearfix">
+                                            <div class="left-container phone-12 tab-6 tab-pr-10">
+                                                <div class="input-group">
+                                                    <label for="Utilisateur">Nom utilisateur<span class="red">*</span></label>
+                                                    <input id="Utilisateur" name="_utilisateur" type="text" required>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="left-container phone-12 tab-6 tab-pr-10">
                                             <div class="input-group">
-                                                <label for="Utilisateur">Nom utilisateur<span class="red">*</span></label>
-                                                <input id="Utilisateur" name="_utilisateur" type="text" required>
+                                                <label for="Password">Mot de passe<span class="red">*</span></label>
+                                                <input id="Password" name="_password" type="password" required>
                                             </div>
                                         </div>
                                         <div class="right-container phone-12 tab-6 tab-pl-10">
                                             <div class="input-group">
-                                                <label for="MotPasse">Mot de passe<span class="red">*</span></label>
-                                                <input id="MotPasse" name="_motPasse" type="password" required>
+                                                <label for="Password2">Confirmez votre mot de passe<span class="red">*</span></label>
+                                                <input id="Password2" name="_password" type="password" required>
                                             </div>
                                         </div>
                                         <div class="left-container phone-12 tab-6 tab-pr-10">
@@ -353,7 +361,7 @@
                                         <a class="btn-blue pull-left" href="offres.html">
                                             Annuler la commande
                                         </a>
-                                        <button type="submit" style="margin: 0;" class="btn-orange pull-right">
+                                        <button type="button" style="margin: 0;" class="btn-orange pull-right submit">
                                             Suivant <span class="icon-right-arrow"></span>
                                         </button>
                                     </div>
@@ -502,6 +510,42 @@
         <script type="text/javascript" src="../scripts/vendor/jquery.min.js"></script>
         <script type="text/javascript" src="../scripts/main.js"></script>
         <script type="text/javascript" src="../scripts/onLeavePage.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $('.submit').on('click', function () {
+                    if (verifyForm('clientInscription')) {
+                        $('#clientInscription').submit();
+                    }
+                });
+                $('input[required]').blur(function () {
+                    $(this).removeClass('not-fill');
+                });
+            });
+            function verifyForm(form) {
+                var flag = true;
+                var vform = form;
+                $('#' + vform).find('[required]').each(function () {
+                    if (!$(this).val()) {
+                        flag = false;
+                        $(this).addClass('not-fill');
+                    }
+                });
+                if (flag && !testEmail($('#Mail').val())) {
+                    $('#Mail').addClass('not-fill');
+                    alert("E-mail invalide! Assurez-vous d'avoir correctement saisi votre adresse électronique.");
+                    return false;
+                } else if (flag && $('#Password2').val() !== $('#Password').val()) {
+                    $('#Password, #Password2').addClass('not-fill');
+                    alert('Les mots de passe ne correspondent pas');
+                    return false;
+                } else {
+                    if (!flag) {
+                        alert('Remplissez les champs obligatoires pour continuer');
+                    }
+                    return flag;
+                }
+            }
+        </script>
         <!--<script type="text/javascript" src="../scripts/analytics.js"></script>-->
     </body>
 </html>

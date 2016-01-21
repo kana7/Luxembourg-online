@@ -21,7 +21,7 @@ var StepTransition = (function () {
             '<div class="phone-12 lgdesk-5 pull-right phone-mb-15 lgdesk-mb-0 shop-item-container-img">' +
             '<img class="shop-item-img" src="{{link}}" alt="{{name}} shop LOL"/>' +
             '</div>' +
-            '<div class="phone-12 lgdesk-7 phone-mb-15">' +
+            '<div class="phone-12 lgdesk-7">' +
             '<h3 class="shop-item-name">{{name}}</h3>' +
             '<ul class="shop-item-description">' +
             '{{#commentaire}}' +
@@ -29,26 +29,28 @@ var StepTransition = (function () {
             '{{/commentaire}}' +
             '</ul>' +
             '</div>' +
-            '<div style="height: 50px;" class="phone-12 phone-mt-20">' +
+            '<div style="height: 50px;" class="phone-12 phone-mt-30">' +
             '{{#isSellProduct}}' +
             '{{^isRemise}}' +
-            '<ul class="shop-item-price orange vertical-align-middle">' +
+            '<ul class="shop-item-price orange vertical-align-middle phone-6">' +
             '<li class="extra-bold price">{{#formatPrice}}{{fullPrice}}{{/formatPrice}} €{{#isMonthlyCost}}/mois{{/isMonthlyCost}}</li>' +
             '</ul>' +
             '{{/isRemise}}' +
             '{{#isRemise}}' +
-            '<ul class="shop-item-price promo orange vertical-align-middle">' +
+            '<ul class="shop-item-price promo orange vertical-align-middle phone-6">' +
             '<li class="extra-bold price">{{#formatPrice}}{{fullPrice}}{{/formatPrice}} €{{#isMonthlyCost}}/mois{{/isMonthlyCost}}</li>' +
             '<li>PROMO : {{remise.name}}</li>' +
             '</ul>' +
             '{{/isRemise}}' +
             '{{/isSellProduct}}' +
             '{{^isSellProduct}}' +
-            '<ul class="shop-item-price orange vertical-align-middle">' +
+            '<ul class="shop-item-price orange vertical-align-middle phone-6">' +
             '<li class="extra-bold price">{{#formatPrice}}{{price}}{{/formatPrice}} €{{#isMonthlyCost}}/mois{{/isMonthlyCost}}</li>' +
             '</ul>' +
             '{{/isSellProduct}}' +
+            '<div>'+
             '<div class="pull-right btn-blue"></div>' +
+            '</div>'+
             '</div>' +
             '</div>' +
             '</div>' +
@@ -185,6 +187,8 @@ var StepTransition = (function () {
             $('html,body').animate({
                 scrollTop: $('#step-list').offset().top
             }, 0);
+        }else{
+            window.location.href = "../shop/login.html";
         }
     }
 
@@ -632,13 +636,13 @@ var abonnements_list = {
     }
 };
 var materiel_list = [
-    new Item("5436", "materiels", "FRITZ!WLAN Repeater 450E", 52.00, false, ["Répétiteur pour étendre le réseau wifi", "LAN :  1 x Gigabit", "WLAN :  2,4 - jusqu'à 450Mbit/s", " "], false, "../images/equipment/modem/r450e/r450e_small1.png"),
-    new Item("5437", "materiels", "FRITZ!WLAN Repeater 1750E", 84.00, false, ["Répétiteur pour étendre le réseau wifi", "LAN :  1 x Gigabit", "WLAN : 2,4 et 5 Ghz - jusqu'à 1750Mbit/s", " "], false, "../images/equipment/modem/r1750e/r1750e_small1.png"),
-    new Item("4570", "materiels", "FRITZ!Powerline 520E Set", 89.00, false, ["Solution pour étendre le réseau à travers le circuit électrique", "LAN :  1 x Gigabit", " "], false, "../images/equipment/modem/pl520eset/pl520eset_small1.png"),
-    new Item("4450", "materiels", "FRITZ!Powerline 520E Single", 49.00, false, ["Solution pour étendre le réseau à travers le circuit électrique", "LAN :  1 x Gigabit", " ", " "], false, "../images/equipment/modem/pl520e/pl520e_small1.png"),
-    new Item("3148", "materiels", "FRITZ!Powerline 546E", 95.00, false, ["Solution pour étendre le réseau à travers le circuit électrique", "LAN :  1 x fast Ethernet", "WLAN :  2,4 Ghz - jusqu'à 300Mbit/s", " "], false, "../images/equipment/modem/pl546e/pl546e.png"),
-    new Item("5439", "materiels", "FRITZ!WLAN Stick AC", 28.00, false, ["Adaptateur wifi", "WLAN : 2,4 et 5 Ghz - jusqu'à 430Mbit/s", " ", " "], false, "../images/equipment/modem/wlansac/wlansac_small.png"),
-    new Item("5395", "materiels", "Motorola T201", 31.00, false, ["Téléphone numérique sans fil DECT"], false, "../images/equipment/telephone/motorola/t201/motorola_t201_small1.png"),
+    new Item("5436", "materiels", "FRITZ!WLAN Repeater 450E", 52.00, false, ["Répétiteur pour étendre le réseau wifi", "WLAN :  2,4 - jusqu'à 450Mbit/s"], false, "../images/equipment/modem/r450e/r450e_small1.png"),
+    new Item("5437", "materiels", "FRITZ!WLAN Repeater 1750E", 84.00, false, ["Répétiteur pour étendre le réseau wifi", "WLAN : 2,4 et 5 Ghz - jusqu'à 1750Mbit/s"], false, "../images/equipment/modem/r1750e/r1750e_small1.png"),
+    new Item("4570", "materiels", "FRITZ!Powerline 520E Set", 89.00, false, ["Solution pour étendre le réseau à travers le circuit électrique (ethernet)"], false, "../images/equipment/modem/pl520eset/pl520eset_small1.png"),
+    new Item("4450", "materiels", "FRITZ!Powerline 520E Single", 49.00, false, ["Solution pour étendre le réseau à travers le circuit électrique (ethernet)"], false, "../images/equipment/modem/pl520e/pl520e_small1.png"),
+    new Item("3148", "materiels", "FRITZ!Powerline 546E", 95.00, false, ["Solution pour étendre le réseau à travers le circuit électrique (ethernet + wifi)"], false, "../images/equipment/modem/pl546e/pl546e.png"),
+    new Item("5439", "materiels", "FRITZ!WLAN Stick AC", 28.00, false, ["Adaptateur wifi", "WLAN : 2,4 et 5 Ghz - jusqu'à 430Mbit/s"], false, "../images/equipment/modem/wlansac/wlansac_small.png"),
+    new Item("5395", "materiels", "Motorola T201", 31.00, false, ["Pack Mono : 1 x Téléphone numérique sans fil DECT"], false, "../images/equipment/telephone/motorola/t201/motorola_t201_small1.png"),
     new Item("5396", "materiels", "Motorola T202", 48.00, false, ["Pack Duo : 2 x Téléphone numérique sans fil DECT"], false, "../images/equipment/telephone/motorola/t202/motorola_t202_small1.png"),
     new Item("5397", "materiels", "Motorola T203", 65.00, false, ["Pack Trio : 3 x Téléphone numérique sans fil DECT"], false, "../images/equipment/telephone/motorola/t203/motorola_t203_small1_1.png")
 ];

@@ -6,11 +6,11 @@
 }
 
 @include viewport(max, $max: 1055){
-    .shop-item{
+    /*.shop-item{
         [class^="phone-"]{
             float: none;
         }
-    }
+    }*/
 }
 
 @include media(tab){
@@ -119,7 +119,6 @@
 @include media(lgdesk){
     .shop-item{
         text-align: left;
-        min-height: 230px;
         .shop-item-price{
             position: absolute;
         }

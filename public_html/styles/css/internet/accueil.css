@@ -150,7 +150,7 @@
   font-weight: 800; }
 #steps .step-subtitle {
   margin: 0;
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-weight: 800; }
 #steps .substep-title {
   display: block;
@@ -258,9 +258,12 @@
   line-height: 20px;
   font-size: 1.05em; }
 
+.shop-item-container-img {
+  overflow: hidden; }
+
 .shop-item-img {
   display: inline-block;
-  height: 125px;
+  height: 100%;
   width: auto; }
 
 .shop-item-price {
@@ -316,8 +319,11 @@ input[name="client"] {
   .shop-list > ul {
     font-size: 12px; } }
 @media screen and (max-width: 1055px) {
-  .shop-item [class^="phone-"] {
-    float: none; } }
+  /*.shop-item{
+      [class^="phone-"]{
+          float: none;
+      }
+  }*/ }
 @media screen and (min-width: 672px) {
   #test-offres {
     padding: 6px 0 10px; }
@@ -413,8 +419,7 @@ input[name="client"] {
       width: 100%; } }
 @media screen and (min-width: 1302px) {
   .shop-item {
-    text-align: left;
-    min-height: 230px; }
+    text-align: left; }
     .shop-item .shop-item-price {
       position: absolute; }
 

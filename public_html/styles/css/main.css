@@ -2914,14 +2914,9 @@ header {
   width: auto;
   height: 100%;
   margin-right: 30px; }
-  .logo.noel {
-    bottom: 9px;
-    height: auto; }
-    .logo.noel img {
-      max-height: 50px; }
   .logo img {
     width: auto;
-    height: auto;
+    height: 100%;
     max-height: 44px; }
 
 #slider {

@@ -273,105 +273,75 @@
                                 <li class="step-separator"><span class="icon-right-arrow"></span></li>
                                 <li>Télévision</li>
                                 <li class="step-separator"><span class="icon-right-arrow"></span></li>
-                                <li>Informations</li>
+                                <li class="active">Informations</li>
                                 <li class="step-separator"><span class="icon-right-arrow"></span></li>
-                                <li class="active">Confirmation</li>
+                                <li>Confirmation</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="phone-p-30">
+                <div class="phone-pt-30 phone-pb-30">
                     <div class="container-wrapper">
                         <div class="row">
-                            <div id="steps" class="phone-12 desk-10 lgdesk-7">
-                                <h2 class="step-title">Votre commande</h2>
-                                <p class="step-description">Veuillez trouver ci-dessous un résumé de votre commande.</p>
-                                <div id="personalData" class="shop-list phone-12 desk-4 phone-mt-20 tab-mt-30">
+                            <div class="phone-12 desk-8 lgdesk-9 desk-pr-10">
+                                <form name="frmShopping" action="/Scripts/sql.exe" method="get">
+                                    <input type="hidden" name="SqlDB" value="SESDispo" />
+                                    <input type="hidden" name="Sql" value="SESDispo:CreateSubscription.phs" />
+                                    <input type="hidden" value="10" name="anschluss" />
+                                    <div id="steps">
+                                        <div id="infos">
+                                            <h2 class="step-title">Informations</h2>
+                                            <p class="step-description">Veuillez continuer avec l'une des options suivantes.</p>
+                                            <div class="clearfix phone-mt-30">
+                                                <input id="client" type="radio" name="client" value="true">
+                                                <label class="blue extra-bold client-label" for="client">Je suis déjà client :</label>
+                                                <div class="phone-pt-15 phone-pb-30">
+                                                    <input class="form-input phone-mr-10" type="text" name="xuser" placeholder="Nom d'utilisateur">
+                                                    <input class="form-input" type="password" name="xpw" placeholder="Mot de passe">
+                                                    <button style="display: block; padding-left: 30px; padding-right: 30px;" class="btn-blue phone-mt-15" type="submit">Se connecter</button>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix">
+                                                <input id="notClient" type="radio" name="client" value="false">
+                                                <label class="blue extra-bold client-label" for="notClient">Je suis un nouveau client :</label>
+                                                <div class="phone-pt-15">
+                                                    <a style="padding-left: 16.5px; padding-right: 16.5px;" class="btn-blue cancelUnload" href="/Scripts/sql.exe?SqlDB=SESDispo&Sql=AddAccount.phs&NextScript=CheckOut.phs&NextScriptVar1=_ShoppingCartType&NextScriptValue1=1&NextScriptVar2=_CheckOut&NextScriptValue2=0">Créer un compte</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="clearfix phone-mt-40 phone-mb-20 buttons-next-previous">
+                                                <a href="#" class="btn-blue previous pull-left">
+                                                    <span class="icon-left-arrow"></span> Retour
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="phone-12 desk-4 lgdesk-3 desk-pl-10">
+                                <div id="panier">
                                     <ul>
-                                        <li style="font-size: 12px;" class="items">
-                                            <div class="section">
-                                                <h4>Vos données</h4>
-                                                <ul>
-                                                    <li><span class="label">Herrn</span></li>
-                                                    <li><span class="label">Kremer Marc</span></li>
-                                                    <li><span class="label">42-44, Avenue de la Gare</span></li>
-                                                    <li><span class="label">2550 Luxembourg</span></li>
-                                                    <li><span class="label">Luxembourg</span></li>
-                                                    <li><span class="label">E-mail: mkremer@internet.lu</span></li>
-                                                </ul>
-                                            </div>
-                                            <div class="section">
-                                                <h4>Livraison</h4>
-                                                <ul>
-                                                    <li><span class="label">Pas de livraison</span></li>
-                                                </ul>
-                                            </div>
-                                            <div class="section">
-                                                <h4>Mode de paiement</h4>
-                                                <ul>
-                                                    <li>
-                                                        <span class="label">Par domiciliation</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="section">
-                                                <h4>Mode de facturation</h4>
-                                                <ul>
-                                                    <li>
-                                                        <span class="label">Par e-mail</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="shop-list phone-12 desk-6 phone-mt-30 pull-right">
-                                    <ul>
-                                        <li class="header"><h3>Votre commande</h3></li>
+                                        <li class="header"><h3>Récapitulatif</h3></li>
                                         <li class="items">
                                             <div class="month">
                                                 <h4>Coûts mensuels</h4>
                                                 <ul>
                                                     <li>
-                                                        <span class="label">LOL FIBER 100</span><span class="price">54,90 €/mois</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="label">Location FRITZ!Box 7490</span><span class="price">6,00 €/mois</span>
+                                                        <span class="label">Coûts uniques</span>
+                                                        <span class="price">89.00 €</span>
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <div class="unique"><h4>Coûts uniques</h4>
+                                            <div class="unique">
+                                                <h4>Coûts uniques</h4>
                                                 <ul>
                                                     <li>
-                                                        <span class="label">FRITZ!WLAN Repeater 450E</span>
-                                                        <span class="price">52,00 €</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="label">FRITZ!Powerline 520E Single</span>
-                                                        <span class="price">49,00 €</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="label">FRITZ!Powerline 520E Set</span>
-                                                        <span class="price">89,00 €</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="label">FRITZ!WLAN Stick AC</span>
-                                                        <span class="price">28,00 €</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="label">Motorola T202</span>
-                                                        <span class="price">48,00 €</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="label">Motorola T201</span>
-                                                        <span class="price">31,00 €</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="label">FRITZ!WLAN Repeater 1750E</span>
-                                                        <span class="price">84,00 €</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="label">FRITZ!Powerline 546E</span><span class="price">95,00 €</span>
+                                                        <span class="label">Coûts uniques</span>
+                                                        <span class="price price-delete">89.00 €</span>
+                                                        <div class="remise-name">
+                                                            <span class="label"><span class="bold">PROMO</span> : installation offerte</span>
+                                                            <span class="price price-delete">89.00 €</span>
+                                                        </div>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -380,22 +350,15 @@
                                             <ul>
                                                 <li id="monthlyPrice">
                                                     <span class="prices-label">Coûts mensuels :</span>
-                                                    <span class="prices-price">58,90 €<span class="normal lowercase"> /mois</span></span>
+                                                    <span class="prices-price">89.00 €<span class="normal lowercase">/mois</span></span>
                                                 </li>
                                                 <li id="uniquePrice">
-                                                    <span class="prices-label">Coûts Unique :</span><span class="prices-price">476,00 €</span>
+                                                    <span class="prices-label">Coûts Unique :</span>
+                                                    <span class="prices-price">44.90 €</span>
                                                 </li>
                                             </ul>
                                         </li>
                                     </ul>
-                                </div>
-                                <div class="clearfix phone-12 phone-mt-30">
-                                    <a class="btn-blue pull-left cancelUnload" href="livraison.html">
-                                            <span class="icon-left-arrow"></span> Retour
-                                        </a>
-                                    <a style="margin: 0;" class="btn-orange back pull-right" href="../index.htm">
-                                        Terminer la commande
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -537,10 +500,25 @@
             </footer>
             <!--              ./FOOTER               -->
         </div>
+
         <script type="text/javascript" src="../scripts/vendor/jquery.min.js"></script>
         <script type="text/javascript" src="../scripts/main.js"></script>
-        <!--<script type="text/javascript" src="../scripts/analytics.js"></script>-->
         <script type="text/javascript" src="../scripts/onLeavePage.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                if (!$('input[name="client"]').is(':checked')) {
+                    $('input[name="client"]').siblings('div').addClass('is-disabled');
+                    $('input[name="client"]').siblings('div').find('button, input').attr("disabled", "disabled");
+                }
+                $('input[name="client"]').on('change', function () {
+                    $(this).siblings('div').removeClass('is-disabled');
+                    $(this).siblings('div').find('button, input').removeAttr('disabled');
+                    $('input[name="client"]').not(this).siblings('div').addClass('is-disabled');
+                    $('input[name="client"]').not(this).siblings('div').find('button, input').attr("disabled", "disabled");
+                });
+            });
+        </script>
+        <!--<script type="text/javascript" src="../scripts/analytics.js"></script>-->
     </body>
 
 </html>

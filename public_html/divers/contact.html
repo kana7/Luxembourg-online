@@ -344,6 +344,7 @@
                             <form ENCTYPE="multipart/form-data" id="frmContact" name="frmContact" method="post" action="/Scripts/sql.exe">
                                 <input type="hidden" name="SqlDB" value="LOLPublic">		
                                 <input type="hidden" name="Sql" value="contact.uhs">
+                                <input id="ip_adress" type="hidden" value="" name="_ip">
                                 <div class="contact-form-info phone-12 desk-6">
                                     <h3>Vos coordonnées</h3>
                                     <div class="left-container phone-12">
@@ -650,24 +651,6 @@
                 $('input[required], textarea[required], select[required]').blur(function () {
                     $(this).removeClass('not-fill');
                 });
-                function verifyForm(form) {
-                    var flag = true;
-                    var vform = form;
-                    var mail = $("#" + vform).find("input[name=_email]");
-                    if (mail.val()) {
-                        if (!testEmail(mail.val())) {
-                            alert("E-mail invalide! Assurez-vous d'avoir correctement saisi votre adresse électronique.");
-                            return false;
-                        }
-                    }
-                    $('#' + vform).find('[required]').each(function () {
-                        if (!$(this).val()) {
-                            flag = false;
-                            $(this).addClass('not-fill');
-                        }
-                    });
-                    return flag;
-                }
 
                 $(".btnSubmitForm").click(function (e) {
                     e.preventDefault();
@@ -687,10 +670,41 @@
                         }
                         flag = 0;
                     } else {
-                        $("#" + form).submit();
+                        getIp();
+                        submitForm();
                     }
                 });
             });
+            function getIp() {
+                $.get("http://ipinfo.io", function (response) {
+                    $('#ip_adress').val(response.city + ", " + response.country);
+                }, "jsonp");
+            }
+            function verifyForm(form) {
+                var flag = true;
+                var vform = form;
+                var mail = $("#" + vform).find("input[name=_email]");
+                if (mail.val()) {
+                    if (!testEmail(mail.val())) {
+                        alert("E-mail invalide! Assurez-vous d'avoir correctement saisi votre adresse électronique.");
+                        return false;
+                    }
+                }
+                $('#' + vform).find('[required]').each(function () {
+                    if (!$(this).val()) {
+                        flag = false;
+                        $(this).addClass('not-fill');
+                    }
+                });
+                return flag;
+            }
+            function submitForm() {
+                if ($('#ip_adress').val()) {
+                    $('#frmContact').submit();
+                } else {
+                    setTimeout(submitForm, 250);
+                }
+            }
         </script>
         <script>
             var map;

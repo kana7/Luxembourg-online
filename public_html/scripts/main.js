@@ -35,12 +35,6 @@ var encartDispoTemplate = '<div class="phone-12 tab-6 desk-3">' +
         '</div>' +
         '</div>';
 
-        var slider_noel1 = $('<div class="gallery-cell"><div class="infos image-6"><div class="container-wrapper"><div class="row"><div class="phone-12 align-center"><h2 class="title white bold"><span style="font-size: 0.9em;">Luxembourg Online <br /><span class="light">vous souhaite</span> </span><br /><span style="font-size: 1.2em;">une bonne année 2016 !</span></h2></div></div></div></div></div>');
-
-        var slider_noel2 = $('<div class="gallery-cell"><div class="infos image-5"><div class="container-wrapper"><div class="row"><div class="phone-12 align-center"><h2 class="title white bold"><span style="font-size: 0.9em;">Luxembourg Online <br /><span class="light">vous souhaite</span> </span><br /><span style="font-size: 1.2em;">une bonne année 2016 !</span></h2></div></div></div></div></div>');
-
-var randomizeSlider = [slider_noel1, slider_noel2];
-
         var temp;
 // ON PAGE READY
         $(function () {

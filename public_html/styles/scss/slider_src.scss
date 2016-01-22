@@ -13,12 +13,6 @@
         &.image-3{
             background-image: url(../../images/Homepage/SLIDER/Slider3_672x320px.jpg);
         }
-        &.image-5{
-            background-image: url(../../images/Homepage/SLIDER/Slider_672x320px_nouvelan1.jpg);
-        }
-        &.image-6{
-            background-image: url(../../images/Homepage/SLIDER/Slider_672x320px_nouvelan2.jpg);
-        }
     }
 }
 
@@ -34,12 +28,6 @@
             }
             &.image-3{
                 background-image: url(../../images/Homepage/SLIDER/Slider3_1056x450px.jpg);
-            }
-            &.image-5{
-                background-image: url(../../images/Homepage/SLIDER/Slider_1056x450px_nouvelan1.jpg);
-            }
-            &.image-6{
-                background-image: url(../../images/Homepage/SLIDER/Slider_1056x450px_nouvelan2.jpg);
             }
         }
     } 
@@ -57,12 +45,6 @@
             &.image-3{
                 background-image: url(../../images/Homepage/SLIDER/Slider3_1302x330px.jpg);
             }
-            &.image-5{
-                background-image: url(../../images/Homepage/SLIDER/Slider_1302x330px_nouvelan1.jpg);
-            }
-            &.image-6{
-                background-image: url(../../images/Homepage/SLIDER/Slider_1302x330px_nouvelan2.jpg);
-            }
         }
     }
 }
@@ -79,12 +61,6 @@
             &.image-3{
                 background-image: url(../../images/Homepage/SLIDER/Slider3_1920x360px.jpg);
             }
-            &.image-5{
-                background-image: url(../../images/Homepage/SLIDER/Slider_1920x360px_nouvelan1.jpg);
-            }
-            &.image-6{
-                background-image: url(../../images/Homepage/SLIDER/Slider_1920x360px_nouvelan2.jpg);
-            }
         }
     }
 }
@@ -99,48 +75,14 @@
 }
 
 @media screen and (max-width: 671px) {
-    #slider-contents .infos.image-6 .title{
-        line-height: 35px !important;
-    }
-    #slider-contents .infos.image-5 .title{
-        line-height: 40px !important;
-    }
     #slider-contents .infos.image-2 .row>div{
         top: 0px !important;
     }
 }
 
 @media screen and (max-width: 1055px) {
-    #slider-contents .infos.image-6 .title{
-        line-height: 55px;
-    }
-    #slider-contents .infos.image-5 .row{
-        @include vertical-align-middle;
-        .title{
-            position: relative;
-            line-height: 55px;
-        }
-    }
     #slider-contents .infos.image-2 .row>div{
         top: 20px;
         text-align: center !important;
-    }
-}
-@media screen and (min-width: 1056px) {
-    #slider-contents .infos.image-6 .title{
-        position: relative;
-        line-height: 52px;
-        bottom: 20px;
-    }
-    #slider-contents .infos.image-5 .title{
-        position: relative;
-        line-height: 65px;
-    }
-}
-@media screen and (min-width: 1302px) {
-    #slider-contents .infos.image-6 .title{
-        position: relative;
-        line-height: 58px;
-        bottom: 35px;
     }
 }

@@ -36,9 +36,25 @@
         background-size: 1056px auto;
         &:not(.not-accueil){
             height: 290px !important;
+            .section-title{
+                margin-top: 0;
+            }
         }
         &.not-accueil{
             height: 200px !important;
+        }
+    }
+    #promo-noel{
+        background-size: 1056px auto;
+        &:not(.not-accueil){
+            height: 430px !important;
+        }
+        &.not-accueil{
+            height: 290px !important;
+            .section-title{
+                margin-top: -10px;
+                margin-bottom: 0;
+            }
         }
     }
 }
@@ -76,6 +92,11 @@
             strong{
                 display: block;
             }
+        }
+    }
+    #promo-fibre{
+        &:not(.not-accueil){
+            padding-top: 60px;
         }
     }
     .promo-info{

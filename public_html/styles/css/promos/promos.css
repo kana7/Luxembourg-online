@@ -103,8 +103,20 @@
     background-size: 1056px auto; }
     #promo-fibre:not(.not-accueil) {
       height: 290px !important; }
+      #promo-fibre:not(.not-accueil) .section-title {
+        margin-top: 0; }
     #promo-fibre.not-accueil {
-      height: 200px !important; } }
+      height: 200px !important; }
+
+  #promo-noel {
+    background-size: 1056px auto; }
+    #promo-noel:not(.not-accueil) {
+      height: 430px !important; }
+    #promo-noel.not-accueil {
+      height: 290px !important; }
+      #promo-noel.not-accueil .section-title {
+        margin-top: -10px;
+        margin-bottom: 0; } }
 @media screen and (min-width: 1056px) {
   #promo-fibre:not(.not-accueil) {
     background-image: url("../../../images/promos/Accueil/Offre_Fibre_JAN_1302x370px.jpg"); }
@@ -129,6 +141,9 @@
       line-height: 35px; }
       #promo-noel .section-description strong, #promo-fibre .section-description strong {
         display: block; }
+
+  #promo-fibre:not(.not-accueil) {
+    padding-top: 60px; }
 
   .promo-info {
     margin-bottom: 0px; }

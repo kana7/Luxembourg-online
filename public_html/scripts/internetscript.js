@@ -63,7 +63,7 @@ var popuptemplate = '<div id="testDispo" class="popup">' +
         '<div class="background-client"></div>' +
         '<div class="white-pannel">' +
         '<button class="pannel-close"><span class="icon-x-icone"></span></button>' +
-        '<h2>Tester la disponibilité</h2>' +
+        '<h2>Testez la disponibilité</h2>' +
         '<input value name="zipcode" class="input-white" type="text" placeholder="Code postal"/>' +
         '<select name="ville" value class="input-white select"></select>' +
         '<select name="rue" value class="input-white select"></select>' +

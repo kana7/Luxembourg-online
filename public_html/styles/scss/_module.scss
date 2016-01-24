@@ -544,10 +544,17 @@ span[class^=icon-]
     }
     &.white{
         li:not(.active):hover{
-        .link{
-            border-bottom: 2px dotted $white;
+            .link{
+                border-bottom: 2px dotted $white;
+            }
         }
     }
+    &.blue{
+        li:not(.active):hover{
+            .link{
+                border-bottom: 2px dotted $blue;
+            }
+        }
     }
 }
 

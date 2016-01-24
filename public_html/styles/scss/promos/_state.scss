@@ -17,18 +17,10 @@
 @include media(tab){
     #promo-fibre{
         &:not(.not-accueil){
-            background-image: url('../../../images/promos/Promo Fibre Noel/Accueil/Promo_Fibre_Noel_1056x430px.jpg');
+            background-image: url('../../../images/promos/Accueil/Offre_Fibre_JAN_1056x290px.jpg');
         }
         &.not-accueil{
-            background-image: url('../../../images/promos/Promo Fibre Noel/Promo Fibre Noel/Promo_Fibre_Noel_1056x290px.jpg');
-        }
-    }
-    #promo-internetTV{
-        &:not(.not-accueil){
-            background-image: url(../../../images/promos/Accueil/Promo_TV_1056x430px.jpg);
-        }
-        &.not-accueil{
-            background-image: url(../../../images/promos/Promos_TVInternet/Promo_TV_1056x290px.jpg);
+            background-image: url('../../../images/promos/Promo_Fibre/Offre_Fibre_JAN_1056x200px.jpg');
         }
     }
     #promo-noel{
@@ -39,14 +31,14 @@
             background-image: url(../../../images/promos/Promo_TVNoel/Offre_TV_1056x290px.jpg);
         }
     }
-    #promo-fibre, #promo-internetTV, #promo-noel{
+
+    #promo-fibre{
         background-size: 1056px auto;
         &:not(.not-accueil){
-            height: 430px !important;
-        }
-        padding: 5px 0 30px;
-        &.not-accueil{
             height: 290px !important;
+        }
+        &.not-accueil{
+            height: 200px !important;
         }
     }
 }
@@ -54,18 +46,10 @@
 @include media(desk){
     #promo-fibre{
         &:not(.not-accueil){
-            background-image: url('../../../images/promos/Promo Fibre Noel/Accueil/Promo_Fibre_Noel_1302x370px.jpg');
+            background-image: url('../../../images/promos/Accueil/Offre_Fibre_JAN_1302x370px.jpg');
         }
         &.not-accueil{
-            background-image: url('../../../images/promos/Promo Fibre Noel/Promo Fibre Noel/Promo_Fibre_Noel_1302x370px.jpg');
-        }
-    }
-    #promo-internetTV{
-        &:not(.not-accueil){
-            background-image: url(../../../images/Promos/Accueil/Promo_TV_1302x370px.jpg);
-        }
-        &.not-accueil{
-            background-image: url(../../../images/Promos/Accueil/Promo_TV_1302x370px.jpg);
+            background-image: url('../../../images/promos/Promo_Fibre/Offre_Fibre_JAN_1302x370px.jpg');
         }
     }
     #promo-noel{
@@ -76,7 +60,7 @@
             background-image: url(../../../images/promos/Accueil/Promo_TV_Noel_1302x370px.jpg);
         }
     }
-    #promo-fibre, #promo-internetTV, #promo-noel{
+    #promo-noel, #promo-fibre{
         background-size: 1302px auto;
         &:not(.not-accueil), &.not-accueil{
             height: 370px !important;
@@ -149,18 +133,10 @@
 @include media(lgdesk){
     #promo-fibre{
         &:not(.not-accueil){
-            background-image: url('../../../images/promos/Promo Fibre Noel/Accueil/Promo_Fibre_Noel_1920x400px.jpg');
+            background-image: url('../../../images/promos/Accueil/Offre_Fibre_JAN_1920x400px.jpg');
         }
         &.not-accueil{
-            background-image: url('../../../images/promos/Promo Fibre Noel/Promo Fibre Noel/Promo_Fibre_Noel_1920x400px.jpg');
-        }
-    }
-    #promo-internetTV{
-        &:not(.not-accueil){
-            background-image: url(../../../images/Promos/Accueil/Promo_TV_1920x400px.jpg);
-        }
-        &.not-accueil{
-            background-image: url(../../../images/Promos/Accueil/Promo_TV_1920x400px.jpg);
+            background-image: url('../../../images/promos/Promo_Fibre/Offre_Fibre_JAN_1920x400px.jpg');
         }
     }
     #promo-noel{
@@ -171,7 +147,7 @@
             background-image: url(../../../images/promos/Accueil/Promo_TV_Noel_1920x400px.jpg);
         }
     }
-    #promo-fibre, #promo-internetTV, #promo-noel{
+    #promo-noel, #promo-fibre{
         background-size: 1920px auto;
         padding: 30px 0;
         &:not(.not-accueil), &.not-accueil{

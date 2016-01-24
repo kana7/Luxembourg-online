@@ -3777,6 +3777,8 @@ span[class^=icon-] {
     border-bottom: 2px dotted #c0c0c0; }
   .sub-menu.white li:not(.active):hover .link {
     border-bottom: 2px dotted #fff; }
+  .sub-menu.blue li:not(.active):hover .link {
+    border-bottom: 2px dotted #004994; }
 
 .btn-container {
   display: block;
@@ -6805,7 +6807,8 @@ h2.contact-title {
 
   .section-description {
     font-size: 18px;
-    margin: 0 0 45px; }
+    margin: 0 0 45px;
+    }
 
   .bottom-info {
     font-size: 10pt; }

@@ -310,6 +310,7 @@ header{
         max-height: 44px;
     }
 }
+
 // CAROUSEL
 // --------------------------------------------------
 #slider{
@@ -579,6 +580,16 @@ header{
     {
         width: 80%;
         height: auto;
+    }
+    &:not(.height-auto){
+        .logo-404{
+            img{
+                width: 30%;
+                height: auto;
+                min-width: 270px;
+                max-width: 410px;
+            }
+        }
     }
 }
 

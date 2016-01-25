@@ -114,9 +114,9 @@ svg:not(:root) {
     z-index: 1;
 }
 .section-title{
-    font-size: 30px;
+    font-size: 42px;
     line-height: 30px;
-    margin: 25px 0;
+    margin: 12px 0 25px;
     text-transform: uppercase;
     strong{
         display: block;
@@ -157,7 +157,8 @@ svg:not(:root) {
     text-transform: uppercase;
 }
 .section-description{
-    font-size: 14px;
+    font-size: 21px;
+    line-height: 25px;
     font-weight: 600;
     margin: 0 0 20px;
 }
@@ -246,7 +247,7 @@ span[class^=icon-]
     display: inline-block;
     position: relative;
     font-weight: 800;
-    font-size: 54px;
+    font-size: 42px;
     margin: 0 0 20px;
     padding-top: 5px;
     .price-label{

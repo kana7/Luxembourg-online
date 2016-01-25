@@ -75,11 +75,23 @@
 }
 
 @media screen and (max-width: 671px) {
-    #slider-contents .infos.image-2 .row>div{
-        top: 0px !important;
-    }
+    #slider-contents{
+        .infos.image-2 .row>div{
+            top: 0px !important;
+        }
+        .infos.image-1{
+            .title{
+                font-size: 35px;
+            }
+            .top-details{
+                font-size: 18px;
+            }
+            .bottom-details{
+                font-size: 13px;
+            }
+        }
+    } 
 }
-
 @media screen and (max-width: 1055px) {
     #slider-contents .infos.image-2 .row>div{
         top: 20px;

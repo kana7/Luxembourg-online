@@ -3134,6 +3134,11 @@ header {
   .section-layout img {
     width: 80%;
     height: auto; }
+  .section-layout:not(.height-auto) .logo-404 img {
+    width: 30%;
+    height: auto;
+    min-width: 270px;
+    max-width: 410px; }
 
 .section-img-align-bottom {
   position: relative;
@@ -3404,9 +3409,9 @@ svg:not(:root) {
   z-index: 1; }
 
 .section-title {
-  font-size: 30px;
+  font-size: 42px;
   line-height: 30px;
-  margin: 25px 0;
+  margin: 12px 0 25px;
   text-transform: uppercase; }
   .section-title strong {
     display: block; }
@@ -3446,9 +3451,11 @@ svg:not(:root) {
   text-transform: uppercase; }
 
 .section-description {
-  font-size: 14px;
+  font-size: 21px;
+  line-height: 25px;
   font-weight: 600;
-  margin: 0 0 20px; }
+  margin: 0 0 20px;
+  }
 
 .section-text {
   font-size: 16px;
@@ -3522,7 +3529,7 @@ span[class^=icon-] {
   display: inline-block;
   position: relative;
   font-weight: 800;
-  font-size: 54px;
+  font-size: 42px;
   margin: 0 0 20px;
   padding-top: 5px; }
   .section-price .price-label {
@@ -5817,6 +5824,19 @@ h2.contact-title {
     border-left: 1px solid #004494;
     padding: 0 10px; } }
 @media screen and (min-width: 672px) {
+  #error404 {
+    height: 600px; }
+    #error404 .logo-404 {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+
+  .section-description {
+    font-size: 20px; }
+
   .container-wrapper {
     width: 640px; }
 
@@ -6291,6 +6311,9 @@ h2.contact-title {
 
   .section-subtitle {
     text-align: left; }
+
+  .section-description {
+    margin: 0 0 10px; }
 
   .section-price {
     font-size: 58px; }
@@ -6806,8 +6829,7 @@ h2.contact-title {
     margin: 0 0 25px; }
 
   .section-description {
-    font-size: 18px;
-    margin: 0 0 45px; }
+    font-size: 18px; }
 
   .bottom-info {
     font-size: 10pt; }

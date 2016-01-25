@@ -3407,8 +3407,7 @@ svg:not(:root) {
   font-size: 30px;
   line-height: 30px;
   margin: 25px 0;
-  text-transform: uppercase;
-  }
+  text-transform: uppercase; }
   .section-title strong {
     display: block; }
 
@@ -6722,8 +6721,7 @@ h2.contact-title {
   .sub-menu {
     height: 65px;
     line-height: 65px;
-    font-size: 16px;
-    }
+    font-size: 16px; }
     .sub-menu li {
       margin-right: 65px; }
 
@@ -6809,8 +6807,7 @@ h2.contact-title {
 
   .section-description {
     font-size: 18px;
-    margin: 0 0 45px;
-    }
+    margin: 0 0 45px; }
 
   .bottom-info {
     font-size: 10pt; }

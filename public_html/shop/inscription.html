@@ -284,10 +284,9 @@
                     <div class="container-wrapper">
                         <div class="row">
                             <div class="phone-12 desk-8 lgdesk-9 desk-pr-10">
-                                <form name="frmShopping" action="/Scripts/sql.exe" method="get">
-                                    <input type="hidden" name="SqlDB" value="SESDispo" />
-                                    <input type="hidden" name="Sql" value="SESDispo:CreateSubscription.phs" />
-                                    <input type="hidden" value="10" name="anschluss" />
+                                <form id="shoppingCart" name="_shoppingCart"  action="/Scripts/sql.exe" method="get">
+                                    <input type="hidden" name="SqlDB" value="LOLOrderInLine">
+                                    <input type="hidden" name="Sql" value="createSubscription.phs">
                                     <div id="steps">
                                         <div id="installation" class="step" data-step="0">
                                             <h2 class="step-title">Installation</h2>

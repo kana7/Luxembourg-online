@@ -188,7 +188,7 @@ var StepTransition = (function () {
                 scrollTop: $('#step-list').offset().top
             }, 0);
         }else{
-            window.location.href = "../shop/login.html";
+            $('#shoppingCart').submit();
         }
     }
 

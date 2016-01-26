@@ -91,9 +91,10 @@ function createDispoPopup() {
     }
 }
 
-function insertLink(id, service){
-    return '<a class="btn-blue btn-subscription" href="../shop/inscription.html#'+service+';'+id+'">Abonnez-vous</a>';
-};
+function insertLink(id, service) {
+    return '<a class="btn-blue btn-subscription" href="../shop/inscription.html#' + service + ';' + id + '">Abonnez-vous</a>';
+}
+;
 
 function checkDispo(homeId, boolean) {
     if (homeId !== undefined || homeId !== null || homeId !== '') {
@@ -235,30 +236,32 @@ function checkDispo(homeId, boolean) {
                 }
                 $('.k24, .k30, .k100, .k200').next().remove();
                 $('.k24, .k30, .k100, .k200').find('.not-dispo').remove();
-                    if (ab[0] == "") {
-                        $(nonDispoTemplate).prependTo('.k24').css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    } else {
-                        $('.k24').find('.not-dispo').remove();
-                        $(insertLink(ab[0][0], ab[0][1])).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    }
-                    if (ab[1] == "") {
-                        $(nonDispoTemplate).prependTo('.k30').css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    } else {
-                        $('.k30').find('.not-dispo').remove();
-                        $(insertLink(ab[1][0], ab[1][1])).insertAfter($('.k30')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    }
-                    if (ab[2] == "") {
-                        $(nonDispoTemplate).prependTo('.k100').css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    } else {
-                        $('.k100').find('.not-dispo').remove();
-                        $(insertLink(ab[2][0], ab[2][1])).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    }
-                    if (ab[3] == "") {
-                        $(nonDispoTemplate).prependTo('.k200').css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    } else {
-                        $('.k200').find('.not-dispo').remove();
-                        $(insertLink(ab[3][0], ab[3][1])).insertAfter($('.k200')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    }
+
+                if (ab[0] == "") {
+                    $(nonDispoTemplate).prependTo('.k24').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                } else {
+                    $('.k24').find('.not-dispo').remove();
+                    $(buttonDispoTempate).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                }
+                if (ab[1] == "") {
+                    $(nonDispoTemplate).prependTo('.k30').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                } else {
+                    $('.k30').find('.not-dispo').remove();
+                    $(buttonDispoTempate).insertAfter($('.k30')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                }
+                if (ab[2] == "") {
+                    $(nonDispoTemplate).prependTo('.k100').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                } else {
+                    $('.k100').find('.not-dispo').remove();
+                    $(buttonPromoFibre).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                }
+                if (ab[3] == "") {
+                    $(nonDispoTemplate).prependTo('.k200').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                } else {
+                    $('.k200').find('.not-dispo').remove();
+                    $(buttonPromoFibre).insertAfter($('.k200')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                }
+
                 if ($('.main-gallery').length) {
                     $('.main-gallery').show().flickity('resize');
                 }
@@ -486,7 +489,7 @@ $(function () {
                 if ($('#testDispo').hasClass('is-visible')) {
                     PopupModule.closePopup(event); //main.js
                 }
-                checkDispo($("select[name=numero]").val(), $(this).data('bool'));
+                checkDispo($("select[name=numero]").val(), $(this).data('bool') || false);
             } else {
                 alert('Entrez votre numéro de rue pour continuer...');
             }

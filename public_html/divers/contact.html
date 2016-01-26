@@ -603,15 +603,6 @@
         <script type="text/javascript">
             var verifMessage = "Veuillez entrer tous les champs dans le formulaire";
             $(function () {
-                var hash = document.URL.substr(document.URL.indexOf('#') + 1);
-                if (window.location.hash) {
-                    if (hash === "success") {
-                        alert('Merci. Votre demande sera traitée dans les meilleurs délais. ');
-                    } else {
-                        $('#Object').val(hash);
-                        scrollToElement($('#form'));
-                    }
-                }
                 $('input[name^="_FileName"').on('change', function () {
                     $('#fileList').append('<li data-input="' + $(this).attr('name') + '" title="destroy">' + this.value.replace("C:\\fakepath\\", "") + '<span class="icon-x-icone"></span></li>');
                     if ($('#fileList>li').length === 3) {
@@ -674,6 +665,15 @@
                         submitForm();
                     }
                 });
+                var hash = document.URL.substr(document.URL.indexOf('#') + 1);
+                if (window.location.hash) {
+                    if (hash === "success") {
+                        alert('Merci. Votre demande sera traitée dans les meilleurs délais. ');
+                    } else {
+                        $('#Object').val(hash).trigger('change');
+                        scrollToElement($('#form'));
+                    }
+                }
             });
             function getIp() {
                 $.get("http://ipinfo.io", function (response) {

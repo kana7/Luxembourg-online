@@ -605,7 +605,7 @@
                     if (hash === "success") {
                         alert('Merci. Votre demande sera traitée dans les meilleurs délais. ');
                     }else{
-                        $('#Object').val(hash);
+                        $('#Object').val(hash).change();
                         scrollToElement($('#form'));
                     }
                 }

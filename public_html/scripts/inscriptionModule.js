@@ -12,12 +12,16 @@ var StepTransition = (function () {
             'Suivant <span class="icon-right-arrow"></span>' +
             '</button>' +
             '</div>';
+    var tplInput = '<input type="hidden" name="{{type}}" value="{{id}}"/>' +
+            '{{#remise}}' +
+            '<input type="hidden" name="{{remise.type}}" value="{{remise.id}}"/>' +
+            '{{/remise}}';
     var tplItem =
             '<div class="clearfix phone-mt-30 shop-item-list">' +
             '{{#items}}' +
             '<div class="phone-mb-15 phone-12 tab-6">' +
             '<div class="shop-item {{#isFixed}}fixed{{/isFixed}}">' +
-            '<input type="{{input}}" {{#group}}name="{{group}}"{{/group}} data-cat="{{type}}" value="{{id}}" hidden {{#required}}required{{/required}} {{#isDefaut}}selected{{/isDefaut}}>' +
+            '<input type="{{input}}" {{#group}}name="{{group}}"{{/group}}{{^group}}name="{{type}}{{index}}"{{/group}}  data-cat="{{type}}" value="{{id}}" hidden {{#required}}required{{/required}} {{#isDefaut}}selected{{/isDefaut}}>' +
             '<div class="phone-12 lgdesk-5 pull-right phone-mb-15 lgdesk-mb-0 shop-item-container-img">' +
             '<img class="shop-item-img" src="{{link}}" alt="{{name}} shop LOL"/>' +
             '</div>' +
@@ -41,6 +45,7 @@ var StepTransition = (function () {
             '<li class="extra-bold price">{{#formatPrice}}{{fullPrice}}{{/formatPrice}} €{{#isMonthlyCost}}/mois{{/isMonthlyCost}}</li>' +
             '<li>PROMO : {{remise.name}}</li>' +
             '</ul>' +
+            '<input type="hidden" name="{{remise.type}}" value="{{remise.id}}"/>' +
             '{{/isRemise}}' +
             '{{/isSellProduct}}' +
             '{{^isSellProduct}}' +
@@ -48,13 +53,14 @@ var StepTransition = (function () {
             '<li class="extra-bold price">{{#formatPrice}}{{price}}{{/formatPrice}} €{{#isMonthlyCost}}/mois{{/isMonthlyCost}}</li>' +
             '</ul>' +
             '{{/isSellProduct}}' +
-            '<div>'+
+            '<div>' +
             '<div class="pull-right btn-blue"></div>' +
-            '</div>'+
+            '</div>' +
             '</div>' +
             '</div>' +
             '</div>' +
             '{{/items}}' +
+            '{{#resetIndex}}{{resetIndex}}{{/resetIndex}}'+
             '</div>';
     var tplFormFiber = '<div class="clearfix">' +
             '<div class="phone-mb-30 phone-mt-30">' +
@@ -78,6 +84,7 @@ var StepTransition = (function () {
     var currentStep = 0;
     var stepList = StepsContainer.find('.step');
     events.on('getCurrent', init);
+
     function init(current) {
         currentItems_list = current;
         _render();
@@ -94,24 +101,31 @@ var StepTransition = (function () {
     }
 
     function _render() {
+        $('#steps').before(Mustache.render(tplInput, currentItems_list['a_abo']));
+        $('#steps').before(Mustache.render(tplInput, currentItems_list['p_activation']));
         stepList.each(function () {
             if ($(this).attr('id') == 'installation') {
-                html = Mustache.render(tplItem, {input: "radio", required: true, isSellProduct: true, group: 'p_install', items: currentItems_list['installation']});
-                if (currentItems_list['abo']['tech'] == "FIBRE") {
+                html = Mustache.render(tplItem, {input: "radio", required: true, isSellProduct: true, group: 'p_install', items: currentItems_list['p_installation']});
+                if (currentItems_list['a_abo']['tech'] == "FIBRE") {
                     html += tplFormFiber;
                 }
                 html += tplbtn;
                 $(this).find('.step-description').after(html);
             }
             if ($(this).attr('id') == 'materiel') {
-                html = Mustache.render(tplItem, {input: "radio", required: true, isSellProduct: false, group: 'm_modem', items: currentItems_list['modem']});
+                html = Mustache.render(tplItem, {input: "radio", required: true, isSellProduct: false, group: 'm_modem', items: currentItems_list['m_modem']});
                 html += '<div class="clearfix dropdown">' +
                         '<div class="phone-mb-30 phone-mt-30" data-trigger>' +
                         '<h3 class="step-subtitle">Ajoutez du Matériel Optionnel<span class="icon-right-arrow"></span></h3>' +
                         '<p class="step-subdescription">Si besoin vous trouverez ci-dessous de l\'équipement auxiliaire pour améliorer ou élargir votre réseau interne.</p>' +
                         '</div>' +
                         '<div>';
-                html += Mustache.render(tplItem, {input: "checkbox", required: false, isSellProduct: false, group: false, items: currentItems_list['materiels']});
+                html += Mustache.render(tplItem, {input: "checkbox", required: false, isSellProduct: false, group: false, items: currentItems_list['m_materiels'], index: function () {
+                        return ++window['INDEX'] || (window['INDEX'] = 0);
+                    }, resetIndex: function () {
+                        window['INDEX'] = null;
+                        return;
+                    }});
                 html += '</div>';
                 html += '</div>';
                 html += tplbtn;
@@ -119,16 +133,18 @@ var StepTransition = (function () {
                 $(this).find('.step-description').after(html);
             }
             if ($(this).attr('id') == 'telephonie') {
-                html = Mustache.render(tplItem, {input: "checkbox", required: false, isFixed: true, isSellProduct: false, group: 'a_tel', items: currentItems_list['telephone']});
+                html = Mustache.render(tplItem, {input: "checkbox", required: false, isFixed: true, isSellProduct: false, group: 'a_tel', items: currentItems_list['a_telephone']});
                 $(this).find('.step-description').after(html);
                 $(this).append(tplbtn);
             }
             if ($(this).attr('id') == 'tv') {
-                html = Mustache.render(tplItem, {input: "checkbox", required: false, isSellProduct: true, group: 'a_tv', items: currentItems_list['tv']});
+                html = Mustache.render(tplItem, {input: "checkbox", required: false, isSellProduct: true, group: 'a_tv', items: currentItems_list['a_tv']});
                 html += '<div class="phone-mb-30 phone-mt-30">' +
                         '<h3 class="step-subtitle">Location décodeur</h3>' +
                         '</div>';
-                html += Mustache.render(tplItem, {input: "checkbox", required: false, isSellProduct: false, group: false, items: currentItems_list['tv_materiel']});
+                html += Mustache.render(tplItem, {input: "checkbox", required: false, isSellProduct: false, group: false, items: currentItems_list['m_tv_materiel'], index: function () {
+                        return ++window['INDEX'] || (window['INDEX'] = 0);
+                    }});
                 html += tplbtn;
                 html += '</div>';
                 html += '</div>';
@@ -187,7 +203,7 @@ var StepTransition = (function () {
             $('html,body').animate({
                 scrollTop: $('#step-list').offset().top
             }, 0);
-        }else{
+        } else {
             $('#shoppingCart').submit();
         }
     }
@@ -392,23 +408,23 @@ var Cart = (function () {
         if (window.location.hash) {
             vhash = (window.location.hash.split('#')[1]).split(";");
             if (window.location.hash.length > 2) {
-                currentItems_list['abo'] = abonnements_list.getAbo(vhash[0], vhash[1]);
-                currentItems_list['installation'] = currentItems_list['abo']['installation'];
-                currentItems_list['activation'] = currentItems_list['abo']['activation'];
-                currentItems_list['modem'] = currentItems_list['abo']['materiels'];
-                currentItems_list['telephone'] = aboTel;
-                currentItems_list['tv'] = lolTv;
-                currentItems_list['tv_materiel'] = lolTv_materielList;
-                currentItems_list['materiels'] = materiel_list;
+                currentItems_list['a_abo'] = abonnements_list.getAbo(vhash[0], vhash[1]);
+                currentItems_list['p_installation'] = currentItems_list['a_abo']['installation'];
+                currentItems_list['p_activation'] = currentItems_list['a_abo']['activation'];
+                currentItems_list['m_modem'] = currentItems_list['a_abo']['materiels'];
+                currentItems_list['a_telephone'] = aboTel;
+                currentItems_list['a_tv'] = lolTv;
+                currentItems_list['m_tv_materiel'] = lolTv_materielList;
+                currentItems_list['m_materiels'] = materiel_list;
                 //ajout de l'abo et de l'activation dans le panier à l'ouverture de la page
                 _useCard({
                     id: 5257,
-                    cat: 'abo',
+                    cat: 'a_abo',
                     isAdding: true
                 });
                 _useCard({
                     id: 5610,
-                    cat: 'activation',
+                    cat: 'p_activation',
                     isAdding: true
                 });
                 events.emit('getCurrent', currentItems_list);
@@ -524,7 +540,7 @@ var inherits = function (ctor, superCtor) {
         }
     });
 };
-var Item = function (id,type, name, price, isMonthlyCost, commentaire, isDefaut, link) {
+var Item = function (id, type, name, price, isMonthlyCost, commentaire, isDefaut, link) {
     this.id = id;
     this.type = type;
     this.name = name;
@@ -586,18 +602,18 @@ var modem_List2 = [
     new Item("5292", "m_modem", "FRITZ!Box 7360", 4.00, true, ["LAN :  2 x Gigabit, 2 x fast Ethernet", "WLAN : jusqu'à 300Mbit/s", "Téléphone :  1 x analogique, DECT", " "], true, "../images/equipment/modem/7360/7360.png"),
     modem7490
 ];
-var aboTel = new Item("5138", "a_telephone", "Abo téléphonique", 0, true, "Inclus dans votre abonnement", true, "../images/equipment/telephone/motorola/t201/motorola_t201_small1.png");
-var lolTVRemise = new Item("5611", "a_tv", "6 mois gratuits", -17.00, true, "après 17€/mois", true, null);
-var lolTv = new SellProduct("2848", "a_tv", "LOLTV", 17.00, true, ["+110 Chaînes TV", "20 chaînes HD", "40 chaînes radio", " ", " "], false, "../images/TV/320px/TV_Offre.jpg", true, lolTVRemise);
+var aboTel = new Item("5138", "a_telephone", "Abo téléphonique", 0, true, "Inclus dans votre abonnement", true, "../images/Shop/Telephonie.jpg");
+var lolTVRemise = new Item("5611", "a_tvRemise", "6 mois gratuits", -17.00, true, "après 17€/mois", true, null);
+var lolTv = new SellProduct("2848", "a_tv", "LOLTV", 17.00, true, ["+110 Chaînes TV", "20 chaînes HD", "40 chaînes radio", " ", " "], false, "../images/Shop/LOLTV.jpg", true, lolTVRemise);
 var lolTv_materielList = [
-    new Item("5137", "m_tv_materiel", "Décodeur LOLTV (requis)", 4.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD", " "], false, "../images/TV/320px/Minix_Equipement_1.jpg"),
-    new Item("5304", "m_tv_materiel", "2ème décodeur LOLTV", 5.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD", " "], false, "../images/TV/320px/Minix_Equipement_1.jpg")
+    new Item("5137", "m_tv_materiel", "Décodeur LOLTV (requis)", 4.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD", " "], false, "../images/Shop/Minix1.jpg"),
+    new Item("5304", "m_tv_materiel", "2ème décodeur LOLTV", 5.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD", " "], false, "../images/Shop/Minix2.jpg")
 ];
-var remiseInstall = new Item("5313", "p_installation", "Installation offerte", -89.00, false, "", true, null);
+var remiseInstall = new Item("5313", "p_installationRemise", "Installation offerte", -89.00, false, "", true, null);
 var installNoRemise = new SellProduct("5313", "p_installation", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", false, null);
 var installRemise = new SellProduct("5313", "p_installation", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", true, remiseInstall);
 var selfInstall = new SellProduct("5612", "p_installation", "Installation par Self-Install-Kit", 25.00, false, "Je fais l'installation moi-même à l'aide du kit d'installation", false, "../images/Shop/self-install.png", false, null);
-var remiseActivation = new Item("5611", "p_activation", "Activation offerte", -85.00, false, "", true, null);
+var remiseActivation = new Item("5611", "p_activationRemise", "Activation offerte", -85.00, false, "", true, null);
 var activation = new SellProduct("5610", "p_activation", "Activation", 85.00, false, "", true, null, true, remiseActivation);
 var typeInstall = [installNoRemise, selfInstall];
 var abonnements_list = {

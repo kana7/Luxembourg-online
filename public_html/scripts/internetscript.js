@@ -102,8 +102,9 @@ function checkDispo(homeId, boolean) {
             dataType: 'jsonp',
             success: function (data) {
                 obj = data;
+                console.log(obj);
                 ab = ["", "", "", "", "", "", ""];
-
+                
                 if (obj.Service[6]) {  // Dégroupage DSL
                     articleObj = obj.Service[6].article;
                     if (obj.Service[6] && $(articleObj[0]).size() > 0) {//entry exists

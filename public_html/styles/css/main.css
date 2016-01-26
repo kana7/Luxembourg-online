@@ -3454,8 +3454,7 @@ svg:not(:root) {
   font-size: 21px;
   line-height: 25px;
   font-weight: 600;
-  margin: 0 0 20px;
-  }
+  margin: 0 0 20px; }
 
 .section-text {
   font-size: 16px;
@@ -5095,7 +5094,8 @@ footer {
 
 .footer-bottom-links, .copyright {
   font-size: 10pt;
-  line-height: 53px;
+  line-height: 20px;
+  padding: 15px 0;
   width: 100%; }
   .footer-bottom-links .icon-icone-lol, .copyright .icon-icone-lol {
     font-size: 17pt;

@@ -64,10 +64,10 @@ var StepTransition = (function () {
             '<div data-form="fibre" class="step-form clearfix">' +
             '<div class="phone-12">' +
             '<div class="input-group">' +
-            '<input id="Cablage" type="radio" name="client" value="true" required><label for="Cablage">Mon cablâge interne est conforme pour le raccordement internet via la Fibre Optique.</label>' +
+            '<input id="Cablage" type="radio" name="p_client" value="true" required><label for="Cablage">Mon cablâge interne est conforme pour le raccordement internet via la Fibre Optique.</label>' +
             '</div>' +
             '<div class="input-group">' +
-            '<input id="NotCablage" type="radio" name="client" value="false" required><label for="NotCablage">Mon cablâge interne n\'est pas conforme et je demande à Luxembourg Online d\'entreprendre les travaux nécessaires. </label>' +
+            '<input id="NotCablage" type="radio" name="p_client" value="false" required><label for="NotCablage">Mon cablâge interne n\'est pas conforme et je demande à Luxembourg Online d\'entreprendre les travaux nécessaires. </label>' +
             '</div>' +
             '</div>' +
             '</div>' +
@@ -96,7 +96,7 @@ var StepTransition = (function () {
     function _render() {
         stepList.each(function () {
             if ($(this).attr('id') == 'installation') {
-                html = Mustache.render(tplItem, {input: "radio", required: true, isSellProduct: true, group: 'install', items: currentItems_list['installation']});
+                html = Mustache.render(tplItem, {input: "radio", required: true, isSellProduct: true, group: 'p_install', items: currentItems_list['installation']});
                 if (currentItems_list['abo']['tech'] == "FIBRE") {
                     html += tplFormFiber;
                 }
@@ -104,14 +104,14 @@ var StepTransition = (function () {
                 $(this).find('.step-description').after(html);
             }
             if ($(this).attr('id') == 'materiel') {
-                html = Mustache.render(tplItem, {input: "radio", required: true, isSellProduct: false, group: 'modem', items: currentItems_list['modem']});
+                html = Mustache.render(tplItem, {input: "radio", required: true, isSellProduct: false, group: 'm_modem', items: currentItems_list['modem']});
                 html += '<div class="clearfix dropdown">' +
                         '<div class="phone-mb-30 phone-mt-30" data-trigger>' +
                         '<h3 class="step-subtitle">Ajoutez du Matériel Optionnel<span class="icon-right-arrow"></span></h3>' +
                         '<p class="step-subdescription">Si besoin vous trouverez ci-dessous de l\'équipement auxiliaire pour améliorer ou élargir votre réseau interne.</p>' +
                         '</div>' +
                         '<div>';
-                html += Mustache.render(tplItem, {input: "radio", required: false, isSellProduct: false, group: false, items: currentItems_list['materiels']});
+                html += Mustache.render(tplItem, {input: "checkbox", required: false, isSellProduct: false, group: false, items: currentItems_list['materiels']});
                 html += '</div>';
                 html += '</div>';
                 html += tplbtn;
@@ -119,16 +119,16 @@ var StepTransition = (function () {
                 $(this).find('.step-description').after(html);
             }
             if ($(this).attr('id') == 'telephonie') {
-                html = Mustache.render(tplItem, {input: "checkbox", required: false, isFixed: true, isSellProduct: false, group: 'tel', items: currentItems_list['telephone']});
+                html = Mustache.render(tplItem, {input: "checkbox", required: false, isFixed: true, isSellProduct: false, group: 'a_tel', items: currentItems_list['telephone']});
                 $(this).find('.step-description').after(html);
                 $(this).append(tplbtn);
             }
             if ($(this).attr('id') == 'tv') {
-                html = Mustache.render(tplItem, {input: "checkbox", required: false, isSellProduct: true, group: 'tv', items: currentItems_list['tv']});
+                html = Mustache.render(tplItem, {input: "checkbox", required: false, isSellProduct: true, group: 'a_tv', items: currentItems_list['tv']});
                 html += '<div class="phone-mb-30 phone-mt-30">' +
                         '<h3 class="step-subtitle">Location décodeur</h3>' +
                         '</div>';
-                html += Mustache.render(tplItem, {input: "radio", required: false, isSellProduct: false, group: false, items: currentItems_list['tv_materiel']});
+                html += Mustache.render(tplItem, {input: "checkbox", required: false, isSellProduct: false, group: false, items: currentItems_list['tv_materiel']});
                 html += tplbtn;
                 html += '</div>';
                 html += '</div>';
@@ -524,7 +524,7 @@ var inherits = function (ctor, superCtor) {
         }
     });
 };
-var Item = function (id, type, name, price, isMonthlyCost, commentaire, isDefaut, link) {
+var Item = function (id,type, name, price, isMonthlyCost, commentaire, isDefaut, link) {
     this.id = id;
     this.type = type;
     this.name = name;
@@ -577,74 +577,74 @@ var SellProduct = function (id, type, name, price, isMonthlyCost, commentaire, i
     this.price = this.setPrice(price, remise);
 };
 inherits(SellProduct, Item);
-var modem7490 = new Item("5294", "modem", "FRITZ!Box 7490", 6.00, true, ["LAN : 4 x Gigabit", "WLAN : jusqu'à 1300Mbits/s", "Téléphone : 2 x analogique, 1 x ISDN", " "], false, "../images/equipment/modem/7390/7360.png");
+var modem7490 = new Item("5294", "m_modem", "FRITZ!Box 7490", 6.00, true, ["LAN : 4 x Gigabit", "WLAN : jusqu'à 1300Mbits/s", "Téléphone : 2 x analogique, 1 x ISDN", " "], false, "../images/equipment/modem/7390/7360.png");
 var modem_List1 = [
-    new Item("5291", "modem", "FRITZ!Box 3272", 4.00, true, ["LAN :  2 x Gigabit, 2 x fast Ethernet", "WLAN :  jusqu'à 300Mbit/s", " ", " "], true, "../images/equipment/modem/3272/3272.png"),
+    new Item("5291", "m_modem", "FRITZ!Box 3272", 4.00, true, ["LAN :  2 x Gigabit, 2 x fast Ethernet", "WLAN :  jusqu'à 300Mbit/s", " ", " "], true, "../images/equipment/modem/3272/3272.png"),
     modem7490
 ];
 var modem_List2 = [
-    new Item("5292", "modem", "FRITZ!Box 7360", 4.00, true, ["LAN :  2 x Gigabit, 2 x fast Ethernet", "WLAN : jusqu'à 300Mbit/s", "Téléphone :  1 x analogique, DECT", " "], true, "../images/equipment/modem/7360/7360.png"),
+    new Item("5292", "m_modem", "FRITZ!Box 7360", 4.00, true, ["LAN :  2 x Gigabit, 2 x fast Ethernet", "WLAN : jusqu'à 300Mbit/s", "Téléphone :  1 x analogique, DECT", " "], true, "../images/equipment/modem/7360/7360.png"),
     modem7490
 ];
-var aboTel = new Item("5138", "telephone", "Abo téléphonique", 0, true, "Inclus dans votre abonnement", true, "../images/equipment/telephone/motorola/t201/motorola_t201_small1.png");
-var lolTVRemise = new Item("5611", "tv", "6 mois gratuits", -17.00, true, "après 17€/mois", true, null);
-var lolTv = new SellProduct("2848", "tv", "LOLTV", 17.00, true, ["+110 Chaînes TV", "20 chaînes HD", "40 chaînes radio", " ", " "], false, "../images/TV/320px/TV_Offre.jpg", true, lolTVRemise);
+var aboTel = new Item("5138", "a_telephone", "Abo téléphonique", 0, true, "Inclus dans votre abonnement", true, "../images/equipment/telephone/motorola/t201/motorola_t201_small1.png");
+var lolTVRemise = new Item("5611", "a_tv", "6 mois gratuits", -17.00, true, "après 17€/mois", true, null);
+var lolTv = new SellProduct("2848", "a_tv", "LOLTV", 17.00, true, ["+110 Chaînes TV", "20 chaînes HD", "40 chaînes radio", " ", " "], false, "../images/TV/320px/TV_Offre.jpg", true, lolTVRemise);
 var lolTv_materielList = [
-    new Item("5137", "tv_materiel", "Décodeur LOLTV (requis)", 4.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD", " "], false, "../images/TV/320px/Minix_Equipement_1.jpg"),
-    new Item("5304", "tv_materiel", "2ème décodeur LOLTV", 5.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD", " "], false, "../images/TV/320px/Minix_Equipement_1.jpg")
+    new Item("5137", "m_tv_materiel", "Décodeur LOLTV (requis)", 4.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD", " "], false, "../images/TV/320px/Minix_Equipement_1.jpg"),
+    new Item("5304", "m_tv_materiel", "2ème décodeur LOLTV", 5.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD", " "], false, "../images/TV/320px/Minix_Equipement_1.jpg")
 ];
-var remiseInstall = new Item("5313", "installation", "Installation offerte", -89.00, false, "", true, null);
-var installNoRemise = new SellProduct("5313", "installation", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", false, null);
-var installRemise = new SellProduct("5313", "installation", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", true, remiseInstall);
-var selfInstall = new SellProduct("5612", "installation", "Installation par Self-Install-Kit", 25.00, false, "Je fais l'installation moi-même à l'aide du kit d'installation", false, "../images/Shop/self-install.png", false, null);
-var remiseActivation = new Item("5611", "activation", "Activation offerte", -85.00, false, "", true, null);
-var activation = new SellProduct("5610", "activation", "Activation", 85.00, false, "", true, null, true, remiseActivation);
+var remiseInstall = new Item("5313", "p_installation", "Installation offerte", -89.00, false, "", true, null);
+var installNoRemise = new SellProduct("5313", "p_installation", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", false, null);
+var installRemise = new SellProduct("5313", "p_installation", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", true, remiseInstall);
+var selfInstall = new SellProduct("5612", "p_installation", "Installation par Self-Install-Kit", 25.00, false, "Je fais l'installation moi-même à l'aide du kit d'installation", false, "../images/Shop/self-install.png", false, null);
+var remiseActivation = new Item("5611", "p_activation", "Activation offerte", -85.00, false, "", true, null);
+var activation = new SellProduct("5610", "p_activation", "Activation", 85.00, false, "", true, null, true, remiseActivation);
 var typeInstall = [installNoRemise, selfInstall];
 var abonnements_list = {
     "2": {
-        "5272": new Abonnement("5272", "abo", "LOL FIBER 30", 44.90, true, "", true, null, "LOL", "FIBRE", 2, installNoRemise, activation, modem_List2),
-        "5275": new Abonnement("5275", "abo", "LOL FIBER 100", 54.90, true, "", true, null, "LOL", "FIBRE", 2, installRemise, activation, modem_List2),
-        "5276": new Abonnement("5276", "abo", "LOL FIBER 200", 71.90, true, "", true, null, "LOL", "FIBRE", 2, installRemise, activation, modem_List2)
+        "5272": new Abonnement("5272", "a_abo", "LOL FIBER 30", 44.90, true, "", true, null, "LOL", "FIBRE", 2, installNoRemise, activation, modem_List2),
+        "5275": new Abonnement("5275", "a_abo", "LOL FIBER 100", 54.90, true, "", true, null, "LOL", "FIBRE", 2, installRemise, activation, modem_List2),
+        "5276": new Abonnement("5276", "a_abo", "LOL FIBER 200", 71.90, true, "", true, null, "LOL", "FIBRE", 2, installRemise, activation, modem_List2)
     },
     "3": {
-        "?": new Abonnement("5619", "abo", "LOL DSL 20", null, true, "", true, null, "EPT", "ADSL", 3, installNoRemise, activation, modem_List1)
+        "?": new Abonnement("5619", "a_abo", "LOL DSL 20", null, true, "", true, null, "EPT", "ADSL", 3, installNoRemise, activation, modem_List1)
     },
     "4": {
-        "5262": new Abonnement("5262", "abo", "LOL FIBER 30", 44.90, true, "", true, null, "EPT", "VDSL", 4, installNoRemise, activation, modem_List2)
+        "5262": new Abonnement("5262", "a_abo", "LOL FIBER 30", 44.90, true, "", true, null, "EPT", "VDSL", 4, installNoRemise, activation, modem_List2)
     },
     "5": {
-        "5262": new Abonnement("5262", "abo", "LOL FIBER 30", 44.90, true, "", true, null, "EPT", "FIBRE", 5, installNoRemise, activation, modem_List2),
-        "5263": new Abonnement("5263", "abo", "LOL FIBER 100", 54.90, true, "", true, null, "EPT", "FIBRE", 5, installRemise, activation, modem_List2),
-        "5264": new Abonnement("5264", "abo", "LOL FIBER 200", 71.90, true, "", true, null, "EPT", "FIBRE", 5, installRemise, activation, modem_List2)
+        "5262": new Abonnement("5262", "a_abo", "LOL FIBER 30", 44.90, true, "", true, null, "EPT", "FIBRE", 5, installNoRemise, activation, modem_List2),
+        "5263": new Abonnement("5263", "a_abo", "LOL FIBER 100", 54.90, true, "", true, null, "EPT", "FIBRE", 5, installRemise, activation, modem_List2),
+        "5264": new Abonnement("5264", "a_abo", "LOL FIBER 200", 71.90, true, "", true, null, "EPT", "FIBRE", 5, installRemise, activation, modem_List2)
     },
     "6": {
-        "5257": new Abonnement("5257", "abo", "LOL DSL 24", 34.90, true, "", true, null, "LOL", "ADSL", 6, typeInstall, activation, modem_List1)
+        "5257": new Abonnement("5257", "a_abo", "LOL DSL 24", 34.90, true, "", true, null, "LOL", "ADSL", 6, typeInstall, activation, modem_List1)
     },
     "8": {
-        "5273": new Abonnement("5273", "abo", "LOL FIBER 30", 44.90, true, "", true, null, "LOL", "VDSL", 8, installNoRemise, activation, modem_List2),
-        "5274": new Abonnement("5274", "abo", "LOL FIBER 100", 54.90, true, "", true, null, "LOL", "VDSL", 8, installRemise, activation, modem_List2),
-        "5336": new Abonnement("5336", "abo", "LOL FIBER 100", 54.90, true, "", true, null, "LOL", "VDSL", 8, installRemise, activation, modem_List2)
+        "5273": new Abonnement("5273", "a_abo", "LOL FIBER 30", 44.90, true, "", true, null, "LOL", "VDSL", 8, installNoRemise, activation, modem_List2),
+        "5274": new Abonnement("5274", "a_abo", "LOL FIBER 100", 54.90, true, "", true, null, "LOL", "VDSL", 8, installRemise, activation, modem_List2),
+        "5336": new Abonnement("5336", "a_abo", "LOL FIBER 100", 54.90, true, "", true, null, "LOL", "VDSL", 8, installRemise, activation, modem_List2)
     },
     "41": {
-        "5263": new Abonnement("5263", "abo", "LOL FIBER 100", 54.90, true, "", true, null, "EPT", "VDSL1", 41, installRemise, activation, modem_List2)
+        "5263": new Abonnement("5263", "a_abo", "LOL FIBER 100", 54.90, true, "", true, null, "EPT", "VDSL1", 41, installRemise, activation, modem_List2)
     },
     "42": {
-        "5263": new Abonnement("5263", "abo", "LOL FIBER 100", 54.90, true, "", true, null, "EPT", "VDSL2", 42, installRemise, activation, modem_List2)
+        "5263": new Abonnement("5263", "a_abo", "LOL FIBER 100", 54.90, true, "", true, null, "EPT", "VDSL2", 42, installRemise, activation, modem_List2)
     },
     getAbo: function (service, id) {
         return abonnements_list[service][id];
     }
 };
 var materiel_list = [
-    new Item("5436", "materiels", "FRITZ!WLAN Repeater 450E", 52.00, false, ["Répétiteur pour étendre le réseau wifi", "WLAN :  2,4 - jusqu'à 450Mbit/s"], false, "../images/equipment/modem/r450e/r450e_small1.png"),
-    new Item("5437", "materiels", "FRITZ!WLAN Repeater 1750E", 84.00, false, ["Répétiteur pour étendre le réseau wifi", "WLAN : 2,4 et 5 Ghz - jusqu'à 1750Mbit/s"], false, "../images/equipment/modem/r1750e/r1750e_small1.png"),
-    new Item("4570", "materiels", "FRITZ!Powerline 520E Set", 89.00, false, ["Solution pour étendre le réseau à travers le circuit électrique (ethernet)"], false, "../images/equipment/modem/pl520eset/pl520eset_small1.png"),
-    new Item("4450", "materiels", "FRITZ!Powerline 520E Single", 49.00, false, ["Solution pour étendre le réseau à travers le circuit électrique (ethernet)"], false, "../images/equipment/modem/pl520e/pl520e_small1.png"),
-    new Item("3148", "materiels", "FRITZ!Powerline 546E", 95.00, false, ["Solution pour étendre le réseau à travers le circuit électrique (ethernet + wifi)"], false, "../images/equipment/modem/pl546e/pl546e.png"),
-    new Item("5439", "materiels", "FRITZ!WLAN Stick AC", 28.00, false, ["Adaptateur wifi", "WLAN : 2,4 et 5 Ghz - jusqu'à 430Mbit/s"], false, "../images/equipment/modem/wlansac/wlansac_small.png"),
-    new Item("5395", "materiels", "Motorola T201", 31.00, false, ["Pack Mono : 1 x Téléphone numérique sans fil DECT"], false, "../images/equipment/telephone/motorola/t201/motorola_t201_small1.png"),
-    new Item("5396", "materiels", "Motorola T202", 48.00, false, ["Pack Duo : 2 x Téléphone numérique sans fil DECT"], false, "../images/equipment/telephone/motorola/t202/motorola_t202_small1.png"),
-    new Item("5397", "materiels", "Motorola T203", 65.00, false, ["Pack Trio : 3 x Téléphone numérique sans fil DECT"], false, "../images/equipment/telephone/motorola/t203/motorola_t203_small1_1.png")
+    new Item("5436", "m_materiels", "FRITZ!WLAN Repeater 450E", 52.00, false, ["Répétiteur pour étendre le réseau wifi", "WLAN :  2,4 - jusqu'à 450Mbit/s"], false, "../images/equipment/modem/r450e/r450e_small1.png"),
+    new Item("5437", "m_materiels", "FRITZ!WLAN Repeater 1750E", 84.00, false, ["Répétiteur pour étendre le réseau wifi", "WLAN : 2,4 et 5 Ghz - jusqu'à 1750Mbit/s"], false, "../images/equipment/modem/r1750e/r1750e_small1.png"),
+    new Item("4570", "m_materiels", "FRITZ!Powerline 520E Set", 89.00, false, ["Solution pour étendre le réseau à travers le circuit électrique (ethernet)"], false, "../images/equipment/modem/pl520eset/pl520eset_small1.png"),
+    new Item("4450", "m_materiels", "FRITZ!Powerline 520E Single", 49.00, false, ["Solution pour étendre le réseau à travers le circuit électrique (ethernet)"], false, "../images/equipment/modem/pl520e/pl520e_small1.png"),
+    new Item("3148", "m_materiels", "FRITZ!Powerline 546E", 95.00, false, ["Solution pour étendre le réseau à travers le circuit électrique (ethernet + wifi)"], false, "../images/equipment/modem/pl546e/pl546e.png"),
+    new Item("5439", "m_materiels", "FRITZ!WLAN Stick AC", 28.00, false, ["Adaptateur wifi", "WLAN : 2,4 et 5 Ghz - jusqu'à 430Mbit/s"], false, "../images/equipment/modem/wlansac/wlansac_small.png"),
+    new Item("5395", "m_materiels", "Motorola T201", 31.00, false, ["Pack Mono : 1 x Téléphone numérique sans fil DECT"], false, "../images/equipment/telephone/motorola/t201/motorola_t201_small1.png"),
+    new Item("5396", "m_materiels", "Motorola T202", 48.00, false, ["Pack Duo : 2 x Téléphone numérique sans fil DECT"], false, "../images/equipment/telephone/motorola/t202/motorola_t202_small1.png"),
+    new Item("5397", "m_materiels", "Motorola T203", 65.00, false, ["Pack Trio : 3 x Téléphone numérique sans fil DECT"], false, "../images/equipment/telephone/motorola/t203/motorola_t203_small1_1.png")
 ];
 $(function () {
     Cart.init();

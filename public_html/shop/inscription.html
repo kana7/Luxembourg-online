@@ -563,17 +563,7 @@
         <script type="text/javascript" src="../scripts/onLeavePage.js"></script>
         <script type="text/javascript">
             $(function () {
-                if (!$('input[name="client"]').is(':checked')) {
-                    $('input[name="client"]').siblings('div').addClass('is-disabled');
-                    $('input[name="client"]').siblings('div').find('button, input').attr("disabled", "disabled");
-                }
-                $('input[name="client"]').on('change', function () {
-                    $(this).siblings('div').removeClass('is-disabled');
-                    $(this).siblings('div').find('button, input').removeAttr('disabled');
-                    $('input[name="client"]').not(this).siblings('div').addClass('is-disabled');
-                    $('input[name="client"]').not(this).siblings('div').find('button, input').attr("disabled", "disabled");
-                });
-                $('input[name="portabilite"]').on('change', function () {
+                $('input[name="a_portabilite"]').on('change', function () {
                     if ($(this).val() != 0) {
                         $('#porta-form').removeClass('hidden');
                     } else {

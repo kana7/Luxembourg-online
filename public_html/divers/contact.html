@@ -665,15 +665,19 @@
                         submitForm();
                     }
                 });
-                var hash = document.URL.substr(document.URL.indexOf('#') + 1);
-                if (window.location.hash) {
-                    if (hash === "success") {
-                        alert('Merci. Votre demande sera traitée dans les meilleurs délais. ');
-                    } else {
-                        $('#Object').val(hash).trigger('change');
-                        scrollToElement($('#form'));
+                $(window).load(function () {
+                    var hash = document.URL.substr(document.URL.indexOf('#') + 1);
+                    if (window.location.hash) {
+                        if (hash === "success") {
+                            alert('Merci. Votre demande sera traitée dans les meilleurs délais. ');
+                        } else {
+                            if (hash !== "form") {
+                                $('#Object').val(hash).trigger('change');
+                            }
+                            $('#form').goTo();
+                        }
                     }
-                }
+                });
             });
             function getIp() {
                 $.get("http://ipinfo.io", function (response) {

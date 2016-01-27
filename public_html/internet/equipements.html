@@ -151,7 +151,7 @@
                     <li class="menu-item"><a href="../promos/accueil.html">Accueil Promos</a></li>
                     <li class="menu-item"><a href="../promos/fibre.html">Offre spéciale fibre</a></li>
                     <li class="menu-item"><a href="../promos/offreloltv.html">Offre spéciale LOL TV</a></li>
-                    
+
                 </ul>
             </div>
         </nav>
@@ -1273,11 +1273,10 @@
         <!--              ./FOOTER               -->
 
         <script src="../scripts/vendor/jquery.min.js"></script>
-        <script src="../scripts/vendor/lightbox.js"></script>
         <script src="../scripts/vendor/flickity.pkgd.min.js"></script>
-        <script src="../scripts/main.js"></script>
-        <script>
-            $(document).ready(function () {
+        <script src="../scripts/vendor/lightbox.js"></script>
+        <script type="text/javascript">
+            $(function () {
                 $('.main-gallery').flickity({
                     // options
                     cellAlign: 'center',
@@ -1286,6 +1285,11 @@
                     prevNextButtons: false,
                     autoPlay: 2500
                 });
+            });
+        </script>
+        <script src="../scripts/main.js"></script>
+        <script>
+            $(document).ready(function () {
                 $('.popup-gallery').each(function () {
                     $(this).magnificPopup({
                         delegate: 'a',
@@ -1304,6 +1308,18 @@
                             }
                         }
                     });
+                });
+
+                $(window).load(function () {
+                    var hash = document.URL.substr(document.URL.indexOf('#') + 1);
+                    if (window.location.hash) {
+                        console.log(window.location.hash);
+                        if (viewport().width > 1055) {
+                            $('.DesktopMenu').find('li[data-cat="'+hash+'"]').click();
+                        } else {
+                            $('.searchMenu').find('li[data-cat="'+hash+'Mobile"]').click();
+                        }
+                    }
                 });
             });
         </script>

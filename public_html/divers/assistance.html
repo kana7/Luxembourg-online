@@ -1409,38 +1409,46 @@
                 });
                 $(".dataList").change();
 
-                if (window.location.hash) {
-                    var vhash = (window.location.hash.split('#')[1]).split(";");
-                    if (vhash[0] === "install-modem") {
-                        $('#install-modem').find('.section-subtitle').addClass('is-active');
-                        $('#install-modem').find('.content-assistance').addClass('is-visible');
-                        $('.modemList').val(vhash[1]).change();
-                    }
-                    if (vhash[0] === "config-email") {
-                        $('#config-email').find('.section-subtitle').addClass('is-active');
-                        $('#config-email').find('.content-assistance').addClass('is-visible');
-                        $('.emailList').val(vhash[1]).change();
-                    }
-                    if (vhash[0] === "config-data") {
-                        $('#config-data').find('.section-subtitle').addClass('is-active');
-                        $('#config-data').find('.content-assistance').addClass('is-visible');
-                        $('.dataList').val(vhash[1]).change();
-                    }
-                    if (vhash[0] === "speedtest") {
-                        $('#speedtest').find('.section-subtitle').addClass('is-active');
-                        $('#speedtest').find('.content-assistance').addClass('is-visible');
+                $(window).load(function () {
+                    if (window.location.hash) {
+                        var vhash = (window.location.hash.split('#')[1]).split(";");
+                        if (vhash[0] === "install-modem") {
+                            $('#install-modem').find('.section-subtitle').addClass('is-active');
+                            $('#install-modem').find('.content-assistance').addClass('is-visible');
+                            $('.modemList').val(vhash[1]).change();
+                            $('#install-modem').goTo();
+                        }
+                        if (vhash[0] === "config-email") {
+                            $('#config-email').find('.section-subtitle').addClass('is-active');
+                            $('#config-email').find('.content-assistance').addClass('is-visible');
+                            $('.emailList').val(vhash[1]).change();
+                            $('#config-email').goTo();
+                        }
+                        if (vhash[0] === "config-data") {
+                            $('#config-data').find('.section-subtitle').addClass('is-active');
+                            $('#config-data').find('.content-assistance').addClass('is-visible');
+                            $('.dataList').val(vhash[1]).change();
+                            $('#config-data').goTo();
+                        }
+                        if (vhash[0] === "speedtest") {
+                            $('#speedtest').find('.section-subtitle').addClass('is-active');
+                            $('#speedtest').find('.content-assistance').addClass('is-visible');
+                            $('#speedtest').goTo();
 
+                        }
+                        if (vhash[0] === "facturation") {
+                            $('#facturation').find('.section-subtitle').addClass('is-active');
+                            $('#facturation').find('.content-assistance').addClass('is-visible');
+                            $('#facturation').goTo();
+                        }
+                        if (vhash[0] === "document") {
+                            $('#document').find('.section-subtitle').addClass('is-active');
+                            $('#document').find('.content-assistance').addClass('is-visible');
+                            $('.docList').val(vhash[1]).change();
+                            $('#document').goTo();
+                        }
                     }
-                    if (vhash[0] === "facturation") {
-                        $('#facturation').find('.section-subtitle').addClass('is-active');
-                        $('#facturation').find('.content-assistance').addClass('is-visible');
-                    }
-                    if (vhash[0] === "document") {
-                        $('#document').find('.section-subtitle').addClass('is-active');
-                        $('#document').find('.content-assistance').addClass('is-visible');
-                        $('.docList').val(vhash[1]).change();
-                    }
-                }
+                });
             });
         </script>        
         <script type="text/javascript" src="../scripts/analytics.js"></script>        

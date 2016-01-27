@@ -5217,6 +5217,7 @@ footer {
   .pdf-list h4 {
     font-weight: 800;
     font-size: 24px;
+    line-height: 30px;
     text-transform: uppercase;
     margin: 0 0 30px; }
   .pdf-list li {

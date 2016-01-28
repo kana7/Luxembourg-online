@@ -4281,6 +4281,7 @@ span[class^=icon-] {
   position: relative;
   border-radius: 6px;
   border: 1px solid #004994;
+  background-color: #fff;
   text-align: center;
   margin-bottom: 20px; }
   .offer-item-blue .item-header, .offer-item-blue .item-body, .offer-item-blue .item-footer, .equipement-item-blue .item-header, .equipement-item-blue .item-body, .equipement-item-blue .item-footer {
@@ -4301,8 +4302,7 @@ span[class^=icon-] {
     .offer-item-blue .item-body > li, .equipement-item-blue .item-body > li {
       display: block;
       position: relative;
-      padding: 20px 0;
-      background-color: #fff; }
+      padding: 20px 0; }
   .offer-item-blue .item-footer, .equipement-item-blue .item-footer {
     border-radius: 0px 0px 4px 4px; }
   .offer-item-blue .offer-price, .equipement-item-blue .offer-price {
@@ -4366,12 +4366,13 @@ span[class^=icon-] {
     text-align: left; }
     .offer-item-blue .check-list li, .equipement-item-blue .check-list li {
       display: block;
-      padding: 3px 0;
+      line-height: 22px;
       font-size: 15px;
       font-weight: 400; }
       .offer-item-blue .check-list li .icon-check-ico, .equipement-item-blue .check-list li .icon-check-ico {
         position: relative;
         top: 2px;
+        line-height: 10px;
         margin-right: 25px;
         font-size: 16px; }
 
@@ -4380,6 +4381,7 @@ span[class^=icon-] {
   position: relative;
   border-radius: 6px;
   border: 1px solid #e75e0a;
+  background-color: #fff;
   text-align: center;
   margin-bottom: 20px; }
   .offer-item-orange .item-header, .offer-item-orange .item-body, .offer-item-orange .item-footer, .equipement-item-orange .item-header, .equipement-item-orange .item-body, .equipement-item-orange .item-footer {
@@ -4400,8 +4402,7 @@ span[class^=icon-] {
     .offer-item-orange .item-body > li, .equipement-item-orange .item-body > li {
       display: block;
       position: relative;
-      padding: 20px 0;
-      background-color: #fff; }
+      padding: 20px 0; }
   .offer-item-orange .item-footer, .equipement-item-orange .item-footer {
     border-radius: 0px 0px 4px 4px; }
   .offer-item-orange .offer-price, .equipement-item-orange .offer-price {
@@ -4465,12 +4466,13 @@ span[class^=icon-] {
     text-align: left; }
     .offer-item-orange .check-list li, .equipement-item-orange .check-list li {
       display: block;
-      padding: 3px 0;
+      line-height: 22px;
       font-size: 15px;
       font-weight: 400; }
       .offer-item-orange .check-list li .icon-check-ico, .equipement-item-orange .check-list li .icon-check-ico {
         position: relative;
         top: 2px;
+        line-height: 10px;
         margin-right: 25px;
         font-size: 16px; }
 
@@ -5902,8 +5904,7 @@ h2.contact-title {
       background-image: url(../../images/Homepage/OFFRES/LOL_TV_288x392px_Noel.jpg); }
 
   #offers-section div[class^=phone-] {
-    margin-bottom: 20px;
-    padding: 0 10px; }
+    margin-bottom: 20px; }
 
   .content-container .content-title, .content-container .content-subtitle {
     font-size: 26px;
@@ -6668,9 +6669,6 @@ h2.contact-title {
     background-position: right top;
     padding-top: 0; } }
 @media screen and (min-width: 1056px) and (max-width: 1302px) {
-  #offers-section div[class^=phone-] {
-    padding: 0 5px; }
-
   .offer-item-blue .description, .offer-item-orange .description {
     font-size: 19px; }
 

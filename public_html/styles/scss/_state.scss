@@ -155,7 +155,6 @@
     #offers-section{
         div[class^=phone-]{
             margin-bottom: 20px;
-            padding: 0 10px;
         }
     }
     .content-container .content-title{
@@ -982,9 +981,6 @@
 
 
 @include viewport(range, $min: 1056, $max: 1302){
-    #offers-section div[class^=phone-]{
-        padding: 0 5px;
-    }
     .offer-item-blue .description, .offer-item-orange .description{
         font-size: 19px;
     }

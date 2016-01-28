@@ -5728,6 +5728,46 @@ h2.contact-title {
   max-width: 500px;
   min-width: 300px; }
 
+/*Mise en page Magazine*/
+/*-----------------------------------------------------------------------------*/
+#slider-magazine1:after {
+  content: "Lire maintenant \A en francais";
+  white-space: pre; }
+
+#slider-magazine2:after {
+  content: "Read now\Ain english";
+  white-space: pre; }
+
+#slider-magazine1, #slider-magazine2 {
+  position: relative;
+  cursor: pointer;
+  max-width: 300px;
+  margin: auto; }
+  #slider-magazine1:after, #slider-magazine2:after {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #004994;
+    font-size: 1.6em;
+    line-height: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 195px; }
+  #slider-magazine1 img, #slider-magazine2 img {
+    position: relative;
+    width: 100%;
+    height: auto; }
+  #slider-magazine1:hover:after, #slider-magazine2:hover:after {
+    visibility: visible;
+    opacity: 1; }
+
 @media screen and (max-width: 1301px) {
   .header-icon {
     display: none !important; }

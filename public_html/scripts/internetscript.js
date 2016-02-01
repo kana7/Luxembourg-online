@@ -28,6 +28,7 @@ function natSort(as, bs) {
     }
     return a.length - b.length;
 }
+
 var nonDispoTemplate = '<div class="not-dispo"><div class="not-dispo-info">Offre <br />indisponible <br />à votre adresse</div></div>';
 var buttonDispoTempate = '<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_FR.pdf" target="_blank">Abonnez-vous</a>';
 var buttonPromoFibre = '<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_OFFRE2_FR.pdf" target="_blank">Abonnez-vous</a>';
@@ -96,7 +97,7 @@ function insertLink(id, service) {
 }
 ;
 
-function checkDispo(homeId, boolean) {
+function checkDispo(homeId, villeId, boolean) {
     if (homeId !== undefined || homeId !== null || homeId !== '') {
         $.ajax({
             url: "http://shop.internet.lu/Scripts/sql.exe?SqlDB=LOLShop&Sql=FOServiceMap:FOServiceListNew.phs&_HomeId=" + homeId,
@@ -260,10 +261,17 @@ function checkDispo(homeId, boolean) {
                     $('.k200').find('.not-dispo').remove();
                     $(buttonPromoFibre).insertAfter($('.k200')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                 }
-
+                if (villeId == 98 || villeId == 428 || villeId == 174 || villeId == 159) {
+                    $('#cable').show();
+                }else{
+                    if($('#cable').is(':visible')){
+                        $('#cable').hide();
+                    }
+                }
                 if ($('.main-gallery').length) {
                     $('.main-gallery').show().flickity('resize');
                 }
+                $('#offers-section').goTo();
             }
         });
     }
@@ -278,7 +286,7 @@ $(function () {
             _ville = vhash[1];
             _rue = vhash[2];
             _nbr = vhash[3];
-            checkDispo(_nbr, false);
+            checkDispo(_nbr, _ville, false);
             setTimeout(function () {
                 $("input[name=zipcode]").val(_cp);
                 $(".verifyCp").click();
@@ -357,7 +365,7 @@ $(function () {
                             $("select[name=rue]").prop("selectedIndex", 1).change();
                             $("select[name=rue] option").first().remove();
                         }
-                        if (vhash.length != 0) {
+                        if (vhash) {
                             $("select[name=ville] option").each(function () {
                                 if ($(this).val() == _ville) {
                                     $(this).parent().prop("selectedIndex", $(this).index()).change();
@@ -383,7 +391,7 @@ $(function () {
                             $("select[name=rue]").prop("selectedIndex", 1).change();
                             $("select[name=rue] option").first().remove();
                         }
-                        if (vhash.length != 0) {
+                        if (vhash) {
                             $("select[name=ville] option").each(function () {
                                 if ($(this).val() == _ville) {
                                     $(this).parent().prop("selectedIndex", $(this).index()).change();
@@ -408,7 +416,7 @@ $(function () {
                         $("select[name=rue]").prop("selectedIndex", 1).change();
                         $("select[name=rue] option").first().remove();
                     }
-                    if (vhash.length != 0) {
+                    if (vhash) {
                         $("select[name=ville] option").each(function () {
                             if ($(this).val() == _ville) {
                                 $(this).parent().prop("selectedIndex", $(this).index()).change();
@@ -453,7 +461,7 @@ $(function () {
                 }
                 $("select[name=numero]").html(vhtml).fadeIn();
 
-                if (vhash.length != 0) {
+                if (vhash) {
                     $("select[name=numero] option").each(function () {
                         if ($(this).val() == _nbr) {
                             $(this).parent().prop("selectedIndex", $(this).index()).change();
@@ -469,30 +477,24 @@ $(function () {
     });
     $("body").on('click', '.btnVerif', function () {
         var homeId = $("select[name=numero]").val();
-        if ($("select[name=ville]").val() == 98 || $("select[name=ville]").val() == 428 || $("select[name=ville]").val() == 159 || $("select[name=ville]").val() == 174) {
-            window.location.href = "http://www.internet.lu/internet/cable.html";
+        if (homeId != "") {
+            window.location.href = "/internet/offres.html#" + $("input[name=zipcode]").val() + ";" + $("select[name=ville]").val() + ";" + $("select[name=rue]").val() + ";" + $("select[name=numero]").val();
         } else {
-            if (homeId != "") {
-                window.location.href = "/internet/offres.html#" + $("input[name=zipcode]").val() + ";" + $("select[name=ville]").val() + ";" + $("select[name=rue]").val() + ";" + $("select[name=numero]").val();
-            } else {
-                alert('Entrez votre numéro de rue pour continuer...');
-            }
+            alert('Entrez votre numéro de rue pour continuer...');
         }
     });
     $("body").on('click', '.btnVerif2', function (event) {
         var homeId = $("select[name=numero]").val();
-        if ($("select[name=ville]").val() == 98 || $("select[name=ville]").val() == 428 || $("select[name=ville]").val() == 159 || $("select[name=ville]").val() == 174) {
-            window.location.href = "http://www.internet.lu/internet/cable.html";
-        } else {
-            if (homeId !== "") {
-                if ($('#testDispo').hasClass('is-visible')) {
-                    PopupModule.closePopup(event); //main.js
-                }
-                checkDispo($("select[name=numero]").val(), $(this).data('bool') || false);
-            } else {
-                alert('Entrez votre numéro de rue pour continuer...');
+
+        if (homeId !== "") {
+            if ($('#testDispo').hasClass('is-visible')) {
+                PopupModule.closePopup(event); //main.js
             }
+            checkDispo($("select[name=numero]").val(), $("select[name=ville]").val(), $(this).data('bool') || false);
+        } else {
+            alert('Entrez votre numéro de rue pour continuer...');
         }
+
     });
 });
 

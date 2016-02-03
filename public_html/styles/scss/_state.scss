@@ -8,6 +8,12 @@
     }
 }
 @include viewport(max, $max: 1055){
+    #top-menu-header{
+        .container-wrapper{
+            width: 100%;
+            padding: 0 25px;
+        }
+    }
     .equipement-item-blue, .equipement-item-orange{
         .main-image{
             margin: 0 auto 15px;

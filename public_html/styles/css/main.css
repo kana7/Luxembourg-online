@@ -5778,6 +5778,10 @@ h2.contact-title {
     width: 60%;
     margin-top: 6%; } }
 @media screen and (max-width: 1055px) {
+  #top-menu-header .container-wrapper {
+    width: 100%;
+    padding: 0 25px; }
+
   .equipement-item-blue .main-image, .equipement-item-orange .main-image {
     margin: 0 auto 15px; }
   .equipement-item-blue .thumbnails, .equipement-item-orange .thumbnails {

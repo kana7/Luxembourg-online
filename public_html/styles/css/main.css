@@ -3207,35 +3207,15 @@ footer {
     margin-right: 0px; }
 #social-links ul.spread,
 #contact ul.spread, #document-links ul.spread {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center; }
-#social-links ul li,
-#contact ul li, #document-links ul li {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-align-self: auto;
-  -ms-flex-item-align: auto;
-  align-self: auto; }
+  display: inline-block;
+  text-align: justify;
+  width: 100%;
+  line-height: 0; }
+  #social-links ul.spread:after,
+  #contact ul.spread:after, #document-links ul.spread:after {
+    content: '';
+    display: inline-block;
+    width: 100%; }
 
 #social-links .text, #contact .text {
   text-align: center;
@@ -3270,7 +3250,7 @@ footer {
 
 #contact {
   margin-top: -2px;
-  padding: 17px 0 9px;
+  padding: 17px 0 15px;
   text-align: center; }
   #contact li {
     width: 100%;
@@ -5023,7 +5003,8 @@ footer {
     -moz-transition: background 0.4s ease-in-out, border 0.4s ease-in-out, color 0.4s ease-in-out;
     -o-transition: background 0.4s ease-in-out, border 0.4s ease-in-out, color 0.4s ease-in-out;
     -webkit-transition: background 0.4s ease-in-out, border 0.4s ease-in-out, color 0.4s ease-in-out;
-    transition: background 0.4s ease-in-out, border 0.4s ease-in-out, color 0.4s ease-in-out; }
+    transition: background 0.4s ease-in-out, border 0.4s ease-in-out, color 0.4s ease-in-out;
+    line-height: 17px; }
   #social-links a:hover .brand-name {
     color: #0062c7; }
 
@@ -5121,9 +5102,11 @@ footer {
 
 .footer-bottom-links {
   text-align: center;
-  line-height: 35px;
   padding: 10px 0;
   font-weight: 300; }
+  .footer-bottom-links li {
+    line-height: 35px;
+    }
   .footer-bottom-links li:first-child {
     padding-left: 30px; }
   .footer-bottom-links .icon-icone-lol {
@@ -5809,7 +5792,7 @@ h2.contact-title {
   #video-fond > video {
     width: 300%;
     left: -100%; } }
-/* 2. En cas de support d'object-fit, ├®crase les r├¿gles en (1) */
+/* 2. En cas de support d'object-fit, ?�crase les r?�gles en (1) */
 @supports (object-fit: cover) {
   #video-fond > video {
     width: 100%;
@@ -6007,29 +5990,21 @@ h2.contact-title {
     line-height: 25px;
     padding: 15px 0 20px; }
 
+  #document-links .row {
+    text-align: center; }
+
   #social-links ul.center,
   #contact ul.center, #document-links ul.center {
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-content: flex-start;
-    -ms-flex-line-pack: start;
-    align-content: flex-start;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start; }
-    #social-links ul.center li:not(:last-child),
-    #contact ul.center li:not(:last-child), #document-links ul.center li:not(:last-child) {
-      margin-right: 150px; }
+    display: inline-block;
+    text-align: justify;
+    width: 100%;
+    line-height: 0;
+    max-width: 650px; }
+    #social-links ul.center:after,
+    #contact ul.center:after, #document-links ul.center:after {
+      content: '';
+      display: inline-block;
+      width: 100%; }
 
   #document-links ul li:not(:last-child) {
     margin-bottom: 0; }
@@ -6522,7 +6497,7 @@ h2.contact-title {
       font-size: 17px; }
 
   #social-links {
-    padding: 23px 0 12px; }
+    padding: 20px 0 7px; }
 
   #social-links .text, #contact .text {
     text-align: left;
@@ -6537,7 +6512,7 @@ h2.contact-title {
     margin-top: 8px; }
 
   #contact ul {
-    width: 75%; }
+    width: 75% !important; }
 
   #social-links nav {
     width: 80%; }
@@ -6568,6 +6543,9 @@ h2.contact-title {
 
   #document-links .icon {
     display: inline-block; }
+
+  #document-links {
+    padding: 20px 0 11px; }
 
   #document-links a {
     line-height: 31px;

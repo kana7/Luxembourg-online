@@ -223,14 +223,17 @@
         line-height: 25px;
         padding: 15px 0 20px;
     }
+    #document-links{
+        .row{
+            text-align: center;
+        }
+    }
     #social-links ul,
     #contact ul, #document-links ul
     {
         &.center{
-            @include display-flex-center;
-            li:not(:last-child){
-                margin-right: 150px;
-            }
+            @include spread-element;
+            max-width: 650px;
         }
     }
     #document-links ul li:not(:last-child){
@@ -791,7 +794,7 @@
     }
 
     #social-links{
-        padding: 23px 0 12px;
+        padding: 20px 0 7px;
     }
     #social-links .text, #contact .text{
         text-align: left;
@@ -806,7 +809,7 @@
         margin-top: 8px;
     }
     #contact ul{
-        width: 75%;
+        width: 75% !important;
     }
     #social-links nav{
         width: 80%;
@@ -846,6 +849,9 @@
     }
     #document-links .icon{
         display: inline-block;
+    }
+    #document-links{
+        padding: 20px 0 11px;
     }
     #document-links a{
         line-height: 31px;

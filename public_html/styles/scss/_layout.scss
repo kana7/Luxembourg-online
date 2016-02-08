@@ -665,10 +665,7 @@ footer
         }
     }
     &.spread{
-        @include display-flex-spread;
-    }
-    li{
-        @include display-flex-spread-item;
+        @include spread-element;
     }
 }
 
@@ -716,7 +713,7 @@ footer
 #contact
 {
     margin-top: -2px;
-    padding: 17px 0 9px;
+    padding: 17px 0 15px;
     text-align: center;
     li{
         width: 100%;

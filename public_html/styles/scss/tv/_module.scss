@@ -129,7 +129,7 @@
             strong{
                 font-weight: 800;
             }
-            
+
         }
     }
 }
@@ -143,4 +143,10 @@
 }
 .minix-info-image img{
     max-width: 100%;
-    }
+}
+
+#offre-tv-header{
+    background-size: 672px auto;
+    height: 320px !important;
+    background-image: url(../../../images/TV/header/football_672x320px.jpg);
+}

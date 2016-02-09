@@ -5792,7 +5792,7 @@ h2.contact-title {
   #video-fond > video {
     width: 300%;
     left: -100%; } }
-/* 2. En cas de support d'object-fit, ?®crase les r?¿gles en (1) */
+/* 2. En cas de support d'object-fit, ??crase les r??gles en (1) */
 @supports (object-fit: cover) {
   #video-fond > video {
     width: 100%;
@@ -6907,7 +6907,8 @@ h2.contact-title {
 
   .price-orange {
     font-size: 43pt;
-    margin-top: 20px; }
+    margin-top: 20px;
+    }
     .price-orange div {
       font-size: 14pt;
       top: -17px;

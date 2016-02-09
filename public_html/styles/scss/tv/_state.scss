@@ -24,6 +24,12 @@
     }
 }
 @include media(tab){
+    #offre-tv-header{
+        height: 290px !important;
+        background-size: 1056px auto;
+        background-image: url(../../../images/TV/header/football_1056x290px.jpg);
+    }
+
     .header-channel{
         img{
             display: inline-block;
@@ -57,6 +63,11 @@
 }
 
 @include media(desk){
+    #offre-tv-header{
+        height: 370px !important;
+        background-size: 1302px auto;
+        background-image: url(../../../images/TV/header/football_1302x370px.jpg);
+    }
     .header-channel{
         margin-bottom: 0px;
         .img-layout{
@@ -97,5 +108,13 @@
     }
     .minix-info-image img{
         min-width: 350px;
+    }
+}
+
+@include media(lgdesk){
+    #offre-tv-header{
+        height: 500px !important;
+        background-size: 1920px auto;
+        background-image: url(../../../images/TV/header/football_1920x500px.jpg);
     }
 }

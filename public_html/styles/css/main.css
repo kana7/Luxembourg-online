@@ -3158,7 +3158,6 @@ footer {
 #social-links,
 #contact,
 #footer-links, #document-links {
-  /*display: inline-block;*/
   width: 100%; }
 
 #document-links .icon {
@@ -3779,6 +3778,7 @@ span[class^=icon-] {
 .btn-white,
 .btn-outline-white,
 .btn-outline-black,
+.btn-tr-white,
 .mobile-menu-button .mobile-button-blue {
   font-size: 15px;
   font-weight: 600;
@@ -3809,6 +3809,7 @@ span[class^=icon-] {
   .btn-white:focus,
   .btn-outline-white:focus,
   .btn-outline-black:focus,
+  .btn-tr-white:focus,
   .mobile-menu-button .mobile-button-blue:focus {
     outline: 0; }
   .btn-blue:hover, .btn-blue:focus,
@@ -3824,6 +3825,8 @@ span[class^=icon-] {
   .btn-outline-white:focus,
   .btn-outline-black:hover,
   .btn-outline-black:focus,
+  .btn-tr-white:hover,
+  .btn-tr-white:focus,
   .mobile-menu-button .mobile-button-blue:hover,
   .mobile-menu-button .mobile-button-blue:focus {
     text-decoration: none; }
@@ -3926,6 +3929,14 @@ span[class^=icon-] {
   background-color: #07040D;
   color: #fff; }
   .btn-outline-black:hover {
+    background-color: #fff;
+    color: #07040D; }
+
+.btn-tr-white {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: white; }
+  .btn-tr-white:hover {
     background-color: #fff;
     color: #07040D; }
 
@@ -5105,8 +5116,7 @@ footer {
   padding: 10px 0;
   font-weight: 300; }
   .footer-bottom-links li {
-    line-height: 35px;
-    }
+    line-height: 35px; }
   .footer-bottom-links li:first-child {
     padding-left: 30px; }
   .footer-bottom-links .icon-icone-lol {
@@ -5758,11 +5768,20 @@ h2.contact-title {
 /*----------------------------------------------------------------------------*/
 #video-fond {
   overflow: hidden;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0; }
+  left: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: repeat; }
+  #video-fond.image-1 {
+    background-image: url(../../images/TV/header/football_672x320px.jpg); }
+  #video-fond.image-2 {
+    background-image: url(../../images/TV/header/love_672x320px.jpg); }
+  #video-fond.image-3 {
+    background-image: url(../../images/TV/header/space_672x320px.jpg); }
   #video-fond:after {
     content: "";
     position: relative;
@@ -5773,8 +5792,9 @@ h2.contact-title {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #000000;
-    opacity: 0.5; }
+    background-image: url(../../images/TV/pattern/subtle_carbon/subtle_carbon.png);
+    background-repeat: repeat;
+    opacity: 0.55; }
 
 #video-fond > video {
   width: 100%;
@@ -5792,7 +5812,7 @@ h2.contact-title {
   #video-fond > video {
     width: 300%;
     left: -100%; } }
-/* 2. En cas de support d'object-fit, ??crase les r??gles en (1) */
+/* 2. En cas de support d'object-fit, ├®crase les r├¿gles en (1) */
 @supports (object-fit: cover) {
   #video-fond > video {
     width: 100%;
@@ -6249,7 +6269,7 @@ h2.contact-title {
 
   .content-container {
     padding-top: 100px !important;
-    margin-bottom: 40px !important; }
+    margin-bottom: 40px; }
 
   .section-layout.content-container {
     height: 400px; }
@@ -6907,8 +6927,7 @@ h2.contact-title {
 
   .price-orange {
     font-size: 43pt;
-    margin-top: 20px;
-    }
+    margin-top: 20px; }
     .price-orange div {
       font-size: 14pt;
       top: -17px;

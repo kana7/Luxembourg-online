@@ -148,5 +148,24 @@
 #offre-tv-header{
     background-size: 672px auto;
     height: 320px !important;
-    background-image: url(../../../images/TV/header/football_672x320px.jpg);
+    &.image-1{background-image: url(../../../images/TV/header/football_672x320px.jpg);}
+    &.image-2{background-image: url(../../../images/TV/header/love_672x320px.jpg);}
+    &.image-3{background-image: url(../../../images/TV/header/space_672x320px.jpg);}
+    .section-title{
+        font-size: 27px;
+        line-height: 31px;
+        margin: 0 0 10px;
+    }
+    .section-price{
+        font-size: 56px;
+        div{
+            font-size: 25px;
+            top: 10px;
+            left: 155px;
+        }
+    }
+    .btn-tr-white{
+        font-size: 21px;
+    }
+
 }

@@ -298,3 +298,7 @@ var PopupModule = (function () {
         closePopup: closePopup
     };
 })();
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}

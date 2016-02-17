@@ -144,26 +144,23 @@
 
 #steps .step {
   display: none; }
-#steps .step-title {
+#steps .step-title, #steps .step-subtitle {
   margin: 0;
   font-size: 1.8em;
-  font-weight: 800; }
+  font-weight: 600; }
 #steps .step-subtitle {
   margin: 0;
   font-size: 1.3em;
-  font-weight: 800; }
+  font-weight: 600; }
 #steps .substep-title {
   display: block;
   font-weight: 600;
   color: #000;
   font-size: 1.05em; }
-#steps .step-description {
-  font-size: 1.31em;
-  margin: 10px 0;
-  line-height: 20px; }
-#steps .step-subdescription {
+#steps .step-description, #steps .step-subdescription {
   font-size: 1.2em;
   margin: 10px 0;
+  line-height: 20px;
   color: #818181; }
 #steps .btn-blue, #steps .btn-orange {
   font-size: 1.1em; }
@@ -214,7 +211,8 @@
     height: 50px;
     line-height: 50px;
     padding: 0 30px;
-    font-size: 1.2em !important; }
+    font-size: 1.2em !important;
+    cursor: inherit; }
     .shop-item .btn-blue:before {
       content: "Choisir"; }
   .shop-item:not(.disabled):not(.fixed) {
@@ -252,7 +250,7 @@
 .shop-item-name {
   margin: 0 0 15px;
   font-size: 1.32em;
-  font-weight: 800; }
+  font-weight: 600; }
 
 .shop-item-description {
   line-height: 20px;

@@ -170,15 +170,15 @@
     .step{
         display: none;
     }
-    .step-title{
+    .step-title, .step-subtitle{
         margin: 0;
         font-size: 1.8em;
-        font-weight: 800;
+        font-weight: 600;
     }
     .step-subtitle{
         margin: 0;
         font-size: 1.3em;
-        font-weight: 800;
+        font-weight: 600;
     }
     .substep-title{
         display: block;
@@ -186,16 +186,13 @@
         color: $black;
         font-size: 1.05em;
     }
-    .step-description{
-        font-size: 1.31em;
-        margin: 10px 0;
-        line-height: 20px;
-    }
-    .step-subdescription{
+    .step-description, .step-subdescription{
         font-size: 1.2em;
         margin: 10px 0;
+        line-height: 20px;
         color: $dark-grey;
     }
+    
     .btn-blue, .btn-orange{
         font-size: 1.1em;
         [class^=icon-]{
@@ -240,6 +237,7 @@
         line-height: 50px;
         padding: 0 30px;
         font-size: 1.2em !important;
+        cursor: inherit;
         &:before{
             content : "Choisir";
         }
@@ -286,7 +284,7 @@
 .shop-item-name{
     margin: 0 0 15px;
     font-size: 1.32em;
-    font-weight: 800;
+    font-weight: 600;
 }
 .shop-item-description{
     line-height: 20px;
@@ -348,4 +346,12 @@
 }
 input[name="client"]{
     cursor: pointer;
+}
+input[type="radio"], input[type="checkbox"]{
+    &.error{
+    }
+}
+input:not([type="radio"]):not([type="checkbox"]){
+    &.error{
+    }
 }

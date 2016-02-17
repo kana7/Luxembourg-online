@@ -164,8 +164,11 @@ var StepTransition = (function () {
             _collectDataForm($(this).parents('.step').find('.step-form'));
         });
         StepsContainer.on('click', '.shop-item:not(.disabled):not(.fixed)', function () {
+            
+            _selectItem($(this));
+            
             if ($(this).find('input').val() == 2848) {
-                if (!$(this).find('input').is(':checked')) {
+                if ($(this).find('input').is(':checked')) {
                     $('input[value="5304"]').parents('.shop-item').removeClass('fixed');
                     if (!$('input[value="5137"]').is(':checked')) {
                         _selectItem($('input[value="5137"]').parents('.shop-item:not(.disabled)'));
@@ -180,7 +183,6 @@ var StepTransition = (function () {
                     }
                 }
             }
-            _selectItem($(this));
         });
         StepsContainer.on('change', '.shop-item:not(.disabled):not(.fixed) input:not([type="text"])', function () {
             _deselectItem($(this));
@@ -593,13 +595,13 @@ var SellProduct = function (id, type, name, price, isMonthlyCost, commentaire, i
     this.price = this.setPrice(price, remise);
 };
 inherits(SellProduct, Item);
-var modem7490 = new Item("5294", "m_modem", "FRITZ!Box 7490", 6.00, true, ["LAN : 4 x Gigabit", "WLAN : jusqu'à 1300Mbits/s", "Téléphone : 2 x analogique, 1 x ISDN", " "], false, "../images/equipment/modem/7390/7360.png");
+var modem7490 = new Item("5294", "m_modem", "Location FRITZ!Box 7490", 6.00, true, ["LAN : 4 x Gigabit", "WLAN : jusqu'à 1300Mbits/s", "Téléphone : 2 x analogique, 1 x ISDN", " "], false, "../images/equipment/modem/7390/7360.png");
 var modem_List1 = [
-    new Item("5291", "m_modem", "FRITZ!Box 3272", 4.00, true, ["LAN :  2 x Gigabit, 2 x fast Ethernet", "WLAN :  jusqu'à 300Mbit/s", " ", " "], true, "../images/equipment/modem/3272/3272.png"),
+    new Item("5291", "m_modem", "Location FRITZ!Box 3272", 4.00, true, ["LAN :  2 x Gigabit, 2 x fast Ethernet", "WLAN :  jusqu'à 300Mbit/s", " ", " "], true, "../images/equipment/modem/3272/3272.png"),
     modem7490
 ];
 var modem_List2 = [
-    new Item("5292", "m_modem", "FRITZ!Box 7360", 4.00, true, ["LAN :  2 x Gigabit, 2 x fast Ethernet", "WLAN : jusqu'à 300Mbit/s", "Téléphone :  1 x analogique, DECT", " "], true, "../images/equipment/modem/7360/7360.png"),
+    new Item("5292", "m_modem", "Location FRITZ!Box 7360", 4.00, true, ["LAN :  2 x Gigabit, 2 x fast Ethernet", "WLAN : jusqu'à 300Mbit/s", "Téléphone :  1 x analogique, DECT", " "], true, "../images/equipment/modem/7360/7360.png"),
     modem7490
 ];
 var aboTel = new Item("5138", "a_telephone", "Abo téléphonique", 0, true, "Inclus dans votre abonnement", true, "../images/Shop/Telephonie.jpg");
@@ -637,7 +639,7 @@ var abonnements_list = {
         "5257": new Abonnement("5257", "a_abo", "LOL DSL 24", 34.90, true, "", true, null, "LOL", "ADSL", 6, typeInstall, activation, modem_List1)
     },
     "8": {
-        "5273": new Abonnement("5273", "a_abo", "LOL FIBER 30", 44.90, true, "", true, null, "LOL", "VDSL", 8, installNoRemise, activation, modem_List2),
+        "5273": new Abonnement("5273", "a_abo", "LOL FIBER 30", 44.90, true, "", true, null, "LOL", "VDSL", 8, typeInstall, activation, modem_List2),
         "5274": new Abonnement("5274", "a_abo", "LOL FIBER 100", 54.90, true, "", true, null, "LOL", "VDSL", 8, installRemise, activation, modem_List2),
         "5336": new Abonnement("5336", "a_abo", "LOL FIBER 100", 54.90, true, "", true, null, "LOL", "VDSL", 8, installRemise, activation, modem_List2)
     },
@@ -654,9 +656,9 @@ var abonnements_list = {
 var materiel_list = [
     new Item("5436", "m_materiels", "FRITZ!WLAN Repeater 450E", 52.00, false, ["Répétiteur pour étendre le réseau wifi", "WLAN :  2,4 - jusqu'à 450Mbit/s"], false, "../images/equipment/modem/r450e/r450e_small1.png"),
     new Item("5437", "m_materiels", "FRITZ!WLAN Repeater 1750E", 84.00, false, ["Répétiteur pour étendre le réseau wifi", "WLAN : 2,4 et 5 Ghz - jusqu'à 1750Mbit/s"], false, "../images/equipment/modem/r1750e/r1750e_small1.png"),
-    new Item("4570", "m_materiels", "FRITZ!Powerline 520E Set", 89.00, false, ["Solution pour étendre le réseau à travers le circuit électrique (ethernet)"], false, "../images/equipment/modem/pl520eset/pl520eset_small1.png"),
-    new Item("4450", "m_materiels", "FRITZ!Powerline 520E Single", 49.00, false, ["Solution pour étendre le réseau à travers le circuit électrique (ethernet)"], false, "../images/equipment/modem/pl520e/pl520e_small1.png"),
-    new Item("3148", "m_materiels", "FRITZ!Powerline 546E", 95.00, false, ["Solution pour étendre le réseau à travers le circuit électrique (ethernet + wifi)"], false, "../images/equipment/modem/pl546e/pl546e.png"),
+    new Item("4570", "m_materiels", "FRITZ!Powerline 520E Set", 89.00, false, ["Solution pour étendre le réseau via le circuit électrique (ethernet)"], false, "../images/equipment/modem/pl520eset/pl520eset_small1.png"),
+    new Item("4450", "m_materiels", "FRITZ!Powerline 520E Single", 49.00, false, ["Solution pour étendre le réseau via le circuit électrique (ethernet)"], false, "../images/equipment/modem/pl520e/pl520e_small1.png"),
+    new Item("3148", "m_materiels", "FRITZ!Powerline 546E", 95.00, false, ["Solution pour étendre le réseau via le circuit électrique (ethernet + wifi)"], false, "../images/equipment/modem/pl546e/pl546e.png"),
     new Item("5439", "m_materiels", "FRITZ!WLAN Stick AC", 28.00, false, ["Adaptateur wifi", "WLAN : 2,4 et 5 Ghz - jusqu'à 430Mbit/s"], false, "../images/equipment/modem/wlansac/wlansac_small.png"),
     new Item("5395", "m_materiels", "Motorola T201", 31.00, false, ["Pack Mono : 1 x Téléphone numérique sans fil DECT"], false, "../images/equipment/telephone/motorola/t201/motorola_t201_small1.png"),
     new Item("5396", "m_materiels", "Motorola T202", 48.00, false, ["Pack Duo : 2 x Téléphone numérique sans fil DECT"], false, "../images/equipment/telephone/motorola/t202/motorola_t202_small1.png"),

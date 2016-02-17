@@ -192,7 +192,6 @@
         line-height: 20px;
         color: $dark-grey;
     }
-    
     .btn-blue, .btn-orange{
         font-size: 1.1em;
         [class^=icon-]{
@@ -213,8 +212,15 @@
             margin: 0;
             margin-left: 10px;
         }
-        &[disabled]{
-            background-color: $grey;
+        &.disabled{
+            &:before{
+                position: absolute;
+                top: -30px;
+                right: 0;
+                content: "Merci de selectionner tous les champs requis";
+                color: #DC0000;
+                font-weight: 800;
+            }
         }
     }
 }
@@ -349,9 +355,11 @@ input[name="client"]{
 }
 input[type="radio"], input[type="checkbox"]{
     &.error{
+        &+label{color: #DC0000;}
     }
 }
 input:not([type="radio"]):not([type="checkbox"]){
     &.error{
+        border: 1px solid #DC0000;
     }
 }

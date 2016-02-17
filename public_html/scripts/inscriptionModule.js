@@ -8,7 +8,7 @@ var StepTransition = (function () {
             '<button type="button" class="btn-blue previous pull-left">' +
             '<span class="icon-left-arrow"></span> Retour' +
             '</button>' +
-            '<button type="button" class="btn-orange next pull-right" disabled>' +
+            '<button type="button" class="btn-orange next pull-right">' +
             'Suivant <span class="icon-right-arrow"></span>' +
             '</button>' +
             '</div>';
@@ -60,16 +60,16 @@ var StepTransition = (function () {
             '</div>' +
             '</div>' +
             '{{/items}}' +
-            '{{#resetIndex}}{{resetIndex}}{{/resetIndex}}'+
+            '{{#resetIndex}}{{resetIndex}}{{/resetIndex}}' +
             '</div>';
     var tplFormFiber = '<div class="clearfix">' +
-            '<div class="phone-mb-30 phone-mt-30">' +
+            '<div class="phone-mb-20 phone-mt-30">' +
             '<h3 class="step-subtitle">Installation fibre</h3>' +
-            '<p class="step-subdescription">Merci de remplir les champs supplémentaires concernant le câblage interne de la fibre dans votre habitation</p>' +
+            '<p class="step-subdescription">Information supplémentaire sur le câblage interne de la fibre dans votre habitation (obligatoire)</p>' +
             '</div>' +
             '<div data-form="fibre" class="step-form clearfix">' +
             '<div class="phone-12">' +
-            '<div class="input-group">' +
+            '<div class="input-group radio">' +
             '<input id="Cablage" type="radio" name="p_client" value="true" required><label for="Cablage">Mon cablâge interne est conforme pour le raccordement internet via la Fibre Optique.</label>' +
             '</div>' +
             '<div class="input-group">' +
@@ -163,10 +163,13 @@ var StepTransition = (function () {
             _next();
             _collectDataForm($(this).parents('.step').find('.step-form'));
         });
+        StepsContainer.find('input[required]').on('blur click', function () {
+            _checkInput();
+        });
         StepsContainer.on('click', '.shop-item:not(.disabled):not(.fixed)', function () {
-            
+
             _selectItem($(this));
-            
+
             if ($(this).find('input').val() == 2848) {
                 if ($(this).find('input').is(':checked')) {
                     $('input[value="5304"]').parents('.shop-item').removeClass('fixed');
@@ -187,9 +190,6 @@ var StepTransition = (function () {
         StepsContainer.on('change', '.shop-item:not(.disabled):not(.fixed) input:not([type="text"])', function () {
             _deselectItem($(this));
         });
-        StepsContainer.on('change', 'input[required]', function () {
-            _verifyStep($(stepList[currentStep]));
-        });
     }
 
     function _showSlider(index) {
@@ -197,25 +197,24 @@ var StepTransition = (function () {
         $(headerStepList).find('li:not(.step-separator)').eq(1 + index).addClass('active');
         stepList.not(stepList[index]).hide().removeClass('is-visible');
         $(stepList[index]).fadeIn('800').addClass('is-visible');
+        $('html,body').animate({
+            scrollTop: $('#step-list').offset().top
+        }, 0);
     }
 
     function _next() {
-        if (currentStep != stepList.length - 1) {
-            _showSlider(++currentStep);
-            $('html,body').animate({
-                scrollTop: $('#step-list').offset().top
-            }, 0);
-        } else {
-            $('#shoppingCart').submit();
+        if (_checkInput()) {
+            if (currentStep != stepList.length - 1) {
+                _showSlider(++currentStep);
+            } else {
+                $('#shoppingCart').submit();
+            }
         }
     }
 
     function _previous() {
         if (currentStep != 0) {
             _showSlider(--currentStep);
-            $('html,body').animate({
-                scrollTop: $('#step-list').offset().top
-            }, 0);
         } else {
             window.location.href = "../shop/offres.html";
         }
@@ -276,30 +275,35 @@ var StepTransition = (function () {
     }
 
     var _verifyStep = function ($element) {
-        var currentStep = $element;
         var flag = true;
+        var currentStep = $element;
         var name;
         //vérifie si required est select
         currentStep.find('input[required]').each(function () {
             name = $(this).attr('name');
             if ($(this).attr('type') == 'radio') {
                 if (!currentStep.find("input[name='" + name + "']").is(':checked')) {
-                    currentStep.find('button.next').prop('disabled', 'disabled');
                     flag = false;
-                    return false;
                 }
             } else {
                 if (!$(this).val()) {
-                    currentStep.find('button.next').prop('disabled', 'disabled');
                     flag = false;
-                    return false;
                 }
             }
         });
-        if (flag) {
-            currentStep.find('button.next').removeAttr("disabled");
-        }
+        return flag;
     };
+
+    var _checkInput = function () {
+        var flag = _verifyStep($(stepList[currentStep]));
+        if (!flag) {
+            $(stepList[currentStep]).find('button.next').addClass('disabled');
+        } else {
+            $(stepList[currentStep]).find('button.next').removeClass('disabled');
+        }
+        return flag;
+    };
+
     return{
         init: init
     };

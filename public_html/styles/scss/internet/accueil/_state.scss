@@ -58,6 +58,17 @@
             margin-bottom: 20px;
         }
     }
+    #steps{
+        .btn-orange{
+            &.disabled{
+                &:before{
+                    top: auto;
+                    right: 123px;
+                }
+            }
+        }
+    }
+
 }
 @include media(desk){
     #test-offres{

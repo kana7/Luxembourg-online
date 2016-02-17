@@ -5486,17 +5486,22 @@ h2.contact-title {
   width: 100%;
   table-layout: fixed; }
   .input-group-table .input-group.inline {
-    display: table-row; }
+    display: table-row;
+    height: 38px;
+    }
     .input-group-table .input-group.inline *:not(span) {
       display: initial; }
     .input-group-table .input-group.inline > label, .input-group-table .input-group.inline > input, .input-group-table .input-group.inline > .input-group-cell {
       display: table-cell;
-      margin: 5px 0; }
+      margin: 5px 0;
+      }
     .input-group-table .input-group.inline .input-group-cell input[type="radio"]:not(:first-child) {
       margin-left: 30px; }
 
 .input-group {
   margin-bottom: 25px; }
+  .input-group.radio {
+    margin-bottom: 10px; }
   .input-group:not(.inline) *:not(span) {
     display: block; }
   .input-group input:not([type=radio]), .input-group textarea, .input-group select {

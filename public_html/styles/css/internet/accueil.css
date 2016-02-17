@@ -181,8 +181,13 @@
   #steps .btn-orange [class^=icon-] {
     margin: 0;
     margin-left: 10px; }
-  #steps .btn-orange[disabled] {
-    background-color: #c0c0c0; }
+  #steps .btn-orange.disabled:before {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    content: "Merci de selectionner tous les champs requis";
+    color: #DC0000;
+    font-weight: 800; }
 
 .shop-item {
   display: block;
@@ -309,6 +314,12 @@
 input[name="client"] {
   cursor: pointer; }
 
+input[type="radio"].error + label, input[type="checkbox"].error + label {
+  color: #DC0000; }
+
+input:not([type="radio"]):not([type="checkbox"]).error {
+  border: 1px solid #DC0000; }
+
 #test-offres {
   text-align: center;
   padding: 20px 0; }
@@ -356,7 +367,11 @@ input[name="client"] {
     padding-right: 10px; }
   .shop-item-list [class$="-6"]:nth-child(even) {
     padding-left: 10px;
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+
+  #steps .btn-orange.disabled:before {
+    top: auto;
+    right: 123px; } }
 @media screen and (min-width: 1056px) {
   #test-offres {
     padding: 5px 0 6px; }

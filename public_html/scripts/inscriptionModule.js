@@ -349,7 +349,7 @@ var Cart = (function () {
             '<span class="price price-delete">{{#formatPrice}}{{fullPrice}}{{/formatPrice}} €/mois</span>' +
             '<div class="remise-name">' +
             '<span class="label"><span class="bold">PROMO</span> : {{remise.name}}</span>' +
-            '<span class="price">{{#formatPrice}}{{price}}{{/formatPrice}} €</span>' +
+            '<span class="price">{{#formatPrice}}{{price}}{{/formatPrice}} €/mois</span>' +
             '</div>' +
             '</li>' +
             '{{/isRemise}}' +

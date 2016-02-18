@@ -4285,7 +4285,7 @@ span[class^=icon-] {
   .offer-item-blue .item-header, .equipement-item-blue .item-header {
     border-radius: 4px 4px 0px 0px;
     padding: 18px 0 15px;
-    font-size: 24px;
+    font-size: 22px;
     text-transform: uppercase; }
   .offer-item-blue .item-body, .equipement-item-blue .item-body {
     color: #004994; }
@@ -4385,7 +4385,7 @@ span[class^=icon-] {
   .offer-item-orange .item-header, .equipement-item-orange .item-header {
     border-radius: 4px 4px 0px 0px;
     padding: 18px 0 15px;
-    font-size: 24px;
+    font-size: 22px;
     text-transform: uppercase; }
   .offer-item-orange .item-body, .equipement-item-orange .item-body {
     color: #004994; }
@@ -5072,6 +5072,22 @@ footer {
   box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.18);
   -o-box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.18);
   -ms-box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.18); }
+
+.promos-link {
+  display: block;
+  position: relative;
+  font-size: 1.2em;
+  color: #e75e0a;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-top: 5px; }
+  .promos-link:hover {
+    text-decoration: underline; }
+  .promos-link span[class^=icon-] {
+    margin-right: 0;
+    margin-left: 7px;
+    font-size: 1.2em;
+    top: 3px; }
 
 .footer-top-links {
   font-weight: 300;
@@ -6722,7 +6738,7 @@ h2.contact-title {
     font-size: 19px; }
 
   .offer-item-orange .item-body > li:not(:first-child), .offer-item-blue .item-body > li:not(:first-child) {
-    padding-left: 15px !important; }
+    padding-left: 9px !important; }
 
   .offer-item-orange .check-list li .icon-check-ico, .offer-item-blue .check-list li .icon-check-ico {
     margin-right: 18px; }

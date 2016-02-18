@@ -31,7 +31,7 @@ function natSort(as, bs) {
 
 var nonDispoTemplate = '<div class="not-dispo"><div class="not-dispo-info">Offre <br />indisponible <br />à votre adresse</div></div>';
 var buttonDispoTempate = '<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_FR.pdf" target="_blank">Abonnez-vous</a>';
-var buttonPromoFibre = '<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_OFFRE2_FR.pdf" target="_blank">Abonnez-vous</a>';
+var buttonPromoFibre = '<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_OFFRE2_FR.pdf" target="_blank">Abonnez-vous</a>'+ '<a class="promos-link" href="../promos/fibre.html">Promo : installation offerte</a>';
 var buttonPromoTv = '<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_OFFRE1_FR.pdf" target="_blank">Abonnez-vous</a>';
 
 var checkDispoTemplate = '<section id="test-offres" class="clearfix">' +
@@ -234,7 +234,7 @@ function checkDispo(homeId, villeId, boolean) {
                     }
                 }
 
-                $('.k24, .k30, .k100, .k200').next().remove();
+                $('.k24, .k30, .k100, .k200').nextAll().remove();
                 $('.k24, .k30, .k100, .k200').find('.not-dispo').remove();
 
                 if (ab[0] == "") {

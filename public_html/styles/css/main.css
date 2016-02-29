@@ -351,8 +351,10 @@ optgroup {
  * Remove most spacing between table cells.
  */
 table {
+  display: inline-block;
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+  }
 
 td,
 th {
@@ -5828,7 +5830,7 @@ h2.contact-title {
   #video-fond > video {
     width: 300%;
     left: -100%; } }
-/* 2. En cas de support d'object-fit, ├®crase les r├¿gles en (1) */
+/* 2. En cas de support d'object-fit, ?�crase les r?�gles en (1) */
 @supports (object-fit: cover) {
   #video-fond > video {
     width: 100%;

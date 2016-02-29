@@ -258,7 +258,9 @@
                     display:none;
                     margin-top:15px;
                 }
-
+                .modemItem table, .minixItem table{
+                    width: 100%;
+                }
                 .imgContainer{
                     display: inline-block;
                     height:150px;
@@ -485,79 +487,83 @@
                                         </table>
                                     </div>
                                 </div>
-                                <div class="phone-12 tab-6 desk-4 align-center">
-                                    <div style="display: inline-block">
-                                        <div class="modemItem" style="display: none;">
-                                            <table>
-                                                <tbody>
-                                                    <tr>
-                                                        <td><div class="imgContainer"><a class="link link2" href="../documents/guides/Guide_ADSL_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_ADSL_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a></div></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><h3>Fritz!Box (ADSL)</h3><a class="link-assistance" href="../documents/guides/Guide_ADSL_A5_BD.pdf" target="_blank">Télécharger</a></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                <div class="phone-12 tab-6 desk-4">
+                                    <div class="align-center">
+                                        <div style="display: inline-block">
+                                            <div class="modemItem" style="display: none;">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><div class="imgContainer"><a class="link link2" href="../documents/guides/Guide_ADSL_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_ADSL_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a></div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><h3>Fritz!Box (ADSL)</h3><a class="link-assistance" href="../documents/guides/Guide_ADSL_A5_BD.pdf" target="_blank">Télécharger</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="modemItem" style="display: none;">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><div class="imgContainer"><a class="link link2" href="../documents/guides/Guide_VDSL_RV_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_VDSL_RV_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a></div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><h3>Fritz!Box (VDSL)</h3><a class="link-assistance" href="../documents/guides/Guide_VDSL_RV_A5_BD.pdf" target="_blank">Télécharger</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="modemItem" style="display: none;">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><div class="imgContainer" style="width:120px !important;"><a onClick="ga('send', 'event', 'download', 'click', ‘FRITZ VDSL');"  class="link link2" href="../documents/guides/Guide_VDSL_DG_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_VDSL_DG_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a></div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><h3>Fritz!Box (VDSL dégroupé)</h3><a onClick="ga('send', 'event', 'download', 'click', ‘FRITZ VDSL');" class="link-assistance" href="../documents/guides/Guide_VDSL_DG_A5_BD.pdf" target="_blank">Télécharger</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <select class="modemList phone-mt-10">
+                                                <option value="0">Fritz!Box (ADSL)</option>
+                                                <option value="1">Fritz!Box (VDSL revente)</option>
+                                                <option value="2">Fritz!Box (VDSL dégroupé)</option>                               
+                                            </select>
                                         </div>
-                                        <div class="modemItem" style="display: none;">
-                                            <table>
-                                                <tbody>
-                                                    <tr>
-                                                        <td><div class="imgContainer"><a class="link link2" href="../documents/guides/Guide_VDSL_RV_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_VDSL_RV_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a></div></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><h3>Fritz!Box (VDSL)</h3><a class="link-assistance" href="../documents/guides/Guide_VDSL_RV_A5_BD.pdf" target="_blank">Télécharger</a></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <div class="modemItem" style="display: none;">
-                                            <table>
-                                                <tbody>
-                                                    <tr>
-                                                        <td><div class="imgContainer" style="width:120px !important;"><a onClick="ga('send', 'event', 'download', 'click', ‘FRITZ VDSL');"  class="link link2" href="../documents/guides/Guide_VDSL_DG_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_VDSL_DG_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a></div></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><h3>Fritz!Box (VDSL dégroupé)</h3><a onClick="ga('send', 'event', 'download', 'click', ‘FRITZ VDSL');" class="link-assistance" href="../documents/guides/Guide_VDSL_DG_A5_BD.pdf" target="_blank">Télécharger</a></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <select class="modemList phone-mt-10">
-                                            <option value="0">Fritz!Box (ADSL)</option>
-                                            <option value="1">Fritz!Box (VDSL revente)</option>
-                                            <option value="2">Fritz!Box (VDSL dégroupé)</option>                               
-                                        </select>
                                     </div>
                                 </div>
-                                <div class="phone-12 tab-6 desk-4 align-center">
-                                    <div style="display: inline-block;">
-                                        <div class="minixItem" style="display: block;">
-                                            <table>
-                                                <tbody>
-                                                    <tr>
-                                                        <td><div class="imgContainer" style="width:120px !important;"><a class="link link2" href="../documents/guides/Guide_TV_Minix_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_TV_Minix_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a></div></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><h3>Minix (LOL TV)</h3><a class="link-assistance" href="../documents/guides/Guide_TV_Minix_A5_BD.pdf" target="_blank">Télécharger</a></td>
-                                                    </tr>
-                                                </tbody></table>
+                                <div class="phone-12 tab-6 desk-4">
+                                    <div class="align-center">
+                                        <div style="display: inline-block;">
+                                            <div class="minixItem" style="display: block;">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><div class="imgContainer" style="width:120px !important;"><a class="link link2" href="../documents/guides/Guide_TV_Minix_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_TV_Minix_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a></div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><h3>Minix (LOL TV)</h3><a class="link-assistance" href="../documents/guides/Guide_TV_Minix_A5_BD.pdf" target="_blank">Télécharger</a></td>
+                                                        </tr>
+                                                    </tbody></table>
+                                            </div>
+                                            <div class="minixItem" style="display: none;">
+                                                <table>
+                                                    <tbody><tr>
+                                                            <td><div class="imgContainer" style="width:120px !important;"><a onClick="ga('send', 'event', 'download', 'click', ‘Minix Mini');" class="link link2" href="../documents/guides/Guide_TV_Minix_Mini_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_TV_Minix_Mini_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a></div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><h3>Minix Mini (LOL TV)</h3><a onClick="ga('send', 'event', 'download', 'click', ‘Minix Mini');" class="link-assistance" href="../documents/guides/Guide_TV_Minix_Mini_A5_BD.pdf" target="_blank">Télécharger</a></td>
+                                                        </tr>
+                                                    </tbody></table>
+                                            </div>
+                                            <select class="minixList phone-mt-10">
+                                                <option value="0">Minix (LOL TV)</option>
+                                                <option value="1">Minix Mini (LOL TV)</option>
+                                        
+                                            </select>
                                         </div>
-                                        <div class="minixItem" style="display: none;">
-                                            <table>
-                                                <tbody><tr>
-                                                        <td><div class="imgContainer" style="width:120px !important;"><a onClick="ga('send', 'event', 'download', 'click', ‘Minix Mini');" class="link link2" href="../documents/guides/Guide_TV_Minix_Mini_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_TV_Minix_Mini_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a></div></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><h3>Minix Mini (LOL TV)</h3><a onClick="ga('send', 'event', 'download', 'click', ‘Minix Mini');" class="link-assistance" href="../documents/guides/Guide_TV_Minix_Mini_A5_BD.pdf" target="_blank">Télécharger</a></td>
-                                                    </tr>
-                                                </tbody></table>
-                                        </div>
-                                        <select class="minixList phone-mt-10">
-                                            <option value="0">Minix (LOL TV)</option>
-                                            <option value="1">Minix Mini (LOL TV)</option>
-
-                                        </select>
                                     </div>
                                 </div>
                             </div>

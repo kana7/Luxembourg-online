@@ -1,8 +1,8 @@
-
 // MODULE
 //------------------------------------------------------------------------------
 var StepTransition = (function () {
-//stock la position du slide visible
+    var formNameIndex = ['shop_fibre', 'shop_portabilite'];
+    var cookieIndex = ['shop_serviceMap', 'shop_panierItems'].concat(formNameIndex);
     var html;
     var tplbtn = '<div class="clearfix phone-mt-30 phone-mb-30 buttons-next-previous">' +
             '<button type="button" class="btn-blue previous pull-left">' +
@@ -86,9 +86,12 @@ var StepTransition = (function () {
     events.on('getCurrent', init);
 
     function init(current) {
+        var itemsCookie = Cookies.getJSON('shop_panierItems');
         currentItems_list = current;
         _render();
         _bindEvents();
+        console.log('-----------------------ATTENTION COOKIE-----------------------------');
+        console.log(itemsCookie);
         //verifie chaque etape et switch le bouton next si une action requise n'est pas effectuée
         $('.step').each(function () {
             _verifyStep($(this));
@@ -97,6 +100,11 @@ var StepTransition = (function () {
         $('.step .shop-item').find('input[selected]').each(function () {
             _selectItem($(this).parents('.shop-item'));
         });
+        //RECOVERY AT THIS POINT
+        if (typeof itemsCookie !== 'undefined') {
+            _recoverCart(itemsCookie);
+        }
+
         _showSlider(currentStep);
     }
 
@@ -207,6 +215,12 @@ var StepTransition = (function () {
             if (currentStep != stepList.length - 1) {
                 _showSlider(++currentStep);
             } else {
+                //on enregistre les infos du panier dans un cookie dans le cas où l'utilisateur revient en arrière.
+                _saveCart();
+                console.log("-----------------------------Creation cookie--------------------------------------");
+                var cookie = Cookies.getJSON('shop_panierItems');
+                console.log(cookie);
+                alert('interruption');
                 $('#shoppingCart').submit();
             }
         }
@@ -220,8 +234,23 @@ var StepTransition = (function () {
         }
     }
 
+    //Activé pour simplement ajouter dans le panier 
+    function _addItem(shopItem) {
+        var input = shopItem.find('input');
+        shopItem.addClass('selected');
+        if (input.is(':radio')) {
+            _deselectItem(input);
+        }
+        events.emit('useCart', {
+            id: input.val(),
+            cat: input.attr('data-cat'),
+            isAdding: true
+        });
+    }
+
+    //Activé quand on clique sur un article (toggle mode).
     function _selectItem(shopItem) {
-        if (shopItem != 'undefined') {
+        if (shopItem !== 'undefined') {
             var input = shopItem.find('input:not([type="text"])');
             shopItem.toggleClass('selected');
             if (input.is(':checked')) {
@@ -304,10 +333,49 @@ var StepTransition = (function () {
         return flag;
     };
 
+    //Enregistre les informations du panier dans des cookies quand on quitte la page
+    var _saveCart = function () {
+        var itemsTab = [];
+        $(Cart.panier.items).each(function () {
+            itemsTab.push(this.id);
+        });
+        Cookies.set('shop_panierItems', itemsTab, {expires: 1});
+        for (var key in Cart.panier.info) {
+            Cookies.set('shop_' + key, Cart.panier.info[key], {expires: 1});
+        }
+    };
+    //permet de récupérer les infos du panier dans les cookies
+    var _recoverCart = function (cookie) {
+        var recoveredForm = [];
+        $('.step .shop-item').each(function () {
+            if (cookie.indexOf($(this).find('input:not([type="text"])').val()) !== -1) {
+                _addItem($(this));
+            }
+        });
+        for (var index in formNameIndex) {
+            recoveredForm.push(Cookies.getJSON(formNameIndex[index]));
+        }
+        console.log('-----------------FORM RECOVER------------------------');
+        console.log(recoveredForm);
+        for (var index in recoveredForm) {
+            if (typeof recoveredForm[index] !== 'undefined') {
+                for (var key in recoveredForm[index]) {
+                    console.log(key);
+                    if ($('input[name=' + key + ']').is(':radio')) {
+                        $('input[name=' + key + ']').val(recoveredForm[index][key]).prop('checked', true).trigger('change');
+                    } else {
+                        $('input[name=' + key + ']').val(recoveredForm[index][key]);
+                    }
+                }
+            }
+        }
+    };
     return{
         init: init
     };
 })();
+
+
 var Cart = (function () {
 
     //Contient la liste de tous les choix possibles lors de l'inscription
@@ -411,37 +479,43 @@ var Cart = (function () {
 
     function _initCurrentItem() {
         var vhash;
-        if (window.location.hash) {
-            vhash = (window.location.hash.split('#')[1]).split(";");
-            if (window.location.hash.length > 2) {
-                currentItems_list['a_abo'] = abonnements_list.getAbo(vhash[0], vhash[1]);
-                currentItems_list['p_installation'] = currentItems_list['a_abo']['installation'];
-                currentItems_list['p_activation'] = currentItems_list['a_abo']['activation'];
-                currentItems_list['m_modem'] = currentItems_list['a_abo']['materiels'];
-                currentItems_list['a_telephone'] = aboTel;
-                currentItems_list['a_tv'] = lolTv;
-                currentItems_list['m_tv_materiel'] = lolTv_materielList;
-                currentItems_list['m_materiels'] = materiel_list;
-                //ajout de l'abo et de l'activation dans le panier à l'ouverture de la page
-                _useCard({
-                    id: 5257,
-                    cat: 'a_abo',
-                    isAdding: true
-                });
-                _useCard({
-                    id: 5610,
-                    cat: 'p_activation',
-                    isAdding: true
-                });
-                events.emit('getCurrent', currentItems_list);
-                console.log(currentItems_list);
-                console.log(Panier);
-                //supprime le hash de l'url une fois terminé
-                /*if (window.history && window.history.pushState) {
-                 window.history.pushState('', '', window.location.pathname);
-                 } else {
-                 window.location.href = window.location.href.replace(/#.*$/, '#');
-                 }*/
+        var cookie = Cookies.getJSON('shop_serviceMap');
+        if (window.location.hash !== "" || typeof cookie !== 'undefined') {
+            vhash = window.location.hash || cookie;
+            if (window.location.hash) {
+                vhash = (vhash.split('#')[1]).split(";");
+                Cookies.remove('shop_panierItems');
+            }
+            //on enregistre le hash dans un cookie pour un recover éventuel.
+            Cookies.set('shop_serviceMap', vhash, {expires: 1});
+
+            currentItems_list['a_abo'] = abonnements_list.getAbo(vhash[0], vhash[1]);
+            currentItems_list['p_installation'] = currentItems_list['a_abo']['installation'];
+            currentItems_list['p_activation'] = currentItems_list['a_abo']['activation'];
+            currentItems_list['m_modem'] = currentItems_list['a_abo']['materiels'];
+            currentItems_list['a_telephone'] = aboTel;
+            currentItems_list['a_tv'] = lolTv;
+            currentItems_list['m_tv_materiel'] = lolTv_materielList;
+            currentItems_list['m_materiels'] = materiel_list;
+            //ajout de l'abo et de l'activation dans le panier à l'ouverture de la page
+            _useCard({
+                id: 5257,
+                cat: 'a_abo',
+                isAdding: true
+            });
+            _useCard({
+                id: 5610,
+                cat: 'p_activation',
+                isAdding: true
+            });
+            events.emit('getCurrent', currentItems_list);
+            console.log(currentItems_list);
+            console.log(Panier);
+            //supprime le hash de l'url une fois terminé
+            if (window.history && window.history.pushState) {
+                window.history.pushState('', '', window.location.pathname);
+            } else {
+                window.location.href = window.location.href.replace(/#.*$/, '#');
             }
         } else {
             $(window).off("beforeunload");
@@ -477,15 +551,17 @@ var Cart = (function () {
     function _addForm(data) {
         Panier['info'][data['id']] = data['object'];
     }
-    ;
+
     function _addItem(cat, id) {
-        console.log("j'ajoute ! : " + cat + ' ' + id);
         //adding unique element
-        if (Object.prototype.toString.call(currentItems_list[cat]) === '[object Array]') {
-            var objToAdd = _findInArray(currentItems_list[cat], id);
-            Panier['items'].push(objToAdd);
-        } else {
-            Panier['items'].push(currentItems_list[cat]);
+        if (_findInArray(Panier['items'], id) == null) {
+            console.log("j'ajoute ! : " + cat + ' ' + id);
+            if (Object.prototype.toString.call(currentItems_list[cat]) === '[object Array]') {
+                var objToAdd = _findInArray(currentItems_list[cat], id);
+                Panier['items'].push(objToAdd);
+            } else {
+                Panier['items'].push(currentItems_list[cat]);
+            }
         }
     }
 
@@ -529,11 +605,14 @@ var Cart = (function () {
     }
 
     return{
-        init: init
+        init: init,
+        panier: Panier
     };
 })();
+
 // DATA
 //------------------------------------------------------------------------------
+//
 //Permet l'héritage
 var inherits = function (ctor, superCtor) {
     ctor.super_ = superCtor;

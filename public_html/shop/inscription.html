@@ -554,16 +554,14 @@
             </footer>
             <!--              ./FOOTER               -->
         </div>
-
+        <script type="text/javascript" src="../scripts/vendor/js.cookie.js"></script>
         <script type="text/javascript" src="../scripts/vendor/jquery.min.js"></script>
         <script type="text/javascript" src="../scripts/vendor/mustache.min.js"></script>
-        <script type="text/javascript" src="../scripts/pubSub.js"></script>
-        <script type="text/javascript" src="../scripts/inscriptionModule.js"></script>
         <script type="text/javascript" src="../scripts/main.js"></script>
-        <script type="text/javascript" src="../scripts/onLeavePage.js"></script>
+        <script type="text/javascript" src="../scripts/pubSub.js"></script>
         <script type="text/javascript">
             $(function () {
-                $('input[name="a_portabilite"]').on('change', function () {
+                $(document).delegate('input[name="a_portabilite"]', 'change', function () {
                     if ($(this).val() != 0) {
                         $('#porta-form').removeClass('hidden');
                     } else {
@@ -572,6 +570,17 @@
                 });
             });
         </script>
+        <script type="text/javascript" src="../scripts/inscriptionModule.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                var temp;
+                $('.dropdown').each(function () {
+                    temp = new DropDown($(this));
+                    temp.init();
+                });
+            });
+        </script>
+        <script type="text/javascript" src="../scripts/onLeavePage.js"></script>
         <!--<script type="text/javascript" src="../scripts/analytics.js"></script>-->
     </body>
 

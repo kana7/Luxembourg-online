@@ -1,7 +1,7 @@
 /*Prompt une alert en quittant une page*/
 
 $(window).on("beforeunload", function () {
-    return "Si vous quittez maintenant cette page, les données de votre commande seront perdues. êtes-vous sûr?";
+    return "Vous allez quitter la saisie de votre commande. êtes-vous sûr?";
 });
 
 $(document).ready(function () {

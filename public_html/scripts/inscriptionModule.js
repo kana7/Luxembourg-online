@@ -231,10 +231,11 @@ var StepTransition = (function () {
         if (currentStep != 0) {
             _showSlider(--currentStep);
         } else {
-            window.location.href = "../shop/offres.html";
+            if (confirm('Si vous retournez maintenant en arrière, les données de votre commande seront perdues. êtes-vous sûr?')) {
+                window.location.href = "../shop/offres.html";
+            }
         }
     }
-
     //Activé pour simplement ajouter dans le panier 
     function _addItem(shopItem) {
         var input = shopItem.find('input');
@@ -357,7 +358,7 @@ var StepTransition = (function () {
         var recoveredForm = [];
         $('.step .shop-item').each(function () {
             if (cookie.indexOf($(this).find('input:not([type="text"])').val()) !== -1) {
-                _addItem($(this));
+                $(this).not('.selected').click();
             }
         });
         for (var index in formNameIndex) {

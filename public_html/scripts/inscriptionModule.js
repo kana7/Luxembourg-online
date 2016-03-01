@@ -196,6 +196,9 @@ var StepTransition = (function () {
         StepsContainer.on('change', '.shop-item:not(.disabled):not(.fixed) input:not([type="text"])', function () {
             _deselectItem($(this));
         });
+        $(window).on("beforeunload", function () {
+            _saveCart();
+        });
     }
 
     function _showSlider(index) {
@@ -214,7 +217,7 @@ var StepTransition = (function () {
                 _showSlider(++currentStep);
             } else {
                 //on enregistre les infos du panier dans un cookie dans le cas où l'utilisateur revient en arrière.
-                saveCart();
+                _saveCart();
                 console.log("-----------------------------Creation cookie--------------------------------------");
                 var cookie = Cookies.getJSON('shop_panierItems');
                 console.log(cookie);
@@ -339,7 +342,7 @@ var StepTransition = (function () {
     };
 
     //Enregistre les informations du panier dans des cookies quand on quitte la page
-    var saveCart = function () {
+    var _saveCart = function () {
         var itemsTab = [];
         $(Cart.panier.items).each(function () {
             itemsTab.push(this.id);
@@ -367,7 +370,7 @@ var StepTransition = (function () {
                 for (var key in recoveredForm[index]) {
                     console.log(key);
                     if ($('input[name=' + key + ']').is(':radio')) {
-                        $('input[name=' + key + '][value="'+recoveredForm[index][key]+'"]').prop('checked', true).trigger('change');
+                        $('input[name=' + key + '][value="' + recoveredForm[index][key] + '"]').prop('checked', true).trigger('change');
                     } else {
                         $('input[name=' + key + ']').val(recoveredForm[index][key]);
                     }
@@ -376,8 +379,7 @@ var StepTransition = (function () {
         }
     };
     return{
-        init: init,
-        saveCart: saveCart
+        init: init
     };
 })();
 

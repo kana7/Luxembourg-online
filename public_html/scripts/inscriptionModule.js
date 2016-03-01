@@ -1,8 +1,6 @@
 // MODULE
 //------------------------------------------------------------------------------
 var StepTransition = (function () {
-    var formNameIndex = ['shop_fibre', 'shop_portabilite'];
-    var cookieIndex = ['shop_serviceMap', 'shop_panierItems'].concat(formNameIndex);
     var html;
     var tplbtn = '<div class="clearfix phone-mt-30 phone-mb-30 buttons-next-previous">' +
             '<button type="button" class="btn-blue previous pull-left">' +
@@ -216,7 +214,7 @@ var StepTransition = (function () {
                 _showSlider(++currentStep);
             } else {
                 //on enregistre les infos du panier dans un cookie dans le cas où l'utilisateur revient en arrière.
-                _saveCart();
+                saveCart();
                 console.log("-----------------------------Creation cookie--------------------------------------");
                 var cookie = Cookies.getJSON('shop_panierItems');
                 console.log(cookie);
@@ -294,7 +292,14 @@ var StepTransition = (function () {
             var id = $form.attr('data-form');
             var object = {};
             $form.find('input').each(function () {
-                object[$(this).attr('name')] = $(this).val();
+                console.log($(this).attr('name'));
+                if ($(this).is(':radio')) {
+                    if ($(this).is(':checked')) {
+                        object[$(this).attr('name')] = $(this).val();
+                    }
+                } else {
+                    object[$(this).attr('name')] = $(this).val();
+                }
             });
             console.log(object);
             events.emit('addForm', {id: id, object: object});
@@ -334,7 +339,7 @@ var StepTransition = (function () {
     };
 
     //Enregistre les informations du panier dans des cookies quand on quitte la page
-    var _saveCart = function () {
+    var saveCart = function () {
         var itemsTab = [];
         $(Cart.panier.items).each(function () {
             itemsTab.push(this.id);
@@ -362,7 +367,7 @@ var StepTransition = (function () {
                 for (var key in recoveredForm[index]) {
                     console.log(key);
                     if ($('input[name=' + key + ']').is(':radio')) {
-                        $('input[name=' + key + ']').val(recoveredForm[index][key]).prop('checked', true).trigger('change');
+                        $('input[name=' + key + '][value="'+recoveredForm[index][key]+'"]').prop('checked', true).trigger('change');
                     } else {
                         $('input[name=' + key + ']').val(recoveredForm[index][key]);
                     }
@@ -371,7 +376,8 @@ var StepTransition = (function () {
         }
     };
     return{
-        init: init
+        init: init,
+        saveCart: saveCart
     };
 })();
 

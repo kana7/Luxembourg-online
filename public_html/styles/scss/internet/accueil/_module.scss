@@ -397,3 +397,17 @@ input:not([type="radio"]):not([type="checkbox"]){
         border: 1px solid #DC0000;
     }
 }
+
+.notif{
+    position: relative;
+    color: #DC0000;
+    font-weight: 800;
+    font-size: 1.1em;
+    line-height: 25px;
+    margin-bottom: -30px;
+    span[class^="icon-"]{
+        top: 5px;
+        font-size: 1.4em;
+
+    }
+}

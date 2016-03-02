@@ -349,6 +349,18 @@ input[type="radio"].error + label, input[type="checkbox"].error + label {
 input:not([type="radio"]):not([type="checkbox"]).error {
   border: 1px solid #DC0000; }
 
+.notif {
+  position: relative;
+  color: #DC0000;
+  font-weight: 800;
+  font-size: 1.1em;
+  line-height: 25px;
+  margin-bottom: -30px; }
+  .notif span[class^="icon-"] {
+    top: 5px;
+    font-size: 1.4em;
+    }
+
 #test-offres {
   text-align: center;
   padding: 20px 0; }

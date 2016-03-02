@@ -41,6 +41,8 @@
     font-size: 15px;
     line-height: 30px;
     color: white; }
+    #step-list li:not(.step-separator) {
+      cursor: pointer; }
     #step-list li .icon-right-arrow {
       position: relative;
       margin: 0;
@@ -49,7 +51,8 @@
     #step-list li.active {
       border-bottom: 1px solid #fff; }
       #step-list li.active ~ li {
-        opacity: 0.5; }
+        opacity: 0.5;
+        cursor: default; }
   #step-list li:not(:last-child) {
     margin-right: 4px; }
 

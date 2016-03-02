@@ -14,6 +14,7 @@ var StepTransition = (function () {
             '{{#remise}}' +
             '<input type="hidden" name="{{remise.type}}" value="{{remise.id}}"/>' +
             '{{/remise}}';
+    //template pour un article
     var tplItem =
             '<div class="clearfix phone-mt-30 shop-item-list">' +
             '{{#items}}' +
@@ -60,6 +61,7 @@ var StepTransition = (function () {
             '{{/items}}' +
             '{{#resetIndex}}{{resetIndex}}{{/resetIndex}}' +
             '</div>';
+    //template formulaire fibre
     var tplFormFiber = '<div class="clearfix">' +
             '<div class="phone-mb-20 phone-mt-30">' +
             '<h3 class="step-subtitle">Installation fibre</h3>' +
@@ -81,31 +83,36 @@ var StepTransition = (function () {
     var currentItems_list;
     var currentStep = 0;
     var stepList = StepsContainer.find('.step');
+    //Prend l'ensemble des articles sélectionnables pour cette offre
     events.on('getCurrent', init);
-
     function init(current) {
+        //recupération du panier
         var itemsCookie = Cookies.getJSON('shop_panierItems');
         currentItems_list = current;
         _render();
         _bindEvents();
-        console.log('-----------------------ATTENTION COOKIE-----------------------------');
-        console.log(itemsCookie);
-        //verifie chaque etape et switch le bouton next si une action requise n'est pas effectuée
-        $('.step').each(function () {
-            _verifyStep($(this));
-        });
         //Ajoute les articles pré-selectionnés dans le panier au lancement
         $('.step .shop-item').find('input[selected]').each(function () {
             _selectItem($(this).parents('.shop-item'));
         });
-        //RECOVERY AT THIS POINT
+        //RECOVERY
         if (typeof itemsCookie !== 'undefined') {
             _recoverCart(itemsCookie);
         }
-
+        //prend un slider spécifié dans l'url ou affiche le slider initial
+        if (getURLParameter('step') !== null) {
+            currentStep = getURLParameter('step');
+        }
         _showSlider(currentStep);
+        //supprime le hash de l'url une fois terminé
+        if (window.history && window.history.pushState) {
+            window.history.pushState('', '', window.location.pathname);
+        } else {
+            window.location.href = window.location.href.replace(/#.*$/, '#');
+        }
     }
 
+    //génére le html de tous les sliders
     function _render() {
         $('#steps').before(Mustache.render(tplInput, currentItems_list['a_abo']));
         $('#steps').before(Mustache.render(tplInput, currentItems_list['p_activation']));
@@ -161,9 +168,14 @@ var StepTransition = (function () {
         });
     }
 
+    //bind les évènements pour tous le script
     function _bindEvents() {
         StepsContainer.on('click', 'button.previous', function () {
             _previous();
+        });
+        headerStepList.on('click', 'li:not(.step-separator)', function () {
+            var position = headerStepList.find('li:not(.step-separator)').index(this) - 1;
+            _goToSlider(position);
         });
         StepsContainer.on('click', 'button.next', function () {
             _next();
@@ -200,17 +212,34 @@ var StepTransition = (function () {
             _saveCart();
         });
     }
+    //Amène à un slide en fonction d'un paramètre dans le lien
+    function _goToSlider(position) {
+        if (!(currentStep - position <= 0)) {
+            if (position >= 0) {
+                currentStep = position;
+                _showSlider(currentStep);
+            } else {
+                if (confirm('Si vous retournez maintenant en arrière, les données de votre commande seront perdues. êtes-vous sûr?')) {
+                    $(window).off("beforeunload");
+                    window.location.href = "../shop/offres.html";
+                }
+            }
+        }
+    }
 
+    //afficher un slide
     function _showSlider(index) {
-        $(headerStepList).find('li:not(.step-separator)').removeClass('active');
-        $(headerStepList).find('li:not(.step-separator)').eq(1 + index).addClass('active');
-        stepList.not(stepList[index]).hide().removeClass('is-visible');
-        $(stepList[index]).fadeIn('800').addClass('is-visible');
+        var position = Number(index);
+        $('#step-list ul').find('li:not(.step-separator)').removeClass('active');
+        $('#step-list ul').find('li:not(.step-separator)').eq(position+1).addClass('active');
+        stepList.not(stepList[position]).hide().removeClass('is-visible');
+        $(stepList[position]).fadeIn('800').addClass('is-visible');
         $('html,body').animate({
             scrollTop: $('#step-list').offset().top
         }, 0);
     }
 
+    //slide suivant
     function _next() {
         if (_checkInput()) {
             if (currentStep != stepList.length - 1) {
@@ -218,20 +247,18 @@ var StepTransition = (function () {
             } else {
                 //on enregistre les infos du panier dans un cookie dans le cas où l'utilisateur revient en arrière.
                 _saveCart();
-                console.log("-----------------------------Creation cookie--------------------------------------");
-                var cookie = Cookies.getJSON('shop_panierItems');
-                console.log(cookie);
-                alert('interruption');
                 $('#shoppingCart').submit();
             }
         }
     }
 
+    //slide précédent
     function _previous() {
         if (currentStep != 0) {
             _showSlider(--currentStep);
         } else {
             if (confirm('Si vous retournez maintenant en arrière, les données de votre commande seront perdues. êtes-vous sûr?')) {
+                $(window).off("beforeunload");
                 window.location.href = "../shop/offres.html";
             }
         }
@@ -250,7 +277,7 @@ var StepTransition = (function () {
         });
     }
 
-    //Activé quand on clique sur un article (toggle mode).
+    //Activé quand on clique sur un article (toggle mode) pour ajouté dans le panier.
     function _selectItem(shopItem) {
         if (shopItem !== 'undefined') {
             var input = shopItem.find('input:not([type="text"])');
@@ -274,6 +301,7 @@ var StepTransition = (function () {
         }
     }
 
+    //Déselectionne élément issu du même groupe et supprime du panier
     function _deselectItem(input) {
         if (typeof input != 'undefined') {
             var radioName = input.attr('name');
@@ -291,6 +319,7 @@ var StepTransition = (function () {
         }
     }
 
+    //Récupère les données des formulaires et les ajoute dans le panier
     function _collectDataForm($form) {
         if ($form.length > 0) {
             var id = $form.attr('data-form');
@@ -312,6 +341,7 @@ var StepTransition = (function () {
         }
     }
 
+    //Vérifie si tous les éléments requis ont été remplis
     var _verifyStep = function ($element) {
         var flag = true;
         var currentStep = $element;
@@ -332,6 +362,7 @@ var StepTransition = (function () {
         return flag;
     };
 
+    //Désactive bouton si verifyStep est faux
     var _checkInput = function () {
         var flag = _verifyStep($(stepList[currentStep]));
         if (!flag) {
@@ -353,7 +384,7 @@ var StepTransition = (function () {
             Cookies.set('shop_' + key, Cart.panier.info[key], {expires: 1});
         }
     };
-    //permet de récupérer les infos du panier dans les cookies
+    //Permet de récupérer les infos du panier dans les cookies
     var _recoverCart = function (cookie) {
         var recoveredForm = [];
         $('.step .shop-item').each(function () {
@@ -380,7 +411,8 @@ var StepTransition = (function () {
         }
     };
     return{
-        init: init
+        init: init,
+        step: currentStep
     };
 })();
 
@@ -389,7 +421,7 @@ var Cart = (function () {
 
     //Contient la liste de tous les choix possibles lors de l'inscription
     var currentItems_list = {};
-    //Le panier contient le prix ainsi que les objets avec leur ID respectifs --> cet objet est envoyé au serveur à la fin du script
+    //Le panier contient le prix ainsi que les objets avec leur ID respectifs
     var Panier = {
         items: [],
         info: {},
@@ -520,12 +552,6 @@ var Cart = (function () {
             events.emit('getCurrent', currentItems_list);
             console.log(currentItems_list);
             console.log(Panier);
-            //supprime le hash de l'url une fois terminé
-            if (window.history && window.history.pushState) {
-                window.history.pushState('', '', window.location.pathname);
-            } else {
-                window.location.href = window.location.href.replace(/#.*$/, '#');
-            }
         } else {
             $(window).off("beforeunload");
             window.location.replace("offres.html");
@@ -756,6 +782,3 @@ var materiel_list = [
     new Item("5396", "m_materiels", "Motorola T202", 48.00, false, ["Pack Duo : 2 x Téléphone numérique sans fil DECT"], false, "../images/equipment/telephone/motorola/t202/motorola_t202_small1.png"),
     new Item("5397", "m_materiels", "Motorola T203", 65.00, false, ["Pack Trio : 3 x Téléphone numérique sans fil DECT"], false, "../images/equipment/telephone/motorola/t203/motorola_t203_small1_1.png")
 ];
-$(function () {
-    Cart.init();
-});

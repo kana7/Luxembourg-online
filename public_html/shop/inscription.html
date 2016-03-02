@@ -316,7 +316,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div id="porta-form" class="phone-12 desk-7 hidden">
+                                                    <div id="porta-form" class="phone-12 lgdesk-8 hidden">
                                                         <div class="input-group-table">
                                                             <div class="input-group inline">
                                                                 <label for="Nom">Type de la ligne existante :</label>
@@ -325,6 +325,8 @@
                                                                     <label for="Analog">analogique</label>
                                                                     <input id="Isdn" name="p_lineType" type="radio" value="isdn">
                                                                     <label for="Isdn">ISDN</label>
+                                                                    <input id="VoIP" name="p_lineType" type="radio" value="VoIP">
+                                                                    <label for="Isdn">VoIP</label>
                                                                 </div>
                                                             </div>
                                                             <div class="input-group inline">
@@ -561,6 +563,7 @@
         <script type="text/javascript" src="../scripts/pubSub.js"></script>
         <script type="text/javascript">
             $(function () {
+                Cart.init();
                 $(document).delegate('input[name="a_portabilite"]', 'change', function () {
                     if ($(this).val() != 0) {
                         $('#porta-form').removeClass('hidden');

@@ -25,10 +25,10 @@ var StepTransition = (function () {
             '<img class="shop-item-img" src="{{link}}" alt="{{name}} shop LOL"/>' +
             '</div>' +
             '<div class="phone-12 lgdesk-7">' +
-            '<h3 class="shop-item-name">{{name}}</h3>' +
+            '<h3 class="shop-item-name">{{{name}}}</h3>' +
             '<ul class="shop-item-description">' +
             '{{#commentaire}}' +
-            '<li>{{.}}</li>' +
+            '<li>{{{.}}}</li>' +
             '{{/commentaire}}' +
             '</ul>' +
             '</div>' +
@@ -42,7 +42,7 @@ var StepTransition = (function () {
             '{{#isRemise}}' +
             '<ul class="shop-item-price promo orange vertical-align-middle phone-6">' +
             '<li class="extra-bold price">{{#formatPrice}}{{fullPrice}}{{/formatPrice}} €{{#isMonthlyCost}}/mois{{/isMonthlyCost}}</li>' +
-            '<li>PROMO : {{remise.name}}</li>' +
+            '<li>PROMO : {{{remise.name}}}</li>' +
             '</ul>' +
             '<input type="hidden" name="{{remise.type}}" value="{{remise.id}}"/>' +
             '{{/isRemise}}' +
@@ -457,14 +457,14 @@ var Cart = (function () {
             '<span class="label">{{name}}</span>' +
             '<span class="price price-delete">{{#formatPrice}}{{fullPrice}}{{/formatPrice}} €/mois</span>' +
             '<div class="remise-name">' +
-            '<span class="label"><span class="bold">PROMO</span> : {{remise.name}}</span>' +
+            '<span class="label"><span class="bold">PROMO</span> : {{{remise.name}}}</span>' +
             '<span class="price">{{#formatPrice}}{{price}}{{/formatPrice}} €/mois</span>' +
             '</div>' +
             '</li>' +
             '{{/isRemise}}' +
             '{{^isRemise}}' +
             '<li>' +
-            '<span class="label">{{name}}</span>' +
+            '<span class="label">{{{name}}}</span>' +
             '<span class="price">{{#formatPrice}}{{price}}{{/formatPrice}} €/mois</span>' +
             '</li>' +
             '{{/isRemise}}' +
@@ -479,17 +479,17 @@ var Cart = (function () {
             '{{^isMonthlyCost}}' +
             '{{#isRemise}}' +
             '<li>' +
-            '<span class="label">{{name}}</span>' +
+            '<span class="label">{{{name}}}</span>' +
             '<span class="price price-delete">{{#formatPrice}}{{fullPrice}}{{/formatPrice}} €</span>' +
             '<div class="remise-name">' +
-            '<span class="label"><span class="bold">PROMO</span> : {{remise.name}}</span>' +
+            '<span class="label"><span class="bold">PROMO</span> : {{{remise.name}}}</span>' +
             '<span class="price">{{#formatPrice}}{{price}}{{/formatPrice}} €</span>' +
             '</div>' +
             '</li>' +
             '{{/isRemise}}' +
             '{{^isRemise}}' +
             '<li>' +
-            '<span class="label">{{name}}</span>' +
+            '<span class="label">{{{name}}}</span>' +
             '<span class="price">{{#formatPrice}}{{price}}{{/formatPrice}} €</span>' +
             '</li>' +
             '{{/isRemise}}' +
@@ -504,8 +504,8 @@ var Cart = (function () {
     var tplPrice = '<li class="prices">' +
             '<ul>' +
             '<li id="monthlyPrice">' +
-            '<span class="prices-label">Coûts mensuels<span class="exponent"> (1)</span> :</span>' +
-            '<span class="prices-price">{{price.month}} €<span class="normal lowercase"> /mois</span></span>' +
+            '<span class="prices-label">Coûts mensuels :</span>' +
+            '<span class="prices-price">{{price.month}} €<span class="normal lowercase"> /mois<span class="exponent"> (1)</span></span></span>' +
             '</li>' +
             '<li id="uniquePrice">' +
             '<span class="prices-label">Coûts Unique :</span>' +
@@ -513,7 +513,7 @@ var Cart = (function () {
             '</li>' +
             '</ul>' +
             '</li>';
-    var tplFullPrice = '<div id="monthlyPriceNoPromos">(1) Prix mensuel aprés 6 mois :<span class="price">{{price.fullMonth}} €<span class="normal lowercase"> /mois</span></span></div>';
+    var tplFullPrice = '<div id="monthlyPriceNoPromos" class="cart-note">(1) Prix mensuel aprés 6 mois :<span class="price">{{price.fullMonth}} €<span class="normal lowercase"> /mois</span></span></div>';
     events.on('useCart', _useCart);
     events.on('addForm', _addForm);
     function init() {
@@ -573,6 +573,11 @@ var Cart = (function () {
             $('#monthlyPriceNoPromos').show();
         }else{
             $('#monthlyPriceNoPromos').hide();
+        }
+        if ($('input[value="5313"]').is(':checked')) {
+            $('#travelXpens').show();
+        }else{
+            $('#travelXpens').hide();
         }
     }
 
@@ -747,7 +752,7 @@ var lolTv_materielList = [
 ];
 var remiseInstall = new Item("5623", "p_installationRemise", "Installation offerte", -89.00, false, "", true, null);
 var installNoRemise = new SellProduct("5313", "p_installation", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", null, false, null);
-var installRemise = new SellProduct("5313", "p_installation", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", null, true, remiseInstall);
+var installRemise = new SellProduct("5313", "p_installation", "Installation par équipe<span class='exponent'>(2)</span>", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", null, true, remiseInstall);
 var selfInstall = new SellProduct("5612", "p_installation", "Installation par Self-Install-Kit", 25.00, false, "Je fais l'installation moi-même à l'aide du kit d'installation", false, "../images/Shop/self-install.png", null, false, null);
 var remiseActivation = new Item("5611", "p_activationRemise", "Activation offerte", -85.00, false, "", true, null);
 var activation = new SellProduct("5610", "p_activation", "Activation", 85.00, false, "", true, null, null, true, remiseActivation);

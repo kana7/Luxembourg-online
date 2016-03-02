@@ -61,6 +61,10 @@
   border: 1px solid #004994;
   color: #000;
   border-radius: 6px; }
+  #panier > ul .exponent, .shop-list > ul .exponent {
+    position: absolute;
+    top: -3px;
+    font-size: 0.6em; }
   #panier > ul li, .shop-list > ul li {
     display: block;
     width: 100%; }
@@ -117,10 +121,6 @@
     padding: 10px 0;
     background-color: #004994;
     color: #fff; }
-    #panier > ul .prices .exponent, .shop-list > ul .prices .exponent {
-      position: absolute;
-      top: -10px;
-      font-size: 0.6em; }
     #panier > ul .prices ul, .shop-list > ul .prices ul {
       display: block;
       padding: 0 15px;
@@ -150,17 +150,17 @@
     font-weight: 600;
     margin-bottom: 10px; }
 
-#monthlyPriceNoPromos {
+.cart-note {
   display: none;
   color: #818181;
   font-weight: 600;
   padding: 0 13px;
   font-size: 1em;
   margin-top: 10px; }
-  #monthlyPriceNoPromos span[class^="icon-"] {
+  .cart-note span[class^="icon-"] {
     top: 2px;
     margin-right: 5px; }
-  #monthlyPriceNoPromos .price {
+  .cart-note .price {
     float: right;
     font-weight: 800;
     font-size: 1.05em; }

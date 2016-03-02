@@ -76,6 +76,11 @@
     border: 1px solid $blue;
     color: $black;
     border-radius: 6px;
+    .exponent{
+        position: absolute;
+        top: -3px;
+        font-size: 0.6em;
+    }
     li{
         display: block;
         width: 100%;
@@ -137,11 +142,6 @@
         padding: 10px 0;
         background-color: $blue;
         color: $white;
-        .exponent{
-            position: absolute;
-            top: -10px;
-            font-size: 0.6em;
-        }
         ul{
             display: block;
             padding: 0 15px;
@@ -172,7 +172,7 @@
         margin-bottom: 10px;
     }
 }
-#monthlyPriceNoPromos{
+.cart-note{
     display: none;
     color: $dark-grey;
     font-weight: 600;

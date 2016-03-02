@@ -231,7 +231,7 @@ var StepTransition = (function () {
     function _showSlider(index) {
         var position = Number(index);
         $('#step-list ul').find('li:not(.step-separator)').removeClass('active');
-        $('#step-list ul').find('li:not(.step-separator)').eq(position+1).addClass('active');
+        $('#step-list ul').find('li:not(.step-separator)').eq(position + 1).addClass('active');
         stepList.not(stepList[position]).hide().removeClass('is-visible');
         $(stepList[position]).fadeIn('800').addClass('is-visible');
         $('html,body').animate({
@@ -419,7 +419,7 @@ var StepTransition = (function () {
 
 var Cart = (function () {
 
-    //Contient la liste de tous les choix possibles lors de l'inscription
+//Contient la liste de tous les choix possibles lors de l'inscription
     var currentItems_list = {};
     //Le panier contient le prix ainsi que les objets avec leur ID respectifs
     var Panier = {
@@ -427,7 +427,8 @@ var Cart = (function () {
         info: {},
         price: {
             unique: 0,
-            month: 0
+            month: 0,
+            fullMonth: 0
         },
         formatPrice: function (price, c, d, t) {
             //format euros
@@ -445,7 +446,6 @@ var Cart = (function () {
             }
         }
     };
-
     var tplItem = '<li class="items">' +
             '<div class="month">' +
             '<h4>Coûts mensuels</h4>' +
@@ -497,11 +497,14 @@ var Cart = (function () {
             '{{/items}}' +
             '</ul>' +
             '</div>' +
-            '</li>';
+            '<div class="term">' +
+            '<h4>Durée Contrat</h4><span class="price">24 mois</span>' +
+            '</div>';
+    '</li>';
     var tplPrice = '<li class="prices">' +
             '<ul>' +
             '<li id="monthlyPrice">' +
-            '<span class="prices-label">Coûts mensuels :</span>' +
+            '<span class="prices-label">Coûts mensuels<span class="exponent"> (1)</span> :</span>' +
             '<span class="prices-price">{{price.month}} €<span class="normal lowercase"> /mois</span></span>' +
             '</li>' +
             '<li id="uniquePrice">' +
@@ -510,10 +513,9 @@ var Cart = (function () {
             '</li>' +
             '</ul>' +
             '</li>';
-
-    events.on('useCart', _useCard);
+    var tplFullPrice = '<div id="monthlyPriceNoPromos">(1) Prix mensuel aprés 6 mois :<span class="price">{{price.fullMonth}} €<span class="normal lowercase"> /mois</span></span></div>';
+    events.on('useCart', _useCart);
     events.on('addForm', _addForm);
-
     function init() {
         _initCurrentItem();
     }
@@ -527,9 +529,8 @@ var Cart = (function () {
                 vhash = (vhash.split('#')[1]).split(";");
                 Cookies.remove('shop_panierItems');
             }
-            //on enregistre le hash dans un cookie pour un recover éventuel.
+//on enregistre le hash dans un cookie pour un recover éventuel.
             Cookies.set('shop_serviceMap', vhash, {expires: 1});
-
             currentItems_list['a_abo'] = abonnements_list.getAbo(vhash[0], vhash[1]);
             currentItems_list['p_installation'] = currentItems_list['a_abo']['installation'];
             currentItems_list['p_activation'] = currentItems_list['a_abo']['activation'];
@@ -539,12 +540,12 @@ var Cart = (function () {
             currentItems_list['m_tv_materiel'] = lolTv_materielList;
             currentItems_list['m_materiels'] = materiel_list;
             //ajout de l'abo et de l'activation dans le panier à l'ouverture de la page
-            _useCard({
+            _useCart({
                 id: 5257,
                 cat: 'a_abo',
                 isAdding: true
             });
-            _useCard({
+            _useCart({
                 id: 5610,
                 cat: 'p_activation',
                 isAdding: true
@@ -559,15 +560,23 @@ var Cart = (function () {
     }
 
     function _render() {
-        //Reconstruire le shopping card quand les données sont mises à jour - TODO Mettre en place un template
+//Reconstruire le shopping card quand les données sont mises à jour - TODO Mettre en place un template
         var html = '<ul><li class="header"><h3>Récapitulatif</h3></li>';
         html += Mustache.render(tplItem, Panier);
         html += Mustache.render(tplPrice, Panier);
         '</ul>';
         $('#panier').html(html);
+        $('#monthlyPriceNoPromos').remove();
+        html = Mustache.render(tplFullPrice, Panier);
+        $('#panier').after(html);
+        if ($('input[value="2848"]').is(':checked')) {
+            $('#monthlyPriceNoPromos').show();
+        }else{
+            $('#monthlyPriceNoPromos').hide();
+        }
     }
 
-    function _useCard(data) {
+    function _useCart(data) {
         if (data['isAdding']) {
             _addItem(data['cat'], data['id']);
         } else {
@@ -577,8 +586,10 @@ var Cart = (function () {
         console.log('-----------------------------------------');
         Panier.price.unique = 0;
         Panier.price.month = 0;
+        Panier.price.fullMonth = 0;
         _computePrice(Panier['items']);
         Panier.price.month = Panier.formatPrice(Panier.price.month);
+        Panier.price.fullMonth = Panier.formatPrice(Panier.price.fullMonth);
         Panier.price.unique = Panier.formatPrice(Panier.price.unique);
         _render();
     }
@@ -588,7 +599,7 @@ var Cart = (function () {
     }
 
     function _addItem(cat, id) {
-        //adding unique element
+//adding unique element
         if (_findInArray(Panier['items'], id) == null) {
             console.log("j'ajoute ! : " + cat + ' ' + id);
             if (Object.prototype.toString.call(currentItems_list[cat]) === '[object Array]') {
@@ -611,7 +622,7 @@ var Cart = (function () {
         }
     }
 
-    // loop a travers un tableau pour sélectionner un objet selon un id dans les properties
+// loop a travers un tableau pour sélectionner un objet selon un id dans les properties
     function _findInArray(array, id) {
         for (var i = 0, len = array.length; i < len; i++) {
             if (array[i].id == id)
@@ -620,11 +631,16 @@ var Cart = (function () {
         return null; // l'objet n'a pas été trouvé
     }
 
-    //Fonction recursive qui détecte si il y a une propriété prix dans un objet sinon le fonction regarde si il y a un autre object dans la liste des propriétés 
+//Fonction recursive qui détecte si il y a une propriété prix dans un objet sinon le fonction regarde si il y a un autre object dans la liste des propriétés 
     function _computePrice(object) {
         if ("price" in object) {
             if (object["isMonthlyCost"]) {
                 Panier.price.month += object["price"];
+                if (object["time"] !== null) {
+                    Panier.price.fullMonth += object["fullPrice"] || object["price"];
+                } else {
+                    Panier.price.fullMonth += object["price"];
+                }
             } else {
                 Panier.price.unique += object["price"];
             }
@@ -644,7 +660,6 @@ var Cart = (function () {
         panier: Panier
     };
 })();
-
 // DATA
 //------------------------------------------------------------------------------
 //
@@ -698,7 +713,7 @@ var Abonnement = function (id, type, name, price, isMonthlyCost, commentaire, is
     this.materiels = materiels;
 };
 inherits(Abonnement, Item);
-var SellProduct = function (id, type, name, price, isMonthlyCost, commentaire, isDefaut, link, isRemise, remise) {
+var SellProduct = function (id, type, name, price, isMonthlyCost, commentaire, isDefaut, link, time, isRemise, remise) {
     SellProduct.super_.call(this, id, type, name, price, isMonthlyCost, commentaire, isDefaut, link);
     this.setPrice = function (productPrice, remise) {
         if (remise == null) {
@@ -707,6 +722,7 @@ var SellProduct = function (id, type, name, price, isMonthlyCost, commentaire, i
             return productPrice + remise.price;
         }
     };
+    this.time = time;
     this.isRemise = isRemise;
     this.remise = remise;
     this.fullPrice = price;
@@ -724,17 +740,17 @@ var modem_List2 = [
 ];
 var aboTel = new Item("5138", "a_telephone", "Abo téléphonique", 0, true, "Inclus dans votre abonnement", true, "../images/Shop/Telephonie.jpg");
 var lolTVRemise = new Item("5611", "a_tvRemise", "6 mois gratuits", -17.00, true, "après 17€/mois", true, null);
-var lolTv = new SellProduct("2848", "a_tv", "LOLTV", 17.00, true, ["+110 Chaînes TV", "20 chaînes HD", "40 chaînes radio", " ", " "], false, "../images/Shop/LOLTV.jpg", true, lolTVRemise);
+var lolTv = new SellProduct("2848", "a_tv", "LOLTV", 17.00, true, ["+110 Chaînes TV", "20 chaînes HD", "40 chaînes radio", " ", " "], false, "../images/Shop/LOLTV.jpg", '6 mois', true, lolTVRemise);
 var lolTv_materielList = [
     new Item("5137", "m_tv_materiel", "Décodeur LOLTV (requis)", 4.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD", " "], false, "../images/Shop/Minix1.jpg"),
     new Item("5304", "m_tv_materiel", "Décodeur pour 2ème TV", 5.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD", " "], false, "../images/Shop/Minix2.jpg")
 ];
 var remiseInstall = new Item("5623", "p_installationRemise", "Installation offerte", -89.00, false, "", true, null);
-var installNoRemise = new SellProduct("5313", "p_installation", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", false, null);
-var installRemise = new SellProduct("5313", "p_installation", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", true, remiseInstall);
-var selfInstall = new SellProduct("5612", "p_installation", "Installation par Self-Install-Kit", 25.00, false, "Je fais l'installation moi-même à l'aide du kit d'installation", false, "../images/Shop/self-install.png", false, null);
+var installNoRemise = new SellProduct("5313", "p_installation", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", null, false, null);
+var installRemise = new SellProduct("5313", "p_installation", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", null, true, remiseInstall);
+var selfInstall = new SellProduct("5612", "p_installation", "Installation par Self-Install-Kit", 25.00, false, "Je fais l'installation moi-même à l'aide du kit d'installation", false, "../images/Shop/self-install.png", null, false, null);
 var remiseActivation = new Item("5611", "p_activationRemise", "Activation offerte", -85.00, false, "", true, null);
-var activation = new SellProduct("5610", "p_activation", "Activation", 85.00, false, "", true, null, true, remiseActivation);
+var activation = new SellProduct("5610", "p_activation", "Activation", 85.00, false, "", true, null, null, true, remiseActivation);
 var typeInstall = [installNoRemise, selfInstall];
 var abonnements_list = {
     "2": {

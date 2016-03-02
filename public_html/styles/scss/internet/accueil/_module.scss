@@ -99,16 +99,17 @@
             text-align: center;
         }
     }
-    .month, .section:not(:last-child){
+    .month, .unique, .section:not(:last-child){
         border-bottom: 1px solid $blue;
     }
-    .month, .unique, .section{
+    .month, .unique, .term, .section{
         padding: 15px 10px;
         ul{display: block;}
         li{
             display: block;
             line-height: 20px;
             padding: 0 0 0 10px;
+            text-align: left;
             @include clearfix;
         }
         .label, .price{
@@ -125,10 +126,22 @@
             font-size: 1.05em;
         }
     }
+    .term{
+        h4{margin:0;display: inline-block;}
+        span{
+            top: 2px;
+            position: relative;
+        }
+    }
     .prices{
         padding: 10px 0;
         background-color: $blue;
         color: $white;
+        .exponent{
+            position: absolute;
+            top: -10px;
+            font-size: 0.6em;
+        }
         ul{
             display: block;
             padding: 0 15px;
@@ -157,6 +170,23 @@
         text-transform: uppercase;
         font-weight: 600;
         margin-bottom: 10px;
+    }
+}
+#monthlyPriceNoPromos{
+    display: none;
+    color: $dark-grey;
+    font-weight: 600;
+    padding: 0 13px;
+    font-size: 1em;
+    margin-top: 10px;
+    span[class^="icon-"]{
+        top: 2px;
+        margin-right: 5px;
+    }
+    .price{
+        float: right;
+        font-weight: 800;
+        font-size: 1.05em;
     }
 }
 

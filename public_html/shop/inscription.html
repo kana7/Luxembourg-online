@@ -286,7 +286,7 @@
                             <div class="phone-12 desk-8 lgdesk-9 desk-pr-10">
                                 <form id="shoppingCart" name="_shoppingCart"  action="/Scripts/sql.exe" method="get">
                                     <input type="hidden" name="SqlDB" value="LOLOrderInLine">
-                                    <input type="hidden" name="Sql" value="createSubscription.phs">
+                                    <input type="hidden" name="Sql" value="delCookie.phs">
                                     <div id="steps">
                                         <div id="installation" class="step" data-step="0">
                                             <h2 class="step-title">Installation</h2>
@@ -335,7 +335,7 @@
                                                             </div>
                                                             <div class="input-group inline">
                                                                 <label for="NumTel">N° de téléphone à porter : </label>
-                                                                <input id="NumTel" name="p_numTel" type="number" >
+                                                                <input id="NumTel" name="p_numTel" type="number" required>
                                                             </div>
                                                             <div class="input-group inline">
                                                                 <label for="NumOperateur">N° de compte opérateur d'origine : </label>
@@ -416,7 +416,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div id="travelXpens" class="cart-note">(2) +Frais de déplacement: 25€ centre et sud, 35€ nord</div>
+                                <div id="travelXpens" class="cart-note">(1) Frais de déplacement non inclus: 25€ centre et sud, 35€ nord</div>
                             </div>
                         </div>
                     </div>
@@ -568,8 +568,10 @@
                 $(document).delegate('input[name="a_portabilite"]', 'change', function () {
                     if ($(this).val() != 0) {
                         $('#porta-form').removeClass('hidden');
+                        $('#NumTel').attr('required', 'required');
                     } else {
                         $('#porta-form').addClass('hidden');
+                        $('#NumTel').removeAttr('required');
                     }
                 });
             });

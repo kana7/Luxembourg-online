@@ -65,15 +65,24 @@ var StepTransition = (function () {
     var tplFormFiber = '<div class="clearfix">' +
             '<div class="phone-mb-20 phone-mt-30">' +
             '<h3 class="step-subtitle">Installation fibre</h3>' +
-            '<p class="step-subdescription">Information supplémentaire sur le câblage interne de la fibre dans votre habitation (obligatoire)</p>' +
+            '<p class="step-subdescription">Est-ce que le câblage interne de votre habitation est conforme pour le raccordement Internet via la Fibre Optique?</p>' +
+            '<div class="fibre-infos">' +
+            '<div class="icon-info-icone"></div>' +
+            '<div class="infos"><p>Dans le cas d\'un appartement, une Fibre Optique doit relier l\'arrivée Post (TCS) à votre appartement.</p>' +
+            '<p>Dans le cas d\'une maison, un câble réseau doit relier l\'arrivée Post (TCS) à une prise de votre maison. </p></div>' +
+            '</div>' +
             '</div>' +
             '<div data-form="fibre" class="step-form clearfix">' +
             '<div class="phone-12">' +
             '<div class="input-group radio">' +
-            '<input id="Cablage" type="radio" name="p_client" value="true" required><label for="Cablage">Mon cablâge interne est conforme pour le raccordement internet via la Fibre Optique.</label>' +
+            '<input id="Cablage" type="radio" name="p_client" value="true" required><label for="Cablage">Mon cablâge interne est conforme pour le raccordement Internet via la Fibre Optique.</label>' +
             '</div>' +
             '<div class="input-group">' +
             '<input id="NotCablage" type="radio" name="p_client" value="false" required><label for="NotCablage">Mon cablâge interne n\'est pas conforme et je demande à Luxembourg Online d\'entreprendre les travaux nécessaires. </label>' +
+            '</div>' +
+            '<div class="fibre-install">' +
+            '<ul class="shop-item-price promo orange"><li>PROMO : Frais de câblage fibre (220€) offerts !</li></ul>' +
+            '<a class="link" target="blank_" href="../documents/INSTALLATION_FIBRE_FR.pdf">Détails et frais d\'installation</a>' +
             '</div>' +
             '</div>' +
             '</div>' +
@@ -124,6 +133,9 @@ var StepTransition = (function () {
                 }
                 html += tplbtn;
                 $(this).find('.step-description').after(html);
+                if (currentItems_list['a_abo']['name'].indexOf('30') >= 0) {
+                    $('.fibre-install>.promo').hide();
+                }
             }
             if ($(this).attr('id') == 'materiel') {
                 html = Mustache.render(tplItem, {input: "radio", required: true, isSellProduct: false, group: 'm_modem', items: currentItems_list['m_modem']});
@@ -505,15 +517,15 @@ var Cart = (function () {
             '<ul>' +
             '<li id="monthlyPrice">' +
             '<span class="prices-label">Coûts mensuels :</span>' +
-            '<span class="prices-price">{{price.month}} €<span class="normal lowercase"> /mois<span class="exponent"> (1)</span></span></span>' +
+            '<span class="prices-price">{{price.month}} €<span class="normal lowercase"> /mois<span class="exponent"> (2)</span></span></span>' +
             '</li>' +
             '<li id="uniquePrice">' +
-            '<span class="prices-label">Coûts Unique :</span>' +
+            '<span class="prices-label">Coûts Uniques :</span>' +
             '<span class="prices-price">{{price.unique}} €</span>' +
             '</li>' +
             '</ul>' +
             '</li>';
-    var tplFullPrice = '<div id="monthlyPriceNoPromos" class="cart-note">(1) Prix mensuel aprés 6 mois :<span class="price">{{price.fullMonth}} €<span class="normal lowercase"> /mois</span></span></div>';
+    var tplFullPrice = '<div id="monthlyPriceNoPromos" class="cart-note">(2) Prix mensuel aprés 6 mois :<span class="price">{{price.fullMonth}} €<span class="normal lowercase"> /mois</span></span></div>';
     events.on('useCart', _useCart);
     events.on('addForm', _addForm);
     function init() {
@@ -568,15 +580,17 @@ var Cart = (function () {
         $('#panier').html(html);
         $('#monthlyPriceNoPromos').remove();
         html = Mustache.render(tplFullPrice, Panier);
-        $('#panier').after(html);
+        $('#panier').parent().append(html);
         if ($('input[value="2848"]').is(':checked')) {
             $('#monthlyPriceNoPromos').show();
-        }else{
+            $('#monthlyPrice').find('.exponent').show();
+        } else {
             $('#monthlyPriceNoPromos').hide();
+            $('#monthlyPrice').find('.exponent').hide();
         }
         if ($('input[value="5313"]').is(':checked')) {
             $('#travelXpens').show();
-        }else{
+        } else {
             $('#travelXpens').hide();
         }
     }
@@ -743,8 +757,8 @@ var modem_List2 = [
     new Item("5292", "m_modem", "Location FRITZ!Box 7360", 4.00, true, ["LAN :  2 x Gigabit, 2 x fast Ethernet", "WLAN : jusqu'à 300Mbit/s", "Téléphone :  1 x analogique, DECT", " "], true, "../images/equipment/modem/7360/7360.png"),
     modem7490
 ];
-var aboTel = new Item("5138", "a_telephone", "Abo téléphonique", 0, true, "Inclus dans votre abonnement", true, "../images/Shop/Telephonie.jpg");
-var lolTVRemise = new Item("5611", "a_tvRemise", "6 mois gratuits", -17.00, true, "après 17€/mois", true, null);
+var aboTel = new Item("3236", "a_telephone", "Abo téléphonique", 0, true, "Inclus dans votre abonnement", true, "../images/Shop/Telephonie.jpg");
+var lolTVRemise = new Item("5618", "a_tvRemise", "6 mois gratuits", -17.00, true, "après 17€/mois", true, null);
 var lolTv = new SellProduct("2848", "a_tv", "LOLTV", 17.00, true, ["+110 Chaînes TV", "20 chaînes HD", "40 chaînes radio", " ", " "], false, "../images/Shop/LOLTV.jpg", '6 mois', true, lolTVRemise);
 var lolTv_materielList = [
     new Item("5137", "m_tv_materiel", "Décodeur LOLTV (requis)", 4.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD", " "], false, "../images/Shop/Minix1.jpg"),
@@ -752,7 +766,7 @@ var lolTv_materielList = [
 ];
 var remiseInstall = new Item("5623", "p_installationRemise", "Installation offerte", -89.00, false, "", true, null);
 var installNoRemise = new SellProduct("5313", "p_installation", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", null, false, null);
-var installRemise = new SellProduct("5313", "p_installation", "Installation par équipe<span class='exponent'>(2)</span>", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", null, true, remiseInstall);
+var installRemise = new SellProduct("5313", "p_installation", "Installation par équipe<span class='exponent'>(1)</span>", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", null, true, remiseInstall);
 var selfInstall = new SellProduct("5612", "p_installation", "Installation par Self-Install-Kit", 25.00, false, "Je fais l'installation moi-même à l'aide du kit d'installation", false, "../images/Shop/self-install.png", null, false, null);
 var remiseActivation = new Item("5611", "p_activationRemise", "Activation offerte", -85.00, false, "", true, null);
 var activation = new SellProduct("5610", "p_activation", "Activation", 85.00, false, "", true, null, null, true, remiseActivation);

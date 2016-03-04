@@ -175,7 +175,7 @@
 .cart-note{
     display: none;
     color: $dark-grey;
-    font-weight: 600;
+    font-weight: 400;
     padding: 0 13px;
     font-size: 1em;
     margin-top: 10px;
@@ -409,5 +409,46 @@ input:not([type="radio"]):not([type="checkbox"]){
         top: 5px;
         font-size: 1.4em;
 
+    }
+}
+.fibre-infos{
+    position: relative;
+    font-size: 1.025em;
+    [class^='icon-'], .infos{
+        display: inline-block;
+        line-height: 18px;
+    }
+    [class^='icon-']{
+        color: $orange;
+        font-size: 2em;
+        margin-right: 10px;
+        position: absolute;
+        top: 3px;
+        left: 0px;
+    }
+    .infos{padding-left: 35px;}
+    p{
+        margin: 0;
+    }
+}
+.fibre-install{
+    margin-top: -12px;
+    .shop-item-price.promo.orange{
+        font-size: 1.075em;
+        display: block;
+        float: none;
+        margin-bottom: 5px;
+    }
+}
+.link{
+    font-size: 1em;
+    display: block;
+    color: $blue;
+    text-decoration: underline;
+}
+input[type=number]{
+    -moz-appearance: textfield;
+    &::-webkit-inner-spin-button, &::-webkit-outer-spin-button{
+        -webkit-appearance: none;
     }
 }

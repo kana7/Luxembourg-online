@@ -800,7 +800,7 @@ span[class^=icon-]
         }
     }
 }
-.searchMenu button, .DesktopMenu{
+.searchMenu button, .DesktopMenu, .news-menu{
     background-color: $white;
     border: 1px solid lighten($grey, 8%);
     color: $blue;
@@ -808,7 +808,7 @@ span[class^=icon-]
     font-weight: 400;
     z-index: 3;
 }
-.DesktopMenu{
+.DesktopMenu, .news-menu ul{
     display: block;
     li{
         display: block;
@@ -1178,10 +1178,10 @@ span[class^=icon-]
         }
     }
 }
-.offer-item-blue, .equipement-item-blue{
+.offer-item-blue, .equipement-item-blue, .news-item-blue{
     @include offer-item($blue);
 }
-.offer-item-orange, .equipement-item-orange{
+.offer-item-orange, .equipement-item-orange, .news-item-orange{
     @include offer-item($orange);
 }
 #equipement-section{
@@ -1276,7 +1276,7 @@ span[class^=icon-]
 }
 
 
-.equipement-item-blue, .equipement-item-orange{
+.equipement-item-blue, .equipement-item-orange, .news-item-blue, .news-item-orange{
     background-color: $white;
     border-color: lighten($grey, 10%);
     border-radius: 2px;
@@ -1400,6 +1400,42 @@ span[class^=icon-]
         padding: 0 !important;
         font-size: 1em;
         font-weight: 400;
+    }
+}
+
+.news-item-blue{
+    padding: 5px;
+    &:not(:last-child){
+        margin-bottom: 10px;
+    }
+    .main-image{
+        display: block;
+        height: 200px;
+        width: 100%;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+    }
+    .content{padding: 15px 20px 15px 25px;}
+    .header, .description{
+        text-align: left;
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: 400;
+    }
+    .header .meta{
+        font-size: 0.9em;
+        margin-bottom: 5px;
+    }
+    .header .title{
+        color: $blue;
+        font-weight: 600;
+        font-size: 1.3em;
+    }
+    .description{
+        text-align: justify;
+        color: $dark-grey;
     }
 }
 
@@ -2771,7 +2807,7 @@ h2.contact-title {
     bottom: 0;
     left: 0;
     background-size: cover;
-     background-position: center center;
+    background-position: center center;
     background-repeat: repeat;
     &.image-1{background-image: url(../../images/TV/header/football_672x320px.jpg);}
     &.image-2{background-image: url(../../images/TV/header/love_672x320px.jpg);}

@@ -3,6 +3,9 @@
     .shop-list > ul{
         font-size: 12px;
     }
+    .input-group-table .input-group.inline > label, .input-group-table .input-group.inline > input, .input-group-table .input-group.inline > .input-group-cell{
+        display: block !important;
+    }
 }
 
 @include viewport(max, $max: 1055){

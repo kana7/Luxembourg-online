@@ -212,11 +212,12 @@
     margin-left: 10px; }
   #steps .btn-orange.disabled:before {
     position: absolute;
-    top: -30px;
+    top: -23px;
     right: 0;
     content: "Merci de selectionner tous les champs requis";
     color: #DC0000;
-    font-weight: 800; }
+    font-weight: 800;
+    font-size: 0.94em; }
 
 .shop-item {
   display: block;
@@ -379,14 +380,15 @@ input:not([type="radio"]):not([type="checkbox"]).error {
     margin: 0; }
 
 .fibre-install {
-  margin-top: -12px; }
+  margin-top: -12px;
+  margin-bottom: 10px; }
   .fibre-install .shop-item-price.promo.orange {
     font-size: 1.075em;
     display: block;
     float: none;
     margin-bottom: 5px; }
 
-.link {
+.shop-link {
   font-size: 1em;
   display: block;
   color: #004994;
@@ -403,7 +405,10 @@ input[type=number] {
 
 @media screen and (max-width: 671px) {
   .shop-list > ul {
-    font-size: 12px; } }
+    font-size: 12px; }
+
+  .input-group-table .input-group.inline > label, .input-group-table .input-group.inline > input, .input-group-table .input-group.inline > .input-group-cell {
+    display: block !important; } }
 @media screen and (max-width: 1055px) {
   /*.shop-item{
       [class^="phone-"]{

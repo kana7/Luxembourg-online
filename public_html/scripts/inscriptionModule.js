@@ -82,7 +82,7 @@ var StepTransition = (function () {
             '</div>' +
             '<div class="fibre-install">' +
             '<ul class="shop-item-price promo orange"><li>PROMO : Frais de câblage fibre (220€) offerts !</li></ul>' +
-            '<a class="link" target="blank_" href="../documents/INSTALLATION_FIBRE_FR.pdf">Détails et frais d\'installation</a>' +
+            '<a class="shop-link" target="blank_" href="../documents/INSTALLATION_FIBRE_FR.pdf">Détails et frais d\'installation</a>' +
             '</div>' +
             '</div>' +
             '</div>' +

@@ -249,11 +249,12 @@
         &.disabled{
             &:before{
                 position: absolute;
-                top: -30px;
+                top: -23px;
                 right: 0;
                 content: "Merci de selectionner tous les champs requis";
                 color: #DC0000;
                 font-weight: 800;
+                font-size: 0.94em;
             }
         }
     }
@@ -433,6 +434,7 @@ input:not([type="radio"]):not([type="checkbox"]){
 }
 .fibre-install{
     margin-top: -12px;
+    margin-bottom: 10px;
     .shop-item-price.promo.orange{
         font-size: 1.075em;
         display: block;
@@ -440,7 +442,7 @@ input:not([type="radio"]):not([type="checkbox"]){
         margin-bottom: 5px;
     }
 }
-.link{
+.shop-link{
     font-size: 1em;
     display: block;
     color: $blue;

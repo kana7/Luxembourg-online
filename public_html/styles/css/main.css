@@ -3169,7 +3169,9 @@ footer {
     text-align: center; }
     #document-links ul li {
       display: block;
-      width: 100%; }
+      width: 100%;
+      line-height: 18px;
+      text-align: center; }
       #document-links ul li:not(:last-child) {
         margin-bottom: 15px; }
       #document-links ul li a {
@@ -4095,7 +4097,10 @@ span[class^=icon-] {
 .rightWrapper {
   display: inline-block;
   float: left;
-  width: 100%; }
+  width: 100%;
+  text-align: center; }
+  .rightWrapper .typeContainer {
+    margin-top: 15px; }
 
 .priceWrapperRight {
   display: inline-block;
@@ -4119,7 +4124,8 @@ span[class^=icon-] {
 .priceWrapper {
   display: block;
   position: relative;
-  border-bottom: 1px solid #d4d4d4; }
+  border-bottom: 1px solid #d4d4d4;
+  text-align: left; }
   .priceWrapper:before {
     content: "";
     display: table; }
@@ -6131,10 +6137,6 @@ h2.contact-title {
   .descSubWrapperRight {
     padding-left: 20px; }
 
-  .rightWrapper {
-    display: block;
-    width: 75%; }
-
   .pdf-list-extended {
     height: 200px; }
 
@@ -6260,7 +6262,16 @@ h2.contact-title {
     margin-left: 30px;
     border-left: 1px solid #004494;
     padding: 0 35px; } }
+@media screen and (min-width: 672px) and (max-width: 1055px) {
+  #document-links ul li {
+    line-height: inherit; } }
 @media screen and (min-width: 1056px) {
+  .rightWrapper {
+    width: 75%;
+    text-align: left; }
+    .rightWrapper .typeContainer {
+      margin-top: auto; }
+
   .dropdown-content {
     margin-left: 30px;
     border-left: 1px solid #004494;

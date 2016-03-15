@@ -632,6 +632,8 @@ footer
         li{
             display: block;
             width: 100%;
+            line-height: 18px;
+            text-align: center;
             &:not(:last-child){
                 margin-bottom: 15px;
             }

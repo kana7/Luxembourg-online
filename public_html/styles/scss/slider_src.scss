@@ -13,6 +13,9 @@
         &.image-3{
             background-image: url(../../images/Homepage/SLIDER/Slider3_672x320px.jpg);
         }
+        &.image-4{
+            background-image: url(../../images/Homepage/SLIDER/Freijoersshopping_672x320px.jpg);
+        }
     }
 }
 
@@ -28,6 +31,9 @@
             }
             &.image-3{
                 background-image: url(../../images/Homepage/SLIDER/Slider3_1056x450px.jpg);
+            }
+            &.image-4{
+                background-image: url(../../images/Homepage/SLIDER/Freijoersshopping_1056x450px.jpg);
             }
         }
     } 
@@ -45,6 +51,9 @@
             &.image-3{
                 background-image: url(../../images/Homepage/SLIDER/Slider3_1302x330px.jpg);
             }
+            &.image-4{
+                background-image: url(../../images/Homepage/SLIDER/Freijoersshopping_1302x330px.jpg);
+            }
         }
     }
 }
@@ -61,6 +70,9 @@
             &.image-3{
                 background-image: url(../../images/Homepage/SLIDER/Slider3_1920x360px.jpg);
             }
+            &.image-4{
+                background-image: url(../../images/Homepage/SLIDER/Freijoersshopping_1920x360px.jpg);
+            }
         }
     }
 }
@@ -76,7 +88,7 @@
 
 @media screen and (max-width: 671px) {
     #slider-contents{
-        .infos.image-2 .row>div{
+        .infos.image-2 .row>div, .infos.image-4 .row>div{
             top: 0px !important;
         }
         .infos.image-1{
@@ -93,7 +105,7 @@
     } 
 }
 @media screen and (max-width: 1055px) {
-    #slider-contents .infos.image-2 .row>div{
+    #slider-contents .infos.image-2 .row>div, .infos.image-4 .row>div{
         top: 20px;
         text-align: center !important;
     }

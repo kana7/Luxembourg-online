@@ -4,15 +4,8 @@
         <meta charset="utf-8">
         <title>Actualités – Luxembourg Online</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
         <link rel="shortcut icon" href="/favicon.ico">
-
         <link rel="stylesheet" href="../styles/css/main.css">
-        <link rel="stylesheet" href="../styles/css/internet/accueil.css">
-
-        <link rel="stylesheet" href="../styles/css/vendor/flickity.min.css" />
-        <link rel="stylesheet" href="../styles/css/Divers/photoswipe.css"/>
-        <link rel="stylesheet" href="../styles/css/Divers/default-skin/default-skin.css" />
 
         <script src="../scripts/vendor/picturefill.min.js"></script>
         <!--[if lt IE 9]>
@@ -258,7 +251,7 @@
                         <div class="phone-12 desk-6">
                             <img class="section-img-align-bottom" src="../images/Divers/1024px/actualites.jpg" 
                                  srcset="../images/Divers/1280px/actualites.jpg 1920w,
-                                 ../images/Divers/1024px/actualites.jpg 1302w,
+                                 ../images/Divers/1280px/actualites.jpg 1302w,
                                  ../images/Divers/640px/actualites.jpg 1056w,
                                  ../images/Divers/320px/actualites.jpg 672w"
                                  sizes="100%"
@@ -274,8 +267,26 @@
 
             <section class="padding">
                 <div class="container-wrapper">
-                    <div style="margin-left: -20px; margin-right: -20px;" class="row">
-                        <div style="padding-right: 15px;" class="phone-3">
+                    <div class="row">
+                        <div class="phone-12 hidden-desk hidden-lgdesk">
+                            <div class="searchMenu">
+                                <button>
+                                    <span class="icon-right-arrow"></span> Affiner votre recherche :
+                                </button>
+                                <ul class="dropdown">
+                                    <li><a href="#">Internet</a></li>
+                                    <li><a href="#">Télévision</a></li>
+                                    <li><a href="#">Mobile</a></li>
+                                    <li><a href="#">Objet connectés</a></li>
+                                </ul>
+                            </div>
+                            <div data-cat="modemMobile" class="philter">
+                                <button>
+                                    <span class="selectedPhilter">les dernières actualités</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="phone-3 phone-pr-15 hidden-phone hidden-tab">
                             <nav class="news-menu">
                                 <ul>
                                     <li class="is-active">Les dernières actualités</li>
@@ -286,8 +297,45 @@
                                 </ul>
                             </nav>
                         </div>
-                        <div class="phone-9">
+                        <div class="phone-12 desk-9">
+                            <div class="news-item-blue main-article">
+                                <a href="#"></a>
+                                <div class="phone-12">
+                                    <div class="main-image" style="background-image: url(../images/Divers/main-news.jpg);">
+                                    </div>
+                                </div>
+                                <div class="content phone-12">
+                                    <div class="header">
+                                        <div class="meta"><span class="date">16/02/2016</span> : <span class="categorie">Trucs et astuces</span></div>
+                                        <div class="title">Effectuer un test de vitesse sur votre ligne</div>
+                                    </div>
+                                    <div class="description">
+                                        <p>
+                                           Quel que soit l’abonnement Internet dont vous disposez, votre débit Internet est constitué d’une certaine vitesse. Plus le débit est élevé, plus votre connexion sera rapide et performante. Luxembourg Online...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="news-item-blue">
+                                <a href="#"></a>
+                                <div class="phone-12 tab-5">
+                                    <div class="main-image" style="background-image: url(../images/Divers/news.jpg);">
+                                    </div>
+                                </div>
+                                <div class="content phone-12 tab-7">
+                                    <div class="header">
+                                        <div class="meta"><span class="date">10/02/2016</span> : <span class="categorie">Luxembourg Online</span></div>
+                                        <div class="title">Comprendre sa facture</div>
+                                    </div>
+                                    <div class="description">
+                                        <p>
+                                            Quel que soit l’abonnement Internet dont vous disposez, votre débit Internet est constitué d’une certaine vitesse. Plus le débit est élevé, plus votre connexion sera rapide et performante. Luxembourg Online...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news-item-blue">
+                                <a href="#"></a>
                                 <div class="phone-12 tab-5">
                                     <div class="main-image" style="background-image: url(../images/Divers/news.jpg);">
                                     </div>

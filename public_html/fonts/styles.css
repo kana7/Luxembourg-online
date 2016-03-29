@@ -128,3 +128,30 @@
 .icon-cable-ico:before {
   content: "\44";
 }
+.icon-check-icone:before {
+  content: "\45";
+}
+.icon-fax:before {
+  content: "\46";
+}
+.icon-orders:before {
+  content: "\47";
+}
+.icon-personnaldata:before {
+  content: "\48";
+}
+.icon-help:before {
+  content: "\49";
+}
+.icon-debtorders:before {
+  content: "\4a";
+}
+.icon-subrsciption:before {
+  content: "\4b";
+}
+.icon-lock:before {
+  content: "\4c";
+}
+.icon-euro:before {
+  content: "\4d";
+}

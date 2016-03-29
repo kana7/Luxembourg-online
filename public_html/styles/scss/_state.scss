@@ -153,9 +153,9 @@
             height: auto;
             padding-bottom: 135%;
             margin-bottom: 30px;
-            &#loldsl{background-image: url(../../images/Homepage/OFFRES/LOL_DSL_288x392px_Noel.jpg);}
+            &#loldsl{background-image: url(../../images/Homepage/OFFRES/LOL_DSL_288x392px.jpg);}
             &#mobiles{background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_288x392px.jpg);}
-            &#installation{background-image: url(../../images/Homepage/OFFRES/LOL_TV_288x392px_Noel.jpg);}
+            &#installation{background-image: url(../../images/Homepage/OFFRES/LOL_TV_288x392px.jpg);}
         }
     }
     #offers-section{
@@ -447,6 +447,13 @@
         border-left: 1px solid #004494;
         padding: 0 35px;
     }
+    .news-item-blue{
+        .content{padding: 15px 15px 15px 25px;}
+        &.main-article .main-image{height: 400px;}
+        .main-image{height: 100%; background-size: cover;}
+        &:not(.main-article){height: 220px;}
+        &:not(.main-article)>*[class^="phone-"]{ height: 100%;}
+    }
 }
 
 @include viewport(range, $min: 672, $max: 1055){
@@ -635,9 +642,9 @@
         }
         .service{
             margin-bottom: 0;
-            &#loldsl{background-image: url(../../images/Homepage/OFFRES/LOL_DSL_240x327px_Noel.jpg);}
+            &#loldsl{background-image: url(../../images/Homepage/OFFRES/LOL_DSL_240x327px.jpg);}
             &#mobiles{background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_240x327px.jpg);}
-            &#installation{background-image: url(../../images/Homepage/OFFRES/LOL_TV_240x327px_Noel.jpg);}
+            &#installation{background-image: url(../../images/Homepage/OFFRES/LOL_TV_240x327px.jpg);}
             .infos{
                 padding: 0 15px 15px;
                 .details{
@@ -1221,9 +1228,9 @@
         }
         .service
         {
-            &#loldsl{background-image: url(../../images/Homepage/OFFRES/LOL_DSL_320x437px_Noel.jpg);}
+            &#loldsl{background-image: url(../../images/Homepage/OFFRES/LOL_DSL_320x437px.jpg);}
             &#mobiles{background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_320x437px.jpg);}
-            &#installation{background-image: url(../../images/Homepage/OFFRES/LOL_TV_320x437px_Noel.jpg);}
+            &#installation{background-image: url(../../images/Homepage/OFFRES/LOL_TV_320x437px.jpg);}
             .infos
             {
                 padding: 0 25px 15px;

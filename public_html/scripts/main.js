@@ -40,6 +40,7 @@ var temp;
 $(function () {
     MenuMobile.init();
     PopupModule.init();
+    HeaderDropDown.init();
     if ($('.searchMenu:not(.mobile)')) {
         EquipementFilter.init();
     }
@@ -103,6 +104,51 @@ var DropDown = function (element) {
         $hiddenContainer.toggleClass('is-visible');
     };
 };
+
+var HeaderDropDown = (function(){
+    var $document = $('html');
+    var $element = $('.header-dropdown');
+    var $button = $element.find('button');
+    var $drop = $element.find('.drop');
+    var flag = 1;
+    var init = function () {
+        _bindEvents();
+    };
+    var _bindEvents = function(){
+        $button.on('click', function(){
+            _toggleDrop();
+        });
+        $document.on('click', function () {
+            if (flag != "0") {
+                _closeDrop();
+            }
+            else {
+                flag = "1";
+            }
+        });
+    };
+    var _toggleDrop = function(){
+        flag = "0";
+        if ($button.hasClass('is-active')){
+            _closeDrop();
+        }else{
+            _openDrop();
+        }
+    };
+    var _openDrop = function(){
+        $button.addClass('is-active');
+        $drop.addClass('is-visible');
+    };
+    var _closeDrop = function(){
+      $button.removeClass('is-active');
+      $drop.removeClass('is-visible');
+    };
+    
+    return{
+        init : init
+    };
+})();
+
 // Permet de gérer l'affichage dans les pages équipements
 var EquipementFilter = (function () {
     var $document = $('html');

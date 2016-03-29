@@ -5826,6 +5826,40 @@ h2.contact-title {
 .docItem .link span {
   display: block; }
 
+.header-dropdown {
+  position: relative;
+  display: inline-block;
+  padding: 0; }
+  .header-dropdown button {
+    position: relative;
+    z-index: 2;
+    outline: 0;
+    background: none;
+    border: none;
+    padding: 9px 10px;
+    width: 105px;
+    border-bottom: 1px solid #003a75; }
+    .header-dropdown button span[class^="icon-"] {
+      margin-right: 0;
+      margin-left: 8px;
+      font-size: 0.7em;
+      transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -o-transform: rotate(90deg); }
+    .header-dropdown button:hover, .header-dropdown button.is-active {
+      background-color: #004185; }
+  .header-dropdown .drop {
+    display: none;
+    position: absolute;
+    width: 105px;
+    padding: 9px 10px 8px;
+    z-index: 1;
+    background-color: #004185;
+    border-top: 1px solid #004994; }
+    .header-dropdown .drop.is-visible {
+      display: block; }
+
 .dropdown > [data-trigger] {
   cursor: pointer;
   -webkit-touch-callout: none;

@@ -2790,10 +2790,14 @@ h2.contact-title {
         display: none;
         position: absolute;
         width: 105px;
-        padding: 9px 10px 8px;
         z-index: 1;
         background-color: darken($blue, 3%);
         border-top: 1px solid $blue;
+        li{margin: 0; display: block;}
+        a{
+            display: block;
+            padding: 9px 10px 8px;
+        }
         &.is-visible{
             display: block;
         }

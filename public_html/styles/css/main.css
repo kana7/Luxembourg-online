@@ -5853,10 +5853,15 @@ h2.contact-title {
     display: none;
     position: absolute;
     width: 105px;
-    padding: 9px 10px 8px;
     z-index: 1;
     background-color: #004185;
     border-top: 1px solid #004994; }
+    .header-dropdown .drop li {
+      margin: 0;
+      display: block; }
+    .header-dropdown .drop a {
+      display: block;
+      padding: 9px 10px 8px; }
     .header-dropdown .drop.is-visible {
       display: block; }
 

@@ -4,11 +4,9 @@
   #slider-contents .infos.image-1 {
     background-image: url(../../images/Homepage/SLIDER/Slider_672x320px_Noel3.jpg); }
   #slider-contents .infos.image-2 {
-    background-image: url(../../images/Homepage/SLIDER/Slider2_672x320px.jpg); }
+    background-image: url(../../images/Homepage/SLIDER/TV_672x320x.jpg); }
   #slider-contents .infos.image-3 {
     background-image: url(../../images/Homepage/SLIDER/Slider3_672x320px.jpg); }
-  #slider-contents .infos.image-4 {
-    background-image: url(../../images/Homepage/SLIDER/Freijoersshopping_672x320px.jpg); }
 
 @media screen and (min-width: 672px) {
   #slider-contents .infos {
@@ -16,48 +14,66 @@
     #slider-contents .infos.image-1 {
       background-image: url(../../images/Homepage/SLIDER/Slider_1056x450px_Noel3.jpg); }
     #slider-contents .infos.image-2 {
-      background-image: url(../../images/Homepage/SLIDER/Slider2_1056x450px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/TV_1056x450px.jpg); }
     #slider-contents .infos.image-3 {
-      background-image: url(../../images/Homepage/SLIDER/Slider3_1056x450px.jpg); }
-    #slider-contents .infos.image-4 {
-      background-image: url(../../images/Homepage/SLIDER/Freijoersshopping_1056x450px.jpg); } }
+      background-image: url(../../images/Homepage/SLIDER/Slider3_1056x450px.jpg); } }
 @media screen and (min-width: 1056px) {
   #slider-contents .infos {
     background-size: 1302px auto; }
     #slider-contents .infos.image-1 {
       background-image: url(../../images/Homepage/SLIDER/Slider_1302x330px_Noel3.jpg); }
     #slider-contents .infos.image-2 {
-      background-image: url(../../images/Homepage/SLIDER/Slider2_1302x330px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/TV_1302x330px.jpg); }
     #slider-contents .infos.image-3 {
-      background-image: url(../../images/Homepage/SLIDER/Slider3_1302x330px.jpg); }
-    #slider-contents .infos.image-4 {
-      background-image: url(../../images/Homepage/SLIDER/Freijoersshopping_1302x330px.jpg); } }
+      background-image: url(../../images/Homepage/SLIDER/Slider3_1302x330px.jpg); } }
 @media screen and (min-width: 1302px) {
   #slider-contents .infos {
     background-size: 1920px auto; }
     #slider-contents .infos.image-1 {
       background-image: url(../../images/Homepage/SLIDER/Slider_1920x360px_Noel3.jpg); }
     #slider-contents .infos.image-2 {
-      background-image: url(../../images/Homepage/SLIDER/Slider2_1920x360px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/TV_1920x360px.jpg); }
     #slider-contents .infos.image-3 {
-      background-image: url(../../images/Homepage/SLIDER/Slider3_1920x360px.jpg); }
-    #slider-contents .infos.image-4 {
-      background-image: url(../../images/Homepage/SLIDER/Freijoersshopping_1920x360px.jpg); } }
+      background-image: url(../../images/Homepage/SLIDER/Slider3_1920x360px.jpg); } }
 #slider-contents .infos.image-6 .title {
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.8); }
 
+#slider-contents .infos.image-2 .title {
+  text-transform: initial;
+  font-size: 16pt;
+  line-height: 25px; }
+
 @media screen and (max-width: 671px) {
   #slider-contents .infos.image-2 .row > div, #slider-contents .infos.image-4 .row > div {
-    top: 0px !important; }
+    text-align: center; }
   #slider-contents .infos.image-1 .title {
     font-size: 35px; }
   #slider-contents .infos.image-1 .top-details {
     font-size: 18px; }
   #slider-contents .infos.image-1 .bottom-details {
     font-size: 13px; } }
-@media screen and (max-width: 1055px) {
-  #slider-contents .infos.image-2 .row > div, .infos.image-4 .row > div {
-    top: 20px;
-    text-align: center !important; } }
+@media screen and (min-width: 672px) {
+  #slider-contents .infos.image-2 .title {
+    text-transform: initial;
+    font-size: 25pt;
+    line-height: 35px; } }
+@media screen and (min-width: 1056px) {
+  #slider-contents .infos.image-2 .row > div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  #slider-contents .infos.image-2 .title {
+    font-size: 26.5pt;
+    line-height: 40px; }
+  #slider-contents .infos.image-2 p.bottom-details {
+    font-size: 12pt; } }
+@media screen and (min-width: 1302px) {
+  #slider-contents .infos.image-2 .title {
+    font-size: 30pt;
+    line-height: 50px;
+    margin-bottom: 10px; } }
 
 /*# sourceMappingURL=slider_src.css.map */

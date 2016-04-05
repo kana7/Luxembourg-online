@@ -4,18 +4,18 @@
         <meta charset="utf-8">
         <title>Téléphonie : Abonnez-vous  - Luxembourg Online</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <link rel="shortcut icon" href="/favicon.ico">
-        
+
         <link rel="stylesheet" href="../styles/css/main.css">
         <link rel="stylesheet" href="../styles/css/internet/accueil.css">
-        
+
         <script src="../scripts/vendor/picturefill.min.js"></script>
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
     </head>
-    
+
     <body>
         <div id="clientSpace" class="popup">
             <div class="background-client"></div>
@@ -94,11 +94,12 @@
                 <li class="menu-item" data-id='telephone'>Téléphonie <span class="icon-right-arrow"></span></li>
                 <li class="menu-item" data-id='tv'>TV <span class="icon-right-arrow"></span></li>
                 <li class="menu-item" data-id='mobile'>Mobile<span class="icon-right-arrow"></span></li>
-                <li class="menu-item" data-id='promo'>Promos <span class="icon-right-arrow"></span></li>
+                <li class="menu-item link"><a href="../promos/fibre.html">Promos</a></li>
                 <li class="sous-nav">
                     <ul class="menu">
                         <li class="menu-item link"><a href="../divers/assistance.html">Assistance</a></li>
                         <li class="menu-item link"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOL CLOUD</a></li>
+                        <!--<li class="menu-item link"><a href="../divers/news.html">Actualités</a></li>-->
                         <li class="menu-item link"><a href="../divers/magazine.html">Magazine</a></li>
                         <li class="menu-item link"><a href="../divers/propos.html">À propos</a></li>
                         <li class="menu-item link"><a href="../divers/contact.html">Contact</a></li>
@@ -131,6 +132,7 @@
                     <li class="menu-item"><a href="../tv/accueil.html">Accueil TV</a></li>
                     <li class="menu-item"><a href="../tv/offres.html">Notre offre TV</a></li>
                     <li class="menu-item"><a href="../tv/equipements.html">Nos équipements</a></li>
+
                     <li class="menu-item"><a href="../tv/abonnement.html">Abonnez-vous</a></li>
                 </ul>
             </div>
@@ -143,32 +145,25 @@
                     <li class="menu-item"><a href="../mobile/abonnement.html">Abonnez-vous</a></li>
                 </ul>
             </div>
-            <div class="menu-links-wrapper">
-                <ul class="menu-links" id="promo">
-                    <li class="menu-item back"><span class="icon-right-arrow"></span>Promos</li>
-                    <li class="menu-item"><a href="../promos/accueil.html">Accueil Promos</a></li>
-                    <li class="menu-item"><a href="../promos/fibre.html">Offre spéciale fibre</a></li>
-                    <li class="menu-item"><a href="../promos/offreloltv.html">Offre spéciale LOL TV</a></li>
-                    <li class="menu-item"><a href="../promos/internetTV.html">Offre spéciale Internet + TV</a></li>
-                </ul>
-            </div>
         </nav>
         <div id="siteWrap">
             <header>
-                <div id="top-menu-header" class="hidden-phone hidden-tab">
+                <div id="top-menu-header">
                     <div class="container-wrapper">
                         <div class="row">
                             <nav class="pull-left">
-                                <ul class="top-menu-header-links left">
-                                    <li><a href="../index.htm">Particuliers</a></li>
-                                    <li><a href="http://www.internet.lu/business/" target="blank_">Business</a></li>
-                                </ul>
+                                <div class="header-dropdown top-menu-header-links left">
+                                    <button>Particuliers<span class="icon-right-arrow"></span></button>
+                                    <ul class="drop">
+                                        <li><a href="http://www.internet.lu/business/">Business</a></li>
+                                    </ul>
+                                </div>
                             </nav>
-                            <nav class="pull-right">
+                            <nav class="pull-right hidden-phone hidden-tab">
                                 <ul class="top-menu-header-links right">
                                     <li class="menu-item"><a href="../divers/assistance.html">Assistance</a></li>
                                     <li class="menu-item"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOL CLOUD</a></li>
-                                    <li class="menu-item"><a href="../divers/magazine.html">Magazine</a></li>
+                                    <!--<li class="menu-item"><a href="../divers/news.html">Actualités</a></li>--><li class="menu-item"><a href="../divers/magazine.html">Magazine</a></li>
                                     <li class="menu-item"><a href="../divers/propos.html">À propos</a></li>
                                     <li class="menu-item"><a href="../divers/contact.html">Contact</a></li>
                                 </ul>
@@ -176,7 +171,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div id="bottom-menu-header">
                     <ul class="sub-menu hidden-phone hidden-tab">
                         <li><a href="accueil.html"><div class="link">Accueil Téléphonie</div></a></li>
@@ -186,8 +181,8 @@
                     </ul>
                     <nav class="bottom-menu-header-links mobile display-phone display-tab">
                         <div class="pull-left">
-                            <div class="logo noel">
-                                <a href="../index.htm"><img src="../images/Icone/Img/Logo-LOL-noel.png" alt="logo LOL" /></a>
+                            <div class="logo">
+                                <a href="../index.htm"><img src="../images/Icone/Img/Logo-LOL.png" alt="logo LOL" /></a>
                             </div>
                         </div>
                         <div class="mobile-menu-button">
@@ -202,8 +197,8 @@
                     <div class="container-wrapper hidden-phone hidden-tab">
                         <div class="row">
                             <div class="pull-left">
-                                <div class="logo noel">
-                                    <a href="../index.htm"><img src="../images/Icone/img/Logo-LOL-noel.png" alt="logo LOL" /></a>
+                                <div class="logo">
+                                    <a href="../index.htm"><img src="../images/Icone/img/Logo-LOL.png" alt="logo LOL" /></a>
                                 </div><!--
                                 --><nav class="bottom-menu-header-links">
                                     <ul class="main-menu">
@@ -237,7 +232,7 @@
                                         </li><!--
                                         --><li>
                                             <div class="active-border"></div>
-                                            <a href="../promos/accueil.html">
+                                            <a href="../promos/fibre.html">
                                                 <img class="header-icon" src="../images/Icone/img/promos.png" alt="Promos" />
                                                 <div class="link">Promos</div>
                                             </a>
@@ -258,9 +253,9 @@
                         <div class="phone-12 desk-6">
                             <img class="section-img-align-bottom" src="../images/Internet/1024px/stylo_abonnement.jpg"
                                  srcset="../images/Internet/1280px/stylo_abonnement.jpg 1920w,
-                                 ../images/Internet/1024px/stylo_abonnement.jpg 1400w,
-                                 ../images/Internet/640px/stylo_abonnement.jpg 900w,
-                                 ../images/Internet/320px/stylo_abonnement.jpg 600w"
+                                 ../images/Internet/1024px/stylo_abonnement.jpg 1302w,
+                                 ../images/Internet/640px/stylo_abonnement.jpg 1056w,
+                                 ../images/Internet/320px/stylo_abonnement.jpg 672w"
                                  sizes="100%"
                                  alt="bic abonnement"/>
                         </div>
@@ -277,7 +272,7 @@
             <section class="section-layout height-auto padding">
                 <div class="container-wrapper">
                     <div class="row clearfix">
-                        <div class="phone-12 tab-6 desk-4">
+                        <div class="phone-12 tab-6 desk-4 tab-pr-20 desk-pr-20">
                             <div class="pdf-list">
                                 <h4>Contrats</h4>
                                 <ul>
@@ -286,16 +281,17 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="phone-12 tab-6 desk-4">
+                        <div class="phone-12 tab-6 desk-4 desk-pr-20 desk-pl-20">
                             <div class="pdf-list">
-                                <h4>Mentions légales</h4>
+                                <h4>Conditions générales et mentions légales</h4>
                                 <ul>
-                                    <li><a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20DE%20TELEPHONIE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link">Conditions particulières<span>(nouvelle version depuis 12/03/2012)</span></div></a></li>
-                                    <li><a href="../documents/CONDITIONS%20GENERALES%20DES%20SERVICES%20LUXEMBOURG%20ONLINE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link">Conditions générales<span>(nouvelle version depuis 12/03/2012)</span></div></a></li>
+                                    <li><a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20DE%20TELEPHONIE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link">Conditions particulières (Téléphonie)<span>(nouvelle version depuis 12/03/2012)</span></div></a></li>
+                                    <li><a href="../documents/CONDITIONS%20GENERALES%20DES%20SERVICES%20LUXEMBOURG%20ONLINE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link">Conditions générales<span>(nouvelle version depuis 09/01/2014)</span></div></a></li>
+                                    <li><a href="../documents/MENTIONS_LEGALES.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link">Mentions légales<span>(nouvelle version depuis 26/01/2016)</span></div></a></li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="phone-12 tab-6 desk-4">
+                        <div class="phone-12 tab-6 desk-4 desk-pl-20">
                             <div class="pdf-list">
                                 <h4>Autres</h4>
                                 <ul>
@@ -311,7 +307,7 @@
                         <div class="row">
                             <ul class="center">
                                 <li><a href="../telephonie/faq.html"><span class="icon icon-faq-ico"></span>FAQ</a></li>
-                                <li><a href="../telephonie/répondeur.html"><span class="icon icon-repondeur-icone"></span>Répondeur</a></li>
+                                <li><a href="../telephonie/repondeur.html"><span class="icon icon-repondeur-icone"></span>Répondeur</a></li>
                                 <li class="active"><a href="../telephonie/abonnement.html"><span class="icon icon-document-ico"></span>Documents</a></li>
                             </ul>
                         </div>
@@ -411,9 +407,9 @@
                                 <nav>
                                     <ul class="links">
                                         <li><a href="../tv/offres.html">Notre offre</a></li>
-                                        
+
                                         <li><a href="../tv/equipements.html">Nos équipements</a></li>
-                                        <li><a href="../promos/internetTV.html">Offre spéciale TV</a></li>
+                                        
                                     </ul>
                                 </nav>
                             </div>
@@ -430,15 +426,15 @@
                         <div class="row">
                             <div class="separator"></div>
                             <div class="phone-12">
-                                <div class="display-phone copyright"><span class="icon-icone-lol"></span>&copy;2015 Luxembourg Online S.A</div>
+                                <div class="display-phone copyright">© Luxembourg Online S.A. – 2015, tous droits réservés</div>
                                 <nav class="hidden-phone">
                                     <ul class="footer-bottom-links">
                                         <li>
-                                            <span class="icon-icone-lol"></span>&copy;2015 Luxembourg Online S.A</li>
-                                        <li><a href="../documents/CONDITIONS GENERALES DES SERVICES LUXEMBOURG ONLINE.pdf" target="blank_">Mentions légales</a></li>
+                                            © Luxembourg Online S.A. – 2015, tous droits réservés</li>
+                                        <li><a href="../documents/MENTIONS_LEGALES.pdf" target="blank_">Mentions légales</a></li>
                                         <li><a href="../divers/emploi.html">Offres d'emploi</a></li>
                                         <li><a href="../divers/plan.html">Plan du site</a></li>
-                                        
+
                                         <li><a href="../divers/contact.html">Contact</a></li>
                                     </ul>
                                 </nav>
@@ -449,11 +445,11 @@
             </footer>
         </div>
         <!--              ./FOOTER               -->
-        
+
         <script src="../scripts/vendor/jquery.min.js"></script>
         <script src="../scripts/main.js"></script>
-        
+
         <script type="text/javascript" src="../scripts/analytics.js"></script>
     </body>
-    
+
 </html>

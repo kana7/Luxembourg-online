@@ -159,6 +159,28 @@
 .minix-info-image img {
   max-width: 100%; }
 
+#offre-tv-header {
+  background-size: 672px auto;
+  height: 320px !important; }
+  #offre-tv-header.image-1 {
+    background-image: url(../../../images/TV/header/football_672x320px.jpg); }
+  #offre-tv-header.image-2 {
+    background-image: url(../../../images/TV/header/love_672x320px.jpg); }
+  #offre-tv-header.image-3 {
+    background-image: url(../../../images/TV/header/space_672x320px.jpg); }
+  #offre-tv-header .section-title {
+    font-size: 27px;
+    line-height: 31px;
+    margin: 0 0 10px; }
+  #offre-tv-header .section-price {
+    font-size: 56px; }
+    #offre-tv-header .section-price div {
+      font-size: 25px;
+      top: 10px;
+      left: 155px; }
+  #offre-tv-header .btn-tr-white {
+    font-size: 21px; }
+
 @media screen and (max-width: 671px) {
   .channels-language-links {
     display: -ms-flexbox;
@@ -196,6 +218,32 @@
       line-height: 31px;
       font-size: 21px; } }
 @media screen and (min-width: 672px) {
+  #video-fond.image-1 {
+    background-image: url(../../images/TV/header/football_1056x290px.jpg); }
+  #video-fond.image-2 {
+    background-image: url(../../images/TV/header/love_1056x290px.jpg); }
+  #video-fond.image-3 {
+    background-image: url(../../images/TV/header/space_1056x290px.jpg); }
+
+  #offre-tv-header {
+    height: 290px !important;
+    background-size: 1056px auto; }
+    #offre-tv-header.image-1 {
+      background-image: url(../../../images/TV/header/football_1056x290px.jpg); }
+    #offre-tv-header.image-2 {
+      background-image: url(../../../images/TV/header/love_1056x290px.jpg); }
+    #offre-tv-header.image-3 {
+      background-image: url(../../../images/TV/header/space_1056x290px.jpg); }
+    #offre-tv-header .section-title {
+      font-size: 30px;
+      line-height: 35px; }
+    #offre-tv-header .section-price {
+      font-size: 60px; }
+      #offre-tv-header .section-price div {
+        font-size: 28px;
+        top: 10px;
+        left: 320px; }
+
   .header-channel img {
     display: inline-block;
     height: 230px;
@@ -255,6 +303,21 @@
   .channels-items .item {
     margin: 0px 30px 25px; } }
 @media screen and (min-width: 1056px) {
+  #offre-tv-header {
+    height: 370px !important;
+    background-size: 1302px auto; }
+    #offre-tv-header.image-1 {
+      background-image: url(../../../images/TV/header/football_1302x370px.jpg); }
+    #offre-tv-header.image-2 {
+      background-image: url(../../../images/TV/header/love_1302x370px.jpg); }
+    #offre-tv-header.image-3 {
+      background-image: url(../../../images/TV/header/space_1302x370px.jpg); }
+    #offre-tv-header .section-price div {
+      top: 10px !important;
+      left: 70px; }
+    #offre-tv-header .btn-tr-white {
+      font-size: 18px; }
+
   .header-channel {
     margin-bottom: 0px; }
     .header-channel .img-layout {
@@ -294,5 +357,23 @@
 
   .minix-info-image img {
     min-width: 350px; } }
+@media screen and (min-width: 1302px) {
+  #offre-tv-header {
+    height: 500px !important;
+    background-size: 1920px auto; }
+    #offre-tv-header.image-1 {
+      background-image: url(../../../images/TV/header/football_1920x500px.jpg); }
+    #offre-tv-header.image-2 {
+      background-image: url(../../../images/TV/header/love_1920x500px.jpg); }
+    #offre-tv-header.image-3 {
+      background-image: url(../../../images/TV/header/space_1920x500px.jpg); }
+    #offre-tv-header .section-title {
+      font-size: 34px;
+      line-height: 45px;
+      margin: 0 0 20px; }
+    #offre-tv-header .section-price {
+      margin-bottom: 30px; }
+    #offre-tv-header .btn-tr-white {
+      font-size: 21px; } }
 
 /*# sourceMappingURL=tv.css.map */

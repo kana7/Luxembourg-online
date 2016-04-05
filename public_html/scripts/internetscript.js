@@ -28,9 +28,10 @@ function natSort(as, bs) {
     }
     return a.length - b.length;
 }
+
 var nonDispoTemplate = '<div class="not-dispo"><div class="not-dispo-info">Offre <br />indisponible <br />à votre adresse</div></div>';
 var buttonDispoTempate = '<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_FR.pdf" target="_blank">Abonnez-vous</a>';
-var buttonPromoFibre = '<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_OFFRE2_FR.pdf" target="_blank">Abonnez-vous</a>';
+var buttonPromoFibre = '<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_OFFRE2_FR.pdf" target="_blank">Abonnez-vous</a>'+ '<a class="promos-link" href="../promos/fibre.html">Promo : installation offerte</a>';
 var buttonPromoTv = '<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_OFFRE1_FR.pdf" target="_blank">Abonnez-vous</a>';
 
 var checkDispoTemplate = '<section id="test-offres" class="clearfix">' +
@@ -63,7 +64,7 @@ var popuptemplate = '<div id="testDispo" class="popup">' +
         '<div class="background-client"></div>' +
         '<div class="white-pannel">' +
         '<button class="pannel-close"><span class="icon-x-icone"></span></button>' +
-        '<h2>Tester la disponibilité</h2>' +
+        '<h2>Testez la disponibilité</h2>' +
         '<input value name="zipcode" class="input-white" type="text" placeholder="Code postal"/>' +
         '<select name="ville" value class="input-white select"></select>' +
         '<select name="rue" value class="input-white select"></select>' +
@@ -95,7 +96,7 @@ function insertLink(id, service) {
     return '<a class="btn-blue btn-subscription" href="../shop/inscription.html#' + service + ';' + id + '">Abonnez-vous</a>';
 }
 
-function checkDispo(homeId, boolean) {
+function checkDispo(homeId, villeId, boolean) {
     if (homeId !== undefined || homeId !== null || homeId !== '') {
         $.ajax({
             url: "http://shop.internet.lu/Scripts/sql.exe?SqlDB=LOLShop&Sql=FOServiceMap:FOServiceListNew.phs&_HomeId=" + homeId,
@@ -281,7 +282,7 @@ $(function () {
             _ville = vhash[1];
             _rue = vhash[2];
             _nbr = vhash[3];
-            checkDispo(_nbr, false);
+            checkDispo(_nbr, _ville, false);
             setTimeout(function () {
                 $("input[name=zipcode]").val(_cp);
                 $(".verifyCp").click();
@@ -386,7 +387,7 @@ $(function () {
                             $("select[name=rue]").prop("selectedIndex", 1).change();
                             $("select[name=rue] option").first().remove();
                         }
-                        if (vhash.length != 0) {
+                        if (vhash) {
                             $("select[name=ville] option").each(function () {
                                 if ($(this).val() == _ville) {
                                     $(this).parent().prop("selectedIndex", $(this).index()).change();
@@ -411,7 +412,7 @@ $(function () {
                         $("select[name=rue]").prop("selectedIndex", 1).change();
                         $("select[name=rue] option").first().remove();
                     }
-                    if (vhash.length != 0) {
+                    if (vhash) {
                         $("select[name=ville] option").each(function () {
                             if ($(this).val() == _ville) {
                                 $(this).parent().prop("selectedIndex", $(this).index()).change();
@@ -472,30 +473,24 @@ $(function () {
     });
     $("body").on('click', '.btnVerif', function () {
         var homeId = $("select[name=numero]").val();
-        if ($("select[name=ville]").val() == 98 || $("select[name=ville]").val() == 428 || $("select[name=ville]").val() == 159 || $("select[name=ville]").val() == 174) {
-            window.location.href = "http://www.internet.lu/internet/cable.html";
+        if (homeId != "") {
+            window.location.href = "/internet/offres.html#" + $("input[name=zipcode]").val() + ";" + $("select[name=ville]").val() + ";" + $("select[name=rue]").val() + ";" + $("select[name=numero]").val();
         } else {
-            if (homeId != "") {
-                window.location.href = "/internet/offres.html#" + $("input[name=zipcode]").val() + ";" + $("select[name=ville]").val() + ";" + $("select[name=rue]").val() + ";" + $("select[name=numero]").val();
-            } else {
-                alert('Entrez votre numéro de rue pour continuer...');
-            }
+            alert('Entrez votre numéro de rue pour continuer...');
         }
     });
     $("body").on('click', '.btnVerif2', function (event) {
         var homeId = $("select[name=numero]").val();
-        if ($("select[name=ville]").val() == 98 || $("select[name=ville]").val() == 428 || $("select[name=ville]").val() == 159 || $("select[name=ville]").val() == 174) {
-            window.location.href = "http://www.internet.lu/internet/cable.html";
-        } else {
-            if (homeId !== "") {
-                if ($('#testDispo').hasClass('is-visible')) {
-                    PopupModule.closePopup(event); //main.js
-                }
-                checkDispo($("select[name=numero]").val(), $(this).data('bool'));
-            } else {
-                alert('Entrez votre numéro de rue pour continuer...');
+
+        if (homeId !== "") {
+            if ($('#testDispo').hasClass('is-visible')) {
+                PopupModule.closePopup(event); //main.js
             }
+            checkDispo($("select[name=numero]").val(), $("select[name=ville]").val(), $(this).data('bool') || false);
+        } else {
+            alert('Entrez votre numéro de rue pour continuer...');
         }
+
     });
 });
 

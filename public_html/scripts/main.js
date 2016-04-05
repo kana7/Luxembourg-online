@@ -35,17 +35,12 @@ var encartDispoTemplate = '<div class="phone-12 tab-6 desk-3">' +
         '</div>' +
         '</div>';
 
-var slider_noel1 = $('<div class="gallery-cell"><div class="infos image-5"><div class="container-wrapper"><div class="row"><div class="phone-12 align-center"><h2 class="title white bold"><span style="font-size: 0.9em;">Luxembourg Online <span class="light">vous souhaite de</span> </span><br /><span style="font-size: 1.2em;">joyeuses fêtes !</span></h2></div></div></div></div></div>');
-
-var slider_noel2 = $('<div class="gallery-cell"><div class="infos image-6"><div class="container-wrapper"><div class="row"><div class="phone-12 desk-10"><h1 class= "title white bold"> Luxembourg Online <br/><span class="light"> vous souhaite de </span><br/> joyeuses fêtes ! </h1></div></div></div></div></div>');
-
-var randomizeSlider = [slider_noel1, slider_noel2];
-
 var temp;
 // ON PAGE READY
 $(function () {
     MenuMobile.init();
     PopupModule.init();
+    HeaderDropDown.init();
     if ($('.searchMenu:not(.mobile)')) {
         EquipementFilter.init();
     }
@@ -66,6 +61,13 @@ function testEmail(emailAddress) {
 function scrollToElement(element) {
     $(window).scrollTop(element.offset().top).scrollLeft(element.offset().left);
 }
+
+$.fn.goTo = function () {
+    $('html, body').animate({
+        scrollTop: $(this).offset().top + 'px'
+    }, 'slow');
+    return this;
+};
 
 //size of viewport
 function viewport() {
@@ -102,6 +104,51 @@ var DropDown = function (element) {
         $hiddenContainer.toggleClass('is-visible');
     };
 };
+
+var HeaderDropDown = (function(){
+    var $document = $('html');
+    var $element = $('.header-dropdown');
+    var $button = $element.find('button');
+    var $drop = $element.find('.drop');
+    var flag = 1;
+    var init = function () {
+        _bindEvents();
+    };
+    var _bindEvents = function(){
+        $button.on('click', function(){
+            _toggleDrop();
+        });
+        $document.on('click', function () {
+            if (flag != "0") {
+                _closeDrop();
+            }
+            else {
+                flag = "1";
+            }
+        });
+    };
+    var _toggleDrop = function(){
+        flag = "0";
+        if ($button.hasClass('is-active')){
+            _closeDrop();
+        }else{
+            _openDrop();
+        }
+    };
+    var _openDrop = function(){
+        $button.addClass('is-active');
+        $drop.addClass('is-visible');
+    };
+    var _closeDrop = function(){
+      $button.removeClass('is-active');
+      $drop.removeClass('is-visible');
+    };
+    
+    return{
+        init : init
+    };
+})();
+
 // Permet de gérer l'affichage dans les pages équipements
 var EquipementFilter = (function () {
     var $document = $('html');
@@ -297,3 +344,7 @@ var PopupModule = (function () {
         closePopup: closePopup
     };
 })();
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}

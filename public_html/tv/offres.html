@@ -5,15 +5,15 @@
         <title>TV : Nos offres TV – Luxembourg Online</title>
         <meta name="description" content="Avec LOL TV, accédez à tous vos contenus depuis votre canapé. Découvrez nos nombreuses chaînes TV, HD et radio. Surfez également sur Netflix et Youtube depuis votre TV." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <link rel="shortcut icon" href="/favicon.ico">
-        
+
         <link rel="stylesheet" href="../styles/css/main.css">
         <link rel="stylesheet" href="../styles/css/tv/tv.css">
-        
+
         <script src="../scripts/vendor/picturefill.min.js"></script>
     </head>
-    
+
     <body>
         <div id="clientSpace" class="popup">
             <div class="background-client"></div>
@@ -92,11 +92,12 @@
                 <li class="menu-item" data-id='telephone'>Téléphonie <span class="icon-right-arrow"></span></li>
                 <li class="menu-item" data-id='tv'>TV <span class="icon-right-arrow"></span></li>
                 <li class="menu-item" data-id='mobile'>Mobile<span class="icon-right-arrow"></span></li>
-                <li class="menu-item" data-id='promo'>Promos <span class="icon-right-arrow"></span></li>
+                <li class="menu-item link"><a href="../promos/fibre.html">Promos</a></li>
                 <li class="sous-nav">
                     <ul class="menu">
                         <li class="menu-item link"><a href="../divers/assistance.html">Assistance</a></li>
                         <li class="menu-item link"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOL CLOUD</a></li>
+                        <!--<li class="menu-item link"><a href="../divers/news.html">Actualités</a></li>-->
                         <li class="menu-item link"><a href="../divers/magazine.html">Magazine</a></li>
                         <li class="menu-item link"><a href="../divers/propos.html">À propos</a></li>
                         <li class="menu-item link"><a href="../divers/contact.html">Contact</a></li>
@@ -129,6 +130,7 @@
                     <li class="menu-item"><a href="../tv/accueil.html">Accueil TV</a></li>
                     <li class="menu-item"><a href="../tv/offres.html">Notre offre TV</a></li>
                     <li class="menu-item"><a href="../tv/equipements.html">Nos équipements</a></li>
+
                     <li class="menu-item"><a href="../tv/abonnement.html">Abonnez-vous</a></li>
                 </ul>
             </div>
@@ -141,32 +143,25 @@
                     <li class="menu-item"><a href="../mobile/abonnement.html">Abonnez-vous</a></li>
                 </ul>
             </div>
-            <div class="menu-links-wrapper">
-                <ul class="menu-links" id="promo">
-                    <li class="menu-item back"><span class="icon-right-arrow"></span>Promos</li>
-                    <li class="menu-item"><a href="../promos/accueil.html">Accueil Promos</a></li>
-                    <li class="menu-item"><a href="../promos/fibre.html">Offre spéciale fibre</a></li>
-                    <li class="menu-item"><a href="../promos/offreloltv.html">Offre spéciale LOL TV</a></li>
-                    <li class="menu-item"><a href="../promos/internetTV.html">Offre spéciale Internet + TV</a></li>
-                </ul>
-            </div>
         </nav>
         <div id="siteWrap">
             <header>
-                <div id="top-menu-header" class="hidden-phone hidden-tab">
+                <div id="top-menu-header">
                     <div class="container-wrapper">
                         <div class="row">
                             <nav class="pull-left">
-                                <ul class="top-menu-header-links left">
-                                    <li><a href="../index.htm">Particuliers</a></li>
-                                    <li><a href="http://www.internet.lu/business/" target="blank_">Business</a></li>
-                                </ul>
+                                <div class="header-dropdown top-menu-header-links left">
+                                    <button>Particuliers<span class="icon-right-arrow"></span></button>
+                                    <ul class="drop">
+                                        <li><a href="http://www.internet.lu/business/">Business</a></li>
+                                    </ul>
+                                </div>
                             </nav>
-                            <nav class="pull-right">
+                            <nav class="pull-right hidden-phone hidden-tab">
                                 <ul class="top-menu-header-links right">
                                     <li class="menu-item"><a href="../divers/assistance.html">Assistance</a></li>
                                     <li class="menu-item"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOL CLOUD</a></li>
-                                    <li class="menu-item"><a href="../divers/magazine.html">Magazine</a></li>
+                                    <!--<li class="menu-item"><a href="../divers/news.html">Actualités</a></li>--><li class="menu-item"><a href="../divers/magazine.html">Magazine</a></li>
                                     <li class="menu-item"><a href="../divers/propos.html">À propos</a></li>
                                     <li class="menu-item"><a href="../divers/contact.html">Contact</a></li>
                                 </ul>
@@ -174,18 +169,18 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div id="bottom-menu-header">
-                    <ul class="sub-menu hidden-phone hidden-tab">
+                    <ul class="sub-menu hidden-phone hidden-tab white">
                         <li><a href="accueil.html"><div class="link">Accueil TV</div></a></li>
                         <li class="active"><a href="offres.html"><div class="link">Notre offre tv</div></a></li>
-                        <li><a href="equipements.html"><div class="link">nos équipements</div></a></li>
+                        <li><a href="equipements.html"><div class="link">Nos équipements</div></a></li>
                         <li><a href="abonnement.html"><div class="link">Abonnez-vous</div></a></li>
                     </ul>
                     <nav class="bottom-menu-header-links mobile display-phone display-tab">
                         <div class="pull-left">
-                            <div class="logo noel">
-                                <a href="../index.htm"><img src="../images/Icone/Img/Logo-LOL-noel.png" alt="logo LOL" /></a>
+                            <div class="logo">
+                                <a href="../index.htm"><img src="../images/Icone/Img/Logo-LOL.png" alt="logo LOL" /></a>
                             </div>
                         </div>
                         <div class="mobile-menu-button">
@@ -200,8 +195,8 @@
                     <div class="container-wrapper hidden-phone hidden-tab">
                         <div class="row">
                             <div class="pull-left">
-                                <div class="logo noel">
-                                    <a href="../index.htm"><img src="../images/Icone/img/Logo-LOL-noel.png" alt="logo LOL" /></a>
+                                <div class="logo">
+                                    <a href="../index.htm"><img src="../images/Icone/img/Logo-LOL.png" alt="logo LOL" /></a>
                                 </div><!--
                                 --><nav class="bottom-menu-header-links">
                                     <ul class="main-menu">
@@ -235,7 +230,7 @@
                                         </li><!--
                                         --><li>
                                             <div class="active-border"></div>
-                                            <a href="../promos/accueil.html">
+                                            <a href="../promos/fibre.html">
                                                 <img class="header-icon" src="../images/Icone/img/promos.png" alt="Promos" />
                                                 <div class="link">Promos</div>
                                             </a>
@@ -249,26 +244,142 @@
                         </div>
                     </div>
                 </div>
-                
+
             </header>
-            
-            <section class="section-layout content-container height-auto background-gradient-grey">
+            <section id="offre-tv-header" class="section-layout section-background-image right">
+                <div class="container-wrapper">
+                    <div class="row clearfix">
+                        <div class="phone-12 desk-6">
+                            <h2 class="section-title lowercase white bold"> 
+                                Regarder la télévision <br/>n'a jamais été aussi intense !
+                            </h2>
+                            <div class="phone-12 section-price white">
+                                <div>,00€</div>
+                                17<span>/mois</span>
+                            </div>
+                            <a class="btn-tr-white" href="../tv/abonnement.html">Abonnez-vous</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-layout right-orientation right">
+                <div class="container-wrapper">
+                    <div class="row clearfix">
+                        <div class="phone-12 desk-6">
+                            <img class="section-img-align-bottom" src="../images/TV/1024px/chaine_TV.jpg" srcset="../images/TV/1280px/chaine_TV.jpg 1920w,
+                                 ../images/TV/1024px/chaine_TV.jpg 1302w,
+                                 ../images/TV/640px/chaine_TV.jpg 1056w,
+                                 ../images/TV/320px/chaine_TV.jpg 672w" sizes="100%" alt="chaines tv">
+                        </div>
+                        <div class="phone-12 desk-6">
+                            <h2 class="section-title lowercase">
+                                <strong>Un grand nombre</strong>
+                                de programmes
+                            </h2>
+                            <p class="section-text grey">Avec LOL TV, Luxembourg Online met à votre disposition plus de 110 chaînes TV. Il y en a pour tous les goûts et dans toutes les langues : films de grands réalisateurs, chaînes d’informations, émissions culturelles, programmes pour enfants... vous y trouverez forcément votre bonheur !</p>
+                            <a class="btn-outline-white" href="../tv/channels.html">Découvrez la liste des chaînes TV</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-layout left-orientation left section-shadow background-lightgrey">
+                <div class="container-wrapper">
+                    <div class="row clearfix">
+                        <div class="phone-12 desk-6">
+                            <img class="section-img-align-bottom" src="../images/TV/1024px/player.jpg" srcset="../images/TV/1280px/player.jpg 1920w,
+                                 ../images/TV/1024px/player.jpg 1302w,
+                                 ../images/TV/640px/player.jpg 1056w,
+                                 ../images/TV/320px/player.jpg 672w" sizes="100%" alt="minix tv">
+                        </div>
+                        <div class="phone-12 desk-6">
+                            <h2 class="section-title lowercase">
+                                <strong>Des applications accessibles</strong>
+                                directement depuis votre téléviseur
+                            </h2>
+                            <p class="section-text grey">Diffusée directement via le réseau Internet, la solution LOL TV est prête pour le futur et vous offre des services qui ne sont pas disponibles via les solutions de télévision traditionnelles. En plus de l’accès aux chaînes de télévision classique, vous pouvez ainsi accéder à des applications telles que <span class="red extra-bold">Netflix</span><span class="exponent">(1)</span> et <span class="red extra-bold">YouTube</span> directement depuis votre téléviseur !
+                                <span style="font-size: 12px; color: #818181; display: block; padding-top: 10px;">(1) Option payante.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-layout right-orientation right">
+                <div class="container-wrapper">
+                    <div class="row clearfix">
+                        <div class="phone-12 desk-6">
+                            <img class="section-img-align-bottom" src="../images/TV/1024px/interfaceloltv.jpg" srcset="../images/TV/1280px/interfaceloltv.jpg 1920w,
+                                 ../images/TV/1024px/interfaceloltv.jpg 1302w,
+                                 ../images/TV/640px/interfaceloltv.jpg 1056w,
+                                 ../images/TV/320px/interfaceloltv.jpg 672w" sizes="100%" alt="interface LOL TV">
+                        </div>
+                        <div class="phone-12 desk-6">
+                            <h2 class="section-title lowercase">
+                                Une interface
+                                <strong>simple et réactive</strong>
+                            </h2>
+                            <p class="section-text grey">Pour faciliter votre navigation, Luxembourg Online a mis en place pour vous une interface simple, rapide et intuitive.Retrouvez en un clin d’oeil tout ce que vous recherchez et accédez à tous vos services LOL TV en quelques clics seulement !</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-layout left-orientation left section-shadow background-lightgrey">
+                <div class="container-wrapper">
+                    <div class="row clearfix">
+                        <div class="phone-12 desk-6">
+                            <img class="section-img-align-bottom" src="../images/TV/1024px/decodeur.jpg" srcset="../images/TV/1280px/decodeur.jpg 1920w,
+                                 ../images/TV/1024px/decodeur.jpg 1302w,
+                                 ../images/TV/640px/decodeur.jpg 1056w,
+                                 ../images/TV/320px/decodeur.jpg 672w" sizes="100%" alt="minix tv">
+                        </div>
+                        <div class="phone-12 desk-6">
+                            <h2 class="section-title lowercase">
+                                Un décodeur
+                                <strong>de dernière génération</strong>
+                            </h2>
+                            <p class="section-text grey">Ne vous fiez pas à sa taille ! Le décodeur LOL TV, bien qu’il soit ultra compact, vous offrira toute la puissance des plus grands. Équipé d’un processeur quad-core, d’une mémoire 2 GB RAM et de la technologie full HD, il vous offrira une expérience télévisuelle de haute qualité.
+                                <span style="font-size: 12px; color: #818181; display: block; padding-top: 10px;">Télécommande gyroscopique disponible sur demande.</span>
+                            </p>
+                            <a class="btn-outline-white" href="../tv/equipements.html">Accédez à nos équipements</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-layout right-orientation right">
+                <div class="container-wrapper">
+                    <div class="row clearfix">
+                        <div class="phone-12 desk-6">
+                            <img class="section-img-align-bottom" src="../images/TV/1024px/connectiques.jpg" srcset="../images/TV/1280px/connectiques.jpg 1920w,
+                                 ../images/TV/1024px/connectiques.jpg 1302w,
+                                 ../images/TV/640px/connectiques.jpg 1056w,
+                                 ../images/TV/320px/connectiques.jpg 672w" sizes="100%" alt="minix tv">
+                        </div>
+                        <div class="phone-12 desk-6">
+                            <h2 class="section-title lowercase">
+                                De nombreuses <strong>connectiques</strong>
+                            </h2>
+                            <p class="section-text grey">Équipé d’un port audio, d’un port micro, de ports USB et d’un emplacement pour carte mémoire, le décodeur LOL TV vous permettra de connecter tous vos périphériques pour une expérience toujours plus riche et des usages multipliés.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section style="padding: 30px 0 !important;" class="section-layout content-container height-auto background-gradient-grey section-shadow phone-mb-0">
                 <div class="container-wrapper">
                     <div class="phone-12 desk-6 section-info">
-                        <h2 class="blue bold" style="font-size: 37px; line-height: 40px; margin-top: 0; font-weight: 600;">Accédez à tous vos contenus<br/> depuis votre TV.</h2>
-                        <p class="orange"><strong>Profitez des contenus Netflix <span class="exponent">(1)</span><br/> et YouTube sur votre TV !</strong></p>
-                        <a href="../tv/abonnement.html" class="btn-blue">Abonnez-vous</a>
-                        <p style="margin: 0; margin-top: 15px; font-size: 15px;" class="footer-note grey">(1) Option payante</p>
+                        <h2 class="orange extra-bold phone-mt-0 desk-mb-50" style="font-size: 30px;">Alors n’attendez plus <br/>pour profiter des nombreux <br/>avantages du service LOL TV !</h2>
+                        <div class="phone-12 phone-mt-50">
+                            <a href="../tv/abonnement.html" class="btn-blue">Abonnez-vous</a>
+
+                        </div>
                     </div>
                     <div class="phone-12 desk-6">
-                        <div class="offer-item-blue">
+                        <div class="offer-item-blue phone-mb-10">
                             <div class="item-header">
                                 <strong>LOL</strong> TV
                             </div>
                             <ul class="item-body">
                                 <li class="info"><div class="data"><strong>+110</strong> chaînes TV</div></li>
                                 <li class="info"><div class="data"><strong>20</strong> chaînes HD</div></li>
-                                <li class="info"><div class="data"><strong>40</strong> chaînes radio</div></li>
+                                <li class="info"><div class="data"><strong>+40</strong> chaînes radio</div></li>
                             </ul>
                             <div class="item-footer">
                                 <div class="offer-price">
@@ -280,78 +391,13 @@
                     </div>
                 </div>
             </section>
-            <section class="section-shadow padding">
-                <div class="container-wrapper">
-                    <div class="row header-channel">
-                        <div class="phone-12 desk-6 image-container">
-                            <img class="img-layout" src="../images/TV/1024px/TV_liste_chaine_tv.jpg" 
-                                 srcset="../images/TV/1280px/TV_liste_chaine_tv.jpg 1920w,
-                                 ../images/TV/1024px/TV_liste_chaine_tv.jpg 1400w,
-                                 ../images/TV/640px/TV_liste_chaine_tv.jpg 900w,
-                                 ../images/TV/320px/TV_liste_chaine_tv.jpg 600w"
-                                 sizes="100%"
-                                 alt="Offre chaînes TV" />
-                        </div>
-                        <div class="phone-12 desk-6 pull-right">
-                            <h2 class="section-subtitle">Liste des <span class="bold">chaînes TV</span></h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="phone-12">
-                            <ul data-type="tv" class="channels-language-links">
-                                <li data-language="de">Allemand</li>
-                                <li data-language="fr">Français</li>
-                                <li data-language="gb">Anglais</li>
-                                <li data-language="pt">Portugais</li>
-                                <li data-language="it">Italien</li>
-                                <li data-language="nl">Néerlandais</li>
-                                <li data-language="ru">Russe</li>
-                                <li data-language="es">Espagnol</li>
-                            </ul>
-                            <div id="tvChannels" class="channels-items">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="background-lightgrey padding">
-                <div class="container-wrapper">
-                    <div class="row header-channel">
-                        <div class="phone-12 desk-6 pull-right image-container">
-                            <img class="img-layout" src="../images/TV/1024px/TV_liste_chaine_radio.jpg" 
-                                 srcset="../images/TV/1280px/TV_liste_chaine_radio.jpg 1920w,
-                                 ../images/TV/1024px/TV_liste_chaine_radio.jpg 1400w,
-                                 ../images/TV/640px/TV_liste_chaine_radio.jpg 900w,
-                                 ../images/TV/320px/TV_liste_chaine_radio.jpg 600w"
-                                 sizes="100%"
-                                 alt="Offre chaînes Radio"/>
-                        </div>
-                        <div class="phone-12 desk-6">
-                            
-                            <h2 class="section-subtitle">Liste des <span class="bold">chaînes radio</span></h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="phone-12">
-                            <ul data-type="radio" class="channels-language-links radio">
-                                <li data-language="de">Allemand</li>
-                                <li data-language="fr">Français</li>
-                                <li data-language="other">Autres</li>
-                            </ul>
-                            <div id="radioChannels" class="channels-items">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <footer>
                 <div id="document-links" class="iner-shadow">
                     <div class="container-wrapper">
                         <div class="row">
                             <ul class="center">
                                 <li><a href="../tv/faq.html"><span class="icon icon-faq-ico"></span>FAQ</a></li>
-                                <li class="active"><a href="../tv/offres.html"><span class="icon icon-tv-ico"></span>Liste des chaînes</a></li>
+                                <li><a href="../tv/channels.html"><span class="icon icon-tv-ico"></span>Liste des chaînes</a></li>
                                 <li><a href="../tv/abonnement.html"><span class="icon icon-document-ico"></span>Documents</a></li>
                             </ul>
                         </div>
@@ -363,7 +409,7 @@
                             <div class="text">Rejoignez-nous sur: </div>
                             <nav>
                                 <ul class="spread">
-                                   <li>
+                                    <li>
                                         <a href="http://www.online.lu/" target="blank_">
                                             <div class="social-icon lol"><span class="icon-icone-lol"></span></div>
                                             <span class="brand-name">Online.lu</span>
@@ -451,9 +497,9 @@
                                 <nav>
                                     <ul class="links">
                                         <li><a href="../tv/offres.html">Notre offre</a></li>
-                                        
+
                                         <li><a href="../tv/equipements.html">Nos équipements</a></li>
-                                        <li><a href="../promos/internetTV.html">Offre spéciale TV</a></li>
+                                        
                                     </ul>
                                 </nav>
                             </div>
@@ -470,15 +516,15 @@
                         <div class="row">
                             <div class="separator"></div>
                             <div class="phone-12">
-                                <div class="display-phone copyright"><span class="icon-icone-lol"></span>&copy;2015 Luxembourg Online S.A</div>
+                                <div class="display-phone copyright">© Luxembourg Online S.A. – 2015, tous droits réservés</div>
                                 <nav class="hidden-phone">
                                     <ul class="footer-bottom-links">
                                         <li>
-                                            <span class="icon-icone-lol"></span>&copy;2015 Luxembourg Online S.A</li>
-                                        <li><a href="../documents/CONDITIONS GENERALES DES SERVICES LUXEMBOURG ONLINE.pdf" target="blank_">Mentions légales</a></li>
+                                            © Luxembourg Online S.A. – 2015, tous droits réservés</li>
+                                        <li><a href="../documents/MENTIONS_LEGALES.pdf" target="blank_">Mentions légales</a></li>
                                         <li><a href="../divers/emploi.html">Offres d'emploi</a></li>
                                         <li><a href="../divers/plan.html">Plan du site</a></li>
-                                        
+
                                         <li><a href="../divers/contact.html">Contact</a></li>
                                     </ul>
                                 </nav>
@@ -489,12 +535,15 @@
             </footer>
         </div>
         <!--              ./FOOTER               -->
-        
+
         <script src="../scripts/vendor/jquery.min.js"></script>
         <script src="../scripts/main.js"></script>
-        <script src="../scripts/tvscript.js"></script>
-        
+        <script type="text/javascript">
+            $(function () {
+                $('#offre-tv-header').addClass('image-' + getRandomInt(1, 4));
+            });
+        </script>
         <script type="text/javascript" src="../scripts/analytics.js"></script>
     </body>
-    
+
 </html>

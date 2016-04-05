@@ -86,7 +86,6 @@
                 </div>
             </a>
         </div>
-
         <nav class="mobile-side-menu">
             <ul class="menu">
                 <li class="menu-item link"><a href="../index.htm">Accueil</a></li>
@@ -94,11 +93,12 @@
                 <li class="menu-item" data-id='telephone'>Téléphonie <span class="icon-right-arrow"></span></li>
                 <li class="menu-item" data-id='tv'>TV <span class="icon-right-arrow"></span></li>
                 <li class="menu-item" data-id='mobile'>Mobile<span class="icon-right-arrow"></span></li>
-                <li class="menu-item" data-id='promo'>Promos <span class="icon-right-arrow"></span></li>
+                <li class="menu-item link"><a href="../promos/fibre.html">Promos</a></li>
                 <li class="sous-nav">
                     <ul class="menu">
                         <li class="menu-item link"><a href="../divers/assistance.html">Assistance</a></li>
                         <li class="menu-item link"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOL CLOUD</a></li>
+                        <!--<li class="menu-item link"><a href="../divers/news.html">Actualités</a></li>-->
                         <li class="menu-item link"><a href="../divers/magazine.html">Magazine</a></li>
                         <li class="menu-item link"><a href="../divers/propos.html">À propos</a></li>
                         <li class="menu-item link"><a href="../divers/contact.html">Contact</a></li>
@@ -131,6 +131,7 @@
                     <li class="menu-item"><a href="../tv/accueil.html">Accueil TV</a></li>
                     <li class="menu-item"><a href="../tv/offres.html">Notre offre TV</a></li>
                     <li class="menu-item"><a href="../tv/equipements.html">Nos équipements</a></li>
+
                     <li class="menu-item"><a href="../tv/abonnement.html">Abonnez-vous</a></li>
                 </ul>
             </div>
@@ -143,29 +144,21 @@
                     <li class="menu-item"><a href="../mobile/abonnement.html">Abonnez-vous</a></li>
                 </ul>
             </div>
-            <div class="menu-links-wrapper">
-                <ul class="menu-links" id="promo">
-                    <li class="menu-item back"><span class="icon-right-arrow"></span>Promos</li>
-                    <li class="menu-item"><a href="../promos/accueil.html">Accueil Promos</a></li>
-                    <li class="menu-item"><a href="../promos/fibre.html">Offre spéciale fibre</a></li>
-                    <li class="menu-item"><a href="../promos/offreloltv.html">Offre spéciale LOL TV</a></li>
-                    <li class="menu-item"><a href="../promos/internetTV.html">Offre spéciale Internet + TV</a></li>
-                </ul>
-            </div>
         </nav>
-
         <div id="siteWrap">
             <header>
-                <div id="top-menu-header" class="hidden-phone hidden-tab">
+                <div id="top-menu-header">
                     <div class="container-wrapper">
                         <div class="row">
                             <nav class="pull-left">
-                                <ul class="top-menu-header-links left">
-                                    <li><a href="../index.htm">Particuliers</a></li>
-                                    <li><a href="http://www.internet.lu/business/" target="blank_">Business</a></li>
-                                </ul>
+                                <div class="header-dropdown top-menu-header-links left">
+                                    <button>Particuliers<span class="icon-right-arrow"></span></button>
+                                    <ul class="drop">
+                                        <li><a href="http://www.internet.lu/business/">Business</a></li>
+                                    </ul>
+                                </div>
                             </nav>
-                            <nav class="pull-right">
+                            <nav class="pull-right hidden-phone hidden-tab">
                                 <ul class="top-menu-header-links right">
                                     <li><a href="../divers/assistance.html">Assistance</a></li>
                                     <li><a href="http://www.internet.lu/lolcloud/index.htm" target="_blank">LOL CLOUD</a></li>
@@ -187,8 +180,8 @@
                     </ul>
                     <nav class="bottom-menu-header-links mobile display-phone display-tab">
                         <div class="pull-left">
-                            <div class="logo noel">
-                                <a href="../index.htm"><img src="../images/Icone/img/Logo-LOL-noel.png" alt="logo LOL" /></a>
+                            <div class="logo">
+                                <a href="../index.htm"><img src="../images/Icone/img/Logo-LOL.png" alt="logo LOL" /></a>
                             </div>
                         </div>
                         <div class="mobile-menu-button">
@@ -203,8 +196,8 @@
                     <div class="container-wrapper hidden-phone hidden-tab">
                         <div class="row">
                             <div class="pull-left">
-                                <div class="logo noel">
-                                    <a href="../index.htm"><img src="../images/Icone/img/Logo-LOL-noel.png" alt="logo LOL" /></a>
+                                <div class="logo">
+                                    <a href="../index.htm"><img src="../images/Icone/img/Logo-LOL.png" alt="logo LOL" /></a>
                                 </div><!--
                                 --><nav class="bottom-menu-header-links">
                                     <ul class="main-menu">
@@ -238,7 +231,7 @@
                                         </li><!--
                                         --><li>
                                             <div class="active-border"></div>
-                                            <a href="../promos/accueil.html">
+                                            <a href="../promos/fibre.html">
                                                 <img class="header-icon" src="../images/Icone/img/promos.png" alt="Promos" />
                                                 <div class="link">Promos</div>
                                             </a>
@@ -281,28 +274,22 @@
                     .margin-bottom{
                         margin-bottom: 5px;
                     }
-                    .offer-item-blue, .equipement-item-blue {
-                        display: block;
-                        position: relative;                        
-                        border-top-left-radius: 6px;
-                        border-top-right-radius: 6px;
-                        border-bottom-left-radius: 0px;
-                        border-bottom-right-radius: 0px;
-                        border: 1px solid #004994;
-                        text-align: center;
-                        margin-bottom: 20px;
-                    }
                     .btn-blue{
                         margin-bottom: 5px !important;
                     }
-                    .align-left{
-                        padding-left: 5px;
-                    }
-                    .align-right{
-                        padding-right: 5px;
-                    }
                     .tab-adjust{
                         margin-bottom: 20px !important;
+                    }
+                    .offer-item-orange .item-body > li:not(:first-child):not(.info), .offer-item-blue .item-body > li:not(:first-child):not(.info){
+                        padding-left: 8px !important;
+                        padding-right: 8px;
+
+                    }
+                    div[class^=phone-]{
+                        padding: 0;
+                    }
+                    #offers-section .check-list div[class^=phone-]{
+                        padding: 0;
                     }
                 </style>
                 <div class="container-wrapper">
@@ -310,9 +297,9 @@
                         <div class="phone-12 desk-6">
                             <img class="section-img-align-bottom" src="../images/Internet/cable/LOLCABLE_1.jpg"
                                  srcset="../images/Internet/cable/LOLCABLE_1.jpg 1920w,
-                                 ../images/Internet/cable/LOLCABLE_2.jpg 1400w,
-                                 ../images/Internet/cable/LOLCABLE_3.jpg 900w,
-                                 ../images/Internet/cable/LOLCABLE_4.jpg 600w"
+                                 ../images/Internet/cable/LOLCABLE_2.jpg 1302w,
+                                 ../images/Internet/cable/LOLCABLE_3.jpg 1056w,
+                                 ../images/Internet/cable/LOLCABLE_4.jpg 672w"
                                  sizes="100%"
                                  alt="bic abonnement"/>
                         </div>
@@ -574,8 +561,8 @@
                             </div>
                         </div>
                     </div>
-                    <div style="margin-left: -20px; margin-right: -20px;" class="row hidden-phone">
-                        <div class="phone-6 desk-3 tab-adjust">
+                    <div class="row hidden-phone">
+                        <div class="phone-6 desk-3 tab-pr-10 desk-pr-5 lgdesk-pr-10 tab-adjust">
                             <div class="offer-item-blue">
                                 <div class="item-header">
                                     Cable<strong> 10</strong>
@@ -624,7 +611,7 @@
                             </div>
                             <a class="btn-blue btn-subscription" href="../documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
                         </div>
-                        <div class="phone-6 desk-3 tab-adjust">
+                        <div class="phone-6 desk-3 tab-pl-10 desk-pr-5 desk-pl-5 lgdesk-pr-10 lgdesk-pl-10 tab-adjust">
                             <div class="offer-item-blue">
                                 <div class="item-header">
                                     Cable<strong> 30</strong>
@@ -673,7 +660,7 @@
                             </div>
                             <a class="btn-blue btn-subscription" href="../documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
                         </div>
-                        <div class="phone-6 desk-3 tab-adjust">
+                        <div class="phone-6 desk-3 tab-pr-10 desk-pr-5 desk-pl-5 lgdesk-pr-10 lgdesk-pl-10 tab-adjust">
                             <div class="offer-item-blue">
                                 <div class="item-header">
                                     Cable<strong> 60</strong>
@@ -722,7 +709,7 @@
                             </div>
                             <a class="btn-blue btn-subscription" href="../documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
                         </div>
-                        <div class="phone-6 desk-3 tab-adjust">
+                        <div class="phone-6 desk-3 tab-pl-10 desk-pl-5 lgdesk-pl-10 tab-adjust">
                             <div class="offer-item-blue">
                                 <div class="item-header">
                                     Cable<strong> 120</strong>
@@ -891,7 +878,7 @@
                                         <li><a href="../tv/offres.html">Notre offre</a></li>
 
                                         <li><a href="../tv/equipements.html">Nos équipements</a></li>
-                                        <li><a href="../promos/internetTV.html">Offre spéciale TV</a></li>
+                                        
                                     </ul>
                                 </nav>
                             </div>
@@ -908,12 +895,12 @@
                         <div class="row">
                             <div class="separator"></div>
                             <div class="phone-12">
-                                <div class="display-phone copyright"><span class="icon-icone-lol"></span>&copy;2015 Luxembourg Online S.A</div>
+                                <div class="display-phone copyright">© Luxembourg Online S.A. – 2015, tous droits réservés</div>
                                 <nav class="hidden-phone">
                                     <ul class="footer-bottom-links">
                                         <li>
-                                            <span class="icon-icone-lol"></span>&copy;2015 Luxembourg Online S.A</li>
-                                        <li><a href="../documents/CONDITIONS GENERALES DES SERVICES LUXEMBOURG ONLINE.pdf" target="blank_">Mentions légales</a></li>
+                                            © Luxembourg Online S.A. – 2015, tous droits réservés</li>
+                                        <li><a href="../documents/MENTIONS_LEGALES.pdf" target="blank_">Mentions légales</a></li>
                                         <li><a href="../divers/emploi.html">Offres d'emploi</a></li>
                                         <li><a href="../divers/plan.html">Plan du site</a></li>
 

@@ -6,15 +6,15 @@
         <meta name="description" content="Les offres Internet de Luxembourg Online s’adaptent à vos besoins en connectivité. Profitez d’un trafic illimité et découvrez les nombreux avantages de la fibre optique." />
         <meta name="keywords" content="Offre Internet fibre, Internet haut débit, Abonnement Internet Luxembourg, Offres fibre optique" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <link rel="shortcut icon" href="/favicon.ico">
-        
+
         <link rel="stylesheet" href="../styles/css/vendor/flickity.min.css">
         <link rel="stylesheet" href="../styles/css/internet/accueil.css">
         <link rel="stylesheet" href="../styles/css/main.css">
         <script src="../scripts/vendor/picturefill.min.js"></script>
     </head>
-    
+
     <body>
         <div id="clientSpace" class="popup">
             <div class="background-client"></div>
@@ -86,7 +86,6 @@
                 </div>
             </a>
         </div>
-        
         <nav class="mobile-side-menu">
             <ul class="menu">
                 <li class="menu-item link"><a href="../index.htm">Accueil</a></li>
@@ -94,11 +93,12 @@
                 <li class="menu-item" data-id='telephone'>Téléphonie <span class="icon-right-arrow"></span></li>
                 <li class="menu-item" data-id='tv'>TV <span class="icon-right-arrow"></span></li>
                 <li class="menu-item" data-id='mobile'>Mobile<span class="icon-right-arrow"></span></li>
-                <li class="menu-item" data-id='promo'>Promos <span class="icon-right-arrow"></span></li>
+                <li class="menu-item link"><a href="../promos/fibre.html">Promos</a></li>
                 <li class="sous-nav">
                     <ul class="menu">
                         <li class="menu-item link"><a href="../divers/assistance.html">Assistance</a></li>
                         <li class="menu-item link"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOL CLOUD</a></li>
+                        <!--<li class="menu-item link"><a href="../divers/news.html">Actualités</a></li>-->
                         <li class="menu-item link"><a href="../divers/magazine.html">Magazine</a></li>
                         <li class="menu-item link"><a href="../divers/propos.html">À propos</a></li>
                         <li class="menu-item link"><a href="../divers/contact.html">Contact</a></li>
@@ -131,6 +131,7 @@
                     <li class="menu-item"><a href="../tv/accueil.html">Accueil TV</a></li>
                     <li class="menu-item"><a href="../tv/offres.html">Notre offre TV</a></li>
                     <li class="menu-item"><a href="../tv/equipements.html">Nos équipements</a></li>
+
                     <li class="menu-item"><a href="../tv/abonnement.html">Abonnez-vous</a></li>
                 </ul>
             </div>
@@ -143,29 +144,21 @@
                     <li class="menu-item"><a href="../mobile/abonnement.html">Abonnez-vous</a></li>
                 </ul>
             </div>
-            <div class="menu-links-wrapper">
-                <ul class="menu-links" id="promo">
-                    <li class="menu-item back"><span class="icon-right-arrow"></span>Promos</li>
-                    <li class="menu-item"><a href="../promos/accueil.html">Accueil Promos</a></li>
-                    <li class="menu-item"><a href="../promos/fibre.html">Offre spéciale fibre</a></li>
-                    <li class="menu-item"><a href="../promos/offreloltv.html">Offre spéciale LOL TV</a></li>
-                    <li class="menu-item"><a href="../promos/internetTV.html">Offre spéciale Internet + TV</a></li>
-                </ul>
-            </div>
         </nav>
-        
         <div id="siteWrap">
             <header>
-                <div id="top-menu-header" class="hidden-phone hidden-tab">
+                <div id="top-menu-header">
                     <div class="container-wrapper">
                         <div class="row">
                             <nav class="pull-left">
-                                <ul class="top-menu-header-links left">
-                                    <li><a href="../index.htm">Particuliers</a></li>
-                                    <li><a href="http://www.internet.lu/business/" target="blank_">Business</a></li>
-                                </ul>
+                                <div class="header-dropdown top-menu-header-links left">
+                                    <button>Particuliers<span class="icon-right-arrow"></span></button>
+                                    <ul class="drop">
+                                        <li><a href="http://www.internet.lu/business/">Business</a></li>
+                                    </ul>
+                                </div>
                             </nav>
-                            <nav class="pull-right">
+                            <nav class="pull-right hidden-phone hidden-tab">
                                 <ul class="top-menu-header-links right">
                                     <li><a href="../divers/assistance.html">Assistance</a></li>
                                     <li><a href="http://www.internet.lu/lolcloud/index.htm" target="_blank">LOL CLOUD</a></li>
@@ -177,7 +170,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div id="bottom-menu-header">
                     <ul class="sub-menu hidden-phone hidden-tab">
                         <li><a href="accueil.html"><div class="link">Accueil Internet</div></a></li>
@@ -187,8 +180,8 @@
                     </ul>
                     <nav class="bottom-menu-header-links mobile display-phone display-tab">
                         <div class="pull-left">
-                            <div class="logo noel">
-                                <a href="../index.htm"><img src="../images/Icone/Img/Logo-LOL-noel.png" alt="logo LOL" /></a>
+                            <div class="logo">
+                                <a href="../index.htm"><img src="../images/Icone/Img/Logo-LOL.png" alt="logo LOL" /></a>
                             </div>
                         </div>
                         <div class="mobile-menu-button">
@@ -203,8 +196,8 @@
                     <div class="container-wrapper hidden-phone hidden-tab">
                         <div class="row">
                             <div class="pull-left">
-                                <div class="logo noel">
-                                    <a href="../index.htm"><img src="../images/Icone/img/Logo-LOL-noel.png" alt="logo LOL" /></a>
+                                <div class="logo">
+                                    <a href="../index.htm"><img src="../images/Icone/img/Logo-LOL.png" alt="logo LOL" /></a>
                                 </div><!--
                                 --><nav class="bottom-menu-header-links">
                                     <ul class="main-menu">
@@ -238,7 +231,7 @@
                                         </li><!--
                                         --><li>
                                             <div class="active-border"></div>
-                                            <a href="../promos/accueil.html">
+                                            <a href="../promos/fibre.html">
                                                 <img class="header-icon" src="../images/Icone/img/promos.png" alt="Promos" />
                                                 <div class="link">Promos</div>
                                             </a>
@@ -252,10 +245,53 @@
                         </div>
                     </div>
                 </div>
-                
+
             </header>
             <!--            ./HEADER                -->
-            
+            <style>
+                .check-list{  
+                    width: 100%;                        
+                }
+                .list-title {
+                    font-weight: 800;
+                    font-size: 22px;
+                    margin-bottom: 15px;
+                    text-transform: uppercase;
+                }
+                .list-title span {
+                    font-weight: normal;
+                    font-size: 14px;
+                    text-transform: none;
+                }
+                .checked{
+                    color: #E75E0A;;
+                }
+                #offers-section div[class^=phone-]{
+                    margin: 0;
+                    font-size: 14px;
+                }
+                .margin-bottom{
+                    margin-bottom: 5px;
+                }
+                .btn-blue{
+                    margin-bottom: 5px !important;
+                }
+                .tab-adjust{
+                    margin-bottom: 20px !important;
+                }
+                #cable .offer-item-orange .item-body > li:not(:first-child):not(.info), #cable .offer-item-blue .item-body > li:not(:first-child):not(.info){
+                    padding-left: 8px !important;
+                    padding-right: 8px;
+
+                }
+                div[class^=phone-]{
+                    padding: 0;
+                }
+                #offers-section #cable .check-list div[class^=phone-]{
+                    padding: 0;
+                }
+            </style>
+
             <section id="offers-section" class="drop-shadow background-gradient-grey">
                 <div class="container-wrapper">
                     <div class="row hidden-desk hidden-lgdesk">
@@ -281,7 +317,7 @@
                                                         <li><span class="icon-check-ico"></span>Abonnement tél. fixe</li>
                                                         <li><span class="icon-check-ico"></span>Appels nat. fixes<span class="exponent">(2)</span></li>
                                                         <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
-                                                        <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2)</span></li>
+                                                        <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
                                                         <li><span class="icon-check-ico"></span>LOL CLOUD 5GB</li>
                                                     </ul>
                                                 </li>
@@ -294,7 +330,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                                 <div class="gallery-cell">
                                     <div class="k30">
@@ -313,7 +349,7 @@
                                                         <li><span class="icon-check-ico"></span>Abonnement tél. fixe</li>
                                                         <li><span class="icon-check-ico"></span>Appels nat. fixes<span class="exponent">(2)</span></li>
                                                         <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
-                                                        <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2)</span></li>
+                                                        <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
                                                         <li><span class="icon-check-ico"></span>LOL CLOUD 5GB</li>
                                                     </ul>
                                                 </li>
@@ -326,7 +362,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                                 <div class="gallery-cell">
                                     <div class="k100">
@@ -345,7 +381,7 @@
                                                         <li><span class="icon-check-ico"></span>Abonnement tél. fixe</li>
                                                         <li><span class="icon-check-ico"></span>Appels nat. fixes<span class="exponent">(2)</span></li>
                                                         <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
-                                                        <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2)</span></li>
+                                                        <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
                                                         <li><span class="icon-check-ico"></span>LOL CLOUD 5GB</li>
                                                     </ul>
                                                 </li>
@@ -358,7 +394,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+                                    <a class="promos-link" href="../promos/fibre.html">Promo : installation offerte</a>
                                 </div>
                                 <div class="gallery-cell">
                                     <div class="k200">
@@ -377,7 +413,7 @@
                                                         <li><span class="icon-check-ico"></span>Abonnement tél. fixe</li>
                                                         <li><span class="icon-check-ico"></span>Appels nat. fixes<span class="exponent">(2)</span></li>
                                                         <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
-                                                        <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2)</span></li>
+                                                        <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
                                                         <li><span class="icon-check-ico"></span>LOL CLOUD 5GB</li>
                                                     </ul>
                                                 </li>
@@ -390,13 +426,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+                                    <a class="promos-link" href="../promos/fibre.html">Promo : installation offerte</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div style="margin-left: -20px; margin-right: -20px;" class="row hidden-phone">
-                        <div class="phone-6 desk-3">
+                    <div class="row hidden-phone">
+                        <div class="phone-6 desk-3 tab-pr-10 desk-pr-5 lgdesk-pr-10 tab-adjust">
                             <div class="k24">
                                 <div class="offer-item-blue">
                                     <div class="item-header">
@@ -413,7 +449,7 @@
                                                 <li><span class="icon-check-ico"></span>Abonnement tél. fixe</li>
                                                 <li><span class="icon-check-ico"></span>Appels nat. fixes<span class="exponent">(2)</span></li>
                                                 <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
-                                                <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2)</span></li>
+                                                <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
                                                 <li><span class="icon-check-ico"></span>LOL CLOUD 5GB</li>
                                             </ul>
                                         </li>
@@ -426,9 +462,8 @@
                                     </div>
                                 </div>
                             </div>
-                            
                         </div>
-                        <div class="phone-6 desk-3">
+                        <div class="phone-6 desk-3 tab-pl-10 desk-pr-5 desk-pl-5 lgdesk-pr-10 lgdesk-pl-10 tab-adjust">
                             <div class="k30">
                                 <div class="offer-item-blue">
                                     <div class="item-header">
@@ -445,7 +480,7 @@
                                                 <li><span class="icon-check-ico"></span>Abonnement tél. fixe</li>
                                                 <li><span class="icon-check-ico"></span>Appels nat. fixes<span class="exponent">(2)</span></li>
                                                 <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
-                                                <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2)</span></li>
+                                                <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
                                                 <li><span class="icon-check-ico"></span>LOL CLOUD 5GB</li>
                                             </ul>
                                         </li>
@@ -458,9 +493,8 @@
                                     </div>
                                 </div>
                             </div>
-                            
                         </div>
-                        <div class="phone-6 desk-3">
+                        <div class="phone-6 desk-3 tab-pr-10 desk-pr-5 desk-pl-5 lgdesk-pr-10 lgdesk-pl-10 tab-adjust">
                             <div class="k100">
                                 <div class="offer-item-orange">
                                     <div class="item-header">
@@ -477,7 +511,7 @@
                                                 <li><span class="icon-check-ico"></span>Abonnement tél. fixe</li>
                                                 <li><span class="icon-check-ico"></span>Appels nat. fixes<span class="exponent">(2)</span></li>
                                                 <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
-                                                <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2)</span></li>
+                                                <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
                                                 <li><span class="icon-check-ico"></span>LOL CLOUD 5GB</li>
                                             </ul>
                                         </li>
@@ -490,9 +524,9 @@
                                     </div>
                                 </div>
                             </div>
-                            
+                            <a class="promos-link" href="../promos/fibre.html">Promo : installation offerte</a>
                         </div>
-                        <div class="phone-6 desk-3">
+                        <div class="phone-6 desk-3 tab-pl-10 desk-pl-5 lgdesk-pl-10 tab-adjust">
                             <div class="k200">
                                 <div class="offer-item-blue">
                                     <div class="item-header">
@@ -509,7 +543,7 @@
                                                 <li><span class="icon-check-ico"></span>Abonnement tél. fixe</li>
                                                 <li><span class="icon-check-ico"></span>Appels nat. fixes<span class="exponent">(2)</span></li>
                                                 <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
-                                                <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2)</span></li>
+                                                <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
                                                 <li><span class="icon-check-ico"></span>LOL CLOUD 5GB</li>
                                             </ul>
                                         </li>
@@ -522,6 +556,415 @@
                                     </div>
                                 </div>
                             </div>
+                            <a class="promos-link" href="../promos/fibre.html">Promo : installation offerte</a>
+                        </div>
+                    </div>
+
+                    <div id="cable" style="display: none;" class="phone-mt-15 tab-mt-0">
+                        <div style="border-top: 2px solid #dadada;" class="row">
+                            <p class="section-text align-left phone-pt-15 phone-mb-40 tab-mb-20"><strong class="blue">Luxembourg Online SA</strong> en collaboration avec l’<strong class="blue">Antenne Collective Ettelbruck/Schieren</strong> vous propose un accès à large bande à Internet via le câble TV (disponible avec un abonnement télévision) pour la connexion à Internet.</p>
+                        </div>
+                        <div class="row display-phone">
+                            <div class="phone-12">
+                                <div class="main-gallery">
+                                    <div class="gallery-cell">
+                                        <div class="offer-item-blue">
+                                            <div class="item-header">
+                                                Cable<strong> 10</strong>
+                                            </div>
+                                            <ul class="item-body">
+                                                <li class="description">Internet</li>
+                                                <li class="info"><span class="icon-download-ico download"></span>10 Mbit/s<span class="exponent">(1)</span></li>
+                                                <li class="info"><span class="icon-download-ico upload"></span>1 Mbits/s<span class="exponent">(1)</span></li>
+                                                <li class="description">Volume illimité</li>
+                                                <li style="background-color: #004494;color: white;padding: 10px 0;">
+                                                    <div class="offer-price">
+                                                        <div>€</div>
+                                                        29<span>/mois</span>
+                                                    </div>
+                                                </li>                                        
+                                                <li>
+                                                    <div class="list-title"> Téléphone <br/><span>Cable Phone Ettelbruck/Schieren</span></div>
+                                                    <ul class="check-list">
+                                                        <li class="clearfix">
+                                                            <div class="phone-6 align-left">Abo mensuel</div>
+                                                            <div class="phone-6 pull-right checked extra-bold align-right"><span class="icon-check-ico"></span>gratuit</div>
+                                                        </li>
+                                                        <li class="clearfix">
+                                                            <div class="phone-6 align-left txtint_zone" data-zone="1">Tél.nat.fixe flat</div>
+                                                            <div class="phone-6 pull-right extra-bold align-right">+4.5€/mois</div>
+                                                        </li>
+                                                        <li class="clearfix">
+                                                            <div class="phone-6 align-left txtint_zone" data-zone="0">120 min vers EU</div>
+                                                            <div class="phone-6 pull-right extra-bold align-right">+4.5€/mois</div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <ul class="check-list">
+                                                        <li class="clearfix margin-bottom">
+                                                            <div class="phone-6 align-left">Installation + modem <br/> (contrat 24 mois)</div>
+                                                            <div class="phone-6 pull-right extra-bold align-right">85€</div>
+                                                        </li>
+                                                        <li class="clearfix">
+                                                            <div class="phone-6 align-left">Installation + modem <br/>(contrat 12 mois)</div>
+                                                            <div class="phone-6 pull-right extra-bold align-right">180€</div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>                                    
+                                        </div>
+                                        <a class="btn-blue btn-subscription" href="../documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
+                                    </div>
+                                    <div class="gallery-cell">
+                                        <div class="k30">
+                                            <div class="offer-item-blue">
+                                                <div class="item-header">
+                                                    Cable<strong> 30</strong>
+                                                </div>
+                                                <ul class="item-body">
+                                                    <li class="description">Internet</li>
+                                                    <li class="info"><span class="icon-download-ico download"></span>30 Mbit/s<span class="exponent">(1)</span></li>
+                                                    <li class="info"><span class="icon-download-ico upload"></span>10 Mbits/s<span class="exponent">(1)</span></li>
+                                                    <li class="description">Volume illimité</li>
+                                                    <li style="background-color: #004494;color: white;padding: 10px 0;">
+                                                        <div class="offer-price">
+                                                            <div>€</div>
+                                                            38<span>/mois</span>
+                                                        </div>
+                                                    </li>                                        
+                                                    <li>
+                                                        <div class="list-title"> Téléphone <br/><span>Cable Phone Ettelbruck/Schieren</span></div>
+                                                        <ul class="check-list">
+                                                            <li class="clearfix">
+                                                                <div class="phone-6 align-left">Abo mensuel</div>
+                                                                <div class="phone-6 pull-right checked extra-bold align-right"><span class="icon-check-ico"></span>gratuit</div>
+                                                            </li>
+                                                            <li class="clearfix">
+                                                                <div class="phone-6 align-left txtint_zone" data-zone="1">Tél.nat.fixe flat</div>
+                                                                <div class="phone-6 pull-right extra-bold align-right">+4.5€/mois</div>
+                                                            </li>
+                                                            <li class="clearfix">
+                                                                <div class="phone-6 align-left txtint_zone" data-zone="0">120 min vers EU</div>
+                                                                <div class="phone-6 pull-right extra-bold align-right">+4.5€/mois</div>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="check-list">
+                                                            <li class="clearfix margin-bottom">
+                                                                <div class="phone-6 align-left">Installation + modem <span>(contrat 24 mois)</span></div>
+                                                                <div class="phone-6 pull-right checked extra-bold align-right"><span class="icon-check-ico"></span>gratuit</div>
+                                                            </li>
+                                                            <li class="clearfix">
+                                                                <div class="phone-6 align-left">Installation + modem <span>(contrat 12 mois)</span></div>
+                                                                <div class="phone-6 pull-right extra-bold align-right">180€</div>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>                                    
+                                            </div>
+                                        </div>
+                                        <a class="btn-blue btn-subscription" href="../documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
+                                    </div>
+                                    <div class="gallery-cell">
+                                        <div class="offer-item-blue">
+                                            <div class="item-header">
+                                                Cable<strong> 60</strong>
+                                            </div>
+                                            <ul class="item-body">
+                                                <li class="description">Internet</li>
+                                                <li class="info"><span class="icon-download-ico download"></span>60 Mbit/s<span class="exponent">(1)</span></li>
+                                                <li class="info"><span class="icon-download-ico upload"></span>15 Mbits/s<span class="exponent">(1)</span></li>
+                                                <li class="description">Volume illimité</li>
+                                                <li style="background-color: #004494;color: white;padding: 10px 0;">
+                                                    <div class="offer-price">
+                                                        <div>€</div>
+                                                        53<span>/mois</span>
+                                                    </div>
+                                                </li>                                        
+                                                <li>
+                                                    <div class="list-title"> Téléphone <br/><span>Cable Phone Ettelbruck/Schieren</span></div>
+                                                    <ul class="check-list">
+                                                        <li class="clearfix">
+                                                            <div class="phone-6 align-left">Abo mensuel</div>
+                                                            <div class="phone-6 pull-right checked extra-bold align-right"><span class="icon-check-ico"></span>gratuit</div>
+                                                        </li>
+                                                        <li class="clearfix">
+                                                            <div class="phone-6 align-left txtint_zone" data-zone="1">Tél.nat.fixe flat</div>
+                                                            <div class="phone-6 pull-right checked extra-bold align-right"><span class="icon-check-ico"></span>gratuit</div>
+                                                        </li>
+                                                        <li class="clearfix">
+                                                            <div class="phone-6 align-left txtint_zone" data-zone="0">120 min vers EU</div>
+                                                            <div class="phone-6 pull-right extra-bold align-right">+4.5€/mois</div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <ul class="check-list">
+                                                        <li class="clearfix margin-bottom">
+                                                            <div class="phone-6 align-left">Installation + modem <span>(contrat 24 mois)</span></div>
+                                                            <div class="phone-6 pull-right checked extra-bold align-right"><span class="icon-check-ico"></span>gratuit</div>
+                                                        </li>
+                                                        <li class="clearfix">
+                                                            <div class="phone-6 align-left">Installation + modem <span>(contrat 12 mois)</span></div>
+                                                            <div class="phone-6 pull-right extra-bold align-right">180€</div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>                                    
+                                        </div>
+                                        <a class="btn-blue btn-subscription" href="../documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
+                                    </div>
+                                    <div class="gallery-cell">
+                                        <div class="offer-item-blue">
+                                            <div class="item-header">
+                                                Cable<strong> 120</strong>
+                                            </div>
+                                            <ul class="item-body">
+                                                <li class="description">Internet</li>
+                                                <li class="info"><span class="icon-download-ico download"></span>120 Mbit/s<span class="exponent">(1)</span></li>
+                                                <li class="info"><span class="icon-download-ico upload"></span>15 Mbits/s<span class="exponent">(1)</span></li>
+                                                <li class="description">Volume illimité</li>
+                                                <li style="background-color: #004494;color: white;padding: 10px 0;">
+                                                    <div class="offer-price">
+                                                        <div>€</div>
+                                                        74<span>/mois</span>
+                                                    </div>
+                                                </li>                                        
+                                                <li class="">
+                                                    <div class="list-title"> Téléphone <br/><span>Cable Phone Ettelbruck/Schieren</span></div>
+                                                    <ul class="check-list">
+                                                        <li class="clearfix">
+                                                            <div class="phone-6 align-left">Abo mensuel</div>
+                                                            <div class="phone-6 pull-right checked extra-bold align-right"><span class="icon-check-ico"></span>gratuit</div>
+                                                        </li>
+                                                        <li class="clearfix">
+                                                            <div class="phone-6 align-left txtint_zone" data-zone="1">Tél.nat.fixe flat</div>
+                                                            <div class="phone-6 pull-right checked extra-bold align-right"><span class="icon-check-ico"></span>gratuit</div>
+                                                        </li>
+                                                        <li class="clearfix">
+                                                            <div class="phone-6 align-left txtint_zone" data-zone="0">120 min vers EU</div>
+                                                            <div class="phone-6 pull-right checked extra-bold align-right"><span class="icon-check-ico"></span>gratuit</div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <ul class="check-list">
+                                                        <li class="clearfix margin-bottom">
+                                                            <div class="phone-6 align-left">Installation + modem <span>(contrat 24 mois)</span></div>
+                                                            <div class="phone-6 pull-right checked extra-bold align-right"><span class="icon-check-ico"></span>gratuit</div>
+                                                        </li>
+                                                        <li class="clearfix">
+                                                            <div class="phone-6 align-left">Installation + modem <span>(contrat 12 mois)</span></div>
+                                                            <div class="phone-6 pull-right extra-bold align-right">180€</div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>                                    
+                                        </div>
+                                        <a class="btn-blue btn-subscription" href="../documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row hidden-phone">
+                            <div class="phone-6 desk-3 tab-pr-10 desk-pr-5 lgdesk-pr-10 tab-adjust">
+                                <div class="offer-item-blue">
+                                    <div class="item-header">
+                                        Cable<strong> 10</strong>
+                                    </div>
+                                    <ul class="item-body">
+                                        <li class="description">Internet</li>
+                                        <li class="info"><span class="icon-download-ico download"></span>10 Mbit/s<span class="exponent">(1)</span></li>
+                                        <li class="info"><span class="icon-download-ico upload"></span>1 Mbits/s<span class="exponent">(1)</span></li>
+                                        <li class="description">Volume illimité</li>
+                                        <li style="background-color: #004494;color: white;padding: 10px 0;">
+                                            <div class="offer-price">
+                                                <div>€</div>
+                                                29<span>/mois</span>
+                                            </div>
+                                        </li>                                        
+                                        <li>
+                                            <div class="list-title"> Téléphone <br/><span>Cable Phone Ettelbruck/Schieren</span></div>
+                                            <ul class="check-list">
+                                                <li class="clearfix">
+                                                    <div class="phone-6 align-left">Abo mensuel</div>
+                                                    <div class="phone-6 pull-right checked extra-bold align-right"><span class="icon-check-ico"></span>gratuit</div>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <div class="phone-6 align-left txtint_zone" data-zone="1">Tél.nat.fixe flat</div>
+                                                    <div class="phone-6 pull-right extra-bold align-right">+4.5€/mois</div>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <div class="phone-6 align-left txtint_zone" data-zone="0">120 min vers EU</div>
+                                                    <div class="phone-6 pull-right extra-bold align-right">+4.5€/mois</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="check-list">
+                                                <li class="clearfix margin-bottom">
+                                                    <div class="phone-6 align-left">Installation + modem <br/> (contrat 24 mois)</div>
+                                                    <div class="phone-6 pull-right extra-bold align-right">85€</div>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <div class="phone-6 align-left">Installation + modem <br/>(contrat 12 mois)</div>
+                                                    <div class="phone-6 pull-right extra-bold align-right">180€</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>                                    
+                                </div>
+                                <a class="btn-blue btn-subscription" href="../documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
+                            </div>
+                            <div class="phone-6 desk-3 tab-pl-10 desk-pr-5 desk-pl-5 lgdesk-pr-10 lgdesk-pl-10 tab-adjust">
+                                <div class="offer-item-blue">
+                                    <div class="item-header">
+                                        Cable<strong> 30</strong>
+                                    </div>
+                                    <ul class="item-body">
+                                        <li class="description">Internet</li>
+                                        <li class="info"><span class="icon-download-ico download"></span>30 Mbit/s<span class="exponent">(1)</span></li>
+                                        <li class="info"><span class="icon-download-ico upload"></span>10 Mbits/s<span class="exponent">(1)</span></li>
+                                        <li class="description">Volume illimité</li>
+                                        <li style="background-color: #004494;color: white;padding: 10px 0;">
+                                            <div class="offer-price">
+                                                <div>€</div>
+                                                38<span>/mois</span>
+                                            </div>
+                                        </li>                                        
+                                        <li>
+                                            <div class="list-title"> Téléphone <br/><span>Cable Phone Ettelbruck/Schieren</span></div>
+                                            <ul class="check-list">
+                                                <li class="clearfix">
+                                                    <div class="phone-6 align-left">Abo mensuel</div>
+                                                    <div class="phone-6 pull-right checked extra-bold align-right"><span class="icon-check-ico"></span>gratuit</div>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <div class="phone-6 align-left txtint_zone" data-zone="1">Tél.nat.fixe flat</div>
+                                                    <div class="phone-6 pull-right extra-bold align-right">+4.5€/mois</div>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <div class="phone-6 align-left txtint_zone" data-zone="0">120 min vers EU</div>
+                                                    <div class="phone-6 pull-right extra-bold align-right">+4.5€/mois</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="check-list">
+                                                <li class="clearfix margin-bottom">
+                                                    <div class="phone-6 align-left">Installation + modem <span>(contrat 24 mois)</span></div>
+                                                    <div class="phone-6 pull-right checked extra-bold align-right"><span class="icon-check-ico"></span>gratuit</div>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <div class="phone-6 align-left">Installation + modem <span>(contrat 12 mois)</span></div>
+                                                    <div class="phone-6 pull-right extra-bold align-right">180€</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>                                    
+                                </div>
+                                <a class="btn-blue btn-subscription" href="../documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
+                            </div>
+                            <div class="phone-6 desk-3 tab-pr-10 desk-pr-5 desk-pl-5 lgdesk-pr-10 lgdesk-pl-10 tab-adjust">
+                                <div class="offer-item-blue">
+                                    <div class="item-header">
+                                        Cable<strong> 60</strong>
+                                    </div>
+                                    <ul class="item-body">
+                                        <li class="description">Internet</li>
+                                        <li class="info"><span class="icon-download-ico download"></span>60 Mbit/s<span class="exponent">(1)</span></li>
+                                        <li class="info"><span class="icon-download-ico upload"></span>15 Mbits/s<span class="exponent">(1)</span></li>
+                                        <li class="description">Volume illimité</li>
+                                        <li style="background-color: #004494;color: white;padding: 10px 0;">
+                                            <div class="offer-price">
+                                                <div>€</div>
+                                                53<span>/mois</span>
+                                            </div>
+                                        </li>                                        
+                                        <li class="">
+                                            <div class="list-title"> Téléphone <br/><span>Cable Phone Ettelbruck/Schieren</span></div>
+                                            <ul class="check-list">
+                                                <li class="clearfix">
+                                                    <div class="phone-6 align-left">Abo mensuel</div>
+                                                    <div class="phone-6 pull-right checked extra-bold align-right"><span class="icon-check-ico"></span>gratuit</div>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <div class="phone-6 align-left txtint_zone" data-zone="1">Tél.nat.fixe flat</div>
+                                                    <div class="phone-6 pull-right checked extra-bold align-right"><span class="icon-check-ico"></span>gratuit</div>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <div class="phone-6 align-left txtint_zone" data-zone="0">120 min vers EU</div>
+                                                    <div class="phone-6 pull-right extra-bold align-right">+4.5€/mois</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="check-list">
+                                                <li class="clearfix margin-bottom">
+                                                    <div class="phone-6 align-left">Installation + modem <span>(contrat 24 mois)</span></div>
+                                                    <div class="phone-6 pull-right checked extra-bold align-right"><span class="icon-check-ico"></span>gratuit</div>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <div class="phone-6 align-left">Installation + modem <span>(contrat 12 mois)</span></div>
+                                                    <div class="phone-6 pull-right extra-bold align-right">180€</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>                                    
+                                </div>
+                                <a class="btn-blue btn-subscription" href="../documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
+                            </div>
+                            <div class="phone-6 desk-3 tab-pl-10 desk-pl-5 lgdesk-pl-10 tab-adjust">
+                                <div class="offer-item-blue">
+                                    <div class="item-header">
+                                        Cable<strong> 120</strong>
+                                    </div>
+                                    <ul class="item-body">
+                                        <li class="description">Internet</li>
+                                        <li class="info"><span class="icon-download-ico download"></span>120 Mbit/s<span class="exponent">(1)</span></li>
+                                        <li class="info"><span class="icon-download-ico upload"></span>15 Mbits/s<span class="exponent">(1)</span></li>
+                                        <li class="description">Volume illimité</li>
+                                        <li style="background-color: #004494;color: white;padding: 10px 0;">
+                                            <div class="offer-price">
+                                                <div>€</div>
+                                                74<span>/mois</span>
+                                            </div>
+                                        </li>                                        
+                                        <li class="">
+                                            <div class="list-title"> Téléphone <br/><span>Cable Phone Ettelbruck/Schieren</span></div>
+                                            <ul class="check-list">
+                                                <li class="clearfix">
+                                                    <div class="phone-6 align-left">Abo mensuel</div>
+                                                    <div class="phone-6 pull-right checked extra-bold align-right"><span class="icon-check-ico"></span>gratuit</div>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <div class="phone-6 align-left txtint_zone" data-zone="1">Tél.nat.fixe flat</div>
+                                                    <div class="phone-6 pull-right checked extra-bold align-right"><span class="icon-check-ico"></span>gratuit</div>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <div class="phone-6 align-left txtint_zone" data-zone="0">120 min vers EU</div>
+                                                    <div class="phone-6 pull-right checked extra-bold align-right"><span class="icon-check-ico"></span>gratuit</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="check-list">
+                                                <li class="clearfix margin-bottom">
+                                                    <div class="phone-6 align-left">Installation + modem <span>(contrat 24 mois)</span></div>
+                                                    <div class="phone-6 pull-right checked extra-bold align-right"><span class="icon-check-ico"></span>gratuit</div>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <div class="phone-6 align-left">Installation + modem <span>(contrat 12 mois)</span></div>
+                                                    <div class="phone-6 pull-right extra-bold align-right">180€</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>                                    
+                                </div>
+                                <a class="btn-blue btn-subscription" href="../documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
+                            </div>
                         </div>
                     </div>
                     <div class="phone-12 desk-12">
@@ -529,6 +972,7 @@
                             sont des débits maximum et non garantis
                             <span style="padding-left: 10px;">(2)</span> Sauf numéros spéciaux (type 800, 900,
                             jeux, televoting, services érotiques, etc.)
+                            <span style="padding-left: 10px;">(3)</span> Pays membres de l'U.E
                         </p>
                     </div>
                 </div>
@@ -537,23 +981,23 @@
                 <div class="container-wrapper">
                     <div class="row">
                         <div class="text phone-12 desk-6"><span class="icon-internet-ico"></span>Quelles offres sont disponibles chez vous ?</div>
-                        
+
                         <div class="testDispo clearfix">
                             <div>
                                 <input name="zipcode" value class="input-white" type="text" placeholder="Code postal"/>
                             </div>
                             <div>
-                                <select  name="ville" style="display: none;" class="input-white select"></select>
+                                <select  name="ville" class="input-white select"></select>
                             </div>
                             <div>
-                                <select name="rue" style="display: none;" class="input-white select"></select>
+                                <select name="rue" class="input-white select"></select>
                             </div>
                             <div>
-                                <select name="numero" style="display: none;" class="input-white select"></select>
+                                <select name="numero" class="input-white select"></select>
                             </div>
                             <div class="btn-verif">
                                 <button name="verifyCp" type="button" class="btn-orange btnVerify verifyCp">Vérifiez les disponibilités</button>
-                                <button name="btnVerif2" type="button" data-bool="false" style="display: none;" class="btn-orange btnVerify btnVerif2">Vérifiez les disponibilités</button>
+                                <button name="btnVerif2" type="button" data-bool="false" class="btn-orange btnVerify btnVerif2">Vérifiez les disponibilités</button>
                             </div>
                         </div>
                     </div>
@@ -565,9 +1009,9 @@
                         <div class="phone-12 desk-6">
                             <img class="section-img-align-bottom" src="../images/Internet/1024px/Offre_TV.jpg"
                                  srcset="../images/Internet/1280px/Offre_TV.jpg 1920w,
-                                 ../images/Internet/1024px/Offre_TV.jpg 1400w,
-                                 ../images/Internet/640px/Offre_TV.jpg 900w,
-                                 ../images/Internet/320px/Offre_TV.jpg 600w"
+                                 ../images/Internet/1024px/Offre_TV.jpg 1302w,
+                                 ../images/Internet/640px/Offre_TV.jpg 1056w,
+                                 ../images/Internet/320px/Offre_TV.jpg 672w"
                                  sizes="100%"
                                  alt="portail background" />
                         </div>
@@ -582,7 +1026,7 @@
                     </div>
                 </div>
             </section>
-            
+
             <!--              FOOTER               -->
             <footer>
                 <div id="document-links" class="iner-shadow">
@@ -692,9 +1136,9 @@
                                 <nav>
                                     <ul class="links">
                                         <li><a href="../tv/offres.html">Notre offre</a></li>
-                                        
+
                                         <li><a href="../tv/equipements.html">Nos équipements</a></li>
-                                        <li><a href="../promos/internetTV.html">Offre spéciale TV</a></li>
+                                        
                                     </ul>
                                 </nav>
                             </div>
@@ -711,15 +1155,15 @@
                         <div class="row">
                             <div class="separator"></div>
                             <div class="phone-12">
-                                <div class="display-phone copyright"><span class="icon-icone-lol"></span>&copy;2015 Luxembourg Online S.A</div>
+                                <div class="display-phone copyright">© Luxembourg Online S.A. – 2015, tous droits réservés</div>
                                 <nav class="hidden-phone">
                                     <ul class="footer-bottom-links">
                                         <li>
-                                            <span class="icon-icone-lol"></span>&copy;2015 Luxembourg Online S.A</li>
-                                        <li><a href="../documents/CONDITIONS GENERALES DES SERVICES LUXEMBOURG ONLINE.pdf" target="blank_">Mentions légales</a></li>
+                                            © Luxembourg Online S.A. – 2015, tous droits réservés</li>
+                                        <li><a href="../documents/MENTIONS_LEGALES.pdf" target="blank_">Mentions légales</a></li>
                                         <li><a href="../divers/emploi.html">Offres d'emploi</a></li>
                                         <li><a href="../divers/plan.html">Plan du site</a></li>
-                                        
+
                                         <li><a href="../divers/contact.html">Contact</a></li>
                                     </ul>
                                 </nav>
@@ -730,7 +1174,7 @@
             </footer>
             <!--              ./FOOTER               -->
         </div>
-        
+
         <script type="text/javascript" src="../scripts/vendor/jquery.min.js"></script>
         <script type="text/javascript" src="../scripts/vendor/flickity.pkgd.min.js"></script>
         <script type="text/javascript" src="../scripts/json2.js"></script>
@@ -749,5 +1193,5 @@
         </script>
         <script type="text/javascript" src="../scripts/analytics.js"></script>
     </body>
-    
+
 </html>

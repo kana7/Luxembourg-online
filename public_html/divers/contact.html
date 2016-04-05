@@ -88,18 +88,19 @@
                 </div>
             </a>
         </div>
-        <nav class="mobile-side-menu">
+ <nav class="mobile-side-menu">
             <ul class="menu">
                 <li class="menu-item link"><a href="../index.htm">Accueil</a></li>
                 <li class="menu-item" data-id='internet'>Internet<span class="icon-right-arrow"></span></li>
                 <li class="menu-item" data-id='telephone'>Téléphonie <span class="icon-right-arrow"></span></li>
                 <li class="menu-item" data-id='tv'>TV <span class="icon-right-arrow"></span></li>
                 <li class="menu-item" data-id='mobile'>Mobile<span class="icon-right-arrow"></span></li>
-                <li class="menu-item" data-id='promo'>Promos <span class="icon-right-arrow"></span></li>
+                <li class="menu-item link"><a href="../promos/fibre.html">Promos</a></li>
                 <li class="sous-nav">
                     <ul class="menu">
                         <li class="menu-item link"><a href="../divers/assistance.html">Assistance</a></li>
                         <li class="menu-item link"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOL CLOUD</a></li>
+                        <!--<li class="menu-item link"><a href="../divers/news.html">Actualités</a></li>-->
                         <li class="menu-item link"><a href="../divers/magazine.html">Magazine</a></li>
                         <li class="menu-item link"><a href="../divers/propos.html">À propos</a></li>
                         <li class="menu-item link"><a href="../divers/contact.html">Contact</a></li>
@@ -132,6 +133,7 @@
                     <li class="menu-item"><a href="../tv/accueil.html">Accueil TV</a></li>
                     <li class="menu-item"><a href="../tv/offres.html">Notre offre TV</a></li>
                     <li class="menu-item"><a href="../tv/equipements.html">Nos équipements</a></li>
+
                     <li class="menu-item"><a href="../tv/abonnement.html">Abonnez-vous</a></li>
                 </ul>
             </div>
@@ -144,32 +146,25 @@
                     <li class="menu-item"><a href="../mobile/abonnement.html">Abonnez-vous</a></li>
                 </ul>
             </div>
-            <div class="menu-links-wrapper">
-                <ul class="menu-links" id="promo">
-                    <li class="menu-item back"><span class="icon-right-arrow"></span>Promos</li>
-                    <li class="menu-item"><a href="../promos/accueil.html">Accueil Promos</a></li>
-                    <li class="menu-item"><a href="../promos/fibre.html">Offre spéciale fibre</a></li>
-                    <li class="menu-item"><a href="../promos/offreloltv.html">Offre spéciale LOL TV</a></li>
-                    <li class="menu-item"><a href="../promos/internetTV.html">Offre spéciale Internet + TV</a></li>
-                </ul>
-            </div>
         </nav>
         <div id="siteWrap">
             <header>
-                <div id="top-menu-header" class="hidden-phone hidden-tab">
+                <div id="top-menu-header">
                     <div class="container-wrapper">
                         <div class="row">
                             <nav class="pull-left">
-                                <ul class="top-menu-header-links left">
-                                    <li><a href="../index.htm">Particuliers</a></li>
-                                    <li><a href="http://www.internet.lu/business/" target="blank_">Business</a></li>
-                                </ul>
+                                <div class="header-dropdown top-menu-header-links left">
+                                    <button>Particuliers<span class="icon-right-arrow"></span></button>
+                                    <ul class="drop">
+                                        <li><a href="http://www.internet.lu/business/">Business</a></li>
+                                    </ul>
+                                </div>
                             </nav>
-                            <nav class="pull-right">
+                            <nav class="pull-right hidden-phone hidden-tab">
                                 <ul class="top-menu-header-links right">
                                     <li class="menu-item"><a href="../divers/assistance.html">Assistance</a></li>
                                     <li class="menu-item"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOL CLOUD</a></li>
-                                    <li class="menu-item"><a href="../divers/magazine.html">Magazine</a></li>
+                                    <!--<li class="menu-item"><a href="../divers/news.html">Actualités</a></li>--><li class="menu-item"><a href="../divers/magazine.html">Magazine</a></li>
                                     <li class="menu-item"><a href="../divers/propos.html">À propos</a></li>
                                     <li class="menu-item"><a href="../divers/contact.html">Contact</a></li>
                                 </ul>
@@ -181,8 +176,8 @@
                 <div id="bottom-menu-header">
                     <nav class="bottom-menu-header-links mobile display-phone display-tab">
                         <div class="pull-left">
-                            <div class="logo noel">
-                                <a href="../index.htm"><img src="../images/Icone/Img/Logo-LOL-noel.png" alt="logo LOL" /></a>
+                            <div class="logo">
+                                <a href="../index.htm"><img src="../images/Icone/Img/Logo-LOL.png" alt="logo LOL" /></a>
                             </div>
                         </div>
                         <div class="mobile-menu-button">
@@ -197,8 +192,8 @@
                     <div class="container-wrapper hidden-phone hidden-tab">
                         <div class="row">
                             <div class="pull-left">
-                                <div class="logo noel">
-                                    <a href="../index.htm"><img src="../images/Icone/img/Logo-LOL-noel.png" alt="logo LOL" /></a>
+                                <div class="logo">
+                                    <a href="../index.htm"><img src="../images/Icone/img/Logo-LOL.png" alt="logo LOL" /></a>
                                 </div><!--
                                 --><nav class="bottom-menu-header-links">
                                     <ul class="main-menu">
@@ -232,7 +227,7 @@
                                         </li><!--
                                         --><li>
                                             <div class="active-border"></div>
-                                            <a href="../promos/accueil.html">
+                                            <a href="../promos/fibre.html">
                                                 <img class="header-icon" src="../images/Icone/img/promos.png" alt="Promos" />
                                                 <div class="link">Promos</div>
                                             </a>
@@ -255,9 +250,9 @@
                         <div class="phone-12 desk-6">
                             <img class="section-img-align-bottom" src="../images/Divers/1024px/Contact.jpg" 
                                  srcset="../images/Divers/1280px/Contact.jpg 1920w,
-                                 ../images/Divers/1024px/Contact.jpg 1400w,
-                                 ../images/Divers/640px/Contact.jpg  900w,
-                                 ../images/Divers/320px/Contact.jpg  600w"
+                                 ../images/Divers/1024px/Contact.jpg 1302w,
+                                 ../images/Divers/640px/Contact.jpg  1056w,
+                                 ../images/Divers/320px/Contact.jpg  672w"
                                  sizes="100%"
                                  alt="contact assistance" />
                         </div>
@@ -344,6 +339,7 @@
                             <form ENCTYPE="multipart/form-data" id="frmContact" name="frmContact" method="post" action="/Scripts/sql.exe">
                                 <input type="hidden" name="SqlDB" value="LOLPublic">		
                                 <input type="hidden" name="Sql" value="contact.uhs">
+                                <input id="ip_adress" type="hidden" value="" name="_ip">
                                 <div class="contact-form-info phone-12 desk-6">
                                     <h3>Vos coordonnées</h3>
                                     <div class="left-container phone-12">
@@ -392,7 +388,7 @@
                                     <div class="left-container phone-12 tab-6">
                                         <div class="input-group">
                                             <label for="Email">E-mail</label>
-                                            <input id="Email" name="_email" type="text" />
+                                            <input id="Email" name="_email" type="text" required/>
                                         </div>
                                     </div>
                                     <div class="right-container phone-12 tab-6">
@@ -429,8 +425,9 @@
                                             <select id="Object" name="_object" required>
                                                 <option value="" selected="selected">-- Sélectionnez un objet --</option>
                                                 <option value="demande_infos_commerciales">Demande d'informations commerciales</option>
+                                                <option value="identifiants_mail">Demande identifiants mail</option>
                                                 <option value="Suivi_de_commande">Suivi de commande</option>
-                                                <option value="Probleme_technique">Problème technique</option>
+                                                <option value="Probleme_technique">Question technique</option>
                                                 <option value="Facturation">Facturation</option>
                                                 <option value="Candidature">Candidature</option>
                                                 <option value="Autres">Autres</option>
@@ -559,7 +556,7 @@
                                         <li><a href="../tv/offres.html">Notre offre</a></li>
 
                                         <li><a href="../tv/equipements.html">Nos équipements</a></li>
-                                        <li><a href="../promos/internetTV.html">Offre spéciale TV</a></li>
+                                        
                                     </ul>
                                 </nav>
                             </div>
@@ -576,12 +573,12 @@
                         <div class="row">
                             <div class="separator"></div>
                             <div class="phone-12">
-                                <div class="display-phone copyright"><span class="icon-icone-lol"></span>&copy;2015 Luxembourg Online S.A</div>
+                                <div class="display-phone copyright">© Luxembourg Online S.A. – 2015, tous droits réservés</div>
                                 <nav class="hidden-phone">
                                     <ul class="footer-bottom-links">
                                         <li>
-                                            <span class="icon-icone-lol"></span>&copy;2015 Luxembourg Online S.A</li>
-                                        <li><a href="../documents/CONDITIONS GENERALES DES SERVICES LUXEMBOURG ONLINE.pdf" target="blank_">Mentions légales</a></li>
+                                            © Luxembourg Online S.A. – 2015, tous droits réservés</li>
+                                        <li><a href="../documents/MENTIONS_LEGALES.pdf" target="blank_">Mentions légales</a></li>
                                         <li><a href="../divers/emploi.html">Offres d'emploi</a></li>
                                         <li><a href="../divers/plan.html">Plan du site</a></li>
 
@@ -599,22 +596,28 @@
         <script src="../scripts/vendor/jquery.min.js"></script>
         <script src="../scripts/main.js"></script>
         <script type="text/javascript">
+            var verifMessage = "Veuillez entrer tous les champs dans le formulaire";
             $(function () {
-                var hash = document.URL.substr(document.URL.indexOf('#') + 1);
-                if (window.location.hash) {
-                    if (hash === "success") {
-                        alert('Merci. Votre demande sera traitée dans les meilleurs délais. ');
-                    }else{
-                        $('#Object').val(hash).change();
-                        scrollToElement($('#form'));
-                    }
-                }
                 $('input[name^="_FileName"').on('change', function () {
                     $('#fileList').append('<li data-input="' + $(this).attr('name') + '" title="destroy">' + this.value.replace("C:\\fakepath\\", "") + '<span class="icon-x-icone"></span></li>');
                     if ($('#fileList>li').length === 3) {
                         $('#fileButton').addClass('disabled');
                     }
                 });
+                $('#Object').on('change', function () {
+                    if ($(this).val() == "identifiants_mail") {
+                        $('#Email, #_DocumentName1, input[name="_FileName1"]').prop('required', true);
+                        $('label[for="Email"]').html("E-mail<span class='red'>*</span>");
+                        $('#fileButton').html("Joindre un fichier*");
+                        $('#Message').prop('placeholder', "Merci de nous fournir une adresse mail valide ainsi qu'une copie de votre pièce d'identité afin que nous puissions traiter votre demande.");
+                    } else {
+                        $('#Email, #_DocumentName1, input[name="_FileName1"]').prop('required', false);
+                        $('label[for="Email"]').html("E-mail");
+                        $('#fileButton').html("Joindre un fichier");
+                        $('#Message').removeAttr('placeholder');
+                    }
+                });
+
                 $('#fileButton').click(function () {
                     $('input[name^="_FileName"').each(function () {
                         if (!$(this).val()) {
@@ -634,39 +637,73 @@
                 $('input[required], textarea[required], select[required]').blur(function () {
                     $(this).removeClass('not-fill');
                 });
+
                 $(".btnSubmitForm").click(function (e) {
-                    var flag = 0;
                     e.preventDefault();
-                    var vform = $(this).attr("data-form");
-                    var mail = $("#" + vform).find("input[name=_email]");
-                    if (mail.val()) {
-                        if (!testEmail(mail.val())) {
-                            alert("E-mail invalide! Assurez-vous d'avoir correctement saisi votre adresse électronique.");
-                            return false;
+                    var form = $(this).attr("data-form");
+                    var filename;
+                    for (var i = 1; i <= 3; i++) {
+                        if ($("#" + form).find('[name=_FileName' + i + ']').val()) {
+                            filename = $("#" + form).find('[name=_FileName' + i + ']').val();
+                            $("#" + form).find('[name=_documentName' + i + ']').val(filename);
                         }
                     }
-                    $('#' + vform).find('[required]').each(function () {
-                        if (!$(this).val()) {
-                            flag = 1;
-                            $(this).addClass('not-fill');
+                    if (!verifyForm(form)) {
+                        if ($('#Object').val() == "identifiants_mail") {
+                            alert(verifMessage + " ainsi qu'une copie de votre carte d'identité en pièce jointe.");
+                        } else {
+                            alert(verifMessage + ".");
                         }
-                    });
-                    if (flag) {
-                        alert("Veuillez entrer tous les champs dans le formulaire.");
                         flag = 0;
                     } else {
-                        //submit form
-                        var filename;
-                        for (i = 1; i <= 3; i++) {
-                            if ($("#" + vform).find('[name=_FileName' + i + ']').val()) {
-                                filename = $("#" + vform).find('[name=_FileName' + i + ']').val();
-                                $("#" + vform).find('[name=_documentName' + i + ']').val(filename);
+                        getIp();
+                        submitForm();
+                    }
+                });
+                $(window).load(function () {
+                    var hash = document.URL.substr(document.URL.indexOf('#') + 1);
+                    if (window.location.hash) {
+                        if (hash === "success") {
+                            alert('Merci. Votre demande sera traitée dans les meilleurs délais. ');
+                        } else {
+                            if (hash !== "form") {
+                                $('#Object').val(hash).trigger('change');
                             }
+                            $('#form').goTo();
                         }
-                        $("#" + vform).submit();
                     }
                 });
             });
+            function getIp() {
+                $.get("http://ipinfo.io", function (response) {
+                    $('#ip_adress').val(response.city + ", " + response.country);
+                }, "jsonp");
+            }
+            function verifyForm(form) {
+                var flag = true;
+                var vform = form;
+                var mail = $("#" + vform).find("input[name=_email]");
+                if (mail.val()) {
+                    if (!testEmail(mail.val())) {
+                        alert("E-mail invalide! Assurez-vous d'avoir correctement saisi votre adresse électronique.");
+                        return false;
+                    }
+                }
+                $('#' + vform).find('[required]').each(function () {
+                    if (!$(this).val()) {
+                        flag = false;
+                        $(this).addClass('not-fill');
+                    }
+                });
+                return flag;
+            }
+            function submitForm() {
+                if ($('#ip_adress').val()) {
+                    $('#frmContact').submit();
+                } else {
+                    setTimeout(submitForm, 250);
+                }
+            }
         </script>
         <script>
             var map;

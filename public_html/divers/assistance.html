@@ -4,18 +4,19 @@
         <meta charset="utf-8">
         <title>Assistance - Luxembourg Online</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <link rel="shortcut icon" href="/favicon.ico">
-        
+
         <link rel="stylesheet" href="../styles/css/main.css">
         <link rel="stylesheet" href="../styles/css/internet/accueil.css">
-        
+        <link rel="stylesheet" href="../styles/css/lightbox.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <script src="../scripts/vendor/picturefill.min.js"></script>
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
     </head>
-    
+
     <body>
         <div id="clientSpace" class="popup">
             <div class="background-client"></div>
@@ -94,11 +95,12 @@
                 <li class="menu-item" data-id='telephone'>Téléphonie <span class="icon-right-arrow"></span></li>
                 <li class="menu-item" data-id='tv'>TV <span class="icon-right-arrow"></span></li>
                 <li class="menu-item" data-id='mobile'>Mobile<span class="icon-right-arrow"></span></li>
-                <li class="menu-item" data-id='promo'>Promos <span class="icon-right-arrow"></span></li>
+                <li class="menu-item link"><a href="../promos/fibre.html">Promos</a></li>
                 <li class="sous-nav">
                     <ul class="menu">
                         <li class="menu-item link"><a href="../divers/assistance.html">Assistance</a></li>
                         <li class="menu-item link"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOL CLOUD</a></li>
+                        <!--<li class="menu-item link"><a href="../divers/news.html">Actualités</a></li>-->
                         <li class="menu-item link"><a href="../divers/magazine.html">Magazine</a></li>
                         <li class="menu-item link"><a href="../divers/propos.html">À propos</a></li>
                         <li class="menu-item link"><a href="../divers/contact.html">Contact</a></li>
@@ -131,6 +133,7 @@
                     <li class="menu-item"><a href="../tv/accueil.html">Accueil TV</a></li>
                     <li class="menu-item"><a href="../tv/offres.html">Notre offre TV</a></li>
                     <li class="menu-item"><a href="../tv/equipements.html">Nos équipements</a></li>
+
                     <li class="menu-item"><a href="../tv/abonnement.html">Abonnez-vous</a></li>
                 </ul>
             </div>
@@ -143,32 +146,25 @@
                     <li class="menu-item"><a href="../mobile/abonnement.html">Abonnez-vous</a></li>
                 </ul>
             </div>
-            <div class="menu-links-wrapper">
-                <ul class="menu-links" id="promo">
-                    <li class="menu-item back"><span class="icon-right-arrow"></span>Promos</li>
-                    <li class="menu-item"><a href="../promos/accueil.html">Accueil Promos</a></li>
-                    <li class="menu-item"><a href="../promos/fibre.html">Offre spéciale fibre</a></li>
-                    <li class="menu-item"><a href="../promos/offreloltv.html">Offre spéciale LOL TV</a></li>
-                    <li class="menu-item"><a href="../promos/internetTV.html">Offre spéciale Internet + TV</a></li>
-                </ul>
-            </div>
         </nav>
         <div id="siteWrap">
             <header>
-                <div id="top-menu-header" class="hidden-phone hidden-tab">
+                <div id="top-menu-header">
                     <div class="container-wrapper">
                         <div class="row">
                             <nav class="pull-left">
-                                <ul class="top-menu-header-links left">
-                                    <li><a href="../index.htm">Particuliers</a></li>
-                                    <li><a href="http://www.internet.lu/business/" target="blank_">Business</a></li>
-                                </ul>
+                                <div class="header-dropdown top-menu-header-links left">
+                                    <button>Particuliers<span class="icon-right-arrow"></span></button>
+                                    <ul class="drop">
+                                        <li><a href="http://www.internet.lu/business/">Business</a></li>
+                                    </ul>
+                                </div>
                             </nav>
-                            <nav class="pull-right">
+                            <nav class="pull-right hidden-phone hidden-tab">
                                 <ul class="top-menu-header-links right">
                                     <li class="menu-item"><a href="../divers/assistance.html">Assistance</a></li>
                                     <li class="menu-item"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOL CLOUD</a></li>
-                                    <li class="menu-item"><a href="../divers/magazine.html">Magazine</a></li>
+                                    <!--<li class="menu-item"><a href="../divers/news.html">Actualités</a></li>--><li class="menu-item"><a href="../divers/magazine.html">Magazine</a></li>
                                     <li class="menu-item"><a href="../divers/propos.html">À propos</a></li>
                                     <li class="menu-item"><a href="../divers/contact.html">Contact</a></li>
                                 </ul>
@@ -176,12 +172,12 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div id="bottom-menu-header">                    
                     <nav class="bottom-menu-header-links mobile display-phone display-tab">
                         <div class="pull-left">
-                            <div class="logo noel">
-                                <a href="../index.htm"><img src="../images/Icone/Img/Logo-LOL-noel.png" alt="logo LOL" /></a>
+                            <div class="logo">
+                                <a href="../index.htm"><img src="../images/Icone/Img/Logo-LOL.png" alt="logo LOL" /></a>
                             </div>
                         </div>
                         <div class="mobile-menu-button">
@@ -196,8 +192,8 @@
                     <div class="container-wrapper hidden-phone hidden-tab">
                         <div class="row">
                             <div class="pull-left">
-                                <div class="logo noel">
-                                    <a href="../index.htm"><img src="../images/Icone/Img/Logo-LOL-noel.png" alt="logo LOL" /></a>
+                                <div class="logo">
+                                    <a href="../index.htm"><img src="../images/Icone/Img/Logo-LOL.png" alt="logo LOL" /></a>
                                 </div><!--
                                 --><nav class="bottom-menu-header-links">
                                     <ul class="main-menu">
@@ -231,7 +227,7 @@
                                         </li><!--
                                         --><li>
                                             <div class="active-border"></div>
-                                            <a href="../promos/accueil.html">
+                                            <a href="../promos/fibre.html">
                                                 <img class="header-icon" src="../images/Icone/img/promos.png" alt="Promos" />
                                                 <div class="link">Promos</div>
                                             </a>
@@ -245,10 +241,216 @@
                         </div>
                     </div>
                 </div>
-                
+
             </header>
-            
+            <style>
+                .modemItem{
+                    display:none;
+                    margin-top: 15px;
+                }
+                .emailItem, .minixItem{
+                    display:none;
+                    margin-top:15px;
+                }
+                .modemItem table, .minixItem table{
+                    width: 100%;
+                }
+                .imgContainer{
+                    display: inline-block;
+                    height:150px;
+                    width: auto;
+                    vertical-align:middle;
+                    text-align:center;
+                }
+                .imgContainer img {
+                    height: 100%;
+                    width: auto;
+                }
+                td{
+                    vertical-align:top;
+                }
+                .dropTabContent{
+                    padding:10px;
+                }
+                .emailImg {
+                    width:80%;
+                }
+                .emailPara {
+                    list-style-type:decimal;
+                    line-height:15pt;
+                    font-weight:bold;
+                    margin-left:18px;
+                }
+                .emailPara span {
+                    font-weight:normal;
+                }
+                .emailPara2 {
+                    list-style-type: decimal;
+                    margin-left:10px;
+                    margin-top:20px;
+                    margin-bottom:20px;
+                    font-weight:bold;
+                }
+                .emailPara2 span {
+                    font-weight:normal;
+                }
+                .emailItem h3{
+                    margin-left:0px;
+                    font-size:16px;
+                }
+                .emailItem p{
+                    line-height: 20px;
+                }
+                .emailPara li{
+                    display: list-item;
+                    list-style: decimal;
+                    list-style-type: decimal;
+                }
+                .emailPara2 li{
+                    display: list-item;
+                    list-style: disc;
+                    list-style-type: disc;
+                }
+                .emailPara {
+                    list-style-type: decimal;
+                    line-height: 15pt;
+                    font-weight: bold;
+                    margin-left: 18px;
+                }
+                .emailPara2 {
+                    list-style-type: decimal;
+                    margin-left: 10px;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    font-weight: bold;
+                }
+                .not-decimal-list{
+                    list-style-type: disc;
+                    line-height: 15pt;
+                    font-weight: bold;
+                    margin-left: 18px;
+                }
+                .not-decimal-list span{
+                    font-weight: normal;
+                }
+                .not-decimal-list li{
+                    display: list-item;
+                    list-style: disc;
+                }
+                .link-assistance{
+                    color: #004994;
+                    text-decoration: underline;
+                }
+                .config td {
+                    padding: 5px;
+                }
+                .tuto img{
+                    height: 400px;
+                    width: auto;
+                    border: 1px solid;
+                    margin-bottom: 10px;
+                }
+                .dataItem .bold, .dropdown .bold{
+                    margin: 27px 0px 10px;
+                    font-size: 18px;
+                }
+                .dropdown h2{
+                    margin: 0;
+                }
+                .docItem h2{                                 
+                    margin: 25px 0;
+                }
+                h3{                                        
+                    margin: 15px 0 10px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 20px;
+                }
+                p{
+                    line-height: 20px;
+                    margin: 0;
+                }
+                .dropdown{
+                    margin: 25px 0;
+                }
+                .dropdown-list .dropdown:last-child{
+                    margin-bottom: 0px;
+                }                                    
+                .moveArrow{
+                    text-align: left;
+                }
+                .faq-image{
+                    position: relative;
+                    width: 65%;
+                }
+                .faq-image img{
+                    width: 100%;
+                    height: auto;
+                }
+                .notif{
+                    position: absolute;                                        
+                    background-color: transparent;                                        
+                }                                    
+                .content-assistance{
+                    margin: 0;
+                    padding: 0 15px;
+                }
+                .icon{
+                    color: #e75e0a;                                        
+                }
+                .rTable { display: table; }
+                .rTableRow { display: table-row; }
+                .rTableBody { display: table-row-group;clear: both; }
+                .rTableCell, .rTableHead { display: table-cell; padding: 5px;}
+            </style>
             <section class="drop-shadow background-lightgrey">
+                <div class="zone zone1">
+                    <b>Nos coordonnées</b>
+                    <div>
+                        <ul class="emailPara2">
+                            <li><span>nos adresses,</span></li>
+                            <li><span>notre numéro de téléphone</span></li>
+                            <li><span>et notre numéro de fax.</span></li>                            
+                        </ul>
+                        <p>Vous pouvez visualiser ces informations directement sur Internet.lu, rubrique Contact.</p>
+                    </div>
+                </div>
+                <div class="zone zone2">
+                    <b>Votre adresse</b>
+                    <div>                        
+                        <p>Cette adresse postale est votre adresse de facturation. Elle peut être différente de l'adresse d'installation.</p>
+                    </div>
+                </div>
+                <div class="zone zone3">
+                    <b>Détails de votre facture</b>
+                    <div>
+                        <p>Dans cet espace, vous retrouvez :</p>
+                        <ul class="emailPara2">
+                            <li><span>le numéro de facture,</span></li>
+                            <li><span>le descriptif et le montant de vos abonnements,</span></li>
+                            <li><span>le détail de vos consommations,</span></li>
+                            <li><span>Le montant total de la facture.</span></li>
+                        </ul>
+                        <p>Les consommations du mois précédent sont prises en compte pour la facture du mois en cours. Toutes ces infos sont disponibles dans votre Espace client.</p>
+                    </div>
+                </div>
+                <div class="zone zone4">
+                    <b>Informations supplémentaires</b>                    
+                    <div>
+                        <p>Cette partie contient :</p>
+                        <ul class="emailPara2">
+                            <li><span>le mode de facturation,</span></li>
+                            <li><span>la date de prélèvement (en cas de domiciliation),</span></li>
+                            <li><span>et d'autres informations concernant le paiement.</span></li>                            
+                        </ul>                        
+                    </div>
+                </div>
+                <div class="zone zone5">
+                    <b>Informations supplémentaires</b>                    
+                    <div>
+                        <p>Il s'agit ici des différents comptes bancaires de Luxembourg Online sur lesquels vous pouvez effectuer vos virements.</p>                                              
+                    </div>
+                </div>
                 <div class="container-wrapper">
                     <div class="row">
                         <div class="align-center phone-12">
@@ -260,209 +462,119 @@
             <section class="padding">
                 <div class="container-wrapper">
                     <div class="row">
-                        <div class="dropdown" id="install-modem">
-                            <h2 data-trigger class="section-subtitle divers-subtitle"><span class="icon-right-arrow"></span> Guide d'installation et d'utilisation</h2>
-                            <div class="content-assistance">
-                                
-                                
-                                
-                                <style>
-                                    .modemItem{
-                                        display:none;
-                                        margin-top:15px;
-                                    }
-                                    .emailItem{
-                                        display:none;
-                                        margin-top:15px;
-                                    }
-                                    
-                                    .imgContainer{
-                                        width:200px;
-                                        height:150px;
-                                        vertical-align:middle;
-                                        text-align:center;
-                                    }
-                                    .imgContainer img {
-                                        border:0px;
-                                    }
-                                    td{
-                                        vertical-align:top;
-                                    }
-                                    .dropTabContent{
-                                        padding:10px;
-                                    }
-                                    .emailImg {
-                                        width:80%;
-                                    }
-                                    .emailPara {
-                                        list-style-type:decimal;
-                                        line-height:15pt;
-                                        font-weight:bold;
-                                        margin-left:18px;
-                                    }
-                                    .emailPara span {
-                                        font-weight:normal;
-                                    }
-                                    .emailPara2 {
-                                        list-style-type: decimal;
-                                        margin-left:10px;
-                                        margin-top:20px;
-                                        margin-bottom:20px;
-                                        font-weight:bold;
-                                    }
-                                    .emailPara2 span {
-                                        font-weight:normal;
-                                    }
-                                    .emailItem h3{
-                                        margin-left:0px;
-                                        font-size:16px;
-                                    }
-                                    .emailItem p{
-                                        line-height: 20px;
-                                    }
-                                    .emailPara li{
-                                        display: list-item;
-                                        list-style: decimal;
-                                        list-style-type: decimal;
-                                    }
-                                    .emailPara2 li{
-                                        display: list-item;
-                                        list-style: disc;
-                                        list-style-type: disc;
-                                    }
-                                    .emailPara {
-                                        list-style-type: decimal;
-                                        line-height: 15pt;
-                                        font-weight: bold;
-                                        margin-left: 18px;
-                                    }
-                                    .emailPara2 {
-                                        list-style-type: decimal;
-                                        margin-left: 10px;
-                                        margin-top: 20px;
-                                        margin-bottom: 20px;
-                                        font-weight: bold;
-                                    }
-                                    .link-assistance{
-                                        color: #004994;
-                                        text-decoration: underline;
-                                    }
-                                    .config td {
-                                        padding: 5px;
-                                    }
-                                    /*.content-assistance{
-                                        padding: 0 0 25px;
-                                        padding-left: 40px;
-                                    }*/
-                                    .tuto img{
-                                        height: 400px;
-                                        width: auto;
-                                        border: 1px solid;
-                                        margin-bottom: 10px;
-                                    }
-                                    .dataItem .bold{
-                                        margin: 25px 0px;
-                                        font-size: 18px;
-                                    }
-                                    h3{                                        
-                                        margin: 20px 0 10px;
-                                        font-size: 16px;
-                                        font-weight: 400;
-                                        line-height: 20px;
-                                    }
-                                    p{
-                                        line-height: 20px;
-                                        margin: 0;
-                                    }
-                                    .dropdown-list{
-                                        margin: 15px 25px;
-                                        padding: 0 15px;
-                                    }
-                                    .dropdown-content{
-                                        margin-left: 40px;
-                                        border-left: 1px solid #004494;
-                                        padding: 0 20px;
-                                    }
-                                    .moveArrow{
-                                        text-align: left;
-                                    }
-                                    .rTable { display: table; }
-                                    .rTableRow { display: table-row; }
-                                    .rTableBody { display: table-row-group;clear: both; }
-                                    .rTableCell, .rTableHead { display: table-cell; padding: 5px;}
-                                </style>
-                                
-                                Séléctionnez le guide:
-                                <select class="modemList">
-                                    <option value="0">Fritz!Box (ADSL)</option>
-                                    <option value="1">Fritz!Box (VDSL revente)</option>
-                                    <option value="2">Fritz!Box (VDSL dégroupé)</option>
-                                    <option value="3">Minix (LOL TV)</option>
-                                    <option value="4">Minix Mini (LOL TV)</option>
-                                    
-                                </select>
-                                <div class="modemItem" style="display: none;">
-                                    <table>
-                                        <tbody><tr>
-                                                <td><div class="imgContainer" style="width:120px !important;"><a class="link link2" href="../documents/guides/Guide_ADSL_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_ADSL_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a></div></td>
-                                                <td><h3>Fritz!Box (ADSL)</h3><br><a class="link-assistance" href="../documents/guides/Guide_ADSL_A5_BD.pdf" target="_blank">Guide d'utilisation</a></td>
-                                            </tr>
-                                        </tbody></table>
+                        <div id="install-modem" class="dropdown">
+                            <h2 data-trigger class="section-subtitle divers-subtitle"><span class="icon-right-arrow"></span> Guide d'installation et d'assistance</h2>
+                            <div class="clearfix content-assistance phone-mt-5">
+                                <div class="phone-12 tab-6 desk-4">
+                                    <div style="text-align: center;">
+                                        <table style="display: inline-block; margin-top: 15px;">
+                                            <tbody>
+                                                <tr style="text-align: center;">
+                                                    <td style="display: inline-block; width: 100%;">
+                                                        <div class="imgContainer"><a class="link link2" href="../documents/guides/guide-assistance-technique.pdf" target="_blank"><img src="../images/guide/guide-assistance-technique.jpg"></a></div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><h3>Guide d'assistance technique</h3><a class="link-assistance" href="../documents/guides/guide-assistance-technique.pdf" target="_blank">Télécharger</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
-                                
-                                <div class="modemItem" style="display: none;">
-                                    <table>
-                                        <tbody><tr>
-                                                <td><div class="imgContainer" style="width:120px !important;"><a class="link link2" href="../documents/guides/Guide_VDSL_RV_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_VDSL_RV_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a></div></td>
-                                                <td><h3>Fritz!Box (VDSL)</h3><br><a class="link-assistance" href="../documents/guides/Guide_VDSL_RV_A5_BD.pdf" target="_blank">Guide d'utilisation</a></td>
-                                            </tr>
-                                        </tbody></table>
+                                <div class="phone-12 tab-6 desk-4">
+                                    <div class="align-center">
+                                        <div style="display: inline-block">
+                                            <div class="modemItem" style="display: none;">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><div class="imgContainer"><a class="link link2" href="../documents/guides/Guide_ADSL_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_ADSL_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a></div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><h3>Fritz!Box (ADSL)</h3><a class="link-assistance" href="../documents/guides/Guide_ADSL_A5_BD.pdf" target="_blank">Télécharger</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="modemItem" style="display: none;">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><div class="imgContainer"><a class="link link2" href="../documents/guides/Guide_VDSL_RV_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_VDSL_RV_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a></div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><h3>Fritz!Box (VDSL)</h3><a class="link-assistance" href="../documents/guides/Guide_VDSL_RV_A5_BD.pdf" target="_blank">Télécharger</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="modemItem" style="display: none;">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><div class="imgContainer" style="width:120px !important;"><a onClick="ga('send', 'event', 'download', 'click', ‘FRITZ VDSL');"  class="link link2" href="../documents/guides/Guide_VDSL_DG_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_VDSL_DG_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a></div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><h3>Fritz!Box (VDSL dégroupé)</h3><a onClick="ga('send', 'event', 'download', 'click', ‘FRITZ VDSL');" class="link-assistance" href="../documents/guides/Guide_VDSL_DG_A5_BD.pdf" target="_blank">Télécharger</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <select class="modemList phone-mt-10">
+                                                <option value="0">Fritz!Box (ADSL)</option>
+                                                <option value="1">Fritz!Box (VDSL revente)</option>
+                                                <option value="2">Fritz!Box (VDSL dégroupé)</option>                               
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
-                                
-                                <div class="modemItem" style="display: none;">
-                                    <table>
-                                        <tbody><tr>
-                                                <td><div class="imgContainer" style="width:120px !important;"><a class="link link2" href="../documents/guides/Guide_VDSL_DG_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_VDSL_DG_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a></div></td>
-                                                <td><h3>Fritz!Box (VDSL dégroupé)</h3><br><a class="link-assistance" href="../documents/guides/Guide_VDSL_DG_A5_BD.pdf" target="_blank">Guide d'utilisation</a></td>
-                                            </tr>
-                                        </tbody></table>
+                                <div class="phone-12 tab-6 desk-4">
+                                    <div class="align-center">
+                                        <div style="display: inline-block;">
+                                            <div class="minixItem" style="display: block;">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><div class="imgContainer" style="width:120px !important;"><a class="link link2" href="../documents/guides/Guide_TV_Minix_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_TV_Minix_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a></div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><h3>Minix (LOL TV)</h3><a class="link-assistance" href="../documents/guides/Guide_TV_Minix_A5_BD.pdf" target="_blank">Télécharger</a></td>
+                                                        </tr>
+                                                    </tbody></table>
+                                            </div>
+                                            <div class="minixItem" style="display: none;">
+                                                <table>
+                                                    <tbody><tr>
+                                                            <td><div class="imgContainer" style="width:120px !important;"><a onClick="ga('send', 'event', 'download', 'click', ‘Minix Mini');" class="link link2" href="../documents/guides/Guide_TV_Minix_Mini_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_TV_Minix_Mini_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a></div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><h3>Minix Mini (LOL TV)</h3><a onClick="ga('send', 'event', 'download', 'click', ‘Minix Mini');" class="link-assistance" href="../documents/guides/Guide_TV_Minix_Mini_A5_BD.pdf" target="_blank">Télécharger</a></td>
+                                                        </tr>
+                                                    </tbody></table>
+                                            </div>
+                                            <select class="minixList phone-mt-10">
+                                                <option value="0">Minix (LOL TV)</option>
+                                                <option value="1">Minix Mini (LOL TV)</option>
+                                        
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
-                                
-                                <div class="modemItem" style="display: none;">
-                                    <table>
-                                        <tbody><tr>
-                                                <td><div class="imgContainer" style="width:120px !important;"><a class="link link2" href="../documents/guides/Guide_TV_Minix_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_TV_Minix_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a></div></td>
-                                                <td><h3>Minix (LOL TV)</h3><br><a class="link-assistance" href="../documents/guides/Guide_TV_Minix_A5_BD.pdf" target="_blank">Guide d'utilisation</a></td>
-                                            </tr>
-                                        </tbody></table>
-                                </div>
-                                
-                                <div class="modemItem" style="display: block;">
-                                    <table>
-                                        <tbody><tr>
-                                                <td><div class="imgContainer" style="width:120px !important;"><a onClick="ga('send', 'event', 'download', 'click', ‘Minix Mini');" class="link link2" href="../documents/guides/Guide_TV_Minix_Mini_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_TV_Minix_Mini_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a></div></td>
-                                                <td><h3>Minix Mini (LOL TV)</h3><br><a class="link-assistance" onClick="ga('send', 'event', 'download', 'click', ‘Minix Mini');" href="../documents/guides/Guide_TV_Minix_Mini_A5_BD.pdf" target="_blank">Guide d'utilisation</a></td>
-                                            </tr>
-                                        </tbody></table>
-                                </div>
-                                
-                                
                             </div>
                         </div>
                         <hr>
                         <div class="dropdown" id="config-email">
-                            <h2 data-trigger class="section-subtitle divers-subtitle"><span class="icon-right-arrow"></span> Configuration E-mail</h2>
-                            <div class="content-assistance">
-                                <p>Séléctionnez la configuration :</p>
+                            <h2 data-trigger class="section-subtitle divers-subtitle"><span class="icon-right-arrow"></span> Configuration mail</h2>
+                            <div class="content-assistance clearfix">
+                                <p style="margin-bottom: 10px;margin-top: 10px">Séléctionnez la configuration :</p>
                                 <select class="emailList">
                                     <option value="0">Paramètres de base</option>
                                     <option value="1">Windows Mail</option>
                                     <option value="2">Outlook</option>
                                     <option value="3">Outlook 2007</option>
-                                    <option value="4">Apple Mail</option>
-                                    <option value="5">iOS</option>
-                                    <option value="6">Android</option>
-                                    
+                                    <option value="4">iOS</option>
+                                    <option value="5">Android</option>
+
                                 </select>
                                 <div class="emailItem" style="display: block;">                                    
                                     <div class="phone-12 center-phone">
@@ -570,46 +682,11 @@
                                                     <li>Utilisez le type de connexion chiffrée suivant : <span>sélectionnez <b>aucune</b>.</span></li>
                                                 </ul>
                                                 <li><span>Cliquez sur Suivant, ensuite sur Terminer.</span></li>
-                                                
+
                                                 <li><span>Vous pouvez désormais envoyer et recevoir vos e-mails via Outlook 2007.</span></li>
                                             </ul>
                                         </div>
                                     </div>                                        
-                                </div>
-                                
-                                <div class="emailItem" style="display: none;">
-                                    <div class="phone-12 center-phone">
-                                        <div class="phone-12 desk-2 center-phone-img" style="text-align: center;width: 131px;">
-                                            <img class="emailImg" src="../images/aide/apple_mail.png" data-realwidth="150" data-realheight="150" alt="">
-                                        </div>
-                                        <div class="phone-12 desk-10 text-align-left"><h3>Apple Mail</h3>
-                                            <ul class="emailPara">
-                                                <li><span>Ouvrir l'application Mail. S'il s'agit de la première fois, vous serez directement invité à ajouter un compte. Si ce n'est pas le cas, sélectionner l'onglet Mail, puis Ajouter un compte.</span></li>
-                                                <li><span>La fenêtre "Choisir un compte mail à ajouter..." s'affiche. Sélectionnez "Ajouter un autre compte mail..." et cliquez sur Continuer.</span></li>
-                                                <li><span>Entrez vos informations comme indiqué ci-dessous puis cliquez sur Continuer</span></li>
-                                                <ul class="emailPara2">
-                                                    <li>Nom complet : <span> introduisez votre nom tel que vous souhaitez qu'il apparaisse.</span></li>
-                                                    <li>Adresse e-mail : <span>introduisez votre adresse e-mail complète.</span></li>
-                                                    <li>Mot de passe: introduisez le mot de passe associé à votre compte de messagerie.</li>
-                                                </ul>
-                                                <li><span>Mot de passe: introduisez le mot de passe associé à votre compte de messagerie.</span></li>
-                                                <ul class="emailPara2">
-                                                    <li>Type de compte : <span>sélectionnez <b>POP</b>.</span></li>
-                                                    <li>Description : <span>vous pouvez donner un nom à votre compte (facultatif)</span></li>
-                                                    <li>Serveur de réception : <span>introduisez <b>pop.internet.lu</b> dans ce champ.</span></li>
-                                                    <li>Nom d'utilisateur : <span>introduisez votre adresse e-mail</span></li>
-                                                    <li>Mot de passe : <span>si ce champ n'a pas été rempli automatiquement, réintroduisez ici votre mot de passe.</span></li>
-                                                </ul>
-                                                <li><span>A la fin, selectionner à nouveau Continuer</span></li>
-                                                <li><span>Des informations supplémentaires vous sont demandées. Saisissez-les comme indiqué ci-dessous.</span></li>
-                                                <ul class="emailPara2">
-                                                    <li>Path prefix : <span>laisser ce champ vide.</span></li>
-                                                </ul>
-                                                <li><span>Vous pouvez désormais envoyer et recevoir vos e-mails via Apple Mail.</span></li>                                                        
-                                            </ul>
-                                            <p>Pour plus d'information : <a class="link-assistance" target="blank" href="https://support.apple.com/kb/PH22275?viewlocale=fr_FR&locale=fr_FR">Assistance mail Apple</a></p>
-                                        </div>
-                                    </div>                                    
                                 </div>
                                 <div class="emailItem" style="display: none;">
                                     <div class="phone-12 center-phone">
@@ -621,15 +698,15 @@
                                         </div>
                                     </div>                                    
                                 </div>
-                                
+
                                 <div class="emailItem" style="display: none;">                                    
                                     <div class="phone-12 center-phone">
                                         <div class="phone-12 desk-2 center-phone-img" style="text-align: center;width: 131px;">
                                             <img class="emailImg" src="http://www.internet.lu/lolcloud/img/Aide/Android/lolcloud_logo_android.png" style="margin-right:20px;" data-realwidth="150" data-realheight="150" alt="">
                                         </div>
-                                        <div class="phone-12 desk-10" style="margin-bottom: 20px">
+                                        <div class="phone-12 desk-10" style="margin-bottom: 20px;text-align: left">
                                             <h3>Android</h3>
-                                            
+
                                             <a class="link-assistance" href="../documents/guides/mail_android.pdf" target="_blank">Configuration E-mail sous Android</a>
                                         </div>
                                     </div>                                        
@@ -638,10 +715,11 @@
                             </div>
                         </div>
                         <hr>
+
                         <div class="dropdown" id="config-data">
                             <h2 data-trigger class="section-subtitle divers-subtitle"><span class="icon-right-arrow"></span> Configuration DATA/MMS</h2>
-                            <div class="content-assistance">
-                                <p style="margin-bottom: 10px;">Le plus souvent, votre téléphone mobile récupère les paramètres de configuration Internet depuis la SIM, ou les reçoit automatiquement via le réseau. Il est également possible de faire la configuration manuellement pour avoir accès à Internet. 
+                            <div class="content-assistance clearfix">
+                                <p style="margin-bottom: 10px;margin-top: 10px">Le plus souvent, votre téléphone mobile récupère les paramètres de configuration Internet depuis la SIM, ou les reçoit automatiquement via le réseau. Il est également possible de faire la configuration manuellement pour avoir accès à Internet. 
                                     Séléctionnez la configuration correspondant à votre système d’exploitation et suivez les instructions.</p>
                                 <p style="margin-bottom: 10px;">Séléctionnez la configuration :</p>
                                 <select class="dataList">
@@ -650,7 +728,7 @@
                                     <option value="2">Windows phone</option>
                                     <option value="3">IOS</option>
                                 </select>
-                                <div class="dataItem">
+                                <div class="dataItem" style="margin-top:5px;">
                                     <div class="rTable">
                                         <div class="rTableBody">
                                             <div class="rTableRow">
@@ -676,7 +754,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                
+
                                                 <div class="rTableCell phone-12 tab-6 " style="padding-top:10px; border: 0;display: inline-block;">
                                                     <div class="rTable config">
                                                         <div class="rTableBody">
@@ -850,10 +928,10 @@
                                             <h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Activez l'itinérance des données (roaming)</h3>
                                             <div class="dropdown-content">
                                                 <ul class="emailPara">
-                                            <li><span>allez dans</span> "Réglages" > "Général" > "Réseau"</li>
-                                            <li><span>activez les données à l’étranger (curseur gris O).</span></li>
-                                        </ul>
-                                        <p style="font-weight: bold;">Attention : pour éviter les mauvaises surprises, consultez nos <a class="link-assistance" href="../mobile/tarifs_detailles.html" target="blank_">tarifs détaillés</a></p>
+                                                    <li><span>allez dans</span> "Réglages" > "Général" > "Réseau"</li>
+                                                    <li><span>activez les données à l’étranger (curseur gris O).</span></li>
+                                                </ul>
+                                                <p style="font-weight: bold;">Attention : pour éviter les mauvaises surprises, consultez nos <a class="link-assistance" href="../mobile/tarifs_detailles.html" target="blank_">tarifs détaillés</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -863,16 +941,169 @@
                         <hr>
                         <div class="dropdown" id="speedtest">
                             <h2 data-trigger class="section-subtitle divers-subtitle"><span class="icon-right-arrow"></span> Speed Test</h2>
-                            <div class="content-assistance">
+                            <div class="content-assistance clearfix">
                                 <iframe src="http://speedtest.internet.lu" height="590" style="border:none;width: 100%;"></iframe>
                             </div>
                         </div>
                         <hr>
+                        <div class="dropdown" id="facturation">
+                            <h2 data-trigger class="section-subtitle divers-subtitle"><span class="icon-right-arrow"></span> FAQ Facturation</h2>
+                            <div class="content-assistance clearfix">
+                                <div class="phone-12 dropdown-list">
+                                    <div class="dropdown">
+                                        <h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Je ne comprends pas ma facture</h3>
+                                        <div class="dropdown-content">
+                                            <div class="faq-image">
+                                                <div class="popup-gallery display-phone display-tab">
+                                                    <a href="../images/Divers/Assistance/Facture_Anonyme_1.jpg">
+                                                        <img src="../images/Divers/Assistance/Facture_Anonyme_1.jpg" alt=""/>
+                                                    </a>
+                                                </div>
+                                                <img class="hidden-phone hidden-tab" src="../images/Divers/Assistance/Facture_Anonyme_1.jpg" alt=""/>
+                                                <div class="display-desk display-lgdesk notif notif-one txtzone" data-zone="1"></div>
+                                                <div class="display-desk display-lgdesk notif notif-two txtzone" data-zone="2"></div>
+                                                <div class="display-desk display-lgdesk notif notif-three txtzone" data-zone="3"></div>
+                                                <div class="display-desk display-lgdesk notif notif-four txtzone" data-zone="4"></div>
+                                                <div class="display-desk display-lgdesk notif notif-five txtzone" data-zone="5"></div>
+                                            </div>
+                                            <ul class="display-phone display-tab emailPara">
+                                                <li><span><p>Nos coordonées, trouvez ici :</p>
+                                                        <ul class="not-decimal-list">
+                                                            <li><span>nos adresses,</span></li>
+                                                            <li><span>notre numéro de téléphone</span></li>
+                                                            <li><span>et notre numéro de fax.</span></li>
+                                                        </ul>
+                                                        <p>Vous pouvez visualiser ces informations directement sur Internet.lu, rubrique Contact.</p>
+                                                    </span></li><br/>
+                                                <li><span>Votre adresse. Cette adresse postale est votre adresse de facturation. Elle peut être différente de l'adresse d'installation.</span></li><br/>
+                                                <li><span>Détails de votre facture                                                        
+                                                        Dans cet espace, vous retrouvez :
+                                                        <ul class="not-decimal-list">
+                                                            <li><span>le numéro de facture,</span></li>
+                                                            <li><span>le descriptif et le montant de vos abonnements,</span></li>
+                                                            <li><span>le détail de vos consommations,</span></li>
+                                                            <li><span>Le montant total de la facture.</span></li>
+                                                        </ul>
+                                                        <p>Les consommations du mois précédent sont prises en compte pour la facture du mois en cours. Toutes ces infos sont disponibles dans votre Espace client.</p>
+                                                    </span></li><br/>
+                                                <li><span>Informations supplémentaires                                                        
+                                                        Cette partie contient :
+                                                        <ul class="not-decimal-list">
+                                                            <li><span>le mode de facturation</span></li>
+                                                            <li><span>la date de prélèvement (en cas de domiciliation),</span></li>
+                                                            <li><span>et d'autres informations concernant le paiement.</span></li>
+                                                        </ul>
+                                                    </span></li><br/>
+                                                <li><span>Il s'agit ici des différents comptes bancaires de Luxembourg Online sur lesquels vous pouvez effectuer vos virements.</span></li><br/>
+                                            </ul>
+                                            <p><span style="text-decoration: underline;" class="blue">Mention divers</span> : correspond aux services premium (SMS et MMS surtaxés)</p>
+                                            <p>Vous avez encore des questions ? <a class="link-assistance" href="../divers/contact.html#Facturation" target="blank_">Contactez-nous !</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Quels sont les avantages de la domiciliation ?</h3>
+                                        <div class="dropdown-content">
+                                            <p>La domiciliation est un mode de paiement simple et sécurisé. Le prélèvement est effectué automatiquement tous les mois, évitant ainsi les frais de facturation (1,50 €) et les frais en cas de retard de paiement. Pour mettre en place une domiciliation, lisez la question suivante.</p>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Comment mettre en place une domiciliation ?</h3>
+                                        <div class="dropdown-content">
+                                            <p>Si vous souhaitez que votre facture soit directement prélevée sur votre compte bancaire, vous
+                                                devez :</p>
+                                            <ul class="not-decimal-list" style="list-style-type: circle">
+                                                <li><span>imprimer et remplir le <a class="link-assistance" href="../documents/domiciliationnew_FR.pdf" target="blank_">mandat de domiciliation</a>,</span></li>
+                                                <li><span>nous le faire parvenir en ligne via notre <a class="link-assistance" href="../divers/contact.html#Facturation" target="blank_">formulaire</a>, par voie
+                                                        postale, ou l'apporter en boutique.</span></li>                                                    
+                                            </ul>                                            
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Quelle est la date de prélèvement ?</h3>
+                                        <div class="dropdown-content">
+                                            <p>Dès lors que votre domiciliation est active, les prélèvements se font en fin de mois 
+                                                ou bien le 15 du mois, si la première tentative a échoué.</p>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Peut-on changer la date de prélèvement ?</h3>
+                                        <div class="dropdown-content">
+                                            <p>A ce jour, il n'est pas possible de changer la date de prélèvement. Toutefois, si vous rencontrez
+                                                des difficultés, <a class="link-assistance" href="../divers/contact.html#Facturation" target="blank_">Contactez-nous</a>.</p>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Comment payer ma facture en ligne ?</h3>
+                                        <div class="dropdown-content">
+                                            <p>Pour payer votre facture en ligne, suivez les étapes suivantes :</p>
+                                            <ul class="emailPara">
+                                                <li><span>Cliquez sur <a href="#" class="openPopup link-assistance" data-popup="0">Espace client</a>, puis séléctionez mon compte.</span></li>                                                    
+                                                <li><span>Connectez-vous à l'aide de votre identifiant et de votre mot de passe.</span></li>
+                                                <li class="popup-gallery"><span>Cliquez sur « Compte client » puis sur le bouton « Payer XX EUR » <a href="../images/divers/Assistance/bouton_facture.jpg">( <span class="icon icon-faq-ico"></span> )</a></span></li>
+                                                <li><span>Sélectionnez ensuite le lien correspondant à votre mode de paiement.</span></li>
+                                                <li><span>Suivez les instructions indiquées par votre banque.
+                                                        A la fin du processus, vous recevrez une confirmation de paiement à conserver.</span></li>                                               
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Quels sont les avantages de la facture par mail ?</h3>
+                                        <div class="dropdown-content">
+                                            <ul class="emailPara">
+                                                <li><span>Vous n'avez plus à payer les frais d'envoi (1.50 euro par mois).</span></li>
+                                                <li><span>Vous pouvez consulter vos factures partout et à tout moment, en accédant à vos mails ou à
+                                                        votre <a href="#" class="openPopup link-assistance" data-popup="0">Espace client</a>.</span></li>
+                                                <li><span>Vous archivez plus facilement vos factures, en les enregistrant directement sur votre
+                                                        ordinateur, ou même sur votre <a class="link-assistance" href="http://internet.lu/lolcloud" target="blank_">LOLCLoud</a> !</span></li>
+                                                <li><span>Vous ne recevez plus de facture papier : ainsi, vous contribuez à la protection de
+                                                        l'environnement.</span></li>
+                                            </ul>
+                                            <p>Pour recevoir votre facture par email, il vous suffit d'en faire la demande <a class="link-assistance" href="../divers/contact.html#Facturation" target="blank_">ici</a>.</p>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Comment recevoir ma facture par mail ?</h3>
+                                        <div class="dropdown-content">
+                                            <p>Pour recevoir ma facture par mail, il suffit d'en faire la demande <a class="link-assistance" href="../divers/contact.html#Facturation" target="blank_">ici</a>.</p>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Comment consulter ma facture en ligne ?</h3>
+                                        <div class="dropdown-content">
+                                            <p>Pour cela, il vous suffit de vous connectez à votre Espace client, cliquez
+                                                sur "Mon compte" et entrez ensuite vos identifiants dans les champs correspondants.
+                                                Cliquez sur "se connecter", puis sélectionnez « Compte client ». Vous pourrez
+                                                visualiser toutes vos factures et également payer en ligne.</p>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Comment puis-je suivre ma consommation ?</h3>
+                                        <div class="dropdown-content">
+                                            <ul class="emailPara">
+                                                <li><span>Cliquez sur <a href="#" class="openPopup link-assistance" data-popup="0">Espace client</a>, puis séléctionez mon compte.</span></li>
+                                                <li><span>Connectez-vous à l'aide de votre identifiant et de votre mot de passe.</span></li>
+                                                <li><span>Cliquez sur « Mes abonnements » puis sur « Consommation ».</span></li>                                                
+                                            </ul>
+                                            <p>Vous pouvez visualiser ici le détail de vos consommations.</p>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Je constate une erreur sur ma facture, que faire ?</h3>
+                                        <div class="dropdown-content">
+                                            <p>Si vous estimez que votre facture comporte une erreur, nous vous invitons à nous contacter en
+                                                utilisant le <a class="link-assistance" href="../divers/contact.html#Facturation" target="blank_">formulaire</a>.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+
                         <div class="dropdown" id="document">
                             <h2 data-trigger class="section-subtitle divers-subtitle"><span class="icon-right-arrow"></span>Documents utiles</h2>
-                            <div class="content-assistance">
-                                Type de documents :
-                                <select class="docList" style="margin-top: 10px;">
+                            <div class="content-assistance clearfix">
+                                <p style="margin-bottom: 10px;margin-top: 10px;">Type de documents :</p>
+                                <select class="docList">
                                     <option value="0">Contrats d'abonnement</option>
                                     <option value="1">Divers</option>
                                     <option value="2">Condition générales et particulières</option>
@@ -884,9 +1115,9 @@
                                             <tr>
                                                 <td><h2>Contrats d'abonnement</h2>
                                                     <ul>
-                                                        <li><a href="../documents/LOLFIBERDSL_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOL FIBER</div></a></li>
+                                                        <li><a href="../documents/LOLFIBERDSL_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOL FIBER/DSL</div></a></li>
                                                         <li><a href="../documents/LOLCABLE_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOL CABLE</div></a></li>
-                                                        <li><a href="../documents/LOLKOMPLETT_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOL KOMPLETT</div></a></li>
+                                                        <li><a href="../documents/LOLDSL20_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOL DSL 20</div></a></li>
                                                         <li><a href="../documents/LOLMOBILE_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOL MOBILE</div></a></li>
                                                         <li><a href="../documents/LOLTV_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOL TV</div></a></li>
                                                     </ul>
@@ -907,7 +1138,7 @@
                                                         <li><a href="../documents/domiciliationnew_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Domiciliation bancaire</div></a></li>
                                                         <li><a href="../documents/Transfert_Contrat_Internet.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Transfert de contrat <span>Internet et/ou téléphonie</span></div></a></li>
                                                         <li><a href="../documents/RUSH_ORDER_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Rush Order</div></a></li>
-                                                        <li><a href="../documents/LISTE_DES_PRIX.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Liste des prix<span>(nouvelle version depuis 01/05/2015)</span></div></a></li>
+                                                        <li><a href="../documents/LISTE_DES_PRIX.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Liste des prix<span>(nouvelle version depuis 26/01/2016)</span></div></a></li>
                                                     </ul>
                                                 </td>
                                             </tr>
@@ -948,7 +1179,7 @@
                                                             <li><a href="../documents/feuille_type_offres_groupees1.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOL DSL</div></a></li>
                                                             <li><a href="../documents/feuille_type_offres_groupees2.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOL KOMPLETT</div></a></li>
                                                             <li><a href="../documents/feuille_type_teledistribution_IPTV.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOL TV</div></a></li>
-                                                            <li><a href="../documents/feuille_type_autres_services.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Autre services</div></a></li>
+                                                            <li><a href="../documents/feuille_type_autres_services.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Autres services</div></a></li>
                                                         </ul>
                                                     </div>
                                                     <div class="tab-adjust-2">
@@ -1066,9 +1297,9 @@
                                 <nav>
                                     <ul class="links">
                                         <li><a href="../tv/offres.html">Notre offre</a></li>
-                                        
+
                                         <li><a href="../tv/equipements.html">Nos équipements</a></li>
-                                        <li><a href="../promos/internetTV.html">Offre spéciale TV</a></li>
+                                        
                                     </ul>
                                 </nav>
                             </div>
@@ -1085,15 +1316,15 @@
                         <div class="row">
                             <div class="separator"></div>
                             <div class="phone-12">
-                                <div class="display-phone copyright"><span class="icon-icone-lol"></span>&copy;2015 Luxembourg Online S.A</div>
+                                <div class="display-phone copyright">© Luxembourg Online S.A. – 2015, tous droits réservés</div>
                                 <nav class="hidden-phone">
                                     <ul class="footer-bottom-links">
                                         <li>
-                                            <span class="icon-icone-lol"></span>&copy;2015 Luxembourg Online S.A</li>
-                                        <li><a href="../documents/CONDITIONS GENERALES DES SERVICES LUXEMBOURG ONLINE.pdf" target="blank_">Mentions légales</a></li>
+                                            © Luxembourg Online S.A. – 2015, tous droits réservés</li>
+                                        <li><a href="../documents/MENTIONS_LEGALES.pdf" target="blank_">Mentions légales</a></li>
                                         <li><a href="../divers/emploi.html">Offres d'emploi</a></li>
                                         <li><a href="../divers/plan.html">Plan du site</a></li>
-                                        
+
                                         <li><a href="../divers/contact.html">Contact</a></li>
                                     </ul>
                                 </nav>
@@ -1104,91 +1335,126 @@
             </footer>
         </div>
         <!--              ./FOOTER               -->
-        
+
         <script src="../scripts/vendor/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../scripts/mobilescript.js"></script>
         <script src="../scripts/main.js"></script>
-        
-        <script>
-            $(function () {
-                //old
-                $(".icon").hover(function () {
-                    img = $(this).find("img");
-                    img.attr("src", img.attr("data-default"));
-                }, function () {
-                    img = $(this).find("img");
-                    img.attr("src", img.attr("data-hover"));
-                });
-
-                $(".socialIcon").hover(function () {
-                    groupTab = $(this).attr("data-groupTab");
-                    hoverId = $(this).attr("data-hover");
-                    $("." + groupTab).hide();
-                    $(this).parent().parent().find(".menuTabBack").css("visibility", "hidden");
-                    $(this).parent().next().css("visibility", "");
-                    $("#" + hoverId).show();
-                });
-                $(".loginOption").click(function () {
-                    $(".tabselected").removeClass("tabselected");
-                    $(this).addClass("tabselected");
-
-                });
-                $(".modemList").on("change", function () {
-                    $(".modemItem").hide();
-
-                    $(".modemItem").eq($(this).val()).show();
-                });
-                $(".modemList").change();
-
-                $(".emailList").on("change", function () {
-                    $(".emailItem").hide();
-
-                    $(".emailItem").eq($(this).val()).show();
-                });
-                $(".emailList").change();
-                
-                $(".docList").on("change", function () {
-                    $(".docItem").hide();
-
-                    $(".docItem").eq($(this).val()).show();
-                });
-                $(".dataList").change();
-                $(".dataList").on("change", function () {
-                    $(".dataItem").hide();
-
-                    $(".dataItem").eq($(this).val()).show();
-                });
-                $(".dataList").change();
-                
-              
-                var vhash = (window.location.hash.split('#')[1]).split(";");
-                
-                if(vhash[0]==="install-modem"){
-                    $('#install-modem').find('.section-subtitle').addClass('is-active');
-                    $('#install-modem').find('.content-assistance').addClass('is-visible');
-                    $('.modemList').val(vhash[1]).change();
-                }
-                if(vhash[0]==="config-email"){
-                    $('#config-email').find('.section-subtitle').addClass('is-active');
-                    $('#config-email').find('.content-assistance').addClass('is-visible');
-                    $('.emailList').val(vhash[1]).change();
-                }
-                if(vhash[0]==="config-data"){
-                    $('#config-data').find('.section-subtitle').addClass('is-active');
-                    $('#config-data').find('.content-assistance').addClass('is-visible');
-                    $('.dataList').val(vhash[1]).change();
-                }
-                if(vhash[0]==="speedtest"){
-                    $('#speedtest').find('.section-subtitle').addClass('is-active');
-                    $('#speedtest').find('.content-assistance').addClass('is-visible');
-                    
-                }
-                if(vhash[0]==="document"){
-                    $('#document').find('.section-subtitle').addClass('is-active');
-                    $('#document').find('.content-assistance').addClass('is-visible');
-                    $('.docList').val(vhash[1]).change();
-                }
-            });
-        </script>
-        <script type="text/javascript" src="../scripts/analytics.js"></script>
+        <script src="../scripts/vendor/lightbox.js"></script>
+        <script type="text/javascript">
+                                                                                                    $(function () {
+                                                                                                        
+                                                                                                        $('.popup-gallery').each(function () {
+                                                                                            $(this).magnificPopup({
+                                                                                            delegate: 'a',
+                                                                                                    type: 'image',
+                                                                                                    tLoading: 'Loading image #%curr%...',
+                                                                                                    mainClass: 'mfp-img-mobile',
+                                                                                                    gallery: {
+                                                                                                    enabled: true,
+                                                                                                            navigateByImgClick: true,
+                                                                                                            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+                                                                                                    },
+                                                                                                    image: {
+                                                                                                    tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                                                                                                            titleSrc: function (item) {
+                                                                                                            return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+                                                                                                            }
+                                                                                                    }
+                                                                                            });
+                                                                                            });
+                                                                                                        
+                                                                                                    //old
+                                                                                                    $(".icon").hover(function () {
+                                                                                                    img = $(this).find("img");
+                                                                                                            img.attr("src", img.attr("data-default"));
+                                                                                                    }, function () {
+                                                                                                    img = $(this).find("img");
+                                                                                                            img.attr("src", img.attr("data-hover"));
+                                                                                                    });
+                                                                                                            $(".socialIcon").hover(function () {
+                                                                                                    groupTab = $(this).attr("data-groupTab");
+                                                                                                            hoverId = $(this).attr("data-hover");
+                                                                                                            $("." + groupTab).hide();
+                                                                                                            $(this).parent().parent().find(".menuTabBack").css("visibility", "hidden");
+                                                                                                            $(this).parent().next().css("visibility", "");
+                                                                                                            $("#" + hoverId).show();
+                                                                                                    });
+                                                                                                            $(".loginOption").click(function () {
+                                                                                                    $(".tabselected").removeClass("tabselected");
+                                                                                                            $(this).addClass("tabselected");
+                                                                                                    });
+                                                                                                            $(".modemList").on("change", function () {
+                                                                                                    $(".modemItem").hide();
+                                                                                                            $(".modemItem").eq($(this).val()).show();
+                                                                                                    });
+                                                                                                            $(".modemList").change();
+                                                                                                            $(".minixList").on("change", function () {
+                                                                                                    $(".minixItem").hide();
+                                                                                                            $(".minixItem").eq($(this).val()).show();
+                                                                                                    });
+                                                                                                            $(".minixList").change();
+                                                                                                            $(".emailList").on("change", function () {
+                                                                                                    $(".emailItem").hide();
+                                                                                                            $(".emailItem").eq($(this).val()).show();
+                                                                                                    });
+                                                                                                            $(".emailList").change();
+                                                                                                            $(".docList").on("change", function () {
+                                                                                                    $(".docItem").hide();
+                                                                                                            $(".docItem").eq($(this).val()).show();
+                                                                                                    });
+                                                                                                            $(".dataList").change();
+                                                                                                            $(".dataList").on("change", function () {
+                                                                                                    $(".dataItem").hide();
+                                                                                                            $(".dataItem").eq($(this).val()).show();
+                                                                                                    });
+                                                                                                            $(".dataList").change();
+                                                                                                            $(window).load(function () {
+                                                                                                                
+                                                                                                    if (window.location.hash) {
+                                                                                                    var vhash = (window.location.hash.split('#')[1]).split(";");
+                                                                                                    if (vhash[0] === "assistance-technique") {
+                                                                                                            $('#install-modem').find('.section-subtitle').addClass('is-active');
+                                                                                                            $('#install-modem').find('.content-assistance').addClass('is-visible');
+                                                                                                            $('#install-modem').goTo();
+                                                                                                    }
+                                                                                                    if (vhash[0] === "install-modem") {
+                                                                                                            $('#install-modem').find('.section-subtitle').addClass('is-active');
+                                                                                                            $('#install-modem').find('.content-assistance').addClass('is-visible');
+                                                                                                            $('#install-modem').goTo();
+                                                                                                    }
+                                                                                                    if (vhash[0] === "config-email") {
+                                                                                                    $('#config-email').find('.section-subtitle').addClass('is-active');
+                                                                                                            $('#config-email').find('.content-assistance').addClass('is-visible');
+                                                                                                            $('.emailList').val(vhash[1]).change();
+                                                                                                            $('#config-email').goTo();
+                                                                                                    }
+                                                                                                    if (vhash[0] === "config-data") {
+                                                                                                    $('#config-data').find('.section-subtitle').addClass('is-active');
+                                                                                                            $('#config-data').find('.content-assistance').addClass('is-visible');
+                                                                                                            $('.dataList').val(vhash[1]).change();
+                                                                                                            $('#config-data').goTo();
+                                                                                                    }
+                                                                                                    if (vhash[0] === "speedtest") {
+                                                                                                    $('#speedtest').find('.section-subtitle').addClass('is-active');
+                                                                                                            $('#speedtest').find('.content-assistance').addClass('is-visible');
+                                                                                                            $('#speedtest').goTo();
+                                                                                                    }
+                                                                                                    if (vhash[0] === "facturation") {
+                                                                                                    $('#facturation').find('.section-subtitle').addClass('is-active');
+                                                                                                            $('#facturation').find('.content-assistance').addClass('is-visible');
+                                                                                                            $('#facturation').goTo();
+                                                                                                    }
+                                                                                                    if (vhash[0] === "document") {
+                                                                                                    $('#document').find('.section-subtitle').addClass('is-active');
+                                                                                                            $('#document').find('.content-assistance').addClass('is-visible');
+                                                                                                            $('.docList').val(vhash[1]).change();
+                                                                                                            $('#document').goTo();
+                                                                                                    }
+                                                                                                    }
+                                                                                                    });
+                                                                                                    });
+        </script>        
+        <script type="text/javascript" src="../scripts/analytics.js"></script>        
     </body>
 </html>

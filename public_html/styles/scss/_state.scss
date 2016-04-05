@@ -8,6 +8,12 @@
     }
 }
 @include viewport(max, $max: 1055){
+    #top-menu-header{
+        .container-wrapper{
+            width: 100%;
+            padding: 0 25px;
+        }
+    }
     .equipement-item-blue, .equipement-item-orange{
         .main-image{
             margin: 0 auto 15px;
@@ -111,8 +117,22 @@
         margin-left: auto;
         margin-right: auto;
     }
+    .dropdown-content{
+        margin-left: 0px;
+        border-left: 1px solid #004494;
+        padding: 0 10px;
+    }
 }
 @include media(tab){
+    #error404{
+        height: 600px;
+        .logo-404{
+            @include vertical-align-middle;
+        }
+    }
+    .section-description{
+        font-size: 20px;
+    }
     .container-wrapper{
         width: 640px;
     }
@@ -141,7 +161,6 @@
     #offers-section{
         div[class^=phone-]{
             margin-bottom: 20px;
-            padding: 0 10px;
         }
     }
     .content-container .content-title{
@@ -204,14 +223,17 @@
         line-height: 25px;
         padding: 15px 0 20px;
     }
+    #document-links{
+        .row{
+            text-align: center;
+        }
+    }
     #social-links ul,
     #contact ul, #document-links ul
     {
         &.center{
-            @include display-flex-center;
-            li:not(:last-child){
-                margin-right: 150px;
-            }
+            @include spread-element;
+            max-width: 650px;
         }
     }
     #document-links ul li:not(:last-child){
@@ -281,10 +303,6 @@
     .descSubWrapperRight{
         padding-left: 20px;
     }
-    .rightWrapper{
-        display: block;
-        width: 75%;
-    }
     .pdf-list-extended{
         height: 200px;
     }
@@ -328,13 +346,6 @@
         height: 200px;
         .container-wrapper{
             position: relative;
-        }
-
-        #first{
-            //margin-top: 100px;
-        }
-        #last{
-            //margin-bottom: 100px;
         }
         .row{
             height: 100%;
@@ -431,9 +442,39 @@
         background-size: 583px auto;
         padding-top: 205px;
     }
+    .dropdown-content{
+        margin-left: 30px;
+        border-left: 1px solid #004494;
+        padding: 0 35px;
+    }
+    .news-item-blue{
+        .content{padding: 15px 15px 15px 25px;}
+        &.main-article .main-image{height: 400px;}
+        .main-image{height: 100%; background-size: cover;}
+        &:not(.main-article){height: 220px;}
+        &:not(.main-article)>*[class^="phone-"]{ height: 100%;}
+    }
+}
+
+@include viewport(range, $min: 672, $max: 1055){
+    #document-links ul li {
+        line-height: inherit;
+    }
 }
 
 @include media(desk){
+    .rightWrapper{
+        width: 75%;
+        text-align: left;
+        .typeContainer{
+            margin-top: auto;
+        }
+    }
+    .dropdown-content{
+        margin-left: 30px;
+        border-left: 1px solid #004494;
+        padding: 0 35px;
+    }
     .center-tab{
         @include vertical-align-middle;
     }
@@ -486,7 +527,7 @@
     }
     .content-container{
         padding-top: 100px !important;
-        margin-bottom: 40px !important;
+        margin-bottom: 40px;
     }
     .section-layout.content-container{
         height: 400px;
@@ -632,6 +673,9 @@
     .section-subtitle{
         text-align: left;
     }
+    .section-description {
+        margin: 0 0 10px;
+    }
     .section-price{
         font-size: 58px;
         div{
@@ -759,7 +803,7 @@
     }
 
     #social-links{
-        padding: 23px 0 12px;
+        padding: 20px 0 7px;
     }
     #social-links .text, #contact .text{
         text-align: left;
@@ -774,7 +818,7 @@
         margin-top: 8px;
     }
     #contact ul{
-        width: 75%;
+        width: 75% !important;
     }
     #social-links nav{
         width: 80%;
@@ -814,6 +858,9 @@
     }
     #document-links .icon{
         display: inline-block;
+    }
+    #document-links{
+        padding: 20px 0 11px;
     }
     #document-links a{
         line-height: 31px;
@@ -955,14 +1002,11 @@
 
 
 @include viewport(range, $min: 1056, $max: 1302){
-    #offers-section div[class^=phone-]{
-        padding: 0 5px;
-    }
     .offer-item-blue .description, .offer-item-orange .description{
         font-size: 19px;
     }
     .offer-item-orange .item-body > li:not(:first-child), .offer-item-blue .item-body > li:not(:first-child){
-        padding-left: 15px !important;
+        padding-left: 9px !important;
     }
     .offer-item-orange .check-list li .icon-check-ico, .offer-item-blue .check-list li .icon-check-ico{
         margin-right: 18px;
@@ -994,9 +1038,69 @@
             margin: 5px 0;
         }
     }
+    .notif-one{
+        width: 315px;
+        height: 115px;
+        top: 1%;
+        left: 52%;
+    }
+    .notif-two{
+        width: 315px;
+        height: 135px;
+        top: 17%;
+        left: 52%;
+    }
+    .notif-three{
+        width: 730px;
+        height: 210px;
+        top: 38%;
+        left: 4%;
+    }
+    .notif-four{
+        width: 720px;
+        height: 90px;
+        top: 66%;
+        left: 4%;
+    }
+    .notif-five{
+        width: 700px;
+        height: 85px;
+        top: 90%;
+        left: 6%;
+    }
 }
 
 @include media(lgdesk){
+    .notif-one{
+        width: 315px;
+        height: 115px;
+        top: 1%;
+        left: 52%;
+    }
+    .notif-two{
+        width: 315px;
+        height: 135px;
+        top: 17%;
+        left: 52%;
+    }
+    .notif-three{
+        width: 730px;
+        height: 280px;
+        top: 38%;
+        left: 4%;
+    }
+    .notif-four{
+        width: 720px;
+        height: 125px;
+        top: 66%;
+        left: 4%;
+    }
+    .notif-five{
+        width: 700px;
+        height: 85px;
+        top: 90%;
+        left: 6%;
+    }
     .container-wrapper{
         width: 1280px;
     }
@@ -1151,7 +1255,6 @@
     }
     .section-description {
         font-size: 18px;
-        margin: 0 0 45px;
     }
     .bottom-info{
         font-size: 10pt;

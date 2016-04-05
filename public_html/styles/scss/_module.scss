@@ -114,9 +114,9 @@ svg:not(:root) {
     z-index: 1;
 }
 .section-title{
-    font-size: 30px;
-    line-height: 30px;
-    margin: 25px 0;
+    font-size: 32px;
+    line-height: 32px;
+    margin: 12px 0 25px;
     text-transform: uppercase;
     strong{
         display: block;
@@ -157,7 +157,8 @@ svg:not(:root) {
     text-transform: uppercase;
 }
 .section-description{
-    font-size: 14px;
+    font-size: 21px;
+    line-height: 25px;
     font-weight: 600;
     margin: 0 0 20px;
 }
@@ -246,7 +247,7 @@ span[class^=icon-]
     display: inline-block;
     position: relative;
     font-weight: 800;
-    font-size: 54px;
+    font-size: 42px;
     margin: 0 0 20px;
     padding-top: 5px;
     .price-label{
@@ -542,6 +543,20 @@ span[class^=icon-]
             border-bottom: 2px dotted $grey;
         }
     }
+    &.white{
+        li:not(.active):hover{
+            .link{
+                border-bottom: 2px dotted $white;
+            }
+        }
+    }
+    &.blue{
+        li:not(.active):hover{
+            .link{
+                border-bottom: 2px dotted $blue;
+            }
+        }
+    }
 }
 
 // BUTTONS
@@ -592,6 +607,7 @@ span[class^=icon-]
 .btn-white,
 .btn-outline-white,
 .btn-outline-black,
+.btn-tr-white,
 .mobile-menu-button .mobile-button-blue
 {
     @include btn;
@@ -634,7 +650,7 @@ span[class^=icon-]
     background-color: $blue;
     text-shadow: 0 2px 5px rgba(0,0,0,0.3);
     margin: 0;
-    &:hover:not([disabled]){
+    &:hover{
         background-color: lighten($blue, 5%);
     }
 }
@@ -643,7 +659,7 @@ span[class^=icon-]
     color: $white;
     background-color: $orange;
     @include box-shadow(0px 2px 4px 0 lighten($black, 15%));
-    &:hover:not([disabled]){
+    &:hover{
         background-color: lighten($orange, 5%);
     }
 }
@@ -693,12 +709,20 @@ span[class^=icon-]
     border: 2px solid $white;
     background-color: $section-black;
     color: $white;
-    &:hover:not([disabled]){
+    &:hover{
         background-color: $white;
         color: $section-black;
     }
 }
-
+.btn-tr-white{
+    border: 2px solid $white;
+    background-color: transparent;
+    color: white;
+    &:hover{
+        background-color: $white;
+        color: $section-black;
+    }
+}
 #offers-section{
     .section-subtitle{
         margin-bottom: 40px;
@@ -776,7 +800,7 @@ span[class^=icon-]
         }
     }
 }
-.searchMenu button, .DesktopMenu{
+.searchMenu button, .DesktopMenu, .news-menu{
     background-color: $white;
     border: 1px solid lighten($grey, 8%);
     color: $blue;
@@ -784,7 +808,7 @@ span[class^=icon-]
     font-weight: 400;
     z-index: 3;
 }
-.DesktopMenu{
+.DesktopMenu, .news-menu ul{
     display: block;
     li{
         display: block;
@@ -867,6 +891,10 @@ span[class^=icon-]
     display: inline-block;
     float: left;
     width: 100%;
+    text-align: center;
+    .typeContainer{
+        margin-top: 15px; 
+    }
 }
 .priceWrapperRight {
     display: inline-block;
@@ -887,6 +915,7 @@ span[class^=icon-]
     display: block;
     position: relative;
     border-bottom: 1px solid lighten($grey, 8%);
+    text-align: left;
 }
 .squareWrapper {
     position: relative;
@@ -1039,6 +1068,7 @@ span[class^=icon-]
     position: relative;
     border-radius: 6px;
     border: 1px solid $color;
+    background-color: $white;
     text-align: center;
     margin-bottom: 20px;
     .item-header, .item-body, .item-footer{
@@ -1052,7 +1082,7 @@ span[class^=icon-]
     .item-header{
         border-radius: 4px 4px 0px 0px;
         padding: 18px 0 15px;
-        font-size: 24px;
+        font-size: 22px;
         text-transform: uppercase;
     }
     .item-body{
@@ -1064,7 +1094,6 @@ span[class^=icon-]
             display: block;
             position: relative;
             padding: 20px 0;
-            background-color: $white;
         }
     }
     .item-footer{
@@ -1143,20 +1172,21 @@ span[class^=icon-]
             .icon-check-ico{
                 position: relative;
                 top: 2px;
+                line-height: 10px;
                 margin-right: 25px;
                 font-size: 16px;
             }
             display: block;
-            padding: 3px 0;
+            line-height: 22px;
             font-size: 15px;
             font-weight: 400;
         }
     }
 }
-.offer-item-blue, .equipement-item-blue{
+.offer-item-blue, .equipement-item-blue, .news-item-blue{
     @include offer-item($blue);
 }
-.offer-item-orange, .equipement-item-orange{
+.offer-item-orange, .equipement-item-orange, .news-item-orange{
     @include offer-item($orange);
 }
 #equipement-section{
@@ -1251,7 +1281,7 @@ span[class^=icon-]
 }
 
 
-.equipement-item-blue, .equipement-item-orange{
+.equipement-item-blue, .equipement-item-orange, .news-item-blue, .news-item-orange{
     background-color: $white;
     border-color: lighten($grey, 10%);
     border-radius: 2px;
@@ -1375,6 +1405,203 @@ span[class^=icon-]
         padding: 0 !important;
         font-size: 1em;
         font-weight: 400;
+    }
+}
+
+.article{
+    text-align: justify;
+    .link{display: inline; color: $blue; text-decoration: underline; font-size: 400;}
+    .header, .content{
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 400;
+    }
+    .header{
+        .meta{
+            font-size: 0.85em;
+        }
+        .title{
+            text-transform: uppercase;
+            font-weight: 600;
+            margin: 10px 0 15px;
+            font-size: 1.6em;
+            line-height: 25px;
+        }
+        .chapeau{
+            font-size: 0.95em;
+            line-height: 20px;
+            font-style: italic;
+            margin-bottom: 25px;
+        }
+    }
+    .content{
+        p,ul,li{display: block;}
+        li{
+            &:not(:first-child):not(:last-child){
+                margin:5px 0;
+            }
+        }
+    }
+    .sous-titre{
+        color: $dark-grey;
+        font-size: 1.1em;
+        font-weight: 600;
+        margin: 10px 0 5px;
+    }
+    .image{
+        display: inline-block;
+        max-width: 100%;
+        border: 1px solid $grey;
+        background-color: lighten($grey, 20%);
+        padding: 6px;
+        margin: 20px 0;
+        img{
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    .astuce{
+        margin: 30px 0;
+        padding: 10px 15px 15px;
+        border: 1px solid $blue;
+        h2{
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-size: 1.15em;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-style: italic;
+        }
+        p{margin: 5px 0; &:last-child{margin-bottom: 0;}}
+    }
+    &~.back{
+        font-size: 1.1em;
+        span[class^="icon-"]{margin-right: 5px; font-size: 0.85em;}
+        &:hover{text-decoration: underline;}
+    }
+}
+
+.news-item-blue{
+    @include clearfix();
+    overflow: hidden;
+    padding: 5px;
+    &:not(:last-child){
+        margin-bottom: 10px;
+    }
+    a{
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        &:hover{
+            background-color: rgba(255,255,255,0.30);
+        }
+    }
+    .main-image{
+        display: block;
+        height: 200px;
+        width: 100%;
+        background-position: center center;
+        background-size: auto 100%;;
+        background-repeat: no-repeat;
+        margin: 0;
+    }
+    .content{
+        padding: 15px;
+    }
+    .header, .description{
+        text-align: left;
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: 400;
+    }
+    .header{margin-bottom: 20px;}
+    .header .meta{
+        font-size: 0.9em;
+        margin-bottom: 5px;
+    }
+    .header .title{
+        color: $blue;
+        font-weight: 600;
+        font-size: 1.3em;
+    }
+    .description{
+        display: block;
+        position: relative;
+        height: auto;
+        text-align: justify;
+        color: $dark-grey;
+        margin: 0;
+    }
+}
+
+.btn-account{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-repeat: repeat-x;
+    color: darken($dark-grey, 10%);
+    font-weight: 600;
+    background-color: #F5F5F5 !important;
+    background-image: linear-gradient(to bottom, #FFFFFF, #E6E6E6);
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #A2A2A2 !important;
+    border-radius: 4px;
+    border: 1px solid;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    &:hover{
+        background-color: #E6E6E6 !important;
+        background-position: 0 -15px;
+        color: #333 !important;
+        transition: background-position 0.1s linear 0s;
+    }
+}
+.account-breadcrum{
+    line-height: 35px;
+    font-size: 14px;
+    font-weight: 600;
+    color: $blue;
+    span[class^='icon-']{margin: 0 5px; font-size: 0.85em; top: 1px;}
+}
+.account-item{
+    display: block;
+    position: relative;
+    text-align: center;
+    border-radius: 4px;
+    background-color: lighten($grey, 22%);
+    border: 2px solid lighten($grey, 15%);
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 800;
+    color: $blue;
+    @include transition($transitionUi);
+    cursor: pointer;
+    a{
+        display: block;
+        padding: 25px 0;
+    }
+    .icon{
+        font-size: 4.5em;
+        margin-bottom: 20px;
+        span{margin: 0;}
+    }
+    .txt{
+        span[class^="icon-"]{
+            margin: 0;
+            margin-left: 7px;
+            font-size: 0.84em;
+        }
+    }
+    &:hover{
+        background-color: $blue;
+        border-color: $blue;
+        color: $white;
     }
 }
 
@@ -1675,27 +1902,6 @@ span[class^=icon-]
     }
 }
 
-/*
-#mobiles{
-    .sub-title{
-        color: #E75E0A;
-        font-weight: 600;
-        margin-bottom: 4px;
-    }
-    .details{
-        font-size: 17px;
-        line-height: 22px;
-    }
-}
-#installation{
-    .details{
-        font-size: 19px;
-        line-height: 25px;
-        text-align: left;
-        color: #004994;
-    }
-}
-*/
 #twenty-years{
     background-image: url(../../images/Homepage/CONTENU/320px/20ans_LOL.jpg);
     background-position: center top;
@@ -1789,6 +1995,7 @@ footer
     background-color: $white;
     .brand-name{
         @include transition($transitionUi);
+        line-height: 17px;
     }
     a:hover
         {
@@ -1882,6 +2089,26 @@ footer
     @include box-shadow(0 1px 1px 0 rgba(255, 255, 255, 0.18));
 }
 
+
+.promos-link{
+    display: block;
+    position: relative;
+    font-size: 1.2em;
+    color: $orange;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 5px;
+    &:hover{
+        text-decoration: underline;
+    }
+    span[class^=icon-]{
+        margin-right: 0;
+        margin-left: 7px;
+        font-size: 1.2em;
+        top: 3px;
+    }
+}
+
 .footer-top-links
 {
     font-weight: 300;
@@ -1908,8 +2135,8 @@ footer
 .footer-bottom-links, .copyright
 {
     font-size: 10pt;
-    line-height: 53px;
-
+    line-height: 20px;
+    padding: 15px 0;
     width: 100%;
 
     .icon-icone-lol
@@ -1944,9 +2171,11 @@ footer
 }
 .footer-bottom-links {
     text-align: center;
-    line-height: 35px;
     padding: 10px 0; 
     font-weight: 300;
+    li{
+        line-height: 35px;
+    }
     li:first-child{
         padding-left: 30px;
     }
@@ -2074,6 +2303,7 @@ footer
     h4{
         font-weight: 800;
         font-size: 24px;
+        line-height: 30px;
         text-transform: uppercase;
         margin: 0 0 30px;
     }
@@ -2398,31 +2628,9 @@ h2.contact-title {
         padding: 9px 30px 8px;
     }
 }
-.input-group-table{
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-    .input-group.inline{
-        margin-bottom: 10px;
-        *:not(span) {
-            display: initial;
-        }
-        display: table-row;
-        &>label, &>input, &>.input-group-cell{
-            display: table-cell;
-            margin: 5px 0;
-        }
-        .input-group-cell input[type="radio"]:not(:first-child){
-                margin-left: 30px;
-        }
-    }
-}
 .input-group{
     margin-bottom: 25px;
-    &.radio{
-        margin-bottom: 10px;
-    }
-    &:not(.inline) *:not(span){
+    *:not(span){
         display: block;
     }
     input:not([type=radio]), textarea, select{
@@ -2443,10 +2651,9 @@ h2.contact-title {
         color: lighten($dark-grey, 4%);
         font-size: 1.1em;
         margin-bottom: 10px;
-        line-height: 20px;
     }
 
-    input[type="text"], input[type="password"], input[type="number"]{
+    input[type="text"]{
         height: 35px;
         padding-left: 10px;
         background-color: $light-grey;
@@ -2555,6 +2762,47 @@ h2.contact-title {
 
 // JS MODULES
 // --------------------------------------------------
+
+.header-dropdown{
+    position: relative;
+    display: inline-block;
+        padding: 0;
+    button{
+        position: relative;
+        z-index: 2;
+        outline: 0;
+        background: none;
+        border: none;
+        padding: 9px 10px ;
+        width: 105px;
+        border-bottom: 1px solid darken($blue, 6%);
+        span[class^="icon-"]{
+            margin-right: 0;
+            margin-left: 8px;
+            font-size: 0.7em;
+            @include transform(rotate(90deg));
+        }
+        &:hover, &.is-active{
+            background-color: darken($blue, 3%);
+        }
+    }
+    .drop{
+        display: none;
+        position: absolute;
+        width: 105px;
+        z-index: 1;
+        background-color: darken($blue, 3%);
+        border-top: 1px solid $blue;
+        li{margin: 0; display: block;}
+        a{
+            display: block;
+            padding: 9px 10px 8px;
+        }
+        &.is-visible{
+            display: block;
+        }
+    }
+}
 
 .dropdown{
     &>[data-trigger]{
@@ -2683,4 +2931,115 @@ h2.contact-title {
     z-index: 999999;
     max-width: 500px;
     min-width: 300px;
+}
+
+/*Mise en page Magazine*/
+/*-----------------------------------------------------------------------------*/
+#slider-magazine1{
+    &:after{
+        content:"Lire maintenant \A en francais";
+        white-space: pre;
+    }
+}
+#slider-magazine2{
+    &:after{
+        content:"Read now\Ain english";
+        white-space: pre;
+    }
+}
+#slider-magazine1, #slider-magazine2{
+    position: relative;
+    cursor: pointer;
+    max-width: 300px; 
+    margin: auto;
+    &:after{
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(255,255,255,0.80);
+        color: $blue;
+        font-size: 1.6em;
+        line-height: 25px;
+        font-weight: 800;
+        text-transform: uppercase;
+        text-align: center;
+        vertical-align: middle;
+        padding-top: 195px;
+    }
+    img{
+        position: relative;
+        width: 100%; 
+        height: auto;
+    }
+    &:hover{
+        &:after{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+/*VIDEO TEST*/
+/*----------------------------------------------------------------------------*/
+#video-fond {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: repeat;
+    &.image-1{background-image: url(../../images/TV/header/football_672x320px.jpg);}
+    &.image-2{background-image: url(../../images/TV/header/love_672x320px.jpg);}
+    &.image-3{background-image: url(../../images/TV/header/space_672x320px.jpg);}
+    &:after{
+        content:"";
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url(../../images/TV/pattern/subtle_carbon/subtle_carbon.png);
+        background-repeat: repeat;
+        opacity: 0.55;
+    }
+}
+#video-fond > video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* 1. Pas de support d'object-fit */
+@media (min-aspect-ratio: 16/9) {
+    #video-fond > video {
+        height: 300%;
+        top: -100%;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    #video-fond > video {
+        width: 300%;
+        left: -100%;
+    }
+}
+/* 2. En cas de support d'object-fit, écrase les règles en (1) */
+@supports (object-fit: cover) {
+    #video-fond > video {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
 }

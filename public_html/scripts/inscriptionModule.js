@@ -517,7 +517,7 @@ var Cart = (function () {
             '<ul>' +
             '<li id="monthlyPrice">' +
             '<span class="prices-label">Coûts mensuels :</span>' +
-            '<span class="prices-price">{{price.month}} €<span class="normal lowercase"> /mois<span class="exponent"> (2)</span></span></span>' +
+            '<span class="prices-price">{{price.month}} €<span class="normal lowercase"> /mois<span class="exponent"></span></span></span>' +
             '</li>' +
             '<li id="uniquePrice">' +
             '<span class="prices-label">Coûts Uniques :</span>' +
@@ -580,14 +580,14 @@ var Cart = (function () {
         $('#panier').html(html);
         $('#monthlyPriceNoPromos').remove();
         html = Mustache.render(tplFullPrice, Panier);
-        $('#panier').parent().append(html);
+        /*$('#panier').parent().append(html);
         if ($('input[value="2848"]').is(':checked')) {
             $('#monthlyPriceNoPromos').show();
             $('#monthlyPrice').find('.exponent').show();
         } else {
             $('#monthlyPriceNoPromos').hide();
             $('#monthlyPrice').find('.exponent').hide();
-        }
+        }*/
         if ($('input[value="5313"]').is(':checked')) {
             $('#travelXpens').show();
         } else {
@@ -759,7 +759,7 @@ var modem_List2 = [
 ];
 var aboTel = new Item("3236", "a_telephone", "Abo téléphonique", 0, true, "Inclus dans votre abonnement", true, "../images/Shop/Telephonie.jpg");
 var lolTVRemise = new Item("5618", "a_tvRemise", "6 mois gratuits", -17.00, true, "après 17€/mois", true, null);
-var lolTv = new SellProduct("2848", "a_tv", "LOLTV", 17.00, true, ["+110 Chaînes TV", "20 chaînes HD", "40 chaînes radio", " ", " "], false, "../images/Shop/LOLTV.jpg", '6 mois', true, lolTVRemise);
+var lolTv = new SellProduct("2848", "a_tv", "LOLTV", 17.00, true, ["+110 Chaînes TV", "20 chaînes HD", "40 chaînes radio", " ", " "], false, "../images/Shop/LOLTV.jpg", '6 mois', false, null);
 var lolTv_materielList = [
     new Item("5137", "m_tv_materiel", "Décodeur LOLTV (requis)", 4.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD", " "], false, "../images/Shop/Minix1.jpg"),
     new Item("5304", "m_tv_materiel", "Décodeur pour 2ème TV", 5.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD", " "], false, "../images/Shop/Minix2.jpg")
@@ -767,7 +767,7 @@ var lolTv_materielList = [
 var remiseInstall = new Item("5623", "p_installationRemise", "Installation offerte", -89.00, false, "", true, null);
 var installNoRemise = new SellProduct("5313", "p_installation", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", null, false, null);
 var installRemise = new SellProduct("5313", "p_installation", "Installation par équipe<span class='exponent'>(1)</span>", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", null, true, remiseInstall);
-var selfInstall = new SellProduct("5612", "p_installation", "Installation par Self-Install-Kit", 25.00, false, "Je fais l'installation moi-même à l'aide du kit d'installation", false, "../images/Shop/self-install.png", null, false, null);
+var selfInstall = new SellProduct("5314", "p_installation", "Installation par Self-Install-Kit", 25.00, false, "Je fais l'installation moi-même à l'aide du kit d'installation", false, "../images/Shop/self-install.png", null, false, null);
 var remiseActivation = new Item("5611", "p_activationRemise", "Activation offerte", -85.00, false, "", true, null);
 var activation = new SellProduct("5610", "p_activation", "Activation", 85.00, false, "", true, null, null, true, remiseActivation);
 var typeInstall = [installNoRemise, selfInstall];

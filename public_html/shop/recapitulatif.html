@@ -160,10 +160,12 @@
                     <div class="container-wrapper">
                         <div class="row">
                             <nav class="pull-left">
-                                <ul class="top-menu-header-links left">
-                                    <li><a href="../index.htm">Particuliers</a></li>
-                                    <li><a href="http://www.internet.lu/business/" target="blank_">Business</a></li>
-                                </ul>
+                                <div class="header-dropdown top-menu-header-links left">
+                                    <button>Particuliers<span class="icon-right-arrow"></span></button>
+                                    <ul class="drop">
+                                        <li><a href="http://www.internet.lu/business/">Business</a></li>
+                                    </ul>
+                                </div>
                             </nav>
                             <nav class="pull-right">
                                 <ul class="top-menu-header-links right">
@@ -393,7 +395,7 @@
                                 <div class="clearfix phone-12 phone-mt-30">
                                     <div class="input-group inline phone-mb-10 lgdesk-9">
                                         <div class="checkbox-container">
-                                            <input id="Condition" type="checkbox" name="p_condition"/>
+                                            <input id="Condition" type="checkbox" name="p_condition">
                                             <div></div>
                                         </div>
                                         <label class="phone-ml-15">Je déclare avoir pris connaissance et accepté la durée minimale du contrat, les spécifications des produits ainsi que les conditions générales et particulières de Luxembourg Online.</label>
@@ -416,7 +418,7 @@
                                         /* For mobile, it's typically better to position checkbox on top of clickable
                                            area and turn opacity to 0 instead. */
                                     }
-                                    .checkbox-container{display: inline-block;}
+                                    .checkbox-container{display: inline-block !important; }
                                     input[type=checkbox] + div{
                                         display: inline-block;
                                         position: relative;

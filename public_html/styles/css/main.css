@@ -5712,7 +5712,7 @@ h2.contact-title {
 
 .input-group {
   margin-bottom: 25px; }
-  .input-group *:not(span) {
+  .input-group:not(.inline) *:not(span) {
     display: block; }
   .input-group input:not([type=radio]), .input-group textarea, .input-group select {
     width: 100%;
@@ -5734,8 +5734,9 @@ h2.contact-title {
   .input-group label {
     color: #8b8b8b;
     font-size: 1.1em;
-    margin-bottom: 10px; }
-  .input-group input[type="text"] {
+    margin-bottom: 10px;
+    line-height: 20px; }
+  .input-group .input-group input[type="text"], .input-group .input-group input[type="password"], .input-group .input-group input[type="number"] {
     height: 35px;
     padding-left: 10px;
     background-color: #f8f8f8;

@@ -2639,7 +2639,7 @@ h2.contact-title {
 }
 .input-group{
     margin-bottom: 25px;
-    *:not(span){
+    &:not(.inline) *:not(span){
         display: block;
     }
     input:not([type=radio]), textarea, select{
@@ -2660,9 +2660,10 @@ h2.contact-title {
         color: lighten($dark-grey, 4%);
         font-size: 1.1em;
         margin-bottom: 10px;
+        line-height: 20px;
     }
 
-    input[type="text"]{
+    .input-group input[type="text"], .input-group input[type="password"], .input-group input[type="number"]{
         height: 35px;
         padding-left: 10px;
         background-color: $light-grey;

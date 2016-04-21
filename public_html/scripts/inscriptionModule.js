@@ -65,17 +65,17 @@ var StepTransition = (function () {
     var tplFormFiber = '<div class="clearfix">' +
             '<div class="phone-mb-20 phone-mt-30">' +
             '<h3 class="step-subtitle">Installation fibre</h3>' +
-            '<p class="step-subdescription">Est-ce que le câblage interne de votre habitation est conforme pour le raccordement Internet via la Fibre Optique?</p>' +
+            '<p class="step-subdescription">Est-ce que le câblage interne de votre habitation est conforme pour le raccordement Internet via la fibre optique?</p>' +
             '<div class="fibre-infos">' +
             '<div class="icon-info-icone"></div>' +
-            '<div class="infos"><p>Dans le cas d\'un appartement, une Fibre Optique doit relier l\'arrivée Post (TCS) à votre appartement.</p>' +
+            '<div class="infos"><p>Dans le cas d\'un appartement, une fibre optique doit relier l\'arrivée Post (TCS) à votre appartement.</p>' +
             '<p>Dans le cas d\'une maison, un câble réseau doit relier l\'arrivée Post (TCS) à une prise de votre maison. </p></div>' +
             '</div>' +
             '</div>' +
             '<div data-form="fibre" class="step-form clearfix">' +
             '<div class="phone-12">' +
             '<div class="input-group radio">' +
-            '<input id="Cablage" type="radio" name="p_client" value="true" required><label for="Cablage">Mon cablâge interne est conforme pour le raccordement Internet via la Fibre Optique.</label>' +
+            '<input id="Cablage" type="radio" name="p_client" value="true" required><label for="Cablage">Mon cablâge interne est conforme pour le raccordement Internet via la fibre optique.</label>' +
             '</div>' +
             '<div class="input-group">' +
             '<input id="NotCablage" type="radio" name="p_client" value="false" required><label for="NotCablage">Mon cablâge interne n\'est pas conforme et je demande à Luxembourg Online d\'entreprendre les travaux nécessaires. </label>' +
@@ -141,8 +141,8 @@ var StepTransition = (function () {
                 html = Mustache.render(tplItem, {input: "radio", required: true, isSellProduct: false, group: 'm_modem', items: currentItems_list['m_modem']});
                 html += '<div class="clearfix dropdown">' +
                         '<div class="phone-mb-30 phone-mt-30" data-trigger>' +
-                        '<h3 class="step-subtitle">Ajoutez du Matériel Optionnel<span class="icon-right-arrow"></span></h3>' +
-                        '<p class="step-subdescription">Si besoin vous trouverez ci-dessous de l\'équipement auxiliaire pour améliorer ou élargir votre réseau interne.</p>' +
+                        '<h3 class="step-subtitle">Matériel complémentaire<span class="icon-right-arrow"></span></h3>' +
+                        '<p class="step-subdescription">Si besoin, vous trouverez ci-dessous du matériel supplémentaire pour améliorer la qualité de votre réseau ou l’étendre. </p>' +
                         '</div>' +
                         '<div>';
                 html += Mustache.render(tplItem, {input: "checkbox", required: false, isSellProduct: false, group: false, items: currentItems_list['m_materiels'], index: function () {
@@ -165,7 +165,7 @@ var StepTransition = (function () {
             if ($(this).attr('id') == 'tv') {
                 html = Mustache.render(tplItem, {input: "checkbox", required: false, isSellProduct: true, group: 'a_tv', items: currentItems_list['a_tv']});
                 html += '<div class="phone-mb-30 phone-mt-30">' +
-                        '<h3 class="step-subtitle">Location décodeur</h3>' +
+                        '<h3 class="step-subtitle">Décodeur TV</h3>' +
                         '</div>';
                 html += Mustache.render(tplItem, {input: "checkbox", required: false, isSellProduct: false, group: false, items: currentItems_list['m_tv_materiel'], index: function () {
                         return ++window['INDEX'] || (window['INDEX'] = 0);
@@ -510,7 +510,7 @@ var Cart = (function () {
             '</ul>' +
             '</div>' +
             '<div class="term">' +
-            '<h4>Durée Contrat</h4><span class="price">24 mois</span>' +
+            '<h4>Durée du Contrat</h4><span class="price">24 mois</span>' +
             '</div>';
     '</li>';
     var tplPrice = '<li class="prices">' +
@@ -757,17 +757,17 @@ var modem_List2 = [
     new Item("5292", "m_modem", "Location FRITZ!Box 7360", 4.00, true, ["LAN :  2 x Gigabit, 2 x fast Ethernet", "WLAN : jusqu'à 300Mbit/s", "Téléphone :  1 x analogique, DECT", " "], true, "../images/equipment/modem/7360/7360.png"),
     modem7490
 ];
-var aboTel = new Item("3236", "a_telephone", "Abo téléphonique", 0, true, "Inclus dans votre abonnement", true, "../images/Shop/Telephonie.jpg");
+var aboTel = new Item("3236", "a_telephone", "Abonnement téléphonique", 0, true, ["Appels nationaux fixes illimités", "(sauf numéros spéciaux)", "Appels illimités vers mobiles LOL", "EU120 (120 min vers les fixes de l'UE)", " "], true, "../images/Shop/Telephonie.jpg");
 var lolTVRemise = new Item("5618", "a_tvRemise", "6 mois gratuits", -17.00, true, "après 17€/mois", true, null);
 var lolTv = new SellProduct("2848", "a_tv", "LOLTV", 17.00, true, ["+110 Chaînes TV", "20 chaînes HD", "40 chaînes radio", " ", " "], false, "../images/Shop/LOLTV.jpg", '6 mois', false, null);
 var lolTv_materielList = [
-    new Item("5137", "m_tv_materiel", "Décodeur LOLTV (requis)", 4.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD", " "], false, "../images/Shop/Minix1.jpg"),
+    new Item("5137", "m_tv_materiel", "Décodeur LOLTV", 4.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD", " "], false, "../images/Shop/Minix1.jpg"),
     new Item("5304", "m_tv_materiel", "Décodeur pour 2ème TV", 5.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD", " "], false, "../images/Shop/Minix2.jpg")
 ];
 var remiseInstall = new Item("5623", "p_installationRemise", "Installation offerte", -89.00, false, "", true, null);
-var installNoRemise = new SellProduct("5313", "p_installation", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", null, false, null);
-var installRemise = new SellProduct("5313", "p_installation", "Installation par équipe<span class='exponent'>(1)</span>", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", null, true, remiseInstall);
-var selfInstall = new SellProduct("5314", "p_installation", "Installation par Self-Install-Kit", 25.00, false, "Je fais l'installation moi-même à l'aide du kit d'installation", false, "../images/Shop/self-install.png", null, false, null);
+var installNoRemise = new SellProduct("5313", "p_installation", "Installation par une équipe <span class='exponent'>(1)</span>", 89.00, false, " Je souhaite qu’une équipe spécialisée vienne s’occuper de l’installation à mon domicile. Je vais donc être rappelé par Luxembourg Online pour fixer la date du rendez-vous. ", true, "../images/Shop/install-equip.png", null, false, null);
+var installRemise = new SellProduct("5313", "p_installation", "Installation par une équipe <span class='exponent'>(1)</span>", 89.00, false, " Je souhaite qu’une équipe spécialisée vienne s’occuper de l’installation à mon domicile. Je vais donc être rappelé par Luxembourg Online pour fixer la date du rendez-vous. ", true, "../images/Shop/install-equip.png", null, true, remiseInstall);
+var selfInstall = new SellProduct("5314", "p_installation", "Installation avec un kit de self-install", 25.00, false, "Je procède à l’installation moi-même à l’aide du kit de self-install qui me sera fourni par Luxembourg Online.", false, "../images/Shop/self-install.png", null, false, null);
 var remiseActivation = new Item("5611", "p_activationRemise", "Activation offerte", -85.00, false, "", true, null);
 var activation = new SellProduct("5610", "p_activation", "Activation", 85.00, false, "", true, null, null, true, remiseActivation);
 var typeInstall = [installNoRemise, selfInstall];

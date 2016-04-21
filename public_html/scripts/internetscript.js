@@ -28,11 +28,11 @@ function natSort(as, bs) {
     }
     return a.length - b.length;
 }
-var nonDispoTemplate = '<div class="not-dispo"><div class="not-dispo-info">Offre <br />indisponible <br />à votre adresse</div></div>';
+var nonDispoTemplate = 'Indisponible <br />à votre adresse';
+var nonDispoAllTemplate = 'Nous ne pouvons malheureusement vérifier l’éligibilité de votre adresse. <br />Merci de nous contacter au 2799 0000 pour plus d\'information.';
 var buttonDispoTempate = '<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_FR.pdf" target="_blank">Abonnez-vous</a>';
 var buttonPromoFibre = '<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_OFFRE2_FR.pdf" target="_blank">Abonnez-vous</a>';
 var buttonPromoTv = '<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_OFFRE1_FR.pdf" target="_blank">Abonnez-vous</a>';
-
 var checkDispoTemplate = '<section id="test-offres" class="clearfix">' +
         '<div class="container-wrapper">' +
         '<div class="row">' +
@@ -58,7 +58,6 @@ var checkDispoTemplate = '<section id="test-offres" class="clearfix">' +
         '</div>' +
         '</div>' +
         '</section>';
-
 var popuptemplate = '<div id="testDispo" class="popup">' +
         '<div class="background-client"></div>' +
         '<div class="white-pannel">' +
@@ -75,7 +74,6 @@ var popuptemplate = '<div id="testDispo" class="popup">' +
         '</div>' +
         '</div>' +
         '</div>';
-
 var obj = {},
         streetList = {},
         currRue = "",
@@ -83,7 +81,6 @@ var obj = {},
         nbrTimeout = "",
         vhash = "",
         _cp = "", _ville = "", _rue = "", _nbr = "";
-
 //détecte le bouton pour offrir le test de dispo et ajoute la popup dans la page
 function createDispoPopup() {
     if ($('.openPopup[data-popup=1]').length) {
@@ -94,17 +91,18 @@ function createDispoPopup() {
 function insertLink(id, service) {
     return '<a class="btn-blue btn-subscription" href="../shop/inscription.html#' + service + ';' + id + '">Abonnez-vous</a>';
 }
-
+function printNonDispo(string){
+    return '<div class="not-dispo"><div class="not-dispo-info">'+string+'</div></div>';
+}
 function checkDispo(homeId, boolean) {
     if (homeId !== undefined || homeId !== null || homeId !== '') {
         $.ajax({
-            url: "http://shop.internet.lu/Scripts/sql.exe?SqlDB=LOLShop&Sql=FOServiceMap:FOServiceListNew.phs&_HomeId=" + homeId,
+            url: "http://shop.internet.lu/Scripts/sql.exe?SqlDB=LOLShop&Sql=FOServiceMap:FOServiceListNewEx.phs&_HomeId=" + homeId,
             dataType: 'jsonp',
             success: function (data) {
                 obj = data;
                 console.log(obj);
                 ab = ["", "", "", "", "", "", ""];
-                
                 if (obj.Service[6]) {  // Dégroupage DSL
                     articleObj = obj.Service[6].article;
                     if (obj.Service[6] && $(articleObj[0]).size() > 0) {//entry exists
@@ -236,30 +234,34 @@ function checkDispo(homeId, boolean) {
 
 
                 $('.k24, .k30, .k100, .k200').next().remove();
-                $('.k24, .k30, .k100, .k200').find('.not-dispo').remove();
-                if (ab[0] == "") {
-                    $(nonDispoTemplate).prependTo('.k24').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                $('#offers-section').find('.not-dispo').remove();
+                if (ab[0] == "" && ab[1] == "" && ab[2] == "" && ab[3] == "") {
+                    $(printNonDispo(nonDispoAllTemplate)).prependTo('#offers-section .container-wrapper').css('visibility', 'visible').animate({opacity: 1.0}, 500);
                 } else {
-                    $('.k24').find('.not-dispo').remove();
-                    $(insertLink(ab[0][0], ab[0][1])).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                }
-                if (ab[1] == "") {
-                    $(nonDispoTemplate).prependTo('.k30').css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                } else {
-                    $('.k30').find('.not-dispo').remove();
-                    $(insertLink(ab[1][0], ab[1][1])).insertAfter($('.k30')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                }
-                if (ab[2] == "") {
-                    $(nonDispoTemplate).prependTo('.k100').css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                } else {
-                    $('.k100').find('.not-dispo').remove();
-                    $(insertLink(ab[2][0], ab[2][1])).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                }
-                if (ab[3] == "") {
-                    $(nonDispoTemplate).prependTo('.k200').css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                } else {
-                    $('.k200').find('.not-dispo').remove();
-                    $(insertLink(ab[3][0], ab[3][1])).insertAfter($('.k200')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    if (ab[0] == "") {
+                        $(printNonDispo(nonDispoTemplate)).prependTo('.k24').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    } else {
+                        $('.k24').find('.not-dispo').remove();
+                        $(insertLink(ab[0][0], ab[0][1])).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    }
+                    if (ab[1] == "") {
+                        $(printNonDispo(nonDispoTemplate)).prependTo('.k30').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    } else {
+                        $('.k30').find('.not-dispo').remove();
+                        $(insertLink(ab[1][0], ab[1][1])).insertAfter($('.k30')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    }
+                    if (ab[2] == "") {
+                        $(printNonDispo(nonDispoTemplate)).prependTo('.k100').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    } else {
+                        $('.k100').find('.not-dispo').remove();
+                        $(insertLink(ab[2][0], ab[2][1])).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    }
+                    if (ab[3] == "") {
+                        $(printNonDispo(nonDispoTemplate)).prependTo('.k200').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    } else {
+                        $('.k200').find('.not-dispo').remove();
+                        $(insertLink(ab[3][0], ab[3][1])).insertAfter($('.k200')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    }
                 }
                 if ($('.main-gallery').length) {
                     $('.main-gallery').show().flickity('resize');
@@ -295,7 +297,6 @@ $(function () {
     ;
     $("input[name=zipcode]").mask("L-9999");
     $("#zipcode").mask("L-9999");
-
     $("input[name=zipcode]").keypress(function (event) {
         if (event.which == 13) {//enter pressed
             $(".verifyCp").click();
@@ -313,7 +314,6 @@ $(function () {
     $("select[name=ville]").hide();
     $("select[name=rue]").hide();
     $("select[name=numero]").hide();
-
     $("input[name='zipcode']").keyup(function () {
         $(".verifyCp").show();
         $(".btnVerif2, .btnVerif").hide();
@@ -321,7 +321,6 @@ $(function () {
         $("select[name='rue']").hide();
         $("select[name='numero']").hide();
     });
-
     $("body").on('click', '.verifyCp', function () {
         $("select[name='ville']").hide();
         $("select[name='rue']").hide();
@@ -337,7 +336,7 @@ $(function () {
                 for (i in streetList.Streets) {
 
                     vhtml += "<option value='" + streetList.Streets[i].id + "' title='" + streetList.Streets[i].name + "' data-idLocality='" + streetList.Streets[i].idLocality + "'>" + streetList.Streets[i].name + "</option>";
-                    streetList.Streets[i].streetNumbers.sort(natSort);//order streetNumbers numeric
+                    streetList.Streets[i].streetNumbers.sort(natSort); //order streetNumbers numeric
                     arrLocality[streetList.Streets[i].idLocality] = streetList.Streets[i].azLocality;
                 }
                 for (var idLocality in arrLocality) {
@@ -371,7 +370,6 @@ $(function () {
                                     $(this).parent().prop("selectedIndex", $(this).index()).change();
                                 }
                             });
-
                         }
                     });
                 } else if ($('#dispo .icons').length) {
@@ -397,7 +395,6 @@ $(function () {
                                     $(this).parent().prop("selectedIndex", $(this).index()).change();
                                 }
                             });
-
                         }
                     });
                 } else {
@@ -422,13 +419,11 @@ $(function () {
                                 $(this).parent().prop("selectedIndex", $(this).index()).change();
                             }
                         });
-
                     }
                 }
 
             }
         });
-
     });
     $("body").on('change', 'select[name=ville]', function () {
         thisId = $(this).find("option:selected").val();
@@ -441,7 +436,6 @@ $(function () {
         });
         $("select[name=rue]").fadeIn();
     });
-
     $("body").on('change', 'select[name=rue]', function () {
         for (i in streetList.Streets) {
             if (streetList.Streets[i].id == $("select[name=rue]").val()) {
@@ -455,7 +449,6 @@ $(function () {
                     vhtml += "<option value='" + streetNbr[b].id + "' title='" + number + building + floor + apartment + "'>" + (streetNbr[b].number.length > 0 ? streetNbr[b].number : "Aucun") + " " + streetNbr[b].building + " " + streetNbr[b].floor + " " + streetNbr[b].apartment + "</option>";
                 }
                 $("select[name=numero]").html(vhtml).fadeIn();
-
                 if ($(vhash).length != 0) {
                     $("select[name=numero] option").each(function () {
                         if ($(this).val() == _nbr) {

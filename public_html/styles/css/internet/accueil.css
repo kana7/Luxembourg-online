@@ -214,7 +214,7 @@
     position: absolute;
     top: -23px;
     right: 0;
-    content: "Merci de selectionner tous les champs requis";
+    content: "Merci de s\00E9lectionner tous les champs requis";
     color: #DC0000;
     font-weight: 800;
     font-size: 0.94em; }

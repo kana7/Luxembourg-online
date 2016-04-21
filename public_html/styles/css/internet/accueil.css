@@ -41,6 +41,8 @@
     font-size: 15px;
     line-height: 30px;
     color: white; }
+    #step-list li:not(.step-separator) {
+      cursor: pointer; }
     #step-list li .icon-right-arrow {
       position: relative;
       margin: 0;
@@ -49,7 +51,8 @@
     #step-list li.active {
       border-bottom: 1px solid #fff; }
       #step-list li.active ~ li {
-        opacity: 0.5; }
+        opacity: 0.5;
+        cursor: default; }
   #step-list li:not(:last-child) {
     margin-right: 4px; }
 
@@ -58,6 +61,10 @@
   border: 1px solid #004994;
   color: #000;
   border-radius: 6px; }
+  #panier > ul .exponent, .shop-list > ul .exponent {
+    position: absolute;
+    top: -3px;
+    font-size: 0.6em; }
   #panier > ul li, .shop-list > ul li {
     display: block;
     width: 100%; }
@@ -76,33 +83,40 @@
       color: #fff;
       text-transform: uppercase;
       text-align: center; }
-  #panier > ul .month, #panier > ul .section:not(:last-child), .shop-list > ul .month, .shop-list > ul .section:not(:last-child) {
+  #panier > ul .month, #panier > ul .unique, #panier > ul .section:not(:last-child), .shop-list > ul .month, .shop-list > ul .unique, .shop-list > ul .section:not(:last-child) {
     border-bottom: 1px solid #004994; }
-  #panier > ul .month, #panier > ul .unique, #panier > ul .section, .shop-list > ul .month, .shop-list > ul .unique, .shop-list > ul .section {
+  #panier > ul .month, #panier > ul .unique, #panier > ul .term, #panier > ul .section, .shop-list > ul .month, .shop-list > ul .unique, .shop-list > ul .term, .shop-list > ul .section {
     padding: 15px 10px; }
-    #panier > ul .month ul, #panier > ul .unique ul, #panier > ul .section ul, .shop-list > ul .month ul, .shop-list > ul .unique ul, .shop-list > ul .section ul {
+    #panier > ul .month ul, #panier > ul .unique ul, #panier > ul .term ul, #panier > ul .section ul, .shop-list > ul .month ul, .shop-list > ul .unique ul, .shop-list > ul .term ul, .shop-list > ul .section ul {
       display: block; }
-    #panier > ul .month li, #panier > ul .unique li, #panier > ul .section li, .shop-list > ul .month li, .shop-list > ul .unique li, .shop-list > ul .section li {
+    #panier > ul .month li, #panier > ul .unique li, #panier > ul .term li, #panier > ul .section li, .shop-list > ul .month li, .shop-list > ul .unique li, .shop-list > ul .term li, .shop-list > ul .section li {
       display: block;
       line-height: 20px;
-      padding: 0 0 0 10px; }
-      #panier > ul .month li:before, #panier > ul .unique li:before, #panier > ul .section li:before, .shop-list > ul .month li:before, .shop-list > ul .unique li:before, .shop-list > ul .section li:before {
+      padding: 0 0 0 10px;
+      text-align: left; }
+      #panier > ul .month li:before, #panier > ul .unique li:before, #panier > ul .term li:before, #panier > ul .section li:before, .shop-list > ul .month li:before, .shop-list > ul .unique li:before, .shop-list > ul .term li:before, .shop-list > ul .section li:before {
         content: "";
         display: table; }
-      #panier > ul .month li:after, #panier > ul .unique li:after, #panier > ul .section li:after, .shop-list > ul .month li:after, .shop-list > ul .unique li:after, .shop-list > ul .section li:after {
+      #panier > ul .month li:after, #panier > ul .unique li:after, #panier > ul .term li:after, #panier > ul .section li:after, .shop-list > ul .month li:after, .shop-list > ul .unique li:after, .shop-list > ul .term li:after, .shop-list > ul .section li:after {
         content: "";
         display: table;
         clear: both; }
-    #panier > ul .month .label, #panier > ul .month .price, #panier > ul .unique .label, #panier > ul .unique .price, #panier > ul .section .label, #panier > ul .section .price, .shop-list > ul .month .label, .shop-list > ul .month .price, .shop-list > ul .unique .label, .shop-list > ul .unique .price, .shop-list > ul .section .label, .shop-list > ul .section .price {
+    #panier > ul .month .label, #panier > ul .month .price, #panier > ul .unique .label, #panier > ul .unique .price, #panier > ul .term .label, #panier > ul .term .price, #panier > ul .section .label, #panier > ul .section .price, .shop-list > ul .month .label, .shop-list > ul .month .price, .shop-list > ul .unique .label, .shop-list > ul .unique .price, .shop-list > ul .term .label, .shop-list > ul .term .price, .shop-list > ul .section .label, .shop-list > ul .section .price {
       font-size: 1.1em; }
-    #panier > ul .month .price, #panier > ul .unique .price, #panier > ul .section .price, .shop-list > ul .month .price, .shop-list > ul .unique .price, .shop-list > ul .section .price {
+    #panier > ul .month .price, #panier > ul .unique .price, #panier > ul .term .price, #panier > ul .section .price, .shop-list > ul .month .price, .shop-list > ul .unique .price, .shop-list > ul .term .price, .shop-list > ul .section .price {
       float: right;
       color: #E75E0A;
       text-align: right;
       font-weight: 600; }
-    #panier > ul .month .remise-name, #panier > ul .unique .remise-name, #panier > ul .section .remise-name, .shop-list > ul .month .remise-name, .shop-list > ul .unique .remise-name, .shop-list > ul .section .remise-name {
+    #panier > ul .month .remise-name, #panier > ul .unique .remise-name, #panier > ul .term .remise-name, #panier > ul .section .remise-name, .shop-list > ul .month .remise-name, .shop-list > ul .unique .remise-name, .shop-list > ul .term .remise-name, .shop-list > ul .section .remise-name {
       color: #e75e0a;
       font-size: 1.05em; }
+  #panier > ul .term h4, .shop-list > ul .term h4 {
+    margin: 0;
+    display: inline-block; }
+  #panier > ul .term span, .shop-list > ul .term span {
+    top: 2px;
+    position: relative; }
   #panier > ul .prices, .shop-list > ul .prices {
     padding: 10px 0;
     background-color: #004994;
@@ -135,6 +149,21 @@
     text-transform: uppercase;
     font-weight: 600;
     margin-bottom: 10px; }
+
+.cart-note {
+  display: none;
+  color: #818181;
+  font-weight: 400;
+  padding: 0 13px;
+  font-size: 1em;
+  margin-top: 10px; }
+  .cart-note span[class^="icon-"] {
+    top: 2px;
+    margin-right: 5px; }
+  .cart-note .price {
+    float: right;
+    font-weight: 800;
+    font-size: 1.05em; }
 
 .shop-list > ul .month .price, .shop-list > ul .unique .price {
   font-weight: 400; }
@@ -183,11 +212,12 @@
     margin-left: 10px; }
   #steps .btn-orange.disabled:before {
     position: absolute;
-    top: -30px;
+    top: -23px;
     right: 0;
-    content: "Merci de selectionner tous les champs requis";
+    content: "Merci de s\00E9lectionner tous les champs requis";
     color: #DC0000;
-    font-weight: 800; }
+    font-weight: 800;
+    font-size: 0.94em; }
 
 .shop-item {
   display: block;
@@ -320,13 +350,65 @@ input[type="radio"].error + label, input[type="checkbox"].error + label {
 input:not([type="radio"]):not([type="checkbox"]).error {
   border: 1px solid #DC0000; }
 
+.notif {
+  position: relative;
+  color: #DC0000;
+  font-weight: 800;
+  font-size: 1.1em;
+  line-height: 25px;
+  margin-bottom: -30px; }
+  .notif span[class^="icon-"] {
+    top: 5px;
+    font-size: 1.4em; }
+
+.fibre-infos {
+  position: relative;
+  font-size: 1.025em; }
+  .fibre-infos [class^='icon-'], .fibre-infos .infos {
+    display: inline-block;
+    line-height: 18px; }
+  .fibre-infos [class^='icon-'] {
+    color: #e75e0a;
+    font-size: 2em;
+    margin-right: 10px;
+    position: absolute;
+    top: 3px;
+    left: 0px; }
+  .fibre-infos .infos {
+    padding-left: 35px; }
+  .fibre-infos p {
+    margin: 0; }
+
+.fibre-install {
+  margin-top: -12px;
+  margin-bottom: 10px; }
+  .fibre-install .shop-item-price.promo.orange {
+    font-size: 1.075em;
+    display: block;
+    float: none;
+    margin-bottom: 5px; }
+
+.shop-link {
+  font-size: 1em;
+  display: block;
+  color: #004994;
+  text-decoration: underline; }
+
+input[type=number] {
+  -moz-appearance: textfield; }
+  input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none; }
+
 #test-offres {
   text-align: center;
   padding: 20px 0; }
 
 @media screen and (max-width: 671px) {
   .shop-list > ul {
-    font-size: 12px; } }
+    font-size: 12px; }
+
+  .input-group-table .input-group.inline > label, .input-group-table .input-group.inline > input, .input-group-table .input-group.inline > .input-group-cell {
+    display: block !important; } }
 @media screen and (max-width: 1055px) {
   /*.shop-item{
       [class^="phone-"]{

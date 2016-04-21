@@ -1,8 +1,6 @@
-
 // MODULE
 //------------------------------------------------------------------------------
 var StepTransition = (function () {
-//stock la position du slide visible
     var html;
     var tplbtn = '<div class="clearfix phone-mt-30 phone-mb-30 buttons-next-previous">' +
             '<button type="button" class="btn-blue previous pull-left">' +
@@ -16,6 +14,7 @@ var StepTransition = (function () {
             '{{#remise}}' +
             '<input type="hidden" name="{{remise.type}}" value="{{remise.id}}"/>' +
             '{{/remise}}';
+    //template pour un article
     var tplItem =
             '<div class="clearfix phone-mt-30 shop-item-list">' +
             '{{#items}}' +
@@ -26,10 +25,10 @@ var StepTransition = (function () {
             '<img class="shop-item-img" src="{{link}}" alt="{{name}} shop LOL"/>' +
             '</div>' +
             '<div class="phone-12 lgdesk-7">' +
-            '<h3 class="shop-item-name">{{name}}</h3>' +
+            '<h3 class="shop-item-name">{{{name}}}</h3>' +
             '<ul class="shop-item-description">' +
             '{{#commentaire}}' +
-            '<li>{{.}}</li>' +
+            '<li>{{{.}}}</li>' +
             '{{/commentaire}}' +
             '</ul>' +
             '</div>' +
@@ -43,7 +42,7 @@ var StepTransition = (function () {
             '{{#isRemise}}' +
             '<ul class="shop-item-price promo orange vertical-align-middle phone-6">' +
             '<li class="extra-bold price">{{#formatPrice}}{{fullPrice}}{{/formatPrice}} €{{#isMonthlyCost}}/mois{{/isMonthlyCost}}</li>' +
-            '<li>PROMO : {{remise.name}}</li>' +
+            '<li>PROMO : {{{remise.name}}}</li>' +
             '</ul>' +
             '<input type="hidden" name="{{remise.type}}" value="{{remise.id}}"/>' +
             '{{/isRemise}}' +
@@ -62,18 +61,28 @@ var StepTransition = (function () {
             '{{/items}}' +
             '{{#resetIndex}}{{resetIndex}}{{/resetIndex}}' +
             '</div>';
+    //template formulaire fibre
     var tplFormFiber = '<div class="clearfix">' +
             '<div class="phone-mb-20 phone-mt-30">' +
             '<h3 class="step-subtitle">Installation fibre</h3>' +
-            '<p class="step-subdescription">Information supplémentaire sur le câblage interne de la fibre dans votre habitation (obligatoire)</p>' +
+            '<p class="step-subdescription">Est-ce que le câblage interne de votre habitation est conforme pour le raccordement Internet via la fibre optique?</p>' +
+            '<div class="fibre-infos">' +
+            '<div class="icon-info-icone"></div>' +
+            '<div class="infos"><p>Dans le cas d\'un appartement, une fibre optique doit relier l\'arrivée Post (TCS) à votre appartement.</p>' +
+            '<p>Dans le cas d\'une maison, un câble réseau doit relier l\'arrivée Post (TCS) à une prise de votre maison. </p></div>' +
+            '</div>' +
             '</div>' +
             '<div data-form="fibre" class="step-form clearfix">' +
             '<div class="phone-12">' +
             '<div class="input-group radio">' +
-            '<input id="Cablage" type="radio" name="p_client" value="true" required><label for="Cablage">Mon cablâge interne est conforme pour le raccordement internet via la Fibre Optique.</label>' +
+            '<input id="Cablage" type="radio" name="p_client" value="true" required><label for="Cablage">Mon cablâge interne est conforme pour le raccordement Internet via la fibre optique.</label>' +
             '</div>' +
             '<div class="input-group">' +
             '<input id="NotCablage" type="radio" name="p_client" value="false" required><label for="NotCablage">Mon cablâge interne n\'est pas conforme et je demande à Luxembourg Online d\'entreprendre les travaux nécessaires. </label>' +
+            '</div>' +
+            '<div class="fibre-install">' +
+            '<ul class="shop-item-price promo orange"><li>PROMO : Frais de câblage fibre (220€) offerts !</li></ul>' +
+            '<a class="shop-link" target="blank_" href="../documents/INSTALLATION_FIBRE_FR.pdf">Détails et frais d\'installation</a>' +
             '</div>' +
             '</div>' +
             '</div>' +
@@ -83,23 +92,36 @@ var StepTransition = (function () {
     var currentItems_list;
     var currentStep = 0;
     var stepList = StepsContainer.find('.step');
+    //Prend l'ensemble des articles sélectionnables pour cette offre
     events.on('getCurrent', init);
-
     function init(current) {
+        //recupération du panier
+        var itemsCookie = Cookies.getJSON('shop_panierItems');
         currentItems_list = current;
         _render();
         _bindEvents();
-        //verifie chaque etape et switch le bouton next si une action requise n'est pas effectuée
-        $('.step').each(function () {
-            _verifyStep($(this));
-        });
         //Ajoute les articles pré-selectionnés dans le panier au lancement
         $('.step .shop-item').find('input[selected]').each(function () {
             _selectItem($(this).parents('.shop-item'));
         });
+        //RECOVERY
+        if (typeof itemsCookie !== 'undefined') {
+            _recoverCart(itemsCookie);
+        }
+        //prend un slider spécifié dans l'url ou affiche le slider initial
+        if (getURLParameter('step') !== null) {
+            currentStep = getURLParameter('step');
+        }
         _showSlider(currentStep);
+        //supprime le hash de l'url une fois terminé
+        if (window.history && window.history.pushState) {
+            window.history.pushState('', '', window.location.pathname);
+        } else {
+            window.location.href = window.location.href.replace(/#.*$/, '#');
+        }
     }
 
+    //génére le html de tous les sliders
     function _render() {
         $('#steps').before(Mustache.render(tplInput, currentItems_list['a_abo']));
         $('#steps').before(Mustache.render(tplInput, currentItems_list['p_activation']));
@@ -111,13 +133,16 @@ var StepTransition = (function () {
                 }
                 html += tplbtn;
                 $(this).find('.step-description').after(html);
+                if (currentItems_list['a_abo']['name'].indexOf('30') >= 0) {
+                    $('.fibre-install>.promo').hide();
+                }
             }
             if ($(this).attr('id') == 'materiel') {
                 html = Mustache.render(tplItem, {input: "radio", required: true, isSellProduct: false, group: 'm_modem', items: currentItems_list['m_modem']});
                 html += '<div class="clearfix dropdown">' +
                         '<div class="phone-mb-30 phone-mt-30" data-trigger>' +
-                        '<h3 class="step-subtitle">Ajoutez du Matériel Optionnel<span class="icon-right-arrow"></span></h3>' +
-                        '<p class="step-subdescription">Si besoin vous trouverez ci-dessous de l\'équipement auxiliaire pour améliorer ou élargir votre réseau interne.</p>' +
+                        '<h3 class="step-subtitle">Matériel complémentaire<span class="icon-right-arrow"></span></h3>' +
+                        '<p class="step-subdescription">Si besoin, vous trouverez ci-dessous du matériel supplémentaire pour améliorer la qualité de votre réseau ou l’étendre. </p>' +
                         '</div>' +
                         '<div>';
                 html += Mustache.render(tplItem, {input: "checkbox", required: false, isSellProduct: false, group: false, items: currentItems_list['m_materiels'], index: function () {
@@ -140,7 +165,7 @@ var StepTransition = (function () {
             if ($(this).attr('id') == 'tv') {
                 html = Mustache.render(tplItem, {input: "checkbox", required: false, isSellProduct: true, group: 'a_tv', items: currentItems_list['a_tv']});
                 html += '<div class="phone-mb-30 phone-mt-30">' +
-                        '<h3 class="step-subtitle">Location décodeur</h3>' +
+                        '<h3 class="step-subtitle">Décodeur TV</h3>' +
                         '</div>';
                 html += Mustache.render(tplItem, {input: "checkbox", required: false, isSellProduct: false, group: false, items: currentItems_list['m_tv_materiel'], index: function () {
                         return ++window['INDEX'] || (window['INDEX'] = 0);
@@ -155,9 +180,14 @@ var StepTransition = (function () {
         });
     }
 
+    //bind les évènements pour tous le script
     function _bindEvents() {
         StepsContainer.on('click', 'button.previous', function () {
             _previous();
+        });
+        headerStepList.on('click', 'li:not(.step-separator)', function () {
+            var position = headerStepList.find('li:not(.step-separator)').index(this) - 1;
+            _goToSlider(position);
         });
         StepsContainer.on('click', 'button.next', function () {
             _next();
@@ -190,38 +220,78 @@ var StepTransition = (function () {
         StepsContainer.on('change', '.shop-item:not(.disabled):not(.fixed) input:not([type="text"])', function () {
             _deselectItem($(this));
         });
+        $(window).on("beforeunload", function () {
+            _saveCart();
+        });
+    }
+    //Amène à un slide en fonction d'un paramètre dans le lien
+    function _goToSlider(position) {
+        if (!(currentStep - position <= 0)) {
+            if (position >= 0) {
+                currentStep = position;
+                _showSlider(currentStep);
+            } else {
+                if (confirm('Si vous retournez maintenant en arrière, les données de votre commande seront perdues. êtes-vous sûr?')) {
+                    $(window).off("beforeunload");
+                    window.location.href = "../shop/offres.html";
+                }
+            }
+        }
     }
 
+    //afficher un slide
     function _showSlider(index) {
-        $(headerStepList).find('li:not(.step-separator)').removeClass('active');
-        $(headerStepList).find('li:not(.step-separator)').eq(1 + index).addClass('active');
-        stepList.not(stepList[index]).hide().removeClass('is-visible');
-        $(stepList[index]).fadeIn('800').addClass('is-visible');
+        var position = Number(index);
+        $('#step-list ul').find('li:not(.step-separator)').removeClass('active');
+        $('#step-list ul').find('li:not(.step-separator)').eq(position + 1).addClass('active');
+        stepList.not(stepList[position]).hide().removeClass('is-visible');
+        $(stepList[position]).fadeIn('800').addClass('is-visible');
         $('html,body').animate({
             scrollTop: $('#step-list').offset().top
         }, 0);
     }
 
+    //slide suivant
     function _next() {
         if (_checkInput()) {
             if (currentStep != stepList.length - 1) {
                 _showSlider(++currentStep);
             } else {
+                //on enregistre les infos du panier dans un cookie dans le cas où l'utilisateur revient en arrière.
+                _saveCart();
                 $('#shoppingCart').submit();
             }
         }
     }
 
+    //slide précédent
     function _previous() {
         if (currentStep != 0) {
             _showSlider(--currentStep);
         } else {
-            window.location.href = "../shop/offres.html";
+            if (confirm('Si vous retournez maintenant en arrière, les données de votre commande seront perdues. êtes-vous sûr?')) {
+                $(window).off("beforeunload");
+                window.location.href = "../shop/offres.html";
+            }
         }
     }
+    //Activé pour simplement ajouter dans le panier 
+    function _addItem(shopItem) {
+        var input = shopItem.find('input');
+        shopItem.addClass('selected');
+        if (input.is(':radio')) {
+            _deselectItem(input);
+        }
+        events.emit('useCart', {
+            id: input.val(),
+            cat: input.attr('data-cat'),
+            isAdding: true
+        });
+    }
 
+    //Activé quand on clique sur un article (toggle mode) pour ajouté dans le panier.
     function _selectItem(shopItem) {
-        if (shopItem != 'undefined') {
+        if (shopItem !== 'undefined') {
             var input = shopItem.find('input:not([type="text"])');
             shopItem.toggleClass('selected');
             if (input.is(':checked')) {
@@ -243,6 +313,7 @@ var StepTransition = (function () {
         }
     }
 
+    //Déselectionne élément issu du même groupe et supprime du panier
     function _deselectItem(input) {
         if (typeof input != 'undefined') {
             var radioName = input.attr('name');
@@ -260,12 +331,20 @@ var StepTransition = (function () {
         }
     }
 
+    //Récupère les données des formulaires et les ajoute dans le panier
     function _collectDataForm($form) {
         if ($form.length > 0) {
             var id = $form.attr('data-form');
             var object = {};
             $form.find('input').each(function () {
-                object[$(this).attr('name')] = $(this).val();
+                console.log($(this).attr('name'));
+                if ($(this).is(':radio')) {
+                    if ($(this).is(':checked')) {
+                        object[$(this).attr('name')] = $(this).val();
+                    }
+                } else {
+                    object[$(this).attr('name')] = $(this).val();
+                }
             });
             console.log(object);
             events.emit('addForm', {id: id, object: object});
@@ -274,6 +353,7 @@ var StepTransition = (function () {
         }
     }
 
+    //Vérifie si tous les éléments requis ont été remplis
     var _verifyStep = function ($element) {
         var flag = true;
         var currentStep = $element;
@@ -294,6 +374,7 @@ var StepTransition = (function () {
         return flag;
     };
 
+    //Désactive bouton si verifyStep est faux
     var _checkInput = function () {
         var flag = _verifyStep($(stepList[currentStep]));
         if (!flag) {
@@ -304,21 +385,62 @@ var StepTransition = (function () {
         return flag;
     };
 
+    //Enregistre les informations du panier dans des cookies quand on quitte la page
+    var _saveCart = function () {
+        var itemsTab = [];
+        $(Cart.panier.items).each(function () {
+            itemsTab.push(this.id);
+        });
+        Cookies.set('shop_panierItems', itemsTab, {expires: 1});
+        for (var key in Cart.panier.info) {
+            Cookies.set('shop_' + key, Cart.panier.info[key], {expires: 1});
+        }
+    };
+    //Permet de récupérer les infos du panier dans les cookies
+    var _recoverCart = function (cookie) {
+        var recoveredForm = [];
+        $('.step .shop-item').each(function () {
+            if (cookie.indexOf($(this).find('input:not([type="text"])').val()) !== -1) {
+                $(this).not('.selected').click();
+            }
+        });
+        for (var index in formNameIndex) {
+            recoveredForm.push(Cookies.getJSON(formNameIndex[index]));
+        }
+        console.log('-----------------FORM RECOVER------------------------');
+        console.log(recoveredForm);
+        for (var index in recoveredForm) {
+            if (typeof recoveredForm[index] !== 'undefined') {
+                for (var key in recoveredForm[index]) {
+                    console.log(key);
+                    if ($('input[name=' + key + ']').is(':radio')) {
+                        $('input[name=' + key + '][value="' + recoveredForm[index][key] + '"]').prop('checked', true).trigger('change');
+                    } else {
+                        $('input[name=' + key + ']').val(recoveredForm[index][key]);
+                    }
+                }
+            }
+        }
+    };
     return{
-        init: init
+        init: init,
+        step: currentStep
     };
 })();
+
+
 var Cart = (function () {
 
-    //Contient la liste de tous les choix possibles lors de l'inscription
+//Contient la liste de tous les choix possibles lors de l'inscription
     var currentItems_list = {};
-    //Le panier contient le prix ainsi que les objets avec leur ID respectifs --> cet objet est envoyé au serveur à la fin du script
+    //Le panier contient le prix ainsi que les objets avec leur ID respectifs
     var Panier = {
         items: [],
         info: {},
         price: {
             unique: 0,
-            month: 0
+            month: 0,
+            fullMonth: 0
         },
         formatPrice: function (price, c, d, t) {
             //format euros
@@ -336,7 +458,6 @@ var Cart = (function () {
             }
         }
     };
-
     var tplItem = '<li class="items">' +
             '<div class="month">' +
             '<h4>Coûts mensuels</h4>' +
@@ -348,14 +469,14 @@ var Cart = (function () {
             '<span class="label">{{name}}</span>' +
             '<span class="price price-delete">{{#formatPrice}}{{fullPrice}}{{/formatPrice}} €/mois</span>' +
             '<div class="remise-name">' +
-            '<span class="label"><span class="bold">PROMO</span> : {{remise.name}}</span>' +
+            '<span class="label"><span class="bold">PROMO</span> : {{{remise.name}}}</span>' +
             '<span class="price">{{#formatPrice}}{{price}}{{/formatPrice}} €/mois</span>' +
             '</div>' +
             '</li>' +
             '{{/isRemise}}' +
             '{{^isRemise}}' +
             '<li>' +
-            '<span class="label">{{name}}</span>' +
+            '<span class="label">{{{name}}}</span>' +
             '<span class="price">{{#formatPrice}}{{price}}{{/formatPrice}} €/mois</span>' +
             '</li>' +
             '{{/isRemise}}' +
@@ -370,17 +491,17 @@ var Cart = (function () {
             '{{^isMonthlyCost}}' +
             '{{#isRemise}}' +
             '<li>' +
-            '<span class="label">{{name}}</span>' +
+            '<span class="label">{{{name}}}</span>' +
             '<span class="price price-delete">{{#formatPrice}}{{fullPrice}}{{/formatPrice}} €</span>' +
             '<div class="remise-name">' +
-            '<span class="label"><span class="bold">PROMO</span> : {{remise.name}}</span>' +
+            '<span class="label"><span class="bold">PROMO</span> : {{{remise.name}}}</span>' +
             '<span class="price">{{#formatPrice}}{{price}}{{/formatPrice}} €</span>' +
             '</div>' +
             '</li>' +
             '{{/isRemise}}' +
             '{{^isRemise}}' +
             '<li>' +
-            '<span class="label">{{name}}</span>' +
+            '<span class="label">{{{name}}}</span>' +
             '<span class="price">{{#formatPrice}}{{price}}{{/formatPrice}} €</span>' +
             '</li>' +
             '{{/isRemise}}' +
@@ -388,61 +509,62 @@ var Cart = (function () {
             '{{/items}}' +
             '</ul>' +
             '</div>' +
-            '</li>';
+            '<div class="term">' +
+            '<h4>Durée du Contrat</h4><span class="price">24 mois</span>' +
+            '</div>';
+    '</li>';
     var tplPrice = '<li class="prices">' +
             '<ul>' +
             '<li id="monthlyPrice">' +
             '<span class="prices-label">Coûts mensuels :</span>' +
-            '<span class="prices-price">{{price.month}} €<span class="normal lowercase"> /mois</span></span>' +
+            '<span class="prices-price">{{price.month}} €<span class="normal lowercase"> /mois<span class="exponent"></span></span></span>' +
             '</li>' +
             '<li id="uniquePrice">' +
-            '<span class="prices-label">Coûts Unique :</span>' +
+            '<span class="prices-label">Coûts Uniques :</span>' +
             '<span class="prices-price">{{price.unique}} €</span>' +
             '</li>' +
             '</ul>' +
             '</li>';
-
-    events.on('useCart', _useCard);
+    var tplFullPrice = '<div id="monthlyPriceNoPromos" class="cart-note">(2) Prix mensuel aprés 6 mois :<span class="price">{{price.fullMonth}} €<span class="normal lowercase"> /mois</span></span></div>';
+    events.on('useCart', _useCart);
     events.on('addForm', _addForm);
-
     function init() {
         _initCurrentItem();
     }
 
     function _initCurrentItem() {
         var vhash;
-        if (window.location.hash) {
-            vhash = (window.location.hash.split('#')[1]).split(";");
-            if (window.location.hash.length > 2) {
-                currentItems_list['a_abo'] = abonnements_list.getAbo(vhash[0], vhash[1]);
-                currentItems_list['p_installation'] = currentItems_list['a_abo']['installation'];
-                currentItems_list['p_activation'] = currentItems_list['a_abo']['activation'];
-                currentItems_list['m_modem'] = currentItems_list['a_abo']['materiels'];
-                currentItems_list['a_telephone'] = aboTel;
-                currentItems_list['a_tv'] = lolTv;
-                currentItems_list['m_tv_materiel'] = lolTv_materielList;
-                currentItems_list['m_materiels'] = materiel_list;
-                //ajout de l'abo et de l'activation dans le panier à l'ouverture de la page
-                _useCard({
-                    id: 5257,
-                    cat: 'a_abo',
-                    isAdding: true
-                });
-                _useCard({
-                    id: 5610,
-                    cat: 'p_activation',
-                    isAdding: true
-                });
-                events.emit('getCurrent', currentItems_list);
-                console.log(currentItems_list);
-                console.log(Panier);
-                //supprime le hash de l'url une fois terminé
-                /*if (window.history && window.history.pushState) {
-                 window.history.pushState('', '', window.location.pathname);
-                 } else {
-                 window.location.href = window.location.href.replace(/#.*$/, '#');
-                 }*/
+        var cookie = Cookies.getJSON('shop_serviceMap');
+        if (window.location.hash !== "" || typeof cookie !== 'undefined') {
+            vhash = window.location.hash || cookie;
+            if (window.location.hash) {
+                vhash = (vhash.split('#')[1]).split(";");
+                Cookies.remove('shop_panierItems');
             }
+//on enregistre le hash dans un cookie pour un recover éventuel.
+            Cookies.set('shop_serviceMap', vhash, {expires: 1});
+            currentItems_list['a_abo'] = abonnements_list.getAbo(vhash[0], vhash[1]);
+            currentItems_list['p_installation'] = currentItems_list['a_abo']['installation'];
+            currentItems_list['p_activation'] = currentItems_list['a_abo']['activation'];
+            currentItems_list['m_modem'] = currentItems_list['a_abo']['materiels'];
+            currentItems_list['a_telephone'] = aboTel;
+            currentItems_list['a_tv'] = lolTv;
+            currentItems_list['m_tv_materiel'] = lolTv_materielList;
+            currentItems_list['m_materiels'] = materiel_list;
+            //ajout de l'abo et de l'activation dans le panier à l'ouverture de la page
+            _useCart({
+                id: 5257,
+                cat: 'a_abo',
+                isAdding: true
+            });
+            _useCart({
+                id: 5610,
+                cat: 'p_activation',
+                isAdding: true
+            });
+            events.emit('getCurrent', currentItems_list);
+            console.log(currentItems_list);
+            console.log(Panier);
         } else {
             $(window).off("beforeunload");
             window.location.replace("offres.html");
@@ -450,15 +572,30 @@ var Cart = (function () {
     }
 
     function _render() {
-        //Reconstruire le shopping card quand les données sont mises à jour - TODO Mettre en place un template
+//Reconstruire le shopping card quand les données sont mises à jour - TODO Mettre en place un template
         var html = '<ul><li class="header"><h3>Récapitulatif</h3></li>';
         html += Mustache.render(tplItem, Panier);
         html += Mustache.render(tplPrice, Panier);
         '</ul>';
         $('#panier').html(html);
+        $('#monthlyPriceNoPromos').remove();
+        html = Mustache.render(tplFullPrice, Panier);
+        /*$('#panier').parent().append(html);
+        if ($('input[value="2848"]').is(':checked')) {
+            $('#monthlyPriceNoPromos').show();
+            $('#monthlyPrice').find('.exponent').show();
+        } else {
+            $('#monthlyPriceNoPromos').hide();
+            $('#monthlyPrice').find('.exponent').hide();
+        }*/
+        if ($('input[value="5313"]').is(':checked')) {
+            $('#travelXpens').show();
+        } else {
+            $('#travelXpens').hide();
+        }
     }
 
-    function _useCard(data) {
+    function _useCart(data) {
         if (data['isAdding']) {
             _addItem(data['cat'], data['id']);
         } else {
@@ -468,8 +605,10 @@ var Cart = (function () {
         console.log('-----------------------------------------');
         Panier.price.unique = 0;
         Panier.price.month = 0;
+        Panier.price.fullMonth = 0;
         _computePrice(Panier['items']);
         Panier.price.month = Panier.formatPrice(Panier.price.month);
+        Panier.price.fullMonth = Panier.formatPrice(Panier.price.fullMonth);
         Panier.price.unique = Panier.formatPrice(Panier.price.unique);
         _render();
     }
@@ -477,15 +616,17 @@ var Cart = (function () {
     function _addForm(data) {
         Panier['info'][data['id']] = data['object'];
     }
-    ;
+
     function _addItem(cat, id) {
-        console.log("j'ajoute ! : " + cat + ' ' + id);
-        //adding unique element
-        if (Object.prototype.toString.call(currentItems_list[cat]) === '[object Array]') {
-            var objToAdd = _findInArray(currentItems_list[cat], id);
-            Panier['items'].push(objToAdd);
-        } else {
-            Panier['items'].push(currentItems_list[cat]);
+//adding unique element
+        if (_findInArray(Panier['items'], id) == null) {
+            console.log("j'ajoute ! : " + cat + ' ' + id);
+            if (Object.prototype.toString.call(currentItems_list[cat]) === '[object Array]') {
+                var objToAdd = _findInArray(currentItems_list[cat], id);
+                Panier['items'].push(objToAdd);
+            } else {
+                Panier['items'].push(currentItems_list[cat]);
+            }
         }
     }
 
@@ -500,7 +641,7 @@ var Cart = (function () {
         }
     }
 
-    // loop a travers un tableau pour sélectionner un objet selon un id dans les properties
+// loop a travers un tableau pour sélectionner un objet selon un id dans les properties
     function _findInArray(array, id) {
         for (var i = 0, len = array.length; i < len; i++) {
             if (array[i].id == id)
@@ -509,11 +650,16 @@ var Cart = (function () {
         return null; // l'objet n'a pas été trouvé
     }
 
-    //Fonction recursive qui détecte si il y a une propriété prix dans un objet sinon le fonction regarde si il y a un autre object dans la liste des propriétés 
+//Fonction recursive qui détecte si il y a une propriété prix dans un objet sinon le fonction regarde si il y a un autre object dans la liste des propriétés 
     function _computePrice(object) {
         if ("price" in object) {
             if (object["isMonthlyCost"]) {
                 Panier.price.month += object["price"];
+                if (object["time"] !== null) {
+                    Panier.price.fullMonth += object["fullPrice"] || object["price"];
+                } else {
+                    Panier.price.fullMonth += object["price"];
+                }
             } else {
                 Panier.price.unique += object["price"];
             }
@@ -529,11 +675,13 @@ var Cart = (function () {
     }
 
     return{
-        init: init
+        init: init,
+        panier: Panier
     };
 })();
 // DATA
 //------------------------------------------------------------------------------
+//
 //Permet l'héritage
 var inherits = function (ctor, superCtor) {
     ctor.super_ = superCtor;
@@ -584,7 +732,7 @@ var Abonnement = function (id, type, name, price, isMonthlyCost, commentaire, is
     this.materiels = materiels;
 };
 inherits(Abonnement, Item);
-var SellProduct = function (id, type, name, price, isMonthlyCost, commentaire, isDefaut, link, isRemise, remise) {
+var SellProduct = function (id, type, name, price, isMonthlyCost, commentaire, isDefaut, link, time, isRemise, remise) {
     SellProduct.super_.call(this, id, type, name, price, isMonthlyCost, commentaire, isDefaut, link);
     this.setPrice = function (productPrice, remise) {
         if (remise == null) {
@@ -593,6 +741,7 @@ var SellProduct = function (id, type, name, price, isMonthlyCost, commentaire, i
             return productPrice + remise.price;
         }
     };
+    this.time = time;
     this.isRemise = isRemise;
     this.remise = remise;
     this.fullPrice = price;
@@ -608,19 +757,19 @@ var modem_List2 = [
     new Item("5292", "m_modem", "Location FRITZ!Box 7360", 4.00, true, ["LAN :  2 x Gigabit, 2 x fast Ethernet", "WLAN : jusqu'à 300Mbit/s", "Téléphone :  1 x analogique, DECT", " "], true, "../images/equipment/modem/7360/7360.png"),
     modem7490
 ];
-var aboTel = new Item("5138", "a_telephone", "Abo téléphonique", 0, true, "Inclus dans votre abonnement", true, "../images/Shop/Telephonie.jpg");
-var lolTVRemise = new Item("5611", "a_tvRemise", "6 mois gratuits", -17.00, true, "après 17€/mois", true, null);
-var lolTv = new SellProduct("2848", "a_tv", "LOLTV", 17.00, true, ["+110 Chaînes TV", "20 chaînes HD", "40 chaînes radio", " ", " "], false, "../images/Shop/LOLTV.jpg", true, lolTVRemise);
+var aboTel = new Item("3236", "a_telephone", "Abonnement téléphonique", 0, true, ["Appels nationaux fixes illimités", "(sauf numéros spéciaux)", "Appels illimités vers mobiles LOL", "EU120 (120 min vers les fixes de l'UE)", " "], true, "../images/Shop/Telephonie.jpg");
+var lolTVRemise = new Item("5618", "a_tvRemise", "6 mois gratuits", -17.00, true, "après 17€/mois", true, null);
+var lolTv = new SellProduct("2848", "a_tv", "LOLTV", 17.00, true, ["+110 Chaînes TV", "20 chaînes HD", "40 chaînes radio", " ", " "], false, "../images/Shop/LOLTV.jpg", '6 mois', false, null);
 var lolTv_materielList = [
-    new Item("5137", "m_tv_materiel", "Décodeur LOLTV (requis)", 4.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD", " "], false, "../images/Shop/Minix1.jpg"),
+    new Item("5137", "m_tv_materiel", "Décodeur LOLTV", 4.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD", " "], false, "../images/Shop/Minix1.jpg"),
     new Item("5304", "m_tv_materiel", "Décodeur pour 2ème TV", 5.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD", " "], false, "../images/Shop/Minix2.jpg")
 ];
 var remiseInstall = new Item("5623", "p_installationRemise", "Installation offerte", -89.00, false, "", true, null);
-var installNoRemise = new SellProduct("5313", "p_installation", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", false, null);
-var installRemise = new SellProduct("5313", "p_installation", "Installation par équipe", 89.00, false, "Je souhaite qu'une équipe spécialisée s'occupe de l'installation.", true, "../images/Shop/install-equip.png", true, remiseInstall);
-var selfInstall = new SellProduct("5612", "p_installation", "Installation par Self-Install-Kit", 25.00, false, "Je fais l'installation moi-même à l'aide du kit d'installation", false, "../images/Shop/self-install.png", false, null);
+var installNoRemise = new SellProduct("5313", "p_installation", "Installation par une équipe <span class='exponent'>(1)</span>", 89.00, false, " Je souhaite qu’une équipe spécialisée vienne s’occuper de l’installation à mon domicile. Je vais donc être rappelé par Luxembourg Online pour fixer la date du rendez-vous. ", true, "../images/Shop/install-equip.png", null, false, null);
+var installRemise = new SellProduct("5313", "p_installation", "Installation par une équipe <span class='exponent'>(1)</span>", 89.00, false, " Je souhaite qu’une équipe spécialisée vienne s’occuper de l’installation à mon domicile. Je vais donc être rappelé par Luxembourg Online pour fixer la date du rendez-vous. ", true, "../images/Shop/install-equip.png", null, true, remiseInstall);
+var selfInstall = new SellProduct("5314", "p_installation", "Installation avec un kit de self-install", 25.00, false, "Je procède à l’installation moi-même à l’aide du kit de self-install qui me sera fourni par Luxembourg Online.", false, "../images/Shop/self-install.png", null, false, null);
 var remiseActivation = new Item("5611", "p_activationRemise", "Activation offerte", -85.00, false, "", true, null);
-var activation = new SellProduct("5610", "p_activation", "Activation", 85.00, false, "", true, null, true, remiseActivation);
+var activation = new SellProduct("5610", "p_activation", "Activation", 85.00, false, "", true, null, null, true, remiseActivation);
 var typeInstall = [installNoRemise, selfInstall];
 var abonnements_list = {
     "2": {
@@ -668,6 +817,3 @@ var materiel_list = [
     new Item("5396", "m_materiels", "Motorola T202", 48.00, false, ["Pack Duo : 2 x Téléphone numérique sans fil DECT"], false, "../images/equipment/telephone/motorola/t202/motorola_t202_small1.png"),
     new Item("5397", "m_materiels", "Motorola T203", 65.00, false, ["Pack Trio : 3 x Téléphone numérique sans fil DECT"], false, "../images/equipment/telephone/motorola/t203/motorola_t203_small1_1.png")
 ];
-$(function () {
-    Cart.init();
-});

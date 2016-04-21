@@ -454,6 +454,10 @@
         &:not(.main-article){height: 220px;}
         &:not(.main-article)>*[class^="phone-"]{ height: 100%;}
     }
+    #offers-section div[class^=phone-] {
+        margin-bottom: 20px;
+        padding: 0 10px;
+    }
 }
 
 @include viewport(range, $min: 672, $max: 1055){
@@ -1067,6 +1071,9 @@
         height: 85px;
         top: 90%;
         left: 6%;
+    }
+    #offers-section div[class^=phone-] {
+        padding: 0 5px;
     }
 }
 

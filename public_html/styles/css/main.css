@@ -2722,7 +2722,7 @@ hr {
   width: auto !important; }
 
 .fixed-options {
-  display: none;
+  display: block;
   position: fixed;
   right: 0;
   top: 45%;
@@ -2735,6 +2735,9 @@ hr {
   margin-bottom: 5px;
   padding: 10px 10px;
   text-align: right; }
+
+.white-fixed-option {
+  display: none !important; }
 
 header {
   position: relative;
@@ -3744,6 +3747,9 @@ span[class^=icon-] {
     margin-right: 30px; }
   .top-menu-header-links.right li {
     margin-left: 30px; }
+  .top-menu-header-links li.active {
+    font-weight: 600;
+    text-decoration: underline; }
 
 .bottom-menu-header-links .main-menu {
   font-size: 16px;
@@ -3768,7 +3774,7 @@ span[class^=icon-] {
     border-bottom-width: 4px; }
   .bottom-menu-header-links .main-menu li.active {
     font-weight: 600;
-    color: #676767; }
+    color: #004994; }
     .bottom-menu-header-links .main-menu li.active .active-border {
       display: block;
       border-bottom-width: 4px; }
@@ -5326,6 +5332,9 @@ footer {
   font-weight: 300; }
   .footer-bottom-links li {
     line-height: 35px; }
+    .footer-bottom-links li.active {
+      font-weight: 600;
+      text-decoration: underline; }
   .footer-bottom-links li:first-child {
     padding-left: 30px; }
   .footer-bottom-links .icon-icone-lol {

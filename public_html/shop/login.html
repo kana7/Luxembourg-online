@@ -299,9 +299,9 @@
                                                 <label class="blue extra-bold client-label" for="client">Je suis déjà client :</label>
                                                 <p class="notif phone-mb-0"><span class="icon-info-icone"></span>Ceci est un test</p>
                                                 <div class="phone-pt-10 phone-pb-30">
-                                                    <input class="form-input phone-mr-10 phone-mb-10 tab-mb-0" type="text" name="xuser" placeholder="Nom d'utilisateur">
-                                                    <input class="form-input" type="password" name="xpw" placeholder="Mot de passe">
-                                                    <button style="display: block; padding-left: 30px; padding-right: 30px;" class="btn-blue phone-mt-15" type="submit">Se connecter</button>
+                                                    <input class="form-input phone-mr-10 phone-mb-10 tab-mb-0" type="text" name="xuser" placeholder="Nom d'utilisateur" required>
+                                                    <input class="form-input" type="password" name="xpw" placeholder="Mot de passe" required>
+                                                    <button type="button" style="display: block; padding-left: 30px; padding-right: 30px;" class="btn-blue phone-mt-15 submit">Se connecter</button>
                                                 </div>
                                             </div>
                                             <div class="clearfix">
@@ -507,6 +507,7 @@
         <script type="text/javascript" src="../scripts/vendor/jquery.min.js"></script>
         <script type="text/javascript" src="../scripts/main.js"></script>
         <script type="text/javascript" src="../scripts/onLeavePage.js"></script>
+        <script type="text/javascript" src="..//scripts/verifyForm.js"></script>
         <script type="text/javascript">
             $(function () {
                 if (!$('input[name="client"]').is(':checked')) {

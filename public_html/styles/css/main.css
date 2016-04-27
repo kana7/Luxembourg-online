@@ -5724,7 +5724,8 @@ h2.contact-title {
     padding-left: 8px;
     margin: 0;
     display: inline;
-    cursor: pointer; }
+    cursor: pointer;
+    margin-right: 15px; }
   .input-group input[type="radio"]:checked + label {
     color: #004994;
     font-weight: 600; }
@@ -5732,11 +5733,12 @@ h2.contact-title {
     display: inline;
     cursor: pointer; }
   .input-group label {
+    display: block;
     color: #8b8b8b;
     font-size: 1.1em;
     margin-bottom: 10px;
     line-height: 20px; }
-  .input-group .input-group input[type="text"], .input-group .input-group input[type="password"], .input-group .input-group input[type="number"] {
+  .input-group input[type="text"], .input-group input[type="password"], .input-group input[type="number"] {
     height: 35px;
     padding-left: 10px;
     background-color: #f8f8f8;

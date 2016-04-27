@@ -368,6 +368,9 @@
     font-size: 1.1em;
     font-weight: 600;
     color: $dark-grey;
+    &.not-fill{
+        border: 1px solid #DC0000;
+    }
 }
 .is-disabled{
     opacity: 0.3;

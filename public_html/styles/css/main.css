@@ -5711,9 +5711,13 @@ h2.contact-title {
     padding: 9px 30px 8px; }
 
 .input-group {
-  margin-bottom: 25px; }
+  margin-bottom: 15px; }
   .input-group:not(.inline) *:not(span) {
     display: block; }
+  .input-group.inline label {
+    display: inline; }
+    .input-group.inline label + input {
+      margin-top: 5px; }
   .input-group input:not([type=radio]), .input-group textarea, .input-group select {
     width: 100%;
     border-radius: 4px;

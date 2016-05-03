@@ -382,7 +382,6 @@ input:not([type="radio"]):not([type="checkbox"]).error {
     margin: 0; }
 
 .fibre-install {
-  margin-top: -12px;
   margin-bottom: 10px; }
   .fibre-install .shop-item-price.promo.orange {
     font-size: 1.075em;

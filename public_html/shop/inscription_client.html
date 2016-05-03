@@ -282,10 +282,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="phone-p-30">
+                <div class="phone-pt-30 phone-pt-30">
                     <div class="container-wrapper">
                         <div class="row">
-                            <div id="steps" class="phone-12 desk-8 lgdesk-9 desk-pr-10">
+                            <div id="steps" class="phone-12 desk-6">
                                 <h2 class="step-title">Informations (suite)</h2>
                                 <p class="step-description">Veuillez entrer vos informations personnelles pour continuer.</p>
                                 <p class="notif"><span class="icon-info-icone"></span>Ceci est un test</p>
@@ -296,6 +296,12 @@
                                                 <div class="input-group">
                                                     <label for="Utilisateur">Nom utilisateur<span class="red">*</span></label>
                                                     <input id="Utilisateur" name="_utilisateur" type="text" required>
+                                                </div>
+                                            </div>
+                                            <div class="left-container phone-12 tab-6 tab-pl-10">
+                                                <div class="input-group">
+                                                    <label for="Mail">Adresse mail<span class="red">*</span></label>
+                                                    <input id="Mail" name="_mail" type="text" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -325,23 +331,29 @@
                                         </div>
                                         <div class="left-container phone-12 tab-6 tab-pr-10">
                                             <div class="input-group">
-                                                <label for="Adresse">Adresse<span class="red">*</span></label>
-                                                <input id="Adresse" name="_adresse" type="text" required>
+                                                <label for="MatSoc">Matricule sécurité sociale<span class="red">*</span></label>
+                                                <input id="MatSoc" class="numeric" name="_matricule" type="text" maxlength="13" required>
                                             </div>
                                         </div>
-                                        <div class="right-container phone-12 tab-6 tab-pl-10">
+                                        <div class="left-container phone-12 tab-6 tab-pl-10">
+                                            <div class="input-group">
+                                                <label for="Adresse">Adresse<span class="red">*</span></label>
+                                                <input id="Adresse" name="_adresse" type="text" required disabled>
+                                            </div>
+                                        </div>
+                                        <div class="right-container phone-12 tab-6 tab-pr-10">
                                             <div class="input-group">
                                                 <label for="Ville">Ville<span class="red">*</span></label>
-                                                <input id="Ville" name="_ville" type="text" required>
+                                                <input id="Ville" name="_ville" type="text" required disabled>
                                             </div>
                                         </div>
-                                        <div class="left-container phone-12 tab-6 tab-pr-10">
+                                        <div class="left-container phone-12 tab-6 tab-pl-10">
                                             <div class="input-group">
                                                 <label for="CodePostal">Code postale<span class="red">*</span></label>
-                                                <input id="CodePostal" name="_codePostal" type="number" required>
+                                                <input id="CodePostal" class="numeric" name="_codePostal" maxlength="4" type="text" required disabled>
                                             </div>
                                         </div>
-                                        <div class="right-container phone-12 tab-6 tab-pl-10">
+                                        <div class="right-container phone-12 tab-6 tab-pr-10">
                                             <div class="input-group">
                                                 <label for="Pays">Pays<span class="red">*</span></label>
                                                 <select id="Pays" name="_pays" required>
@@ -350,16 +362,10 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="left-container phone-12 tab-6 tab-pr-10">
-                                            <div class="input-group">
-                                                <label for="Mail">Adresse mail<span class="red">*</span></label>
-                                                <input id="Mail" name="_mail" type="text" required>
-                                            </div>
-                                        </div>
                                         <div class="right-container phone-12 tab-6 tab-pl-10">
                                             <div class="input-group">
                                                 <label for="Telephone">Téléphone<span class="red">*</span></label>
-                                                <input id="Telephone" name="_telephone" type="text" required>
+                                                <input id="Telephone" class="numeric" name="_telephone" type="text" required>
                                             </div>
                                         </div>
                                     </div>
@@ -514,6 +520,7 @@
         </div>
 
         <script type="text/javascript" src="../scripts/vendor/jquery.min.js"></script>
+        <script type="text/javascript" src="../scripts/vendor/jquery.numeric.min.js"></script>
         <script type="text/javascript" src="../scripts/main.js"></script>
         <script type="text/javascript" src="../scripts/onLeavePage.js"></script>
         <script type="text/javascript">

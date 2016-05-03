@@ -100,6 +100,9 @@ var StepTransition = (function () {
         currentItems_list = current;
         _render();
         _bindEvents();
+        //Ajoute l'id home de la personne dans l'input name=_idhome
+        var idhome = Cookies.get('shop_idhome');
+        $('input[name=p_idHome]').val(idhome);
         //Ajoute les articles pré-selectionnés dans le panier au lancement
         $('.step .shop-item').find('input[selected]').each(function () {
             _selectItem($(this).parents('.shop-item'));
@@ -391,8 +394,8 @@ var StepTransition = (function () {
         $(Cart.panier.items).each(function () {
             itemsTab.push(this.id);
         });
-        Cookies.set('shop_panierItems', itemsTab, {expires: 1});
-        for (var key in Cart.panier.info) {
+        Cookies.set('shop_panierItems', itemsTab, {expires: 1}); //enregistrement des articles
+        for (var key in Cart.panier.info) { //enregistrement des champs sur la portabilité
             Cookies.set('shop_' + key, Cart.panier.info[key], {expires: 1});
         }
     };
@@ -534,7 +537,7 @@ var Cart = (function () {
 
     function _initCurrentItem() {
         var vhash;
-        var cookie = Cookies.getJSON('shop_serviceMap');
+        var cookie = Cookies.getJSON('shop_serviceMap'); //service + id abo internet
         if (window.location.hash !== "" || typeof cookie !== 'undefined') {
             vhash = window.location.hash || cookie;
             if (window.location.hash) {

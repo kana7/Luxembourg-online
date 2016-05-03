@@ -2638,9 +2638,15 @@ h2.contact-title {
     }
 }
 .input-group{
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     &:not(.inline) *:not(span){
         display: block;
+    }
+    &.inline{
+        label{
+               display: inline;
+               &+input{margin-top: 5px;}
+        }
     }
     input:not([type=radio]), textarea, select{
         width: 100%;

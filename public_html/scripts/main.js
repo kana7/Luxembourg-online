@@ -1,5 +1,5 @@
 var formNameIndex = ['shop_fibre', 'shop_portabilite'];
-var cookieIndex = ['shop_serviceMap', 'shop_panierItems'].concat(formNameIndex);
+var cookieIndex = ['shop_serviceMap', 'shop_panierItems', 'shop_idhome'].concat(formNameIndex);
 
 var encartDispoTemplate = '<div class="phone-12 tab-6 desk-3">' +
         '<div id="dispo" class="service">' +
@@ -53,10 +53,13 @@ $(function () {
             temp.init();
         });
     }
+    if (jQuery().numeric){
+        $(".numeric").numeric();
+    }
 });
 
 function getURLParameter(name) {
-  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 }
 
 function deleteCookies() {
@@ -120,7 +123,7 @@ var DropDown = function (element) {
     };
 };
 
-var HeaderDropDown = (function(){
+var HeaderDropDown = (function () {
     var $document = $('html');
     var $element = $('.header-dropdown');
     var $button = $element.find('button');
@@ -129,8 +132,8 @@ var HeaderDropDown = (function(){
     var init = function () {
         _bindEvents();
     };
-    var _bindEvents = function(){
-        $button.on('click', function(){
+    var _bindEvents = function () {
+        $button.on('click', function () {
             _toggleDrop();
         });
         $document.on('click', function () {
@@ -142,25 +145,25 @@ var HeaderDropDown = (function(){
             }
         });
     };
-    var _toggleDrop = function(){
+    var _toggleDrop = function () {
         flag = "0";
-        if ($button.hasClass('is-active')){
+        if ($button.hasClass('is-active')) {
             _closeDrop();
-        }else{
+        } else {
             _openDrop();
         }
     };
-    var _openDrop = function(){
+    var _openDrop = function () {
         $button.addClass('is-active');
         $drop.addClass('is-visible');
     };
-    var _closeDrop = function(){
-      $button.removeClass('is-active');
-      $drop.removeClass('is-visible');
+    var _closeDrop = function () {
+        $button.removeClass('is-active');
+        $drop.removeClass('is-visible');
     };
-    
+
     return{
-        init : init
+        init: init
     };
 })();
 

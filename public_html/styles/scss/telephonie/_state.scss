@@ -10,6 +10,11 @@
     .text-highlight{
         font-size: 41px;
     }
+    #lolvisio-banner{
+        height: 500px !important;
+        background-size: 1056px auto;
+        background-image: url(../../../images/Telephonie/header/LOLVisio_1056x500px.jpg);
+    }
 }
 
 @include media(desk){
@@ -18,5 +23,18 @@
     }
     .footer-note {
         margin: 0 0 15px;
+    }
+    #lolvisio-banner{
+        height: 370px !important;
+        background-size: 1302px auto;
+        background-image: url(../../../images/Telephonie/header/LOLVISIO_1302x370px.jpg);
+    }
+}
+
+@include media(lgdesk){
+    #lolvisio-banner{
+        height: 500px !important;
+        background-size: 1920px auto;
+        background-image: url(../../../images/Telephonie/header/LOLVISIO_1920x500px.jpg);
     }
 }

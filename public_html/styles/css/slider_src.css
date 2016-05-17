@@ -7,6 +7,10 @@
     background-image: url(../../images/Homepage/SLIDER/TV_672x320x.jpg); }
   #slider-contents .infos.image-3 {
     background-image: url(../../images/Homepage/SLIDER/Slider3_672x320px.jpg); }
+  #slider-contents .infos.image-4 {
+    background-image: url(../../images/Homepage/SLIDER/LOLVISIO_672x320px.jpg); }
+  #slider-contents .infos.image-5 {
+    background-image: url(../../images/Homepage/SLIDER/Inscription_672x320px.jpg); }
 
 @media screen and (min-width: 672px) {
   #slider-contents .infos {
@@ -16,7 +20,11 @@
     #slider-contents .infos.image-2 {
       background-image: url(../../images/Homepage/SLIDER/TV_1056x450px.jpg); }
     #slider-contents .infos.image-3 {
-      background-image: url(../../images/Homepage/SLIDER/Slider3_1056x450px.jpg); } }
+      background-image: url(../../images/Homepage/SLIDER/Slider3_1056x450px.jpg); }
+    #slider-contents .infos.image-4 {
+      background-image: url(../../images/Homepage/SLIDER/LOLVISIO_1056x450px.jpg); }
+    #slider-contents .infos.image-5 {
+      background-image: url(../../images/Homepage/SLIDER/Inscription_1056x450px.jpg); } }
 @media screen and (min-width: 1056px) {
   #slider-contents .infos {
     background-size: 1302px auto; }
@@ -25,7 +33,11 @@
     #slider-contents .infos.image-2 {
       background-image: url(../../images/Homepage/SLIDER/TV_1302x330px.jpg); }
     #slider-contents .infos.image-3 {
-      background-image: url(../../images/Homepage/SLIDER/Slider3_1302x330px.jpg); } }
+      background-image: url(../../images/Homepage/SLIDER/Slider3_1302x330px.jpg); }
+    #slider-contents .infos.image-4 {
+      background-image: url(../../images/Homepage/SLIDER/LOLVISIO_1302x330px.jpg); }
+    #slider-contents .infos.image-5 {
+      background-image: url(../../images/Homepage/SLIDER/Inscription_1302x330px.jpg); } }
 @media screen and (min-width: 1302px) {
   #slider-contents .infos {
     background-size: 1920px auto; }
@@ -34,9 +46,17 @@
     #slider-contents .infos.image-2 {
       background-image: url(../../images/Homepage/SLIDER/TV_1920x360px.jpg); }
     #slider-contents .infos.image-3 {
-      background-image: url(../../images/Homepage/SLIDER/Slider3_1920x360px.jpg); } }
+      background-image: url(../../images/Homepage/SLIDER/Slider3_1920x360px.jpg); }
+    #slider-contents .infos.image-4 {
+      background-image: url(../../images/Homepage/SLIDER/LOLVISIO_1920x360px.jpg); }
+    #slider-contents .infos.image-5 {
+      background-image: url(../../images/Homepage/SLIDER/Inscription_1920x360px.jpg); } }
 #slider-contents .infos.image-6 .title {
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.8); }
+
+#slider-contents .infos.image-5 .title {
+  font-size: 1.7em;
+  line-height: 30px; }
 
 #slider-contents .infos.image-2 .title {
   text-transform: initial;
@@ -56,7 +76,11 @@
   #slider-contents .infos.image-2 .title {
     text-transform: initial;
     font-size: 25pt;
-    line-height: 35px; } }
+    line-height: 35px; }
+
+  #slider-contents .infos.image-5 .title {
+    font-size: 27pt;
+    line-height: 42px; } }
 @media screen and (min-width: 1056px) {
   #slider-contents .infos.image-2 .row > div {
     position: absolute;

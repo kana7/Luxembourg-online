@@ -19,6 +19,11 @@
     display: inline-block;
     margin-right: 5px; }
 
+#lolvisio-banner {
+  background-size: 672px auto;
+  height: 550px !important;
+  background-image: url(../../../images/Telephonie/header/LOLVisio_672x550px.jpg); }
+
 @media screen and (max-width: 671px) {
   .footer-note {
     margin: 20px 0; } }
@@ -27,12 +32,27 @@
     margin: 10px 0 35px; }
 
   .text-highlight {
-    font-size: 41px; } }
+    font-size: 41px; }
+
+  #lolvisio-banner {
+    height: 500px !important;
+    background-size: 1056px auto;
+    background-image: url(../../../images/Telephonie/header/LOLVisio_1056x500px.jpg); } }
 @media screen and (min-width: 1056px) {
   .text-highlight {
     font-size: 44px; }
 
   .footer-note {
-    margin: 0 0 15px; } }
+    margin: 0 0 15px; }
+
+  #lolvisio-banner {
+    height: 370px !important;
+    background-size: 1302px auto;
+    background-image: url(../../../images/Telephonie/header/LOLVISIO_1302x370px.jpg); } }
+@media screen and (min-width: 1302px) {
+  #lolvisio-banner {
+    height: 500px !important;
+    background-size: 1920px auto;
+    background-image: url(../../../images/Telephonie/header/LOLVISIO_1920x500px.jpg); } }
 
 /*# sourceMappingURL=telephonie.css.map */

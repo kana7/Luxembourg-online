@@ -50,6 +50,9 @@ svg:not(:root) {
 .background-lightgrey{
     background-color: $light-grey;
 }
+.background-grey{
+    background-color: #F3F3F3;
+}
 .background-box{
     background-color: #FBFBFB;
 }
@@ -114,7 +117,7 @@ svg:not(:root) {
     z-index: 1;
 }
 .section-title{
-    font-size: 32px;
+    font-size: 31px;
     line-height: 32px;
     margin: 12px 0 25px;
     text-transform: uppercase;
@@ -340,6 +343,13 @@ span[class^=icon-]
                 position: relative;
                 top: 3px;
             }
+            &.blue{
+                background-color: $blue;
+                color: $white !important;
+                &:hover{
+                    background-color: lighten($blue, 10%);
+                }
+            }
             &:hover, &:active{
                 background-color: darken($light-grey, 1%);
             }
@@ -348,6 +358,18 @@ span[class^=icon-]
                 a{
                     display: block;
                     padding: 16px 20px;
+                }
+            }
+            &.commande{
+                a{
+                    padding: 20px 0;
+                    padding-left: 50px;
+                }
+                span[class^="icon-"]{
+                    font-size: 26px;
+                    position: absolute;
+                    left: 13px;
+                    top: 11px;
                 }
             }
         }
@@ -2644,8 +2666,8 @@ h2.contact-title {
     }
     &.inline{
         label{
-               display: inline;
-               &+input{margin-top: 5px;}
+            display: inline;
+            &+input{margin-top: 5px;}
         }
     }
     input:not([type=radio]), textarea, select{

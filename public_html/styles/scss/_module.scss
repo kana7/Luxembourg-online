@@ -2124,7 +2124,7 @@ footer
     color: $orange;
     text-transform: uppercase;
     font-weight: 800;
-    margin-top: 5px;
+    margin-top: 10px;
     &:hover{
         text-decoration: underline;
     }
@@ -2134,6 +2134,9 @@ footer
         font-size: 1.2em;
         top: 3px;
     }
+}
+.not+.promos-link{
+    display: none;
 }
 
 .footer-top-links

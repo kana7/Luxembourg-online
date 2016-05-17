@@ -233,43 +233,50 @@ function checkDispo(homeId, isLOLCable) {
                     }
                 }
 
-                $('.k24, .k30, .k100, .k200').next().remove();
+                $('.k24, .k30, .k100, .k200').next().not('.promos-link').remove();
+                $('.k24, .k30, .k100, .k200').removeClass('not');
                 $('#lol').show();
                 $('#cable').hide();
                 $('#offers-section').find('.not-dispo').remove();
+                var boolean = (isLOLCable == "true" || isLOLCable === true);
                 if (ab[0] == "" && ab[1] == "" && ab[2] == "" && ab[3] == "" && $('#promoFiber-content').length == 0) {
-                    if (!isLOLCable){
+                    if (!boolean){
                         $(printNonDispo(nonDispoAllTemplate)).prependTo('#lol').css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     }else{
                         $('#lol').fadeOut(400);
                     }
                 } else {
+                    console.log(boolean + " is type : "+ typeof boolean);
                     if (ab[0] == "") {
                         $(printNonDispo(nonDispoTemplate)).prependTo('.k24').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                        $('.k24').addClass('not');
                     } else {
                         $('.k24').find('.not-dispo').remove();
                         $(insertLink(ab[0][0], ab[0][1])).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     }
                     if (ab[1] == "") {
                         $(printNonDispo(nonDispoTemplate)).prependTo('.k30').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                        $('.k30').addClass('not');
                     } else {
                         $('.k30').find('.not-dispo').remove();
                         $(insertLink(ab[1][0], ab[1][1])).insertAfter($('.k30')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     }
                     if (ab[2] == "") {
                         $(printNonDispo(nonDispoTemplate)).prependTo('.k100').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                        $('.k100').addClass('not');
                     } else {
                         $('.k100').find('.not-dispo').remove();
                         $(insertLink(ab[2][0], ab[2][1])).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     }
                     if (ab[3] == "") {
                         $(printNonDispo(nonDispoTemplate)).prependTo('.k200').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                        $('.k200').addClass('not');
                     } else {
                         $('.k200').find('.not-dispo').remove();
                         $(insertLink(ab[3][0], ab[3][1])).insertAfter($('.k200')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     }
                 }
-                if (isLOLCable) {
+                if (boolean) {
                     $('#cable').fadeIn(400);
                 }
                 if ($('.main-gallery').length) {

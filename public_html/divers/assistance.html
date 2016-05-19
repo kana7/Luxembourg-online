@@ -244,7 +244,7 @@
                     display:none;
                     margin-top: 15px;
                 }
-                .emailItem, .minixItem{
+                .emailItem, .minixItem, .visioItem{
                     display:none;
                     margin-top:15px;
                 }
@@ -461,7 +461,7 @@
                         <div id="install-modem" class="dropdown">
                             <h2 data-trigger class="section-subtitle divers-subtitle"><span class="icon-right-arrow"></span> Guide d'installation et d'assistance</h2>
                             <div class="clearfix content-assistance phone-mt-5">
-                                <div class="phone-12 tab-6 desk-4">
+                                <div class="phone-12 tab-6 desk-3">
                                     <div style="text-align: center;">
                                         <table style="display: inline-block; margin-top: 15px;">
                                             <tbody>
@@ -477,7 +477,7 @@
                                         </table>
                                     </div>
                                 </div>
-                                <div class="phone-12 tab-6 desk-4">
+                                <div class="phone-12 tab-6 desk-3">
                                     <div class="align-center">
                                         <div style="display: inline-block">
                                             <div class="modemItem" style="display: none;">
@@ -524,7 +524,25 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="phone-12 tab-6 desk-4">
+                                <div class="phone-12 tab-6 desk-3">
+                                    <div class="align-center">
+                                        <div style="display: inline-block">
+                                            <div style="display: block;" class="visioItem">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><div class="imgContainer" style="width:120px !important;"><a class="link link2" href="../documents/guides/Guide_LOLVISIO_particuliers_201605.pdf" target="_blank"><img src="../images/guide/Guide_LOLVISIO.png" data-realwidth="106" data-realheight="150"></a></div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><h3><span class="bold">LOL</span>VISIO</h3><a onClick="ga('send', 'event', 'download', 'click', LOLVISIO');" class="link-assistance" href="../documents/guides/Guide_LOLVISIO_particuliers_201605.pdf" target="_blank">Télécharger</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="phone-12 tab-6 desk-3">
                                     <div class="align-center">
                                         <div style="display: inline-block;">
                                             <div class="minixItem" style="display: block;">
@@ -1341,117 +1359,117 @@
         <script src="../scripts/main.js"></script>
         <script src="../scripts/vendor/lightbox.js"></script>
         <script type="text/javascript">
-                                                                                                        $(function () {
+                                                                                                                $(function () {
 
-                                                                                                        $('.popup-gallery').each(function () {
-                                                                                                        $(this).magnificPopup({
-                                                                                                        delegate: 'a',
-                                                                                                                type: 'image',
-                                                                                                                tLoading: 'Loading image #%curr%...',
-                                                                                                                mainClass: 'mfp-img-mobile',
-                                                                                                                gallery: {
-                                                                                                                enabled: true,
-                                                                                                                        navigateByImgClick: true,
-                                                                                                                        preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-                                                                                                                },
-                                                                                                                image: {
-                                                                                                                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-                                                                                                                        titleSrc: function (item) {
-                                                                                                                        return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+                                                                                                                $('.popup-gallery').each(function () {
+                                                                                                                $(this).magnificPopup({
+                                                                                                                delegate: 'a',
+                                                                                                                        type: 'image',
+                                                                                                                        tLoading: 'Loading image #%curr%...',
+                                                                                                                        mainClass: 'mfp-img-mobile',
+                                                                                                                        gallery: {
+                                                                                                                        enabled: true,
+                                                                                                                                navigateByImgClick: true,
+                                                                                                                                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+                                                                                                                        },
+                                                                                                                        image: {
+                                                                                                                        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                                                                                                                                titleSrc: function (item) {
+                                                                                                                                return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+                                                                                                                                }
                                                                                                                         }
-                                                                                                                }
-                                                                                                        });
-                                                                                                        });
-                                                                                                                //old
-                                                                                                                $(".icon").hover(function () {
-                                                                                                        img = $(this).find("img");
-                                                                                                                img.attr("src", img.attr("data-default"));
-                                                                                                        }, function () {
-                                                                                                        img = $(this).find("img");
-                                                                                                                img.attr("src", img.attr("data-hover"));
-                                                                                                        });
-                                                                                                                $(".socialIcon").hover(function () {
-                                                                                                        groupTab = $(this).attr("data-groupTab");
-                                                                                                                hoverId = $(this).attr("data-hover");
-                                                                                                                $("." + groupTab).hide();
-                                                                                                                $(this).parent().parent().find(".menuTabBack").css("visibility", "hidden");
-                                                                                                                $(this).parent().next().css("visibility", "");
-                                                                                                                $("#" + hoverId).show();
-                                                                                                        });
-                                                                                                                $(".loginOption").click(function () {
-                                                                                                        $(".tabselected").removeClass("tabselected");
-                                                                                                                $(this).addClass("tabselected");
-                                                                                                        });
-                                                                                                                $(".modemList").on("change", function () {
-                                                                                                        $(".modemItem").hide();
-                                                                                                                $(".modemItem").eq($(this).val()).show();
-                                                                                                        });
-                                                                                                                $(".modemList").change();
-                                                                                                                $(".minixList").on("change", function () {
-                                                                                                        $(".minixItem").hide();
-                                                                                                                $(".minixItem").eq($(this).val()).show();
-                                                                                                        });
-                                                                                                                $(".minixList").change();
-                                                                                                                $(".emailList").on("change", function () {
-                                                                                                        $(".emailItem").hide();
-                                                                                                                $(".emailItem").eq($(this).val()).show();
-                                                                                                        });
-                                                                                                                $(".emailList").change();
-                                                                                                                $(".docList").on("change", function () {
-                                                                                                        $(".docItem").hide();
-                                                                                                                $(".docItem").eq($(this).val()).show();
-                                                                                                        });
-                                                                                                                $(".dataList").change();
-                                                                                                                $(".dataList").on("change", function () {
-                                                                                                        $(".dataItem").hide();
-                                                                                                                $(".dataItem").eq($(this).val()).show();
-                                                                                                        });
-                                                                                                                $(".dataList").change();
-                                                                                                                $(window).load(function () {
+                                                                                                                });
+                                                                                                                });
+                                                                                                                        //old
+                                                                                                                        $(".icon").hover(function () {
+                                                                                                                img = $(this).find("img");
+                                                                                                                        img.attr("src", img.attr("data-default"));
+                                                                                                                }, function () {
+                                                                                                                img = $(this).find("img");
+                                                                                                                        img.attr("src", img.attr("data-hover"));
+                                                                                                                });
+                                                                                                                        $(".socialIcon").hover(function () {
+                                                                                                                groupTab = $(this).attr("data-groupTab");
+                                                                                                                        hoverId = $(this).attr("data-hover");
+                                                                                                                        $("." + groupTab).hide();
+                                                                                                                        $(this).parent().parent().find(".menuTabBack").css("visibility", "hidden");
+                                                                                                                        $(this).parent().next().css("visibility", "");
+                                                                                                                        $("#" + hoverId).show();
+                                                                                                                });
+                                                                                                                        $(".loginOption").click(function () {
+                                                                                                                $(".tabselected").removeClass("tabselected");
+                                                                                                                        $(this).addClass("tabselected");
+                                                                                                                });
+                                                                                                                        $(".modemList").on("change", function () {
+                                                                                                                $(".modemItem").hide();
+                                                                                                                        $(".modemItem").eq($(this).val()).show();
+                                                                                                                });
+                                                                                                                        $(".modemList").change();
+                                                                                                                        $(".minixList").on("change", function () {
+                                                                                                                $(".minixItem").hide();
+                                                                                                                        $(".minixItem").eq($(this).val()).show();
+                                                                                                                });
+                                                                                                                        $(".minixList").change();
+                                                                                                                        $(".emailList").on("change", function () {
+                                                                                                                $(".emailItem").hide();
+                                                                                                                        $(".emailItem").eq($(this).val()).show();
+                                                                                                                });
+                                                                                                                        $(".emailList").change();
+                                                                                                                        $(".docList").on("change", function () {
+                                                                                                                $(".docItem").hide();
+                                                                                                                        $(".docItem").eq($(this).val()).show();
+                                                                                                                });
+                                                                                                                        $(".dataList").change();
+                                                                                                                        $(".dataList").on("change", function () {
+                                                                                                                $(".dataItem").hide();
+                                                                                                                        $(".dataItem").eq($(this).val()).show();
+                                                                                                                });
+                                                                                                                        $(".dataList").change();
+                                                                                                                        $(window).load(function () {
 
-                                                                                                        if (window.location.hash) {
-                                                                                                        var vhash = (window.location.hash.split('#')[1]).split(";");
-                                                                                                                if (vhash[0] === "assistance-technique") {
-                                                                                                        $('#install-modem').find('.section-subtitle').addClass('is-active');
-                                                                                                                $('#install-modem').find('.content-assistance').addClass('is-visible');
-                                                                                                                $('#install-modem').goTo();
-                                                                                                        }
-                                                                                                        if (vhash[0] === "install-modem") {
-                                                                                                        $('#install-modem').find('.section-subtitle').addClass('is-active');
-                                                                                                                $('#install-modem').find('.content-assistance').addClass('is-visible');
-                                                                                                                $('#install-modem').goTo();
-                                                                                                        }
-                                                                                                        if (vhash[0] === "config-email") {
-                                                                                                        $('#config-email').find('.section-subtitle').addClass('is-active');
-                                                                                                                $('#config-email').find('.content-assistance').addClass('is-visible');
-                                                                                                                $('.emailList').val(vhash[1]).change();
-                                                                                                                $('#config-email').goTo();
-                                                                                                        }
-                                                                                                        if (vhash[0] === "config-data") {
-                                                                                                        $('#config-data').find('.section-subtitle').addClass('is-active');
-                                                                                                                $('#config-data').find('.content-assistance').addClass('is-visible');
-                                                                                                                $('.dataList').val(vhash[1]).change();
-                                                                                                                $('#config-data').goTo();
-                                                                                                        }
-                                                                                                        if (vhash[0] === "speedtest") {
-                                                                                                        $('#speedtest').find('.section-subtitle').addClass('is-active');
-                                                                                                                $('#speedtest').find('.content-assistance').addClass('is-visible');
-                                                                                                                $('#speedtest').goTo();
-                                                                                                        }
-                                                                                                        if (vhash[0] === "facturation") {
-                                                                                                        $('#facturation').find('.section-subtitle').addClass('is-active');
-                                                                                                                $('#facturation').find('.content-assistance').addClass('is-visible');
-                                                                                                                $('#facturation').goTo();
-                                                                                                        }
-                                                                                                        if (vhash[0] === "document") {
-                                                                                                        $('#document').find('.section-subtitle').addClass('is-active');
-                                                                                                                $('#document').find('.content-assistance').addClass('is-visible');
-                                                                                                                $('.docList').val(vhash[1]).change();
-                                                                                                                $('#document').goTo();
-                                                                                                        }
-                                                                                                        }
-                                                                                                        });
-                                                                                                        });        </script>        
+                                                                                                                if (window.location.hash) {
+                                                                                                                var vhash = (window.location.hash.split('#')[1]).split(";");
+                                                                                                                        if (vhash[0] === "assistance-technique") {
+                                                                                                                $('#install-modem').find('.section-subtitle').addClass('is-active');
+                                                                                                                        $('#install-modem').find('.content-assistance').addClass('is-visible');
+                                                                                                                        $('#install-modem').goTo();
+                                                                                                                }
+                                                                                                                if (vhash[0] === "install-modem") {
+                                                                                                                $('#install-modem').find('.section-subtitle').addClass('is-active');
+                                                                                                                        $('#install-modem').find('.content-assistance').addClass('is-visible');
+                                                                                                                        $('#install-modem').goTo();
+                                                                                                                }
+                                                                                                                if (vhash[0] === "config-email") {
+                                                                                                                $('#config-email').find('.section-subtitle').addClass('is-active');
+                                                                                                                        $('#config-email').find('.content-assistance').addClass('is-visible');
+                                                                                                                        $('.emailList').val(vhash[1]).change();
+                                                                                                                        $('#config-email').goTo();
+                                                                                                                }
+                                                                                                                if (vhash[0] === "config-data") {
+                                                                                                                $('#config-data').find('.section-subtitle').addClass('is-active');
+                                                                                                                        $('#config-data').find('.content-assistance').addClass('is-visible');
+                                                                                                                        $('.dataList').val(vhash[1]).change();
+                                                                                                                        $('#config-data').goTo();
+                                                                                                                }
+                                                                                                                if (vhash[0] === "speedtest") {
+                                                                                                                $('#speedtest').find('.section-subtitle').addClass('is-active');
+                                                                                                                        $('#speedtest').find('.content-assistance').addClass('is-visible');
+                                                                                                                        $('#speedtest').goTo();
+                                                                                                                }
+                                                                                                                if (vhash[0] === "facturation") {
+                                                                                                                $('#facturation').find('.section-subtitle').addClass('is-active');
+                                                                                                                        $('#facturation').find('.content-assistance').addClass('is-visible');
+                                                                                                                        $('#facturation').goTo();
+                                                                                                                }
+                                                                                                                if (vhash[0] === "document") {
+                                                                                                                $('#document').find('.section-subtitle').addClass('is-active');
+                                                                                                                        $('#document').find('.content-assistance').addClass('is-visible');
+                                                                                                                        $('.docList').val(vhash[1]).change();
+                                                                                                                        $('#document').goTo();
+                                                                                                                }
+                                                                                                                }
+                                                                                                                });
+                                                                                                                });</script>        
         <script type="text/javascript" src="../scripts/analytics.js"></script>        
     </body>
 </html>

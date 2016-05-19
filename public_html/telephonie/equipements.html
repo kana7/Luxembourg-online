@@ -849,6 +849,14 @@
                         }
                     });
                 });
+                if (window.location.hash.length > 0) {
+                    vhash = (window.location.hash.split('#')[1]).split(";");
+                    if(viewport().width > 1056){
+                        $('.searchMenu .DesktopMenu').find('li').eq(vhash[0]).click();
+                    }else{
+                        $('.searchMenu .dropdown').find('li').eq(vhash[0]).click();
+                    }
+                }
             });
         </script>
 

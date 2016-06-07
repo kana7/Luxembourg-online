@@ -5071,7 +5071,7 @@ span[class^=icon-] {
   #slider-contents p.top-details strong {
     text-transform: uppercase; }
 #slider-contents p.bottom-details {
-  font-size: 10px;
+  font-size: 12px;
   color: #818181; }
 #slider-contents .section-price {
   font-size: 55px;
@@ -5181,7 +5181,7 @@ span[class^=icon-] {
     font-weight: 600;
     font-size: 14pt;
     top: 5px;
-    left: 65px; }
+    left: 50px; }
 
 #twenty-years {
   background-image: url(../../images/Homepage/CONTENU/320px/20ans_LOL.jpg);
@@ -6278,7 +6278,7 @@ h2.contact-title {
     font-size: 21pt;
     line-height: 35px; }
   #slider-contents p.bottom-details {
-    font-size: 10pt; }
+    font-size: 12pt; }
   #slider-contents .flickity-prev-next-button {
     position: absolute;
     top: 50%;
@@ -6718,8 +6718,8 @@ h2.contact-title {
       font-size: 16px; }
   #services .price-orange div {
     font-size: 14pt;
-    top: 5px;
-    left: 68px; }
+    top: 7px;
+    left: 60px; }
 
   .section-subtitle {
     text-align: left; }

@@ -3122,7 +3122,7 @@ header {
     #services .service#mobiles {
       background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_296x233px.jpg); }
     #services .service#installation {
-      background-image: url(../../images/Homepage/OFFRES//LOL_TV_296x233px.jpg); }
+      background-image: url(../../images/Homepage/OFFRES/Euro2016_296x233px.jpg); }
     #services .service#dispo {
       background-image: url(../../images/Homepage/OFFRES/Recherche_Offre.jpg); }
     #services .service .infos {
@@ -3376,11 +3376,13 @@ svg:not(:root) {
   box-shadow: inset 0 4px 15px 2px #bfbfbf;
   -o-box-shadow: inset 0 4px 15px 2px #bfbfbf;
   -ms-box-shadow: inset 0 4px 15px 2px #bfbfbf;
+  -webkit-appearance: none;
   -webkit-box-shadow: inset 0 4px 15px 2px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: inset 0 4px 15px 2px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 4px 15px 2px rgba(0, 0, 0, 0.15);
   -o-box-shadow: inset 0 4px 15px 2px rgba(0, 0, 0, 0.15);
-  -ms-box-shadow: inset 0 4px 15px 2px rgba(0, 0, 0, 0.15); }
+  -ms-box-shadow: inset 0 4px 15px 2px rgba(0, 0, 0, 0.15);
+  -webkit-appearance: none; }
 
 .section-shadow {
   position: relative;
@@ -3389,11 +3391,13 @@ svg:not(:root) {
   box-shadow: 0 2px 25px 2px #d4d4d4;
   -o-box-shadow: 0 2px 25px 2px #d4d4d4;
   -ms-box-shadow: 0 2px 25px 2px #d4d4d4;
+  -webkit-appearance: none;
   -webkit-box-shadow: 0 2px 25px 2px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 2px 25px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 25px 2px rgba(0, 0, 0, 0.2);
   -o-box-shadow: 0 2px 25px 2px rgba(0, 0, 0, 0.2);
   -ms-box-shadow: 0 2px 25px 2px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: none;
   z-index: 2; }
 
 .drop-shadow {
@@ -3402,11 +3406,13 @@ svg:not(:root) {
   box-shadow: 0 2px 13px 2px #B5B5B5;
   -o-box-shadow: 0 2px 13px 2px #B5B5B5;
   -ms-box-shadow: 0 2px 13px 2px #B5B5B5;
+  -webkit-appearance: none;
   -webkit-box-shadow: 0 2px 13px 2px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 2px 13px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 13px 2px rgba(0, 0, 0, 0.2);
   -o-box-shadow: 0 2px 13px 2px rgba(0, 0, 0, 0.2);
-  -ms-box-shadow: 0 2px 13px 2px rgba(0, 0, 0, 0.2); }
+  -ms-box-shadow: 0 2px 13px 2px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: none; }
 
 .price-delete {
   text-decoration: line-through; }
@@ -3535,11 +3541,12 @@ span[class^=icon-] {
     padding: 7px 35px; }
 
 .section-price {
-  display: inline-block;
+  display: block;
   position: relative;
+  width: 155px;
   font-weight: 800;
   font-size: 42px;
-  margin: 0 0 20px;
+  margin: 0 auto 20px;
   padding-top: 5px; }
   .section-price .price-label {
     position: absolute;
@@ -3751,7 +3758,8 @@ span[class^=icon-] {
     -moz-box-shadow: 0 2px 8px 0 #000000;
     box-shadow: 0 2px 8px 0 #000000;
     -o-box-shadow: 0 2px 8px 0 #000000;
-    -ms-box-shadow: 0 2px 8px 0 #000000; }
+    -ms-box-shadow: 0 2px 8px 0 #000000;
+    -webkit-appearance: none; }
 
 .top-menu-header-links {
   font-size: 13px;
@@ -3921,7 +3929,8 @@ span[class^=icon-] {
   -moz-box-shadow: 0px 2px 4px 0 #262626;
   box-shadow: 0px 2px 4px 0 #262626;
   -o-box-shadow: 0px 2px 4px 0 #262626;
-  -ms-box-shadow: 0px 2px 4px 0 #262626; }
+  -ms-box-shadow: 0px 2px 4px 0 #262626;
+  -webkit-appearance: none; }
   .btn-orange:hover, .input-group #fileButton:hover, .input-group .custom-file-input:hover::before {
     background-color: #f56a16; }
 
@@ -3934,6 +3943,7 @@ span[class^=icon-] {
   box-shadow: none;
   -o-box-shadow: none;
   -ms-box-shadow: none;
+  -webkit-appearance: none;
   margin: 0;
   padding: 13px 50px;
   font-size: 17px; }
@@ -3949,6 +3959,7 @@ span[class^=icon-] {
   box-shadow: 0 2px 4px 0 #262626;
   -o-box-shadow: 0 2px 4px 0 #262626;
   -ms-box-shadow: 0 2px 4px 0 #262626;
+  -webkit-appearance: none;
   background: #d6d6d6;
   background: -moz-linear-gradient(top, #d6d6d6 0%, white 50%, #d6d6d6 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, #d6d6d6), color-stop(50%, white), color-stop(100%, #d6d6d6));
@@ -4301,6 +4312,7 @@ span[class^=icon-] {
   box-shadow: 0 2px 4px 0 #262626;
   -o-box-shadow: 0 2px 4px 0 #262626;
   -ms-box-shadow: 0 2px 4px 0 #262626;
+  -webkit-appearance: none;
   /*line-height: 35px;*/
   position: relative;
   display: inline-block;
@@ -5063,12 +5075,12 @@ span[class^=icon-] {
   color: #818181; }
 #slider-contents .section-price {
   font-size: 55px;
-  margin: -10px 0 20px;
+  margin: -10px auto 20px;
   padding-top: 0px; }
   #slider-contents .section-price div {
     font-size: 20px;
     top: 7px;
-    left: 62px; }
+    left: 85px; }
   #slider-contents .section-price span {
     font-size: 18px;
     padding-left: 0px; }
@@ -5134,7 +5146,8 @@ span[class^=icon-] {
   -moz-box-shadow: 0 2px 4px 0 #262626;
   box-shadow: 0 2px 4px 0 #262626;
   -o-box-shadow: 0 2px 4px 0 #262626;
-  -ms-box-shadow: 0 2px 4px 0 #262626; }
+  -ms-box-shadow: 0 2px 4px 0 #262626;
+  -webkit-appearance: none; }
   .dispo-icon span[class^=icon-] {
     font-size: 22px;
     position: absolute;
@@ -5287,7 +5300,8 @@ footer {
   -moz-box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.18);
   box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.18);
   -o-box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.18);
-  -ms-box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.18); }
+  -ms-box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.18);
+  -webkit-appearance: none; }
 
 .promos-link {
   display: block;
@@ -5559,6 +5573,7 @@ footer {
     box-shadow: inset 0 1px 5px -1px #000;
     -o-box-shadow: inset 0 1px 5px -1px #000;
     -ms-box-shadow: inset 0 1px 5px -1px #000;
+    -webkit-appearance: none;
     background-color: #f8f8f8;
     font-size: 14px; }
   .white-pannel .input-white {
@@ -5574,7 +5589,8 @@ footer {
     -moz-box-shadow: none;
     box-shadow: none;
     -o-box-shadow: none;
-    -ms-box-shadow: none; }
+    -ms-box-shadow: none;
+    -webkit-appearance: none; }
   .white-pannel .btn-orange, .white-pannel .input-group #fileButton, .input-group .white-pannel #fileButton, .white-pannel .input-group .custom-file-input::before, .input-group .white-pannel .custom-file-input::before {
     padding: 15px 20px;
     font-size: 16px;
@@ -5769,7 +5785,8 @@ h2.contact-title {
     -moz-box-shadow: inset 0 1px 5px 1px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 1px 5px 1px rgba(0, 0, 0, 0.2);
     -o-box-shadow: inset 0 1px 5px 1px rgba(0, 0, 0, 0.2);
-    -ms-box-shadow: inset 0 1px 5px 1px rgba(0, 0, 0, 0.2); }
+    -ms-box-shadow: inset 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: none; }
   .input-group .not-fill {
     border: 1px solid #DC0000 !important; }
   .input-group #fileButton {
@@ -5780,6 +5797,7 @@ h2.contact-title {
     box-shadow: none;
     -o-box-shadow: none;
     -ms-box-shadow: none;
+    -webkit-appearance: none;
     padding: 12px 0px 12px; }
   .input-group ul#fileList > li {
     font-size: 1.1em;
@@ -5808,6 +5826,7 @@ h2.contact-title {
     box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
     -o-box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
     -ms-box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: none;
     cursor: pointer; }
   .input-group .select-arrow {
     display: inline-block;
@@ -5837,6 +5856,7 @@ h2.contact-title {
     box-shadow: none;
     -o-box-shadow: none;
     -ms-box-shadow: none;
+    -webkit-appearance: none;
     padding: 9px 0px 8px; }
     .input-group .custom-file-input::before:focus {
       outline: none; }
@@ -6239,7 +6259,7 @@ h2.contact-title {
     #services .service#mobiles {
       background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_288x392px.jpg); }
     #services .service#installation {
-      background-image: url(../../images/Homepage/OFFRES/LOL_TV_288x392px.jpg); }
+      background-image: url(../../images/Homepage/OFFRES/Euro2016_288x392px.jpg); }
 
   #offers-section div[class^=phone-] {
     margin-bottom: 20px; }
@@ -6270,12 +6290,12 @@ h2.contact-title {
       right: 50px; }
   #slider-contents .section-price {
     font-size: 72px;
-    margin: 0px 0 20px;
+    margin: 0px auto 20px;
     padding-top: 2px; }
     #slider-contents .section-price div {
       font-size: 24px;
       top: 12px;
-      left: 83px; }
+      left: 90px; }
     #slider-contents .section-price span {
       font-size: 21px;
       padding-left: 0px; }
@@ -6642,13 +6662,12 @@ h2.contact-title {
     font-size: 10pt; }
   #slider-contents .section-price {
     font-size: 72px;
-    margin: 0px 0 20px;
-    padding-top: 2px;
-    margin-right: 65px; }
+    margin: 0px auto 20px;
+    padding-top: 2px; }
     #slider-contents .section-price div {
       font-size: 21px;
       top: 13px !important;
-      left: 84px; }
+      left: 90px; }
     #slider-contents .section-price span {
       font-size: 21px; }
 
@@ -6683,7 +6702,7 @@ h2.contact-title {
     #services .service#mobiles {
       background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_240x327px.jpg); }
     #services .service#installation {
-      background-image: url(../../images/Homepage/OFFRES/LOL_TV_240x327px.jpg); }
+      background-image: url(../../images/Homepage/OFFRES/Euro2016_240x327px.jpg); }
     #services .service .infos {
       padding: 0 15px 15px; }
       #services .service .infos .details {
@@ -7015,7 +7034,7 @@ h2.contact-title {
       font-size: 26px; }
 
   .table-tarifs.table-tarifs-display-half {
-    width: 50%; }
+    width: 55%; }
 
   #twenty-years {
     background-image: url(../../images/Homepage/CONTENU/1024px/20ans_LOL.jpg);
@@ -7162,8 +7181,7 @@ h2.contact-title {
 
   #slider-contents .section-price {
     font-size: 82px !important;
-    padding-top: 7px;
-    margin-right: 80px; }
+    padding-top: 7px; }
     #slider-contents .section-price div {
       font-size: 22px;
       top: 16px !important;
@@ -7209,7 +7227,7 @@ h2.contact-title {
   #services .service#mobiles {
     background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_320x437px.jpg); }
   #services .service#installation {
-    background-image: url(../../images/Homepage/OFFRES/LOL_TV_320x437px.jpg); }
+    background-image: url(../../images/Homepage/OFFRES/Euro2016_320x437px.jpg); }
   #services .service .infos {
     padding: 0 25px 15px; }
     #services .service .infos h3 {

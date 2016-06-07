@@ -29,7 +29,7 @@ function natSort(as, bs) {
     return a.length - b.length;
 }
 var nonDispoTemplate = 'Indisponible <br />à votre adresse';
-var nonDispoAllTemplate = 'Nous ne pouvons malheureusement vérifier l’éligibilité de votre adresse. <br />Merci de nous contacter au 2799 0000 pour plus d\'information.';
+var nonDispoAllTemplate = 'Nous ne pouvons malheureusement pas vérifier l’éligibilité de votre adresse. <br />Merci de nous contacter au 2799 0000 pour plus d\'informations.';
 var buttonDispoTempate = '<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_FR.pdf" target="_blank">Abonnez-vous</a>';
 var buttonPromoFibre = '<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_OFFRE2_FR.pdf" target="_blank">Abonnez-vous</a>';
 var buttonPromoTv = '<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_OFFRE1_FR.pdf" target="_blank">Abonnez-vous</a>';
@@ -144,7 +144,7 @@ function checkDispo(homeId, isLOLCable) {
                                 if (articleObj[b].idObject == "5275" && ab[2] == "") {//Fiber 100 dégroupé
                                     ab[2] = [articleObj[b].idObject, 2];
                                 }
-                                if (articleObj[b].idObject == "5276" && ab[2] == "") {//Fiber 200 dégroupé
+                                if (articleObj[b].idObject == "5276" && ab[3] == "") {//Fiber 200 dégroupé
                                     ab[3] = [articleObj[b].idObject, 2];
                                 }
                             }
@@ -175,7 +175,7 @@ function checkDispo(homeId, isLOLCable) {
                     if (obj.Service[4] && $(articleObj[0]).size() > 0) {//entry exists
                         for (i in articleObj) {
                             for (b in articleObj) {
-                                if (articleObj[b].idObject == "5262" && ab[1] == "") {//Fiber 30
+                                if (articleObj[b].idObject == "5625" && ab[1] == "") {//Fiber 30
                                     ab[1] = [articleObj[b].idObject, 4];
                                 }
 
@@ -190,13 +190,13 @@ function checkDispo(homeId, isLOLCable) {
                     if (obj.Service[5] && $(articleObj[0]).size() > 0) {//entry exists
                         for (i in articleObj) {
                             for (b in articleObj) {
-                                if (articleObj[b].idObject == "5262" && ab[1] == "") {//Fiber 30
+                                if (articleObj[b].idObject == "5625" && ab[1] == "") {//Fiber 30
                                     ab[1] = [articleObj[b].idObject, 5];
                                 }
-                                if (articleObj[b].idObject == "5263" && ab[2] == "") {//Fiber 100
+                                if (articleObj[b].idObject == "5626" && ab[2] == "") {//Fiber 100
                                     ab[2] = [articleObj[b].idObject, 5];
                                 }
-                                if (articleObj[b].idObject == "5264" && ab[3] == "") {//Fiber 200
+                                if (articleObj[b].idObject == "5627" && ab[3] == "") {//Fiber 200
                                     ab[3] = [articleObj[b].idObject, 5];
                                 }
                             }
@@ -211,7 +211,7 @@ function checkDispo(homeId, isLOLCable) {
                     if (obj.Service[41] && $(articleObj[0]).size() > 0) {//entry exists
                         for (i in articleObj) {
                             for (b in articleObj) {
-                                if (articleObj[b].idObject == "5263" && ab[2] == "") {//Fiber 100 1 paire
+                                if (articleObj[b].idObject == "5626" && ab[2] == "") {//Fiber 100 1 paire
                                     ab[2] = [articleObj[b].idObject, 41];
                                 }
                             }
@@ -225,7 +225,7 @@ function checkDispo(homeId, isLOLCable) {
                     if (obj.Service[42] && $(articleObj[0]).size() > 0) {//entry exists
                         for (i in articleObj) {
                             for (b in articleObj) {
-                                if (articleObj[b].idObject == "5263" && ab[2] == "") {//Fiber 100 2 paires
+                                if (articleObj[b].idObject == "5626" && ab[2] == "") {//Fiber 100 2 paires
                                     ab[2] = [articleObj[b].idObject, 42];
                                 }
                             }
@@ -246,7 +246,6 @@ function checkDispo(homeId, isLOLCable) {
                         $('#lol').fadeOut(400);
                     }
                 } else {
-                    console.log(boolean + " is type : "+ typeof boolean);
                     if (ab[0] == "") {
                         $(printNonDispo(nonDispoTemplate)).prependTo('.k24').css('visibility', 'visible').animate({opacity: 1.0}, 500);
                         $('.k24').addClass('not');
@@ -402,7 +401,7 @@ $(function () {
                             $("select[name=rue]").prop("selectedIndex", 1).change();
                             $("select[name=rue] option").first().remove();
                         }
-                        if (vhash.length != 0) {
+                        if ($(vhash).length != 0) {
                             $("select[name=ville] option").each(function () {
                                 if ($(this).val() == _ville) {
                                     $(this).parent().prop("selectedIndex", $(this).index()).change();
@@ -426,7 +425,7 @@ $(function () {
                         $("select[name=rue]").prop("selectedIndex", 1).change();
                         $("select[name=rue] option").first().remove();
                     }
-                    if (vhash.length != 0) {
+                    if ($(vhash).length != 0) {
                         $("select[name=ville] option").each(function () {
                             if ($(this).val() == _ville) {
                                 $(this).parent().prop("selectedIndex", $(this).index()).change();
@@ -483,7 +482,7 @@ $(function () {
     });
     $("body").on('click', '.btnVerif', function () {
         var homeId = $("select[name=numero]").val();
-        if ($("select[name=ville]").val() == 98 || $("select[name=ville]").val() == 428 || $("select[name=ville]").val() == 159 || $("select[name=ville]").val() == 174 || $("select[name=ville]").val() == 220) {
+        if ($("select[name=ville]").val() == 98 || $("select[name=ville]").val() == 428 || $("select[name=ville]").val() == 571 || $("select[name=ville]").val() == 174 || $("select[name=ville]").val() == 220) {
             isLOLCable = true;
         }else{isLOLCable = false;}
         if (homeId != "") {
@@ -494,7 +493,7 @@ $(function () {
     });
     $("body").on('click', '.btnVerif2', function (event) {
         var homeId = $("select[name=numero]").val();
-        if ($("select[name=ville]").val() == 98 || $("select[name=ville]").val() == 428 || $("select[name=ville]").val() == 159 || $("select[name=ville]").val() == 174 || $("select[name=ville]").val() == 220) {
+        if ($("select[name=ville]").val() == 98 || $("select[name=ville]").val() == 428 || $("select[name=ville]").val() == 571 || $("select[name=ville]").val() == 174 || $("select[name=ville]").val() == 220) {
             isLOLCable = true;
         }else{isLOLCable = false;}
         if (homeId !== "") {

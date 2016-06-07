@@ -126,6 +126,7 @@
     box-shadow: $params;
     -o-box-shadow: $params;
     -ms-box-shadow: $params;
+    -webkit-appearance: none;
 }
 
 @mixin button($color: $blue-primary, $text_color: $white-background) {

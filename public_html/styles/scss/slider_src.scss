@@ -8,7 +8,7 @@
             background-image: url(../../images/Homepage/SLIDER/Slider_672x320px_Noel3.jpg);
         }
         &.image-2{
-            background-image: url(../../images/Homepage/SLIDER/TV_672x320x.jpg);
+            background-image: url(../../images/Homepage/SLIDER/Euro2016_672x320px.jpg);
         }
         &.image-3{
             background-image: url(../../images/Homepage/SLIDER/Slider3_672x320px.jpg);
@@ -30,7 +30,7 @@
                 background-image: url(../../images/Homepage/SLIDER/Slider_1056x450px_Noel3.jpg);
             }
             &.image-2{
-                background-image: url(../../images/Homepage/SLIDER/TV_1056x450px.jpg);
+                background-image: url(../../images/Homepage/SLIDER/Euro2016_1056x450px.jpg);
             }
             &.image-3{
                 background-image: url(../../images/Homepage/SLIDER/Slider3_1056x450px.jpg);
@@ -52,7 +52,7 @@
                 background-image: url(../../images/Homepage/SLIDER/Slider_1302x330px_Noel3.jpg);
             }
             &.image-2{
-                background-image: url(../../images/Homepage/SLIDER/TV_1302x330px.jpg);
+                background-image: url(../../images/Homepage/SLIDER/Euro2016_1302x330px.jpg);
             }
             &.image-3{
                 background-image: url(../../images/Homepage/SLIDER/Slider3_1302x330px.jpg);
@@ -74,7 +74,7 @@
                 background-image: url(../../images/Homepage/SLIDER/Slider_1920x360px_Noel3.jpg);
             }
             &.image-2{
-                background-image: url(../../images/Homepage/SLIDER/TV_1920x360px.jpg);
+                background-image: url(../../images/Homepage/SLIDER/Euro2016_1920x360px.jpg);
             }
             &.image-3{
                 background-image: url(../../images/Homepage/SLIDER/Slider3_1920x360px.jpg);
@@ -103,8 +103,8 @@
 }
 #slider-contents .infos.image-2 .title{
     text-transform: initial;
-    font-size: 16pt;
-    line-height: 25px;
+    font-size: 20pt;
+    line-height: 32px;
 }
 
 @media screen and (max-width: 671px) {
@@ -128,8 +128,8 @@
 @media screen and (min-width: 672px){
     #slider-contents .infos.image-2 .title{
         text-transform: initial;
-        font-size: 25pt;
-        line-height: 35px;
+        font-size: 28pt;
+        line-height: 42px;
     }
     #slider-contents .infos.image-5 .title{
         font-size: 27pt;
@@ -142,8 +142,8 @@
             @include vertical-align-middle(absolute);
         }
         .title{
-            font-size: 26.5pt;
-            line-height: 40px;
+            font-size: 32pt;
+            line-height: 45px;
         }
         p.bottom-details{
             font-size: 12pt;
@@ -152,7 +152,7 @@
 }
 @media screen and (min-width: 1302px){
     #slider-contents .infos.image-2 .title {
-        font-size: 30pt;
+        font-size: 35pt;
         line-height: 50px;
         margin-bottom: 10px;
     }

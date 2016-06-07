@@ -247,11 +247,12 @@ span[class^=icon-]
     }
 }
 .section-price{
-    display: inline-block;
+    display: block;
     position: relative;
+    width: 155px;
     font-weight: 800;
     font-size: 42px;
-    margin: 0 0 20px;
+    margin: 0 auto 20px;
     padding-top: 5px;
     .price-label{
         position: absolute;
@@ -1786,12 +1787,12 @@ span[class^=icon-]
     }
     .section-price{
         font-size: 55px;
-        margin: -10px 0 20px;
+        margin: -10px auto 20px;
         padding-top: 0px;
         div{    
             font-size: 20px;
             top: 7px;
-            left: 62px;
+            left: 85px;
         }
         span{
             font-size: 18px;

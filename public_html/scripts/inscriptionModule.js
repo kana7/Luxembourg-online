@@ -10,10 +10,12 @@ var StepTransition = (function () {
             'Suivant <span class="icon-right-arrow"></span>' +
             '</button>' +
             '</div>';
-    var tplInput = '<input type="hidden" name="{{type}}" value="{{id}}"/>' +
+    var tplInput = '{{#.}}' +
+            '<input type="hidden" name="{{type}}" value="{{id}}"/>' +
             '{{#remise}}' +
             '<input type="hidden" name="{{remise.type}}" value="{{remise.id}}"/>' +
-            '{{/remise}}';
+            '{{/remise}}' +
+            '{{/.}}';
     //template pour un article
     var tplItem =
             '<div class="clearfix phone-mt-30 shop-item-list">' +
@@ -75,10 +77,10 @@ var StepTransition = (function () {
             '<div data-form="fibre" class="step-form clearfix">' +
             '<div class="phone-12">' +
             '<div class="input-group radio">' +
-            '<input id="Cablage" type="radio" name="p_client" value="true" required><label for="Cablage">Mon cablâge interne est conforme pour le raccordement Internet via la fibre optique.</label>' +
+            '<input id="Cablage" type="radio" name="p_cablage" value="true" required><label for="Cablage">Mon cablâge interne est conforme pour le raccordement Internet via la fibre optique.</label>' +
             '</div>' +
             '<div class="input-group">' +
-            '<input id="NotCablage" type="radio" name="p_client" value="false" required><label for="NotCablage">Mon cablâge interne n\'est pas conforme et je demande à Luxembourg Online d\'entreprendre les travaux nécessaires. </label>' +
+            '<input id="NotCablage" type="radio" name="p_cablage" data-cat="p_cablage" value="4543" required><label for="NotCablage">Mon cablâge interne n\'est pas conforme et je demande à Luxembourg Online d\'entreprendre les travaux nécessaires. </label>' +
             '</div>' +
             '<div class="fibre-install">' +
             '<ul class="shop-item-price promo orange"><li>PROMO : Frais de câblage fibre (220€) offerts !</li></ul>' +
@@ -124,7 +126,7 @@ var StepTransition = (function () {
         }
     }
 
-    //génére le html de tous les sliders
+//génére le html de tous les sliders
     function _render() {
         $('#steps').before(Mustache.render(tplInput, currentItems_list['a_abo']));
         $('#steps').before(Mustache.render(tplInput, currentItems_list['p_activation']));
@@ -137,7 +139,7 @@ var StepTransition = (function () {
                 html += tplbtn;
                 $(this).find('.step-description').after(html);
                 if (currentItems_list['a_abo']['name'].indexOf('30') >= 0) {
-                    $('.fibre-install>.promo').hide();
+                    $('.fibre-install>.promo').html('Frais de cablâge fibre : 220€<br/><span style="font-size: 0.9em;font-weight: 400;">Frais de cablâge offerts avec souscription d\'un abonnement LOL FIBER 100 ou 200 !</span><br/><a style="font-size: 0.8em;" class="shop-link" href="http://www.internet.lu/promos/fibre.html">Cliquez ici pour consulter l\'offre!</a>').addClass('phone-mb-15');
                 }
             }
             if ($(this).attr('id') == 'materiel') {
@@ -178,12 +180,11 @@ var StepTransition = (function () {
                 html += '</div>';
                 $(this).find('.step-description').after(html);
                 $('input[value="5137"], input[value="5304"]').parents('.shop-item').addClass('fixed');
-
             }
         });
     }
 
-    //bind les évènements pour tous le script
+//bind les évènements pour tous le script
     function _bindEvents() {
         StepsContainer.on('click', 'button.previous', function () {
             _previous();
@@ -202,7 +203,6 @@ var StepTransition = (function () {
         StepsContainer.on('click', '.shop-item:not(.disabled):not(.fixed)', function () {
 
             _selectItem($(this));
-
             if ($(this).find('input').val() == 2848) {
                 if ($(this).find('input').is(':checked')) {
                     $('input[value="5304"]').parents('.shop-item').removeClass('fixed');
@@ -223,11 +223,18 @@ var StepTransition = (function () {
         StepsContainer.on('change', '.shop-item:not(.disabled):not(.fixed) input:not([type="text"])', function () {
             _deselectItem($(this));
         });
+        StepsContainer.on('change', 'input[name="p_cablage"]', function(){
+            if($('#NotCablage[name="p_cablage"]').is(':checked')){
+                _addItem($('#NotCablage[name="p_cablage"]').parent());
+            }else{
+                _deselectItem($('#NotCablage[name="p_cablage"]'));
+            }
+        });
         $(window).on("beforeunload", function () {
             _saveCart();
         });
     }
-    //Amène à un slide en fonction d'un paramètre dans le lien
+//Amène à un slide en fonction d'un paramètre dans le lien
     function _goToSlider(position) {
         if (!(currentStep - position <= 0)) {
             if (position >= 0) {
@@ -242,7 +249,7 @@ var StepTransition = (function () {
         }
     }
 
-    //afficher un slide
+//afficher un slide
     function _showSlider(index) {
         var position = Number(index);
         $('#step-list ul').find('li:not(.step-separator)').removeClass('active');
@@ -254,20 +261,20 @@ var StepTransition = (function () {
         }, 0);
     }
 
-    //slide suivant
+//slide suivant
     function _next() {
         if (_checkInput()) {
             if (currentStep != stepList.length - 1) {
                 _showSlider(++currentStep);
             } else {
-                //on enregistre les infos du panier dans un cookie dans le cas où l'utilisateur revient en arrière.
+//on enregistre les infos du panier dans un cookie dans le cas où l'utilisateur revient en arrière.
                 _saveCart();
                 $('#shoppingCart').submit();
             }
         }
     }
 
-    //slide précédent
+//slide précédent
     function _previous() {
         if (currentStep != 0) {
             _showSlider(--currentStep);
@@ -278,11 +285,11 @@ var StepTransition = (function () {
             }
         }
     }
-    //Activé pour simplement ajouter dans le panier 
+//Activé pour simplement ajouter dans le panier 
     function _addItem(shopItem) {
         var input = shopItem.find('input');
         shopItem.addClass('selected');
-        if (input.is(':radio')) {
+        if (input.is(':radio') && (input.attr('data-cat') !== typeof undefined && input.attr('data-cat') !== false)) {
             _deselectItem(input);
         }
         events.emit('useCart', {
@@ -292,7 +299,7 @@ var StepTransition = (function () {
         });
     }
 
-    //Activé quand on clique sur un article (toggle mode) pour ajouté dans le panier.
+//Activé quand on clique sur un article (toggle mode) pour ajouté dans le panier.
     function _selectItem(shopItem) {
         if (shopItem !== 'undefined') {
             var input = shopItem.find('input:not([type="text"])');
@@ -316,7 +323,7 @@ var StepTransition = (function () {
         }
     }
 
-    //Déselectionne élément issu du même groupe et supprime du panier
+//Déselectionne élément issu du même groupe et supprime du panier
     function _deselectItem(input) {
         if (typeof input != 'undefined') {
             var radioName = input.attr('name');
@@ -334,7 +341,7 @@ var StepTransition = (function () {
         }
     }
 
-    //Récupère les données des formulaires et les ajoute dans le panier
+//Récupère les données des formulaires et les ajoute dans le panier
     function _collectDataForm($form) {
         if ($form.length > 0) {
             var id = $form.attr('data-form');
@@ -356,7 +363,7 @@ var StepTransition = (function () {
         }
     }
 
-    //Vérifie si tous les éléments requis ont été remplis
+//Vérifie si tous les éléments requis ont été remplis
     var _verifyStep = function ($element) {
         var flag = true;
         var currentStep = $element;
@@ -376,7 +383,6 @@ var StepTransition = (function () {
         });
         return flag;
     };
-
     //Désactive bouton si verifyStep est faux
     var _checkInput = function () {
         var flag = _verifyStep($(stepList[currentStep]));
@@ -387,7 +393,6 @@ var StepTransition = (function () {
         }
         return flag;
     };
-
     //Enregistre les informations du panier dans des cookies quand on quitte la page
     var _saveCart = function () {
         var itemsTab = [];
@@ -430,8 +435,6 @@ var StepTransition = (function () {
         step: currentStep
     };
 })();
-
-
 var Cart = (function () {
 
 //Contient la liste de tous les choix possibles lors de l'inscription
@@ -461,7 +464,8 @@ var Cart = (function () {
             }
         }
     };
-    var tplItem = '<li class="items">' +
+    var tplItem = '{{#.}}' +
+            '<li class="items">' +
             '<div class="month">' +
             '<h4>Coûts mensuels</h4>' +
             '<ul>' +
@@ -514,8 +518,9 @@ var Cart = (function () {
             '</div>' +
             '<div class="term">' +
             '<h4>Durée du Contrat</h4><span class="price">24 mois</span>' +
-            '</div>';
-    '</li>';
+            '</div>' +
+            '</li>' +
+            '{{/.}}';
     var tplPrice = '<li class="prices">' +
             '<ul>' +
             '<li id="monthlyPrice">' +
@@ -548,7 +553,11 @@ var Cart = (function () {
             Cookies.set('shop_serviceMap', vhash, {expires: 1});
             currentItems_list['a_abo'] = abonnements_list.getAbo(vhash[0], vhash[1]);
             currentItems_list['p_installation'] = currentItems_list['a_abo']['installation'];
-            currentItems_list['p_activation'] = currentItems_list['a_abo']['activation'];
+            if (currentItems_list['a_abo']['tech'] == "FIBRE"){
+                console.log(currentItems_list['a_abo']['name'].split(/[, ]+/).pop());
+             currentItems_list['p_cablage'] = (currentItems_list['a_abo']['name'].split(/[, ]+/).pop() === '30')?cablageFibre[30]:cablageFibre['other'];
+             }
+            currentItems_list['p_activation'] = currentItems_list['a_abo']['activation'] || ''; //activation non obligatoire
             currentItems_list['m_modem'] = currentItems_list['a_abo']['materiels'];
             currentItems_list['a_telephone'] = aboTel;
             currentItems_list['a_tv'] = lolTv;
@@ -584,13 +593,13 @@ var Cart = (function () {
         $('#monthlyPriceNoPromos').remove();
         html = Mustache.render(tplFullPrice, Panier);
         /*$('#panier').parent().append(html);
-        if ($('input[value="2848"]').is(':checked')) {
-            $('#monthlyPriceNoPromos').show();
-            $('#monthlyPrice').find('.exponent').show();
-        } else {
-            $('#monthlyPriceNoPromos').hide();
-            $('#monthlyPrice').find('.exponent').hide();
-        }*/
+         if ($('input[value="2848"]').is(':checked')) {
+         $('#monthlyPriceNoPromos').show();
+         $('#monthlyPrice').find('.exponent').show();
+         } else {
+         $('#monthlyPriceNoPromos').hide();
+         $('#monthlyPrice').find('.exponent').hide();
+         }*/
         if ($('input[value="5313"]').is(':checked')) {
             $('#travelXpens').show();
         } else {
@@ -751,6 +760,7 @@ var SellProduct = function (id, type, name, price, isMonthlyCost, commentaire, i
     this.price = this.setPrice(price, remise);
 };
 inherits(SellProduct, Item);
+/*LOL PRODUCT*/
 var modem7490 = new Item("5294", "m_modem", "Location FRITZ!Box 7490", 6.00, true, ["LAN : 4 x Gigabit", "WLAN : jusqu'à 1300Mbits/s", "Téléphone : 2 x analogique, 1 x ISDN", " "], false, "../images/equipment/modem/7390/7360.png");
 var modem_List1 = [
     new Item("5291", "m_modem", "Location FRITZ!Box 3272", 4.00, true, ["LAN :  2 x Gigabit, 2 x fast Ethernet", "WLAN :  jusqu'à 300Mbit/s", " ", " "], true, "../images/equipment/modem/3272/3272.png"),
@@ -772,12 +782,65 @@ var installNoRemise = new SellProduct("5313", "p_installation", "Installation pa
 var installRemise = new SellProduct("5313", "p_installation", "Installation par une équipe <span class='exponent'>(1)</span>", 89.00, false, " Je souhaite qu’une équipe spécialisée vienne s’occuper de l’installation à mon domicile. Je vais donc être rappelé par Luxembourg Online pour fixer la date du rendez-vous. ", true, "../images/Shop/install-equip.png", null, true, remiseInstall);
 var selfInstall = new SellProduct("5314", "p_installation", "Installation avec un kit de self-install", 25.00, false, "Je procède à l’installation moi-même à l’aide du kit de self-install qui me sera fourni par Luxembourg Online.", false, "../images/Shop/self-install.png", null, false, null);
 var remiseActivation = new Item("5611", "p_activationRemise", "Activation offerte", -85.00, false, "", true, null);
+var remiseCablage = new Item("5826", "p_cablageRemise", "Câblage offert", -220.00, false, "", true, null);
+var cablageFibre = {
+    '30': new SellProduct("4543", "p_cablage", "Installation câblage interne", 220.00, false, "", false, "", null, false, null),
+    'other': new SellProduct("4543", "p_cablage", "Installation câblage interne", 220.00, false, "", false, "", null, true, remiseCablage)
+};
 var activation = new SellProduct("5610", "p_activation", "Activation", 85.00, false, "", true, null, null, true, remiseActivation);
 var typeInstall = [installNoRemise, selfInstall];
+/*----------------------------------------------*/
+/*CABLE PRODUCT*/
+var remiseCableInstall = new Item("5830", "p_installationRemise", "Remise installation", -65.00, false, "", true, null);
+var cableInstall = new SellProduct("56", "p_installation", "Mise en service LOLCABLE", 65.00, false, "Je souhaite qu’une équipe spécialisée vienne s’occuper de l’installation à mon domicile. Je vais donc être rappelé par Luxembourg Online pour fixer la date du rendez-vous. ", true, "../images/Shop/install-equip.png", null, true, remiseCableInstall);
+var lolCableboxModel = ["Cisco 3928", "FRITZ!Box6490"];
+var modemCisco = new SellProduct("5194", "m_modem", lolCableboxModel[0], 115.00, false, ["LAN :  4 x Gigabit", "WLAN : dual-band, jusqu'à 300Mbit/s", "Téléphone :  2 x analogique", " "], false, "", null, true); //TODO: METTRE LIEN IMAGE
+var modem6490 = new SellProduct("5194", "m_modem", lolCableboxModel[1], 159.00, false, ["LAN :  4 x Gigabit", "WLAN : dual-band, jusqu'à 300Mbit/s", "Téléphone :  2 x analogique", " "], false, "", null, true); //TODO: METTRE LIEN IMAGE + META DATA
+var cableModem = {
+    cisco: modemCisco,
+    fritz: modem6490,
+    returnModem: function (name, modemRemise) {
+        cableModem[name].remise = modemRemise;
+        return cableModem[name];
+    }
+};
+var modemRemise = {
+    5831: new Item("5831", "p_modemRemise", "", -30.00, false, "", true, null),
+    5832: new Item("5832", "p_modemRemise", "", -115.00, false, "", true, null),
+    getRemise: function (id, modemName) {
+        this[id].name = modemName;
+        return this[id];
+    }
+};
+var cableModem_list = {
+    4625: [cableModem.returnModem('cisco', modemRemise.getRemise(5831, lolCableboxModel[0])), cableModem.returnModem('fritz', modemRemise.getRemise(5831, lolCableboxModel[1]))], //cable 10
+    4626: [cableModem.returnModem('cisco', modemRemise.getRemise(5832, lolCableboxModel[0])), cableModem.returnModem('fritz', modemRemise.getRemise(5832, lolCableboxModel[1]))], //cable 30
+    4627: [cableModem.returnModem('cisco', modemRemise.getRemise(5832, lolCableboxModel[0])), cableModem.returnModem('fritz', modemRemise.getRemise(5832, lolCableboxModel[1]))], //cable 60
+    4628: [cableModem.returnModem('cisco', modemRemise.getRemise(5832, lolCableboxModel[0])), cableModem.returnModem('fritz', modemRemise.getRemise(5832, lolCableboxModel[1]))]  //cable 120
+};
+var cableTel = {
+    4595: new Item("4595", "a_telephone", "Abonnement téléphonique", 0, true, ["Inclus dans votre abonnement de base", " ", " ", " ", " "], true, "../images/Shop/Telephonie.jpg"),
+    4596: new Item("4596", "a_telephone", "Abonnement téléphonique", 0, true, ["Inclus dans votre abonnement de base", " ", " ", " ", " "], true, "../images/Shop/Telephonie.jpg")
+};
+var telNatFixe = {
+    5119: new Item("5119", "a_telephone", "Tél. Nat. Fixe flat", 4.50, true, ["Appels nationaux fixes illimités", "(sauf numéros spéciaux)", " ", " ", " "], false, "../images/Shop/Telephonie.jpg"),
+    3183: new Item("3183", "a_telephone", "Tél. Nat. Fixe flat", 0, true, ["Appels nationaux fixes illimités", "(sauf numéros spéciaux)", " ", " ", " "], false, "../images/Shop/Telephonie.jpg")
+};
+var forfaitEu = {
+    5118: new Item("5118", "a_telephonie", "EU120", 4.50, true, ["120 min vers les fixes des pays membres de l'U.E", " ", " ", " ", " "], false, "../images/Shop/Telephonie.jpg"),
+    2930: new Item("2930", "a_telephonie", "EU120", 0, true, ["120 min vers les fixes des pays membres de l'U.E", " ", " ", " ", " "], false, "../images/Shop/Telephonie.jpg")
+};
+var cableTel_List = {
+    4625: [cableTel, telNatFixe[5119], forfaitEu[5118]],
+    4626: [cableTel, telNatFixe[5119], forfaitEu[5118]],
+    4627: [cableTel, telNatFixe[3183], forfaitEu[5118]],
+    4628: [cableTel, telNatFixe[3183], forfaitEu[2930]]
+};
 var abonnements_list = {
     "2": {
         "5272": new Abonnement("5272", "a_abo", "LOL FIBER 30", 44.90, true, "", true, null, "LOL", "FIBRE", 2, installNoRemise, activation, modem_List2),
         "5275": new Abonnement("5275", "a_abo", "LOL FIBER 100", 54.90, true, "", true, null, "LOL", "FIBRE", 2, installRemise, activation, modem_List2),
+        "5829": new Abonnement("5829", "a_abo", "LOL FIBER 200", 54.90, true, "", true, null, "LOL", "FIBRE", 2, installRemise, activation, modem_List2),
         "5276": new Abonnement("5276", "a_abo", "LOL FIBER 200", 71.90, true, "", true, null, "LOL", "FIBRE", 2, installRemise, activation, modem_List2)
     },
     "3": {
@@ -804,6 +867,12 @@ var abonnements_list = {
     },
     "42": {
         "5626": new Abonnement("5626", "a_abo", "LOL FIBER 100", 54.90, true, "", true, null, "EPT", "VDSL2", 42, installRemise, activation, modem_List2)
+    },
+    "cable": {
+        "4625": new Abonnement(4625, "a_abo", "Cable 10", 29.00, true, "", true, null, "LOL", "CBL", "cable", cableInstall, null, cableModem_list[4625]),
+        "4626": new Abonnement(4626, "a_abo", "Cable 30", 38.00, true, "", true, null, "LOL", "CBL", "cable", cableInstall, null, cableModem_list[4626]),
+        "4627": new Abonnement(4627, "a_abo", "Cable 60", 53.00, true, "", true, null, "LOL", "CBL", "cable", cableInstall, null, cableModem_list[4627]),
+        "4628": new Abonnement(5628, "a_abo", "Cable 120", 74.00, true, "", true, null, "LOL", "CBL", "cable", cableInstall, null, cableModem_list[4628])
     },
     getAbo: function (service, id) {
         return abonnements_list[service][id];

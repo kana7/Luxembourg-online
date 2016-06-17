@@ -387,10 +387,11 @@ input:not([type="radio"]):not([type="checkbox"]).error {
 .fibre-install {
   margin-bottom: 10px; }
   .fibre-install .shop-item-price.promo.orange {
-    font-size: 1.075em;
+    font-size: 1.175em;
     display: block;
     float: none;
-    margin-bottom: 5px; }
+    margin-bottom: 5px;
+    font-weight: 600; }
 
 .shop-link {
   font-size: 1em;

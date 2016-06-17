@@ -74,6 +74,43 @@ var popuptemplate = '<div id="testDispo" class="popup">' +
         '</div>' +
         '</div>' +
         '</div>';
+var offers = {
+    100: {
+        name: "Fiber 100",
+        description: "Offre coup de <span class='icon-heart-ico'></span>",
+        download: "100 Mbit/s",
+        upload: "50 Mbits/s",
+        price: {
+            unit: 54,
+            exponent: ",90€"
+        },
+        color: 'orange'
+    },
+    200: {
+        name: "Fiber 200",
+        description: "Exigez le meilleur",
+        download: "200 Mbit/s",
+        upload: "100 Mbits/s",
+        price: {
+            unit: 71,
+            exponent: ",90€"
+        },
+        color: 'blue'
+    },
+    double: {
+        name: "Fiber 200",
+        description: "PROMO : LA VITESSE x2",
+        download: "</span><span style='text-decoration: line-through; font-size: 0.9em;'> 100 </span><span class='orange'>200 Mbit/s</span>",
+        upload: "</span><span style='text-decoration: line-through; font-size: 0.9em;'> 50 </span>&nbsp;&nbsp;<span class='orange'>100 Mbit/s</span>",
+        price: {
+            unit: 54,
+            exponent: ",90€"
+        },
+        color: 'orange'
+    }
+
+};
+var offerFiber200 = {mobile: null, desktop: null};
 var isLOLCable = false;
 var obj = {},
         streetList = {},
@@ -89,8 +126,40 @@ function createDispoPopup() {
     }
 }
 
+function printOffer(offer) {
+    var printedOffer = '<div class="offer-item-'+offer.color+'">' +
+            '<div class="item-header">' +
+            '<strong>LOL</strong>' + offer.name +
+            '</div>' +
+            '<ul class="item-body">' +
+            '<li class="description">' + offer.description + '</li>' +
+            '<li class="info"><span class="icon-download-ico download"></span>' + offer.download + '<span class="exponent">(1)</span></li>' +
+            '<li class="info"><span class="icon-download-ico upload"></span>' + offer.upload + '<span class="exponent">(1)</span></li>' +
+            '<li class="check-list-container">' +
+            '<div class="check-list-title"><span class="icon-pack-ico"></span> Inclus dans ce pack : </div>' +
+            '<ul class="check-list">' +
+            '<li><span class="icon-check-ico"></span>Volume illimité</li>' +
+            '<li><span class="icon-check-ico"></span>Abonnement tél. fixe</li>' +
+            '<li><span class="icon-check-ico"></span>Appels nat. fixes<span class="exponent">(2)</span></li>' +
+            '<li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>' +
+            '<li><span class="icon-check-ico"></span>120 min vers l\'Europe fixe<span class="exponent">(2) (3)</span></li>' +
+            '<li><span class="icon-check-ico"></span>LOL CLOUD 5GB</li>' +
+            '</ul>' +
+            '</li>' +
+            '</ul>' +
+            '<div class="item-footer">' +
+            '<div class="offer-price">' +
+            '<div>' + offer.price.exponent + '</div>' +
+            +offer.price.unit + '<span>/mois</span>' +
+            '</div>' +
+            '</div>' +
+            '</div>';
+    return printedOffer;
+}
+;
+
 function insertLink(id, service) {
-    return '<a class="btn-blue btn-subscription" href="http://shop.internet.lu/inscription/shop/inscription.html#' + service + ';' + id + '">Abonnez-vous</a>';
+    return '<a class="btn-blue btn-subscription" href="http://shop.internet.lu/inscription/shop/inscription.html#' + service + ';' + id + '">Abonnez-vous</a>'; //internet shop link: "http://shop.internet.lu/inscription/shop/inscription.html#"
 }
 function printNonDispo(string) {
     return '<div class="not-dispo"><div class="not-dispo-info">' + string + '</div></div>';
@@ -142,7 +211,7 @@ function checkDispo(homeId, isLOLCable) {
                                     ab[1] = [articleObj[b].idObject, 2];
                                 }
                                 if (articleObj[b].idObject == "5275" && ab[2] == "") {//Fiber 100 dégroupé
-                                    ab[2] = [articleObj[b].idObject, 2];
+                                    ab[2] = [5829, 2];
                                 }
                                 if (articleObj[b].idObject == "5276" && ab[3] == "") {//Fiber 200 dégroupé
                                     ab[3] = [articleObj[b].idObject, 2];
@@ -240,12 +309,31 @@ function checkDispo(homeId, isLOLCable) {
                 $('#offers-section').find('.not-dispo').remove();
                 var boolean = (isLOLCable == "true" || isLOLCable === true);
                 if (ab[0] == "" && ab[1] == "" && ab[2] == "" && ab[3] == "" && $('#promoFiber-content').length == 0) {
-                    if (!boolean){
+                    if (!boolean) {
                         $(printNonDispo(nonDispoAllTemplate)).prependTo('#lol').css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                    }else{
+                    } else {
                         $('#lol').fadeOut(400);
                     }
                 } else {
+                    if ($(obj.Service[2]).length > 0) {
+                        $('#lol .hidden-phone .k200, #promoFiber-content .hidden-phone .k200').parent().remove();
+                        $('#lol .main-gallery, #promoFiber-content .main-gallery').flickity( 'remove', $('#lol .display-phone .k200, #promoFiber-content .display-phone .k200').parent());
+                        $('.k100').empty().append(printOffer(offers['double']));
+                        $('#lol, #promoFiber-content').addClass('degroupage');
+                    } else {
+                        if ($('.k200').length === 0) {
+                            if ($('#promoFiber-content').length>0){
+                                offerFiber200.desktop = $("<div class='phone-12 tab-6'></div>").append('<div class="k200">'+printOffer(offers[200])+'</div>');
+                            }else{
+                                offerFiber200.desktop = $("<div class='phone-6 desk-3 tab-pl-10 phone-pr-0 desk-pl-5 lgdesk-pl-10'></div>").append('<div class="k200">'+printOffer(offers[200])+'</div>');
+                            }
+                            offerFiber200.mobile = $("<div class='gallery-cell'></div>").append('<div class="k200">'+printOffer(offers[200])+'</div>');
+                            $('#lol .hidden-phone, #promoFiber-content .hidden-phone').append(offerFiber200.desktop);
+                            $('#lol .display-phone .main-gallery, #promoFiber-content .display-phone .main-gallery').flickity('append',offerFiber200.mobile);
+                            $('.k100').empty().append(printOffer(offers[100]));
+                        }
+                        $('#lol, #promoFiber-content').removeClass('degroupage');
+                    }
                     if (ab[0] == "") {
                         $(printNonDispo(nonDispoTemplate)).prependTo('.k24').css('visibility', 'visible').animate({opacity: 1.0}, 500);
                         $('.k24').addClass('not');
@@ -484,9 +572,11 @@ $(function () {
         var homeId = $("select[name=numero]").val();
         if ($("select[name=ville]").val() == 98 || $("select[name=ville]").val() == 428 || $("select[name=ville]").val() == 571 || $("select[name=ville]").val() == 174 || $("select[name=ville]").val() == 220) {
             isLOLCable = true;
-        }else{isLOLCable = false;}
+        } else {
+            isLOLCable = false;
+        }
         if (homeId != "") {
-            window.location.href = "/internet/offres.html#" + $("input[name=zipcode]").val() + ";" + $("select[name=ville]").val() + ";" + $("select[name=rue]").val() + ";" + $("select[name=numero]").val()+";"+isLOLCable;
+            window.location.href = "/internet/offres.html#" + $("input[name=zipcode]").val() + ";" + $("select[name=ville]").val() + ";" + $("select[name=rue]").val() + ";" + $("select[name=numero]").val() + ";" + isLOLCable;
         } else {
             alert('Entrez votre numéro de rue pour continuer...');
         }
@@ -495,7 +585,9 @@ $(function () {
         var homeId = $("select[name=numero]").val();
         if ($("select[name=ville]").val() == 98 || $("select[name=ville]").val() == 428 || $("select[name=ville]").val() == 571 || $("select[name=ville]").val() == 174 || $("select[name=ville]").val() == 220) {
             isLOLCable = true;
-        }else{isLOLCable = false;}
+        } else {
+            isLOLCable = false;
+        }
         if (homeId !== "") {
             if ($('#testDispo').hasClass('is-visible')) {
                 PopupModule.closePopup(event); //main.js

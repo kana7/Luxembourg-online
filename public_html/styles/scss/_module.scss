@@ -2832,7 +2832,7 @@ h2.contact-title {
         display: none;
         position: absolute;
         width: 105px;
-        z-index: 1;
+        z-index: 3;
         background-color: darken($blue, 3%);
         border-top: 1px solid $blue;
         li{margin: 0; display: block;}

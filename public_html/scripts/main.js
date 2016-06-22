@@ -43,7 +43,12 @@ var temp;
 $(function () {
     MenuMobile.init();
     PopupModule.init();
-    HeaderDropDown.init();
+    if($('.header-dropdown')){
+        $('.header-dropdown').each(function(){
+            temp = new HeaderDropDown(this);
+            temp.init();
+        });
+    }
     if ($('.searchMenu:not(.mobile)')) {
         EquipementFilter.init();
     }
@@ -55,6 +60,12 @@ $(function () {
     }
     if (jQuery().numeric){
         $(".numeric").numeric();
+    }
+    if ($('#languageSelector')){
+        $('#languageSelector').find('a').on('click', function(){
+            var lang = $(this).attr('data-lang');
+            document.l10n.requestLocales(String(lang));
+        });
     }
 });
 
@@ -123,9 +134,9 @@ var DropDown = function (element) {
     };
 };
 
-var HeaderDropDown = (function () {
+var HeaderDropDown = function (element) {
     var $document = $('html');
-    var $element = $('.header-dropdown');
+    var $element = $(element);
     var $button = $element.find('button');
     var $drop = $element.find('.drop');
     var flag = 1;
@@ -165,7 +176,7 @@ var HeaderDropDown = (function () {
     return{
         init: init
     };
-})();
+};
 
 // Permet de gérer l'affichage dans les pages équipements
 var EquipementFilter = (function () {

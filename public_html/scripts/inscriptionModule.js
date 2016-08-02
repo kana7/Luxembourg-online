@@ -584,7 +584,7 @@ var Cart = (function () {
     }
 
     function _render() {
-//Reconstruire le shopping card quand les données sont mises à jour - TODO Mettre en place un template
+//Reconstruire le shopping card quand les données sont mises à jour
         var html = '<ul><li class="header"><h3>Récapitulatif</h3></li>';
         html += Mustache.render(tplItem, Panier);
         html += Mustache.render(tplPrice, Panier);
@@ -852,6 +852,9 @@ var abonnements_list = {
     "5": {
         "5625": new Abonnement("5625", "a_abo", "LOL FIBER 30", 44.90, true, "", true, null, "EPT", "FIBRE", 5, installNoRemise, activation, modem_List2),
         "5626": new Abonnement("5626", "a_abo", "LOL FIBER 100", 54.90, true, "", true, null, "EPT", "FIBRE", 5, installRemise, activation, modem_List2),
+        
+        /*TODO : METTRE ID POUR LA PROMO 200 AU PRIX DU 100 SUR LA REVENTE FIBRE*/
+        "5888": new Abonnement("5888", "a_abo", "LOL FIBER 200", 54.90, true, "", true, null, "EPT", "FIBRE", 5, installRemise, activation, modem_List2),
         "5627": new Abonnement("5627", "a_abo", "LOL FIBER 200", 71.90, true, "", true, null, "EPT", "FIBRE", 5, installRemise, activation, modem_List2)
     },
     "6": {

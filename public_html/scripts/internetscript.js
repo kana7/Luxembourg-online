@@ -98,7 +98,7 @@ var offers = {
         color: 'blue'
     },
     double: {
-        name: "Fiber 200",
+        name: "Fiber </span><span style='text-decoration: line-through; font-size: 0.9em;'> 100 </span> 200",
         description: "PROMO : LA VITESSE x2",
         download: "</span><span style='text-decoration: line-through; font-size: 0.9em;'> 100 </span><span class='orange'>200 Mbit/s</span>",
         upload: "</span><span style='text-decoration: line-through; font-size: 0.9em;'> 50 </span>&nbsp;&nbsp;<span class='orange'>100 Mbit/s</span>",
@@ -127,7 +127,7 @@ function createDispoPopup() {
 }
 
 function printOffer(offer) {
-    var printedOffer = '<div class="offer-item-'+offer.color+'">' +
+    var printedOffer = '<div class="offer-item-' + offer.color + '">' +
             '<div class="item-header">' +
             '<strong>LOL</strong>' + offer.name +
             '</div>' +
@@ -159,7 +159,9 @@ function printOffer(offer) {
 ;
 
 function insertLink(id, service) {
-    return '<a class="btn-blue btn-subscription" href="http://shop.internet.lu/inscription/shop/inscription.html#' + service + ';' + id + '">Abonnez-vous</a>'; //internet shop link: "http://shop.internet.lu/inscription/shop/inscription.html#"
+    return '<a class="btn-blue btn-subscription" href="http://shop.internet.lu/inscription/shop/inscription.html#' + service + ';' + id + '">Abonnez-vous</a>';
+    /*internet shop link: "http://shop.internet.lu/inscription/shop/inscription.html#"
+     *local shop link: "../shop/inscription.html#"*/
 }
 function printNonDispo(string) {
     return '<div class="not-dispo"><div class="not-dispo-info">' + string + '</div></div>';
@@ -222,6 +224,24 @@ function checkDispo(homeId, isLOLCable) {
                     }
                 }
 
+                if (obj.Service[5]) { // Revente Fibre
+                    articleObj = obj.Service[5].article;
+                    if (obj.Service[5] && $(articleObj[0]).size() > 0) {//entry exists
+                        for (i in articleObj) {
+                            for (b in articleObj) {
+                                if (articleObj[b].idObject == "5626" && ab[2] == "") {//Fiber 100
+                                    ab[2] = [5888, 5];
+                                }
+                                if (articleObj[b].idObject == "5627" && ab[3] == "") {//Fiber 200
+                                    ab[3] = [articleObj[b].idObject, 5];
+                                }
+                            }
+
+                        }
+
+                    }
+                }
+
                 if (obj.Service[8]) { // Dégroupage VDSL
                     articleObj = obj.Service[8].article;
                     if (obj.Service[8] && $(articleObj[0]).size() > 0) {//entry exists
@@ -262,12 +282,6 @@ function checkDispo(homeId, isLOLCable) {
                                 if (articleObj[b].idObject == "5625" && ab[1] == "") {//Fiber 30
                                     ab[1] = [articleObj[b].idObject, 5];
                                 }
-                                if (articleObj[b].idObject == "5626" && ab[2] == "") {//Fiber 100
-                                    ab[2] = [articleObj[b].idObject, 5];
-                                }
-                                if (articleObj[b].idObject == "5627" && ab[3] == "") {//Fiber 200
-                                    ab[3] = [articleObj[b].idObject, 5];
-                                }
                             }
 
                         }
@@ -306,8 +320,10 @@ function checkDispo(homeId, isLOLCable) {
                 $('.k24, .k30, .k100, .k200').removeClass('not');
                 $('#lol').show();
                 $('#cable').hide();
-                $('#offers-section').find('.not-dispo').remove();
+                $('#offers-section, #promoFiber-content').find('.not-dispo').remove();
+
                 var boolean = (isLOLCable == "true" || isLOLCable === true);
+
                 if (ab[0] == "" && ab[1] == "" && ab[2] == "" && ab[3] == "" && $('#promoFiber-content').length == 0) {
                     if (!boolean) {
                         $(printNonDispo(nonDispoAllTemplate)).prependTo('#lol').css('visibility', 'visible').animate({opacity: 1.0}, 500);
@@ -315,24 +331,22 @@ function checkDispo(homeId, isLOLCable) {
                         $('#lol').fadeOut(400);
                     }
                 } else {
-                    if ($(obj.Service[2]).length > 0) {
-                        $('#lol .hidden-phone .k200, #promoFiber-content .hidden-phone .k200').parent().remove();
-                        $('#lol .main-gallery, #promoFiber-content .main-gallery').flickity( 'remove', $('#lol .display-phone .k200, #promoFiber-content .display-phone .k200').parent());
-                        $('.k100').empty().append(printOffer(offers['double']));
-                        $('#lol, #promoFiber-content').addClass('degroupage');
-                    } else {
-                        if ($('.k200').length === 0) {
-                            if ($('#promoFiber-content').length>0){
-                                offerFiber200.desktop = $("<div class='phone-12 tab-6'></div>").append('<div class="k200">'+printOffer(offers[200])+'</div>');
-                            }else{
-                                offerFiber200.desktop = $("<div class='phone-6 desk-3 tab-pl-10 phone-pr-0 desk-pl-5 lgdesk-pl-10'></div>").append('<div class="k200">'+printOffer(offers[200])+'</div>');
+                    if ($(obj.Service[2]).length > 0 || $(obj.Service[5]).length > 0) { //DISPLAY PROMOS 100 --> 200 (supression old 200 + ajout double)
+                        $('#lol .hidden-phone .k200').parent().remove();
+                        $('#lol .main-gallery').flickity('remove', $('#lol .display-phone .k200').parent());
+                        $('#lol .k100').empty().append(printOffer(offers['double']));
+                        $('#lol').addClass('degroupage');
+                    } else { // NO FIBRE DONC PAS PROMOS
+                        if ($('.k200').length === 0) {  //SI OFFRE 200 PAS LÀ ALORS REPRINT SUR LA PAGE OFFRE
+                            if ($('#promoFiber-content').length == 0) {
+                                offerFiber200.mobile = $("<div class='gallery-cell'></div>").append('<div class="k200">' + printOffer(offers[200]) + '</div>');
+                                offerFiber200.desktop = $("<div class='phone-6 desk-3 tab-pl-10 phone-pr-0 desk-pl-5 lgdesk-pl-10'></div>").append('<div class="k200">' + printOffer(offers[200]) + '</div>');
+                                $('#lol .hidden-phone').append(offerFiber200.desktop);
+                                $('#lol .display-phone .main-gallery').flickity('append', offerFiber200.mobile);
+                                $('.k100').empty().append(printOffer(offers[100]));
+                                $('#lol').removeClass('degroupage');
                             }
-                            offerFiber200.mobile = $("<div class='gallery-cell'></div>").append('<div class="k200">'+printOffer(offers[200])+'</div>');
-                            $('#lol .hidden-phone, #promoFiber-content .hidden-phone').append(offerFiber200.desktop);
-                            $('#lol .display-phone .main-gallery, #promoFiber-content .display-phone .main-gallery').flickity('append',offerFiber200.mobile);
-                            $('.k100').empty().append(printOffer(offers[100]));
                         }
-                        $('#lol, #promoFiber-content').removeClass('degroupage');
                     }
                     if (ab[0] == "") {
                         $(printNonDispo(nonDispoTemplate)).prependTo('.k24').css('visibility', 'visible').animate({opacity: 1.0}, 500);
@@ -348,12 +362,25 @@ function checkDispo(homeId, isLOLCable) {
                         $('.k30').find('.not-dispo').remove();
                         $(insertLink(ab[1][0], ab[1][1])).insertAfter($('.k30')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     }
-                    if (ab[2] == "") {
-                        $(printNonDispo(nonDispoTemplate)).prependTo('.k100').css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                        $('.k100').addClass('not');
-                    } else {
-                        $('.k100').find('.not-dispo').remove();
-                        $(insertLink(ab[2][0], ab[2][1])).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                    if ($('#promoFiber-content').length <= 0) { //NOT PAGE PROMO FIBRE
+                        if (ab[2] == "") {
+                            $(printNonDispo(nonDispoTemplate)).prependTo('.k100').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                            $('.k100').addClass('not');
+                        } else {
+                            $('.k100').find('.not-dispo').remove();
+                            $(insertLink(ab[2][0], ab[2][1])).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                        }
+                    } else { //PAGE PROMO FIBRE
+                        if ($(obj.Service[2]).length > 0 || $(obj.Service[5]).length > 0) { // FIBRE
+                            $('.k100').find('.not-dispo').remove();
+                            $(insertLink(ab[2][0], ab[2][1])).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                        } else {
+                            $(printNonDispo(nonDispoTemplate)).prependTo('.k100').css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                            $('.k100').addClass('not');
+                            if ($('#promoFiber-content').length > 0 && (ab[0] != "" || ab[1] != "")) {
+                                $('<a class="btn-blue btn-subscription" href="../shop/offres.html">Voir nos autres offres</a>').insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                            }
+                        }
                     }
                     if (ab[3] == "") {
                         $(printNonDispo(nonDispoTemplate)).prependTo('.k200').css('visibility', 'visible').animate({opacity: 1.0}, 500);
@@ -596,7 +623,6 @@ $(function () {
         } else {
             alert('Entrez votre numéro de rue pour continuer...');
         }
-        //}
     });
 });
 

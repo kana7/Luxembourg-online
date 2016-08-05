@@ -1,0 +1,8 @@
+{
+    "id": "facture-consommation",
+    "name": "Facture & consommation",
+    "icon": "calculator-ico",
+    "links": [
+        {"name": "TODO: Créer articles", "link": "#"}
+    ]
+}

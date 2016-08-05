@@ -1,1 +1,14 @@
-<h1>Ceci est la page home</h1>
+<h2 style="font-size: 28px; font-weight: 600; margin-bottom: 15px; margin-top: 13px;" class="blue align-center">
+    <div style="display: inline-block; border: 3px solid #004995; border-radius: 50%; width: 35px; height: 35px; text-align: center; margin-right: 5px;"><span style="margin-right: 0; font-size: 22px;" class="icon-faq-ico"></span></div> À chaque question, sa réponse.</h2>
+<p style="font-size: 16px; line-height: 25px;" class="blue align-center phone-mb-40">Vous trouverez ici tout le support nécessaire concernant les produits et services Luxembourg Online.
+    <br/>Cliquez sur la rubrique concernée et effectuez les vérifications.</p>
+<section class="clearfix">
+    <div ng-repeat="cat in Categories" class="phone-12 tab-6 desk-4 lgdesk-3 phone-pl-0 phone-pr-0 tab-pl-10 tab-pr-10 phone-mb-20"> 
+        <a href="#/categories/{{ cat.id}}">
+            <div class="assistance-thumbnail"> 
+                <p class="title"><span class="icon-{{cat.icon}}"></span>{{ cat.name}} <span class="icon-right-arrow"></span></p> 
+                <div class="img-container"><img ng-src="{{cat.cover}}"> </div>
+            </div>
+        </a> 
+    </div>
+</section>

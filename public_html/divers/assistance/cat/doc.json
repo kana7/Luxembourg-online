@@ -1,0 +1,11 @@
+{
+    "id": "doc",
+    "name": "Documents utiles",
+    "icon": "document-ico",
+    "links": [
+        {"name": "Contrats d'abonnement", "link": "0"},
+        {"name": "Divers", "link": "1"},
+        {"name": "Condition générales et particulières", "link": "2"},
+        {"name": "Fiches signalétiques", "link": "3"}
+    ]
+}

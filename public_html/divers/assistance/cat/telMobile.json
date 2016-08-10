@@ -1,6 +1,6 @@
 {
     "id": "telMobile",
-    "name": "Téléphonie Mobile",
+    "name": "Téléphonie mobile",
     "icon": "mobile-ico",
     "links": [
         {"name": "Les appels ne fonctionne pas", "link": 0},

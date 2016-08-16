@@ -179,7 +179,7 @@ var StepTransition = (function () {
                 html += '</div>';
                 html += '</div>';
                 $(this).find('.step-description').after(html);
-                $('input[value="5137"], input[value="5304"]').parents('.shop-item').addClass('fixed');
+                $('input[value="5166"], input[value="5305"]').parents('.shop-item').addClass('fixed');
             }
         });
     }
@@ -205,17 +205,17 @@ var StepTransition = (function () {
             _selectItem($(this));
             if ($(this).find('input').val() == 2848) {
                 if ($(this).find('input').is(':checked')) {
-                    $('input[value="5304"]').parents('.shop-item').removeClass('fixed');
-                    if (!$('input[value="5137"]').is(':checked')) {
-                        _selectItem($('input[value="5137"]').parents('.shop-item:not(.disabled)'));
+                    $('input[value="5305"]').parents('.shop-item').removeClass('fixed');
+                    if (!$('input[value="5166"]').is(':checked')) {
+                        _selectItem($('input[value="5166"]').parents('.shop-item:not(.disabled)'));
                     }
                 } else {
-                    $('input[value="5137"], input[value="5304"]').parents('.shop-item').addClass('fixed');
-                    if ($('input[value="5137"]').is(':checked')) {
-                        _selectItem($('input[value="5137"]').parents('.shop-item:not(.disabled)'));
+                    $('input[value="5166"], input[value="5305"]').parents('.shop-item').addClass('fixed');
+                    if ($('input[value="5166"]').is(':checked')) {
+                        _selectItem($('input[value="5166"]').parents('.shop-item:not(.disabled)'));
                     }
-                    if ($('input[value="5304"]').is(':checked')) {
-                        _selectItem($('input[value="5304"]').parents('.shop-item:not(.disabled)'));
+                    if ($('input[value="5305"]').is(':checked')) {
+                        _selectItem($('input[value="5305"]').parents('.shop-item:not(.disabled)'));
                     }
                 }
             }
@@ -774,8 +774,8 @@ var aboTel = new Item("3236", "a_telephone", "Abonnement téléphonique", 0, tru
 var lolTVRemise = new Item("5618", "a_tvRemise", "6 mois gratuits", -17.00, true, "après 17€/mois", true, null);
 var lolTv = new SellProduct("2848", "a_tv", "LOL TV", 17.00, true, ["+110 chaînes TV", "+30 chaînes HD", "+40 chaînes radio", " ", " "], false, "../images/Shop/LOLTV.jpg", '6 mois', false, null);
 var lolTv_materielList = [
-    new Item("5137", "m_tv_materiel", "Décodeur LOL TV", 4.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD", " "], false, "../images/Shop/Minix1.jpg"),
-    new Item("5304", "m_tv_materiel", "Décodeur pour 2ème TV", 5.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD", " "], false, "../images/Shop/Minix2.jpg")
+    new Item("5166", "m_tv_materiel", "Décodeur LOL TV", 4.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD", " "], false, "../images/Shop/Minix1.jpg"),
+    new Item("5305", "m_tv_materiel", "Décodeur pour 2ème TV", 5.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD", " "], false, "../images/Shop/Minix2.jpg")
 ];
 var remiseInstall = new Item("5623", "p_installationRemise", "Installation offerte", -89.00, false, "", true, null);
 var installNoRemise = new SellProduct("5313", "p_installation", "Installation par une équipe <span class='exponent'>(1)</span>", 89.00, false, " Je souhaite qu’une équipe spécialisée vienne s’occuper de l’installation à mon domicile. Je vais donc être rappelé par Luxembourg Online pour fixer la date du rendez-vous. ", true, "../images/Shop/install-equip.png", null, false, null);

@@ -4,11 +4,11 @@
   #slider-contents .infos.image-1 {
     background-image: url(../../images/Homepage/SLIDER/Slider_672x320px_Noel3.jpg); }
   #slider-contents .infos.image-2 {
-    background-image: url(../../images/Homepage/SLIDER/Euro2016_672x320px.jpg); }
+    background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel1_672x320px.jpg); }
   #slider-contents .infos.image-3 {
     background-image: url(../../images/Homepage/SLIDER/Slider3_672x320px.jpg); }
   #slider-contents .infos.image-4 {
-    background-image: url(../../images/Homepage/SLIDER/LOLVISIO_672x320px.jpg); }
+    background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel2_672x320px.jpg); }
   #slider-contents .infos.image-5 {
     background-image: url(../../images/Homepage/SLIDER/Inscription_672x320px.jpg); }
 
@@ -18,11 +18,11 @@
     #slider-contents .infos.image-1 {
       background-image: url(../../images/Homepage/SLIDER/Slider_1056x450px_Noel3.jpg); }
     #slider-contents .infos.image-2 {
-      background-image: url(../../images/Homepage/SLIDER/Euro2016_1056x450px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel1_1056x450px.jpg); }
     #slider-contents .infos.image-3 {
       background-image: url(../../images/Homepage/SLIDER/Slider3_1056x450px.jpg); }
     #slider-contents .infos.image-4 {
-      background-image: url(../../images/Homepage/SLIDER/LOLVISIO_1056x450px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel2_1056x450px.jpg); }
     #slider-contents .infos.image-5 {
       background-image: url(../../images/Homepage/SLIDER/Inscription_1056x450px.jpg); } }
 @media screen and (min-width: 1056px) {
@@ -31,11 +31,11 @@
     #slider-contents .infos.image-1 {
       background-image: url(../../images/Homepage/SLIDER/Slider_1302x330px_Noel3.jpg); }
     #slider-contents .infos.image-2 {
-      background-image: url(../../images/Homepage/SLIDER/Euro2016_1302x330px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel1_1302x370px.jpg); }
     #slider-contents .infos.image-3 {
       background-image: url(../../images/Homepage/SLIDER/Slider3_1302x330px.jpg); }
     #slider-contents .infos.image-4 {
-      background-image: url(../../images/Homepage/SLIDER/LOLVISIO_1302x330px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel2_1302x370px.jpg); }
     #slider-contents .infos.image-5 {
       background-image: url(../../images/Homepage/SLIDER/Inscription_1302x330px.jpg); } }
 @media screen and (min-width: 1302px) {
@@ -44,11 +44,11 @@
     #slider-contents .infos.image-1 {
       background-image: url(../../images/Homepage/SLIDER/Slider_1920x360px_Noel3.jpg); }
     #slider-contents .infos.image-2 {
-      background-image: url(../../images/Homepage/SLIDER/Euro2016_1920x360px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel1_1920x400px.jpg); }
     #slider-contents .infos.image-3 {
       background-image: url(../../images/Homepage/SLIDER/Slider3_1920x360px.jpg); }
     #slider-contents .infos.image-4 {
-      background-image: url(../../images/Homepage/SLIDER/LOLVISIO_1920x360px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel2_1920x400px.jpg); }
     #slider-contents .infos.image-5 {
       background-image: url(../../images/Homepage/SLIDER/Inscription_1920x360px.jpg); } }
 #slider-contents .infos.image-6 .title {
@@ -58,25 +58,37 @@
   font-size: 1.7em;
   line-height: 30px; }
 
-#slider-contents .infos.image-2 .title {
-  text-transform: initial;
-  font-size: 20pt;
+#slider-contents .infos.image-4 .title {
+  font-size: 35px;
   line-height: 32px; }
 
-@media screen and (max-width: 671px) {
-  #slider-contents .infos.image-2 .row > div, #slider-contents .infos.image-4 .row > div {
-    text-align: center; }
-  #slider-contents .infos.image-1 .title {
-    font-size: 35px; }
-  #slider-contents .infos.image-1 .top-details {
-    font-size: 18px; }
-  #slider-contents .infos.image-1 .bottom-details {
-    font-size: 13px; } }
+#slider-contents .infos.image-2 .title {
+  font-size: 30px;
+  line-height: 33px; }
+
+#slider-contents .infos.image-1 .title {
+  font-size: 35px; }
+#slider-contents .infos.image-1 .top-details {
+  font-size: 18px; }
+#slider-contents .infos.image-1 .bottom-details {
+  font-size: 13px; }
+#slider-contents .infos.image-4 .title span.chapeau, #slider-contents .infos.image-2 .title span.chapeau {
+  font-size: 0.7em; }
+  #slider-contents .infos.image-4 .title span.chapeau + span, #slider-contents .infos.image-2 .title span.chapeau + span {
+    font-size: 1.2em; }
+
 @media screen and (min-width: 672px) {
   #slider-contents .infos.image-2 .title {
-    text-transform: initial;
-    font-size: 28pt;
-    line-height: 42px; }
+    font-size: 45px;
+    line-height: 47px; }
+    #slider-contents .infos.image-2 .title span.chapeau {
+      font-size: 0.5em; }
+
+  #slider-contents .infos.image-4 .title {
+    font-size: 50px;
+    line-height: 40px; }
+    #slider-contents .infos.image-4 .title span.chapeau {
+      font-size: 0.5em; }
 
   #slider-contents .infos.image-5 .title {
     font-size: 27pt;
@@ -93,11 +105,20 @@
     font-size: 32pt;
     line-height: 45px; }
   #slider-contents .infos.image-2 p.bottom-details {
-    font-size: 14pt; } }
+    font-size: 14pt; }
+
+  #slider-contents .infos.image-4 div[class^="phone-"] {
+    float: right;
+    text-align: right; } }
 @media screen and (min-width: 1302px) {
   #slider-contents .infos.image-2 .title {
-    font-size: 35pt;
-    line-height: 50px;
-    margin-bottom: 10px; } }
+    font-size: 53px;
+    line-height: 55px; }
+    #slider-contents .infos.image-2 .title span.chapeau {
+      line-height: 40px; }
+
+  #slider-contents .infos.image-4 .title {
+    font-size: 58px;
+    line-height: 43px; } }
 
 /*# sourceMappingURL=slider_src.css.map */

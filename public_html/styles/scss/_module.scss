@@ -36,6 +36,9 @@ svg:not(:root) {
 .grey{
     color: $dark-grey !important;
 }
+.section-black{
+    color: $section-black !important;
+}
 .red{
     color: #DC0000 !important;
 }
@@ -185,7 +188,19 @@ span[class^=icon-]
     font-weight: 800;
     font-size: 0.5em;
 }
-
+.crossed{
+    position: relative;
+    font-size: 0.8em;
+    &:before{
+        content: " ";
+        @include vertical-align-middle(absolute);
+        width: 100%;
+        background-color: $orange;
+        @include transform(rotate(-30deg));
+        width: 120%;
+        height: 2px;
+    }
+}
 .footer-note{
     text-align: center;
     font-size: 12px;
@@ -1438,7 +1453,7 @@ span[class^=icon-]
 
 .article{
     text-align: justify;
-    .link{display: inline; color: $blue; text-decoration: underline; font-size: 400;}
+    .link{display: inline; color: $blue; text-decoration: underline; }
     .header, .content{
         font-size: 15px;
         line-height: 20px;
@@ -1936,6 +1951,12 @@ span[class^=icon-]
     background-size: 312px auto;
     padding-top: 135px;
 }
+#portail{
+    background-image: url(../../images/Homepage/CONTENU/320px/Portail.jpg);
+    background-position: center top;
+    background-size: 312px auto;
+    padding-top: 150px;
+}
 
 // FOOTER - HOMEPAGE
 // --------------------------------------------------
@@ -2122,6 +2143,7 @@ footer
     display: block;
     position: relative;
     font-size: 1.2em;
+    line-height: 1.4;
     color: $orange;
     text-transform: uppercase;
     font-weight: 800;
@@ -2136,7 +2158,7 @@ footer
         top: 3px;
     }
 }
-.not+.promos-link{
+.not+.promos-link.persist{
     display: none;
 }
 
@@ -2741,7 +2763,6 @@ h2.contact-title {
     .select-arrow{
         display: inline-block;
         width: 100%;
-        /*background: url(../../images/Icone/Img/arrow.png) no-repeat;*/
         background-size: auto auto;
         background-position: 97% center;
     }
@@ -3083,5 +3104,206 @@ h2.contact-title {
         top: 0;
         left: 0;
         object-fit: cover;
+    }
+}
+
+
+/*-----------------------------------ASSISTANCE-------------------------------*/
+.assistance-thumbnail{
+    background-color: darken($light-grey, 2%);
+    border: 1px solid lighten($grey, 5%);
+    border-radius: 2px;
+    overflow: hidden;
+    @include transition($transitionUi);
+    @include box-shadow(0);
+    .title{
+        position: relative;
+        color: lighten($dark-grey, 15%);
+        border-bottom: 1px solid lighten($grey, 5%);
+        text-transform: uppercase;
+        font-weight: 600;
+        text-align: center;
+        font-size: 1.25em;
+        margin: 0;
+        height: 50px;
+        line-height: 50px;
+        @include transition($transitionUi);
+        span[class^=icon-]{
+            line-height: 0;
+            margin-right: 10px;
+        }
+        span[class^="icon-"]:not([class="icon-right-arrow"]){
+            font-size: 18px;
+            top: 2px;
+        }
+        span[class^="icon-right-arrow"]{
+            font-size: 13px;
+        }
+        span[class="icon-assistance-internet"], span[class="icon-assistance-telephonie"], span[class="icon-assistance-television"]{
+            font-size: 25px !important;
+            top: 6px !important;
+        }
+    }
+    .img-container{
+        position: relative;
+        &:after{
+            visibility: hidden;
+            opacity: 0;
+            @include vertical-align-middle(absolute);
+            content:"En savoir plus";
+            @extend .btn-blue;
+            display: inline-block;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 45%;
+            @include transition(opacity 0.3s linear);
+        }
+    }
+    img{
+        position: relative;
+        display: block; 
+        width: 100%;
+        height: auto;
+    }
+    &:hover{
+        background-color: white;
+        @include box-shadow(0 1px 15px 0 rgba(0, 0, 0, 0.2));
+        border-color: $blue;
+        .title{
+            color: $blue;
+        }
+        .img-container:after{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+.assistance-content, .assistance-list{
+    .title{
+        position: relative;
+        padding-left: 60px;
+        font-size: 34px;
+        font-weight: 600;
+        margin: 10px 0 25px;
+    }
+    span[class^="icon-"]:not([class="icon-right-arrow"]){position: absolute; left: 0; font-size: 18px; line-height: 0;}
+    span[class^="icon-"]:not([class="icon-right-arrow"]){font-size: 40px;}
+    span[class="icon-assistance-internet"]{font-size: 45px !important;}
+    span[class="icon-calculator-ico"], span[class="icon-document-ico"]{font-size: 32px !important;}
+    span[class="icon-mobile-ico"], span[class="icon-internet-ico"]{font-size: 35px !important;}
+}
+.assistance-list{
+    .list{
+        span[class="icon-right-arrow"]{font-size: 11px; margin-right: 10px;}
+        li{color: $blue; font-size: 17px; line-height: 28px;
+           &:hover{
+               text-decoration: underline; 
+               span[class="icon-right-arrow"]{
+                   text-decoration: none;
+               }
+           }}
+    }
+}
+
+.assistance-menu{
+    display: inline-block;
+    li{
+        position: relative;
+        display: table;
+        color: lighten($section-black, 20%);
+        font-weight: 800;
+        font-size: 1.2em;
+        line-height: 38px;
+        text-transform: uppercase;
+        &.active, &:hover{
+            color: $blue;
+            .active-border{
+                border-bottom-width: 3px;
+            }
+        }
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    .active-border{
+        display: block;
+        position: absolute;
+        bottom: 3px;
+        height: 3px;
+        width: 100%;
+        background-color: transparent;
+        border-bottom: 0px solid #004994;
+        -moz-transition: border-width 0.14s linear;
+        -o-transition: border-width 0.14s linear;
+        -webkit-transition: border-width 0.14s linear;
+        transition: border-width 0.14s linear;
+    }
+}
+
+.assistance-content{
+    section:not(:first-child){
+        padding-top: 20px;
+    }
+    .input-group select{
+        width: auto;
+        border: 1px solid $grey;
+        color: $blue;
+        font-size: 14px;
+        @include box-shadow(none);
+    }
+    .article{
+        font-size: 16px;
+        line-height: 22px;
+        h3, .att h4, .note h4{
+            font-size: 21px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: $blue;
+        }
+        h4{margin-bottom: 10px; font-size: 16px; font-weight: 600; text-transform: uppercase; color: $section-black;}
+        li{
+            display: block;
+            font-size: 15px;
+        }
+        a{font-weight: 800; text-decoration: underline; color: $blue;}
+        hr{
+            border-color: #dadada;
+            border-style: solid;
+        }
+        .step-title{color: $section-black; font-weight: 600; margin-bottom: 5px; &+p{margin-top: 5px;}}
+    }
+    .content{
+        margin-bottom: 40px;
+    }
+    .att, .note{
+        display: table;
+        h4{margin: 10px 0 0; }
+        &>p, &>ul, &>div{color: $white; border-radius: 6px; padding: 10px 18px; margin: 10px 0; &+.footer-note{margin: 0;}}
+        &>div p:first-child{margin-top: 0;}
+        a{color: white; text-decoration: underline;}
+    }
+    .att h4{color: $orange !important;}
+    .att>p, .att>ul, .att>div{background-color: $orange;}
+    .note>p, .note>ul, .note>div{background-color: $blue;}
+    table{
+        width: 100%;
+        tr:not(:first-child){border-top: 1px solid $blue;}
+        td{vertical-align: top; padding: 10px 0; text-align: left;}
+        tr td:first-child{font-weight: 600; color: $section-black; padding-right: 45px;}
+    }
+
+    .doc-list{
+        li:not(:last-child){margin-bottom: 10px;}
+        a{
+            display: table;
+            text-decoration: none;
+            font-weight: 400;
+            &:hover{text-decoration: underline;}
+            img, .link{display: table-cell; vertical-align: middle;}
+            img{height: 22px; width: auto; margin-right: 7px;}
+            .link{text-decoration: none !important;}
+        }
     }
 }

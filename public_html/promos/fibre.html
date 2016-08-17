@@ -502,7 +502,19 @@
         <script type="text/javascript" src="../scripts/internetscript.js"></script>
         <script type="text/javascript">
             $(function () {
-                $('#promo-fibre').addClass('image-' + getRandomInt(1, 3));
+                if (window.location.hash) {
+                    var vhash = (window.location.hash.split('#')[1]).split(";");
+                    removeHash();
+                    if (vhash[0] == "vitesse2x") {
+                        $('#promo-fibre').addClass('image-2');
+                    } else if (vhash[0] == "2xplusrapide") {
+                        $('#promo-fibre').addClass('image-1');
+                    } else {
+                        $('#promo-fibre').addClass('image-' + getRandomInt(1, 3));
+                    }
+                } else {
+                    $('#promo-fibre').addClass('image-' + getRandomInt(1, 3));
+                }
                 $('.main-gallery').flickity({
                     // options
                     cellAlign: 'center',

@@ -424,7 +424,7 @@ $(function () {
     createDispoPopup();
     try {
         var vhash = (window.location.hash.split('#')[1]).split(";");
-        if (window.location.hash.length > 2 && $('#promoVDSL-content').length <= 0) {
+        if (vhash.length > 2 && $('#promoVDSL-content').length <= 0) {
             _cp = vhash[0];
             _ville = vhash[1];
             _rue = vhash[2];

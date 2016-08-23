@@ -5107,7 +5107,6 @@ span[class^=icon-] {
   color: #818181; }
 #slider-contents .section-price {
   font-size: 55px;
-  margin: -10px auto 20px;
   padding-top: 0px; }
   #slider-contents .section-price div {
     font-size: 20px;
@@ -6558,7 +6557,6 @@ h2.contact-title {
       right: 50px; }
   #slider-contents .section-price {
     font-size: 72px;
-    margin: 0px auto 20px;
     padding-top: 2px; }
     #slider-contents .section-price div {
       font-size: 24px;
@@ -6935,7 +6933,6 @@ h2.contact-title {
     font-size: 10pt; }
   #slider-contents .section-price {
     font-size: 72px;
-    margin: 0 0 20px;
     padding-top: 2px; }
     #slider-contents .section-price div {
       font-size: 21px;
@@ -7331,7 +7328,7 @@ h2.contact-title {
     margin-right: 18px; }
 
   .offer-item-blue .offer-price div, .offer-item-orange .offer-price div {
-    left: 122px; }
+    left: 122px !important; }
 
   .finance-list p {
     margin: 5px 0; }

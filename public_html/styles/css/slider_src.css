@@ -63,8 +63,9 @@
   line-height: 32px; }
 
 #slider-contents .infos.image-2 .title {
-  font-size: 30px;
-  line-height: 33px; }
+  font-size: 26px;
+  line-height: 26px;
+  margin-bottom: 0; }
 
 #slider-contents .infos.image-1 .title {
   font-size: 35px; }
@@ -79,8 +80,9 @@
 
 @media screen and (min-width: 672px) {
   #slider-contents .infos.image-2 .title {
-    font-size: 45px;
-    line-height: 47px; }
+    font-size: 37px;
+    line-height: 37px;
+    margin-bottom: 0; }
     #slider-contents .infos.image-2 .title span.chapeau {
       font-size: 0.5em; }
 
@@ -101,6 +103,9 @@
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%); }
+    #slider-contents .infos.image-2 .row > div .section-price {
+      float: left;
+      margin: initial !important; }
   #slider-contents .infos.image-2 .title {
     font-size: 32pt;
     line-height: 45px; }
@@ -109,7 +114,10 @@
 
   #slider-contents .infos.image-4 div[class^="phone-"] {
     float: right;
-    text-align: right; } }
+    text-align: right; }
+    #slider-contents .infos.image-4 div[class^="phone-"] .section-price {
+      float: right;
+      margin: initial !important; } }
 @media screen and (min-width: 1302px) {
   #slider-contents .infos.image-2 .title {
     font-size: 53px;

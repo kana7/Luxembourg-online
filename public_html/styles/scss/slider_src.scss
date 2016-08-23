@@ -101,13 +101,16 @@
     font-size: 1.7em;
     line-height: 30px;
 }
-#slider-contents .infos.image-4 .title{
-    font-size: 35px;
-    line-height: 32px;
-}
+#slider-contents .infos.image-4{
+    .title{
+        font-size: 35px;
+        line-height: 32px;
+    }
+} 
 #slider-contents .infos.image-2 .title{
-    font-size: 30px;
-    line-height: 33px;
+    font-size: 26px;
+    line-height: 26px;
+    margin-bottom: 0;
 }
 
 #slider-contents{
@@ -126,8 +129,9 @@
 } 
 @include media(tab){
     #slider-contents .infos.image-2 .title{
-        font-size: 45px;
-        line-height: 47px;
+        font-size: 37px;
+        line-height: 37px;
+        margin-bottom: 0;
         span.chapeau{font-size: 0.5em;}
     }
     #slider-contents .infos.image-4 .title{
@@ -144,6 +148,7 @@
     #slider-contents .infos.image-2 {
         .row>div{
             @include vertical-align-middle(absolute);
+            .section-price{float: left; margin: initial !important;}
         }
         .title{
             font-size: 32pt;
@@ -156,6 +161,7 @@
     #slider-contents .infos.image-4 div[class^="phone-"]{
         float: right;
         text-align: right;
+        .section-price{float: right; margin: initial !important;}
     }
 }
 @include media(lgdesk){

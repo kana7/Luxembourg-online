@@ -193,7 +193,6 @@
         }
         .section-price{
             font-size: 72px;
-            margin: 0px auto 20px;
             padding-top: 2px;
             div{
                 font-size: 24px;
@@ -605,7 +604,6 @@
         }
         .section-price {
             font-size: 72px;
-            margin: 0 0 20px;
             padding-top: 2px;
             div{
                 font-size: 21px;
@@ -1025,7 +1023,7 @@
         margin-right: 18px;
     }
     .offer-item-blue .offer-price div, .offer-item-orange .offer-price div{
-        left: 122px;
+        left: 122px !important;
     }
     .finance-list{
         p{

@@ -3,6 +3,16 @@
     "name": "Facture & consommation",
     "icon": "calculator-ico",
     "links": [
-        {"name": "TODO: Créer articles", "link": "#"}
+        {"name": "Je ne comprends pas ma facture", "link": "0"},
+        {"name": "Quels sont les avantages de la domiciliation ?", "link": "1"},
+        {"name": "Comment mettre en place une domiciliation ?", "link": "2"},
+        {"name": "Quelle est la date de prélèvement ?", "link": "3"},
+        {"name": "Peut-on changer la date de prélèvement ?", "link": "4"},
+        {"name": "Comment payer ma facture en ligne ?", "link": "5"},
+        {"name": "Quels sont les avantages de la facture par mail ?", "link": "6"},
+        {"name": "Comment recevoir ma facture par mail ?", "link": "7"},
+        {"name": "Comment consulter ma facture en ligne ?", "link": "8"},
+        {"name": "Comment puis-je suivre ma consommation ?", "link": "9"},
+        {"name": "Je constate une erreur sur ma facture, que faire ?", "link": "10"}
     ]
 }

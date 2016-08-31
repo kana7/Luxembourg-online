@@ -2,7 +2,7 @@
 #slider-contents .infos {
   background-size: 672px auto; }
   #slider-contents .infos.image-1 {
-    background-image: url(../../images/Homepage/SLIDER/Slider_672x320px_Noel3.jpg); }
+    background-image: url(../../images/Homepage/SLIDER/Braderie_septembre_4.jpg); }
   #slider-contents .infos.image-2 {
     background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel1_672x320px.jpg); }
   #slider-contents .infos.image-3 {
@@ -16,7 +16,7 @@
   #slider-contents .infos {
     background-size: 1056px auto; }
     #slider-contents .infos.image-1 {
-      background-image: url(../../images/Homepage/SLIDER/Slider_1056x450px_Noel3.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Braderie_septembre_3.jpg); }
     #slider-contents .infos.image-2 {
       background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel1_1056x450px.jpg); }
     #slider-contents .infos.image-3 {
@@ -29,7 +29,7 @@
   #slider-contents .infos {
     background-size: 1302px auto; }
     #slider-contents .infos.image-1 {
-      background-image: url(../../images/Homepage/SLIDER/Slider_1302x330px_Noel3.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Braderie_septembre_2.jpg); }
     #slider-contents .infos.image-2 {
       background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel1_1302x370px.jpg); }
     #slider-contents .infos.image-3 {
@@ -42,7 +42,7 @@
   #slider-contents .infos {
     background-size: 1920px auto; }
     #slider-contents .infos.image-1 {
-      background-image: url(../../images/Homepage/SLIDER/Slider_1920x360px_Noel3.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Braderie_septembre_1.jpg); }
     #slider-contents .infos.image-2 {
       background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel1_1920x400px.jpg); }
     #slider-contents .infos.image-3 {
@@ -68,11 +68,12 @@
   margin-bottom: 0; }
 
 #slider-contents .infos.image-1 .title {
-  font-size: 35px; }
+  font-size: 20px; }
 #slider-contents .infos.image-1 .top-details {
-  font-size: 18px; }
+  font-size: 18px;
+  font-weight: 400; }
 #slider-contents .infos.image-1 .bottom-details {
-  font-size: 13px; }
+  font-size: 14px; }
 #slider-contents .infos.image-4 .title span.chapeau, #slider-contents .infos.image-2 .title span.chapeau {
   font-size: 0.7em; }
   #slider-contents .infos.image-4 .title span.chapeau + span, #slider-contents .infos.image-2 .title span.chapeau + span {
@@ -80,8 +81,8 @@
 
 @media screen and (min-width: 672px) {
   #slider-contents .infos.image-2 .title {
-    font-size: 37px;
-    line-height: 37px;
+    font-size: 34px;
+    line-height: 38px;
     margin-bottom: 0; }
     #slider-contents .infos.image-2 .title span.chapeau {
       font-size: 0.5em; }
@@ -94,7 +95,16 @@
 
   #slider-contents .infos.image-5 .title {
     font-size: 27pt;
-    line-height: 42px; } }
+    line-height: 42px; }
+
+  #slider-contents .infos.image-1 .title {
+    font-size: 36px;
+    line-height: 38px;
+    margin-bottom: 5px; }
+  #slider-contents .infos.image-1 .top-details {
+    font-size: 30px; }
+  #slider-contents .infos.image-1 .bottom-details {
+    font-size: 20px; } }
 @media screen and (min-width: 1056px) {
   #slider-contents .infos.image-2 .row > div {
     position: absolute;
@@ -112,6 +122,13 @@
   #slider-contents .infos.image-2 p.bottom-details {
     font-size: 14pt; }
 
+  #slider-contents .infos.image-1 .title {
+    font-size: 33px;
+    line-height: 37px;
+    margin-bottom: 10px; }
+  #slider-contents .infos.image-1 .top-details {
+    margin-bottom: 15px; }
+
   #slider-contents .infos.image-4 div[class^="phone-"] {
     float: right;
     text-align: right; }
@@ -119,6 +136,15 @@
       float: right;
       margin: initial !important; } }
 @media screen and (min-width: 1302px) {
+  #slider-contents .infos.image-1 .title {
+    font-size: 40px;
+    line-height: 46px;
+    margin-bottom: 10px; }
+  #slider-contents .infos.image-1 .top-details {
+    font-size: 32px; }
+  #slider-contents .infos.image-1 .bottom-details {
+    font-size: 22px; }
+
   #slider-contents .infos.image-2 .title {
     font-size: 53px;
     line-height: 55px; }

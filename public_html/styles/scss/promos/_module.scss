@@ -1,9 +1,10 @@
 #promo-fibre{
-    &:not(.not-accueil){
-        background-image: url('../../../images/promos/Accueil/Offre_Fibre_JAN_672x320px.jpg');
+    &.image-1, &.image-2{text-align: center !important;}
+    &.image-1{
+        background-image: url('../../../images/promos/Promo_Fibre/Promo_Fibrex2_Visuel2_672x400px.jpg');
     }
-    &.not-accueil{
-        background-image: url('../../../images/promos/Promo_Fibre/Offre_Fibre_JAN_672x200px.jpg');
+    &.image-2{
+        background-image: url('../../../images/promos/Promo_Fibre/Promo_Fibrex2_Visuel1_672x400px.jpg');
     }
 }
 
@@ -18,13 +19,8 @@
 
 #promo-noel{
     background-size: 672px auto;
-    &:not(.not-accueil){
-        height: 460px;        
-    }
+    height: 400px;        
     background-position: center top;
-    &.not-accueil{
-        height: 335px !important;
-    }
     .section-title{
         font-size: 28px;
         margin: 10px 0;
@@ -43,12 +39,7 @@
 }
 #promo-fibre{
     background-size: 672px auto;
-    &:not(.not-accueil){
-        height: 320px !important;
-    }
-    &.not-accueil{
-        height: 200px !important;
-    }
+    height: 400px !important;
 }
 .gallery-cell{
     width: 100%;
@@ -94,12 +85,12 @@
         font-size: 11px;
     }
 }
-.promo-offer-container{
+/*.promo-offer-container{
     div[class^=phone-]:first-child{
         padding-right: 15px;
     }
     div[class^=phone-]:last-child{
         padding-left: 15px;
     }
-}
+}*/
 

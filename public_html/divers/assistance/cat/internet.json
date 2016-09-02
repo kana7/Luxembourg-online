@@ -1,0 +1,13 @@
+{
+    "id": "internet",
+    "name": "Internet",
+    "icon": "assistance-internet",
+    "links": [
+        {"name": "Installer mon modem", "link": 0},
+        {"name": "Ma connexion internet ne fonctionne pas", "link": 1},
+        {"name": "J'ai des coupures de connexion internet", "link" : 2},
+        {"name": "La vitesse de ma connexion Internet n'est pas satisfaisante", "link": 3},
+        {"name": "Améliorer la qualité de ma connexion internet en wifi", "link": 4},
+        {"name": "J'ai des problèmes avec le wifi", "link": 5}
+    ]
+}

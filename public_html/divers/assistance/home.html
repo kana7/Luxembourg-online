@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <link rel="shortcut icon" href="/favicon.ico">
-
+        <link rel="stylesheet" href="../../styles/css/lightbox.css" />
         <link rel="stylesheet" href="../../styles/css/main.css">
         <link rel="stylesheet" href="../../styles/css/internet/accueil.css">
         <!--[if lt IE 9]>
@@ -96,7 +96,7 @@
                 <li class="sous-nav">
                     <ul class="menu">
                         <li class="menu-item link"><a href="../../divers/assistance.html">Assistance</a></li>
-                        <li class="menu-item link"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOL CLOUD</a></li>
+                        <li class="menu-item link"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOLCLOUD</a></li>
                         <li class="menu-item link"><a href="../../divers/magazine.html">Magazine</a></li>
                         <li class="menu-item link"><a href="../../divers/propos.html">À propos</a></li>
                         <li class="menu-item link"><a href="../../divers/contact.html">Contact</a></li>
@@ -146,7 +146,7 @@
                     <li class="menu-item back"><span class="icon-right-arrow"></span>Promos</li>
                     <li class="menu-item"><a href="../../promos/accueil.html">Accueil Promos</a></li>
                     <li class="menu-item"><a href="../../promos/fibre.html">Offre spéciale fibre</a></li>
-                    <li class="menu-item"><a href="../../promos/offreloltv.html">Offre spéciale LOL TV</a></li>
+                    <li class="menu-item"><a href="../../promos/offreloltv.html">Offre spéciale LOLTV</a></li>
 
                 </ul>
             </div>
@@ -165,7 +165,7 @@
                             <nav class="pull-right">
                                 <ul class="top-menu-header-links right">
                                     <li class="menu-item"><a href="../../divers/assistance.html">Assistance</a></li>
-                                    <li class="menu-item"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOL CLOUD</a></li>
+                                    <li class="menu-item"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOLCLOUD</a></li>
                                     <li class="menu-item"><a href="../../divers/magazine.html">Magazine</a></li>
                                     <li class="menu-item"><a href="../../divers/propos.html">À propos</a></li>
                                     <li class="menu-item"><a href="../../divers/contact.html">Contact</a></li>
@@ -245,18 +245,108 @@
                 </div>
 
             </header>
+            <div class="zone zone1">
+                <b>Nos coordonnées</b>
+                <div>
+                    <ul class="emailPara2">
+                        <li><span>nos adresses,</span></li>
+                        <li><span>notre numéro de téléphone</span></li>
+                        <li><span>et notre numéro de fax.</span></li>                            
+                    </ul>
+                    <p>Vous pouvez visualiser ces informations directement sur Internet.lu, rubrique Contact.</p>
+                </div>
+            </div>
+            <div class="zone zone2">
+                <b>Votre adresse</b>
+                <div>                        
+                    <p>Cette adresse postale est votre adresse de facturation. Elle peut être différente de l'adresse d'installation.</p>
+                </div>
+            </div>
+            <div class="zone zone3">
+                <b>Détails de votre facture</b>
+                <div>
+                    <p>Dans cet espace, vous retrouvez :</p>
+                    <ul class="emailPara2">
+                        <li><span>le numéro de facture,</span></li>
+                        <li><span>le descriptif et le montant de vos abonnements,</span></li>
+                        <li><span>le détail de vos consommations,</span></li>
+                        <li><span>Le montant total de la facture.</span></li>
+                    </ul>
+                    <p>Les consommations du mois précédent sont prises en compte pour la facture du mois en cours. Toutes ces infos sont disponibles dans votre Espace client.</p>
+                </div>
+            </div>
+            <div class="zone zone4">
+                <b>Informations supplémentaires</b>                    
+                <div>
+                    <p>Cette partie contient :</p>
+                    <ul class="emailPara2">
+                        <li><span>le mode de facturation,</span></li>
+                        <li><span>la date de prélèvement (en cas de domiciliation),</span></li>
+                        <li><span>et d'autres informations concernant le paiement.</span></li>                            
+                    </ul>                        
+                </div>
+            </div>
+            <div class="zone zone5">
+                <b>Informations supplémentaires</b>                    
+                <div>
+                    <p>Il s'agit ici des différents comptes bancaires de Luxembourg Online sur lesquels vous pouvez effectuer vos virements.</p>                                              
+                </div>
+            </div>
             <section class="drop-shadow background-lightgrey">
                 <div class="container-wrapper">
                     <div class="row clearfix">
                         <div class="align-center phone-12">
-                            <h1 class="plan-title-padding section-title normal lowercase">Assistance Luxembourg Online</h1>                            
+                            <h1 class="plan-title-padding section-title normal lowercase hidden-tab hidden-phone">Bienvenue sur <span class="bold">l'assistance Luxembourg Online</span></h1>                            
+                            <h1 class="plan-title-padding section-title normal lowercase hidden-desk hidden-lgdesk"><span class="bold">Assistance</span></h1>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="phone-pt-30 phone-pb-30" ng-app="assistanceRoute">
+            <section class="phone-pt-50 phone-pb-50" ng-app="assistApp">
                 <div class="container-wrapper">
-                    <div ng-view></div>
+                    <div ng-view autoscroll class="view-fade-in"></div>
+                </div>
+            </section>
+            <style type="text/css">
+                /*  ng-view Animation  */
+                .view-fade-in.ng-enter {
+                    transition: all 1.2s ease-in-out;
+                    -webkit-transition:all 1.2s ease-in-out;
+                    -moz-transition: all 1.2s ease-in-out;
+                    -o-transition: all 1.2s ease-in-out;
+                    position:relative;
+                    opacity:0;
+                }
+                .view-fade-in.ng-enter {
+                    opacity: 0;
+                }
+                .view-fade-in.ng-enter.ng-enter-active {
+                    opacity: 1;
+                }
+
+                .view-fade-in.ng-leave.ng-leave-active{
+                    opacity:1;
+                }
+                .view-fade-in.ng-leave{
+                    opacity:0;
+                }
+            </style>
+            <section class="section-layout left-orientation background-lightgrey section-shadow">
+                <div class="container-wrapper">
+                    <div class="row">
+                        <div class="phone-12 desk-6">
+                            <img class="section-img-align-bottom" src="../../images/Divers/1024px/Contact.jpg" srcset="../../images/Divers/1280px/Contact.jpg 1920w,
+                                 ../../images/Divers/1024px/Contact.jpg 1302w,
+                                 ../../images/Divers/640px/Contact.jpg  1056w,
+                                 ../../images/Divers/320px/Contact.jpg  672w" sizes="100%" alt="contact assistance">
+                        </div>
+                        <div class="phone-12 desk-6">
+                            <h1 class="section-title lowercase">Besoin de plus <span class="bold">d'assistance ?</span></h1>
+                            <p class="section-text">Nos équipes sont à votre service afin de vous conseiller et répondre à toutes vos questions. Pour cela, contactez-nous par téléphone ou par e-mail,
+                                ou complétez le formulaire ci-dessous.</p>
+                            <a class="btn-outline-white" href="../contact.html#Probleme_technique">Formulaire de contact</a>
+                        </div>
+                    </div>
                 </div>
             </section>
             <footer>                
@@ -394,16 +484,27 @@
 
         <!-- Script Perso-->
         <script src="../../scripts/vendor/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
         <script src="../../scripts/main.js"></script>
-        <!-- ./Script Perso-->
+        <script src="../../scripts/vendor/lightbox.js"></script>
+    </script>
+    <!-- ./Script Perso-->
 
-        <!-- ANGULAR SCRIPT -->
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.min.js"></script>
-        <script type="text/javascript" src="App.js"></script>
-        <!-- ./ANGULAR SCRIPT -->
+    <!-- ANGULAR SCRIPT -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-animate.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-resource.min.js"></script>
+    <script type="text/javascript" src="App.js"></script>
+    <script type="text/javascript" src="controllers/MainController.js"></script>
+    <script type="text/javascript" src="controllers/CatLinksCtrl.js"></script>
+    <script type="text/javascript" src="controllers/contentCtrl.js"></script>
+    <script type="text/javascript" src="services/services.js"></script>
+    <script type="text/javascript" src="directives/angular-loadscript.js"></script>
+    <script type="text/javascript" src="directives/lightbox.js"></script>
+    <!-- ./ANGULAR SCRIPT -->
 
 
-        <script type="text/javascript" src="../../scripts/analytics.js"></script>       
-    </body>
+    <script type="text/javascript" src="../../scripts/analytics.js"></script>       
+</body>
 </html>

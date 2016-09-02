@@ -1,0 +1,8 @@
+{
+    "id": "telFixe",
+    "name": "Téléphonie fixe",
+    "icon": "assistance-telephonie",
+    "links": [
+        {"name": "Les appels ne fonctionnent pas", "link": 0}
+    ]
+}

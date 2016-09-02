@@ -122,6 +122,9 @@
         border-left: 1px solid #004494;
         padding: 0 10px;
     }
+    .assistance-content{
+        .input-group select{width: 100%;}
+    }
 }
 @include media(tab){
     #error404{
@@ -155,7 +158,7 @@
             margin-bottom: 30px;
             &#loldsl{background-image: url(../../images/Homepage/OFFRES/LOL_DSL_288x392px.jpg);}
             &#mobiles{background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_288x392px.jpg);}
-            &#installation{background-image: url(../../images/Homepage/OFFRES/Euro2016_288x392px.jpg);}
+            &#installation{background-image: url(../../images/Homepage/OFFRES/LOL_TV_288x392px.jpg);}
         }
     }
     #offers-section{
@@ -193,7 +196,6 @@
         }
         .section-price{
             font-size: 72px;
-            margin: 0px auto 20px;
             padding-top: 2px;
             div{
                 font-size: 24px;
@@ -442,10 +444,10 @@
         background-size: 583px auto;
         padding-top: 205px;
     }
-    .dropdown-content{
-        margin-left: 30px;
-        border-left: 1px solid #004494;
-        padding: 0 35px;
+    #portail{
+        background-image: url(../../images/Homepage/CONTENU/640px/Portail.jpg);
+        background-size: 583px auto;
+        padding-top: 240px;
     }
     .news-item-blue{
         .content{padding: 15px 15px 15px 25px;}
@@ -473,11 +475,6 @@
         .typeContainer{
             margin-top: auto;
         }
-    }
-    .dropdown-content{
-        margin-left: 30px;
-        border-left: 1px solid #004494;
-        padding: 0 35px;
     }
     .center-tab{
         @include vertical-align-middle;
@@ -600,7 +597,6 @@
         }
         .section-price {
             font-size: 72px;
-            margin: 0px auto 20px;
             padding-top: 2px;
             div{
                 font-size: 21px;
@@ -647,7 +643,7 @@
             margin-bottom: 0;
             &#loldsl{background-image: url(../../images/Homepage/OFFRES/LOL_DSL_240x327px.jpg);}
             &#mobiles{background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_240x327px.jpg);}
-            &#installation{background-image: url(../../images/Homepage/OFFRES/Euro2016_240x327px.jpg);}
+            &#installation{background-image: url(../../images/Homepage/OFFRES/LOL_TV_240x327px.jpg);}
             .infos{
                 padding: 0 15px 15px;
                 .details{
@@ -1000,6 +996,12 @@
         background-position: right top;
         padding-top: 0;
     }
+    #portail{
+        background-image: url(../../images/Homepage/CONTENU/1024px/Portail.jpg);
+        background-size: 752px auto;
+        background-position: left top;
+        padding-top: 0;
+    }
 }
 
 
@@ -1014,7 +1016,7 @@
         margin-right: 18px;
     }
     .offer-item-blue .offer-price div, .offer-item-orange .offer-price div{
-        left: 122px;
+        left: 122px !important;
     }
     .finance-list{
         p{
@@ -1103,7 +1105,7 @@
     .notif-five{
         width: 700px;
         height: 85px;
-        top: 90%;
+        top: 85%;
         left: 6%;
     }
     .container-wrapper{
@@ -1234,7 +1236,7 @@
         {
             &#loldsl{background-image: url(../../images/Homepage/OFFRES/LOL_DSL_320x437px.jpg);}
             &#mobiles{background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_320x437px.jpg);}
-            &#installation{background-image: url(../../images/Homepage/OFFRES/Euro2016_320x437px.jpg);}
+            &#installation{background-image: url(../../images/Homepage/OFFRES/LOL_TV_320x437px.jpg);}
             .infos
             {
                 padding: 0 25px 15px;
@@ -1315,6 +1317,11 @@
         background-image: url(../../images/Homepage/CONTENU/1280px/20ans_LOL.jpg);
         background-size: 926px auto;
         background-position: right top;
+    }
+    #portail{
+        background-image: url(../../images/Homepage/CONTENU/1280px/Portail.jpg);
+        background-size: 926px auto;
+        background-position: left top;
     }
 }
 @include viewport(min, $min: 1400){

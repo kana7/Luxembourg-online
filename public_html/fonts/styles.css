@@ -149,9 +149,30 @@
 .icon-subrsciption:before {
   content: "\4b";
 }
+.icon-euro:before {
+  content: "\4d";
+}
 .icon-lock:before {
   content: "\4c";
 }
-.icon-euro:before {
-  content: "\4d";
+.icon-lostmobile:before {
+  content: "\4e";
+}
+.icon-sim:before {
+  content: "\4f";
+}
+.icon-tools:before {
+  content: "\50";
+}
+.icon-assistance-internet:before {
+  content: "\51";
+}
+.icon-assistance-mobile:before {
+  content: "\52";
+}
+.icon-assistance-telephonie:before {
+  content: "\53";
+}
+.icon-assistance-television:before {
+  content: "\54";
 }

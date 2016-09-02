@@ -1,5 +1,4 @@
 $(function(){
-	
 	$(".txtzone").mouseover(function(){
 		$(".zone"+$(this).attr("data-zone")).show();
 	});
@@ -19,7 +18,4 @@ $(function(){
 		});
 	});
 	$(".tooltipm").tooltip({'position':{ my: 'left center', at: 'right bottom' }});
-	
-
-
 });

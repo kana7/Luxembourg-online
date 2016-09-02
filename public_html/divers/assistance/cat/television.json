@@ -1,0 +1,12 @@
+{
+    "id": "television",
+    "name": "Télévision",
+    "icon": "assistance-television",
+    "links": [
+        {"name": "Installer mon décodeur", "link": 0},
+        {"name": "Je ne reçois plus la TV", "link": 1},
+        {"name": "La qualité des chaînes est mauvaise", "link" : 2},
+        {"name": "Mon décodeur semble hors-service", "link": 3},
+        {"name": "Ma télécommande ne fonctionne pas", "link": 4}
+    ]
+}

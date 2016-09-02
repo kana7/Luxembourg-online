@@ -339,10 +339,13 @@ header{
         left: 0;
         width: 100%;
         height: 320px;
-        a{
+        a:not(.btn-orange){
             display: block;
             position: absolute;
             top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             z-index: 2;
@@ -521,7 +524,7 @@ header{
 
         &#loldsl{background-image: url(../../images/Homepage/OFFRES/LOL_DSL_296x233px.jpg);}
         &#mobiles{background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_296x233px.jpg);}
-        &#installation{background-image: url(../../images/Homepage/OFFRES/Euro2016_296x233px.jpg);}
+        &#installation{background-image: url(../../images/Homepage/OFFRES/LOL_TV_296x233px.jpg);}
         &#dispo{background-image: url(../../images/Homepage/OFFRES/Recherche_Offre.jpg);}
 
         .infos

@@ -5,16 +5,16 @@
     .infos{
         background-size: 672px auto;
         &.image-1{
-            background-image: url(../../images/Homepage/SLIDER/Slider_672x320px_Noel3.jpg);
+            background-image: url(../../images/Homepage/SLIDER/Braderie_septembre_4.jpg);
         }
         &.image-2{
-            background-image: url(../../images/Homepage/SLIDER/Euro2016_672x320px.jpg);
+            background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel1_672x320px.jpg);
         }
         &.image-3{
             background-image: url(../../images/Homepage/SLIDER/Slider3_672x320px.jpg);
         }
         &.image-4{
-            background-image: url(../../images/Homepage/SLIDER/LOLVISIO_672x320px.jpg);
+            background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel2_672x320px.jpg);
         }
         &.image-5{
             background-image: url(../../images/Homepage/SLIDER/Inscription_672x320px.jpg);
@@ -27,16 +27,16 @@
         .infos{
             background-size: 1056px auto;
             &.image-1{
-                background-image: url(../../images/Homepage/SLIDER/Slider_1056x450px_Noel3.jpg);
+                background-image: url(../../images/Homepage/SLIDER/Braderie_septembre_3.jpg);
             }
             &.image-2{
-                background-image: url(../../images/Homepage/SLIDER/Euro2016_1056x450px.jpg);
+                background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel1_1056x450px.jpg);
             }
             &.image-3{
                 background-image: url(../../images/Homepage/SLIDER/Slider3_1056x450px.jpg);
             }
             &.image-4{
-                background-image: url(../../images/Homepage/SLIDER/LOLVISIO_1056x450px.jpg);
+                background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel2_1056x450px.jpg);
             }
             &.image-5{
                 background-image: url(../../images/Homepage/SLIDER/Inscription_1056x450px.jpg);
@@ -49,16 +49,16 @@
         .infos{
             background-size: 1302px auto;
             &.image-1{
-                background-image: url(../../images/Homepage/SLIDER/Slider_1302x330px_Noel3.jpg);
+                background-image: url(../../images/Homepage/SLIDER/Braderie_septembre_2.jpg);
             }
             &.image-2{
-                background-image: url(../../images/Homepage/SLIDER/Euro2016_1302x330px.jpg);
+                background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel1_1302x370px.jpg);
             }
             &.image-3{
                 background-image: url(../../images/Homepage/SLIDER/Slider3_1302x330px.jpg);
             }
             &.image-4{
-                background-image: url(../../images/Homepage/SLIDER/LOLVISIO_1302x330px.jpg);
+                background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel2_1302x370px.jpg);
             }
             &.image-5{
                 background-image: url(../../images/Homepage/SLIDER/Inscription_1302x330px.jpg);
@@ -71,16 +71,16 @@
         .infos{
             background-size: 1920px auto;
             &.image-1{
-                background-image: url(../../images/Homepage/SLIDER/Slider_1920x360px_Noel3.jpg);
+                background-image: url(../../images/Homepage/SLIDER/Braderie_septembre_1.jpg);
             }
             &.image-2{
-                background-image: url(../../images/Homepage/SLIDER/Euro2016_1920x360px.jpg);
+                background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel1_1920x400px.jpg);
             }
             &.image-3{
                 background-image: url(../../images/Homepage/SLIDER/Slider3_1920x360px.jpg);
             }
             &.image-4{
-                background-image: url(../../images/Homepage/SLIDER/LOLVISIO_1920x360px.jpg);
+                background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel2_1920x400px.jpg);
             }
             &.image-5{
                 background-image: url(../../images/Homepage/SLIDER/Inscription_1920x360px.jpg);
@@ -101,45 +101,86 @@
     font-size: 1.7em;
     line-height: 30px;
 }
+#slider-contents .infos.image-4{
+    .title{
+        font-size: 35px;
+        line-height: 32px;
+    }
+} 
 #slider-contents .infos.image-2 .title{
-    text-transform: initial;
-    font-size: 20pt;
-    line-height: 32px;
+    font-size: 26px;
+    line-height: 26px;
+    margin-bottom: 0;
+}
+#slider-contents .image-5 .btn-orange{
+    position: absolute;
+    display: block;
+    font-size: 18px;
+    bottom: 130px;
+    margin: 0 0 20px;
+    @include box-shadow(none);
 }
 
-@media screen and (max-width: 671px) {
-    #slider-contents{
-        .infos.image-2 .row>div, .infos.image-4 .row>div{
-            text-align: center;
+#slider-contents{
+    .infos.image-1{
+        .title{
+            font-size: 20px;
         }
-        .infos.image-1{
-            .title{
-                font-size: 35px;
-            }
-            .top-details{
-                font-size: 18px;
-            }
-            .bottom-details{
-                font-size: 13px;
-            }
+        .top-details{
+            font-size: 18px;
+            font-weight: 400;
         }
-    } 
-}
-@media screen and (min-width: 672px){
+        .bottom-details{
+            font-size: 14px;
+        }
+    }
+    .infos.image-4 .title, .infos.image-2 .title{span.chapeau{font-size: 0.7em;&+span{font-size: 1.2em;}}}
+} 
+@include media(tab){
     #slider-contents .infos.image-2 .title{
-        text-transform: initial;
-        font-size: 28pt;
-        line-height: 42px;
+        font-size: 34px;
+        line-height: 38px;
+        margin-bottom: 0;
+        span.chapeau{font-size: 0.5em;}
+    }
+    #slider-contents .infos.image-4 .title{
+        font-size: 50px;
+        line-height: 40px;
+        span.chapeau{font-size: 0.5em;}
     }
     #slider-contents .infos.image-5 .title{
         font-size: 27pt;
         line-height: 42px;
     }
+    #slider-contents{
+        .infos.image-1{
+            .title{
+                font-size: 36px;
+                line-height: 38px;
+                margin-bottom: 5px;
+            }
+            .top-details{
+                font-size: 30px;
+            }
+            .bottom-details{
+                font-size: 20px;
+            }
+        }
+    }
+    #slider-contents .image-5 .btn-orange{
+        font-size: 22px;
+        bottom: 260px;
+        left: 0;
+        right: 0;
+        width: 230px;
+        margin: 0 auto 20px;
+    }
 }
-@media screen and (min-width: 1056px){
+@include media(desk){
     #slider-contents .infos.image-2 {
         .row>div{
             @include vertical-align-middle(absolute);
+            .section-price{float: left; margin: initial !important;}
         }
         .title{
             font-size: 32pt;
@@ -149,11 +190,57 @@
             font-size: 14pt;
         }
     }
-}
-@media screen and (min-width: 1302px){
-    #slider-contents .infos.image-2 .title {
-        font-size: 35pt;
-        line-height: 50px;
-        margin-bottom: 10px;
+    #slider-contents{
+        .infos.image-1{
+            .title{
+                font-size: 33px;
+                line-height: 37px;
+                margin-bottom: 10px;
+            }
+            .top-details{
+                margin-bottom: 15px;
+            }
+        }
     }
+    #slider-contents .infos.image-4 div[class^="phone-"]{
+        float: right;
+        text-align: right;
+        .section-price{float: right; margin: initial !important;}
+    }
+    #slider-contents .image-5 .btn-orange{
+        bottom: 60px;
+        left: auto;
+        right: auto;
+        width: auto;
+        margin: 0 -10px 0;
+    }    
+}
+@include media(lgdesk){
+    #slider-contents{
+        .infos.image-1{
+            .title{
+                font-size: 40px;
+                line-height: 46px;
+                margin-bottom: 10px;
+            }
+            .top-details{
+                font-size: 32px;
+            }
+            .bottom-details{
+                font-size: 22px;
+            }
+        }
+    }
+    #slider-contents .infos.image-2 .title {
+        font-size: 53px;
+        line-height: 55px;
+        span.chapeau{line-height: 40px}
+    }
+    #slider-contents .infos.image-4 .title {
+        font-size: 58px;
+        line-height: 43px;
+    }
+    #slider-contents .image-5 .btn-orange{
+        bottom: 75px;
+    }    
 }

@@ -2,13 +2,13 @@
 #slider-contents .infos {
   background-size: 672px auto; }
   #slider-contents .infos.image-1 {
-    background-image: url(../../images/Homepage/SLIDER/Slider_672x320px_Noel3.jpg); }
+    background-image: url(../../images/Homepage/SLIDER/Braderie_septembre_4.jpg); }
   #slider-contents .infos.image-2 {
-    background-image: url(../../images/Homepage/SLIDER/Euro2016_672x320px.jpg); }
+    background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel1_672x320px.jpg); }
   #slider-contents .infos.image-3 {
     background-image: url(../../images/Homepage/SLIDER/Slider3_672x320px.jpg); }
   #slider-contents .infos.image-4 {
-    background-image: url(../../images/Homepage/SLIDER/LOLVISIO_672x320px.jpg); }
+    background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel2_672x320px.jpg); }
   #slider-contents .infos.image-5 {
     background-image: url(../../images/Homepage/SLIDER/Inscription_672x320px.jpg); }
 
@@ -16,39 +16,39 @@
   #slider-contents .infos {
     background-size: 1056px auto; }
     #slider-contents .infos.image-1 {
-      background-image: url(../../images/Homepage/SLIDER/Slider_1056x450px_Noel3.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Braderie_septembre_3.jpg); }
     #slider-contents .infos.image-2 {
-      background-image: url(../../images/Homepage/SLIDER/Euro2016_1056x450px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel1_1056x450px.jpg); }
     #slider-contents .infos.image-3 {
       background-image: url(../../images/Homepage/SLIDER/Slider3_1056x450px.jpg); }
     #slider-contents .infos.image-4 {
-      background-image: url(../../images/Homepage/SLIDER/LOLVISIO_1056x450px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel2_1056x450px.jpg); }
     #slider-contents .infos.image-5 {
       background-image: url(../../images/Homepage/SLIDER/Inscription_1056x450px.jpg); } }
 @media screen and (min-width: 1056px) {
   #slider-contents .infos {
     background-size: 1302px auto; }
     #slider-contents .infos.image-1 {
-      background-image: url(../../images/Homepage/SLIDER/Slider_1302x330px_Noel3.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Braderie_septembre_2.jpg); }
     #slider-contents .infos.image-2 {
-      background-image: url(../../images/Homepage/SLIDER/Euro2016_1302x330px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel1_1302x370px.jpg); }
     #slider-contents .infos.image-3 {
       background-image: url(../../images/Homepage/SLIDER/Slider3_1302x330px.jpg); }
     #slider-contents .infos.image-4 {
-      background-image: url(../../images/Homepage/SLIDER/LOLVISIO_1302x330px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel2_1302x370px.jpg); }
     #slider-contents .infos.image-5 {
       background-image: url(../../images/Homepage/SLIDER/Inscription_1302x330px.jpg); } }
 @media screen and (min-width: 1302px) {
   #slider-contents .infos {
     background-size: 1920px auto; }
     #slider-contents .infos.image-1 {
-      background-image: url(../../images/Homepage/SLIDER/Slider_1920x360px_Noel3.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Braderie_septembre_1.jpg); }
     #slider-contents .infos.image-2 {
-      background-image: url(../../images/Homepage/SLIDER/Euro2016_1920x360px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel1_1920x400px.jpg); }
     #slider-contents .infos.image-3 {
       background-image: url(../../images/Homepage/SLIDER/Slider3_1920x360px.jpg); }
     #slider-contents .infos.image-4 {
-      background-image: url(../../images/Homepage/SLIDER/LOLVISIO_1920x360px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel2_1920x400px.jpg); }
     #slider-contents .infos.image-5 {
       background-image: url(../../images/Homepage/SLIDER/Inscription_1920x360px.jpg); } }
 #slider-contents .infos.image-6 .title {
@@ -58,29 +58,73 @@
   font-size: 1.7em;
   line-height: 30px; }
 
-#slider-contents .infos.image-2 .title {
-  text-transform: initial;
-  font-size: 20pt;
+#slider-contents .infos.image-4 .title {
+  font-size: 35px;
   line-height: 32px; }
 
-@media screen and (max-width: 671px) {
-  #slider-contents .infos.image-2 .row > div, #slider-contents .infos.image-4 .row > div {
-    text-align: center; }
-  #slider-contents .infos.image-1 .title {
-    font-size: 35px; }
-  #slider-contents .infos.image-1 .top-details {
-    font-size: 18px; }
-  #slider-contents .infos.image-1 .bottom-details {
-    font-size: 13px; } }
+#slider-contents .infos.image-2 .title {
+  font-size: 26px;
+  line-height: 26px;
+  margin-bottom: 0; }
+
+#slider-contents .image-5 .btn-orange {
+  position: absolute;
+  display: block;
+  font-size: 18px;
+  bottom: 130px;
+  margin: 0 0 20px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -o-box-shadow: none;
+  -ms-box-shadow: none; }
+
+#slider-contents .infos.image-1 .title {
+  font-size: 20px; }
+#slider-contents .infos.image-1 .top-details {
+  font-size: 18px;
+  font-weight: 400; }
+#slider-contents .infos.image-1 .bottom-details {
+  font-size: 14px; }
+#slider-contents .infos.image-4 .title span.chapeau, #slider-contents .infos.image-2 .title span.chapeau {
+  font-size: 0.7em; }
+  #slider-contents .infos.image-4 .title span.chapeau + span, #slider-contents .infos.image-2 .title span.chapeau + span {
+    font-size: 1.2em; }
+
 @media screen and (min-width: 672px) {
   #slider-contents .infos.image-2 .title {
-    text-transform: initial;
-    font-size: 28pt;
-    line-height: 42px; }
+    font-size: 34px;
+    line-height: 38px;
+    margin-bottom: 0; }
+    #slider-contents .infos.image-2 .title span.chapeau {
+      font-size: 0.5em; }
+
+  #slider-contents .infos.image-4 .title {
+    font-size: 50px;
+    line-height: 40px; }
+    #slider-contents .infos.image-4 .title span.chapeau {
+      font-size: 0.5em; }
 
   #slider-contents .infos.image-5 .title {
     font-size: 27pt;
-    line-height: 42px; } }
+    line-height: 42px; }
+
+  #slider-contents .infos.image-1 .title {
+    font-size: 36px;
+    line-height: 38px;
+    margin-bottom: 5px; }
+  #slider-contents .infos.image-1 .top-details {
+    font-size: 30px; }
+  #slider-contents .infos.image-1 .bottom-details {
+    font-size: 20px; }
+
+  #slider-contents .image-5 .btn-orange {
+    font-size: 22px;
+    bottom: 260px;
+    left: 0;
+    right: 0;
+    width: 230px;
+    margin: 0 auto 20px; } }
 @media screen and (min-width: 1056px) {
   #slider-contents .infos.image-2 .row > div {
     position: absolute;
@@ -89,15 +133,56 @@
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%); }
+    #slider-contents .infos.image-2 .row > div .section-price {
+      float: left;
+      margin: initial !important; }
   #slider-contents .infos.image-2 .title {
     font-size: 32pt;
     line-height: 45px; }
   #slider-contents .infos.image-2 p.bottom-details {
-    font-size: 14pt; } }
+    font-size: 14pt; }
+
+  #slider-contents .infos.image-1 .title {
+    font-size: 33px;
+    line-height: 37px;
+    margin-bottom: 10px; }
+  #slider-contents .infos.image-1 .top-details {
+    margin-bottom: 15px; }
+
+  #slider-contents .infos.image-4 div[class^="phone-"] {
+    float: right;
+    text-align: right; }
+    #slider-contents .infos.image-4 div[class^="phone-"] .section-price {
+      float: right;
+      margin: initial !important; }
+
+  #slider-contents .image-5 .btn-orange {
+    bottom: 60px;
+    left: auto;
+    right: auto;
+    width: auto;
+    margin: 0 -10px 0; } }
 @media screen and (min-width: 1302px) {
+  #slider-contents .infos.image-1 .title {
+    font-size: 40px;
+    line-height: 46px;
+    margin-bottom: 10px; }
+  #slider-contents .infos.image-1 .top-details {
+    font-size: 32px; }
+  #slider-contents .infos.image-1 .bottom-details {
+    font-size: 22px; }
+
   #slider-contents .infos.image-2 .title {
-    font-size: 35pt;
-    line-height: 50px;
-    margin-bottom: 10px; } }
+    font-size: 53px;
+    line-height: 55px; }
+    #slider-contents .infos.image-2 .title span.chapeau {
+      line-height: 40px; }
+
+  #slider-contents .infos.image-4 .title {
+    font-size: 58px;
+    line-height: 43px; }
+
+  #slider-contents .image-5 .btn-orange {
+    bottom: 75px; } }
 
 /*# sourceMappingURL=slider_src.css.map */

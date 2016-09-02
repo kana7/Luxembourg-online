@@ -8,6 +8,7 @@
         {"name": "Pourquoi mon compte mail se bloque ?", "link": 2},
         {"name": "Comment changer de mot de passe ?", "link": 3},
         {"name": "Mes mails ne s'affichent pas correctement ?", "link": 4},
-        {"name": "J'ai des problèmes d'envoi/de réception", "link": 5}
+        {"name": "J'ai des problèmes d'envoi/de réception", "link": 5},
+        {"name": "Comment configurer mon logiciel de messagerie", "link": 6}
     ]
 }

@@ -6314,13 +6314,15 @@ h2.contact-title {
     font-size: 21px;
     font-weight: 600;
     text-transform: uppercase;
-    color: #004994; }
+    color: #004994;
+    text-align: left; }
   .assistance-content .article h4 {
     margin-bottom: 10px;
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
-    color: #07040D; }
+    color: #07040D;
+    text-align: left; }
   .assistance-content .article li {
     display: block;
     font-size: 15px; }
@@ -6337,12 +6339,159 @@ h2.contact-title {
     margin-bottom: 5px; }
     .assistance-content .article .step-title + p {
       margin-top: 5px; }
+  .assistance-content .article .img-container {
+    display: inline-block;
+    text-align: center;
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid #c0c0c0;
+    height: 200px; }
+  .assistance-content .article .img-container img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    border-radius: 4px;
+    border: 1px solid #c0c0c0; }
+  .assistance-content .article .dropdown [data-trigger] span[class^=icon] {
+    margin-left: 0; }
+  .assistance-content .article .modemItem {
+    display: none;
+    margin-top: 15px; }
+  .assistance-content .article .emailItem, .assistance-content .article .minixItem, .assistance-content .article .visioItem {
+    display: none;
+    margin-top: 15px; }
+  .assistance-content .article .modemItem table, .assistance-content .article .minixItem table {
+    width: 100%; }
+  .assistance-content .article .imgContainer {
+    display: inline-block;
+    height: 150px;
+    width: auto;
+    vertical-align: middle;
+    text-align: center; }
+  .assistance-content .article .imgContainer img {
+    height: 100%;
+    width: auto; }
+  .assistance-content .article td {
+    vertical-align: top; }
+  .assistance-content .article .dropTabContent {
+    padding: 10px; }
+  .assistance-content .article .emailImg {
+    width: 80%; }
+  .assistance-content .article .emailPara {
+    list-style-type: decimal;
+    line-height: 15pt;
+    font-weight: bold;
+    margin-left: 20px; }
+  .assistance-content .article .emailPara span {
+    font-weight: normal; }
+  .assistance-content .article .emailPara2 {
+    list-style-type: decimal;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold; }
+  .assistance-content .article .emailPara2 span {
+    font-weight: normal; }
+  .assistance-content .article .emailItem h3 {
+    margin-left: 0px;
+    font-size: 16px; }
+  .assistance-content .article .emailItem p {
+    line-height: 20px; }
+  .assistance-content .article .emailPara li {
+    display: list-item !important;
+    list-style: decimal;
+    list-style-type: decimal; }
+  .assistance-content .article .emailPara2 li {
+    display: list-item !important;
+    list-style: disc;
+    list-style-type: disc; }
+  .assistance-content .article .emailPara2 {
+    list-style-type: decimal;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold; }
+  .assistance-content .article .not-decimal-list {
+    list-style-type: disc;
+    line-height: 15pt;
+    font-weight: bold;
+    margin-left: 18px; }
+  .assistance-content .article .not-decimal-list span {
+    font-weight: normal; }
+  .assistance-content .article .not-decimal-list li {
+    display: list-item !important;
+    list-style: disc; }
+  .assistance-content .article .link-assistance {
+    color: #004994;
+    text-decoration: underline; }
+  .assistance-content .article .config td {
+    padding: 5px; }
+  .assistance-content .article .tuto img {
+    height: 400px;
+    width: auto;
+    border: 1px solid;
+    margin-bottom: 10px; }
+  .assistance-content .article .dataItem .bold, .assistance-content .article .dropdown .bold {
+    margin: 27px 0px 10px;
+    font-size: 18px; }
+  .assistance-content .article .dropdown h2 {
+    margin: 0; }
+  .assistance-content .article .docItem h2 {
+    margin: 25px 0; }
+  .assistance-content .article h3 {
+    margin: 15px 0 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px; }
+  .assistance-content .article .dropdown-content h5 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 20px 0 10px; }
+  .assistance-content .article .dropdown-content p {
+    margin: 10px 0; }
+  .assistance-content .article .dropdown {
+    margin: 30px 0; }
+  .assistance-content .article .dropdown-list .dropdown:last-child {
+    margin-bottom: 0px; }
+  .assistance-content .article .moveArrow {
+    text-align: left; }
+  .assistance-content .article .faq-image {
+    position: relative;
+    width: 65%; }
+  .assistance-content .article .faq-image img {
+    width: 100%;
+    height: auto; }
+  .assistance-content .article .notif {
+    position: absolute;
+    background-color: transparent; }
+  .assistance-content .article .content-assistance {
+    margin: 0;
+    padding: 0 15px; }
+  .assistance-content .article .rTable {
+    display: table;
+    width: 100%; }
+  .assistance-content .article .rTableRow {
+    display: table-row; }
+  .assistance-content .article .rTableBody {
+    display: table-row-group;
+    clear: both; }
+  .assistance-content .article .rTableCell, .assistance-content .article .rTableHead {
+    display: table-cell;
+    padding: 5px; }
+  .assistance-content .article .rTableHead {
+    font-weight: bold;
+    font-size: 13px;
+    border-bottom: 1px solid #e1e1e1; }
 .assistance-content .content {
   margin-bottom: 40px; }
 .assistance-content .att, .assistance-content .note {
   display: table; }
   .assistance-content .att h4, .assistance-content .note h4 {
-    margin: 10px 0 0; }
+    margin: 10px 0 0;
+    text-align: left; }
   .assistance-content .att > p, .assistance-content .att > ul, .assistance-content .att > div, .assistance-content .note > p, .assistance-content .note > ul, .assistance-content .note > div {
     color: #fff;
     border-radius: 6px;
@@ -6390,6 +6539,39 @@ h2.contact-title {
     margin-right: 7px; }
   .assistance-content .doc-list a .link {
     text-decoration: none !important; }
+
+.animate-enter {
+  -webkit-transition: 1s linear all;
+  /* Chrome */
+  transition: 1s linear all;
+  opacity: 0; }
+
+.animate-enter.animate-enter-active {
+  opacity: 1; }
+
+/*-------------------------Magnifique popup-----------------------------------*/
+.image-source-link {
+  color: #98C3D1; }
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  /* ideally, transition speed should match zoom duration */
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+  opacity: 1; }
+
+.mfp-with-zoom.mfp-ready.mfp-bg {
+  opacity: 0.8; }
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+  opacity: 0; }
 
 @media screen and (max-width: 1301px) {
   .header-icon {
@@ -6490,7 +6672,10 @@ h2.contact-title {
   .dropdown-content {
     margin-left: 0px;
     border-left: 1px solid #004494;
-    padding: 0 10px; } }
+    padding: 0 10px; }
+
+  .assistance-content .input-group select {
+    width: 100%; } }
 @media screen and (min-width: 672px) {
   #error404 {
     height: 600px; }
@@ -6781,11 +6966,6 @@ h2.contact-title {
     background-size: 583px auto;
     padding-top: 240px; }
 
-  .dropdown-content {
-    margin-left: 30px;
-    border-left: 1px solid #004494;
-    padding: 0 35px; }
-
   .news-item-blue .content {
     padding: 15px 15px 15px 25px; }
   .news-item-blue.main-article .main-image {
@@ -6810,11 +6990,6 @@ h2.contact-title {
     text-align: left; }
     .rightWrapper .typeContainer {
       margin-top: auto; }
-
-  .dropdown-content {
-    margin-left: 30px;
-    border-left: 1px solid #004494;
-    padding: 0 35px; }
 
   .center-tab {
     position: relative;
@@ -7406,7 +7581,7 @@ h2.contact-title {
   .notif-five {
     width: 700px;
     height: 85px;
-    top: 90%;
+    top: 85%;
     left: 6%; }
 
   .container-wrapper {

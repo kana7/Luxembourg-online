@@ -46,6 +46,12 @@ assistControllers = assistApp.controller('MainController', ['$scope', function (
                 name: 'Documents utiles',
                 icon: 'document-ico',
                 cover: '../../images/Divers/Assistance/at/docs_utiles.jpg'
+            },
+            {
+                id: 'speed/0',
+                name: 'Speed test',
+                icon: 'document-ico',
+                cover: '../../images/Divers/Assistance/at/docs_utiles.jpg'
             }
         ];
     }]);

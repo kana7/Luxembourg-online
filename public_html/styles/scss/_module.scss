@@ -3260,8 +3260,9 @@ h2.contact-title {
             font-weight: 600;
             text-transform: uppercase;
             color: $blue;
+            text-align: left;
         }
-        h4{margin-bottom: 10px; font-size: 16px; font-weight: 600; text-transform: uppercase; color: $section-black;}
+        h4{margin-bottom: 10px; font-size: 16px; font-weight: 600; text-transform: uppercase; color: $section-black; text-align: left;}
         li{
             display: block;
             font-size: 15px;
@@ -3272,13 +3273,172 @@ h2.contact-title {
             border-style: solid;
         }
         .step-title{color: $section-black; font-weight: 600; margin-bottom: 5px; &+p{margin-top: 5px;}}
+        .img-container{display: inline-block; text-align: center; margin: 10px 0; padding: 5px; border-radius: 4px; box-shadow: 0 2px 5px 0 rgba(0,0,0,0.20); border: 1px solid #c0c0c0; height: 200px;}
+        .img-container img{display: block; width: auto; height: auto; max-height: 100%; border-radius: 4px; border: 1px solid #c0c0c0;}
+        .dropdown [data-trigger] span[class^=icon]{margin-left: 0;}
+
+        .modemItem{
+            display:none;
+            margin-top: 15px;
+        }
+        .emailItem, .minixItem, .visioItem{
+            display:none;
+            margin-top:15px;
+        }
+        .modemItem table, .minixItem table{
+            width: 100%;
+        }
+        .imgContainer{
+            display: inline-block;
+            height:150px;
+            width: auto;
+            vertical-align:middle;
+            text-align:center;
+        }
+        .imgContainer img {
+            height: 100%;
+            width: auto;
+        }
+        td{
+            vertical-align:top;
+        }
+        .dropTabContent{
+            padding:10px;
+        }
+        .emailImg {
+            width:80%;
+        }
+        .emailPara {
+            list-style-type:decimal;
+            line-height:15pt;
+            font-weight:bold;
+            margin-left: 20px;
+        }
+        .emailPara span {
+            font-weight:normal;
+        }
+        .emailPara2 {
+            list-style-type: decimal;
+            margin-left:10px;
+            margin-top:20px;
+            margin-bottom:20px;
+            font-weight:bold;
+        }
+        .emailPara2 span {
+            font-weight:normal;
+        }
+        .emailItem h3{
+            margin-left:0px;
+            font-size:16px;
+        }
+        .emailItem p{
+            line-height: 20px;
+        }
+        .emailPara li{
+            display: list-item !important;
+            list-style: decimal;
+            list-style-type: decimal;
+        }
+        .emailPara2 li{
+            display: list-item !important;
+            list-style: disc;
+            list-style-type: disc;
+        }
+        .emailPara2 {
+            list-style-type: decimal;
+            margin-left: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .not-decimal-list{
+            list-style-type: disc;
+            line-height: 15pt;
+            font-weight: bold;
+            margin-left: 18px;
+        }
+        .not-decimal-list span{
+            font-weight: normal;
+        }
+        .not-decimal-list li{
+            display: list-item !important;
+            list-style: disc;
+        }
+        .link-assistance{
+            color: #004994;
+            text-decoration: underline;
+        }
+        .config td {
+            padding: 5px;
+        }
+        .tuto img{
+            height: 400px;
+            width: auto;
+            border: 1px solid;
+            margin-bottom: 10px;
+        }
+        .dataItem .bold, .dropdown .bold{
+            margin: 27px 0px 10px;
+            font-size: 18px;
+        }
+        .dropdown h2{
+            margin: 0;
+        }
+        .docItem h2{                                 
+            margin: 25px 0;
+        }
+        h3{                                        
+            margin: 15px 0 10px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+        .dropdown-content h5{
+            font-size: 16px;
+            font-weight: 600;
+            margin: 20px 0 10px;
+        }
+        .dropdown-content p{
+            margin: 10px 0; 
+        }
+        .dropdown{
+            margin: 30px 0;
+        }
+        .dropdown-list .dropdown:last-child{
+            margin-bottom: 0px;
+        }                                    
+        .moveArrow{
+            text-align: left;
+        }
+        .faq-image{
+            position: relative;
+            width: 65%;
+        }
+        .faq-image img{
+            width: 100%;
+            height: auto;
+        }
+        .notif{
+            position: absolute;                                        
+            background-color: transparent;                                        
+        }                                    
+        .content-assistance{
+            margin: 0;
+            padding: 0 15px;
+        }
+        .rTable { display: table; width: 100%;}
+        .rTableRow { display: table-row; }
+        .rTableBody { display: table-row-group;clear: both; }
+        .rTableCell, .rTableHead { display: table-cell; padding: 5px; }
+        .rTableHead{font-weight: bold; font-size: 13px; border-bottom: 1px solid #e1e1e1;}
+
     }
     .content{
         margin-bottom: 40px;
     }
     .att, .note{
         display: table;
-        h4{margin: 10px 0 0; }
+        h4{margin: 10px 0 0; text-align: left;}
         &>p, &>ul, &>div{color: $white; border-radius: 6px; padding: 10px 18px; margin: 10px 0; &+.footer-note{margin: 0;}}
         &>div p:first-child{margin-top: 0;}
         a{color: white; text-decoration: underline;}
@@ -3305,4 +3465,42 @@ h2.contact-title {
             .link{text-decoration: none !important;}
         }
     }
+}
+.animate-enter {
+    -webkit-transition: 1s linear all; /* Chrome */
+    transition: 1s linear all;
+    opacity: 0;
+}
+
+.animate-enter.animate-enter-active {
+    opacity: 1;
+}
+
+
+/*-------------------------Magnifique popup-----------------------------------*/
+.image-source-link {
+    color: #98C3D1;
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    /* ideally, transition speed should match zoom duration */
+    -webkit-transition: all 0.3s ease-out; 
+    -moz-transition: all 0.3s ease-out; 
+    -o-transition: all 0.3s ease-out; 
+    transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+    opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg {
+    opacity: 0;
 }

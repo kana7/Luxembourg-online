@@ -6,6 +6,7 @@
         {"name": "Contrats d'abonnement", "link": "0"},
         {"name": "Divers", "link": "1"},
         {"name": "Condition générales et particulières", "link": "2"},
-        {"name": "Fiches signalétiques", "link": "3"}
+        {"name": "Fiches signalétiques", "link": "3"},
+        {"name": "Guides d'installation et d'assistance", "link": "4"}
     ]
 }

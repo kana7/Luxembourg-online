@@ -1,7 +1,10 @@
 var assistApp = angular.module('assistApp', [
     'ngRoute', 
     'assistControllers',
-    'catServices'
+    'catServices', 
+    'ngLoadScript', 
+    'ngAnimate',
+    'ngLightbox'
 ]);
 
 //ROUTE CONFIGURATION
@@ -26,6 +29,19 @@ assistApp.config(['$routeProvider',
                     redirectTo: '/categories/'
                 });
     }]);
+assistApp.run(['$route', '$rootScope', '$location', function ($route, $rootScope, $location) {
+    var original = $location.path;
+    $location.path = function (path, reload) {
+        if (reload === false) {
+            var lastRoute = $route.current;
+            var un = $rootScope.$on('$locationChangeSuccess', function () {
+                $route.current = lastRoute;
+                un();
+            });
+        }
+        return original.apply($location, [path]);
+    };
+}]);
 /*app.controller('CatLinksCtrl', ['$scope', '$routeParams', 'Cat', function ($scope, $routeParams, Cat) {
  console.log("CAT LINKS CONTROLLER reporting for duty.");
  $scope.cat = Cat.get({catId: $routeParams.catId}, function (cat) {

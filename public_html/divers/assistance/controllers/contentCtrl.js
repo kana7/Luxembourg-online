@@ -1,4 +1,4 @@
-assistControllers = assistApp.controller('contentCtrl', ['$scope', '$routeParams', 'Cat', function ($scope, $routeParams, Cat) {
+assistControllers = assistApp.controller('contentCtrl', ['$location', '$scope', '$routeParams', 'Cat', function ($location, $scope, $routeParams, Cat) {
 
         console.log("CONTENT CONTROLLER reporting for duty.");
         console.log($routeParams);
@@ -18,6 +18,7 @@ assistControllers = assistApp.controller('contentCtrl', ['$scope', '$routeParams
         $scope.updateTemplate = function () {
             $scope.tpl = 'includes/' + $routeParams.catId + '/' + $scope.selectArticle.link + '.html';
             $scope.title = $scope.selectArticle.name;
+            $location.path('/categories/'+ $routeParams.catId + '/' + $scope.selectArticle.link, false);
         };
         $scope.getBack = function () {
             return '#/' + $routeParams.catId;

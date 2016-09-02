@@ -122,6 +122,9 @@
         border-left: 1px solid #004494;
         padding: 0 10px;
     }
+    .assistance-content{
+        .input-group select{width: 100%;}
+    }
 }
 @include media(tab){
     #error404{
@@ -446,11 +449,6 @@
         background-size: 583px auto;
         padding-top: 240px;
     }
-    .dropdown-content{
-        margin-left: 30px;
-        border-left: 1px solid #004494;
-        padding: 0 35px;
-    }
     .news-item-blue{
         .content{padding: 15px 15px 15px 25px;}
         &.main-article .main-image{height: 400px;}
@@ -477,11 +475,6 @@
         .typeContainer{
             margin-top: auto;
         }
-    }
-    .dropdown-content{
-        margin-left: 30px;
-        border-left: 1px solid #004494;
-        padding: 0 35px;
     }
     .center-tab{
         @include vertical-align-middle;
@@ -1112,7 +1105,7 @@
     .notif-five{
         width: 700px;
         height: 85px;
-        top: 90%;
+        top: 85%;
         left: 6%;
     }
     .container-wrapper{

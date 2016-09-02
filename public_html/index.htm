@@ -8,6 +8,7 @@
         <meta name="keywords" content="Telecom Luxembourg, solution telecom, fournisseur accès internet, Internet TV Mobile, Offre internet fibre" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="styles/css/vendor/flickity.min.css" />
+        <link rel="stylesheet" href="styles/css/lightbox.css"/>
         <link rel="stylesheet" href="styles/css/main.css" />
         <link rel="stylesheet" href="styles/css/slider_src.css" />
         <script src="scripts/vendor/picturefill.min.js"></script>
@@ -280,8 +281,9 @@
                     </div>
                     <div class="gallery-cell">
                         <div class="infos image-5">
-                            <a href="http://shop.internet.lu/inscription/shop/offres.html"></a>
                             <div class="container-wrapper">
+                                <a href="http://shop.internet.lu/inscription/shop/offres.html"></a>
+                                <a class="btn-orange popup-youtube" href="https://www.youtube.com/watch?v=gfRsh1OKIpo">Voir le tutoriel</a>
                                 <div class="row">
                                     <div class="phone-12 desk-10">
                                         <h2  class="title"><span class="normal">Plus besoin de vous déplacer,</span><br /> Abonnez-vous en ligne !</h2>
@@ -604,6 +606,7 @@
         <script type="text/javascript" src="scripts/jquery.maskedinput.min.js"></script>
         <script type="text/javascript" src="scripts/vendor/flickity.pkgd.min.js"></script>
         <script type="text/javascript" src="scripts/internetscript.js"></script>
+        <script type="text/javascript" src="scripts/vendor/lightbox.js"></script>
         <script src="scripts/main.js"></script>
 
         <script type="text/javascript">
@@ -617,6 +620,34 @@
                     arrowShape: "M74,99.5c-2.7,2.7-7.3,2.7-10,0L21.7,56.8c-2.7-2.7-2.7-7.3,0-10L64,4.2c1.5-1.9,3.1-2.7,5-2.7c1.9,0,3.5,0.8,5,1.9c2.7,2.7,2.7,7.3,0,10L36.7,51.1l37.3,38C76.7,92.2,76.7,96.4,74,99.5z",
                     autoPlay: 4000,
                     initialIndex: 0
+                });
+                $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+                    disableOn: 700,
+                    type: 'iframe',
+                    mainClass: 'mfp-fade',
+                    removalDelay: 160,
+                    preloader: false,
+                    fixedContentPos: false,
+                    iframe: {
+                        markup: '<div class="mfp-iframe-scaler">' +
+                                '<div class="mfp-close"></div>' +
+                                '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+                                '</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
+
+                        patterns: {
+                            youtube: {
+                                index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
+
+                                id: 'v=', // String that splits URL in a two parts, second part should be %id%
+                                // Or null - full URL will be returned
+                                // Or a function that should return %id%, for example:
+                                // id: function(url) { return 'parsed id'; }
+
+                                src: '//www.youtube.com/embed/%id%?rel=0&amp;showinfo=0&autoplay=1' // URL that will be set as a source for iframe.
+                            }
+                        },
+                        srcAction: 'iframe_src' // Templating object key. First part defines CSS selector, second attribute. "iframe_src" means: find "iframe" and set attribute "src".
+                    }
                 });
             });
         </script>

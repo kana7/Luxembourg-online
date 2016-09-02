@@ -112,6 +112,14 @@
     line-height: 26px;
     margin-bottom: 0;
 }
+#slider-contents .image-5 .btn-orange{
+    position: absolute;
+    display: block;
+    font-size: 18px;
+    bottom: 130px;
+    margin: 0 0 20px;
+    @include box-shadow(none);
+}
 
 #slider-contents{
     .infos.image-1{
@@ -159,6 +167,14 @@
             }
         }
     }
+    #slider-contents .image-5 .btn-orange{
+        font-size: 22px;
+        bottom: 260px;
+        left: 0;
+        right: 0;
+        width: 230px;
+        margin: 0 auto 20px;
+    }
 }
 @include media(desk){
     #slider-contents .infos.image-2 {
@@ -191,6 +207,13 @@
         text-align: right;
         .section-price{float: right; margin: initial !important;}
     }
+    #slider-contents .image-5 .btn-orange{
+        bottom: 60px;
+        left: auto;
+        right: auto;
+        width: auto;
+        margin: 0 -10px 0;
+    }    
 }
 @include media(lgdesk){
     #slider-contents{
@@ -217,4 +240,7 @@
         font-size: 58px;
         line-height: 43px;
     }
+    #slider-contents .image-5 .btn-orange{
+        bottom: 75px;
+    }    
 }

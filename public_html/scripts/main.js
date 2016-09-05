@@ -1,3 +1,10 @@
+/*PLUGIN POUR APPLIQUER LES REFERENCES DES TRADUCTIONS*/
+$.fn.setL10nData = function (id, args) {
+  return this.each(function () {
+    document.l10n.setAttributes(this, id, args);
+  });
+};
+
 var formNameIndex = ['shop_fibre', 'shop_portabilite'];
 var cookieIndex = ['shop_serviceMap', 'shop_panierItems', 'shop_idhome'].concat(formNameIndex);
 

@@ -6,6 +6,6 @@
   ],
   "default_locale": "fr",
   "resources": [
-    "./{{locale}}.ftl"
+    "./{{locale}}/base.l20n"
   ]
 }

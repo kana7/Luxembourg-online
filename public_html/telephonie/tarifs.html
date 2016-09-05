@@ -16,8 +16,15 @@
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
+        <link rel="localization" href="../lang/manifest.json"/>
+        <script src="../lang/l20n.js"></script>
+        <script>
+            // L20n and document.l10n are now available
+            document.l10n.ready(function () {
+                console.log("Document's context is ready");
+            });
+        </script>
     </head>
-
     <body>
         <div id="clientSpace" class="popup">
             <div class="background-client"></div>
@@ -456,7 +463,7 @@
                                         <li><a href="../tv/offres.html">Notre offre</a></li>
 
                                         <li><a href="../tv/equipements.html">Nos équipements</a></li>
-                                        
+
                                     </ul>
                                 </nav>
                             </div>

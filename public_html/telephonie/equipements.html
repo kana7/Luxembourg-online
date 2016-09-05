@@ -17,8 +17,15 @@
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
+        <link rel="localization" href="../lang/manifest.json"/>
+        <script src="../lang/l20n.js"></script>
+        <script>
+            // L20n and document.l10n are now available
+            document.l10n.ready(function () {
+                console.log("Document's context is ready");
+            });
+        </script>
     </head>
-
     <body>
         <div id="clientSpace" class="popup">
             <div class="background-client"></div>
@@ -851,9 +858,9 @@
                 });
                 if (window.location.hash.length > 0) {
                     vhash = (window.location.hash.split('#')[1]).split(";");
-                    if(viewport().width > 1056){
+                    if (viewport().width > 1056) {
                         $('.searchMenu .DesktopMenu').find('li').eq(vhash[0]).click();
-                    }else{
+                    } else {
                         $('.searchMenu .dropdown').find('li').eq(vhash[0]).click();
                     }
                 }

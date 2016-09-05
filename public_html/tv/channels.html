@@ -5,15 +5,22 @@
         <title>TV : Liste des chaînes – Luxembourg Online</title>
         <meta name="description" content="Avec LOLTV, accédez à tous vos contenus depuis votre canapé. Découvrez nos nombreuses chaînes TV, HD et radio. Surfez également sur Netflix et Youtube depuis votre TV." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <link rel="shortcut icon" href="/favicon.ico">
-        
+
         <link rel="stylesheet" href="../styles/css/main.css">
         <link rel="stylesheet" href="../styles/css/tv/tv.css">
-        
+
         <script src="../scripts/vendor/picturefill.min.js"></script>
+        <link rel="localization" href="../lang/manifest.json"/>
+        <script src="../lang/l20n.js"></script>
+        <script>
+            // L20n and document.l10n are now available
+            document.l10n.ready(function () {
+                console.log("Document's context is ready");
+            });
+        </script>
     </head>
-    
     <body>
         <div id="clientSpace" class="popup">
             <div class="background-client"></div>
@@ -171,7 +178,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div id="bottom-menu-header">
                     <ul class="sub-menu hidden-phone hidden-tab">
                         <li><a href="accueil.html"><div class="link">Accueil TV</div></a></li>
@@ -246,9 +253,9 @@
                         </div>
                     </div>
                 </div>
-                
+
             </header>
-            
+
             <section class="section-shadow padding">
                 <div class="container-wrapper">
                     <div class="row header-channel">
@@ -297,7 +304,7 @@
                                  alt="Offre chaînes Radio"/>
                         </div>
                         <div class="phone-12 desk-6">
-                            
+
                             <h2 class="section-subtitle">Liste des <span class="bold">chaînes radio</span></h2>
                         </div>
                     </div>
@@ -310,7 +317,7 @@
                                 <li data-language="other">Autres</li>
                             </ul>
                             <div id="radioChannels" class="channels-items">
-                                
+
                             </div>
                         </div>
                     </div>
@@ -334,7 +341,7 @@
                             <div class="text">Rejoignez-nous sur: </div>
                             <nav>
                                 <ul class="spread">
-                                   <li>
+                                    <li>
                                         <a href="http://www.online.lu/" target="blank_">
                                             <div class="social-icon lol"><span class="icon-icone-lol"></span></div>
                                             <span class="brand-name">Online.lu</span>
@@ -422,9 +429,9 @@
                                 <nav>
                                     <ul class="links">
                                         <li><a href="../tv/offres.html">Notre offre</a></li>
-                                        
+
                                         <li><a href="../tv/equipements.html">Nos équipements</a></li>
-                                        
+
                                     </ul>
                                 </nav>
                             </div>
@@ -449,7 +456,7 @@
                                         <li><a href="../legal.html">Mentions légales</a></li>
                                         <li><a href="../divers/emploi.html">Offres d'emploi</a></li>
                                         <li><a href="../divers/plan.html">Plan du site</a></li>
-                                        
+
                                         <li><a href="../divers/contact.html">Contact</a></li>
                                     </ul>
                                 </nav>
@@ -460,12 +467,12 @@
             </footer>
         </div>
         <!--              ./FOOTER               -->
-        
+
         <script src="../scripts/vendor/jquery.min.js"></script>
         <script src="../scripts/main.js"></script>
         <script src="../scripts/tvscript.js"></script>
-        
+
         <script type="text/javascript" src="../scripts/analytics.js"></script>
     </body>
-    
+
 </html>

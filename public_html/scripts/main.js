@@ -365,6 +365,7 @@ var PopupModule = (function () {
     };
     var _openPopup = function ($element) {
         $('#' + $popupIndex[$element.attr('data-popup')]).addClass('is-visible');
+        $forms.find('input[type=text]').focus();
     };
     var closePopup = function (event) {
         $(event.target).closest('.popup').removeClass('is-visible');
@@ -374,6 +375,7 @@ var PopupModule = (function () {
         $forms.removeClass('is-visible');
         $formGroup.find('#' + element.attr('data-id') + '').addClass('is-visible');
         element.addClass('active');
+        $formGroup.find('#' + element.attr('data-id') + '').find('input[type=text]').focus();
     };
     return{
         init: init,

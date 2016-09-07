@@ -11,14 +11,14 @@ var cookieIndex = ['shop_serviceMap', 'shop_panierItems', 'shop_idhome'].concat(
 var encartDispoTemplate = '<div class="phone-12 tab-6 desk-3">' +
         '<div id="dispo" class="service">' +
         '<div class="infos" style="text-align: center;">' +
-        '<h3 class="white">Toutes nos offres disponibles ' +
+        '<h3 class="white" data-l10n-id="encartTestTitle">Toutes nos offres disponibles ' +
         '<strong>chez vous</strong> : </h3>' +
-        '<input value name="zipcode" class="input-white" type="text" placeholder="Code postal"/>' +
+        '<span data-l10n-id="cpInput"><input value name="zipcode" class="input-white" type="text" placeholder="Code postal"/></span>' +
         '<select name="ville" class="input-white select"></select>' +
         '<select name="rue" class="input-white select"></select>' +
         '<select name="numero" class="input-white select numero"></select>' +
-        '<button type="button" class="btn-orange btnVerify verifyCp">Vérifiez les disponibilités</button>' +
-        '<button type="button" class="btn-orange btnVerify btnVerif">Vérifiez les disponibilités</button>' +
+        '<button type="button" class="btn-orange btnVerify verifyCp" data-l10n-id="dispoVerif">Vérifiez les disponibilités</button>' +
+        '<button type="button" class="btn-orange btnVerify btnVerif" data-l10n-id="dispoVerif">Vérifiez les disponibilités</button>' +
         '<ul class="icons hidden-phone">' +
         '<li>' +
         '<div class="dispo-icon">' +

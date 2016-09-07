@@ -1,7 +1,4 @@
-<bradSliderTitle """
-Venez découvrir nos offres<br>
-à la grande braderie
-""">
+/*-------------------------------INDEX.HTML-----------------------------------*/
 /*---------------------------GLOBAL TRANSLATION-------------------------------*/
 <month "/mois">
 <homeHeadTitle "Votre opérateur télécoms : Luxembourg Online">
@@ -25,14 +22,20 @@ Langage<span class="icon-right-arrow"></span>
 <input placeholder="Mot de passe"/>
 """>
 <onlineOrder """
-Abonnez-vous
+{{menuLinkSub}}
 <strong>en ligne </strong>
 <span class="icon-right-arrow"></span>
 """>
 <joinUs "Rejoignez-nous sur : ">
 <contactUs "Contactez-nous : ">
 <needHelp "Besoin d'aide ? Accédez à l’espace assistance de Luxembourg Online (FAQ, informations, guides et documents utiles, contrats, divers)">
+<cp "Code postal">
+<cpInput """
+    <input value name="zipcode" class="input-white" type="text" placeholder="{{cp}}" maxlength="4"/>
+""">
 <copyright "© Luxembourg Online S.A. – 2016, tous droits réservés">
+<adresse "adresse">
+<notDispo "indisponible">
 /*-----------------------------------LIENS------------------------------------*/
 <menuLinkHome "Accueil">
 <menuLinkInternet "Internet">
@@ -48,7 +51,6 @@ Abonnez-vous
 <menuLinkJob "Offres d'emploi">
 <menuLinkSitemap "Plan du site">
 <menuLinkInternet-home "Accueil Internet">
-<menuLinkOffer "Nos offres">
 <menuLinkGear "Nos équipements">
 <menuLinkSub "Abonnez-vous">
 <menuLinkPhoneHome "Accueil Téléphonie">
@@ -60,32 +62,30 @@ Abonnez-vous
 <menuLinkMobileSub "Nos abonnements">
 <menuLinkOurPhones "Nos téléphones">
 <menuLinkFiberOffer "Offre spéciale fibre">
+<menuLinkOffers "Nos offres">
 <menuLinkPrivate "Particuliers">
 <menuLinkBusiness "Business">
 <menuLinkNotice "Mentions légales">
 /*----------------------------------------------------------------------------*/
 /*----------------------------------SLIDER------------------------------------*/
-<sliderEuroTitle """
-Avec LOL<span class="normal">TV</span>,
-suivez l’Euro 2016 en qualité supérieure !
+<fiberPromoTitle1 """
+    La vitesse <span class="lowercase">x</span>2
+""">
+<fiberPromoTitle2 """
+    2<span class="lowercase">x</span> plus rapide <br/>au même prix !
 """>
 <sliderLolvisioTitle "Oubliez la distance !">
 <sliderSub """
     <span class="normal">Plus besoin de vous déplacer,</span>
     <br/>Abonnez-vous en ligne !
 """>
+<sliderSubLink "Voir la démo">
 <sliderLolcloudTitle """
     LOL<span style="font-weight: 300;">CLOUD</span> : Vos fichiers,
 <br/>partout où vous voulez!
 """>
-<sliderFiberTitle "offre spéciale">
-<sliderFiberDescription """
-Frais d'installation et de câblage fibre
-<br/><strong>offerts !</strong>
-""">
-<sliderFiberDetails "Voir détails et conditions en magasin">
-<sliderLolcloudTitle "Vos fichiers, partout où vous voulez!">
 <sliderLolcloudDetails "5 GB de stockage offerts">
+<>
 /*----------------------------------------------------------------------------*/
 /*---------------------------------ENCARTS------------------------------------*/
 <homeInternetOffers """
@@ -102,6 +102,11 @@ Vibrez en haute
 <br/>définition pour
 <br/>l'Euro 2016 !
 """>
+<encartTestTitle """
+    Toutes {{menuLinkOffers}} disponibles <strong>chez vous</strong> : 
+""">
+<dispoVerif "Vérifiez les disponibilités">
+<whichOffer "Quelles offres sont disponibles chez vous ?">
 /*----------------------------------------------------------------------------*/
 /*--------------------------------SECTIONS------------------------------------*/
 <homeMagTitle """
@@ -121,3 +126,34 @@ L’actu high-tech, cinéma et toutes vos sorties <strong>au luxembourg !</stron
 <homeOnlineluTxt "Horaires des films au Luxembourg, bandes annonces, tendances high-tech, mais aussi concerts, expos et restos vous attendent sur le portail culturel online.lu.">
 <homeOnlineluLink "Accédez à online.lu">
 <tvChannelOffer "+ 110 chaînes TV, 40 chaînes Full HD et + 40 chaînes radio">
+/*----------------------------------------------------------------------------*/
+/*------------------------------InternetScript--------------------------------*/
+<noDisponible """
+    {{notDispo}} <br />à votre {{adresse}}
+""">
+<notEligible """
+Nous ne pouvons malheureusement pas vérifier l’éligibilité de votre adresse. <br />Merci de nous contacter au 2799 0000 pour plus d\'informations.
+""">
+<getBest "Exigez le meilleur">
+<heartHit "Offre coup de ">
+<packInclude "Inclus dans ce pack :">
+<volUnlimited "Volume illimité">
+<aboTel "Abonnement tél. fixe">
+<natCall "Appels nat. fixes">
+<mobileCall "Appels vers mobiles LOL">
+<euFixe "120 min vers l\'Europe fixe">
+<otherOffers "Voir nos autres offres">
+<promoInstall "promo : installation offerte">
+<chooseLoc "Choisissez votre localité">
+<chooseAdr "Choisissez votre adresse">
+<chooseNum "Choisissez le numéro">
+<unknownCp "{{cp}} inconnu">
+/*----------------------------------------------------------------------------*/
+/*------------------------------POPUP TESTDISPO-------------------------------*/
+<testDispoTitle "Testez la disponibilité">
+/*----------------------------------------------------------------------------*/
+/*---------------------------INTERNET/ACCUEIL.HTML----------------------------*/
+<internetAccueilHeadTitle "Internet : Accueil - Luxembourg Online">
+<internetAccueilHeadDescription """
+    content="Spécialiste de l’ultra haut débit, Luxembourg Online vous propose des offres Internet performantes (DSL et fibre optique) à des prix attractifs."
+""">

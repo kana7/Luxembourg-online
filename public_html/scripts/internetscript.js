@@ -28,18 +28,18 @@ function natSort(as, bs) {
     }
     return a.length - b.length;
 }
-var nonDispoTemplate = 'Indisponible <br />à votre adresse';
-var nonDispoAllTemplate = 'Nous ne pouvons malheureusement pas vérifier l’éligibilité de votre adresse. <br />Merci de nous contacter au 2799 0000 pour plus d\'informations.';
-var buttonDispoTempate = '<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_FR.pdf" target="_blank">Abonnez-vous</a>';
-var buttonPromoFibre = '<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_OFFRE2_FR.pdf" target="_blank">Abonnez-vous</a>';
-var buttonPromoTv = '<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_OFFRE1_FR.pdf" target="_blank">Abonnez-vous</a>';
+var nonDispoTemplate = '<span data-l10n-id="noDisponible">Indisponible <br />à votre adresse</span>';
+var nonDispoAllTemplate = '<span data-l10n-id="notEligible">Nous ne pouvons malheureusement pas vérifier l’éligibilité de votre adresse. <br />Merci de nous contacter au 2799 0000 pour plus d\'informations.</span>';
+var buttonDispoTempate = '<a data-l10n-id="menuLinkSub" class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_FR.pdf" target="_blank">Abonnez-vous</a>';
+var buttonPromoFibre = '<a data-l10n-id="menuLinkSub" class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_OFFRE2_FR.pdf" target="_blank">Abonnez-vous</a>';
+var buttonPromoTv = '<a data-l10n-id="menuLinkSub" class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_OFFRE1_FR.pdf" target="_blank">Abonnez-vous</a>';
 var checkDispoTemplate = '<section id="test-offres" class="clearfix">' +
         '<div class="container-wrapper">' +
         '<div class="row">' +
-        '<div class="text phone-12 desk-6"><span class="icon-internet-ico"></span>Quelles offres sont disponibles chez vous ?</div>' +
+        '<div class="text phone-12 desk-6"><span class="icon-internet-ico"></span><span class="whichOffer">Quelles offres sont disponibles chez vous ?</span></div>' +
         '<div class="testDispo clearfix">' +
         '<div>' +
-        '<input id="zipcode" value class="input-white" type="text" placeholder="Code postal" maxlength="4"/>' +
+        '<span data-l10n-id="cpInput"><input id="zipcode" value class="input-white" type="text" placeholder="Code postal" maxlength="4"/></span>' +
         '</div>' +
         '<div>' +
         '<select id="ville" class="input-white select"></select>' +
@@ -51,8 +51,8 @@ var checkDispoTemplate = '<section id="test-offres" class="clearfix">' +
         '<select id="numero" class="input-white select"></select>' +
         '</div>' +
         '<div class="btn-verif">' +
-        '<button type="button" class="btn-orange verifyCp">Vérifiez les disponibilités</button>' +
-        '<button type="button" class="btn-orange btnVerif2">Vérifiez les disponibilités</button>' +
+        '<button data-l10n-id="dispoVerif" type="button" class="btn-orange verifyCp">Vérifiez les disponibilités</button>' +
+        '<button data-l10n-id="dispoVerif" type="button" class="btn-orange btnVerif2">Vérifiez les disponibilités</button>' +
         '</div>' +
         '</div>' +
         '</div>' +
@@ -62,14 +62,14 @@ var popuptemplate = '<div id="testDispo" class="popup">' +
         '<div class="background-client"></div>' +
         '<div class="white-pannel">' +
         '<button class="pannel-close"><span class="icon-x-icone"></span></button>' +
-        '<h2>Testez la disponibilité</h2>' +
-        '<input value name="zipcode" class="input-white" type="text" placeholder="Code postal"/>' +
+        '<h2 data-l10n-id="">Testez la disponibilité</h2>' +
+        '<span data-l10n-id="cpInput"><input value name="zipcode" class="input-white" type="text" placeholder="Code postal"/></span>' +
         '<select name="ville" value class="input-white select"></select>' +
         '<select name="rue" value class="input-white select"></select>' +
         '<select name="numero" value class="input-white select numero"></select>' +
         '<div style="text-align: center;">' +
-        '<button type="button" class="btn-orange btnVerify verifyCp">Vérifiez les disponibilités</button>' +
-        '<button type="button" data-bool="true" class="btn-orange btnVerify btnVerif2">Vérifiez les disponibilités</button>' +
+        '<button data-l10n-id="dispoVerif" type="button" class="btn-orange btnVerify verifyCp">Vérifiez les disponibilités</button>' +
+        '<button data-l10n-id="dispoVerif" type="button" data-bool="true" class="btn-orange btnVerify btnVerif2">Vérifiez les disponibilités</button>' +
         '</div>' +
         '</div>' +
         '</div>' +
@@ -77,7 +77,7 @@ var popuptemplate = '<div id="testDispo" class="popup">' +
 var offers = {
     100: {
         name: "Fiber 100",
-        description: "Offre coup de <span class='icon-heart-ico'></span>",
+        description: "<span data-l10n-id='heartHit'>Offre coup de </span><span class='icon-heart-ico'></span>",
         download: "100 Mbit/s",
         upload: "50 Mbits/s",
         price: {
@@ -88,7 +88,7 @@ var offers = {
     },
     200: {
         name: "Fiber 200",
-        description: "Exigez le meilleur",
+        description: "<span data-l10n-data='getBest'>Exigez le meilleur</span>",
         download: "200 Mbit/s",
         upload: "100 Mbits/s",
         price: {
@@ -136,13 +136,13 @@ function printOffer(offer) {
             '<li class="info"><span class="icon-download-ico download"></span>' + offer.download + '<span class="exponent">(1)</span></li>' +
             '<li class="info"><span class="icon-download-ico upload"></span>' + offer.upload + '<span class="exponent">(1)</span></li>' +
             '<li class="check-list-container">' +
-            '<div class="check-list-title"><span class="icon-pack-ico"></span> Inclus dans ce pack : </div>' +
+            '<div class="check-list-title"><span class="icon-pack-ico"></span> <span data-l10n-id="packInclude">Inclus dans ce pack :</span> </div>' +
             '<ul class="check-list">' +
-            '<li><span class="icon-check-ico"></span>Volume illimité</li>' +
-            '<li><span class="icon-check-ico"></span>Abonnement tél. fixe</li>' +
-            '<li><span class="icon-check-ico"></span>Appels nat. fixes<span class="exponent">(2)</span></li>' +
-            '<li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>' +
-            '<li><span class="icon-check-ico"></span>120 min vers l\'Europe fixe<span class="exponent">(2) (3)</span></li>' +
+            '<li><span class="icon-check-ico"></span><span data-l10n-id="volUnlimited">Volume illimité</span></li>' +
+            '<li><span class="icon-check-ico"></span><span data-l10n-id="aboTel">Abonnement tél. fixe</span></li>' +
+            '<li><span class="icon-check-ico"></span><span data-l10n-id="natCall">Appels nat. fixes</span><span class="exponent">(2)</span></li>' +
+            '<li><span class="icon-check-ico"></span><span data-l10n-id="mobileCall">Appels vers mobiles LOL</span></li>' +
+            '<li><span class="icon-check-ico"></span><span data-l10n-id="euFixe">120 min vers l\'Europe fixe</span><span class="exponent">(2) (3)</span></li>' +
             '<li><span class="icon-check-ico"></span>LOL CLOUD 5GB</li>' +
             '</ul>' +
             '</li>' +
@@ -150,7 +150,7 @@ function printOffer(offer) {
             '<div class="item-footer">' +
             '<div class="offer-price">' +
             '<div>' + offer.price.exponent + '</div>' +
-            +offer.price.unit + '<span>/mois</span>' +
+            +offer.price.unit + '<span data-l10n-id="month">/mois</span>' +
             '</div>' +
             '</div>' +
             '</div>';
@@ -165,7 +165,7 @@ function insertLink(id, service, indexLink) {
      *local shop link: "../shop/inscription.html#"*/
 }
 function insertButton(id, service) {
-    return '<a class="btn-blue btn-subscription" ' + insertLink(id, service, 0) + '>Abonnez-vous</a>';
+    return '<a class="btn-blue btn-subscription" ' + insertLink(id, service, 0) + '><span data-l10n-id="menuLinkSub">Abonnez-vous</span></a>';
 }
 function insertPromoLink(id, service, string) {
     return '<a class="promos-link"' + insertLink(id, service, 1) + '>' + string + '</a>';
@@ -379,7 +379,7 @@ function checkDispo(homeId, isLOLCable) {
                             $('.k100').find('.not-dispo').remove();
                             if ($(obj.Service[2]).length <= 0 && $(obj.Service[5]).length <= 0) { //SI PAS FIBRE
                                 $('.k100+.promos-link.persist').hide();
-                                $(insertPromoLink(ab[2][0], ab[2][1], "promo : installation offerte")).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500); //PRINT LIEN VERS PAGE VDSL
+                                $(insertPromoLink(ab[2][0], ab[2][1], "<span data-l10n-id='promoInstall'>promo : installation offerte</span>")).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500); //PRINT LIEN VERS PAGE VDSL
                             } else {
                                 $('.k100+.promos-link.persist').attr('href', '//www.internet.lu/promos/fibre.html#' + homeId + ';' + isLOLCable);
                                 $('.k100+.promos-link.persist').show();
@@ -395,7 +395,7 @@ function checkDispo(homeId, isLOLCable) {
                             $(printNonDispo(nonDispoTemplate)).prependTo('.k100').css('visibility', 'visible').animate({opacity: 1.0}, 500);
                             $('.k100').addClass('not');
                             if ($('#promoFiber-content').length > 0 && (ab[0] != "" || ab[1] != "")) {
-                                $('<a class="btn-blue btn-subscription" href="//internet.lu/internet/offres.html">Voir nos autres offres</a>').insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                                $('<a data-l10n-id="otherOffers" class="btn-blue btn-subscription" href="//internet.lu/internet/offres.html">Voir nos autres offres</a>').insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                             }
                         }
                     }
@@ -490,8 +490,8 @@ $(function () {
             success: function (data) {
                 streetList = data;
                 arrLocality = [];
-                locality = "<option>Choisissez votre localité</option>";
-                var vhtml = "<option data-idLocality='-1'>Choisissez votre adresse</option>";
+                locality = "<option data-l10n-id='chooseLoc'>Choisissez votre localité</option>";
+                var vhtml = "<option data-l10n-id='chooseAdr' data-idLocality='-1'>Choisissez votre adresse</option>";
                 for (i in streetList.Streets) {
 
                     vhtml += "<option value='" + streetList.Streets[i].id + "' title='" + streetList.Streets[i].name + "' data-idLocality='" + streetList.Streets[i].idLocality + "'>" + streetList.Streets[i].name + "</option>";
@@ -502,7 +502,7 @@ $(function () {
                     locality += "<option value='" + idLocality + "' title='" + arrLocality[idLocality] + "'>" + arrLocality[idLocality] + "</option>";
                 }
                 if ($(locality).length < 2 || $("input[name=zipcode]").val().substr(2, $("input[name=zipcode]").val().length - 1) < 1000) {
-                    locality = "<option>Code postal inconnu</option>";
+                    locality = "<option data-l10n-id='unknownCp'>Code postal inconnu</option>";
                 }
                 $(".verifyCp").hide();
                 $(".btnVerif2, .btnVerif").show();
@@ -599,7 +599,7 @@ $(function () {
         for (i in streetList.Streets) {
             if (streetList.Streets[i].id == $("select[name=rue]").val()) {
                 streetNbr = streetList.Streets[i].streetNumbers;
-                var vhtml = "<option value=''>Choisissez le numéro</option>";
+                var vhtml = "<option data-l10n-id='chooseNum' value=''>Choisissez le numéro</option>";
                 for (b in streetNbr) {
                     number = streetNbr[b].number.length > 0 ? "Numéro:" + streetNbr[b].number + "\n" : "";
                     building = streetNbr[b].building.length > 0 ? "Batiment:" + streetNbr[b].building + "\n" : "";

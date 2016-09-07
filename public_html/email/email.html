@@ -152,35 +152,35 @@
                                             <div class="active-border"></div>
                                             <a href="../internet/accueil.html">
                                                 <img class="header-icon" src="../images/Icone/img/internet.png" alt="Internet" />
-                                                <div class="link">Internet</div>
+                                                <div class="link" data-l10n-id="menuLinkInternet">Internet</div>
                                             </a>
                                         </li><!--
                                         --><li>
                                             <div class="active-border"></div>
                                             <a href="../telephonie/accueil.html">
                                                 <img class="header-icon" src="../images/Icone/img/telephonie.png" alt="Téléphonie" />
-                                                <div class="link">Téléphonie</div>
+                                                <div class="link" data-l10n-id="menuLinkPhone">Téléphonie</div>
                                             </a>
                                         </li><!--
                                         --><li>
                                             <div class="active-border"></div>
                                             <a href="../tv/accueil.html">
                                                 <img class="header-icon" src="../images/Icone/img/tv.png" alt="Tv" />
-                                                <div class="link">TV</div>
+                                                <div class="link" data-l10n-id="menuLinkTv">TV</div>
                                             </a>
                                         </li><!--
                                         --><li>
                                             <div class="active-border"></div>
                                             <a href="../mobile/accueil.html">
                                                 <img class="header-icon" src="../images/Icone/img/mobile.png" alt="Mobile" />
-                                                <div class="link">Mobile</div>
+                                                <div class="link" data-l10n-id="menuLinkMobile">Mobile</div>
                                             </a>
                                         </li><!--
                                         --><li>
                                             <div class="active-border"></div>
                                             <a href="../promos/fibre.html">
                                                 <img class="header-icon" src="../images/Icone/img/promos.png" alt="Promos" />
-                                                <div class="link">Promos</div>
+                                                <div class="link" data-l10n-id="menuLinkCoupon">Promos</div>
                                             </a>
                                         </li>
                                     </ul>
@@ -252,7 +252,7 @@
                                         <input type="hidden" name="SqlDB" value="OMS2">  
                                         <div class="clearfix">
                                             <div class="phone-4 input-left">
-                                                <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
+                                                <input type="text" name="xuser" placeholder="Nom d'utilisateur" autofocus/>
                                             </div>
                                             <div class="phone-4 ">
                                                 <input type="password" name="xpw" placeholder="Mot de passe"/>
@@ -267,7 +267,7 @@
                                         <input type="hidden" name="SqlDB" value="LOLShop">  
                                         <div class="clearfix">
                                             <div class="phone-4 input-left">
-                                                <input type="text" name="_Username" placeholder="Nom d'utilisateur"/>
+                                                <input type="text" name="_Username" placeholder="Nom d'utilisateur" autofocus/>
                                             </div>
                                             <div class="phone-4 ">
                                                 <input  type="password" name="_Password" placeholder="Mot de passe"/>
@@ -282,7 +282,7 @@
                                         <input type="hidden" name="SqlDB" value="OHPS">  
                                         <div class="clearfix">
                                             <div class="phone-4 input-left">
-                                                <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
+                                                <input type="text" name="xuser" placeholder="Nom d'utilisateur" autofocus/>
                                             </div>
                                             <div class="phone-4 ">
                                                 <input  type="password" name="xpw" placeholder="Mot de passe"/>
@@ -404,7 +404,7 @@
                                         <li><a href="../tv/offres.html">Notre offre</a></li>
 
                                         <li><a href="../tv/equipements.html">Nos équipements</a></li>
-                                        
+
                                     </ul>
                                 </nav>
                             </div>
@@ -449,7 +449,7 @@
                     $('.client-menu>li[data-id]').removeClass('active');
                     $(this).addClass('active');
                     $('.pannel-forms').find('form').removeClass('is-visible');
-                    $('#'+$(this).attr('data-id')).addClass('is-visible');
+                    $('#' + $(this).attr('data-id')).addClass('is-visible');
                 });
             });
         </script>

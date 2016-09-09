@@ -400,6 +400,15 @@ input[type=number] {
   input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none; }
 
+#lolnow-banner {
+  background-color: #eff0f3;
+  background-size: 427px auto;
+  padding-top: 240px;
+  background-position: center top;
+  background-image: url(../../../images/Internet/320px/Img_LOLNOW.jpg); }
+  #lolnow-banner .footer-note {
+    text-align: center; }
+
 #test-offres {
   text-align: center;
   padding: 20px 0; }
@@ -454,7 +463,12 @@ input[type=number] {
 
   #steps .btn-orange.disabled:before {
     top: auto;
-    right: 123px; } }
+    right: 123px; }
+
+  #lolnow-banner {
+    background-size: 427px auto;
+    padding-top: 235px;
+    background-image: url(../../../images/Internet/640px/Img_LOLNOW.jpg); } }
 @media screen and (min-width: 1056px) {
   #test-offres {
     padding: 5px 0 6px; }
@@ -512,7 +526,16 @@ input[type=number] {
     #step-list ul:after {
       content: '';
       display: inline-block;
-      width: 100%; } }
+      width: 100%; }
+
+  #lolnow-banner {
+    height: 400px !important;
+    background-size: 742px auto;
+    padding-top: 0;
+    background-position: right top;
+    background-image: url(../../../images/Internet/1024px/Img_LOLNOW.jpg); }
+    #lolnow-banner .footer-note {
+      text-align: left; } }
 @media screen and (min-width: 1302px) {
   .shop-item {
     text-align: left; }
@@ -533,6 +556,11 @@ input[type=number] {
       font-size: 15px !important;
       margin: 0; }
     #test-offres .testDispo > div .btn-orange {
-      padding: 12px 15px; } }
+      padding: 12px 15px; }
+
+  #lolnow-banner {
+    height: 500px !important;
+    background-size: 928px auto;
+    background-image: url(../../../images/Internet/1280px/Img_LOLNOW.jpg); } }
 
 /*# sourceMappingURL=accueil.css.map */

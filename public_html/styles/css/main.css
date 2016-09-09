@@ -2517,7 +2517,7 @@ hr {
 .icon-call-me:before {
   content: "\64"; }
 
-.icon-check-ico:before {
+.icon-check-icone:before {
   content: "\65"; }
 
 .icon-clock-icone:before {
@@ -2595,7 +2595,7 @@ hr {
 .icon-cable-ico:before {
   content: "\44"; }
 
-.icon-check-icone:before {
+.icon-check-ico:before {
   content: "\45"; }
 
 .icon-fax:before {
@@ -4459,12 +4459,16 @@ span[class^=icon-] {
       line-height: 22px;
       font-size: 15px;
       font-weight: 400; }
-      .offer-item-blue .check-list li .icon-check-ico, .equipement-item-blue .check-list li .icon-check-ico, .news-item-blue .check-list li .icon-check-ico {
+      .offer-item-blue .check-list li .icon-check-ico, .offer-item-blue .check-list li .icon-x-icone, .equipement-item-blue .check-list li .icon-check-ico, .equipement-item-blue .check-list li .icon-x-icone, .news-item-blue .check-list li .icon-check-ico, .news-item-blue .check-list li .icon-x-icone {
         position: relative;
         top: 2px;
         line-height: 10px;
         margin-right: 25px;
         font-size: 16px; }
+    .offer-item-blue .check-list a, .equipement-item-blue .check-list a, .news-item-blue .check-list a {
+      font-weight: 600; }
+      .offer-item-blue .check-list a:hover, .equipement-item-blue .check-list a:hover, .news-item-blue .check-list a:hover {
+        text-decoration: underline; }
 
 .offer-item-orange, .equipement-item-orange, .news-item-orange {
   display: block;
@@ -4559,12 +4563,16 @@ span[class^=icon-] {
       line-height: 22px;
       font-size: 15px;
       font-weight: 400; }
-      .offer-item-orange .check-list li .icon-check-ico, .equipement-item-orange .check-list li .icon-check-ico, .news-item-orange .check-list li .icon-check-ico {
+      .offer-item-orange .check-list li .icon-check-ico, .offer-item-orange .check-list li .icon-x-icone, .equipement-item-orange .check-list li .icon-check-ico, .equipement-item-orange .check-list li .icon-x-icone, .news-item-orange .check-list li .icon-check-ico, .news-item-orange .check-list li .icon-x-icone {
         position: relative;
         top: 2px;
         line-height: 10px;
         margin-right: 25px;
         font-size: 16px; }
+    .offer-item-orange .check-list a, .equipement-item-orange .check-list a, .news-item-orange .check-list a {
+      font-weight: 600; }
+      .offer-item-orange .check-list a:hover, .equipement-item-orange .check-list a:hover, .news-item-orange .check-list a:hover {
+        text-decoration: underline; }
 
 #equipement-section {
   padding-bottom: 40px; }

@@ -1211,7 +1211,7 @@ span[class^=icon-]
     .check-list{
         text-align: left;
         li{
-            .icon-check-ico{
+            .icon-check-ico, .icon-x-icone{
                 position: relative;
                 top: 2px;
                 line-height: 10px;
@@ -1223,6 +1223,7 @@ span[class^=icon-]
             font-size: 15px;
             font-weight: 400;
         }
+        a{font-weight: 600; &:hover{text-decoration: underline;}}
     }
 }
 .offer-item-blue, .equipement-item-blue, .news-item-blue{

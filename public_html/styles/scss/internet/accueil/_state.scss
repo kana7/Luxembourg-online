@@ -71,7 +71,11 @@
             }
         }
     }
-
+    #lolnow-banner {
+        background-size: 427px auto;
+        padding-top: 235px;
+        background-image: url(../../../images/Internet/640px/Img_LOLNOW.jpg);
+    }
 }
 @include media(desk){
     #test-offres{
@@ -129,6 +133,14 @@
             }
         }
     }
+    #lolnow-banner {
+        height: 400px !important;
+        background-size: 742px auto;
+        padding-top: 0;
+        background-position: right top;
+        background-image: url(../../../images/Internet/1024px/Img_LOLNOW.jpg);
+        .footer-note{text-align: left;}
+    }
 }
 @include media(lgdesk){
     .shop-item{
@@ -158,5 +170,10 @@
                 }
             }
         }
+    }
+    #lolnow-banner {
+        height: 500px !important;
+        background-size: 928px auto;
+        background-image: url(../../../images/Internet/1280px/Img_LOLNOW.jpg);
     }
 }

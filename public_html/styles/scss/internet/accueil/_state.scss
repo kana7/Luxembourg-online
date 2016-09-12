@@ -77,6 +77,13 @@
         background-image: url(../../../images/Internet/640px/Img_LOLNOW.jpg);
     }
 }
+@include viewport(range, $min: $desk, $max: $lgdesk){
+    #lolnow-banner{
+        .section-title, .section-text{
+            margin-bottom: 15px;
+        }
+    }
+}
 @include media(desk){
     #test-offres{
         padding: 5px 0 6px;

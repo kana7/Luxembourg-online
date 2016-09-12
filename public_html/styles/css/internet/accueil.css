@@ -469,6 +469,9 @@ input[type=number] {
     background-size: 427px auto;
     padding-top: 235px;
     background-image: url(../../../images/Internet/640px/Img_LOLNOW.jpg); } }
+@media screen and (min-width: 1056px) and (max-width: 1302px) {
+  #lolnow-banner .section-title, #lolnow-banner .section-text {
+    margin-bottom: 15px; } }
 @media screen and (min-width: 1056px) {
   #test-offres {
     padding: 5px 0 6px; }

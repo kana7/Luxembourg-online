@@ -296,6 +296,7 @@
                                                             <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
                                                             <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
                                                             <li><span class="icon-check-ico"></span>LOLCLOUD 5GB</li>
+                                                            <li><span class="icon-check-ico"></span><a href="../internet/lolnow.html">LOLNOW</a></li>
                                                         </ul>
                                                     </li>
                                                 </ul>
@@ -330,6 +331,7 @@
                                                         <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
                                                         <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
                                                         <li><span class="icon-check-ico"></span>LOLCLOUD 5GB</li>
+                                                        <li><span class="icon-check-ico"></span><a href="../internet/lolnow.html">LOLNOW</a></li>
                                                     </ul>
                                                 </li>
                                             </ul>
@@ -505,7 +507,7 @@
                 });
                 var vhash = (window.location.hash.split('#')[1]).split(";");
                 if (window.location.hash.length > 2) {
-                    $('.btn-blue').replaceWith('<a class="btn-blue" ' + insertLink(vhash[1], vhash[0], 0) + '>Abonnez-vous</a>');
+                    $('#promoVDSL-content .btn-blue').replaceWith('<a class="btn-blue" ' + insertLink(vhash[1], vhash[0], 0) + '>Abonnez-vous</a>');
                     $('html, body').animate({
                         scrollTop: $('#promoVDSL-content').offset().top
                     }, 650);

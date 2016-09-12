@@ -144,6 +144,7 @@ function printOffer(offer) {
             '<li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>' +
             '<li><span class="icon-check-ico"></span>120 min vers l\'Europe fixe<span class="exponent">(2) (3)</span></li>' +
             '<li><span class="icon-check-ico"></span>LOL CLOUD 5GB</li>' +
+            '<li><span class="icon-check-ico"></span><a href="lolnow.html">LOLNOW</a></li>'+
             '</ul>' +
             '</li>' +
             '</ul>' +
@@ -416,6 +417,7 @@ function checkDispo(homeId, isLOLCable) {
                 $('html, body').animate({
                     scrollTop: $('#offers-section, #promoFiber-content').offset().top
                 }, 650);
+                Cookies.remove('shop_idhome');
                 Cookies.set('shop_idhome', homeId, {expires: 1});
             }, error: function (jqXHR, textStatus, errorThrown) {
                 console.log('jqXHR:');

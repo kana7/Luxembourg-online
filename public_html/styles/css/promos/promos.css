@@ -1,9 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,400italic);
-#promo-fibre.image-1, #promo-fibre.image-2 {
+#promo-fibre-2x.image-1, #promo-fibre-2x.image-2 {
   text-align: center !important; }
-#promo-fibre.image-1 {
+#promo-fibre-2x.image-1 {
   background-image: url("../../../images/promos/Promo_Fibre/Promo_Fibrex2_Visuel2_672x400px.jpg"); }
-#promo-fibre.image-2 {
+#promo-fibre-2x.image-2 {
   background-image: url("../../../images/promos/Promo_Fibre/Promo_Fibrex2_Visuel1_672x400px.jpg"); }
 
 #promo-noel:not(.not-accueil) {
@@ -28,9 +28,16 @@
       text-transform: uppercase;
       font-weight: 600; }
 
-#promo-fibre {
+#promo-fibre, #promo-fibre-2x {
   background-size: 672px auto;
-  height: 400px !important; }
+  background-position: center top; }
+
+#promo-fibre-2x {
+  height: 400px; }
+
+#promo-fibre {
+  height: 200px;
+  background-image: url(../../../images/promos/Promo_Fibre/Offre_Fibre_JAN_672x200px.jpg); }
 
 .gallery-cell {
   width: 100%;
@@ -72,14 +79,6 @@
     margin: 20px 0 10px;
     font-size: 11px; }
 
-/*.promo-offer-container{
-    div[class^=phone-]:first-child{
-        padding-right: 15px;
-    }
-    div[class^=phone-]:last-child{
-        padding-left: 15px;
-    }
-}*/
 @media screen and (min-width: 1056px) and (max-width: 1301px) {
   .promo-offer-container .offer-item-blue .info, .promo-offer-container .offer-item-blue .check-list-container, .promo-offer-container offer-item-orange .info, .promo-offer-container offer-item-orange .check-list-container {
     padding-left: 18px !important; }
@@ -88,9 +87,9 @@
   .promo-offer-container div[class^=phone-]:last-child {
     padding-left: 5px !important; } }
 @media screen and (min-width: 672px) {
-  #promo-fibre.image-1 {
+  #promo-fibre-2x.image-1 {
     background-image: url("../../../images/promos/Promo_Fibre/Promo_Fibrex2_Visuel1_1056x450px.jpg"); }
-  #promo-fibre.image-2 {
+  #promo-fibre-2x.image-2 {
     background-image: url("../../../images/promos/Promo_Fibre/Promo_Fibrex2_Visuel2_1056x450px.jpg"); }
 
   #promo-noel:not(.not-accueil) {
@@ -98,11 +97,17 @@
   #promo-noel.not-accueil {
     background-image: url(../../../images/promos/Promo_TVNoel/Offre_TV_1056x290px.jpg); }
 
-  #promo-fibre {
+  #promo-fibre, #promo-fibre-2x {
     background-size: 1056px auto;
-    height: 450px !important; }
-    #promo-fibre .section-title {
+    background-image: url(../../../images/promos/Promo_Fibre/Offre_Fibre_JAN_1056x200px.jpg); }
+    #promo-fibre .section-title, #promo-fibre-2x .section-title {
       margin-top: 0; }
+
+  #promo-fibre {
+    height: 200px !important; }
+
+  #promo-fibre-2x {
+    height: 450px !important; }
 
   #promo-noel {
     background-size: 1056px auto; }
@@ -114,13 +119,13 @@
         margin-top: -10px;
         margin-bottom: 0; } }
 @media screen and (min-width: 1056px) {
-  #promo-fibre.image-1 {
+  #promo-fibre-2x.image-1 {
     background-image: url("../../../images/promos/Promo_Fibre/Promo_Fibrex2_Visuel1_1302x370px.jpg");
     text-align: left !important; }
-  #promo-fibre.image-2 {
+  #promo-fibre-2x.image-2 {
     background-image: url("../../../images/promos/Promo_Fibre/Promo_Fibrex2_Visuel2_1302x370px.jpg");
     text-align: right !important; }
-    #promo-fibre.image-2 .row > div {
+    #promo-fibre-2x.image-2 .row > div {
       float: right; }
 
   #promo-noel:not(.not-accueil) {
@@ -128,17 +133,18 @@
   #promo-noel.not-accueil {
     background-image: url(../../../images/promos/Accueil/Promo_TV_Noel_1302x370px.jpg); }
 
-  #promo-noel, #promo-fibre {
+  #promo-noel, #promo-fibre, #promo-fibre-2x {
     background-size: 1302px auto;
     height: 370px !important;
-    padding: 40px 0 30px; }
-    #promo-noel .section-title, #promo-fibre .section-title {
+    padding: 40px 0 30px;
+    background-image: url(../../../images/promos/Promo_Fibre/Offre_Fibre_JAN_1302x370px.jpg); }
+    #promo-noel .section-title, #promo-fibre .section-title, #promo-fibre-2x .section-title {
       font-size: 43px;
       margin: 10px 0 15px; }
-    #promo-noel .section-description, #promo-fibre .section-description {
+    #promo-noel .section-description, #promo-fibre .section-description, #promo-fibre-2x .section-description {
       font-size: 24px;
       line-height: 35px; }
-      #promo-noel .section-description strong, #promo-fibre .section-description strong {
+      #promo-noel .section-description strong, #promo-fibre .section-description strong, #promo-fibre-2x .section-description strong {
         display: block; }
 
   #promo-fibre:not(.not-accueil) {
@@ -182,9 +188,9 @@
   .promo-offer-container div[class^=phone-]:last-child {
     padding-left: 15px; } }
 @media screen and (min-width: 1302px) {
-  #promo-fibre.image-1 {
+  #promo-fibre-2x.image-1 {
     background-image: url("../../../images/promos/Promo_Fibre/Promo_Fibrex2_Visuel1_1920x400px.jpg"); }
-  #promo-fibre.image-2 {
+  #promo-fibre-2x.image-2 {
     background-image: url("../../../images/promos/Promo_Fibre/Promo_Fibrex2_Visuel2_1920x400px.jpg"); }
 
   #promo-noel:not(.not-accueil) {
@@ -192,17 +198,18 @@
   #promo-noel.not-accueil {
     background-image: url(../../../images/promos/Accueil/Promo_TV_Noel_1920x400px.jpg); }
 
-  #promo-noel, #promo-fibre {
+  #promo-noel, #promo-fibre, #promo-fibre-2x {
     background-size: 1920px auto;
+    height: 400px;
     padding: 30px 0;
-    height: 400px !important; }
-    #promo-noel .section-title, #promo-fibre .section-title {
+    background-image: url(../../../images/promos/Promo_Fibre/Offre_Fibre_JAN_1920x400px.jpg); }
+    #promo-noel .section-title, #promo-fibre .section-title, #promo-fibre-2x .section-title {
       font-size: 48px;
       margin: 10px 0 15px; }
-    #promo-noel .section-description, #promo-fibre .section-description {
+    #promo-noel .section-description, #promo-fibre .section-description, #promo-fibre-2x .section-description {
       font-size: 28px;
       line-height: 40px; }
-      #promo-noel .section-description strong, #promo-fibre .section-description strong {
+      #promo-noel .section-description strong, #promo-fibre .section-description strong, #promo-fibre-2x .section-description strong {
         display: block; } }
 
 /*# sourceMappingURL=promos.css.map */

@@ -61,6 +61,7 @@ var checkDispoTemplate = '<section id="test-offres" class="clearfix">' +
 var popuptemplate = '<div id="testDispo" class="popup">' +
         '<div class="background-client"></div>' +
         '<div class="white-pannel">' +
+        '<div style="position: relative;">'+
         '<button class="pannel-close"><span class="icon-x-icone"></span></button>' +
         '<h2>Testez la disponibilité</h2>' +
         '<input value name="zipcode" class="input-white" type="text" placeholder="Code postal"/>' +
@@ -73,6 +74,7 @@ var popuptemplate = '<div id="testDispo" class="popup">' +
         '</div>' +
         '</div>' +
         '</div>' +
+        '</div>'+
         '</div>';
 var offers = {
     100: {

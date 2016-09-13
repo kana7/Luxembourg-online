@@ -2508,9 +2508,6 @@ hr {
 .icon-account-icone:before {
   content: "\62"; }
 
-.icon-x-icone:before {
-  content: "\61"; }
-
 .icon-calculator-ico:before {
   content: "\63"; }
 
@@ -2595,9 +2592,6 @@ hr {
 .icon-cable-ico:before {
   content: "\44"; }
 
-.icon-check-ico:before {
-  content: "\45"; }
-
 .icon-fax:before {
   content: "\46"; }
 
@@ -2642,6 +2636,18 @@ hr {
 
 .icon-assistance-television:before {
   content: "\54"; }
+
+.icon-player2:before {
+  content: "\55"; }
+
+.icon-player:before {
+  content: "\56"; }
+
+.icon-check-ico:before {
+  content: "\57"; }
+
+.icon-x-icone:before {
+  content: "\45"; }
 
 @-ms-viewport {
   width: auto !important; }
@@ -5595,14 +5601,14 @@ footer {
   .white-pannel .pannel-close {
     display: block;
     position: absolute;
-    right: 30px;
-    top: 24px;
+    right: 0;
+    top: 0;
     padding: 0;
     border: none;
     background: none; }
     .white-pannel .pannel-close span {
       margin: 0;
-      font-size: 16px; }
+      font-size: 21px; }
     .white-pannel .pannel-close:focus {
       outline: 0; }
   .white-pannel h2 {

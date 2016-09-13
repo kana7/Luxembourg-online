@@ -19,56 +19,58 @@
         <div id="clientSpace" class="popup">
             <div class="background-client"></div>
             <div class="white-pannel">
-                <button class="pannel-close"><span class="icon-x-icone"></span></button>
-                <h2>Espace Client</h2>
-                <ul class="client-menu">
-                    <li class="active" data-id="mail">Email</li>
-                    <li>|</li>
-                    <li data-id="account">Mon compte</li>
-                    <li>|</li>
-                    <li data-id="homepage">Homepage</li>
-                </ul>
-                <div class="pannel-forms">
-                    <form id="mail" class="clearfix is-visible" name="ServiceLogin1" method="POST" action="https://email.internet.lu/Scripts/sql.exe?_selection=10">
-                        <input type="hidden" name="Sql" value="Default.phs">  
-                        <input type="hidden" name="SqlDB" value="OMS2">  
-                        <div class="phone-6 input-left">
-                            <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
+                <div style="position:relative;">
+                    <button class="pannel-close"><span class="icon-x-icone"></span></button>
+                    <h2>Espace Client</h2>
+                    <ul class="client-menu">
+                        <li class="active" data-id="mail">Email</li>
+                        <li>|</li>
+                        <li data-id="account">Mon compte</li>
+                        <li>|</li>
+                        <li data-id="homepage">Homepage</li>
+                    </ul>
+                    <div class="pannel-forms">
+                        <form id="mail" class="clearfix is-visible" name="ServiceLogin1" method="POST" action="https://email.internet.lu/Scripts/sql.exe?_selection=10">
+                            <input type="hidden" name="Sql" value="Default.phs">  
+                            <input type="hidden" name="SqlDB" value="OMS2">  
+                            <div class="phone-6 input-left">
+                                <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
+                            </div>
+                            <div class="phone-6 input-right">
+                                <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
+                            </div>
+                            <button class="btn-blue" type="submit">Se connecter</button>
+                        </form>
+                        <form id="account" class="clearfix" name="LoginPhone" method="POST" action="http://shop.internet.lu/Scripts/sql.exe?LoginScript=LoginClient.phs&NextScript=DisplayAccount.phs&_Login=">
+                            <input type="hidden" name="Sql" value="LoginClient_Login.phs">  
+                            <input type="hidden" name="SqlDB" value="LOLShop">  
+                            <div class="phone-6 input-left">
+                                <input type="text" name="_Username" placeholder="Nom d'utilisateur"/>
+                            </div>
+                            <div class="phone-6 input-right">
+                                <input class="pull-right" type="password" name="_Password" placeholder="Mot de passe"/>
+                            </div>
+                            <button class="btn-blue" type="submit">Se connecter</button>
+                        </form>
+                        <form id="homepage" class="clearfix" name="ServiceLogin3" method="POST" action="http://sites.internet.lu/Scripts/sql.exe">
+                            <input type="hidden" name="Sql" value="default.phs">  
+                            <input type="hidden" name="SqlDB" value="OHPS">  
+                            <div class="phone-6 input-left">
+                                <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
+                            </div>
+                            <div class="phone-6 input-right">
+                                <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
+                            </div>
+                            <button class="btn-blue" type="submit">Se connecter</button>
+                        </form>
+                        <div class="contact-infos hidden-phone">
+                            Helpdesk: 2799 0000
+                            <span>Lu-Ve: 8h00-19h00  l  Sa: 9h00-18h00</span>
                         </div>
-                        <div class="phone-6 input-right">
-                            <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
+                        <div class="contact-infos display-phone">
+                            Helpdesk: 2799 0000
+                            <span>Lu-Ve: 8h00-19h00<br/>Sa: 9h00-18h00</span>
                         </div>
-                        <button class="btn-blue" type="submit">Se connecter</button>
-                    </form>
-                    <form id="account" class="clearfix" name="LoginPhone" method="POST" action="http://shop.internet.lu/Scripts/sql.exe?LoginScript=LoginClient.phs&NextScript=DisplayAccount.phs&_Login=">
-                        <input type="hidden" name="Sql" value="LoginClient_Login.phs">  
-                        <input type="hidden" name="SqlDB" value="LOLShop">  
-                        <div class="phone-6 input-left">
-                            <input type="text" name="_Username" placeholder="Nom d'utilisateur"/>
-                        </div>
-                        <div class="phone-6 input-right">
-                            <input class="pull-right" type="password" name="_Password" placeholder="Mot de passe"/>
-                        </div>
-                        <button class="btn-blue" type="submit">Se connecter</button>
-                    </form>
-                    <form id="homepage" class="clearfix" name="ServiceLogin3" method="POST" action="http://sites.internet.lu/Scripts/sql.exe">
-                        <input type="hidden" name="Sql" value="default.phs">  
-                        <input type="hidden" name="SqlDB" value="OHPS">  
-                        <div class="phone-6 input-left">
-                            <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
-                        </div>
-                        <div class="phone-6 input-right">
-                            <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
-                        </div>
-                        <button class="btn-blue" type="submit">Se connecter</button>
-                    </form>
-                    <div class="contact-infos hidden-phone">
-                        Helpdesk: 2799 0000
-                        <span>Lu-Ve: 8h00-19h00  l  Sa: 9h00-18h00</span>
-                    </div>
-                    <div class="contact-infos display-phone">
-                        Helpdesk: 2799 0000
-                        <span>Lu-Ve: 8h00-19h00<br/>Sa: 9h00-18h00</span>
                     </div>
                 </div>
             </div>
@@ -76,7 +78,12 @@
         <div class="fixed-options hidden-phone hidden-tab">
             <a class="popup-youtube" href="https://www.youtube.com/watch?v=gfRsh1OKIpo">
                 <div class="blue-fixed-option">
-                    <p>Regarder la<br/> <strong>démo</strong></p>
+                    <div style="position: relative;">
+                        <div style="font-size: 25px; position: absolute; left: 0; bottom: 8px;" >
+                            <span style="margin: 0;" class="icon-player"></span>
+                        </div>
+                        <p style="margin-left: 31px;" class="align-left">Regardez la<br/> <strong>démo</strong></p>
+                    </div>
                 </div>
             </a>
         </div>
@@ -106,6 +113,7 @@
                     <li class="menu-item"><a href="http://www.internet.lu/internet/accueil.html">Accueil Internet</a></li>
                     <li class="menu-item"><a href="http://www.internet.lu/internet/offres.html">Nos offres</a></li>
                     <li class="menu-item"><a href="http://www.internet.lu/internet/equipements.html">Nos équipements</a></li>
+                    <li class="menu-item"><a href="http://www.internet.lu/internet/lolnow.html">LOLNOW</a></li>
                     <li class="menu-item"><a href="http://www.internet.lu/internet/abonnement.html">Abonnez-vous</a></li>
                 </ul>
             </div>
@@ -344,6 +352,7 @@
                                                             <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
                                                             <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
                                                             <li><span class="icon-check-ico"></span>LOLCLOUD 5GB</li>
+                                                            <li><span class="icon-x-icone"></span><a href="//www.internet.lu/internet/lolnow.html">LOLNOW (sur demande)</a></li>
                                                         </ul>
                                                     </li>
                                                 </ul>
@@ -376,6 +385,7 @@
                                                             <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
                                                             <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
                                                             <li><span class="icon-check-ico"></span>LOLCLOUD 5GB</li>
+                                                            <li><span class="icon-x-icone"></span><a href="//www.internet.lu/internet/lolnow.html">LOLNOW (sur demande)</a></li>
                                                         </ul>
                                                     </li>
                                                 </ul>
@@ -408,6 +418,7 @@
                                                             <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
                                                             <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
                                                             <li><span class="icon-check-ico"></span>LOLCLOUD 5GB</li>
+                                                            <li><span class="icon-check-ico"></span><a href="//www.internet.lu/internet/lolnow.html">LOLNOW</a></li>
                                                         </ul>
                                                     </li>
                                                 </ul>
@@ -440,6 +451,7 @@
                                                             <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
                                                             <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
                                                             <li><span class="icon-check-ico"></span>LOLCLOUD 5GB</li>
+                                                            <li><span class="icon-check-ico"></span><a href="//www.internet.lu/internet/lolnow.html">LOLNOW</a></li>
                                                         </ul>
                                                     </li>
                                                 </ul>
@@ -476,6 +488,7 @@
                                                     <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
                                                     <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
                                                     <li><span class="icon-check-ico"></span>LOLCLOUD 5GB</li>
+                                                    <li><span class="icon-x-icone"></span><a href="//www.internet.lu/internet/lolnow.html">LOLNOW (sur demande)</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -507,6 +520,7 @@
                                                     <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
                                                     <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
                                                     <li><span class="icon-check-ico"></span>LOLCLOUD 5GB</li>
+                                                    <li><span class="icon-x-icone"></span><a href="//www.internet.lu/internet/lolnow.html">LOLNOW (sur demande)</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -538,6 +552,7 @@
                                                     <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
                                                     <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
                                                     <li><span class="icon-check-ico"></span>LOLCLOUD 5GB</li>
+                                                    <li><span class="icon-check-ico"></span><a href="//www.internet.lu/internet/lolnow.html">LOLNOW</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -570,6 +585,7 @@
                                                     <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
                                                     <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
                                                     <li><span class="icon-check-ico"></span>LOLCLOUD 5GB</li>
+                                                    <li><span class="icon-check-ico"></span><a href="//www.internet.lu/internet/lolnow.html">LOLNOW</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -1000,21 +1016,6 @@
                             <span style="padding-left: 10px;">(3)</span> Pays membres de l'U.E
                             <span style="padding-left: 10px;">(4)</span> Offre valable uniquement sur la technologie fibre optique
                         </p>
-                    </div>
-                </div>
-            </section>
-            <section  class="section-layout left left-orientation">
-                <div class="container-wrapper">
-                    <div class="row clearfix">
-                        <div class="phone-12 desk-6 video-container">
-                            <iframe width="1280" height="720" class="video" src="https://www.youtube.com/embed/gfRsh1OKIpo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        <div class="phone-12 desk-6">
-                            <h2 class="section-title lowercase">
-                                <strong>Plus besoin de vous déplacer, abonnez-vous en ligne !</strong>
-                            </h2>
-                            <p class="section-text grey">Découvrez dans la vidéo ci-contre comment faire.</p>
-                        </div>
                     </div>
                 </div>
             </section>

@@ -772,7 +772,7 @@ var modem_List2 = [
 ];
 var aboTel = new Item("3236", "a_telephone", "Abonnement téléphonique", 0, true, ["Appels nationaux fixes illimités", "(sauf numéros spéciaux)", "Appels illimités vers mobiles LOL", "EU120 (120 min vers les fixes de l'UE)", " "], true, "../images/Shop/Telephonie.jpg");
 var lolTVRemise = new Item("5618", "a_tvRemise", "6 mois gratuits", -17.00, true, "après 17€/mois", true, null);
-var lolTv = new SellProduct("2848", "a_tv", "LOL TV", 17.00, true, ["+110 chaînes TV", "+30 chaînes HD", "+40 chaînes radio", " ", " "], false, "../images/Shop/LOLTV.jpg", '6 mois', false, null);
+var lolTv = new SellProduct("2848", "a_tv", "LOL TV", 17.00, true, ["+100 chaînes TV", "+30 chaînes HD", "+40 chaînes radio", " ", " "], false, "../images/Shop/LOLTV.jpg", '6 mois', false, null);
 var lolTv_materielList = [
     new Item("5166", "m_tv_materiel", "Décodeur LOL TV", 4.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD", " "], false, "../images/Shop/Minix1.jpg"),
     new Item("5305", "m_tv_materiel", "Décodeur pour 2ème TV", 5.50, true, ["Processeur quad-core", "Mémoire 2 GB RAM", "Full HD", " "], false, "../images/Shop/Minix2.jpg")

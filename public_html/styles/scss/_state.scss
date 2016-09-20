@@ -461,6 +461,10 @@
         margin-bottom: 20px;
         padding: 0 10px;
     }
+    #hda .menu-list{
+        min-width: 500px;
+        width: 100%;
+    }
 }
 
 @include viewport(range, $min: 672, $max: 1055){
@@ -1015,7 +1019,10 @@
         padding-left: 9px !important;
     }
     .offer-item-orange .check-list li .icon-check-ico, .offer-item-blue .check-list li .icon-check-ico{
-        margin-right: 18px;
+        margin-right: 12px;
+    }
+    .offer-item-blue .check-list li .icon-check-ico, .offer-item-blue .check-list li .icon-x-icone, .equipement-item-blue .check-list li .icon-check-ico, .equipement-item-blue .check-list li .icon-x-icone, .news-item-blue .check-list li .icon-check-ico, .news-item-blue .check-list li .icon-x-icone{
+            margin-right: 11px;
     }
     .offer-item-blue .offer-price div, .offer-item-orange .offer-price div{
         left: 122px !important;

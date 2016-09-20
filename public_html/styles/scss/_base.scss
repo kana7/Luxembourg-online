@@ -47,6 +47,18 @@ hr{
 
 }
 
+@mixin data-icon(){
+        font-family: "luxonline-icons" !important;
+        font-style: normal !important;
+        font-weight: normal !important;
+        font-variant: normal !important;
+        text-transform: none !important;
+        speak: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+}
+
 [data-icon]:before {
     font-family: "luxonline-icons" !important;
     content: attr(data-icon);
@@ -212,9 +224,9 @@ hr{
     content: "\56";
 }
 .icon-check-ico:before {
-  content: "\57";
+    content: "\57";
 }
 .icon-x-icone:before {
-  content: "\45";
+    content: "\45";
 }
 

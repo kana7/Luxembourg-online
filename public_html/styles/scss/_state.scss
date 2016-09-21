@@ -196,15 +196,15 @@
             &.next{right: 50px;}
         }
         .section-price{
-            font-size: 72px;
+            font-size: 92px;
             padding-top: 2px;
             div{
-                font-size: 24px;
+                font-size: 32px;
                 top: 12px;
-                left: 90px;
+                left: 100px;
             }
             span{
-                font-size: 21px;
+                font-size: 24px;
                 padding-left: 0px;
             }
         }
@@ -599,18 +599,6 @@
         }
         p.bottom-details{
             font-size: 10pt;
-        }
-        .section-price {
-            font-size: 72px;
-            padding-top: 2px;
-            div{
-                font-size: 21px;
-                top: 13px !important;
-                left: 90px;
-            }
-            span{
-                font-size: 21px;
-            }
         }
     }
     #slider-ui{
@@ -1022,7 +1010,7 @@
         margin-right: 12px;
     }
     .offer-item-blue .check-list li .icon-check-ico, .offer-item-blue .check-list li .icon-x-icone, .equipement-item-blue .check-list li .icon-check-ico, .equipement-item-blue .check-list li .icon-x-icone, .news-item-blue .check-list li .icon-check-ico, .news-item-blue .check-list li .icon-x-icone{
-            margin-right: 11px;
+        margin-right: 11px;
     }
     .offer-item-blue .offer-price div, .offer-item-orange .offer-price div{
         left: 122px !important;
@@ -1176,15 +1164,15 @@
     }
     #slider-contents{
         .section-price{
-            font-size: 82px !important;
+            font-size: 112px !important;
             padding-top: 7px;
             div{
-                font-size: 22px;
-                top: 16px !important;
-                left: 93px;
+                font-size: 42px;
+                top: 20px !important;
+                left: 125px;
             }
             span{
-                font-size: 22px;
+                font-size: 35px;
             }
         }
     }

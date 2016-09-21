@@ -5135,14 +5135,14 @@ span[class^=icon-] {
   font-size: 12px;
   color: #818181; }
 #slider-contents .section-price {
-  font-size: 55px;
+  font-size: 62px;
   padding-top: 0px; }
   #slider-contents .section-price div {
-    font-size: 20px;
+    font-size: 24px;
     top: 7px;
     left: 85px; }
   #slider-contents .section-price span {
-    font-size: 18px;
+    font-size: 20px;
     padding-left: 0px; }
 
 .service-link {
@@ -7045,14 +7045,14 @@ h2.contact-title {
     #slider-contents .flickity-prev-next-button.next {
       right: 50px; }
   #slider-contents .section-price {
-    font-size: 72px;
+    font-size: 92px;
     padding-top: 2px; }
     #slider-contents .section-price div {
-      font-size: 24px;
+      font-size: 32px;
       top: 12px;
-      left: 90px; }
+      left: 100px; }
     #slider-contents .section-price span {
-      font-size: 21px;
+      font-size: 24px;
       padding-left: 0px; }
 
   #slider-ui .buttons {
@@ -7414,15 +7414,6 @@ h2.contact-title {
     line-height: 35px; }
   #slider-contents p.bottom-details {
     font-size: 10pt; }
-  #slider-contents .section-price {
-    font-size: 72px;
-    padding-top: 2px; }
-    #slider-contents .section-price div {
-      font-size: 21px;
-      top: 13px !important;
-      left: 90px; }
-    #slider-contents .section-price span {
-      font-size: 21px; }
 
   #slider-ui .buttons {
     width: 95%; }
@@ -7944,14 +7935,14 @@ h2.contact-title {
     height: 360px; }
 
   #slider-contents .section-price {
-    font-size: 82px !important;
+    font-size: 112px !important;
     padding-top: 7px; }
     #slider-contents .section-price div {
-      font-size: 22px;
-      top: 16px !important;
-      left: 93px; }
+      font-size: 42px;
+      top: 20px !important;
+      left: 125px; }
     #slider-contents .section-price span {
-      font-size: 22px; }
+      font-size: 35px; }
 
   #slider-ui .buttons {
     width: 90%; }

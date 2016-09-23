@@ -249,11 +249,11 @@
 
             </header>
 
-            <section id="promo-fibre-2x" class="section-layout section-background-image section-shadow">
+            <section id="promo-fibre-2x" class="section-layout section-background-image section-shadow image-1">
                 <div class="container-wrapper">
                     <div class="row">
                         <div class="phone-12 desk-10">
-                            <h1 class="section-title extra-bold blue">offre fibre<span style="font-size: 0.3em;" class="exponent">(1)</span></h1>
+                            <h1 style="margin: 12px 0 15px;" class="section-title extra-bold blue">offre fibre<span style="font-size: 0.3em;" class="exponent">(1)</span></h1>
                             <p class="section-description blue phone-mb-0"><span class="bold">LOL</span>FIBER 100 devient <span class="bold">LOL</span>FIBER 200<br/>Frais d'installation et de câblage fibre <span class="extra-bold">offerts !</span></p>
                         </div>
                     </div>
@@ -505,19 +505,6 @@
         <script type="text/javascript" src="../scripts/internetscript.js"></script>
         <script type="text/javascript">
             $(function () {
-                if (window.location.hash) {
-                    var vhash = (window.location.hash.split('#')[1]).split(";");
-                    removeHash();
-                    if (vhash[0] == "vitesse2x") {
-                        $('#promo-fibre-2x').addClass('image-2');
-                    } else if (vhash[0] == "2xplusrapide") {
-                        $('#promo-fibre-2x').addClass('image-1');
-                    } else {
-                        $('#promo-fibre-2x').addClass('image-' + getRandomInt(1, 3));
-                    }
-                } else {
-                    $('#promo-fibre-2x').addClass('image-' + getRandomInt(1, 3));
-                }
                 $('.main-gallery').flickity({
                     // options
                     cellAlign: 'center',

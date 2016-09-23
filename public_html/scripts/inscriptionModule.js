@@ -103,8 +103,8 @@ var StepTransition = (function () {
         _render();
         _bindEvents();
         //Ajoute l'id home de la personne dans l'input name=_idhome
-        var idhome = Cookies.get('shop_idhome');
-        $('input[name=p_idHome]').val(idhome);
+        /*var idhome = Cookies.get('shop_idhome');
+        $('input[name="p_idHome"]').val(idhome);*/
         //Ajoute les articles pré-selectionnés dans le panier au lancement
         $('.step .shop-item').find('input[selected]').each(function () {
             _selectItem($(this).parents('.shop-item'));
@@ -552,6 +552,7 @@ var Cart = (function () {
 //on enregistre le hash dans un cookie pour un recover éventuel.
             Cookies.set('shop_serviceMap', vhash, {expires: 1});
             currentItems_list['a_abo'] = abonnements_list.getAbo(vhash[0], vhash[1]);
+            $('input[name="p_idHome"]').val(vhash[2]);
             currentItems_list['p_installation'] = currentItems_list['a_abo']['installation'];
             if (currentItems_list['a_abo']['tech'] == "FIBRE"){
                 console.log(currentItems_list['a_abo']['name'].split(/[, ]+/).pop());

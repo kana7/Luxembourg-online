@@ -161,17 +161,17 @@ function printOffer(offer) {
 }
 ;
 
-function insertLink(id, service, indexLink) {
+function insertLink(id, service, indexLink, idHome) {
     var linkList = ['//shop.internet.lu/inscription/shop/inscription.html#', '//www.internet.lu/promos/fibre_1.html#'];
-    return 'href="' + linkList[indexLink] + service + ';' + id + '"';
+    return 'href="' + linkList[indexLink] + service + ';' + id + ';' + idHome +'"';
     /*internet shop link: "http://shop.internet.lu/inscription/shop/inscription.html#"
      *local shop link: "../shop/inscription.html#"*/
 }
-function insertButton(id, service) {
-    return '<a class="btn-blue btn-subscription" ' + insertLink(id, service, 0) + '>Abonnez-vous</a>';
+function insertButton(id, service, idHome) {
+    return '<a class="btn-blue btn-subscription" ' + insertLink(id, service, 0, idHome) + '>Abonnez-vous</a>';
 }
-function insertPromoLink(id, service, string) {
-    return '<a class="promos-link"' + insertLink(id, service, 1) + '>' + string + '</a>';
+function insertPromoLink(id, service, idHome, string) {
+    return '<a class="promos-link"' + insertLink(id, service, 1, idHome) + '>' + string + '</a>';
 }
 function printNonDispo(string) {
     return '<div class="not-dispo"><div class="not-dispo-info">' + string + '</div></div>';
@@ -365,14 +365,14 @@ function checkDispo(homeId, isLOLCable) {
                         $('.k24').addClass('not');
                     } else {
                         $('.k24').find('.not-dispo').remove();
-                        $(insertButton(ab[0][0], ab[0][1])).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                        $(insertButton(ab[0][0], ab[0][1], homeId)).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     }
                     if (ab[1] == "") {
                         $(printNonDispo(nonDispoTemplate)).prependTo('.k30').css('visibility', 'visible').animate({opacity: 1.0}, 500);
                         $('.k30').addClass('not');
                     } else {
                         $('.k30').find('.not-dispo').remove();
-                        $(insertButton(ab[1][0], ab[1][1])).insertAfter($('.k30')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                        $(insertButton(ab[1][0], ab[1][1], homeId)).insertAfter($('.k30')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     }
                     if ($('#promoFiber-content').length <= 0) { //NOT PAGE PROMO FIBRE
                         if (ab[2] == "") {
@@ -382,18 +382,18 @@ function checkDispo(homeId, isLOLCable) {
                             $('.k100').find('.not-dispo').remove();
                             if ($(obj.Service[2]).length <= 0 && $(obj.Service[5]).length <= 0) { //SI PAS FIBRE
                                 $('.k100+.promos-link.persist').hide();
-                                $(insertPromoLink(ab[2][0], ab[2][1], "promo : installation offerte")).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500); //PRINT LIEN VERS PAGE VDSL
+                                $(insertPromoLink(ab[2][0], ab[2][1], homeId, "promo : installation offerte")).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500); //PRINT LIEN VERS PAGE VDSL
                             } else {
                                 $('.k100+.promos-link.persist').attr('href', '//www.internet.lu/promos/fibre.html#' + homeId + ';' + isLOLCable);
                                 $('.k100+.promos-link.persist').show();
                                 $('.k100+.promos-link:not(.persist)').remove();
                             }
-                            $(insertButton(ab[2][0], ab[2][1])).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                            $(insertButton(ab[2][0], ab[2][1], homeId)).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                         }
                     } else { //PAGE PROMO FIBRE
                         if ($(obj.Service[2]).length > 0 || $(obj.Service[5]).length > 0) { // FIBRE
                             $('.k100').find('.not-dispo').remove();
-                            $(insertButton(ab[2][0], ab[2][1])).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                            $(insertButton(ab[2][0], ab[2][1], homeId)).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                         } else {
                             $(printNonDispo(nonDispoTemplate)).prependTo('.k100').css('visibility', 'visible').animate({opacity: 1.0}, 500);
                             $('.k100').addClass('not');
@@ -407,7 +407,7 @@ function checkDispo(homeId, isLOLCable) {
                         $('.k200').addClass('not');
                     } else {
                         $('.k200').find('.not-dispo').remove();
-                        $(insertButton(ab[3][0], ab[3][1])).insertAfter($('.k200')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                        $(insertButton(ab[3][0], ab[3][1], homeId)).insertAfter($('.k200')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     }
                 }
                 if (boolean) {
@@ -419,8 +419,8 @@ function checkDispo(homeId, isLOLCable) {
                 $('html, body').animate({
                     scrollTop: $('#offers-section, #promoFiber-content').offset().top
                 }, 650);
-                Cookies.remove('shop_idhome');
-                Cookies.set('shop_idhome', homeId, {expires: 1});
+                /*Cookies.remove('shop_idhome');
+                Cookies.set('shop_idhome', homeId, {expires: 1});*/
             }, error: function (jqXHR, textStatus, errorThrown) {
                 console.log('jqXHR:');
                 console.log(jqXHR);

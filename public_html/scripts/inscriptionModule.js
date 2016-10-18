@@ -854,23 +854,32 @@ var abonnements_list = {
         "5625": new Abonnement("5625", "a_abo", "LOL FIBER 30", 44.90, true, "", true, null, "EPT", "FIBRE", 5, installNoRemise, activation, modem_List2),
         "5626": new Abonnement("5626", "a_abo", "LOL FIBER 100", 54.90, true, "", true, null, "EPT", "FIBRE", 5, installRemise, activation, modem_List2),
         
-        /*TODO : METTRE ID POUR LA PROMO 200 AU PRIX DU 100 SUR LA REVENTE FIBRE*/
-        "5888": new Abonnement("5888", "a_abo", "LOL FIBER 200", 54.90, true, "", true, null, "EPT", "FIBRE", 5, installRemise, activation, modem_List2),
+        "5888": new Abonnement("5888", "a_abo", "LOL FIBER 200", 54.90, true, "", true, null, "EPT", "FIBRE", 5, installRemise, activation, modem_List2), //PROMO FIBRE 200-->PRIX 100
         "5627": new Abonnement("5627", "a_abo", "LOL FIBER 200", 71.90, true, "", true, null, "EPT", "FIBRE", 5, installRemise, activation, modem_List2)
     },
     "6": {
-        "5257": new Abonnement("5257", "a_abo", "LOL DSL 24", 34.90, true, "", true, null, "LOL", "ADSL", 6, typeInstall, activation, modem_List1)
+        "5257": new Abonnement("5257", "a_abo", "LOL DSL 24", 34.90, true, "", true, null, "LOL", "ADSL", 6, typeInstall, activation, modem_List1),
+        //PROMO 6 MOIS
+        "6019": new Abonnement("6019", "a_abo", "LOL DSL 24", 17.45, true, "", true, null, "LOL", "ADSL", 6, typeInstall, activation, modem_List1)
     },
     "8": {
         "5273": new Abonnement("5273", "a_abo", "LOL FIBER 30", 44.90, true, "", true, null, "LOL", "VDSL", 8, typeInstall, activation, modem_List2),
         "5274": new Abonnement("5274", "a_abo", "LOL FIBER 100", 54.90, true, "", true, null, "LOL", "VDSL", 8, installRemise, activation, modem_List2),
-        "5336": new Abonnement("5336", "a_abo", "LOL FIBER 100", 54.90, true, "", true, null, "LOL", "VDSL", 8, installRemise, activation, modem_List2)
+        //PROMO 6 MOIS
+        "6021": new Abonnement("6021", "a_abo", "LOL FIBER 100", 27.45, true, "", true, null, "LOL", "VDSL", 8, installRemise, activation, modem_List2),
+        "5336": new Abonnement("5336", "a_abo", "LOL FIBER 100", 54.90, true, "", true, null, "LOL", "VDSL", 8, installRemise, activation, modem_List2),
+        //TO DO PROMO 6 MOIS
+        "6022": new Abonnement("6022", "a_abo", "LOL FIBER 100", 27.45, true, "", true, null, "LOL", "VDSL", 8, installRemise, activation, modem_List2)
     },
     "41": {
-        "5626": new Abonnement("5626", "a_abo", "LOL FIBER 100", 54.90, true, "", true, null, "EPT", "VDSL1", 41, installRemise, activation, modem_List2)
+        "5626": new Abonnement("5626", "a_abo", "LOL FIBER 100", 54.90, true, "", true, null, "EPT", "VDSL1", 41, installRemise, activation, modem_List2),
+        //TO DO PROMO 6 MOIS
+        "6023": new Abonnement("6023", "a_abo", "LOL FIBER 100", 27.45, true, "", true, null, "EPT", "VDSL1", 41, installRemise, activation, modem_List2)
     },
     "42": {
-        "5626": new Abonnement("5626", "a_abo", "LOL FIBER 100", 54.90, true, "", true, null, "EPT", "VDSL2", 42, installRemise, activation, modem_List2)
+        "5626": new Abonnement("5626", "a_abo", "LOL FIBER 100", 54.90, true, "", true, null, "EPT", "VDSL2", 42, installRemise, activation, modem_List2),
+        //TO DO PROMO 6 MOIS
+        "6023": new Abonnement("6023", "a_abo", "LOL FIBER 100", 27.45, true, "", true, null, "EPT", "VDSL2", 42, installRemise, activation, modem_List2)
     },
     "cable": {
         "4625": new Abonnement(4625, "a_abo", "Cable 10", 29.00, true, "", true, null, "LOL", "CBL", "cable", cableInstall, null, cableModem_list[4625]),

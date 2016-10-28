@@ -4422,6 +4422,8 @@ span[class^=icon-] {
       font-size: 32px;
       top: 3px;
       left: 150px; }
+      .offer-item-blue .offer-price div .exponent, .equipement-item-blue .offer-price div .exponent, .news-item-blue .offer-price div .exponent {
+        font-size: 0.5em; }
     .offer-item-blue .offer-price span, .equipement-item-blue .offer-price span, .news-item-blue .offer-price span {
       font-size: 22px;
       padding-left: 6px; }
@@ -4526,6 +4528,8 @@ span[class^=icon-] {
       font-size: 32px;
       top: 3px;
       left: 150px; }
+      .offer-item-orange .offer-price div .exponent, .equipement-item-orange .offer-price div .exponent, .news-item-orange .offer-price div .exponent {
+        font-size: 0.5em; }
     .offer-item-orange .offer-price span, .equipement-item-orange .offer-price span, .news-item-orange .offer-price span {
       font-size: 22px;
       padding-left: 6px; }
@@ -5376,13 +5380,14 @@ footer {
   text-transform: uppercase;
   font-weight: 800;
   margin-top: 10px; }
-  .promos-link:hover {
-    text-decoration: underline; }
   .promos-link span[class^=icon-] {
     margin-right: 0;
     margin-left: 7px;
     font-size: 1.2em;
     top: 3px; }
+
+a.promos-link:hover {
+  text-decoration: underline; }
 
 .not + .promos-link.persist {
   display: none; }
@@ -7291,7 +7296,10 @@ h2.contact-title {
     width: 100%; } }
 @media screen and (min-width: 672px) and (max-width: 1055px) {
   #document-links ul li {
-    line-height: inherit; } }
+    line-height: inherit; }
+
+  #offers-section #lol.is-verified div[class^=phone-] {
+    min-height: 655px; } }
 @media screen and (min-width: 1056px) {
   .rightWrapper {
     width: 75%;

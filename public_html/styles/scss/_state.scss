@@ -471,6 +471,9 @@
     #document-links ul li {
         line-height: inherit;
     }
+    #offers-section #lol.is-verified div[class^=phone-]{
+        min-height: 655px;
+    }
 }
 
 @include media(desk){

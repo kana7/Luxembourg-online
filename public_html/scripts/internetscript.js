@@ -83,6 +83,12 @@ var offers = {
             exponent: ",45€<span class='exponent'>(5)</span>"
         }
     },
+    24:{
+        price: {
+            unit: 34,
+            exponent: ",90€"
+        }
+    },
     "100-half": {
         price: {
             unit: 27,
@@ -180,7 +186,7 @@ function printPrice(offer) {
 }
 
 function insertLink(id, service, indexLink, idHome) {
-    var linkList = ['../shop/inscription.html#', '//www.internet.lu/promos/fibre_1.html#'];
+    var linkList = ['http://shop.internet.lu/inscription/shop/inscription.html#', '//www.internet.lu/promos/fibre_1.html#'];
     return 'href="' + linkList[indexLink] + service + ';' + id + ';' + idHome + '"';
     /*internet shop link: "http://shop.internet.lu/inscription/shop/inscription.html#"
      *local shop link: "../shop/inscription.html#"*/
@@ -397,6 +403,8 @@ function checkDispo(homeId, isLOLCable) {
                         if ($(obj.Service[2]).length <= 0 && $(obj.Service[5]).length <= 0) {
                             $('.k24').find('.offer-price').replaceWith(printPrice(offers['24-half']));
                             $(insertPromoLink(null, null, null, "promo : 6 mois à moitié prix")).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                        }else{
+                            $('.k24').find('.offer-price').replaceWith(printPrice(offers[24]));
                         }
                         $(insertButton(ab[0][0], ab[0][1], homeId)).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                     }

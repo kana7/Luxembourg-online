@@ -17,13 +17,14 @@
 ;
 (function ($, window, document, undefined) {
 
-    var pluginName = 'footNote';
+    var pluginName = 'footerNote';
 
     // Create the plugin constructor
-    function Plugin(options) {
+    function Plugin(element, options) {
 
         this._name = pluginName;
-        this._defaults = $.footNote.defaults;
+        this.element = element;
+        this._defaults = $.fn.footerNote.defaults;
 
         this.options = $.extend({}, this._defaults, options);
         this.init();
@@ -39,9 +40,8 @@
         },
         // Cache DOM nodes for performance
         buildCache: function () {
-            this.$elements = $('*[data-fnote]');
-            this.$fnoteStorage = $('.footer-note');
-            return $.isEmptyObject(this.$fnoteStorage);
+            this.$element = $(this.element);
+            this.$infos = $('*[data-fnote]');
         },
         // Bind events that trigger methods
         bindEvents: function () {
@@ -55,19 +55,33 @@
         },
         //print foot note in the page
         render: function () {
-            if (this.buildCache()) {
-                var element;
-                console.log('Je suis render');
-                console.log(this.$elements);
-                this.$elements.each(function () {
-                    element = this;
-                    element.data('data-fnote').each(function () {
-                        element.append('<span class="exponent">(' + this + ')</span>');
+            this.buildCache();
+            console.log('Je suis render');
+            this.printExponent();
+            this.printFootNote.call(this);
+        },
+        printExponent: function () {
+            var element;
+            var html;
+            this.$infos.each(function () {
+                element = $(this);
+                console.log((element.find('span.exponent').length>0));
+                if (!element.find('span.exponent').length>0) {
+                    html = '<span class="exponent">';
+                    $.each(element.data('fnote'), function () {
+                        html += '('+((this) + 1)+')';
                     });
-                });
-            } else {
-                console.log('div of class ".footer-note" is missing in the page');
-            }
+                    html += '</span>';
+                    element.append(html);
+                }
+            });
+        },
+        printFootNote: function () {
+            var footContainer = this.$element;
+            footContainer.empty();
+            $.each(this.options.registry, function (index, value) {
+                footContainer.append('<li><span>(' + (index + 1) + ')</span> ' + value + '</li>');
+            });
         },
         hide: function () {
             console.log('je suis hide');
@@ -85,13 +99,21 @@
         }
     });
 
-    $.footNote = function (options) {
-        if (!$.data(this, "plugin_" + pluginName)) {
-            $.data(this, "plugin_" + pluginName, new Plugin(options));
-        }
+    $.fn.footerNote = function (options) {
+        var args = Array.prototype.slice.call(arguments, 1);
+        return this.each(function () {
+            var item = $(this), instance = item.data("plugin_" + pluginName);
+            if (!instance) {
+                item.data("plugin_" + pluginName, new Plugin(this, options));
+            } else {
+                if (typeof options === 'string') {
+                    instance[options].apply(instance, args);
+                }
+            }
+        });
     };
 
-    $.footNote.defaults = {
+    $.fn.footerNote.defaults = {
         registry: []
     };
 

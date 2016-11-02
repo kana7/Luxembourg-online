@@ -512,22 +512,23 @@ span[class^=icon-]
 {
     font-size: 13px;
     font-weight: 400;
-
-    padding: 9px 0 8px;
-
     color: $white;
     text-shadow: 0 1px 5px $dark-grey;
+    li{padding: 11px 0px 10px;}
     &.left li
     {
-        margin-right: 30px;
+        padding: 11px 10px 10px;
+        &.active{
+            background-color: lighten($blue, 5%);
+        }
     }
     &.right li
     {
         margin-left: 30px;
-    }
-    li.active{
-        font-weight: 600;
-        text-decoration: underline;
+        &.active{
+            font-weight: 600;
+            text-decoration: underline;
+        }
     }
 }
 .bottom-menu-header-links

@@ -3816,16 +3816,19 @@ span[class^=icon-] {
 .top-menu-header-links {
   font-size: 13px;
   font-weight: 400;
-  padding: 9px 0 8px;
   color: #fff;
   text-shadow: 0 1px 5px #818181; }
+  .top-menu-header-links li {
+    padding: 11px 0px 10px; }
   .top-menu-header-links.left li {
-    margin-right: 30px; }
+    padding: 11px 10px 10px; }
+    .top-menu-header-links.left li.active {
+      background-color: #0056ae; }
   .top-menu-header-links.right li {
     margin-left: 30px; }
-  .top-menu-header-links li.active {
-    font-weight: 600;
-    text-decoration: underline; }
+    .top-menu-header-links.right li.active {
+      font-weight: 600;
+      text-decoration: underline; }
 
 .bottom-menu-header-links .main-menu {
   font-size: 16px;

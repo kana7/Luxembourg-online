@@ -58,36 +58,45 @@
             this.buildCache();
             console.log('Je suis render');
             this.printExponent();
-            this.printFootNote.call(this);
+            this.printFootNote.call(this, this.checkOccurence());
         },
         printExponent: function () {
             var element;
             var html;
             this.$infos.each(function () {
                 element = $(this);
-                console.log((element.find('span.exponent').length>0));
-                if (!element.find('span.exponent').length>0) {
+                if (!element.find('span.exponent').length > 0) {
                     html = '<span class="exponent">';
-                    $.each(element.data('fnote'), function () {
-                        html += '('+((this) + 1)+')';
+                    $.each(element.data('fnote'), function (index, value) {
+                        html += '(' + ((value) + 1) + ')';
                     });
                     html += '</span>';
                     element.append(html);
                 }
             });
         },
-        printFootNote: function () {
+        checkOccurence: function () {
+            var occurence = [];
+            this.$infos.each(function () {
+                    $.each($(this).data('fnote'), function (index, value) {
+                        if ($.inArray(value, occurence) < 0) {
+                            occurence.push(value);
+                        }
+                    });
+            });
+            return occurence;
+        },
+        printFootNote: function (occurence) {
             var footContainer = this.$element;
             footContainer.empty();
+            console.log(occurence);
             $.each(this.options.registry, function (index, value) {
-                footContainer.append('<li><span>(' + (index + 1) + ')</span> ' + value + '</li>');
+                console.log(index);
+                console.log($.isArray(index, occurence)>-1);
+                if (occurence.indexOf(index)>-1){
+                    footContainer.append('<li><span>(' + (index + 1) + ')</span> ' + value + '</li>');
+                }
             });
-        },
-        hide: function () {
-            console.log('je suis hide');
-        },
-        show: function () {
-            console.log('je suis show');
         },
         callback: function () {
             // Cache onComplete option

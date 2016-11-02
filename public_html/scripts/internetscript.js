@@ -80,19 +80,19 @@ var offers = {
     "24-half": {
         price: {
             unit: 17,
-            exponent: ",45€<span class='exponent'>(5)</span>"
+            exponent: "<div data-fnote='[4]'>,45€</div>"
         }
     },
-    24:{
+    24: {
         price: {
             unit: 34,
-            exponent: ",90€"
+            exponent: "<div>,90€</div>"
         }
     },
     "100-half": {
         price: {
             unit: 27,
-            exponent: ",45€<span class='exponent'>(5)</span>"
+            exponent: "<div data-fnote='[4]'>,45€</div>"
         }
     },
     100: {
@@ -102,7 +102,7 @@ var offers = {
         upload: "50 Mbits/s",
         price: {
             unit: 54,
-            exponent: ",90€"
+            exponent: "<div>,90€</div>"
         },
         color: 'orange'
     },
@@ -113,7 +113,7 @@ var offers = {
         upload: "100 Mbits/s",
         price: {
             unit: 71,
-            exponent: ",90€"
+            exponent: "<div>,90€</div>"
         },
         color: 'blue'
     },
@@ -124,7 +124,7 @@ var offers = {
         upload: "</span><span style='text-decoration: line-through; font-size: 0.9em;'> 50 </span>&nbsp;&nbsp;<span class='orange'>100 Mbit/s</span>",
         price: {
             unit: 54,
-            exponent: ",90€"
+            exponent: "<div>,90€</div>"
         },
         color: 'orange'
     }
@@ -153,16 +153,16 @@ function printOffer(offer) {
             '</div>' +
             '<ul class="item-body">' +
             '<li class="description">' + offer.description + '</li>' +
-            '<li class="info"><span class="icon-download-ico download"></span>' + offer.download + '<span class="exponent">(1)</span></li>' +
-            '<li class="info"><span class="icon-download-ico upload"></span>' + offer.upload + '<span class="exponent">(1)</span></li>' +
+            '<li class="info" data-fnote="[0]"><span class="icon-download-ico download"></span>' + offer.download + '</li>' +
+            '<li class="info" data-fnote="[0]"><span class="icon-download-ico upload"></span>' + offer.upload + '</li>' +
             '<li class="check-list-container">' +
             '<div class="check-list-title"><span class="icon-pack-ico"></span> Inclus dans ce pack : </div>' +
             '<ul class="check-list">' +
             '<li><span class="icon-check-ico"></span>Volume illimité</li>' +
             '<li><span class="icon-check-ico"></span>Abonnement tél. fixe</li>' +
-            '<li><span class="icon-check-ico"></span>Appels nat. fixes<span class="exponent">(2)</span></li>' +
+            '<li data-fnote="[1]"><span class="icon-check-ico"></span>Appels nat. fixes</li>' +
             '<li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>' +
-            '<li><span class="icon-check-ico"></span>120 min vers l\'Europe fixe<span class="exponent">(2) (3)</span></li>' +
+            '<li data-fnote="[1,2]"><span class="icon-check-ico"></span>120 min vers l\'Europe fixe</li>' +
             '<li><span class="icon-check-ico"></span>LOL CLOUD 5GB</li>' +
             '<li><span class="icon-check-ico"></span><a href="lolnow.html">LOLNOW</a></li>' +
             '</ul>' +
@@ -170,7 +170,7 @@ function printOffer(offer) {
             '</ul>' +
             '<div class="item-footer">' +
             '<div class="offer-price">' +
-            '<div>' + offer.price.exponent + '</div>' +
+            offer.price.exponent +
             +offer.price.unit + '<span>/mois</span>' +
             '</div>' +
             '</div>' +
@@ -179,7 +179,7 @@ function printOffer(offer) {
 }
 function printPrice(offer) {
     var printedPrice = '<div class="offer-price">' +
-            '<div>' + offer.price.exponent + '</div>' +
+            offer.price.exponent +
             +offer.price.unit + '<span>/mois</span>' +
             '</div>';
     return printedPrice;
@@ -360,13 +360,13 @@ function checkDispo(homeId, isLOLCable) {
                         }
                     }
                 }
-                if ($(obj.Service[2]).length <= 0 && $(obj.Service[5]).length <= 0){ // SI PAS FIBRE ALORS PROMOS BUNDLE 6 MOIS MOITIÉ PRIX
-                    ab[0] = (ab[0] != "" ? ["6019", 6]:""); //LOLDSL24 
-                    ab[2] = (ab[2]!="" && ab[2][0]=="5626" ? ["6023",ab[2][1]] : ab[2]); //REVENTE VDSL 100 1 paire+2 paire
-                    ab[2] = (ab[2]!="" && ab[2][0]=="5274" ? ["6021",ab[2][1]] : ab[2]); //Dégroupage VDSL Fiber 100 1 paire
-                    ab[2] = (ab[2]!="" && ab[2][0]=="5336" ? ["6022",ab[2][1]] : ab[2]); //Dégroupage VDSL Fiber 100 2 paire
-                 }
-                 
+                if ($(obj.Service[2]).length <= 0 && $(obj.Service[5]).length <= 0) { // SI PAS FIBRE ALORS PROMOS BUNDLE 6 MOIS MOITIÉ PRIX
+                    ab[0] = (ab[0] != "" ? ["6019", 6] : ""); //LOLDSL24 
+                    ab[2] = (ab[2] != "" && ab[2][0] == "5626" ? ["6023", ab[2][1]] : ab[2]); //REVENTE VDSL 100 1 paire+2 paire
+                    ab[2] = (ab[2] != "" && ab[2][0] == "5274" ? ["6021", ab[2][1]] : ab[2]); //Dégroupage VDSL Fiber 100 1 paire
+                    ab[2] = (ab[2] != "" && ab[2][0] == "5336" ? ["6022", ab[2][1]] : ab[2]); //Dégroupage VDSL Fiber 100 2 paire
+                }
+
                 resetDisplay();
                 var boolean = (isLOLCable == "true" || isLOLCable === true);
 
@@ -403,7 +403,7 @@ function checkDispo(homeId, isLOLCable) {
                         if ($(obj.Service[2]).length <= 0 && $(obj.Service[5]).length <= 0) {
                             $('.k24').find('.offer-price').replaceWith(printPrice(offers['24-half']));
                             $(insertPromoLink(null, null, null, "promo : 6 mois à moitié prix")).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                        }else{
+                        } else {
                             $('.k24').find('.offer-price').replaceWith(printPrice(offers[24]));
                         }
                         $(insertButton(ab[0][0], ab[0][1], homeId)).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
@@ -464,6 +464,7 @@ function checkDispo(homeId, isLOLCable) {
                 $('html, body').animate({
                     scrollTop: $('#offers-section, #promoFiber-content').offset().top
                 }, 650);
+                $('.footer-note').footerNote('render');
                 /*Cookies.remove('shop_idhome');
                  Cookies.set('shop_idhome', homeId, {expires: 1});*/
             }, error: function (jqXHR, textStatus, errorThrown) {

@@ -207,8 +207,11 @@ span[class^=icon-]
     margin: 15px 0;
     line-height: 15px;
     span{
-        display: inline-block;
+        display: inline;
     }
+    li{display: inline-block; &:not(:first-child){
+           padding-left: 10px;
+       }}
 }
 .extra-bold{
     font-weight: 800 !important;

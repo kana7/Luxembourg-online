@@ -3543,7 +3543,11 @@ span[class^=icon-] {
   margin: 15px 0;
   line-height: 15px; }
   .footer-note span {
+    display: inline; }
+  .footer-note li {
     display: inline-block; }
+    .footer-note li:not(:first-child) {
+      padding-left: 10px; }
 
 .extra-bold {
   font-weight: 800 !important; }

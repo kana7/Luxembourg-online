@@ -39,6 +39,7 @@ Langage<span class="icon-right-arrow"></span>
 <footNoteConditionShop "Voir conditions en magasin">
 <gratis "gratuit">
 <mondaySaturday "Lu-Sa:">
+<parrainage "Bon de parrainage">
 /*-----------------------------------LIENS------------------------------------*/
 <menuLinkHome "Accueil">
 <menuLinkInternet "Internet">
@@ -73,7 +74,7 @@ Langage<span class="icon-right-arrow"></span>
 <span class="icon icon-calculator-ico"></span>Tarifs DSL/FIBER
 """>
 <menuLinkParrainage """
-<span class="icon icon-parrainage-ico"></span>Bon de parrainage
+<span class="icon icon-parrainage-ico"></span>{{parrainage}}
 """>
 <menuLinkDoc """
 <span class="icon icon-document-ico"></span>Documents
@@ -193,7 +194,7 @@ Considérée comme étant la technologie d’avenir, la fibre optique se génér
 """>
 <internetAccueilFibreLink "En savoir plus sur la fibre">
 /*----------------------------------------------------------------------------*/
-/*---------------------------SECTION EQUIPEMENT--------------------------------*/
+/*---------------------------SECTION EQUIPEMENT-------------------------------*/
 <internetAccueilGearTitle """
 <strong>Nos équipements</strong> le choix de la qualité !
 """>
@@ -201,3 +202,16 @@ Considérée comme étant la technologie d’avenir, la fibre optique se génér
 Pour sa gamme Internet, Luxembourg Online a fait le choix de la qualité avec les produits de la marque AVM. 
 """>
 <internetAccueilGearLink "Voir nos équipements">
+/*----------------------------------------------------------------------------*/
+/*------------------------INTERNET/PARRAINAGE.HTML----------------------------*/
+/*--------------------------------SECTION-------------------------------------*/
+<internetParainnageTitle """
+Bon de <b>parrainage</b>
+""">
+<internetParainnageDesc """
+Vous connaissez des personnes qui n'ont pas encore d'abonnement Internet chez Luxembourg Online ? Aidez-les à réduire leur facture
+                                télécom en leur recommandant une de nos offres et <strong>bénéficiez d'une remise de 40€.</strong>
+""">
+<internetParainnageDesc1 """
+Pour profiter de notre offre de parrainage, téléchargez et complétez le bon ci-dessous :
+""">

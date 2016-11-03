@@ -1,9 +1,6 @@
-#promo-fibre{
+#promo-fibre-2x{
     &.image-1, &.image-2{text-align: center !important;}
     &.image-1{
-        background-image: url('../../../images/promos/Promo_Fibre/Promo_Fibrex2_Visuel2_672x400px.jpg');
-    }
-    &.image-2{
         background-image: url('../../../images/promos/Promo_Fibre/Promo_Fibrex2_Visuel1_672x400px.jpg');
     }
 }
@@ -37,9 +34,14 @@
         }
     }
 }
-#promo-fibre{
+#promo-fibre, #promo-fibre-2x{
     background-size: 672px auto;
-    height: 400px !important;
+    background-position: center top;
+}
+#promo-fibre-2x{height: 400px;}
+#promo-fibre{
+    height: 200px;
+    background-image: url(../../../images/promos/Promo_Fibre/Offre_Fibre_JAN_672x200px.jpg);
 }
 .gallery-cell{
     width: 100%;
@@ -85,12 +87,3 @@
         font-size: 11px;
     }
 }
-/*.promo-offer-container{
-    div[class^=phone-]:first-child{
-        padding-right: 15px;
-    }
-    div[class^=phone-]:last-child{
-        padding-left: 15px;
-    }
-}*/
-

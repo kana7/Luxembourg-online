@@ -157,6 +157,7 @@
             padding-bottom: 135%;
             margin-bottom: 30px;
             &#loldsl{background-image: url(../../images/Homepage/OFFRES/LOL_DSL_288x392px.jpg);}
+            &#lolnow{background-image: url(../../images/Homepage/OFFRES/LOLNOW_288x392px.jpg);}
             &#mobiles{background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_288x392px.jpg);}
             &#installation{background-image: url(../../images/Homepage/OFFRES/LOL_TV_288x392px.jpg);}
         }
@@ -195,15 +196,15 @@
             &.next{right: 50px;}
         }
         .section-price{
-            font-size: 72px;
+            font-size: 92px;
             padding-top: 2px;
             div{
-                font-size: 24px;
+                font-size: 32px;
                 top: 12px;
-                left: 90px;
+                left: 100px;
             }
             span{
-                font-size: 21px;
+                font-size: 24px;
                 padding-left: 0px;
             }
         }
@@ -460,11 +461,18 @@
         margin-bottom: 20px;
         padding: 0 10px;
     }
+    #hda .menu-list{
+        min-width: 500px;
+        width: 100%;
+    }
 }
 
 @include viewport(range, $min: 672, $max: 1055){
     #document-links ul li {
         line-height: inherit;
+    }
+    #offers-section #lol.is-verified div[class^=phone-]{
+        min-height: 655px;
     }
 }
 
@@ -595,18 +603,6 @@
         p.bottom-details{
             font-size: 10pt;
         }
-        .section-price {
-            font-size: 72px;
-            padding-top: 2px;
-            div{
-                font-size: 21px;
-                top: 13px !important;
-                left: 90px;
-            }
-            span{
-                font-size: 21px;
-            }
-        }
     }
     #slider-ui{
         .buttons{
@@ -642,6 +638,7 @@
         .service{
             margin-bottom: 0;
             &#loldsl{background-image: url(../../images/Homepage/OFFRES/LOL_DSL_240x327px.jpg);}
+            &#lolnow{background-image: url(../../images/Homepage/OFFRES/LOLNOW_240x327px.jpg);}
             &#mobiles{background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_240x327px.jpg);}
             &#installation{background-image: url(../../images/Homepage/OFFRES/LOL_TV_240x327px.jpg);}
             .infos{
@@ -1013,7 +1010,10 @@
         padding-left: 9px !important;
     }
     .offer-item-orange .check-list li .icon-check-ico, .offer-item-blue .check-list li .icon-check-ico{
-        margin-right: 18px;
+        margin-right: 12px;
+    }
+    .offer-item-blue .check-list li .icon-check-ico, .offer-item-blue .check-list li .icon-x-icone, .equipement-item-blue .check-list li .icon-check-ico, .equipement-item-blue .check-list li .icon-x-icone, .news-item-blue .check-list li .icon-check-ico, .news-item-blue .check-list li .icon-x-icone{
+        margin-right: 11px;
     }
     .offer-item-blue .offer-price div, .offer-item-orange .offer-price div{
         left: 122px !important;
@@ -1167,15 +1167,15 @@
     }
     #slider-contents{
         .section-price{
-            font-size: 82px !important;
+            font-size: 112px !important;
             padding-top: 7px;
             div{
-                font-size: 22px;
-                top: 16px !important;
-                left: 93px;
+                font-size: 42px;
+                top: 20px !important;
+                left: 125px;
             }
             span{
-                font-size: 22px;
+                font-size: 35px;
             }
         }
     }
@@ -1235,6 +1235,7 @@
         .service
         {
             &#loldsl{background-image: url(../../images/Homepage/OFFRES/LOL_DSL_320x437px.jpg);}
+            &#lolnow{background-image: url(../../images/Homepage/OFFRES/LOLNOW_320x437px.jpg);}
             &#mobiles{background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_320x437px.jpg);}
             &#installation{background-image: url(../../images/Homepage/OFFRES/LOL_TV_320x437px.jpg);}
             .infos

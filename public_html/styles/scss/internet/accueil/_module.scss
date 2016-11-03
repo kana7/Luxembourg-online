@@ -317,7 +317,7 @@
                 line-height: 1;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
-                content: "\45";
+                content: "\57";
             }
         }
     }
@@ -455,4 +455,13 @@ input[type=number]{
     &::-webkit-inner-spin-button, &::-webkit-outer-spin-button{
         -webkit-appearance: none;
     }
+}
+
+#lolnow-banner{
+    background-color: #eff0f3;
+    background-size: 427px auto;
+    padding-top: 240px;
+    background-position: center top;
+    background-image: url(../../../images/Internet/320px/Img_LOLNOW.jpg);
+    .footer-note{text-align: center;}
 }

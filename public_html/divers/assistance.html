@@ -20,56 +20,58 @@
         <div id="clientSpace" class="popup">
             <div class="background-client"></div>
             <div class="white-pannel">
-                <button class="pannel-close"><span class="icon-x-icone"></span></button>
-                <h2>Espace Client</h2>
-                <ul class="client-menu">
-                    <li class="active" data-id="mail">Email</li>
-                    <li>|</li>
-                    <li data-id="account">Mon compte</li>
-                    <li>|</li>
-                    <li data-id="homepage">Homepage</li>
-                </ul>
-                <div class="pannel-forms">
-                    <form id="mail" class="clearfix is-visible" name="ServiceLogin1" method="POST" action="https://email.internet.lu/Scripts/sql.exe?_selection=10">
-                        <input type="hidden" name="Sql" value="Default.phs">  
-                        <input type="hidden" name="SqlDB" value="OMS2">  
-                        <div class="phone-6 input-left">
-                            <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
+                <div style="position:relative;">
+                    <button class="pannel-close"><span class="icon-x-icone"></span></button>
+                    <h2>Espace Client</h2>
+                    <ul class="client-menu">
+                        <li class="active" data-id="mail">Email</li>
+                        <li>|</li>
+                        <li data-id="account">Mon compte</li>
+                        <li>|</li>
+                        <li data-id="homepage">Homepage</li>
+                    </ul>
+                    <div class="pannel-forms">
+                        <form id="mail" class="clearfix is-visible" name="ServiceLogin1" method="POST" action="https://email.internet.lu/Scripts/sql.exe?_selection=10">
+                            <input type="hidden" name="Sql" value="Default.phs">  
+                            <input type="hidden" name="SqlDB" value="OMS2">  
+                            <div class="phone-6 input-left">
+                                <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
+                            </div>
+                            <div class="phone-6 input-right">
+                                <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
+                            </div>
+                            <button class="btn-blue" type="submit">Se connecter</button>
+                        </form>
+                        <form id="account" class="clearfix" name="LoginPhone" method="POST" action="http://shop.internet.lu/Scripts/sql.exe?LoginScript=LoginClient.phs&NextScript=DisplayAccount.phs&_Login=">
+                            <input type="hidden" name="Sql" value="LoginClient_Login.phs">  
+                            <input type="hidden" name="SqlDB" value="LOLShop">  
+                            <div class="phone-6 input-left">
+                                <input type="text" name="_Username" placeholder="Nom d'utilisateur"/>
+                            </div>
+                            <div class="phone-6 input-right">
+                                <input class="pull-right" type="password" name="_Password" placeholder="Mot de passe"/>
+                            </div>
+                            <button class="btn-blue" type="submit">Se connecter</button>
+                        </form>
+                        <form id="homepage" class="clearfix" name="ServiceLogin3" method="POST" action="http://sites.internet.lu/Scripts/sql.exe">
+                            <input type="hidden" name="Sql" value="default.phs">  
+                            <input type="hidden" name="SqlDB" value="OHPS">  
+                            <div class="phone-6 input-left">
+                                <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
+                            </div>
+                            <div class="phone-6 input-right">
+                                <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
+                            </div>
+                            <button class="btn-blue" type="submit">Se connecter</button>
+                        </form>
+                        <div class="contact-infos hidden-phone">
+                            Helpdesk: 2799 0000
+                            <span>Lu-Ve: 8h00-19h00  l  Sa: 9h00-18h00</span>
                         </div>
-                        <div class="phone-6 input-right">
-                            <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
+                        <div class="contact-infos display-phone">
+                            Helpdesk: 2799 0000
+                            <span>Lu-Ve: 8h00-19h00<br/>Sa: 9h00-18h00</span>
                         </div>
-                        <button class="btn-blue" type="submit">Se connecter</button>
-                    </form>
-                    <form id="account" class="clearfix" name="LoginPhone" method="POST" action="http://shop.internet.lu/Scripts/sql.exe?LoginScript=LoginClient.phs&NextScript=DisplayAccount.phs&_Login=">
-                        <input type="hidden" name="Sql" value="LoginClient_Login.phs">  
-                        <input type="hidden" name="SqlDB" value="LOLShop">  
-                        <div class="phone-6 input-left">
-                            <input type="text" name="_Username" placeholder="Nom d'utilisateur"/>
-                        </div>
-                        <div class="phone-6 input-right">
-                            <input class="pull-right" type="password" name="_Password" placeholder="Mot de passe"/>
-                        </div>
-                        <button class="btn-blue" type="submit">Se connecter</button>
-                    </form>
-                    <form id="homepage" class="clearfix" name="ServiceLogin3" method="POST" action="http://sites.internet.lu/Scripts/sql.exe">
-                        <input type="hidden" name="Sql" value="default.phs">  
-                        <input type="hidden" name="SqlDB" value="OHPS">  
-                        <div class="phone-6 input-left">
-                            <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
-                        </div>
-                        <div class="phone-6 input-right">
-                            <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
-                        </div>
-                        <button class="btn-blue" type="submit">Se connecter</button>
-                    </form>
-                    <div class="contact-infos hidden-phone">
-                        Helpdesk: 2799 0000
-                        <span>Lu-Ve: 8h00-19h00  l  Sa: 9h00-18h00</span>
-                    </div>
-                    <div class="contact-infos display-phone">
-                        Helpdesk: 2799 0000
-                        <span>Lu-Ve: 8h00-19h00<br/>Sa: 9h00-18h00</span>
                     </div>
                 </div>
             </div>
@@ -95,7 +97,7 @@
                         <li class="menu-item link"><a href="../divers/assistance.html">Assistance</a></li>
                         <li class="menu-item link"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOLCLOUD</a></li>
                         <!--<li class="menu-item link"><a href="../divers/news.html">Actualités</a></li>-->
-                        <li class="menu-item link"><a href="../divers/magazine.html">Magazine</a></li>
+                        <li class="menu-item link"><a href="../divers/brochure.html">Brochure</a></li>
                         <li class="menu-item link"><a href="../divers/propos.html">À propos</a></li>
                         <li class="menu-item link"><a href="../divers/contact.html">Contact</a></li>
                         <li class="menu-item link"><a href="../divers/emploi.html">Offres d'emploi</a></li>
@@ -109,6 +111,7 @@
                     <li class="menu-item"><a href="../internet/accueil.html">Accueil Internet</a></li>
                     <li class="menu-item"><a href="../internet/offres.html">Nos offres</a></li>
                     <li class="menu-item"><a href="../internet/equipements.html">Nos équipements</a></li>
+                    <li class="menu-item"><a href="../internet/optionnow.html">Option NOW</a></li>
                     <li class="menu-item"><a href="../internet/abonnement.html">Abonnez-vous</a></li>
                 </ul>
             </div>
@@ -148,18 +151,16 @@
                     <div class="container-wrapper">
                         <div class="row">
                             <nav class="pull-left">
-                                <div class="header-dropdown top-menu-header-links left">
-                                    <button>Particuliers<span class="icon-right-arrow"></span></button>
-                                    <ul class="drop">
-                                        <li><a href="http://www.internet.lu/business/">Business</a></li>
-                                    </ul>
-                                </div>
+                                <ul class="top-menu-header-links left">
+                                    <li class="active"><a href="/index.htm">Particuliers</a></li><!--
+                                    --><li><a href="http://www.internet.lu/business/">Business</a></li>
+                                </ul>
                             </nav>
                             <nav class="pull-right hidden-phone hidden-tab">
                                 <ul class="top-menu-header-links right">
                                     <li class="menu-item active"><a href="../divers/assistance.html">Assistance</a></li>
                                     <li class="menu-item"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOLCLOUD</a></li>
-                                    <!--<li class="menu-item"><a href="../divers/news.html">Actualités</a></li>--><li class="menu-item"><a href="../divers/magazine.html">Magazine</a></li>
+                                    <!--<li class="menu-item"><a href="../divers/news.html">Actualités</a></li>--><li class="menu-item"><a href="../divers/brochure.html">Brochure</a></li>
                                     <li class="menu-item"><a href="../divers/propos.html">À propos</a></li>
                                     <li class="menu-item"><a href="../divers/contact.html">Contact</a></li>
                                 </ul>
@@ -1120,7 +1121,7 @@
                                 <select class="docList">
                                     <option value="0">Contrats d'abonnement</option>
                                     <option value="1">Divers</option>
-                                    <option value="2">Conditions générales et particulières</option>
+                                    <option value="2">Condition générales et particulières</option>
                                     <option value="3">Fiches signalétiques</option>
                                 </select>
                                 <div class="docItem" style="display: block;">
@@ -1153,7 +1154,7 @@
                                                         <li><a href="../documents/domiciliationnew_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Domiciliation bancaire</div></a></li>
                                                         <li><a href="../documents/Transfert_Contrat_Internet.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Transfert de contrat <span>Internet et/ou téléphonie</span></div></a></li>
                                                         <li><a href="../documents/RUSH_ORDER_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Rush Order</div></a></li>
-                                                        <li><a href="../documents/LISTE_DES_PRIX.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Liste des prix<span>(nouvelle version depuis 01/04/2016)</span></div></a></li>
+                                                        <li><a href="../documents/LISTE_DES_PRIX.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Liste des prix<span>(nouvelle version depuis 26/10/2016)</span></div></a></li>
                                                         <li><a href="http://www.internet.lu/documents/RETRACTATION.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Formulaire de rétractation<span>(Commande en ligne)</span></div></a></li>
                                                         <li><a href="http://www.internet.lu/documents/RENONCIATION.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Formulaire de renonciation<span>(Commande en ligne)</span></div></a></li>
                                                     </ul>
@@ -1166,13 +1167,13 @@
                                     <table>
                                         <tbody>
                                             <tr>
-                                                <td><h2>Conditions générales et particulières</h2>
+                                                <td><h2>Condition générales et particulières</h2>
                                                     <ul>
-                                                        <li><a href="../documents/CONDITIONS%20GENERALES%20DES%20SERVICES%20LUXEMBOURG%20ONLINE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Conditions générales<span>(nouvelle version depuis 09/01/2014)</span></div></a></li>
-                                                        <li><a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20ACCES%20%20INTERNET%20HAUT%20DEBIT%20ET%20TRES%20HAUT%20DEBIT.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Conditions particulières xDSL/Fibre<span>(nouvelle version depuis 12/03/2012)</span></div></a></li>
-                                                        <li><a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20ACCES%20INTERNET%20HAUT%20DE%20DEBIT%20PAR%20CABLE%20CATV.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Conditions particulières <span>Internet par câble </span><span>(nouvelle version depuis 12/03/2012)</span></div></a></li>
-                                                        <li><a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20DE%20TELEPHONIE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Conditions particulières téléphonie fixe<span>(nouvelle version depuis 12/03/2012)</span></div></a></li>
-                                                        <li><a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20DE%20TELEPHONIE%20MOBILE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Conditions particulières<span> téléphonie mobile</span><span>(nouvelle version depuis 01/05/2015)</span></div></a></li>
+                                                        <li><a href="../documents/CONDITIONS%20GENERALES%20DES%20SERVICES%20LUXEMBOURG%20ONLINE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Condition générales<span>(nouvelle version depuis 09/01/2014)</span></div></a></li>
+                                                        <li><a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20ACCES%20%20INTERNET%20HAUT%20DEBIT%20ET%20TRES%20HAUT%20DEBIT.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Condition particulières xDSL/Fibre<span>(nouvelle version depuis 12/03/2012)</span></div></a></li>
+                                                        <li><a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20ACCES%20INTERNET%20HAUT%20DE%20DEBIT%20PAR%20CABLE%20CATV.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Condition particulières <span>Internet par câble </span><span>(nouvelle version depuis 12/03/2012)</span></div></a></li>
+                                                        <li><a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20DE%20TELEPHONIE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Condition particulières téléphonie fixe<span>(nouvelle version depuis 12/03/2012)</span></div></a></li>
+                                                        <li><a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20DE%20TELEPHONIE%20MOBILE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Condition particulières<span> téléphonie mobile</span><span>(nouvelle version depuis 01/05/2015)</span></div></a></li>
                                                     </ul>
                                                 </td>
                                             </tr>
@@ -1197,6 +1198,7 @@
                                                             <li><a href="../documents/feuille_type_offres_groupees2.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOL KOMPLETT</div></a></li>
                                                             <li><a href="../documents/feuille_type_teledistribution_IPTV.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLTV</div></a></li>
                                                             <li><a href="../documents/feuille_type_autres_services.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Autres services</div></a></li>
+                                                            <li><a href="../documents/feuille_type_mobile_lolnow.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOL NOW</div></a></li>
                                                         </ul>
                                                     </div>
                                                     <div class="tab-adjust-2">

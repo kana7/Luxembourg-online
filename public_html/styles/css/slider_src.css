@@ -8,7 +8,7 @@
   #slider-contents .infos.image-3 {
     background-image: url(../../images/Homepage/SLIDER/Slider3_672x320px.jpg); }
   #slider-contents .infos.image-4 {
-    background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel2_672x320px.jpg); }
+    background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel2_672x320x.jpg); }
   #slider-contents .infos.image-5 {
     background-image: url(../../images/Homepage/SLIDER/Inscription_672x320px.jpg); }
 
@@ -35,7 +35,7 @@
     #slider-contents .infos.image-3 {
       background-image: url(../../images/Homepage/SLIDER/Slider3_1302x330px.jpg); }
     #slider-contents .infos.image-4 {
-      background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel2_1302x370px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel2_1302x330px.jpg); }
     #slider-contents .infos.image-5 {
       background-image: url(../../images/Homepage/SLIDER/Inscription_1302x330px.jpg); } }
 @media screen and (min-width: 1302px) {
@@ -48,7 +48,7 @@
     #slider-contents .infos.image-3 {
       background-image: url(../../images/Homepage/SLIDER/Slider3_1920x360px.jpg); }
     #slider-contents .infos.image-4 {
-      background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel2_1920x400px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel2_1920x360px.jpg); }
     #slider-contents .infos.image-5 {
       background-image: url(../../images/Homepage/SLIDER/Inscription_1920x360px.jpg); } }
 #slider-contents .infos.image-6 .title {
@@ -59,8 +59,8 @@
   line-height: 30px; }
 
 #slider-contents .infos.image-4 .title {
-  font-size: 35px;
-  line-height: 32px; }
+  font-size: 29px;
+  line-height: 25px; }
 
 #slider-contents .infos.image-2 .title {
   font-size: 26px;
@@ -100,7 +100,7 @@
       font-size: 0.5em; }
 
   #slider-contents .infos.image-4 .title {
-    font-size: 50px;
+    font-size: 42px;
     line-height: 40px; }
     #slider-contents .infos.image-4 .title span.chapeau {
       font-size: 0.5em; }
@@ -150,10 +150,10 @@
     margin-bottom: 15px; }
 
   #slider-contents .infos.image-4 div[class^="phone-"] {
-    float: right;
-    text-align: right; }
+    float: left;
+    text-align: left; }
     #slider-contents .infos.image-4 div[class^="phone-"] .section-price {
-      float: right;
+      float: left;
       margin: initial !important; }
 
   #slider-contents .image-5 .btn-orange {
@@ -179,7 +179,7 @@
       line-height: 40px; }
 
   #slider-contents .infos.image-4 .title {
-    font-size: 58px;
+    font-size: 45px;
     line-height: 43px; }
 
   #slider-contents .image-5 .btn-orange {

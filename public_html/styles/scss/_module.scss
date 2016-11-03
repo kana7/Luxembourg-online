@@ -207,8 +207,11 @@ span[class^=icon-]
     margin: 15px 0;
     line-height: 15px;
     span{
-        display: inline-block;
+        display: inline;
     }
+    li{display: inline-block; &:not(:first-child){
+           padding-left: 10px;
+       }}
 }
 .extra-bold{
     font-weight: 800 !important;
@@ -509,22 +512,23 @@ span[class^=icon-]
 {
     font-size: 13px;
     font-weight: 400;
-
-    padding: 9px 0 8px;
-
     color: $white;
     text-shadow: 0 1px 5px $dark-grey;
+    li{padding: 11px 0px 10px;}
     &.left li
     {
-        margin-right: 30px;
+        padding: 11px 10px 10px;
+        &.active{
+            background-color: lighten($blue, 5%);
+        }
     }
     &.right li
     {
         margin-left: 30px;
-    }
-    li.active{
-        font-weight: 600;
-        text-decoration: underline;
+        &.active{
+            font-weight: 600;
+            text-decoration: underline;
+        }
     }
 }
 .bottom-menu-header-links
@@ -850,6 +854,21 @@ span[class^=icon-]
     font-weight: 400;
     z-index: 3;
 }
+@mixin menu-list(){
+    display: block;
+    li{
+        display: block;
+        padding: 11px;
+        padding-left: 25px;
+        cursor: pointer;
+        &:not(:last-child){
+            border-bottom: 1px solid lighten($grey, 8%);
+        }
+    }
+}
+.menu-list{
+    @include menu-list;
+}
 .DesktopMenu, .news-menu ul{
     display: block;
     li{
@@ -1150,6 +1169,7 @@ span[class^=icon-]
             font-size: 32px;
             top: 3px;
             left: 150px;
+            .exponent{font-size: 0.5em;}
         }
         span{
             font-size: 22px;
@@ -1211,7 +1231,7 @@ span[class^=icon-]
     .check-list{
         text-align: left;
         li{
-            .icon-check-ico{
+            .icon-check-ico, .icon-x-icone{
                 position: relative;
                 top: 2px;
                 line-height: 10px;
@@ -1223,6 +1243,7 @@ span[class^=icon-]
             font-size: 15px;
             font-weight: 400;
         }
+        a{font-weight: 600; &:hover{text-decoration: underline;}}
     }
 }
 .offer-item-blue, .equipement-item-blue, .news-item-blue{
@@ -1801,15 +1822,15 @@ span[class^=icon-]
         color: $dark-grey;
     }
     .section-price{
-        font-size: 55px;
+        font-size: 62px;
         padding-top: 0px;
         div{    
-            font-size: 20px;
+            font-size: 24px;
             top: 7px;
             left: 85px;
         }
         span{
-            font-size: 18px;
+            font-size: 20px;
             padding-left: 0px;
         }
     }
@@ -2147,14 +2168,16 @@ footer
     text-transform: uppercase;
     font-weight: 800;
     margin-top: 10px;
-    &:hover{
-        text-decoration: underline;
-    }
     span[class^=icon-]{
         margin-right: 0;
         margin-left: 7px;
         font-size: 1.2em;
         top: 3px;
+    }
+}
+a.promos-link{
+    &:hover{
+        text-decoration: underline;
     }
 }
 .not+.promos-link.persist{
@@ -2453,14 +2476,14 @@ footer
     .pannel-close{
         display: block;
         position: absolute;
-        right: 30px;
-        top: 24px;
+        right: 0;
+        top: 0;
         padding: 0;
         border: none;
         background: none;
         span{
             margin: 0;
-            font-size: 16px;
+            font-size: 21px;
         }
         &:focus{
             outline: 0;
@@ -3107,6 +3130,153 @@ h2.contact-title {
 }
 
 
+/*------------------------------HDA CLIENT------------------------------------*/
+#hda, #hda+section{
+    hr{
+        border-style: solid;
+        border-width: 1px; 
+        max-width: 600px; 
+        border-color: $grey;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    .btn-primary, .btn-default{
+        @include btn;
+        padding: 10px 15px;
+    }
+    .btn-default{
+        color: $dark-grey;
+        border-color: $dark-grey;
+        border-width: 1px;
+        margin: 0;
+        &:hover{
+            border-color: lighten($blue, 5%);
+            color: lighten($blue, 5%);
+            @include box-shadow(0 0 5px 0 rgba(0,73,148,0.75));
+        }
+    }
+    .btn-primary{
+        color: white;
+        border-color: $blue;
+        background-color: $blue;
+        border-width: 1px;
+        margin: 0;
+        &:hover{
+            background-color: lighten($blue, 5%);
+            border-color: lighten($blue, 5%);
+            @include box-shadow(0 0 5px 0 rgba(0,73,148,0.75));
+        }
+    }
+    .hda-description{font-size: 14px; color: $dark-grey; text-align: center; }
+    .hda-title{font-size: 21px; line-height: 25px; color: $blue; text-align: center;}
+    .instruction-list{
+        display: table;
+        margin: 0 auto 0;
+        li{
+            position: relative;
+            display: table;
+            padding: 0;
+            font-size: 16px;
+            font-weight: 600;
+            .menu-list-label,&:before{display: table-cell; vertical-align: middle; margin: 0;}
+            &:before{
+                @include data-icon;
+                font-size: 0.6em;
+                text-align: left;
+                padding-right: 10px;
+                color: $blue;
+                content: "\71";
+            }
+            &:not(:last-child){margin-bottom: 25px;}
+        }
+    }
+    .menu-list{
+        display: table;
+        max-width: 290px;
+        margin: 0 auto 40px;
+        border: 1px solid #d4d4d4;
+        border-radius: $border-radius;
+        &.not-cat{max-width: none; min-width: auto !important; width: auto !important;}
+        li{
+            position: relative; padding: 0;
+            &:last-child{a{border-radius: 0px 0px 5px 5px;}}
+            &:first-child{a{border-radius: 5px 5px 0px 0px}}
+        }
+        a{
+            display: table; 
+            position: relative;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            padding: 13px 15px;
+            font-size: 16px;
+            font-weight: 600;
+            background-color: darken($light-grey, 0.5%);
+            @include transition($transitionUi);
+            &:hover{
+                color: $blue;
+                background-color: white;
+            }
+        }
+        span[class^=icon-],a:after, .menu-list-label{display: table-cell; vertical-align: middle; margin: 0;}
+        span[class^=icon-], a:after{width: 40px;}
+        span[class^=icon-]{ text-align: left;}
+        span[class^=icon-]{font-size: 1.5em;}
+        a:after{
+            @include data-icon;
+            font-size: 0.8em;
+            text-align: right;
+            content: "\71";
+        }
+    }
+    .hda-box{
+        @include box-shadow(0 0 2px 0 rgba(0, 0, 0, 0.1));
+        text-align: center;
+        @include transition($transitionUi);
+        .header{
+            background-color: $blue; 
+            border-color: $blue;
+            font-size: 14px;
+            line-height: 39px;
+            color: white;
+            .icon-right-arrow{margin-left: 10px; margin-right: 0; font-size: 0.7em;}
+        }
+        .header-title{
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .img-container{
+            position: relative;
+            padding: 50px;
+            height: 225px;
+            width: 100%;
+            border: 1px solid $grey;
+            img{vertical-align: middle; max-width: 100%; max-height: 100%; @include vertical-align-middle();}
+        }
+    }
+    a:hover .hda-box{
+        @include box-shadow(0 0 10px 0 rgba(0,0,0,0.35));
+    }
+    .final-step{
+        .hda-title{
+            font-size: 48px; line-height: 48px; color: $blue; text-align: center; margin-bottom: 30px;
+        }
+        .hda-description{font-size: 16px; line-height: 22px;}
+        .social-links ul{
+            display: block;
+            max-width: 300px;
+            width: 100%;
+            margin: 0 auto;
+            @include display-flex-center;
+            li{margin: 0 10px;}
+        }
+    }
+    .img-link{display: inline-block; height: 50px; img{max-height: 100%; max-width: 100%;}}
+}
+
 /*-----------------------------------ASSISTANCE-------------------------------*/
 .assistance-thumbnail{
     background-color: darken($light-grey, 2%);
@@ -3507,26 +3677,26 @@ h2.contact-title {
 
 
 .mfp-fade.mfp-bg {
-	opacity: 0;
-	-webkit-transition: all 0.15s ease-out; 
-	-moz-transition: all 0.15s ease-out; 
-	transition: all 0.15s ease-out;
+    opacity: 0;
+    -webkit-transition: all 0.15s ease-out; 
+    -moz-transition: all 0.15s ease-out; 
+    transition: all 0.15s ease-out;
 }
 .mfp-fade.mfp-bg.mfp-ready {
-	opacity: 0.8;
+    opacity: 0.8;
 }
 .mfp-fade.mfp-bg.mfp-removing {
-	opacity: 0;
+    opacity: 0;
 }
 
 .mfp-fade.mfp-wrap .mfp-content {
-	opacity: 0;
-	-webkit-transition: all 0.15s ease-out; 
-	-moz-transition: all 0.15s ease-out; 
-	transition: all 0.15s ease-out;
+    opacity: 0;
+    -webkit-transition: all 0.15s ease-out; 
+    -moz-transition: all 0.15s ease-out; 
+    transition: all 0.15s ease-out;
 }
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
-	opacity: 1;
+    opacity: 1;
 }
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
 	opacity: 0;

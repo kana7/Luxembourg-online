@@ -27,56 +27,58 @@
         <div id="clientSpace" class="popup">
             <div class="background-client"></div>
             <div class="white-pannel">
-                <button class="pannel-close"><span class="icon-x-icone"></span></button>
-                <h2>Espace Client</h2>
-                <ul class="client-menu">
-                    <li class="active" data-id="mail">Email</li>
-                    <li>|</li>
-                    <li data-id="account">Mon compte</li>
-                    <li>|</li>
-                    <li data-id="homepage">Homepage</li>
-                </ul>
-                <div class="pannel-forms">
-                    <form id="mail" class="clearfix is-visible" name="ServiceLogin1" method="POST" action="https://email.internet.lu/Scripts/sql.exe?_selection=10">
-                        <input type="hidden" name="Sql" value="Default.phs">  
-                        <input type="hidden" name="SqlDB" value="OMS2">  
-                        <div class="phone-6 input-left">
-                            <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
+                <div style="position:relative;">
+                    <button class="pannel-close"><span class="icon-x-icone"></span></button>
+                    <h2>Espace Client</h2>
+                    <ul class="client-menu">
+                        <li class="active" data-id="mail">Email</li>
+                        <li>|</li>
+                        <li data-id="account">Mon compte</li>
+                        <li>|</li>
+                        <li data-id="homepage">Homepage</li>
+                    </ul>
+                    <div class="pannel-forms">
+                        <form id="mail" class="clearfix is-visible" name="ServiceLogin1" method="POST" action="https://email.internet.lu/Scripts/sql.exe?_selection=10">
+                            <input type="hidden" name="Sql" value="Default.phs">  
+                            <input type="hidden" name="SqlDB" value="OMS2">  
+                            <div class="phone-6 input-left">
+                                <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
+                            </div>
+                            <div class="phone-6 input-right">
+                                <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
+                            </div>
+                            <button class="btn-blue" type="submit">Se connecter</button>
+                        </form>
+                        <form id="account" class="clearfix" name="LoginPhone" method="POST" action="http://shop.internet.lu/Scripts/sql.exe?LoginScript=LoginClient.phs&NextScript=DisplayAccount.phs&_Login=">
+                            <input type="hidden" name="Sql" value="LoginClient_Login.phs">  
+                            <input type="hidden" name="SqlDB" value="LOLShop">  
+                            <div class="phone-6 input-left">
+                                <input type="text" name="_Username" placeholder="Nom d'utilisateur"/>
+                            </div>
+                            <div class="phone-6 input-right">
+                                <input class="pull-right" type="password" name="_Password" placeholder="Mot de passe"/>
+                            </div>
+                            <button class="btn-blue" type="submit">Se connecter</button>
+                        </form>
+                        <form id="homepage" class="clearfix" name="ServiceLogin3" method="POST" action="http://sites.internet.lu/Scripts/sql.exe">
+                            <input type="hidden" name="Sql" value="default.phs">  
+                            <input type="hidden" name="SqlDB" value="OHPS">  
+                            <div class="phone-6 input-left">
+                                <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
+                            </div>
+                            <div class="phone-6 input-right">
+                                <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
+                            </div>
+                            <button class="btn-blue" type="submit">Se connecter</button>
+                        </form>
+                        <div class="contact-infos hidden-phone">
+                            Helpdesk: 2799 0000
+                            <span>Lu-Ve: 8h00-19h00  l  Sa: 9h00-18h00</span>
                         </div>
-                        <div class="phone-6 input-right">
-                            <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
+                        <div class="contact-infos display-phone">
+                            Helpdesk: 2799 0000
+                            <span>Lu-Ve: 8h00-19h00<br/>Sa: 9h00-18h00</span>
                         </div>
-                        <button class="btn-blue" type="submit">Se connecter</button>
-                    </form>
-                    <form id="account" class="clearfix" name="LoginPhone" method="POST" action="http://shop.internet.lu/Scripts/sql.exe?LoginScript=LoginClient.phs&NextScript=DisplayAccount.phs&_Login=">
-                        <input type="hidden" name="Sql" value="LoginClient_Login.phs">  
-                        <input type="hidden" name="SqlDB" value="LOLShop">  
-                        <div class="phone-6 input-left">
-                            <input type="text" name="_Username" placeholder="Nom d'utilisateur"/>
-                        </div>
-                        <div class="phone-6 input-right">
-                            <input class="pull-right" type="password" name="_Password" placeholder="Mot de passe"/>
-                        </div>
-                        <button class="btn-blue" type="submit">Se connecter</button>
-                    </form>
-                    <form id="homepage" class="clearfix" name="ServiceLogin3" method="POST" action="http://sites.internet.lu/Scripts/sql.exe">
-                        <input type="hidden" name="Sql" value="default.phs">  
-                        <input type="hidden" name="SqlDB" value="OHPS">  
-                        <div class="phone-6 input-left">
-                            <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
-                        </div>
-                        <div class="phone-6 input-right">
-                            <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
-                        </div>
-                        <button class="btn-blue" type="submit">Se connecter</button>
-                    </form>
-                    <div class="contact-infos hidden-phone">
-                        Helpdesk: 2799 0000
-                        <span>Lu-Ve: 8h00-19h00  l  Sa: 9h00-18h00</span>
-                    </div>
-                    <div class="contact-infos display-phone">
-                        Helpdesk: 2799 0000
-                        <span>Lu-Ve: 8h00-19h00<br/>Sa: 9h00-18h00</span>
                     </div>
                 </div>
             </div>
@@ -84,7 +86,12 @@
         <div class="fixed-options hidden-phone hidden-tab">
             <a class="popup-youtube" href="https://www.youtube.com/watch?v=gfRsh1OKIpo">
                 <div class="blue-fixed-option">
-                    <p>Regarder la<br/> <strong>démo</strong></p>
+                    <div style="position: relative;">
+                        <div style="font-size: 25px; position: absolute; left: 0; bottom: 8px;" >
+                            <span style="margin: 0;" class="icon-player"></span>
+                        </div>
+                        <p style="margin-left: 30px;" class="align-left">Regardez la<br/> <strong>démo</strong></p>
+                    </div>
                 </div>
             </a>
         </div>
@@ -100,7 +107,7 @@
                     <ul class="menu">
                         <li class="menu-item link"><a href="http://www.internet.lu/divers/assistance.html">Assistance</a></li>
                         <li class="menu-item link"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOLCLOUD</a></li>
-                        <li class="menu-item link"><a href="http://www.internet.lu/divers/magazine.html">Magazine</a></li>
+                        <li class="menu-item link"><a href="http://www.internet.lu/divers/brochure.html">Brochure</a></li>
                         <li class="menu-item link"><a href="http://www.internet.lu/divers/propos.html">À propos</a></li>
                         <li class="menu-item link"><a href="http://www.internet.lu/divers/contact.html">Contact</a></li>
                         <li class="menu-item link"><a href="http://www.internet.lu/divers/emploi.html">Offres d'emploi</a></li>
@@ -114,6 +121,7 @@
                     <li class="menu-item"><a href="http://www.internet.lu/internet/accueil.html">Accueil Internet</a></li>
                     <li class="menu-item"><a href="http://www.internet.lu/internet/offres.html">Nos offres</a></li>
                     <li class="menu-item"><a href="http://www.internet.lu/internet/equipements.html">Nos équipements</a></li>
+                    <li class="menu-item"><a href="http://www.internet.lu/internet/lolnow.html">LOLNOW</a></li>
                     <li class="menu-item"><a href="http://www.internet.lu/internet/abonnement.html">Abonnez-vous</a></li>
                 </ul>
             </div>
@@ -152,18 +160,16 @@
                     <div class="container-wrapper">
                         <div class="row">
                             <nav class="pull-left">
-                                <div class="header-dropdown top-menu-header-links left">
-                                    <button>Particuliers<span class="icon-right-arrow"></span></button>
-                                    <ul class="drop">
-                                        <li><a href="http://www.internet.lu/business/">Business</a></li>
-                                    </ul>
-                                </div>
+                                <ul class="top-menu-header-links left">
+                                    <li class="active"><a href="http://www.internet.lu/index.htm">Particuliers</a></li><!--
+                                    --><li><a href="http://www.internet.lu/business/">Business</a></li>
+                                </ul>
                             </nav>
                             <nav class="pull-right">
                                 <ul class="top-menu-header-links right">
                                     <li><a href="http://www.internet.lu/divers/assistance.html">Assistance</a></li>
                                     <li><a href="http://www.internet.lu/lolcloud/index.htm" target="_blank">LOLCLOUD</a></li>
-                                    <li><a href="http://www.internet.lu/divers/magazine.html">Magazine</a></li>
+                                    <li><a href="http://www.internet.lu/divers/brochure.html">Brochure</a></li>
                                     <li><a href="http://www.internet.lu/divers/propos.html">À propos</a></li>
                                     <li><a href="http://www.internet.lu/divers/contact.html">Contact</a></li>
                                 </ul>
@@ -341,17 +347,18 @@
                                                 </div>
                                                 <ul class="item-body">
                                                     <li class="description">Bénéficiez de l'essentiel</li>
-                                                    <li class="info"><span class="icon-download-ico download"></span>24 Mbit/s<span class="exponent">(1)</span></li>
-                                                    <li class="info"><span class="icon-download-ico upload"></span>1 Mbits/s<span class="exponent">(1)</span></li>
+                                                    <li class="info" data-fnote="[0]"><span class="icon-download-ico download"></span>24 Mbit/s</li>
+                                                    <li class="info" data-fnote="[0]"><span class="icon-download-ico upload"></span>1 Mbits/s</li>
                                                     <li class="check-list-container">
                                                         <div class="check-list-title"><span class="icon-pack-ico"></span> Inclus dans ce pack : </div>
                                                         <ul class="check-list">
                                                             <li><span class="icon-check-ico"></span>Volume illimité</li>
                                                             <li><span class="icon-check-ico"></span>Abonnement tél. fixe</li>
-                                                            <li><span class="icon-check-ico"></span>Appels nat. fixes<span class="exponent">(2)</span></li>
+                                                            <li data-fnote="[1]"><span class="icon-check-ico"></span>Appels nat. fixes</li>
                                                             <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
-                                                            <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
+                                                            <li data-fnote="[1,2]"><span class="icon-check-ico"></span>120 min vers l'Europe fixe</li>
                                                             <li><span class="icon-check-ico"></span>LOLCLOUD 5GB</li>
+                                                            <li><span class="icon-x-icone"></span><a href="//www.internet.lu/internet/optionnow.html">Option NOW <span style="font-size: 12px;">(sur demande)</span></a></li>
                                                         </ul>
                                                     </li>
                                                 </ul>
@@ -373,17 +380,18 @@
                                                 </div>
                                                 <ul class="item-body">
                                                     <li class="description">Gardez le contact</li>
-                                                    <li class="info"><span class="icon-download-ico download"></span>30 Mbit/s<span class="exponent">(1)</span></li>
-                                                    <li class="info"><span class="icon-download-ico upload"></span>10 Mbits/s<span class="exponent">(1)</span></li>
+                                                    <li class="info" data-fnote="[0]"><span class="icon-download-ico download"></span>30 Mbit/s</li>
+                                                    <li class="info" data-fnote="[0]"><span class="icon-download-ico upload"></span>10 Mbits/s</li>
                                                     <li class="check-list-container">
                                                         <div class="check-list-title"><span class="icon-pack-ico"></span> Inclus dans ce pack : </div>
                                                         <ul class="check-list">
                                                             <li><span class="icon-check-ico"></span>Volume illimité</li>
                                                             <li><span class="icon-check-ico"></span>Abonnement tél. fixe</li>
-                                                            <li><span class="icon-check-ico"></span>Appels nat. fixes<span class="exponent">(2)</span></li>
+                                                            <li data-fnote="[1]"><span class="icon-check-ico"></span>Appels nat. fixes<span class="exponent">(2)</span></li>
                                                             <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
-                                                            <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
+                                                            <li data-fnote="[1,2]"><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
                                                             <li><span class="icon-check-ico"></span>LOLCLOUD 5GB</li>
+                                                            <li><span class="icon-x-icone"></span><a href="//www.internet.lu/internet/optionnow.html">Option NOW <span style="font-size: 12px;">(sur demande)</span></a></li>
                                                         </ul>
                                                     </li>
                                                 </ul>
@@ -405,17 +413,18 @@
                                                 </div>
                                                 <ul class="item-body">
                                                     <li class="description">Offre coup  de <span class="icon-heart-ico"></span></li>
-                                                    <li class="info"><span class="icon-download-ico download"></span>100 Mbit/s<span class="exponent">(1)</span></li>
-                                                    <li class="info"><span class="icon-download-ico upload"></span>50 Mbits/s<span class="exponent">(1)</span></li>
+                                                    <li class="info" data-fnote="[0]"><span class="icon-download-ico download"></span>100 Mbit/s</li>
+                                                    <li class="info" data-fnote="[0]"><span class="icon-download-ico upload"></span>50 Mbits/s</li>
                                                     <li class="check-list-container">
                                                         <div class="check-list-title"><span class="icon-pack-ico"></span> Inclus dans ce pack : </div>
                                                         <ul class="check-list">
                                                             <li><span class="icon-check-ico"></span>Volume illimité</li>
                                                             <li><span class="icon-check-ico"></span>Abonnement tél. fixe</li>
-                                                            <li><span class="icon-check-ico"></span>Appels nat. fixes<span class="exponent">(2)</span></li>
+                                                            <li data-fnote="[1]"><span class="icon-check-ico"></span>Appels nat. fixes</li>
                                                             <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
-                                                            <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
+                                                            <li data-fnote="[1,2]"><span class="icon-check-ico"></span>120 min vers l'Europe fixe</li>
                                                             <li><span class="icon-check-ico"></span>LOLCLOUD 5GB</li>
+                                                            <li><span class="icon-check-ico"></span><a href="//www.internet.lu/internet/optionnow.html">Option NOW</a></li>
                                                         </ul>
                                                     </li>
                                                 </ul>
@@ -427,7 +436,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <a class="promos-link persist" href="http://www.internet.lu/promos/fibre.html">Promo : installation offerte + vitesse x2<span class="exponent">(4)</span></a>
+                                        <a class="promos-link persist" data-fnote="[3]" href="//www.internet.lu/promos/fibre.html">Promo : installation offerte + vitesse x2</a>
                                     </div>
                                     <div class="gallery-cell">
                                         <div class="k200">
@@ -437,17 +446,18 @@
                                                 </div>
                                                 <ul class="item-body">
                                                     <li class="description">Exigez le meilleur</li>
-                                                    <li class="info"><span class="icon-download-ico download"></span>200 Mbit/s<span class="exponent">(1)</span></li>
-                                                    <li class="info"><span class="icon-download-ico upload"></span>100 Mbits/s<span class="exponent">(1)</span></li>
+                                                    <li class="info" data-fnote="[0]"><span class="icon-download-ico download"></span>200 Mbit/s</li>
+                                                    <li class="info" data-fnote="[0]"><span class="icon-download-ico upload"></span>100 Mbits/s</li>
                                                     <li class="check-list-container">
                                                         <div class="check-list-title"><span class="icon-pack-ico"></span> Inclus dans ce pack : </div>
                                                         <ul class="check-list">
                                                             <li><span class="icon-check-ico"></span>Volume illimité</li>
                                                             <li><span class="icon-check-ico"></span>Abonnement tél. fixe</li>
-                                                            <li><span class="icon-check-ico"></span>Appels nat. fixes<span class="exponent">(2)</span></li>
+                                                            <li data-fnote="[1]"><span class="icon-check-ico"></span>Appels nat. fixes</li>
                                                             <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
-                                                            <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
+                                                            <li data-fnote="[1,2]"><span class="icon-check-ico"></span>120 min vers l'Europe fixe</li>
                                                             <li><span class="icon-check-ico"></span>LOLCLOUD 5GB</li>
+                                                            <li><span class="icon-check-ico"></span><a href="//www.internet.lu/internet/optionnow.html">Option NOW</a></li>
                                                         </ul>
                                                     </li>
                                                 </ul>
@@ -473,17 +483,18 @@
                                         </div>
                                         <ul class="item-body">
                                             <li class="description">Bénéficiez de l'essentiel</li>
-                                            <li class="info"><span class="icon-download-ico download"></span>24 Mbit/s<span class="exponent">(1)</span></li>
-                                            <li class="info"><span class="icon-download-ico upload"></span>1 Mbits/s<span class="exponent">(1)</span></li>
+                                            <li class="info" data-fnote="[0]"><span class="icon-download-ico download"></span>24 Mbit/s</li>
+                                            <li class="info" data-fnote="[0]"><span class="icon-download-ico upload"></span>1 Mbits/s</li>
                                             <li class="check-list-container">
                                                 <div class="check-list-title"><span class="icon-pack-ico"></span> Inclus dans ce pack : </div>
                                                 <ul class="check-list">
                                                     <li><span class="icon-check-ico"></span>Volume illimité</li>
                                                     <li><span class="icon-check-ico"></span>Abonnement tél. fixe</li>
-                                                    <li><span class="icon-check-ico"></span>Appels nat. fixes<span class="exponent">(2)</span></li>
+                                                    <li data-fnote="[1]"><span class="icon-check-ico"></span>Appels nat. fixes</li>
                                                     <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
-                                                    <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
+                                                    <li data-fnote="[0]"><span class="icon-check-ico"></span>120 min vers l'Europe fixe</li>
                                                     <li><span class="icon-check-ico"></span>LOLCLOUD 5GB</li>
+                                                    <li><span class="icon-x-icone"></span><a href="//www.internet.lu/internet/optionnow.html">Option NOW <span style="font-size: 12px;">(sur demande)</span></a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -504,17 +515,18 @@
                                         </div>
                                         <ul class="item-body">
                                             <li class="description">Gardez le contact</li>
-                                            <li class="info"><span class="icon-download-ico download"></span>30 Mbit/s<span class="exponent">(1)</span></li>
-                                            <li class="info"><span class="icon-download-ico upload"></span>10 Mbits/s<span class="exponent">(1)</span></li>
+                                            <li class="info" data-fnote="[0]"><span class="icon-download-ico download"></span>30 Mbit/s</li>
+                                            <li class="info" data-fnote="[0]"><span class="icon-download-ico upload"></span>10 Mbits/s</li>
                                             <li class="check-list-container">
                                                 <div class="check-list-title"><span class="icon-pack-ico"></span> Inclus dans ce pack : </div>
                                                 <ul class="check-list">
                                                     <li><span class="icon-check-ico"></span>Volume illimité</li>
                                                     <li><span class="icon-check-ico"></span>Abonnement tél. fixe</li>
-                                                    <li><span class="icon-check-ico"></span>Appels nat. fixes<span class="exponent">(2)</span></li>
+                                                    <li data-fnote="[1]"><span class="icon-check-ico"></span>Appels nat. fixes</li>
                                                     <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
-                                                    <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
+                                                    <li data-fnote="[1,2]"><span class="icon-check-ico"></span>120 min vers l'Europe fixe</li>
                                                     <li><span class="icon-check-ico"></span>LOLCLOUD 5GB</li>
+                                                    <li><span class="icon-x-icone"></span><a href="//www.internet.lu/internet/optionnow.html">Option NOW <span style="font-size: 12px;">(sur demande)</span></a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -535,17 +547,18 @@
                                         </div>
                                         <ul class="item-body">
                                             <li class="description">Offre coup  de <span class="icon-heart-ico"></span></li>
-                                            <li class="info"><span class="icon-download-ico download"></span>100 Mbit/s<span class="exponent">(1)</span></li>
-                                            <li class="info"><span class="icon-download-ico upload"></span>50 Mbits/s<span class="exponent">(1)</span></li>
+                                            <li class="info" data-fnote="[0]"><span class="icon-download-ico download"></span>100 Mbit/s</li>
+                                            <li class="info" data-fnote="[0]"><span class="icon-download-ico upload"></span>50 Mbits/s</li>
                                             <li class="check-list-container">
                                                 <div class="check-list-title"><span class="icon-pack-ico"></span> Inclus dans ce pack : </div>
                                                 <ul class="check-list">
                                                     <li><span class="icon-check-ico"></span>Volume illimité</li>
                                                     <li><span class="icon-check-ico"></span>Abonnement tél. fixe</li>
-                                                    <li><span class="icon-check-ico"></span>Appels nat. fixes<span class="exponent">(2)</span></li>
+                                                    <li data-fnote="[1]"><span class="icon-check-ico"></span>Appels nat. fixes</li>
                                                     <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
-                                                    <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
+                                                    <li data-fnote="[1,2]"><span class="icon-check-ico"></span>120 min vers l'Europe fixe</li>
                                                     <li><span class="icon-check-ico"></span>LOLCLOUD 5GB</li>
+                                                    <li><span class="icon-check-ico"></span><a href="//www.internet.lu/internet/optionnow.html">Option NOW</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -557,7 +570,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a class="promos-link persist" href="//www.internet.lu/promos/fibre.html">Promo : installation offerte<br/>+ vitesse x2<span class="exponent">(4)</span></a>
+                                <a class="promos-link persist" data-fnote="[3]" href="//www.internet.lu/promos/fibre.html">Promo : installation offerte<br/>+ vitesse x2</a>
                             </div>
                             <div class="phone-6 desk-3 tab-pl-10 phone-pr-0 desk-pl-5 lgdesk-pl-10">
                                 <div class="k200">
@@ -567,17 +580,18 @@
                                         </div>
                                         <ul class="item-body">
                                             <li class="description">Exigez le meilleur</li>
-                                            <li class="info"><span class="icon-download-ico download"></span>200 Mbit/s<span class="exponent">(1)</span></li>
-                                            <li class="info"><span class="icon-download-ico upload"></span>100 Mbits/s<span class="exponent">(1)</span></li>
+                                            <li class="info" data-fnote="[0]"><span class="icon-download-ico download"></span>200 Mbit/s</li>
+                                            <li class="info" data-fnote="[0]"><span class="icon-download-ico upload"></span>100 Mbits/s</li>
                                             <li class="check-list-container">
                                                 <div class="check-list-title"><span class="icon-pack-ico"></span> Inclus dans ce pack : </div>
                                                 <ul class="check-list">
                                                     <li><span class="icon-check-ico"></span>Volume illimité</li>
                                                     <li><span class="icon-check-ico"></span>Abonnement tél. fixe</li>
-                                                    <li><span class="icon-check-ico"></span>Appels nat. fixes<span class="exponent">(2)</span></li>
+                                                    <li data-fnote="[1]"><span class="icon-check-ico"></span>Appels nat. fixes</li>
                                                     <li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>
-                                                    <li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(2) (3)</span></li>
+                                                    <li data-fnote="[1,2]"><span class="icon-check-ico"></span>120 min vers l'Europe fixe</li>
                                                     <li><span class="icon-check-ico"></span>LOLCLOUD 5GB</li>
+                                                    <li><span class="icon-check-ico"></span><a href="//www.internet.lu/internet/optionnow.html">Option NOW</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -607,8 +621,8 @@
                                             </div>
                                             <ul class="item-body">
                                                 <li class="description">Internet</li>
-                                                <li class="info"><span class="icon-download-ico download"></span>10 Mbit/s<span class="exponent">(1)</span></li>
-                                                <li class="info"><span class="icon-download-ico upload"></span>1 Mbits/s<span class="exponent">(1)</span></li>
+                                                <li class="info" data-fnote="[0]"><span class="icon-download-ico download"></span>10 Mbit/s</li>
+                                                <li class="info" data-fnote="[0]"><span class="icon-download-ico upload"></span>1 Mbits/s</li>
                                                 <li class="description">Volume illimité</li>
                                                 <li style="background-color: #004494;color: white;padding: 10px 0;">
                                                     <div class="offer-price">
@@ -647,7 +661,7 @@
                                                 </li>
                                             </ul>                                    
                                         </div>
-                                        <a class="btn-blue btn-subscription" href="http://www.internet.lu/documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
+                                        <a class="btn-blue btn-subscription" href="//www.internet.lu/documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
                                     </div>
                                     <div class="gallery-cell">
                                         <div class="k30">
@@ -657,8 +671,8 @@
                                                 </div>
                                                 <ul class="item-body">
                                                     <li class="description">Internet</li>
-                                                    <li class="info"><span class="icon-download-ico download"></span>30 Mbit/s<span class="exponent">(1)</span></li>
-                                                    <li class="info"><span class="icon-download-ico upload"></span>10 Mbits/s<span class="exponent">(1)</span></li>
+                                                    <li class="info" data-fnote="[0]"><span class="icon-download-ico download"></span>30 Mbit/s</li>
+                                                    <li class="info" data-fnote="[0]"><span class="icon-download-ico upload"></span>10 Mbits/s</li>
                                                     <li class="description">Volume illimité</li>
                                                     <li style="background-color: #004494;color: white;padding: 10px 0;">
                                                         <div class="offer-price">
@@ -698,7 +712,7 @@
                                                 </ul>                                    
                                             </div>
                                         </div>
-                                        <a class="btn-blue btn-subscription" href="http://www.internet.lu/documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
+                                        <a class="btn-blue btn-subscription" href="//www.internet.lu/documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
                                     </div>
                                     <div class="gallery-cell">
                                         <div class="offer-item-blue">
@@ -707,8 +721,8 @@
                                             </div>
                                             <ul class="item-body">
                                                 <li class="description">Internet</li>
-                                                <li class="info"><span class="icon-download-ico download"></span>60 Mbit/s<span class="exponent">(1)</span></li>
-                                                <li class="info"><span class="icon-download-ico upload"></span>15 Mbits/s<span class="exponent">(1)</span></li>
+                                                <li class="info" data-fnote="[0]"><span class="icon-download-ico download"></span>60 Mbit/s</li>
+                                                <li class="info" data-fnote="[0]"><span class="icon-download-ico upload"></span>15 Mbits/s</li>
                                                 <li class="description">Volume illimité</li>
                                                 <li style="background-color: #004494;color: white;padding: 10px 0;">
                                                     <div class="offer-price">
@@ -747,7 +761,7 @@
                                                 </li>
                                             </ul>                                    
                                         </div>
-                                        <a class="btn-blue btn-subscription" href="http://www.internet.lu/documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
+                                        <a class="btn-blue btn-subscription" href="//www.internet.lu/documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
                                     </div>
                                     <div class="gallery-cell">
                                         <div class="offer-item-blue">
@@ -756,8 +770,8 @@
                                             </div>
                                             <ul class="item-body">
                                                 <li class="description">Internet</li>
-                                                <li class="info"><span class="icon-download-ico download"></span>120 Mbit/s<span class="exponent">(1)</span></li>
-                                                <li class="info"><span class="icon-download-ico upload"></span>15 Mbits/s<span class="exponent">(1)</span></li>
+                                                <li class="info" data-fnote="[0]"><span class="icon-download-ico download"></span>120 Mbit/s</li>
+                                                <li class="info" data-fnote="[0]"><span class="icon-download-ico upload"></span>15 Mbits/s</li>
                                                 <li class="description">Volume illimité</li>
                                                 <li style="background-color: #004494;color: white;padding: 10px 0;">
                                                     <div class="offer-price">
@@ -765,7 +779,7 @@
                                                         74<span>/mois</span>
                                                     </div>
                                                 </li>                                        
-                                                <li class="">
+                                                <li>
                                                     <div class="list-title"> Téléphone <br/><span>Cable Phone Ettelbruck/Schieren</span></div>
                                                     <ul class="check-list">
                                                         <li class="clearfix">
@@ -796,7 +810,7 @@
                                                 </li>
                                             </ul>                                    
                                         </div>
-                                        <a class="btn-blue btn-subscription" href="http://www.internet.lu/documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
+                                        <a class="btn-blue btn-subscription" href="//www.internet.lu/documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
                                     </div>
                                 </div>
                             </div>
@@ -809,8 +823,8 @@
                                     </div>
                                     <ul class="item-body">
                                         <li class="description">Internet</li>
-                                        <li class="info"><span class="icon-download-ico download"></span>10 Mbit/s<span class="exponent">(1)</span></li>
-                                        <li class="info"><span class="icon-download-ico upload"></span>1 Mbits/s<span class="exponent">(1)</span></li>
+                                        <li class="info" data-fnote="[0]"><span class="icon-download-ico download"></span>10 Mbit/s</li>
+                                        <li class="info" data-fnote="[0]"><span class="icon-download-ico upload"></span>1 Mbits/s</li>
                                         <li class="description">Volume illimité</li>
                                         <li style="background-color: #004494;color: white;padding: 10px 0;">
                                             <div class="offer-price">
@@ -849,7 +863,7 @@
                                         </li>
                                     </ul>                                    
                                 </div>
-                                <a class="btn-blue btn-subscription" href="http://www.internet.lu/documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
+                                <a class="btn-blue btn-subscription" href="//www.internet.lu/documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
                             </div>
                             <div class="phone-6 desk-3 tab-pl-10 tab-pr-0 desk-pr-5 desk-pl-5 lgdesk-pr-10 lgdesk-pl-10 tab-mb-20 desk-mb-0">
                                 <div class="offer-item-blue">
@@ -858,8 +872,8 @@
                                     </div>
                                     <ul class="item-body">
                                         <li class="description">Internet</li>
-                                        <li class="info"><span class="icon-download-ico download"></span>30 Mbit/s<span class="exponent">(1)</span></li>
-                                        <li class="info"><span class="icon-download-ico upload"></span>10 Mbits/s<span class="exponent">(1)</span></li>
+                                        <li class="info" data-fnote="[0]"><span class="icon-download-ico download"></span>30 Mbit/s</li>
+                                        <li class="info" data-fnote="[0]"><span class="icon-download-ico upload"></span>10 Mbits/s</li>
                                         <li class="description">Volume illimité</li>
                                         <li style="background-color: #004494;color: white;padding: 10px 0;">
                                             <div class="offer-price">
@@ -898,7 +912,7 @@
                                         </li>
                                     </ul>                                    
                                 </div>
-                                <a class="btn-blue btn-subscription" href="http://www.internet.lu/documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
+                                <a class="btn-blue btn-subscription" href="//www.internet.lu/documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
                             </div>
                             <div class="phone-6 desk-3 tab-pr-10 tab-pl-0 desk-pr-5 desk-pl-5 lgdesk-pr-10 lgdesk-pl-10">
                                 <div class="offer-item-blue">
@@ -907,8 +921,8 @@
                                     </div>
                                     <ul class="item-body">
                                         <li class="description">Internet</li>
-                                        <li class="info"><span class="icon-download-ico download"></span>60 Mbit/s<span class="exponent">(1)</span></li>
-                                        <li class="info"><span class="icon-download-ico upload"></span>15 Mbits/s<span class="exponent">(1)</span></li>
+                                        <li class="info" data-fnote="[0]"><span class="icon-download-ico download"></span>60 Mbit/s</li>
+                                        <li class="info" data-fnote="[0]"><span class="icon-download-ico upload"></span>15 Mbits/s</li>
                                         <li class="description">Volume illimité</li>
                                         <li style="background-color: #004494;color: white;padding: 10px 0;">
                                             <div class="offer-price">
@@ -947,7 +961,7 @@
                                         </li>
                                     </ul>                                    
                                 </div>
-                                <a class="btn-blue btn-subscription" href="http://www.internet.lu/documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
+                                <a class="btn-blue btn-subscription" href="//www.internet.lu/documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
                             </div>
                             <div class="phone-6 desk-3 tab-pl-10 phone-pr-0 desk-pl-5 lgdesk-pl-10">
                                 <div class="offer-item-blue">
@@ -956,8 +970,8 @@
                                     </div>
                                     <ul class="item-body">
                                         <li class="description">Internet</li>
-                                        <li class="info"><span class="icon-download-ico download"></span>120 Mbit/s<span class="exponent">(1)</span></li>
-                                        <li class="info"><span class="icon-download-ico upload"></span>15 Mbits/s<span class="exponent">(1)</span></li>
+                                        <li class="info" data-fnote="[0]"><span class="icon-download-ico download"></span>120 Mbit/s</li>
+                                        <li class="info" data-fnote="[0]"><span class="icon-download-ico upload"></span>15 Mbits/s</li>
                                         <li class="description">Volume illimité</li>
                                         <li style="background-color: #004494;color: white;padding: 10px 0;">
                                             <div class="offer-price">
@@ -996,33 +1010,12 @@
                                         </li>
                                     </ul>                                    
                                 </div>
-                                <a class="btn-blue btn-subscription" href="http://www.internet.lu/documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
+                                <a class="btn-blue btn-subscription" href="//www.internet.lu/documents/LOLCABLE_FR.pdf" target="_blank" style="visibility: visible; opacity: 1;">Abonnez-vous</a>
                             </div>
                         </div>
                     </div>
                     <div class="phone-12 desk-12">
-                        <p class="footer-note"><span>(1)</span>Les débits down/up (émission et réception)
-                            sont des débits maximum et non garantis
-                            <span style="padding-left: 10px;">(2)</span> Sauf numéros spéciaux (type 800, 900,
-                            jeux, televoting, services érotiques, etc.)
-                            <span style="padding-left: 10px;">(3)</span> Pays membres de l'U.E
-                            <span style="padding-left: 10px;">(4)</span> Offre valable uniquement sur la technologie fibre optique
-                        </p>
-                    </div>
-                </div>
-            </section>
-            <section  class="section-layout left left-orientation">
-                <div class="container-wrapper">
-                    <div class="row clearfix">
-                        <div class="phone-12 desk-6 video-container">
-                            <iframe width="1280" height="720" class="video" src="https://www.youtube.com/embed/gfRsh1OKIpo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        <div class="phone-12 desk-6">
-                            <h2 class="section-title lowercase">
-                                <strong>Plus besoin de vous déplacer, abonnez-vous en ligne !</strong>
-                            </h2>
-                            <p class="section-text grey">Découvrez dans la vidéo ci-contre comment faire.</p>
-                        </div>
+                        <p class="footer-note"></p>
                     </div>
                 </div>
             </section>
@@ -1199,6 +1192,7 @@
         <script type="text/javascript" src="../scripts/json2.js"></script>
         <script type="text/javascript" src="../scripts/jquery.maskedinput.min.js"></script>
         <script type="text/javascript" src="../scripts/main.js"></script>
+        <script type="text/javascript" src="../scripts/footerNote.js"></script>
         <script type="text/javascript" src="../scripts/internetscript.js"></script>
         <script type="text/javascript">
             $(function () {
@@ -1209,6 +1203,15 @@
                     wrapAround: true,
                     prevNextButtons: false,
                     autoPlay: 2500
+                });
+                $('.footer-note').footerNote({
+                    'registry': [
+                        "Les débits down/up (émission et réception) sont des débits maximum et non garantis",
+                        "Sauf numéros spéciaux (type 800, 900, jeux, televoting, services érotiques, etc.)",
+                        "Pays membres de l'U.E",
+                        "Offre valable uniquement sur la technologie fibre optique",
+                        "Prix promo. Après 6 mois: LOLDSL 24 à 34,90€, LOLFIBER 100 à 54,90€"
+                    ]
                 });
                 $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
                     disableOn: 700,

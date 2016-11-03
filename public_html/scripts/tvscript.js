@@ -339,6 +339,12 @@ var tv_list = {
             "definition": [2]
         },
         {
+            "link": "tv/ardalpha.png",
+            "name": "Ard Alpha",
+            "lang": "DE",
+            "definition": [1]
+        },
+        {
             "link": "tv/artehd.png",
             "name": "Arte HD",
             "lang": "DE",
@@ -347,12 +353,6 @@ var tv_list = {
         {
             "link": "tv/Bibel_TV_113x50.png",
             "name": "Bible.TV",
-            "lang": "DE",
-            "definition": [1]
-        },
-        {
-            "link": "tv/bayerischesFernsehen_62x50.png",
-            "name": "BRalpha",
             "lang": "DE",
             "definition": [1]
         },
@@ -373,20 +373,6 @@ var tv_list = {
             "name": "DMAX",
             "lang": "DE",
             "definition": [1]
-        }
-        ,        
-        {
-            "link": "tv/einsfestival_113x50.png",
-            "name": "EinsFestival HD",
-            "lang": "DE",
-            "definition": [1]
-        }
-        ,
-        {
-            "link": "tv/einsplus_63x50.png",
-            "name": "EinsPlus HD",
-            "lang": "DE",
-            "definition": [2]
         }
         ,
         {
@@ -469,7 +455,14 @@ var tv_list = {
             "name": "n-tv HD",
             "lang": "DE",
             "definition": [2]
-        },
+        },        
+        {
+            "link": "tv/one.png",
+            "name": "ONE HD",
+            "lang": "DE",
+            "definition": [1]
+        }
+        ,
         {
             "link": "tv/phoenix_50x50.png",
             "name": "Phoenix HD",
@@ -619,13 +612,6 @@ var tv_list = {
         }
         ,
         {
-            "link": "tv/zdfkulturhd.png",
-            "name": "ZDF kultur HD",
-            "lang": "DE",
-            "definition": [1]
-        }
-        ,
-        {
             "link": "tv/zdf_neo_67x50.png",
             "name": "ZDF neo HD",
             "lang": "DE",
@@ -659,14 +645,14 @@ var tv_list = {
             "definition": [1]
         },
         {
-            "link": "tv/D17_hd.png",
-            "name": "D17 HD",
+            "link": "tv/cstar.png",
+            "name": "Cstar HD",
             "lang": "FR",
             "definition": [2]
         },
         {
-            "link": "tv/direct8.png",
-            "name": "Direct 8 HD",
+            "link": "tv/c8.png",
+            "name": "C8 HD",
             "lang": "FR",
             "definition": [2]
         },

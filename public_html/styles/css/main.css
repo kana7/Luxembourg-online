@@ -2508,16 +2508,13 @@ hr {
 .icon-account-icone:before {
   content: "\62"; }
 
-.icon-x-icone:before {
-  content: "\61"; }
-
 .icon-calculator-ico:before {
   content: "\63"; }
 
 .icon-call-me:before {
   content: "\64"; }
 
-.icon-check-ico:before {
+.icon-check-icone:before {
   content: "\65"; }
 
 .icon-clock-icone:before {
@@ -2595,9 +2592,6 @@ hr {
 .icon-cable-ico:before {
   content: "\44"; }
 
-.icon-check-icone:before {
-  content: "\45"; }
-
 .icon-fax:before {
   content: "\46"; }
 
@@ -2642,6 +2636,18 @@ hr {
 
 .icon-assistance-television:before {
   content: "\54"; }
+
+.icon-player2:before {
+  content: "\55"; }
+
+.icon-player:before {
+  content: "\56"; }
+
+.icon-check-ico:before {
+  content: "\57"; }
+
+.icon-x-icone:before {
+  content: "\45"; }
 
 @-ms-viewport {
   width: auto !important; }
@@ -3143,6 +3149,8 @@ header {
     background-size: cover; }
     #services .service#loldsl {
       background-image: url(../../images/Homepage/OFFRES/LOL_DSL_296x233px.jpg); }
+    #services .service#lolnow {
+      background-image: url(../../images/Homepage/OFFRES/LOLNOW_296x233px.jpg); }
     #services .service#mobiles {
       background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_296x233px.jpg); }
     #services .service#installation {
@@ -3275,16 +3283,16 @@ footer {
 #social-links .brand-name {
   display: none; }
 
-#social-links {
+#social-links, .social-links {
   padding: 20px 0 15px; }
-  #social-links a:before {
+  #social-links a:before, .social-links a:before {
     content: "";
     display: table; }
-  #social-links a:after {
+  #social-links a:after, .social-links a:after {
     content: "";
     display: table;
     clear: both; }
-  #social-links .social-icon {
+  #social-links .social-icon, .social-links .social-icon {
     display: inline-block;
     float: left;
     position: relative;
@@ -3292,10 +3300,10 @@ footer {
     display: inline-block;
     width: 34px;
     height: 34px; }
-  #social-links nav {
+  #social-links nav, .social-links nav {
     display: inline-block;
     margin-top: 10px; }
-  #social-links ul {
+  #social-links ul, .social-links ul {
     width: 100%; }
 
 #contact {
@@ -3535,7 +3543,11 @@ span[class^=icon-] {
   margin: 15px 0;
   line-height: 15px; }
   .footer-note span {
+    display: inline; }
+  .footer-note li {
     display: inline-block; }
+    .footer-note li:not(:first-child) {
+      padding-left: 10px; }
 
 .extra-bold {
   font-weight: 800 !important; }
@@ -3804,16 +3816,19 @@ span[class^=icon-] {
 .top-menu-header-links {
   font-size: 13px;
   font-weight: 400;
-  padding: 9px 0 8px;
   color: #fff;
   text-shadow: 0 1px 5px #818181; }
+  .top-menu-header-links li {
+    padding: 11px 0px 10px; }
   .top-menu-header-links.left li {
-    margin-right: 30px; }
+    padding: 11px 10px 10px; }
+    .top-menu-header-links.left li.active {
+      background-color: #0056ae; }
   .top-menu-header-links.right li {
     margin-left: 30px; }
-  .top-menu-header-links li.active {
-    font-weight: 600;
-    text-decoration: underline; }
+    .top-menu-header-links.right li.active {
+      font-weight: 600;
+      text-decoration: underline; }
 
 .bottom-menu-header-links .main-menu {
   font-size: 16px;
@@ -4104,6 +4119,16 @@ span[class^=icon-] {
   font-size: 16px;
   font-weight: 400;
   z-index: 3; }
+
+.menu-list {
+  display: block; }
+  .menu-list li {
+    display: block;
+    padding: 11px;
+    padding-left: 25px;
+    cursor: pointer; }
+    .menu-list li:not(:last-child) {
+      border-bottom: 1px solid #d4d4d4; }
 
 .DesktopMenu, .news-menu ul {
   display: block; }
@@ -4404,6 +4429,8 @@ span[class^=icon-] {
       font-size: 32px;
       top: 3px;
       left: 150px; }
+      .offer-item-blue .offer-price div .exponent, .equipement-item-blue .offer-price div .exponent, .news-item-blue .offer-price div .exponent {
+        font-size: 0.5em; }
     .offer-item-blue .offer-price span, .equipement-item-blue .offer-price span, .news-item-blue .offer-price span {
       font-size: 22px;
       padding-left: 6px; }
@@ -4459,12 +4486,16 @@ span[class^=icon-] {
       line-height: 22px;
       font-size: 15px;
       font-weight: 400; }
-      .offer-item-blue .check-list li .icon-check-ico, .equipement-item-blue .check-list li .icon-check-ico, .news-item-blue .check-list li .icon-check-ico {
+      .offer-item-blue .check-list li .icon-check-ico, .offer-item-blue .check-list li .icon-x-icone, .equipement-item-blue .check-list li .icon-check-ico, .equipement-item-blue .check-list li .icon-x-icone, .news-item-blue .check-list li .icon-check-ico, .news-item-blue .check-list li .icon-x-icone {
         position: relative;
         top: 2px;
         line-height: 10px;
         margin-right: 25px;
         font-size: 16px; }
+    .offer-item-blue .check-list a, .equipement-item-blue .check-list a, .news-item-blue .check-list a {
+      font-weight: 600; }
+      .offer-item-blue .check-list a:hover, .equipement-item-blue .check-list a:hover, .news-item-blue .check-list a:hover {
+        text-decoration: underline; }
 
 .offer-item-orange, .equipement-item-orange, .news-item-orange {
   display: block;
@@ -4504,6 +4535,8 @@ span[class^=icon-] {
       font-size: 32px;
       top: 3px;
       left: 150px; }
+      .offer-item-orange .offer-price div .exponent, .equipement-item-orange .offer-price div .exponent, .news-item-orange .offer-price div .exponent {
+        font-size: 0.5em; }
     .offer-item-orange .offer-price span, .equipement-item-orange .offer-price span, .news-item-orange .offer-price span {
       font-size: 22px;
       padding-left: 6px; }
@@ -4559,12 +4592,16 @@ span[class^=icon-] {
       line-height: 22px;
       font-size: 15px;
       font-weight: 400; }
-      .offer-item-orange .check-list li .icon-check-ico, .equipement-item-orange .check-list li .icon-check-ico, .news-item-orange .check-list li .icon-check-ico {
+      .offer-item-orange .check-list li .icon-check-ico, .offer-item-orange .check-list li .icon-x-icone, .equipement-item-orange .check-list li .icon-check-ico, .equipement-item-orange .check-list li .icon-x-icone, .news-item-orange .check-list li .icon-check-ico, .news-item-orange .check-list li .icon-x-icone {
         position: relative;
         top: 2px;
         line-height: 10px;
         margin-right: 25px;
         font-size: 16px; }
+    .offer-item-orange .check-list a, .equipement-item-orange .check-list a, .news-item-orange .check-list a {
+      font-weight: 600; }
+      .offer-item-orange .check-list a:hover, .equipement-item-orange .check-list a:hover, .news-item-orange .check-list a:hover {
+        text-decoration: underline; }
 
 #equipement-section {
   padding-bottom: 40px; }
@@ -5109,14 +5146,14 @@ span[class^=icon-] {
   font-size: 12px;
   color: #818181; }
 #slider-contents .section-price {
-  font-size: 55px;
+  font-size: 62px;
   padding-top: 0px; }
   #slider-contents .section-price div {
-    font-size: 20px;
+    font-size: 24px;
     top: 7px;
     left: 85px; }
   #slider-contents .section-price span {
-    font-size: 18px;
+    font-size: 20px;
     padding-left: 0px; }
 
 .service-link {
@@ -5350,13 +5387,14 @@ footer {
   text-transform: uppercase;
   font-weight: 800;
   margin-top: 10px; }
-  .promos-link:hover {
-    text-decoration: underline; }
   .promos-link span[class^=icon-] {
     margin-right: 0;
     margin-left: 7px;
     font-size: 1.2em;
     top: 3px; }
+
+a.promos-link:hover {
+  text-decoration: underline; }
 
 .not + .promos-link.persist {
   display: none; }
@@ -5585,14 +5623,14 @@ footer {
   .white-pannel .pannel-close {
     display: block;
     position: absolute;
-    right: 30px;
-    top: 24px;
+    right: 0;
+    top: 0;
     padding: 0;
     border: none;
     background: none; }
     .white-pannel .pannel-close span {
       margin: 0;
-      font-size: 16px; }
+      font-size: 21px; }
     .white-pannel .pannel-close:focus {
       outline: 0; }
   .white-pannel h2 {
@@ -6156,6 +6194,255 @@ h2.contact-title {
     top: 0;
     left: 0;
     object-fit: cover; } }
+/*------------------------------HDA CLIENT------------------------------------*/
+#hda hr, #hda + section hr {
+  border-style: solid;
+  border-width: 1px;
+  max-width: 600px;
+  border-color: #c0c0c0;
+  margin-top: 40px;
+  margin-bottom: 20px; }
+#hda .btn-primary, #hda .btn-default, #hda + section .btn-primary, #hda + section .btn-default {
+  font-size: 15px;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  margin: 3px 0;
+  padding: 12px 15px;
+  cursor: pointer;
+  -webkit-transition: background 0.4s ease-in-out, border 0.4s ease-in-out, color 0.4s ease-in-out, box-shadow 0.4s, opacity 0.3s linear;
+  transition: background 0.4s ease-in-out, border 0.4s ease-in-out, color 0.4s ease-in-out, box-shadow 0.4s, opacity 0.3s linear;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-image: none;
+  z-index: 2;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 10px 15px; }
+  #hda .btn-primary:focus, #hda .btn-default:focus, #hda + section .btn-primary:focus, #hda + section .btn-default:focus {
+    outline: 0; }
+  #hda .btn-primary:hover, #hda .btn-primary:focus, #hda .btn-default:hover, #hda .btn-default:focus, #hda + section .btn-primary:hover, #hda + section .btn-primary:focus, #hda + section .btn-default:hover, #hda + section .btn-default:focus {
+    text-decoration: none; }
+#hda .btn-default, #hda + section .btn-default {
+  color: #818181;
+  border-color: #818181;
+  border-width: 1px;
+  margin: 0; }
+  #hda .btn-default:hover, #hda + section .btn-default:hover {
+    border-color: #0056ae;
+    color: #0056ae;
+    -webkit-box-shadow: 0 0 5px 0 rgba(0, 73, 148, 0.75);
+    -moz-box-shadow: 0 0 5px 0 rgba(0, 73, 148, 0.75);
+    box-shadow: 0 0 5px 0 rgba(0, 73, 148, 0.75);
+    -o-box-shadow: 0 0 5px 0 rgba(0, 73, 148, 0.75);
+    -ms-box-shadow: 0 0 5px 0 rgba(0, 73, 148, 0.75); }
+#hda .btn-primary, #hda + section .btn-primary {
+  color: white;
+  border-color: #004994;
+  background-color: #004994;
+  border-width: 1px;
+  margin: 0; }
+  #hda .btn-primary:hover, #hda + section .btn-primary:hover {
+    background-color: #0056ae;
+    border-color: #0056ae;
+    -webkit-box-shadow: 0 0 5px 0 rgba(0, 73, 148, 0.75);
+    -moz-box-shadow: 0 0 5px 0 rgba(0, 73, 148, 0.75);
+    box-shadow: 0 0 5px 0 rgba(0, 73, 148, 0.75);
+    -o-box-shadow: 0 0 5px 0 rgba(0, 73, 148, 0.75);
+    -ms-box-shadow: 0 0 5px 0 rgba(0, 73, 148, 0.75); }
+#hda .hda-description, #hda + section .hda-description {
+  font-size: 14px;
+  color: #818181;
+  text-align: center; }
+#hda .hda-title, #hda + section .hda-title {
+  font-size: 21px;
+  line-height: 25px;
+  color: #004994;
+  text-align: center; }
+#hda .instruction-list, #hda + section .instruction-list {
+  display: table;
+  margin: 0 auto 0; }
+  #hda .instruction-list li, #hda + section .instruction-list li {
+    position: relative;
+    display: table;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 600; }
+    #hda .instruction-list li .menu-list-label, #hda .instruction-list li:before, #hda + section .instruction-list li .menu-list-label, #hda + section .instruction-list li:before {
+      display: table-cell;
+      vertical-align: middle;
+      margin: 0; }
+    #hda .instruction-list li:before, #hda + section .instruction-list li:before {
+      font-family: "luxonline-icons" !important;
+      font-style: normal !important;
+      font-weight: normal !important;
+      font-variant: normal !important;
+      text-transform: none !important;
+      speak: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-size: 0.6em;
+      text-align: left;
+      padding-right: 10px;
+      color: #004994;
+      content: "\71"; }
+    #hda .instruction-list li:not(:last-child), #hda + section .instruction-list li:not(:last-child) {
+      margin-bottom: 25px; }
+#hda .menu-list, #hda + section .menu-list {
+  display: table;
+  max-width: 290px;
+  margin: 0 auto 40px;
+  border: 1px solid #d4d4d4;
+  border-radius: 5px; }
+  #hda .menu-list.not-cat, #hda + section .menu-list.not-cat {
+    max-width: none;
+    min-width: auto !important;
+    width: auto !important; }
+  #hda .menu-list li, #hda + section .menu-list li {
+    position: relative;
+    padding: 0; }
+    #hda .menu-list li:last-child a, #hda + section .menu-list li:last-child a {
+      border-radius: 0px 0px 5px 5px; }
+    #hda .menu-list li:first-child a, #hda + section .menu-list li:first-child a {
+      border-radius: 5px 5px 0px 0px; }
+  #hda .menu-list a, #hda + section .menu-list a {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 13px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #f7f7f7;
+    -moz-transition: background 0.4s ease-in-out, border 0.4s ease-in-out, color 0.4s ease-in-out, box-shadow 0.4s, opacity 0.3s linear;
+    -o-transition: background 0.4s ease-in-out, border 0.4s ease-in-out, color 0.4s ease-in-out, box-shadow 0.4s, opacity 0.3s linear;
+    -webkit-transition: background 0.4s ease-in-out, border 0.4s ease-in-out, color 0.4s ease-in-out, box-shadow 0.4s, opacity 0.3s linear;
+    transition: background 0.4s ease-in-out, border 0.4s ease-in-out, color 0.4s ease-in-out, box-shadow 0.4s, opacity 0.3s linear; }
+    #hda .menu-list a:hover, #hda + section .menu-list a:hover {
+      color: #004994;
+      background-color: white; }
+  #hda .menu-list span[class^=icon-], #hda .menu-list a:after, #hda .menu-list .menu-list-label, #hda + section .menu-list span[class^=icon-], #hda + section .menu-list a:after, #hda + section .menu-list .menu-list-label {
+    display: table-cell;
+    vertical-align: middle;
+    margin: 0; }
+  #hda .menu-list span[class^=icon-], #hda .menu-list a:after, #hda + section .menu-list span[class^=icon-], #hda + section .menu-list a:after {
+    width: 40px; }
+  #hda .menu-list span[class^=icon-], #hda + section .menu-list span[class^=icon-] {
+    text-align: left; }
+  #hda .menu-list span[class^=icon-], #hda + section .menu-list span[class^=icon-] {
+    font-size: 1.5em; }
+  #hda .menu-list a:after, #hda + section .menu-list a:after {
+    font-family: "luxonline-icons" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 0.8em;
+    text-align: right;
+    content: "\71"; }
+#hda .hda-box, #hda + section .hda-box {
+  -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+  text-align: center;
+  -moz-transition: background 0.4s ease-in-out, border 0.4s ease-in-out, color 0.4s ease-in-out, box-shadow 0.4s, opacity 0.3s linear;
+  -o-transition: background 0.4s ease-in-out, border 0.4s ease-in-out, color 0.4s ease-in-out, box-shadow 0.4s, opacity 0.3s linear;
+  -webkit-transition: background 0.4s ease-in-out, border 0.4s ease-in-out, color 0.4s ease-in-out, box-shadow 0.4s, opacity 0.3s linear;
+  transition: background 0.4s ease-in-out, border 0.4s ease-in-out, color 0.4s ease-in-out, box-shadow 0.4s, opacity 0.3s linear; }
+  #hda .hda-box .header, #hda + section .hda-box .header {
+    background-color: #004994;
+    border-color: #004994;
+    font-size: 14px;
+    line-height: 39px;
+    color: white; }
+    #hda .hda-box .header .icon-right-arrow, #hda + section .hda-box .header .icon-right-arrow {
+      margin-left: 10px;
+      margin-right: 0;
+      font-size: 0.7em; }
+  #hda .hda-box .header-title, #hda + section .hda-box .header-title {
+    text-transform: uppercase;
+    font-weight: 600; }
+  #hda .hda-box .img-container, #hda + section .hda-box .img-container {
+    position: relative;
+    padding: 50px;
+    height: 225px;
+    width: 100%;
+    border: 1px solid #c0c0c0; }
+    #hda .hda-box .img-container img, #hda + section .hda-box .img-container img {
+      vertical-align: middle;
+      max-width: 100%;
+      max-height: 100%;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+#hda a:hover .hda-box, #hda + section a:hover .hda-box {
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
+  -o-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
+  -ms-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35); }
+#hda .final-step .hda-title, #hda + section .final-step .hda-title {
+  font-size: 48px;
+  line-height: 48px;
+  color: #004994;
+  text-align: center;
+  margin-bottom: 30px; }
+#hda .final-step .hda-description, #hda + section .final-step .hda-description {
+  font-size: 16px;
+  line-height: 22px; }
+#hda .final-step .social-links ul, #hda + section .final-step .social-links ul {
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+  #hda .final-step .social-links ul li, #hda + section .final-step .social-links ul li {
+    margin: 0 10px; }
+#hda .img-link, #hda + section .img-link {
+  display: inline-block;
+  height: 50px; }
+  #hda .img-link img, #hda + section .img-link img {
+    max-height: 100%;
+    max-width: 100%; }
+
 /*-----------------------------------ASSISTANCE-------------------------------*/
 .assistance-thumbnail {
   background-color: #f3f3f3;
@@ -6735,6 +7022,8 @@ h2.contact-title {
     margin-bottom: 30px; }
     #services .service#loldsl {
       background-image: url(../../images/Homepage/OFFRES/LOL_DSL_288x392px.jpg); }
+    #services .service#lolnow {
+      background-image: url(../../images/Homepage/OFFRES/LOLNOW_288x392px.jpg); }
     #services .service#mobiles {
       background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_288x392px.jpg); }
     #services .service#installation {
@@ -6768,14 +7057,14 @@ h2.contact-title {
     #slider-contents .flickity-prev-next-button.next {
       right: 50px; }
   #slider-contents .section-price {
-    font-size: 72px;
+    font-size: 92px;
     padding-top: 2px; }
     #slider-contents .section-price div {
-      font-size: 24px;
+      font-size: 32px;
       top: 12px;
-      left: 90px; }
+      left: 100px; }
     #slider-contents .section-price span {
-      font-size: 21px;
+      font-size: 24px;
       padding-left: 0px; }
 
   #slider-ui .buttons {
@@ -7007,10 +7296,17 @@ h2.contact-title {
 
   #offers-section div[class^=phone-] {
     margin-bottom: 20px;
-    padding: 0 10px; } }
+    padding: 0 10px; }
+
+  #hda .menu-list {
+    min-width: 500px;
+    width: 100%; } }
 @media screen and (min-width: 672px) and (max-width: 1055px) {
   #document-links ul li {
-    line-height: inherit; } }
+    line-height: inherit; }
+
+  #offers-section #lol.is-verified div[class^=phone-] {
+    min-height: 655px; } }
 @media screen and (min-width: 1056px) {
   .rightWrapper {
     width: 75%;
@@ -7133,15 +7429,6 @@ h2.contact-title {
     line-height: 35px; }
   #slider-contents p.bottom-details {
     font-size: 10pt; }
-  #slider-contents .section-price {
-    font-size: 72px;
-    padding-top: 2px; }
-    #slider-contents .section-price div {
-      font-size: 21px;
-      top: 13px !important;
-      left: 90px; }
-    #slider-contents .section-price span {
-      font-size: 21px; }
 
   #slider-ui .buttons {
     width: 95%; }
@@ -7171,6 +7458,8 @@ h2.contact-title {
     margin-bottom: 0; }
     #services .service#loldsl {
       background-image: url(../../images/Homepage/OFFRES/LOL_DSL_240x327px.jpg); }
+    #services .service#lolnow {
+      background-image: url(../../images/Homepage/OFFRES/LOLNOW_240x327px.jpg); }
     #services .service#mobiles {
       background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_240x327px.jpg); }
     #services .service#installation {
@@ -7527,7 +7816,10 @@ h2.contact-title {
     padding-left: 9px !important; }
 
   .offer-item-orange .check-list li .icon-check-ico, .offer-item-blue .check-list li .icon-check-ico {
-    margin-right: 18px; }
+    margin-right: 12px; }
+
+  .offer-item-blue .check-list li .icon-check-ico, .offer-item-blue .check-list li .icon-x-icone, .equipement-item-blue .check-list li .icon-check-ico, .equipement-item-blue .check-list li .icon-x-icone, .news-item-blue .check-list li .icon-check-ico, .news-item-blue .check-list li .icon-x-icone {
+    margin-right: 11px; }
 
   .offer-item-blue .offer-price div, .offer-item-orange .offer-price div {
     left: 122px !important; }
@@ -7658,14 +7950,14 @@ h2.contact-title {
     height: 360px; }
 
   #slider-contents .section-price {
-    font-size: 82px !important;
+    font-size: 112px !important;
     padding-top: 7px; }
     #slider-contents .section-price div {
-      font-size: 22px;
-      top: 16px !important;
-      left: 93px; }
+      font-size: 42px;
+      top: 20px !important;
+      left: 125px; }
     #slider-contents .section-price span {
-      font-size: 22px; }
+      font-size: 35px; }
 
   #slider-ui .buttons {
     width: 90%; }
@@ -7702,6 +7994,8 @@ h2.contact-title {
     padding: 0 7px; }
   #services .service#loldsl {
     background-image: url(../../images/Homepage/OFFRES/LOL_DSL_320x437px.jpg); }
+  #services .service#lolnow {
+    background-image: url(../../images/Homepage/OFFRES/LOLNOW_320x437px.jpg); }
   #services .service#mobiles {
     background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_320x437px.jpg); }
   #services .service#installation {

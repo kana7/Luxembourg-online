@@ -15,7 +15,7 @@
 }
 
 @include media(tab){
-    #promo-fibre{
+    #promo-fibre-2x{
         &.image-1{
             background-image: url('../../../images/promos/Promo_Fibre/Promo_Fibrex2_Visuel1_1056x450px.jpg');
         }
@@ -32,13 +32,15 @@
         }
     }
 
-    #promo-fibre{
+    #promo-fibre, #promo-fibre-2x{
         background-size: 1056px auto;
-        height: 450px !important;
+        background-image: url(../../../images/promos/Promo_Fibre/Offre_Fibre_JAN_1056x200px.jpg);
         .section-title{
             margin-top: 0;
         }
     }
+    #promo-fibre{height: 200px !important;}
+    #promo-fibre-2x{height: 450px !important;}
     #promo-noel{
         background-size: 1056px auto;
         &:not(.not-accueil){
@@ -55,7 +57,7 @@
 }
 
 @include media(desk){
-    #promo-fibre{
+    #promo-fibre-2x{
         &.image-1{
             background-image: url('../../../images/promos/Promo_Fibre/Promo_Fibrex2_Visuel1_1302x370px.jpg');
             text-align: left !important;
@@ -74,10 +76,11 @@
             background-image: url(../../../images/promos/Accueil/Promo_TV_Noel_1302x370px.jpg);
         }
     }
-    #promo-noel, #promo-fibre{
+    #promo-noel, #promo-fibre, #promo-fibre-2x{
         background-size: 1302px auto;
         height: 370px !important;
         padding: 40px 0 30px;
+        background-image: url(../../../images/promos/Promo_Fibre/Offre_Fibre_JAN_1302x370px.jpg);
         .section-title{
             font-size: 43px;
             margin: 10px 0 15px;
@@ -148,7 +151,7 @@
 
 }
 @include media(lgdesk){
-    #promo-fibre{
+    #promo-fibre-2x{
         &.image-1{
             background-image: url('../../../images/promos/Promo_Fibre/Promo_Fibrex2_Visuel1_1920x400px.jpg');
         }
@@ -164,10 +167,11 @@
             background-image: url(../../../images/promos/Accueil/Promo_TV_Noel_1920x400px.jpg);
         }
     }
-    #promo-noel, #promo-fibre{
+    #promo-noel, #promo-fibre, #promo-fibre-2x{
         background-size: 1920px auto;
+        height: 400px;
         padding: 30px 0;
-        height: 400px !important;
+        background-image: url(../../../images/promos/Promo_Fibre/Offre_Fibre_JAN_1920x400px.jpg);
         .section-title{
             font-size: 48px;
             margin: 10px 0 15px;

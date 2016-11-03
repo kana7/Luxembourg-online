@@ -2,9 +2,9 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <title data-l10n-id="internetAccueilHeadTitle">Internet : Accueil - Luxembourg Online</title>
-        <meta name="description" data-l10n-id="" content="Spécialiste de l’ultra haut débit, Luxembourg Online vous propose des offres Internet performantes (DSL et fibre optique) à des prix attractifs. " />
-        <meta name="keywords" content="Offre Internet fibre, fibre optique Luxembourg, Internet haut débit, fournisseur accès Internet" />
+        <title data-l10n-id="internetAccueilMetaTitle">Internet : Accueil - Luxembourg Online</title>
+        <meta name="description" data-l10n-id="internetAccueilMetaDesc" content="Spécialiste de l’ultra haut débit, Luxembourg Online vous propose des offres Internet performantes (DSL et fibre optique) à des prix attractifs. " />
+        <meta name="keywords" data-l10n-id="internetAccueilMetaKeywords" content="Offre Internet fibre, fibre optique Luxembourg, Internet haut débit, fournisseur accès Internet" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <link rel="shortcut icon" href="/favicon.ico">
@@ -190,11 +190,11 @@
                 </div>
                 <div id="bottom-menu-header">
                     <ul class="sub-menu hidden-phone hidden-tab">
-                        <li class="active"><a href="accueil.html"><div class="link">Accueil Internet</div></a></li>
-                        <li><a href="offres.html"><div class="link">Nos Offres</div></a></li>
-                        <li><a href="equipements.html"><div class="link">Nos Équipements</div></a></li>
+                        <li class="active"><a href="accueil.html"><div class="link" data-l10n-id="menuLinkInternetHome">Accueil Internet</div></a></li>
+                        <li><a href="offres.html"><div class="link" data-l10n-id="menuLinkOffers">Nos Offres</div></a></li>
+                        <li><a href="equipements.html"><div class="link" data-l10n-id="menuLinkGear">Nos Équipements</div></a></li>
                         <li><a href="optionnow.html"><div class="link">Option NOW</div></a></li>
-                        <li><a href="abonnement.html"><div class="link">Abonnez-vous</div></a></li>
+                        <li><a href="abonnement.html"><div class="link" data-l10n-id="menuLinkSub">Abonnez-vous</div></a></li>
                     </ul>
                     <nav class="bottom-menu-header-links mobile display-phone display-tab">
                         <div class="pull-left">
@@ -279,11 +279,11 @@
                                  alt="portable internet" />
                         </div>
                         <div class="phone-12 desk-6">
-                            <h1 class="section-title lowercase">Des offres Internet 
+                            <h1 class="section-title lowercase" data-l10n-id="internetAccueilOfferTitle">Des offres Internet 
                                 <strong>toujours plus attractives !</strong>
                             </h1>
-                            <p class="section-text">Spécialiste de l’Internet depuis plus de 20 ans, Luxembourg Online met à votre disposition des offres performantes et à un prix attractif.<br/> Que vous ayez simplement besoin de l’essentiel ou que vous soyez un surfer hyper-connecté, une de nos offres est forcément faite pour vous !</p>
-                            <a class="btn-outline-white" href="../internet/offres.html">Voir nos offres Internet</a>
+                            <p class="section-text" data-l10n-id="internetAccueilOfferDesc">Spécialiste de l’Internet depuis plus de 20 ans, Luxembourg Online met à votre disposition des offres performantes et à un prix attractif.<br/> Que vous ayez simplement besoin de l’essentiel ou que vous soyez un surfer hyper-connecté, une de nos offres est forcément faite pour vous !</p>
+                            <a class="btn-outline-white" href="../internet/offres.html" data-l10n-id="internetAccueilOfferLink">Voir nos offres Internet</a>
                         </div>
                     </div>
                 </div>
@@ -291,11 +291,11 @@
             <section id="test-offres" class="clearfix">
                 <div class="container-wrapper">
                     <div class="row">
-                        <div class="text phone-12 desk-6"><span class="icon-internet-ico"></span>Quelles offres sont disponibles chez vous ?</div>
+                        <div class="text phone-12 desk-6"><span class="icon-internet-ico"></span><span data-l10n-id="whichOffer">Quelles offres sont disponibles chez vous ?</span></div>
 
                         <div class="testDispo clearfix">
                             <div>
-                                <input name="zipcode" class="input-white" type="text" placeholder="Code postal"/>
+                                <input name="zipcode" class="input-white" type="text" placeholder="Code postal" data-l10n-id="cpInput"/>
                             </div>
                             <div>
                                 <select  name="ville" style="display: none;" class="input-white select"></select>
@@ -307,8 +307,8 @@
                                 <select name="numero" style="display: none;" class="input-white select"></select>
                             </div>
                             <div class="btn-verif">
-                                <button name="verifyCp" type="button" class="btn-orange btnVerify verifyCp">Vérifiez les disponibilités</button>
-                                <button name="btnVerif2" type="button" style="display: none;" class="btn-orange btnVerify btnVerif">Vérifiez les disponibilités</button>
+                                <button name="verifyCp" type="button" class="btn-orange btnVerify verifyCp" data-l10n-id="dispoVerif">Vérifiez les disponibilités</button>
+                                <button name="btnVerif2" type="button" style="display: none;" class="btn-orange btnVerify btnVerif" data-l10n-id="dispoVerif">Vérifiez les disponibilités</button>
                             </div>
                         </div>
                     </div>
@@ -328,12 +328,12 @@
                                  alt="fibre optique"/>
                         </div>
                         <div class="phone-12 desk-6">
-                            <h1 class="section-title white lowercase">
+                            <h1 class="section-title white lowercase" data-l10n-id="internetAccueilFibreTitle">
                                 <strong>La fibre optique</strong>
                                 le meilleur moyen d'accéder à Internet !
                             </h1>
-                            <p class="section-text white">Considérée comme étant la technologie d’avenir, la fibre optique se généralise au Luxembourg.<br/> Plus fiable et plus efficace, elle présente de nombreux avantages pour ses usagers : stabilité, simultanéité des usages, rapidité, qualité de réception supérieure, avec la fibre vous pouvez tout faire !</p>
-                            <a class="btn-outline-black" href="http://www.fibre.lu" target="_blank">En savoir plus sur la fibre</a>
+                            <p class="section-text white" data-l10n-id="internetAccueilFibreDesc">Considérée comme étant la technologie d’avenir, la fibre optique se généralise au Luxembourg.<br/> Plus fiable et plus efficace, elle présente de nombreux avantages pour ses usagers : stabilité, simultanéité des usages, rapidité, qualité de réception supérieure, avec la fibre vous pouvez tout faire !</p>
+                            <a class="btn-outline-black" href="http://www.fibre.lu" target="_blank" data-l10n-id="internetAccueilFibreLink">En savoir plus sur la fibre</a>
                         </div>
                     </div>
                 </div>
@@ -352,12 +352,12 @@
                                  alt="modem Fritz!Box" />
                         </div>
                         <div class="phone-12 desk-6">
-                            <h1 class="section-title lowercase">
+                            <h1 class="section-title lowercase" data-l10n-id="internetAccueilGearTitle">
                                 <strong>Nos équipements</strong>
                                 le choix de la qualité !
                             </h1>
-                            <p class="section-text">Pour sa gamme Internet, Luxembourg Online a fait le choix de la qualité avec les produits de la marque AVM. </p>
-                            <a class="btn-outline-white" href="../internet/equipements.html">Voir nos équipements</a>
+                            <p class="section-text" data-l10n-id="internetAccueilGearDesc">Pour sa gamme Internet, Luxembourg Online a fait le choix de la qualité avec les produits de la marque AVM. </p>
+                            <a class="btn-outline-white" href="../internet/equipements.html" data-l10n-id="internetAccueilGearLink">Voir nos équipements</a>
                         </div>
                     </div>
                 </div>
@@ -369,10 +369,10 @@
                         <div class="row">
                             <ul class="spread">
                                 <li><a href="../internet/faq.html"><span class="icon icon-faq-ico"></span>FAQ</a></li>
-                                <li><a href="../internet/tarifs_detailles.html"><span class="icon icon-calculator-ico"></span>Tarifs DSL/FIBER</a></li>
+                                <li><a href="../internet/tarifs_detailles.html" data-l10n-id="menuLinkTarifs"><span class="icon icon-calculator-ico"></span>Tarifs DSL/FIBER</a></li>
                                 <li><a href="../internet/cable.html"><span class="icon icon-cable-ico"></span>LOLCABLE</a></li>
-                                <li><a href="../internet/parrainage.html"><span class="icon icon-parrainage-ico"></span>Bon de parrainage</a></li>
-                                <li><a href="../internet/abonnement.html"><span class="icon icon-document-ico"></span>Documents</a></li>
+                                <li><a href="../internet/parrainage.html" data-l10n-id="menuLinkParrainage"><span class="icon icon-parrainage-ico"></span>Bon de parrainage</a></li>
+                                <li><a href="../internet/abonnement.html" data-l10n-id="menuLinkDoc"><span class="icon icon-document-ico"></span>Documents</a></li>
                             </ul>
                         </div>
                     </div>
@@ -427,7 +427,7 @@
                                     <span class="icon-phone-icone"></span><a href="tel://2799 0000">2799 0000</a>
                                 </li>
                                 <li>
-                                    <span class="icon-clock-icone"></span>Lu-Sa: 9h00-18h00
+                                    <span class="icon-clock-icone"></span><span data-l10n-id="mondaySaturday">Lu-Sa:</span> 9h00-18h00
                                 </li>
                                 <li>
                                     <span class="icon-internet-ico"></span><a href="../divers/contact.html#demande_infos_commerciales" target="_blank">commercial@internet.lu</a>

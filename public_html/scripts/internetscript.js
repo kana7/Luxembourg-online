@@ -119,7 +119,7 @@ var offers = {
     },
     double: {
         name: "Fiber </span><span style='text-decoration: line-through; font-size: 0.9em;'> 100 </span> 200",
-        description: "PROMO : LA VITESSE x2",
+        description: "<span data-l10n-id='promoSpeed'>PROMO : LA VITESSE x2</span>",
         download: "</span><span style='text-decoration: line-through; font-size: 0.9em;'> 100 </span><span class='orange'>200 Mbit/s</span>",
         upload: "</span><span style='text-decoration: line-through; font-size: 0.9em;'> 50 </span>&nbsp;&nbsp;<span class='orange'>100 Mbit/s</span>",
         price: {
@@ -171,7 +171,7 @@ function printOffer(offer) {
             '<div class="item-footer">' +
             '<div class="offer-price">' +
             offer.price.exponent +
-            +offer.price.unit + '<span>/mois</span>' +
+            +offer.price.unit + '<span data-l10n-id="month">/mois</span>' +
             '</div>' +
             '</div>' +
             '</div>';
@@ -180,7 +180,7 @@ function printOffer(offer) {
 function printPrice(offer) {
     var printedPrice = '<div class="offer-price">' +
             offer.price.exponent +
-            +offer.price.unit + '<span>/mois</span>' +
+            +offer.price.unit + '<span data-l10n-id="month">/mois</span>' +
             '</div>';
     return printedPrice;
 }
@@ -192,7 +192,7 @@ function insertLink(id, service, indexLink, idHome) {
      *local shop link: "../shop/inscription.html#"*/
 }
 function insertButton(id, service, idHome) {
-    return '<a class="btn-blue btn-subscription" ' + insertLink(id, service, 0, idHome) + '>Abonnez-vous</a>';
+    return '<a class="btn-blue btn-subscription" ' + insertLink(id, service, 0, idHome) + ' data-l10n-id="menuLinkSub">Abonnez-vous</a>';
 }
 function insertPromoLink(id, service, idHome, string) {
     if (service == null) {
@@ -402,7 +402,7 @@ function checkDispo(homeId, isLOLCable) {
                         /*TO DO: INSERT PROMO 6 MOIS DSL24 + VDSL 100*/
                         if ($(obj.Service[2]).length <= 0 && $(obj.Service[5]).length <= 0) {
                             $('.k24').find('.offer-price').replaceWith(printPrice(offers['24-half']));
-                            $(insertPromoLink(null, null, null, "promo : 6 mois à moitié prix")).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                            $(insertPromoLink(null, null, null, "<span data-l10n-id='promoHalf'>promo : 6 mois à moitié prix</span>")).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                         } else {
                             $('.k24').find('.offer-price').replaceWith(printPrice(offers[24]));
                         }
@@ -425,7 +425,7 @@ function checkDispo(homeId, isLOLCable) {
                                 $('.k100+.promos-link.persist').hide();
                                 $('.k100').find('.offer-price').replaceWith(printPrice(offers['100-half']));
                                 $(insertPromoLink(null, null, null, "promo : 6 mois à moitié prix")).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                                $(insertPromoLink(ab[2][0], ab[2][1], homeId, "promo : installation offerte")).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500); //PRINT LIEN VERS PAGE VDSL
+                                $(insertPromoLink(ab[2][0], ab[2][1], homeId, "<span data-l10n-id='promoInstall'>promo : installation offerte</span>")).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500); //PRINT LIEN VERS PAGE VDSL
                             } else { //SI FIBRE
                                 $('.k100+.promos-link.persist').attr('href', '//www.internet.lu/promos/fibre.html#' + homeId + ';' + isLOLCable);
                                 $('.k100+.promos-link.persist').show();
@@ -441,7 +441,7 @@ function checkDispo(homeId, isLOLCable) {
                             $(printNonDispo(nonDispoTemplate)).prependTo('.k100').css('visibility', 'visible').animate({opacity: 1.0}, 500);
                             $('.k100').addClass('not');
                             if ($('#promoFiber-content').length > 0 && (ab[0] != "" || ab[1] != "")) {
-                                $('<a data-l10n-id="otherOffers" class="btn-blue btn-subscription" href="//internet.lu/internet/offres.html">Voir nos autres offres</a>').insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                                $('<a class="btn-blue btn-subscription" href="//internet.lu/internet/offres.html" data-l10n-id="otherOffers">Voir nos autres offres</a>').insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                             }
                         }
                     }

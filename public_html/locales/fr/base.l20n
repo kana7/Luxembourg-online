@@ -1,4 +1,3 @@
-/*-------------------------------INDEX.HTML-----------------------------------*/
 /*---------------------------GLOBAL TRANSLATION-------------------------------*/
 <month "/mois">
 <homeHeadTitle "Votre opérateur télécoms : Luxembourg Online">
@@ -36,6 +35,10 @@ Langage<span class="icon-right-arrow"></span>
 <copyright "© Luxembourg Online S.A. – 2016, tous droits réservés">
 <adresse "adresse">
 <notDispo "indisponible">
+<footNoteOptionPay "Option payante">
+<footNoteConditionShop "Voir conditions en magasin">
+<gratis "gratuit">
+<mondaySaturday "Lu-Sa:">
 /*-----------------------------------LIENS------------------------------------*/
 <menuLinkHome "Accueil">
 <menuLinkInternet "Internet">
@@ -45,16 +48,16 @@ Langage<span class="icon-right-arrow"></span>
 <menuLinkCoupon "Promos">
 <menuLinkOnlineOrder "Inscription en ligne">
 <menuLinkAssistance "Assistance">
-<menuLinkMag "Magazine">
+<menuLinkMag "Brochure">
 <menuLinkAbout "À propos">
 <menuLinkContact "Contact">
 <menuLinkJob "Offres d'emploi">
 <menuLinkSitemap "Plan du site">
-<menuLinkInternet-home "Accueil Internet">
+<menuLinkInternetHome "Accueil Internet">
 <menuLinkGear "Nos équipements">
 <menuLinkSub "Abonnez-vous">
 <menuLinkPhoneHome "Accueil Téléphonie">
-<menuLinkPrices "Nos tarifs">
+<menuLinkPrices "Nos {{tarifs}}">
 <menuLinkOurPhones "Nos téléphones">
 <menuLinkTvHome "Accueil TV">
 <menuLinkTvOffers "Notre offre TV">
@@ -66,7 +69,18 @@ Langage<span class="icon-right-arrow"></span>
 <menuLinkPrivate "Particuliers">
 <menuLinkBusiness "Business">
 <menuLinkNotice "Mentions légales">
+<menuLinkTarifs """
+<span class="icon icon-calculator-ico"></span>Tarifs DSL/FIBER
+""">
+<menuLinkParrainage """
+<span class="icon icon-parrainage-ico"></span>Bon de parrainage
+""">
+<menuLinkDoc """
+<span class="icon icon-document-ico"></span>Documents
+""">
+
 /*----------------------------------------------------------------------------*/
+/*-------------------------------INDEX.HTML-----------------------------------*/
 /*----------------------------------SLIDER------------------------------------*/
 <fiberPromoTitle1 """
     La vitesse <span class="lowercase">x</span>2
@@ -85,22 +99,16 @@ Langage<span class="icon-right-arrow"></span>
 <br/>partout où vous voulez!
 """>
 <sliderLolcloudDetails "5 GB de stockage offerts">
-<>
 /*----------------------------------------------------------------------------*/
 /*---------------------------------ENCARTS------------------------------------*/
-<homeInternetOffers """
-Internet jusqu'à 24 Mbits/s
-<br/>+ Tél. fixe
-<br/>+ Mobile
+<serviceMobileDesc """
+Appels et SMS<br/>en Europe inclus.
 """>
-<homeMobileOffer """
-Appels et SMS
-<br/>en Europe inclus.
+<serviceTvDesc """
+Netflix<span class="exponent">(1)</span> et YouTube<br/>sur votre TV !
 """>
-<homeTvOffer """
-Vibrez en haute
-<br/>définition pour
-<br/>l'Euro 2016 !
+<serviceLolnowDesc """
+Profitez d'Internet<br/>dès la signature<br/>du contrat !
 """>
 <encartTestTitle """
     Toutes {{menuLinkOffers}} disponibles <strong>chez vous</strong> : 
@@ -112,18 +120,18 @@ Vibrez en haute
 <homeMagTitle """
 découvrez toutes nos offres <strong>adaptées à vos besoins !</strong>
 """>
-<homeMagTxt "Internet, téléphonie fixe, téléphonie mobile ou télévision. Consultez notre magazine pour découvrir l’intégralité de nos offres ainsi que les promotions du moment.">
+<homeMagDesc "Internet, téléphonie fixe, téléphonie mobile ou télévision. Consultez notre magazine pour découvrir l’intégralité de nos offres ainsi que les promotions du moment.">
 <homeMagLink "Consultez le magazine">
 <homeBdayTitle """
 Luxembourg online
 <br/><strong>fête ses 20 ans !</strong>
 """>
-<homeBdayTxt "Nous vous remercions de la confiance que vous nous accordez. Notre collaboration ainsi que votre fidélité sont les clés de notre réussite depuis 20 ans.">
+<homeBdayDesc "Nous vous remercions de la confiance que vous nous accordez. Notre collaboration ainsi que votre fidélité sont les clés de notre réussite depuis 20 ans.">
 <homeBdayLink "À propos de Luxembourg Online">
 <homeOnlineluTitle """
 L’actu high-tech, cinéma et toutes vos sorties <strong>au luxembourg !</strong>
 """>
-<homeOnlineluTxt "Horaires des films au Luxembourg, bandes annonces, tendances high-tech, mais aussi concerts, expos et restos vous attendent sur le portail culturel online.lu.">
+<homeOnlineluDesc "Horaires des films au Luxembourg, bandes annonces, tendances high-tech, mais aussi concerts, expos et restos vous attendent sur le portail culturel online.lu.">
 <homeOnlineluLink "Accédez à online.lu">
 <tvChannelOffer "+ 110 chaînes TV, 40 chaînes Full HD et + 40 chaînes radio">
 /*----------------------------------------------------------------------------*/
@@ -144,6 +152,8 @@ Nous ne pouvons malheureusement pas vérifier l’éligibilité de votre adresse
 <euFixe "120 min vers l\'Europe fixe">
 <otherOffers "Voir nos autres offres">
 <promoInstall "promo : installation offerte">
+<promoSpeed "PROMO : LA VITESSE x2">
+<promoHalf "promo : 6 mois à moitié prix">
 <chooseLoc "Choisissez votre localité">
 <chooseAdr "Choisissez votre adresse">
 <chooseNum "Choisissez le numéro">
@@ -153,7 +163,41 @@ Nous ne pouvons malheureusement pas vérifier l’éligibilité de votre adresse
 <testDispoTitle "Testez la disponibilité">
 /*----------------------------------------------------------------------------*/
 /*---------------------------INTERNET/ACCUEIL.HTML----------------------------*/
-<internetAccueilHeadTitle "Internet : Accueil - Luxembourg Online">
-<internetAccueilHeadDescription """
-    content="Spécialiste de l’ultra haut débit, Luxembourg Online vous propose des offres Internet performantes (DSL et fibre optique) à des prix attractifs."
+/*----------------------------------LINKS-------------------------------------*/
+
+/*----------------------------------------------------------------------------*/
+/*----------------------------------META--------------------------------------*/
+<internetAccueilMetaTitle "Internet : Accueil - Luxembourg Online">
+<internetAccueilMetaDesc """
+    content="Spécialiste de l’ultra haut débit, Luxembourg Online vous propose des offres Internet performantes (DSL et fibre optique) à des prix attractifs. "
 """>
+<internetAccueilMetaKeywords """
+    content="Offre Internet fibre, fibre optique Luxembourg, Internet haut débit, fournisseur accès Internet"
+""">
+/*----------------------------------------------------------------------------*/
+/*------------------------------OFFRE INTERNET--------------------------------*/
+<internetAccueilOfferTitle """
+Des offres Internet <strong>toujours plus attractives !</strong>
+""">
+<internetAccueilOfferDesc """
+Spécialiste de l’Internet depuis plus de 20 ans, Luxembourg Online met à votre disposition des offres performantes et à un prix attractif.<br/> Que vous ayez simplement besoin de l’essentiel ou que vous soyez un surfer hyper-connecté, une de nos offres est forcément faite pour vous !
+""">
+<internetAccueilOfferLink "Voir nos offres Internet">
+/*----------------------------------------------------------------------------*/
+/*-------------------------------SECTION FIBRE--------------------------------*/
+<internetAccueilFibreTitle """
+<strong>La fibre optique</strong> le meilleur moyen d'accéder à Internet !
+""">
+<internetAccueilFibreDesc """
+Considérée comme étant la technologie d’avenir, la fibre optique se généralise au Luxembourg.<br/> Plus fiable et plus efficace, elle présente de nombreux avantages pour ses usagers : stabilité, simultanéité des usages, rapidité, qualité de réception supérieure, avec la fibre vous pouvez tout faire !
+""">
+<internetAccueilFibreLink "En savoir plus sur la fibre">
+/*----------------------------------------------------------------------------*/
+/*---------------------------SECTION EQUIPEMENT--------------------------------*/
+<internetAccueilGearTitle """
+<strong>Nos équipements</strong> le choix de la qualité !
+""">
+<internetAccueilGearDesc """
+Pour sa gamme Internet, Luxembourg Online a fait le choix de la qualité avec les produits de la marque AVM. 
+""">
+<internetAccueilGearLink "Voir nos équipements">

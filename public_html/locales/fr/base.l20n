@@ -164,9 +164,6 @@ Nous ne pouvons malheureusement pas vérifier l’éligibilité de votre adresse
 <testDispoTitle "Testez la disponibilité">
 /*----------------------------------------------------------------------------*/
 /*---------------------------INTERNET/ACCUEIL.HTML----------------------------*/
-/*----------------------------------LINKS-------------------------------------*/
-
-/*----------------------------------------------------------------------------*/
 /*----------------------------------META--------------------------------------*/
 <internetAccueilMetaTitle "Internet : Accueil - Luxembourg Online">
 <internetAccueilMetaDesc """
@@ -204,6 +201,9 @@ Pour sa gamme Internet, Luxembourg Online a fait le choix de la qualité avec le
 <internetAccueilGearLink "Voir nos équipements">
 /*----------------------------------------------------------------------------*/
 /*------------------------INTERNET/PARRAINAGE.HTML----------------------------*/
+/*----------------------------------META--------------------------------------*/
+<internetParainnageMetaTitle "Internet : Bon de parrainage - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
 /*--------------------------------SECTION-------------------------------------*/
 <internetParainnageTitle """
 Bon de <b>parrainage</b>
@@ -215,3 +215,5 @@ Vous connaissez des personnes qui n'ont pas encore d'abonnement Internet chez Lu
 <internetParainnageDesc1 """
 Pour profiter de notre offre de parrainage, téléchargez et complétez le bon ci-dessous :
 """>
+/*----------------------------------------------------------------------------*/
+/*------------------------INTERNET/PARRAINAGE.HTML----------------------------*/

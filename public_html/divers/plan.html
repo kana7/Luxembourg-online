@@ -15,478 +15,475 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         <link rel="localization" href="../locales/manifest.json"/>
-        <script src="../locales/l20n.js"></script>
-        <script>
-            // L20n and document.l10n are now available
-            document.l10n.ready(function () {
-                console.log("Document's context is ready");
-            });
-        </script>
-    </head>
+        <script defer src="../locales/l20n.js"></script>
+    </script>
+</head>
 
-    <body>
-        <div id="clientSpace" class="popup">
+<body>
+    <div id="clientSpace" class="popup">
             <div class="background-client"></div>
             <div class="white-pannel">
-                <button class="pannel-close"><span class="icon-x-icone"></span></button>
-                <h2 data-l10n-id="frontOffice">Espace Client</h2>
-                <ul class="client-menu">
-                    <li class="active" data-id="mail" data-l10n-id="frontOfficeMail">Email</li>
-                    <li>|</li>
-                    <li data-id="account" data-l10n-id="frontOfficeAccount">Mon compte</li>
-                    <li>|</li>
-                    <li data-id="homepage" data-l10n-id="frontOfficeHomepage">Homepage</li>
-                </ul>
-                <div class="pannel-forms">
-                    <form id="mail" class="clearfix is-visible" name="ServiceLogin1" method="POST" action="https://email.internet.lu/Scripts/sql.exe?_selection=10">
-                        <input type="hidden" name="Sql" value="Default.phs">  
-                        <input type="hidden" name="SqlDB" value="OMS2">  
-                        <div class="phone-6 input-left" data-l10n-id="placeholderUser">
-                            <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
-                        </div>
-                        <div class="phone-6 input-right" data-l10n-id="placeholderMdp">
-                            <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
-                        </div>
-                        <button class="btn-blue" type="submit" data-l10n-id="frontOfficeConnect">Se connecter</button>
-                    </form>
-                    <form id="account" class="clearfix" name="LoginPhone" method="POST" action="http://shop.internet.lu/Scripts/sql.exe?LoginScript=LoginClient.phs&NextScript=DisplayAccount.phs&_Login=">
-                        <input type="hidden" name="Sql" value="LoginClient_Login.phs">  
-                        <input type="hidden" name="SqlDB" value="LOLShop">  
-                        <div class="phone-6 input-left" data-l10n-id="placeholderUser">
-                            <input type="text" name="_Username" placeholder="Nom d'utilisateur"/>
-                        </div>
-                        <div class="phone-6 input-right"  data-l10n-id="placeholderMdp">
-                            <input class="pull-right" type="password" name="_Password" placeholder="Mot de passe"/>
-                        </div>
-                        <button class="btn-blue" type="submit" data-l10n-id="frontOfficeConnect">Se connecter</button>
-                    </form>
-                    <form id="homepage" class="clearfix" name="ServiceLogin3" method="POST" action="http://sites.internet.lu/Scripts/sql.exe">
-                        <input type="hidden" name="Sql" value="default.phs">  
-                        <input type="hidden" name="SqlDB" value="OHPS">  
-                        <div class="phone-6 input-left" data-l10n-id="placeholderUser">
-                            <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
-                        </div>
-                        <div class="phone-6 input-right" data-l10n-id="placeholderMdp">
-                            <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
-                        </div>
-                        <button class="btn-blue" type="submit" data-l10n-id="frontOfficeConnect">Se connecter</button>
-                    </form>
-                    <div class="contact-infos hidden-phone">
-                        Helpdesk: 2799 0000
-                        <span data-l10n-id="frontOfficeOpening">Lu-Ve: 8h00-19h00  l  Sa: 9h00-18h00</span>
-                    </div>
-                    <div class="contact-infos display-phone">
-                        Helpdesk: 2799 0000
-                        <span data-l10n-id="frontOfficeOpening">Lu-Ve: 8h00-19h00<br/>Sa: 9h00-18h00</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="fixed-options hidden-phone hidden-tab">
-            <a href="#">
-                <div class="white-fixed-option">
-                    <div class="icon-call-me"></div>
-                    <p>Veuillez me rappeler</p>
-                </div>
-            </a>
-        </div>
-        <nav class="mobile-side-menu">
-            <ul class="menu">
-                <li class="menu-item link"><a href="index.htm" data-l10n-id="menuLinkHome">Accueil</a></li>
-                <li class="menu-item" data-id='internet' data-l10n-id="menuLinkInternet">Internet<span class="icon-right-arrow"></span></li>
-                <li class="menu-item" data-id='telephone' data-l10n-id="menuLinkPhone">Téléphonie <span class="icon-right-arrow"></span></li>
-                <li class="menu-item" data-id='tv' data-l10n-id="menuLinkTv">TV <span class="icon-right-arrow"></span></li>
-                <li class="menu-item" data-id='mobile' data-l10n-id="menuLinkMobile">Mobile<span class="icon-right-arrow"></span></li>
-                <li class="menu-item link"><a href="../promos/fibre.html" data-l10n-id="menuLinkCoupon">Promos</a></li>
-                <li class="menu-item link commande"><a href="http://shop.internet.lu/inscription/shop/offres.html"><span class="icon-orders"></span><span data-l10n-id="menuLinkOnlineOrder">Inscription en ligne</span></a></li>
-                <li class="sous-nav">
-                    <ul class="menu">
-                        <li class="menu-item link"><a href="../divers/assistance.html" data-l10n-id="menuLinkAssistance">Assistance</a></li>
-                        <li class="menu-item link"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOLCLOUD</a></li>
-                        <li class="menu-item link"><a href="../divers/brochure.html" data-l10n-id="menuLinkMag">Brochure</a></li>
-                        <li class="menu-item link"><a href="../divers/propos.html" data-l10n-id="menuLinkAbout">À propos</a></li>
-                        <li class="menu-item link"><a href="../divers/contact.html" data-l10n-id="menuLinkContact">Contact</a></li>
-                        <li class="menu-item link"><a href="../divers/emploi.html" data-l10n-id="menuLinkJob">Offres d'emploi</a></li>
-                        <li class="menu-item link"><a href="../divers/plan.html" data-l10n-id="menuLinkSitemap">Plan du site</a></li>
+                <div style="position:relative;">
+                    <button class="pannel-close"><span class="icon-x-icone"></span></button>
+                    <h2 data-l10n-id="frontOffice">Espace Client</h2>
+                    <ul class="client-menu">
+                        <li class="active" data-id="mail" data-l10n-id="frontOfficeMail">Email</li>
+                        <li>|</li>
+                        <li data-id="account" data-l10n-id="frontOfficeAccount">Mon compte</li>
+                        <li>|</li>
+                        <li data-id="homepage" data-l10n-id="frontOfficeHomepage">Homepage</li>
                     </ul>
-                </li>
-            </ul>
-            <div class="menu-links-wrapper">
-                <ul class="menu-links" id="internet">
-                    <li class="menu-item back"><span class="icon-right-arrow"></span>Internet</li>
-                    <li class="menu-item"><a href="../internet/accueil.html" data-l10n-id="menuLinkInternetHome">Accueil Internet</a></li>
-                    <li class="menu-item"><a href="../internet/offres.html" data-l10n-id="menuLinkOffers">Nos offres</a></li>
-                    <li class="menu-item"><a href="../internet/equipements.html" data-l10n-id="menuLinkGear">Nos équipements</a></li>
-                    <li class="menu-item"><a href="../internet/optionnow.html">Option NOW</a></li>
-                    <li class="menu-item"><a href="../internet/abonnement.html" data-l10n-id="menuLinkSub">Abonnez-vous</a></li>
-                </ul>
-            </div>
-            <div class="menu-links-wrapper">
-                <ul class="menu-links" id="telephone">
-                    <li class="menu-item back"><span class="icon-right-arrow"></span><span data-l10n-id="menuLinkPhone">Téléphonie</span></li>
-                    <li class="menu-item"><a href="../telephonie/accueil.html" data-l10n-id="menuLinkPhoneHome">Accueil Téléphonie</a></li>
-                    <li class="menu-item"><a href="../telephonie/tarifs.html" data-l10n-id="menuLinkPrices">Nos tarifs</a></li>
-                    <li class="menu-item"><a href="../telephonie/lolvisio.html">LOLVISIO</a></li>
-                    <li class="menu-item"><a href="../telephonie/equipements.html " data-l10n-id="menuLinkOurPhones">Nos téléphones</a></li>
-                    <li class="menu-item"><a href="../telephonie/abonnement.html" data-l10n-id="menuLinkSub">Abonnez-vous</a></li>
-                </ul>
-            </div>
-            <div class="menu-links-wrapper">
-                <ul class="menu-links" id="tv">
-                    <li class="menu-item back"><span class="icon-right-arrow"></span><span data-l10n-id="menuLinkTv">TV</span></li>
-                    <li class="menu-item"><a href="../tv/accueil.html" data-l10n-id="menuLinkTvHome">Accueil TV</a></li>
-                    <li class="menu-item"><a href="../tv/offres.html" data-l10n-id="menuLinkTvOffers">Notre offre TV</a></li>
-                    <li class="menu-item"><a href="../tv/equipements.html" data-l10n-id="menuLinkGear">Nos équipements</a></li>
-                    <li class="menu-item"><a href="../tv/abonnement.html" data-l10n-id="menuLinkSub">Abonnez-vous</a></li>
-                </ul>
-            </div>
-            <div class="menu-links-wrapper">
-                <ul class="menu-links" id="mobile">
-                    <li class="menu-item back"><span class="icon-right-arrow"></span><span data-l10n-id="menuLinkMobile">Mobile</span></li>
-                    <li class="menu-item"><a href="../mobile/accueil.html" data-l10n-id="menuLinkMobileHome">Accueil Mobile</a></li>
-                    <li class="menu-item"><a href="../mobile/abonnements.html" data-l10n-id="menuLinkMobileSub">Nos abonnements</a></li>
-                    <li class="menu-item"><a href="../mobile/equipements.html" data-l10n-id="menuLinkOurPhones">Nos téléphones</a></li>
-                    <li class="menu-item"><a href="../mobile/abonnement.html" data-l10n-id="menuLinkSub">Abonnez-vous</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div id="siteWrap">
-            <header>
-               <div id="top-menu-header">
-                    <div class="container-wrapper">
-                        <div class="row">
-                            <nav class="pull-left">
-                                <ul class="top-menu-header-links left">
-                                    <li class="active"><a href="/index.htm" data-l10n-id="menuLinkPrivate">Particuliers</a></li><!--
-                                    --><li><a href="http://www.internet.lu/business/" data-l10n-id="menuLinkBusiness">Business</a></li>
-                                </ul>
-                            </nav>
-                            <nav class="pull-right hidden-phone hidden-tab">
-                                <ul class="top-menu-header-links right">
-                                    <li class="menu-item"><a href="../divers/assistance.html" data-l10n-id="menuLinkAssistance">Assistance</a></li>
-                                    <li class="menu-item"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOLCLOUD</a></li>
-                                    <li class="menu-item"><a href="../divers/brochure.html" data-l10n-id="menuLinkMag">Brochure</a></li>
-                                    <li class="menu-item"><a href="../divers/propos.html" data-l10n-id="menuLinkAbout">À propos</a></li>
-                                    <li class="menu-item"><a href="../divers/contact.html" data-l10n-id="menuLinkContact">Contact</a></li>
-                                </ul>
-                                <div class="header-dropdown top-menu-header-links left">
-                                    <button data-l10n-id="language">Langages<span class="icon-right-arrow"></span></button>
-                                    <ul id="languageSelector" class="drop">
-                                        <li><a href="#" data-lang="fr">Fr</a></li>
-                                        <li><a href="#" data-lang="en">En</a></li>
-                                        <li><a href="#" data-lang="de">De</a></li>
-                                    </ul>
-                                </div>
-                            </nav>
+                    <div class="pannel-forms">
+                        <form id="mail" class="clearfix is-visible" name="ServiceLogin1" method="POST" action="https://email.internet.lu/Scripts/sql.exe?_selection=10">
+                            <input type="hidden" name="Sql" value="Default.phs">  
+                            <input type="hidden" name="SqlDB" value="OMS2">  
+                            <div class="phone-6 input-left" data-l10n-id="placeholderUser">
+                                <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
+                            </div>
+                            <div class="phone-6 input-right" data-l10n-id="placeholderMdp">
+                                <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
+                            </div>
+                            <button class="btn-blue" type="submit" data-l10n-id="frontOfficeConnect">Se connecter</button>
+                        </form>
+                        <form id="account" class="clearfix" name="LoginPhone" method="POST" action="http://shop.internet.lu/Scripts/sql.exe?LoginScript=LoginClient.phs&NextScript=DisplayAccount.phs&_Login=">
+                            <input type="hidden" name="Sql" value="LoginClient_Login.phs">  
+                            <input type="hidden" name="SqlDB" value="LOLShop">  
+                            <div class="phone-6 input-left" data-l10n-id="placeholderUser">
+                                <input type="text" name="_Username" placeholder="Nom d'utilisateur"/>
+                            </div>
+                            <div class="phone-6 input-right" data-l10n-id="placeholderMdp">
+                                <input class="pull-right" type="password" name="_Password" placeholder="Mot de passe"/>
+                            </div>
+                            <button class="btn-blue" type="submit" data-l10n-id="frontOfficeConnect">Se connecter</button>
+                        </form>
+                        <form id="homepage" class="clearfix" name="ServiceLogin3" method="POST" action="http://sites.internet.lu/Scripts/sql.exe">
+                            <input type="hidden" name="Sql" value="default.phs">  
+                            <input type="hidden" name="SqlDB" value="OHPS">  
+                            <div class="phone-6 input-left" data-l10n-id="placeholderUser">
+                                <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
+                            </div>
+                            <div class="phone-6 input-right" data-l10n-id="placeholderMdp">
+                                <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
+                            </div>
+                            <button class="btn-blue" type="submit" data-l10n-id="frontOfficeConnect">Se connecter</button>
+                        </form>
+                        <div class="contact-infos hidden-phone">
+                            Helpdesk: 2799 0000
+                            <span data-l10n-id="frontOfficeOpening">Lu-Ve: 8h00-19h00  l  Sa: 9h00-18h00</span>
+                        </div>
+                        <div class="contact-infos display-phone">
+                            Helpdesk: 2799 0000
+                            <span data-l10n-id="frontOfficeOpening">Lu-Ve: 8h00-19h00<br/>Sa: 9h00-18h00</span>
                         </div>
                     </div>
                 </div>
-                <div id="bottom-menu-header">                    
-                    <nav class="bottom-menu-header-links mobile display-phone display-tab">
+            </div>
+        </div>
+    <div class="fixed-options hidden-phone hidden-tab">
+        <a href="#">
+            <div class="white-fixed-option">
+                <div class="icon-call-me"></div>
+                <p>Veuillez me rappeler</p>
+            </div>
+        </a>
+    </div>
+    <nav class="mobile-side-menu">
+        <ul class="menu">
+            <li class="menu-item link"><a href="index.htm" data-l10n-id="menuLinkHome">Accueil</a></li>
+            <li class="menu-item" data-id='internet' data-l10n-id="menuLinkInternet">Internet<span class="icon-right-arrow"></span></li>
+            <li class="menu-item" data-id='telephone' data-l10n-id="menuLinkPhone">Téléphonie <span class="icon-right-arrow"></span></li>
+            <li class="menu-item" data-id='tv' data-l10n-id="menuLinkTv">TV <span class="icon-right-arrow"></span></li>
+            <li class="menu-item" data-id='mobile' data-l10n-id="menuLinkMobile">Mobile<span class="icon-right-arrow"></span></li>
+            <li class="menu-item link"><a href="../promos/fibre.html" data-l10n-id="menuLinkCoupon">Promos</a></li>
+            <li class="menu-item link commande"><a href="http://shop.internet.lu/inscription/shop/offres.html"><span class="icon-orders"></span><span data-l10n-id="menuLinkOnlineOrder">Inscription en ligne</span></a></li>
+            <li class="sous-nav">
+                <ul class="menu">
+                    <li class="menu-item link"><a href="../divers/assistance.html" data-l10n-id="menuLinkAssistance">Assistance</a></li>
+                    <li class="menu-item link"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOLCLOUD</a></li>
+                    <li class="menu-item link"><a href="../divers/brochure.html" data-l10n-id="menuLinkMag">Brochure</a></li>
+                    <li class="menu-item link"><a href="../divers/propos.html" data-l10n-id="menuLinkAbout">À propos</a></li>
+                    <li class="menu-item link"><a href="../divers/contact.html" data-l10n-id="menuLinkContact">Contact</a></li>
+                    <li class="menu-item link"><a href="../divers/emploi.html" data-l10n-id="menuLinkJob">Offres d'emploi</a></li>
+                    <li class="menu-item link"><a href="../divers/plan.html" data-l10n-id="menuLinkSitemap">Plan du site</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="menu-links-wrapper">
+            <ul class="menu-links" id="internet">
+                <li class="menu-item back"><span class="icon-right-arrow"></span>Internet</li>
+                <li class="menu-item"><a href="../internet/accueil.html" data-l10n-id="menuLinkInternetHome">Accueil Internet</a></li>
+                <li class="menu-item"><a href="../internet/offres.html" data-l10n-id="menuLinkOffers">Nos offres</a></li>
+                <li class="menu-item"><a href="../internet/equipements.html" data-l10n-id="menuLinkGear">Nos équipements</a></li>
+                <li class="menu-item"><a href="../internet/optionnow.html">Option NOW</a></li>
+                <li class="menu-item"><a href="../internet/abonnement.html" data-l10n-id="menuLinkSub">Abonnez-vous</a></li>
+            </ul>
+        </div>
+        <div class="menu-links-wrapper">
+            <ul class="menu-links" id="telephone">
+                <li class="menu-item back"><span class="icon-right-arrow"></span><span data-l10n-id="menuLinkPhone">Téléphonie</span></li>
+                <li class="menu-item"><a href="../telephonie/accueil.html" data-l10n-id="menuLinkPhoneHome">Accueil Téléphonie</a></li>
+                <li class="menu-item"><a href="../telephonie/tarifs.html" data-l10n-id="menuLinkPrices">Nos tarifs</a></li>
+                <li class="menu-item"><a href="../telephonie/lolvisio.html">LOLVISIO</a></li>
+                <li class="menu-item"><a href="../telephonie/equipements.html " data-l10n-id="menuLinkOurPhones">Nos téléphones</a></li>
+                <li class="menu-item"><a href="../telephonie/abonnement.html" data-l10n-id="menuLinkSub">Abonnez-vous</a></li>
+            </ul>
+        </div>
+        <div class="menu-links-wrapper">
+            <ul class="menu-links" id="tv">
+                <li class="menu-item back"><span class="icon-right-arrow"></span><span data-l10n-id="menuLinkTv">TV</span></li>
+                <li class="menu-item"><a href="../tv/accueil.html" data-l10n-id="menuLinkTvHome">Accueil TV</a></li>
+                <li class="menu-item"><a href="../tv/offres.html" data-l10n-id="menuLinkTvOffers">Notre offre TV</a></li>
+                <li class="menu-item"><a href="../tv/equipements.html" data-l10n-id="menuLinkGear">Nos équipements</a></li>
+                <li class="menu-item"><a href="../tv/abonnement.html" data-l10n-id="menuLinkSub">Abonnez-vous</a></li>
+            </ul>
+        </div>
+        <div class="menu-links-wrapper">
+            <ul class="menu-links" id="mobile">
+                <li class="menu-item back"><span class="icon-right-arrow"></span><span data-l10n-id="menuLinkMobile">Mobile</span></li>
+                <li class="menu-item"><a href="../mobile/accueil.html" data-l10n-id="menuLinkMobileHome">Accueil Mobile</a></li>
+                <li class="menu-item"><a href="../mobile/abonnements.html" data-l10n-id="menuLinkMobileSub">Nos abonnements</a></li>
+                <li class="menu-item"><a href="../mobile/equipements.html" data-l10n-id="menuLinkOurPhones">Nos téléphones</a></li>
+                <li class="menu-item"><a href="../mobile/abonnement.html" data-l10n-id="menuLinkSub">Abonnez-vous</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="siteWrap">
+        <header>
+            <div id="top-menu-header">
+                <div class="container-wrapper">
+                    <div class="row">
+                        <nav class="pull-left">
+                            <ul class="top-menu-header-links left">
+                                <li class="active"><a href="/index.htm" data-l10n-id="menuLinkPrivate">Particuliers</a></li><!--
+                                --><li><a href="http://www.internet.lu/business/" data-l10n-id="menuLinkBusiness">Business</a></li>
+                            </ul>
+                        </nav>
+                        <nav class="pull-right hidden-phone hidden-tab">
+                            <ul class="top-menu-header-links right">
+                                <li class="menu-item"><a href="../divers/assistance.html" data-l10n-id="menuLinkAssistance">Assistance</a></li>
+                                <li class="menu-item"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOLCLOUD</a></li>
+                                <li class="menu-item"><a href="../divers/brochure.html" data-l10n-id="menuLinkMag">Brochure</a></li>
+                                <li class="menu-item"><a href="../divers/propos.html" data-l10n-id="menuLinkAbout">À propos</a></li>
+                                <li class="menu-item"><a href="../divers/contact.html" data-l10n-id="menuLinkContact">Contact</a></li>
+                            </ul>
+                            <div class="header-dropdown top-menu-header-links left">
+                                <button data-l10n-id="language">Langages<span class="icon-right-arrow"></span></button>
+                                <ul id="languageSelector" class="drop">
+                                    <li><a href="#" data-lang="fr">Fr</a></li>
+                                    <li><a href="#" data-lang="en">En</a></li>
+                                    <li><a href="#" data-lang="de">De</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div id="bottom-menu-header">                    
+                <nav class="bottom-menu-header-links mobile display-phone display-tab">
+                    <div class="pull-left">
+                        <div class="logo">
+                            <a href="../index.htm"><img src="../images/Icone/Img/Logo-LOL.png" alt="logo LOL" /></a>
+                        </div>
+                    </div>
+                    <div class="mobile-menu-button">
+                        <button id="openClientSpaceMobile" class="mobile-button-blue openPopup" data-popup="0">
+                            <span class="icon-account-icone"></span>
+                        </button>
+                        <button class="mobile-button-white">
+                            <span class="icon-menu-icone"></span>
+                        </button>
+                    </div>
+                </nav>
+                <div class="container-wrapper hidden-phone hidden-tab">
+                    <div class="row">
                         <div class="pull-left">
                             <div class="logo">
-                                <a href="../index.htm"><img src="../images/Icone/Img/Logo-LOL.png" alt="logo LOL" /></a>
-                            </div>
-                        </div>
-                        <div class="mobile-menu-button">
-                            <button id="openClientSpaceMobile" class="mobile-button-blue openPopup" data-popup="0">
-                                <span class="icon-account-icone"></span>
-                            </button>
-                            <button class="mobile-button-white">
-                                <span class="icon-menu-icone"></span>
-                            </button>
-                        </div>
-                    </nav>
-                    <div class="container-wrapper hidden-phone hidden-tab">
-                        <div class="row">
-                            <div class="pull-left">
-                                <div class="logo">
-                                    <a href="../index.htm"><img src="../images/Icone/img/Logo-LOL.png" alt="logo LOL" /></a>
-                                </div><!--
-                                --><nav class="bottom-menu-header-links">
-                                    <ul class="main-menu">
-                                        <li>
-                                            <div class="active-border"></div>
-                                            <a href="../internet/accueil.html">
-                                                <img class="header-icon" src="../images/Icone/img/internet.png" alt="Internet" />
-                                                <div class="link" data-l10n-id="menuLinkInternet">Internet</div>
-                                            </a>
-                                        </li><!--
-                                        --><li>
-                                            <div class="active-border"></div>
-                                            <a href="../telephonie/accueil.html">
-                                                <img class="header-icon" src="../images/Icone/img/telephonie.png" alt="Téléphonie" />
-                                                <div class="link" data-l10n-id="menuLinkPhone">Téléphonie</div>
-                                            </a>
-                                        </li><!--
-                                        --><li>
-                                            <div class="active-border"></div>
-                                            <a href="../tv/accueil.html">
-                                                <img class="header-icon" src="../images/Icone/img/tv.png" alt="Tv" />
-                                                <div class="link" data-l10n-id="menuLinkTv">TV</div>
-                                            </a>
-                                        </li><!--
-                                        --><li>
-                                            <div class="active-border"></div>
-                                            <a href="../mobile/accueil.html">
-                                                <img class="header-icon" src="../images/Icone/img/mobile.png" alt="Mobile" />
-                                                <div class="link" data-l10n-id="menuLinkMobile">Mobile</div>
-                                            </a>
-                                        </li><!--
-                                        --><li>
-                                            <div class="active-border"></div>
-                                            <a href="../promos/fibre.html">
-                                                <img class="header-icon" src="../images/Icone/img/promos.png" alt="Promos" />
-                                                <div class="link" data-l10n-id="menuLinkCoupon">Promos</div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                            <div class="pull-right hidden-phone hidden-tab">
-                                <button id="openClientSpace" class="btn-blue openPopup" data-popup="0" data-l10n-id="frontOffice">Espace client</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </header>
-
-            <section class="drop-shadow background-lightgrey">
-                <div class="container-wrapper">
-                    <div class="row clearfix">
-                        <div class="align-center phone-12">
-                            <h1 class="plan-title-padding section-title normal lowercase">Plan du site Luxembourg Online</h1>                            
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="map">
-                <div class="row">
-                    <div class="container-wrapper">
-                        <div class="desk-3 tab-6 phone-12">
-                            <div class="boxmap">
-                                <h2>Internet</h2>
-                                <ul>
-                                    <li><a href="../internet/accueil.html"><span class="icon-right-arrow"></span>Accueil Internet</a></li>                                    
-                                    <li><a href="../internet/offres.html"><span class="icon-right-arrow"></span>Nos offres</a></li>                                    
-                                    <li><a href="../internet/equipements.html"><span class="icon-right-arrow"></span>Nos équipements</a></li>                                
-                                    <li><a href="../internet/optionnow.html"><span class="icon-right-arrow"></span>Option NOW</a></li>                                
-                                    <li><a href="../internet/faq.html"><span class="icon-right-arrow"></span>FAQ</a></li>
-                                    <li><a href="../internet/tarifs_detailles.html"><span class="icon-right-arrow"></span>Tarifs DSL/FIBER</a></li>
-                                    <li><a href="../internet/cable.html"><span class="icon-right-arrow"></span>LOLCABLE</a></li>
-                                    <li><a href="../internet/parrainage.html"><span class="icon-right-arrow"></span>Bon de parrainage</a></li>
-                                    <li><a href="../internet/abonnement.html"><span class="icon-right-arrow"></span>Documents</a></li>
-                                </ul>
-                            </div>
-                        </div>                    
-                        <div class="desk-3 tab-6 phone-12">
-                            <div class="boxmap">
-                                <h2>Téléphonie</h2>
-                                <ul>
-                                    <li><a href="../telephonie/accueil.html"><span class="icon-right-arrow"></span>Accueil téléphonie</a></li>                        
-                                    <li><a href="../telephonie/tarifs.html"><span class="icon-right-arrow"></span>Nos tarifs</a></li>
-                                    <li><a href="../telephonie/lolvisio.html"><span class="icon-right-arrow"></span>LOLVISIO</a></li>
-                                    <li><a href="../telephonie/equipements.html"><span class="icon-right-arrow"></span>Nos téléphones</a></li>
-                                    <li><a href="../telephonie/faq.html"><span class="icon-right-arrow"></span>FAQ</a></li>
-                                    <li><a href="../telephonie/repondeur.html"><span class="icon-right-arrow"></span>Répondeur</a></li>                                 
-                                    <li><a href="../telephonie/abonnement.html"><span class="icon-right-arrow"></span>Documents</a></li>
-                                </ul>
-                            </div>
-                        </div>                    
-                        <div class="desk-3 tab-6 phone-12">
-                            <div class="boxmap">
-                                <h2>TV</h2>
-                                <ul>
-                                    <li><a href="../tv/accueil.html"><span class="icon-right-arrow"></span>Accueil TV</a></li>                                    
-                                    <li><a href="../tv/offres.html"><span class="icon-right-arrow"></span>Notre offre TV</a></li>
-                                    <li><a href="../tv/equipements.html"><span class="icon-right-arrow"></span>Nos équipements</a></li>
-                                    <li><a href="../tv/faq.html"><span class="icon-right-arrow"></span>FAQ</a></li>
-                                    <li><a href="../tv/abonnement.html"><span class="icon-right-arrow"></span>Documents</a></li>
-                                </ul>
-                            </div>
-                        </div>                    
-                        <div class="desk-3 tab-6 phone-12">
-                            <div class="boxmap">
-                                <h2>Mobile</h2>
-                                <ul>
-                                    <li><a href="../mobile/accueil.html"><span class="icon-right-arrow"></span>Accueil mobile</a></li>
-                                    <li><a href="../mobile/abonnements.html"><span class="icon-right-arrow"></span>Nos abonnements</a></li>
-                                    <li><a href="../mobile/equipements.html"><span class="icon-right-arrow"></span>Nos mobiles</a></li>
-                                    <li><a href="../mobile/faq.html"><span class="icon-right-arrow"></span>FAQ</a></li>
-                                    <li><a href="#"><span class="icon-right-arrow"></span>Nos tarifs détaillés</a></li>
-                                    <li><a href="../mobile/financement.html"><span class="icon-right-arrow"></span>Options de financement</a></li>
-                                    <li><a href="../mobile/hotcity.html"><span class="icon-right-arrow"></span>Hotcity</a></li>
-                                    <li><a href="../mobile/abonnement.html"><span class="icon-right-arrow"></span>Documents</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="desk-3 hidden-phone"></div>
-                        <div class="desk-3 tab-6 phone-12">
-                            <div class="boxmap others">
-                                <h2>Divers</h2>
-                                <ul>
-                                    <li><a href="../divers/assistance.html"><span class="icon-right-arrow"></span>Assistance</a></li>
-                                    <li><a href="../divers/brochure.html"><span class="icon-right-arrow"></span>Brochure</a></li>
-                                    <li><a href="../divers/propos.html"><span class="icon-right-arrow"></span>À propos</a></li>
-                                    <li><a href="../divers/contact.html"><span class="icon-right-arrow"></span>Contact</a></li>
-                                    <li><a href="../promos/fibre.html"><span class="icon-right-arrow"></span>Promos</a></li>
-                                    <li><a href="../divers/emploi.html"><span class="icon-right-arrow"></span>Offres d'emploi</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="desk-3 tab-6 phone-12">
-                            <div class="boxmap others">
-                                <h2>Nos autres sites</h2>
-                                <ul>
-                                    <li><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_"><span class="icon-right-arrow"></span>LOLCLOUD</a></li>
-                                    <li><a href="http://www.internet.lu/business/" target="blank_"><span class="icon-right-arrow"></span>Site business</a></li>
-                                    <li><a href="http://www.online.lu" target="blank_"><span class="icon-right-arrow"></span>Online.lu</a></li>
-                                    <li><a href="http://www.fibre.lu" target="_blank"><span class="icon-right-arrow"></span>Fibre.lu</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <footer>                
-                <div id="social-links" class="iner-shadow">
-                    <div class="container-wrapper">
-                        <div class="row">
-                            <div class="text">Rejoignez-nous sur: </div>
-                            <nav>
-                                <ul class="spread">
+                                <a href="../index.htm"><img src="../images/Icone/img/Logo-LOL.png" alt="logo LOL" /></a>
+                            </div><!--
+                            --><nav class="bottom-menu-header-links">
+                                <ul class="main-menu">
                                     <li>
-                                        <a href="http://www.online.lu/" target="blank_">
-                                            <div class="social-icon lol"><span class="icon-icone-lol"></span></div>
-                                            <span class="brand-name">Online.lu</span>
+                                        <div class="active-border"></div>
+                                        <a href="../internet/accueil.html">
+                                            <img class="header-icon" src="../images/Icone/img/internet.png" alt="Internet" />
+                                            <div class="link" data-l10n-id="menuLinkInternet">Internet</div>
                                         </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.facebook.com/Luxembourg.Online" target="blank_">
-                                            <div class="social-icon facebook"><span class="icon-facebook"></span></div>
-                                            <span class="brand-name">Facebook</span>
+                                    </li><!--
+                                    --><li>
+                                        <div class="active-border"></div>
+                                        <a href="../telephonie/accueil.html">
+                                            <img class="header-icon" src="../images/Icone/img/telephonie.png" alt="Téléphonie" />
+                                            <div class="link" data-l10n-id="menuLinkPhone">Téléphonie</div>
                                         </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://twitter.com/Lux_Online" target="blank_">
-                                            <div class="social-icon twitter"><span class="icon-twitter"></span></div>
-                                            <span class="brand-name">Twitter</span>
+                                    </li><!--
+                                    --><li>
+                                        <div class="active-border"></div>
+                                        <a href="../tv/accueil.html">
+                                            <img class="header-icon" src="../images/Icone/img/tv.png" alt="Tv" />
+                                            <div class="link" data-l10n-id="menuLinkTv">TV</div>
                                         </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://plus.google.com/+internetlu" target="blank_">
-                                            <div class="social-icon google"><span class="icon-google"></span></div>
-                                            <span class="brand-name">Google+</span>
+                                    </li><!--
+                                    --><li>
+                                        <div class="active-border"></div>
+                                        <a href="../mobile/accueil.html">
+                                            <img class="header-icon" src="../images/Icone/img/mobile.png" alt="Mobile" />
+                                            <div class="link" data-l10n-id="menuLinkMobile">Mobile</div>
                                         </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.linkedin.com/company/2054058?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A2054058%2Cidx%3A2-1-2%2CtarId%3A1446712404024%2Ctas%3Aluxembourg%20online" target="blank_">
-                                            <div class="social-icon linkedin"><span class="icon-linkedin"></span></div>
-                                            <span class="brand-name">LinkedIn</span>
+                                    </li><!--
+                                    --><li>
+                                        <div class="active-border"></div>
+                                        <a href="../promos/fibre.html">
+                                            <img class="header-icon" src="../images/Icone/img/promos.png" alt="Promos" />
+                                            <div class="link" data-l10n-id="menuLinkCoupon">Promos</div>
                                         </a>
                                     </li>
                                 </ul>
                             </nav>
                         </div>
+                        <div class="pull-right hidden-phone hidden-tab">
+                            <button id="openClientSpace" class="btn-blue openPopup" data-popup="0" data-l10n-id="frontOffice">Espace client</button>
+                        </div>
                     </div>
                 </div>
-                <div id="contact">
-                    <div class="container-wrapper">
-                        <div class="row">
-                            <div class="text">Contactez-nous : </div>
-                            <ul class="contact-infos spread">
-                                <li>
-                                    <span class="icon-phone-icone"></span><a href="tel://2799 0000">2799 0000</a>
-                                </li>
-                                <li>
-                                    <span class="icon-clock-icone"></span><span data-l10n-id="mondaySaturday">Lu-Sa:</span> 9h00-18h00
-                                </li>
-                                <li>
-                                    <span class="icon-internet-ico"></span><a href="../divers/contact.html#demande_infos_commerciales" target="_blank">commercial@internet.lu</a>
-                                </li>
+            </div>
+
+        </header>
+
+        <section class="drop-shadow background-lightgrey">
+            <div class="container-wrapper">
+                <div class="row clearfix">
+                    <div class="align-center phone-12">
+                        <h1 class="plan-title-padding section-title normal lowercase">Plan du site Luxembourg Online</h1>                            
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="map">
+            <div class="row">
+                <div class="container-wrapper">
+                    <div class="desk-3 tab-6 phone-12">
+                        <div class="boxmap">
+                            <h2>Internet</h2>
+                            <ul>
+                                <li><a href="../internet/accueil.html"><span class="icon-right-arrow"></span>Accueil Internet</a></li>                                    
+                                <li><a href="../internet/offres.html"><span class="icon-right-arrow"></span>Nos offres</a></li>                                    
+                                <li><a href="../internet/equipements.html"><span class="icon-right-arrow"></span>Nos équipements</a></li>                                
+                                <li><a href="../internet/optionnow.html"><span class="icon-right-arrow"></span>Option NOW</a></li>                                
+                                <li><a href="../internet/faq.html"><span class="icon-right-arrow"></span>FAQ</a></li>
+                                <li><a href="../internet/tarifs_detailles.html"><span class="icon-right-arrow"></span>Tarifs DSL/FIBER</a></li>
+                                <li><a href="../internet/cable.html"><span class="icon-right-arrow"></span>LOLCABLE</a></li>
+                                <li><a href="../internet/parrainage.html"><span class="icon-right-arrow"></span>Bon de parrainage</a></li>
+                                <li><a href="../internet/abonnement.html"><span class="icon-right-arrow"></span>Documents</a></li>
+                            </ul>
+                        </div>
+                    </div>                    
+                    <div class="desk-3 tab-6 phone-12">
+                        <div class="boxmap">
+                            <h2>Téléphonie</h2>
+                            <ul>
+                                <li><a href="../telephonie/accueil.html"><span class="icon-right-arrow"></span>Accueil téléphonie</a></li>                        
+                                <li><a href="../telephonie/tarifs.html"><span class="icon-right-arrow"></span>Nos tarifs</a></li>
+                                <li><a href="../telephonie/lolvisio.html"><span class="icon-right-arrow"></span>LOLVISIO</a></li>
+                                <li><a href="../telephonie/equipements.html"><span class="icon-right-arrow"></span>Nos téléphones</a></li>
+                                <li><a href="../telephonie/faq.html"><span class="icon-right-arrow"></span>FAQ</a></li>
+                                <li><a href="../telephonie/repondeur.html"><span class="icon-right-arrow"></span>Répondeur</a></li>                                 
+                                <li><a href="../telephonie/abonnement.html"><span class="icon-right-arrow"></span>Documents</a></li>
+                            </ul>
+                        </div>
+                    </div>                    
+                    <div class="desk-3 tab-6 phone-12">
+                        <div class="boxmap">
+                            <h2>TV</h2>
+                            <ul>
+                                <li><a href="../tv/accueil.html"><span class="icon-right-arrow"></span>Accueil TV</a></li>                                    
+                                <li><a href="../tv/offres.html"><span class="icon-right-arrow"></span>Notre offre TV</a></li>
+                                <li><a href="../tv/equipements.html"><span class="icon-right-arrow"></span>Nos équipements</a></li>
+                                <li><a href="../tv/faq.html"><span class="icon-right-arrow"></span>FAQ</a></li>
+                                <li><a href="../tv/abonnement.html"><span class="icon-right-arrow"></span>Documents</a></li>
+                            </ul>
+                        </div>
+                    </div>                    
+                    <div class="desk-3 tab-6 phone-12">
+                        <div class="boxmap">
+                            <h2>Mobile</h2>
+                            <ul>
+                                <li><a href="../mobile/accueil.html"><span class="icon-right-arrow"></span>Accueil mobile</a></li>
+                                <li><a href="../mobile/abonnements.html"><span class="icon-right-arrow"></span>Nos abonnements</a></li>
+                                <li><a href="../mobile/equipements.html"><span class="icon-right-arrow"></span>Nos mobiles</a></li>
+                                <li><a href="../mobile/faq.html"><span class="icon-right-arrow"></span>FAQ</a></li>
+                                <li><a href="#"><span class="icon-right-arrow"></span>Nos tarifs détaillés</a></li>
+                                <li><a href="../mobile/financement.html"><span class="icon-right-arrow"></span>Options de financement</a></li>
+                                <li><a href="../mobile/hotcity.html"><span class="icon-right-arrow"></span>Hotcity</a></li>
+                                <li><a href="../mobile/abonnement.html"><span class="icon-right-arrow"></span>Documents</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="desk-3 hidden-phone"></div>
+                    <div class="desk-3 tab-6 phone-12">
+                        <div class="boxmap others">
+                            <h2>Divers</h2>
+                            <ul>
+                                <li><a href="../divers/assistance.html"><span class="icon-right-arrow"></span>Assistance</a></li>
+                                <li><a href="../divers/brochure.html"><span class="icon-right-arrow"></span>Brochure</a></li>
+                                <li><a href="../divers/propos.html"><span class="icon-right-arrow"></span>À propos</a></li>
+                                <li><a href="../divers/contact.html"><span class="icon-right-arrow"></span>Contact</a></li>
+                                <li><a href="../promos/fibre.html"><span class="icon-right-arrow"></span>Promos</a></li>
+                                <li><a href="../divers/emploi.html"><span class="icon-right-arrow"></span>Offres d'emploi</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="desk-3 tab-6 phone-12">
+                        <div class="boxmap others">
+                            <h2>Nos autres sites</h2>
+                            <ul>
+                                <li><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_"><span class="icon-right-arrow"></span>LOLCLOUD</a></li>
+                                <li><a href="http://www.internet.lu/business/" target="blank_"><span class="icon-right-arrow"></span>Site business</a></li>
+                                <li><a href="http://www.online.lu" target="blank_"><span class="icon-right-arrow"></span>Online.lu</a></li>
+                                <li><a href="http://www.fibre.lu" target="_blank"><span class="icon-right-arrow"></span>Fibre.lu</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div id="footer-links">
-                    <div class="container-wrapper">
-                        <div class="row">
-                            <a class="help-link" href="../divers/assistance.html">
-                                <span class="icon-info-icone"></span>
-                                <p>Besoin d'aide ? Accédez à l’espace assistance de Luxembourg Online (FAQ, informations, guides et documents utiles, contrats, divers)</p>
-                                <span class="icon-right-arrow"></span>
-                            </a>
-                            <div class="separator hidden-phone hidden-tab"></div>
+            </div>
+        </section>
+        <footer>                
+            <div id="social-links" class="iner-shadow">
+                <div class="container-wrapper">
+                    <div class="row">
+                        <div class="text">Rejoignez-nous sur: </div>
+                        <nav>
+                            <ul class="spread">
+                                <li>
+                                    <a href="http://www.online.lu/" target="blank_">
+                                        <div class="social-icon lol"><span class="icon-icone-lol"></span></div>
+                                        <span class="brand-name">Online.lu</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/Luxembourg.Online" target="blank_">
+                                        <div class="social-icon facebook"><span class="icon-facebook"></span></div>
+                                        <span class="brand-name">Facebook</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/Lux_Online" target="blank_">
+                                        <div class="social-icon twitter"><span class="icon-twitter"></span></div>
+                                        <span class="brand-name">Twitter</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://plus.google.com/+internetlu" target="blank_">
+                                        <div class="social-icon google"><span class="icon-google"></span></div>
+                                        <span class="brand-name">Google+</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/company/2054058?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A2054058%2Cidx%3A2-1-2%2CtarId%3A1446712404024%2Ctas%3Aluxembourg%20online" target="blank_">
+                                        <div class="social-icon linkedin"><span class="icon-linkedin"></span></div>
+                                        <span class="brand-name">LinkedIn</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div id="contact">
+                <div class="container-wrapper">
+                    <div class="row">
+                        <div class="text">Contactez-nous : </div>
+                        <ul class="contact-infos spread">
+                            <li>
+                                <span class="icon-phone-icone"></span><a href="tel://2799 0000">2799 0000</a>
+                            </li>
+                            <li>
+                                <span class="icon-clock-icone"></span><span data-l10n-id="mondaySaturday">Lu-Sa:</span> 9h00-18h00
+                            </li>
+                            <li>
+                                <span class="icon-internet-ico"></span><a href="../divers/contact.html#demande_infos_commerciales" target="_blank">commercial@internet.lu</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="footer-links">
+                <div class="container-wrapper">
+                    <div class="row">
+                        <a class="help-link" href="../divers/assistance.html">
+                            <span class="icon-info-icone"></span>
+                            <p>Besoin d'aide ? Accédez à l’espace assistance de Luxembourg Online (FAQ, informations, guides et documents utiles, contrats, divers)</p>
+                            <span class="icon-right-arrow"></span>
+                        </a>
+                        <div class="separator hidden-phone hidden-tab"></div>
+                    </div>
+                    <div class="row hidden-phone hidden-tab">
+                        <div class="footer-top-links">
+                            <h4>internet : </h4>
+                            <nav>
+                                <ul class="links">
+                                    <li><a href="../internet/offres.html">Nos offres</a></li>
+                                    <li><a href="../promos/fibre.html">Offre spéciale fibre</a></li>
+                                    <li><a href="../internet/equipements.html">Nos équipements</a></li>
+                                </ul>
+                            </nav>
                         </div>
-                        <div class="row hidden-phone hidden-tab">
-                            <div class="footer-top-links">
-                                <h4>internet : </h4>
-                                <nav>
-                                    <ul class="links">
-                                        <li><a href="../internet/offres.html">Nos offres</a></li>
-                                        <li><a href="../promos/fibre.html">Offre spéciale fibre</a></li>
-                                        <li><a href="../internet/equipements.html">Nos équipements</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                            <div class="footer-top-links">
-                                <h4>téléphonie : </h4>
-                                <nav>
-                                    <ul class="links">
-                                        <li><a href="../telephonie/tarifs.html">Nos tarifs</a></li>
-                                        <li><a href="../telephonie/equipements.html">Nos téléphones</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                            <div class="footer-top-links">
-                                <h4>tv : </h4>
-                                <nav>
-                                    <ul class="links">
-                                        <li><a href="../tv/offres.html">Notre offre</a></li>
-
-                                        <li><a href="../tv/equipements.html">Nos équipements</a></li>
-
-                                    </ul>
-                                </nav>
-                            </div>
-                            <div class="footer-top-links">
-                                <h4>mobile : </h4>
-                                <nav>
-                                    <ul class="links">
-                                        <li><a href="../mobile/abonnements.html">Nos offres</a></li>
-                                        <li><a href="../mobile/equipements.html">Nos téléphones</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
+                        <div class="footer-top-links">
+                            <h4>téléphonie : </h4>
+                            <nav>
+                                <ul class="links">
+                                    <li><a href="../telephonie/tarifs.html">Nos tarifs</a></li>
+                                    <li><a href="../telephonie/equipements.html">Nos téléphones</a></li>
+                                </ul>
+                            </nav>
                         </div>
-                        <div class="row">
-                            <div class="separator"></div>
-                            <div class="phone-12">
-                                <div class="display-phone copyright">© Luxembourg Online S.A. – 2016, tous droits réservés</div>
-                                <nav class="hidden-phone">
-                                    <ul class="footer-bottom-links">
-                                        <li>
-                                            © Luxembourg Online S.A. – 2016, tous droits réservés</li>
-                                        <li><a href="../legal.html">Mentions légales</a></li>
-                                        <li><a href="../divers/emploi.html">Offres d'emploi</a></li>
-                                        <li class="active"><a href="../divers/plan.html">Plan du site</a></li>
+                        <div class="footer-top-links">
+                            <h4>tv : </h4>
+                            <nav>
+                                <ul class="links">
+                                    <li><a href="../tv/offres.html">Notre offre</a></li>
 
-                                        <li><a href="../divers/contact.html">Contact</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
+                                    <li><a href="../tv/equipements.html">Nos équipements</a></li>
+
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="footer-top-links">
+                            <h4>mobile : </h4>
+                            <nav>
+                                <ul class="links">
+                                    <li><a href="../mobile/abonnements.html">Nos offres</a></li>
+                                    <li><a href="../mobile/equipements.html">Nos téléphones</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="separator"></div>
+                        <div class="phone-12">
+                            <div class="display-phone copyright">© Luxembourg Online S.A. – 2016, tous droits réservés</div>
+                            <nav class="hidden-phone">
+                                <ul class="footer-bottom-links">
+                                    <li>
+                                        © Luxembourg Online S.A. – 2016, tous droits réservés</li>
+                                    <li><a href="../legal.html">Mentions légales</a></li>
+                                    <li><a href="../divers/emploi.html">Offres d'emploi</a></li>
+                                    <li class="active"><a href="../divers/plan.html">Plan du site</a></li>
+
+                                    <li><a href="../divers/contact.html">Contact</a></li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                 </div>
-            </footer>
-        </div>
-        <!--              ./FOOTER               -->
+            </div>
+        </footer>
+    </div>
+    <!--              ./FOOTER               -->
 
-        <script src="../scripts/vendor/jquery.min.js"></script>
-        <script src="../scripts/main.js"></script>
+    <script src="../scripts/vendor/jquery.min.js"></script>
+    <script src="../scripts/main.js"></script>
 
-        <script type="text/javascript" src="../scripts/analytics.js"></script>
-    </body>
+    <script type="text/javascript" src="../scripts/analytics.js"></script>
+</body>
 
 </html>

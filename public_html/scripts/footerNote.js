@@ -56,7 +56,6 @@
         //print foot note in the page
         render: function () {
             this.buildCache();
-            console.log('Je suis render');
             this.printExponent();
             this.printFootNote.call(this, this.checkOccurence());
         },
@@ -78,11 +77,13 @@
         checkOccurence: function () {
             var occurence = [];
             this.$infos.each(function () {
+                if (!$(this).is(':hidden')){
                     $.each($(this).data('fnote'), function (index, value) {
                         if ($.inArray(value, occurence) < 0) {
                             occurence.push(value);
                         }
                     });
+                }
             });
             return occurence;
         },
@@ -92,8 +93,8 @@
             console.log(occurence);
             $.each(this.options.registry, function (index, value) {
                 console.log(index);
-                console.log($.isArray(index, occurence)>-1);
-                if (occurence.indexOf(index)>-1){
+                console.log($.isArray(index, occurence) > -1);
+                if (occurence.indexOf(index) > -1) {
                     footContainer.append('<li><span>(' + (index + 1) + ')</span> ' + value + '</li>');
                 }
             });

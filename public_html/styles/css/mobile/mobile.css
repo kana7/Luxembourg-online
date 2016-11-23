@@ -18,7 +18,7 @@
   .offer-item-blue .info, .offer-item-orange .info {
     font-size: 16px;
     font-weight: 400; }
-    .offer-item-blue .info span:not(.exponent), .offer-item-orange .info span:not(.exponent) {
+    .offer-item-blue .info span:not(.exponent):not([data-l10n-id]), .offer-item-orange .info span:not(.exponent):not([data-l10n-id]) {
       display: inline-block;
       position: absolute;
       top: 20px;

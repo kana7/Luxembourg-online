@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <title>Promos : Fibre - Luxembourg Online</title>
+        <title data-l10n-id="promoFibreMetaTitle">Promos : Fibre - Luxembourg Online</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <link rel="shortcut icon" href="/favicon.ico">
@@ -258,8 +258,8 @@
                 <div class="container-wrapper">
                     <div class="row">
                         <div class="phone-12 desk-10">
-                            <h1 style="margin: 12px 0 15px;" class="section-title extra-bold blue">offre fibre<span style="font-size: 0.3em;" class="exponent">(1)</span></h1>
-                            <p class="section-description blue phone-mb-0"><span class="bold">LOL</span>FIBER 100 devient <span class="bold">LOL</span>FIBER 200<br/>Frais d'installation et de câblage fibre <span class="extra-bold">offerts !</span></p>
+                            <h1 style="margin: 12px 0 15px;" class="section-title extra-bold blue" data-l10n-id="promoFibreTitle">offre fibre<span style="font-size: 0.3em;" class="exponent">(1)</span></h1>
+                            <p class="section-description blue phone-mb-0" data-l10n-id="promoFibreDesc"><span class="bold">LOL</span>FIBER 100 devient <span class="bold">LOL</span>FIBER 200<br/>Frais d'installation et de câblage fibre <span class="extra-bold">offerts !</span></p>
                         </div>
                     </div>
                 </div>
@@ -273,21 +273,44 @@
                 <div class="container-wrapper">
                     <div class="row">
                         <div class="phone-12 desk-6 align-center promo-info left">
-                            <p style="margin: 10px;" class="extra-bold blue text">2x <span class="uppercase">plus rapide au même prix</span> !</p>
-                            <p class="blue text">Pour toute nouvelle souscription de 24 mois à l'offre <br/><span class="bold">LOLFIBER 100</span>, Luxembourg Online vous double la vitesse<span class="exponent">(1)</span> et  offre les frais d'installation et de câblage fibre, soit jusqu'à : </p>
-                            <div class="promo-price">
+                            <p style="margin: 10px;" class="extra-bold blue text" data-l10n-id="promoFibreOfferTitle">2x <span class="uppercase">plus rapide au même prix</span> !</p>
+                            <p class="blue text" data-l10n-id="promoFibreOfferDesc">Pour toute nouvelle souscription de 24 mois à l'offre <br/><span class="bold">LOLFIBER 100</span>, Luxembourg Online vous double la vitesse<span class="exponent">(1)</span> et  offre les frais d'installation et de câblage fibre, soit jusqu'à : </p>
+                            <div class="promo-price" data-l10n-id="promoFibreOfferPrice">
                                 <div class="price blue">309€</div>
                                 <div class="label blue">de remise</div>
                             </div>
-                            <button class="btn-blue openPopup" data-popup="1" data-bool="true">Vérifiez la disponibilité</button>
-                            <p class="blue text bottom">ou contactez-nous au <b>2799 0000</b></p>
-                            <p class="blue details">Offre promotionnelle valable jusqu'au 31/10/2016. Voir détails et conditions en magasin</p>
+                            <button class="btn-blue openPopup" data-popup="1" data-bool="true" data-l10n-id="dispoVerif1">Vérifiez la disponibilité</button>
+                            <p class="blue text bottom" data-l10n-id="promoFibreOfferDetails">ou contactez-nous au <b>2799 0000</b></p>
+                            <p class="blue details" data-l10n-id="promoFibreOfferDate">Offre promotionnelle valable jusqu'au 31/12/2016. Voir détails et conditions en magasin</p>
                         </div>
                         <div class="phone-12 desk-6">
                             <div class="phone-12 display-phone promo-offer-container">
                                 <div class="main-gallery">
                                     <div class="gallery-cell">
-                                        <div class="k100"><div class="offer-item-orange"><div class="item-header"><strong>LOL</strong>Fiber <span style="text-decoration: line-through; font-size: 0.9em;"> 100 </span> 200</div><ul class="item-body"><li style="line-height: 53px;" class="description">PROMO : LA VITESSE x2<span class="exponent blue">(1)</span></li><li class="info"><span class="icon-download-ico download"></span><span style="text-decoration: line-through; font-size: 0.9em;"> 100 </span><span class="orange">200 Mbit/s</span><span class="exponent">(2)</span></li><li class="info"><span class="icon-download-ico upload"></span><span style="text-decoration: line-through; font-size: 0.9em;"> 50 </span>&nbsp;&nbsp;<span class="orange">100 Mbit/s</span><span class="exponent">(2)</span></li><li class="check-list-container"><div class="check-list-title"><span class="icon-pack-ico"></span> Inclus dans ce pack : </div><ul class="check-list"><li><span class="icon-check-ico"></span>Volume illimité</li><li><span class="icon-check-ico"></span>Abonnement tél. fixe</li><li><span class="icon-check-ico"></span>Appels nat. fixes<span class="exponent">(3)</span></li><li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li><li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(3) (4)</span></li><li><span class="icon-check-ico"></span>LOLCLOUD 5GB</li><li><span class="icon-check-ico"></span><a href="../internet/optionnow.html">Option NOW</a></li></ul></li></ul><div class="item-footer"><div class="offer-price"><div style="left: 154px;">,90€</div>54<span>/mois</span></div></div></div></div>
+                                        <div class="k100">
+                                            <div class="offer-item-orange">
+                                                <div class="item-header"><strong>LOL</strong>Fiber <span style="text-decoration: line-through; font-size: 0.9em;"> 100 </span> 200</div>
+                                                <ul class="item-body">
+                                                    <li style="line-height: 53px;" class="description"><span data-l10n-id="promoSpeed">PROMO : LA VITESSE x2</span><span class="exponent blue">(1)</span></li>
+                                                    <li class="info"><span class="icon-download-ico download"></span><span style="text-decoration: line-through; font-size: 0.9em;"> 100 </span><span class="orange">200 Mbit/s</span><span class="exponent">(2)</span></li>
+                                                    <li class="info"><span class="icon-download-ico upload"></span><span style="text-decoration: line-through; font-size: 0.9em;"> 50 </span>&nbsp;&nbsp;<span class="orange">100 Mbit/s</span><span class="exponent">(2)</span></li>
+                                                    <li class="check-list-container"><div class="check-list-title"><span class="icon-pack-ico"></span> <span data-l10n->Inclus dans ce pack :</span> </div>
+                                                        <ul class="check-list">
+                                                            <li><span class="icon-check-ico"></span><span data-l10n-id="volUnlimited">Volume illimité</span></li>
+                                                            <li><span class="icon-check-ico"></span><span data-l10n-id="aboTel">Abonnement tél. fixe</span></li>
+                                                            <li><span class="icon-check-ico"></span><span data-l10n-id="natCall">Appels nat. fixes</span><span class="exponent">(3)</span></li>
+                                                            <li><span class="icon-check-ico"></span><span data-l10n-id="internetTarifsDataLolCall">Appels vers mobiles LOL</span></li>
+                                                            <li><span class="icon-check-ico"></span><span data-l10n-id="internetOffreTel">120 min vers l'Europe fixe</span><span class="exponent">(3) (4)</span></li>
+                                                            <li><span class="icon-check-ico"></span>LOLCLOUD 5GB</li>
+                                                            <li><span class="icon-check-ico"></span><a href="../internet/optionnow.html">Option NOW</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <div class="item-footer">
+                                                    <div class="offer-price"><div style="left: 154px;">,90€</div>54<span data-l10n-id="month">/mois</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <!--<div class="gallery-cell">
                                         <div class="k200">
@@ -323,7 +346,30 @@
                             </div>
                             <div class="clearfix promo-offer-container hidden-phone">
                                 <div class="phone-12 tab-6">
-                                    <div class="k100"><div class="offer-item-orange"><div class="item-header"><strong>LOL</strong>Fiber <span style="text-decoration: line-through; font-size: 0.9em;"> 100 </span> 200</div><ul class="item-body"><li style="line-height: 53px;" class="description">PROMO : LA VITESSE x2<span class="exponent blue">(1)</span></li><li class="info"><span class="icon-download-ico download"></span><span style="text-decoration: line-through; font-size: 0.9em;"> 100 </span><span class="orange">200 Mbit/s</span><span class="exponent">(2)</span></li><li class="info"><span class="icon-download-ico upload"></span><span style="text-decoration: line-through; font-size: 0.9em;"> 50 </span>&nbsp;&nbsp;<span class="orange">100 Mbit/s</span><span class="exponent">(2)</span></li><li class="check-list-container"><div class="check-list-title"><span class="icon-pack-ico"></span> Inclus dans ce pack : </div><ul class="check-list"><li><span class="icon-check-ico"></span>Volume illimité</li><li><span class="icon-check-ico"></span>Abonnement tél. fixe</li><li><span class="icon-check-ico"></span>Appels nat. fixes<span class="exponent">(3)</span></li><li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li><li><span class="icon-check-ico"></span>120 min vers l'Europe fixe<span class="exponent">(3) (4)</span></li><li><span class="icon-check-ico"></span>LOLCLOUD 5GB</li><li><span class="icon-check-ico"></span><a href="../internet/optionnow.html">Option NOW</a></li></ul></li></ul><div class="item-footer"><div class="offer-price"><div style="left: 154px;">,90€</div>54<span>/mois</span></div></div></div></div>
+                                    <div class="k100">
+                                            <div class="offer-item-orange">
+                                                <div class="item-header"><strong>LOL</strong>Fiber <span style="text-decoration: line-through; font-size: 0.9em;"> 100 </span> 200</div>
+                                                <ul class="item-body">
+                                                    <li style="line-height: 53px;" class="description"><span data-l10n-id="promoSpeed">PROMO : LA VITESSE x2</span><span class="exponent blue">(1)</span></li>
+                                                    <li class="info"><span class="icon-download-ico download"></span><span style="text-decoration: line-through; font-size: 0.9em;"> 100 </span><span class="orange">200 Mbit/s</span><span class="exponent">(2)</span></li>
+                                                    <li class="info"><span class="icon-download-ico upload"></span><span style="text-decoration: line-through; font-size: 0.9em;"> 50 </span>&nbsp;&nbsp;<span class="orange">100 Mbit/s</span><span class="exponent">(2)</span></li>
+                                                    <li class="check-list-container"><div class="check-list-title"><span class="icon-pack-ico"></span> <span data-l10n->Inclus dans ce pack :</span> </div>
+                                                        <ul class="check-list">
+                                                            <li><span class="icon-check-ico"></span><span data-l10n-id="volUnlimited">Volume illimité</span></li>
+                                                            <li><span class="icon-check-ico"></span><span data-l10n-id="aboTel">Abonnement tél. fixe</span></li>
+                                                            <li><span class="icon-check-ico"></span><span data-l10n-id="natCall">Appels nat. fixes</span><span class="exponent">(3)</span></li>
+                                                            <li><span class="icon-check-ico"></span><span data-l10n-id="internetTarifsDataLolCall">Appels vers mobiles LOL</span></li>
+                                                            <li><span class="icon-check-ico"></span><span data-l10n-id="internetOffreTel">120 min vers l'Europe fixe</span><span class="exponent">(3) (4)</span></li>
+                                                            <li><span class="icon-check-ico"></span>LOLCLOUD 5GB</li>
+                                                            <li><span class="icon-check-ico"></span><a href="../internet/optionnow.html">Option NOW</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <div class="item-footer">
+                                                    <div class="offer-price"><div style="left: 154px;">,90€</div>54<span data-l10n-id="month">/mois</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                 </div>
                                 <!--<div class="phone-12 tab-6">
                                     <div class="k200">
@@ -358,10 +404,10 @@
                             </div>
                             <div class="phone-12">
                                 <p class="footer-note">
-                                    <span style="padding-left: 10px;">(1)</span> Offre valable uniquement sur la technologie fibre optique<br/>
-                                    <span>(2)</span> Les débits down/up (émission et réception) sont des débits maximum et non garantis.<br/>
-                                    <span style="padding-left: 10px;">(3)</span> Sauf numéros spéciaux (type 800, 900, jeux, televoting, services érotiques, etc.)<br/>
-                                    <span style="padding-left: 10px;">(4)</span> Pays membres de l'U.E
+                                    <span style="padding-left: 10px;">(1)</span> <span data-l10n-id="footNoteInternetOffer4">Offre valable uniquement sur la technologie fibre optique</span><br/>
+                                    <span>(2)</span> <span data-l10n-id="footNoteInternetOffer1">Les débits down/up (émission et réception) sont des débits maximum et non garantis.</span><br/>
+                                    <span style="padding-left: 10px;">(3)</span> <span data-l10n-id="footNoteInternetOffer2">Sauf numéros spéciaux (type 800, 900, jeux, televoting, services érotiques, etc.)</span><br/>
+                                    <span style="padding-left: 10px;">(4)</span> <span data-l10n-id="footNoteInternetOffer3">Pays membres de l'U.E</span>
                                 </p>
                             </div>
                         </div>
@@ -373,7 +419,7 @@
                 <div id="social-links" class="iner-shadow">
                     <div class="container-wrapper">
                         <div class="row">
-                            <div class="text">Rejoignez-nous sur: </div>
+                            <div class="text" data-l10n-id="joinUs">Rejoignez-nous sur : </div>
                             <nav>
                                 <ul class="spread">
                                     <li>
@@ -414,7 +460,7 @@
                 <div id="contact">
                     <div class="container-wrapper">
                         <div class="row">
-                            <div class="text">Contactez-nous : </div>
+                            <div class="text" data-l10n-id="contactUs">Contactez-nous : </div>
                             <ul class="contact-infos spread">
                                 <li>
                                     <span class="icon-phone-icone"></span><a href="tel://2799 0000">2799 0000</a>
@@ -434,39 +480,37 @@
                         <div class="row">
                             <a class="help-link" href="../divers/assistance.html">
                                 <span class="icon-info-icone"></span>
-                                <p>Besoin d'aide ? Accédez à l’espace assistance de Luxembourg Online (FAQ, informations, guides et documents utiles, contrats, divers)</p>
+                                <p data-l10n-id="needHelp">Besoin d'aide ? Accédez à l’espace assistance de Luxembourg Online (FAQ, informations, guides et documents utiles, contrats, divers)</p>
                                 <span class="icon-right-arrow"></span>
                             </a>
                             <div class="separator hidden-phone hidden-tab"></div>
                         </div>
                         <div class="row hidden-phone hidden-tab">
                             <div class="footer-top-links">
-                                <h4>internet : </h4>
+                                <h4><span data-l10n-id="menuLinkInternet">internet</span> : </h4>
                                 <nav>
                                     <ul class="links">
-                                        <li><a href="../internet/offres.html">Nos offres</a></li>
-                                        <li><a href="../promos/fibre.html">Offre spéciale fibre</a></li>
-                                        <li><a href="../internet/equipements.html">Nos équipements</a></li>
+                                        <li><a href="../internet/offres.html"  data-l10n-id="menuLinkOffers">Nos offres</a></li>
+                                        <li><a href="../promos/fibre.html"  data-l10n-id="menuLinkFiberOffer">Offre spéciale fibre</a></li>
+                                        <li><a href="../internet/equipements.html"  data-l10n-id="menuLinkGear">Nos équipements</a></li>
                                     </ul>
                                 </nav>
                             </div>
                             <div class="footer-top-links">
-                                <h4>téléphonie : </h4>
+                                <h4><span data-l10n-id="menuLinkPhone">téléphonie</span> : </h4>
                                 <nav>
                                     <ul class="links">
-                                        <li><a href="../telephonie/tarifs.html">Nos tarifs</a></li>
-                                        <li><a href="../telephonie/equipements.html">Nos téléphones</a></li>
+                                        <li><a href="../telephonie/tarifs.html" data-l10n-id="menuLinkPrices">Nos tarifs</a></li>
+                                        <li><a href="../telephonie/equipements.html" data-l10n-id="menuLinkOurPhones">Nos téléphones</a></li>
                                     </ul>
                                 </nav>
                             </div>
                             <div class="footer-top-links">
-                                <h4>tv : </h4>
+                                <h4><span data-l10n-id="menuLinkTv">tv</span> : </h4>
                                 <nav>
                                     <ul class="links">
-                                        <li><a href="../tv/offres.html">Notre offre</a></li>
-
-                                        <li><a href="../tv/equipements.html">Nos équipements</a></li>
-
+                                        <li><a href="../tv/offres.html" data-l10n-id="menuLinkTvOffers">Notre offre</a></li>
+                                        <li><a href="../tv/equipements.html" data-l10n-id="menuLinkGear">Nos équipements</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -474,8 +518,8 @@
                                 <h4>mobile : </h4>
                                 <nav>
                                     <ul class="links">
-                                        <li><a href="../mobile/abonnements.html">Nos offres</a></li>
-                                        <li><a href="../mobile/equipements.html">Nos téléphones</a></li>
+                                        <li><a href="../mobile/abonnements.html" data-l10n-id="menuLinkOffers">Nos offres</a></li>
+                                        <li><a href="../mobile/equipements.html" data-l10n-id="menuLinkOurPhones">Nos téléphones</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -483,16 +527,14 @@
                         <div class="row">
                             <div class="separator"></div>
                             <div class="phone-12">
-                                <div class="display-phone copyright">© Luxembourg Online S.A. – 2016, tous droits réservés</div>
+                                <div class="display-phone copyright" data-l10n-id="copyright">© Luxembourg Online S.A. – 2016, tous droits réservés</div>
                                 <nav class="hidden-phone">
                                     <ul class="footer-bottom-links">
-                                        <li>
-                                            © Luxembourg Online S.A. – 2016, tous droits réservés</li>
-                                        <li><a href="../legal.html">Mentions légales</a></li>
-                                        <li><a href="../divers/emploi.html">Offres d'emploi</a></li>
-                                        <li><a href="../divers/plan.html">Plan du site</a></li>
-
-                                        <li><a href="../divers/contact.html">Contact</a></li>
+                                        <li data-l10n-id="copyright">© Luxembourg Online S.A. – 2016, tous droits réservés</li>
+                                        <li><a href="../legal.html" data-l10n-id="menuLinkNotice">Mentions légales</a></li>
+                                        <li><a href="../divers/emploi.html" data-l10n-id="menuLinkJob">Offres d'emploi</a></li>
+                                        <li><a href="../divers/plan.html" data-l10n-id="menuLinkSitemap">Plan du site</a></li>
+                                        <li><a href="../divers/contact.html" data-l10n-id="menuLinkContact">Contact</a></li>
                                     </ul>
                                 </nav>
                             </div>

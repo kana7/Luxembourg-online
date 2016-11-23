@@ -1,10 +1,39 @@
 /*---------------------------GLOBAL TRANSLATION-------------------------------*/
+<langDe "Allemand">
+<langLu "Luxembourgois">
+<langFr "Français">
+<langGb "Anglais">
+<langPt "Portugais">
+<langIt "Italien">
+<langNl "Néerlandais">
+<langRu "Russe">
+<langEs "Espagnol">
+<langOther "Autres">
 <month "/mois">
+<month1 "mois">
+<price "Prix">
+<inter "International">
+<engagement "Engagement">
+<no "Non">
+<yes "Yes">
+<and "et">
+<tarif "Tarif">
+<otherClients "Autres clients">
+<all "Tous">
 <homeHeadTitle "Votre opérateur télécoms : Luxembourg Online">
 <homeHeadDescription """
     content="Découvrez les offres imbattables de Luxembourg Online pour Internet
              haut débit et très haut débit (fibre, VDSL), téléphonie, mobile, TV et Cloud."
 """>
+<homeHeadKeywords """
+content="Telecom Luxembourg, solution telecom, fournisseur accès internet, Internet TV Mobile, Offre internet fibre"
+""">
+<notFoundMetaTitle "Erreur 404 : Luxembourg Online">
+<notFoundDesc """
+<p style="font-size: 1.4em; line-height: 30px;" class="extra-bold phone-mb-20 blue">Veuillez nous excuser, nous n'avons pas trouvé la page que vous cherchez.</p>
+<p style="font-size: 1.2em; line-height: 25px;" class="grey">Il se pourrait qu'elle n'existe plus, qu'elle ait été déplacée ou que l'adresse ne soit pas correcte.</p>
+""">
+<backToAccueil "Retour à l'accueil">
 <language """
 Langage<span class="icon-right-arrow"></span>
 """>
@@ -32,20 +61,62 @@ Langage<span class="icon-right-arrow"></span>
 <cpInput """
     <input value name="zipcode" class="input-white" type="text" placeholder="{{cp}}" maxlength="4"/>
 """>
+<tvChannel "chaînes TV">
+<tvHdChannel "chaînes Full HD">
+<tvRadioChannel "chaînes radio">
 <copyright "© Luxembourg Online S.A. – 2016, tous droits réservés">
 <adresse "adresse">
 <notDispo "indisponible">
+<dispoOnRequest "Disponible sur demande.">
 <footNoteOptionPay "Option payante">
 <footNoteConditionShop "Voir conditions en magasin">
+<footNoteConditionShop1 "Voir details et conditions en magasin">
+<footNoteDispo "Disponibilité à vérifier">
+<footNoteInternetOffer1 "Les débits down/up (émission et réception) sont des débits maximum et non garantis. ">
+<footNoteInternetOffer2 "Sauf numéros spéciaux (type 800, 900, jeux, televoting, services érotiques, etc.). ">
+<footNoteInternetOffer3 "Pays membres de l'U.E. ">
+<footNoteInternetOffer4 "Offre valable uniquement sur la technologie fibre optique. ">
+<footNoteInternetOffer5 "Prix promo. Après 6 mois: LOLDSL 24 à 34,90€, LOLFIBER 100 à 54,90€. ">
+<footNoteInternetOffer6 "Valable uniquement en combinaison avec un abonnement Internet Luxembourg Online">
 <gratis "gratuit">
 <mondaySaturday "Lu-Sa:">
 <parrainage "Bon de parrainage">
+<installation "Installation">
+<illimited "illimité">
+<inclus "inclus">
+<dynamique "dynamique">
+<location "Location">
+<withTech "Avec Technicien">
+<abo "Abonnement">
+<volume "Volume">
+<ipAdress "Adresse IP">
+<phone "Téléphone">
+<searchMenuButton "Affiner votre recherche">
+<modem {
+singular: "modem",
+plurial: "modems"
+}>
+<wifiGrear "Accessoires wifi">
+<wlanRep "Répétiteurs WLAN">
+<powRep "Répétiteurs POWERLINE">
+<upTo "jusqu'à">
+<seeDetails "Voir plus de détails">
+<analogique "analogique">
+
 /*-----------------------------------LIENS------------------------------------*/
 <menuLinkHome "Accueil">
-<menuLinkInternet "Internet">
-<menuLinkPhone "Téléphonie">
-<menuLinkTv "Tv">
-<menuLinkMobile "Mobile">
+<menuLinkInternet """
+Internet<span class="icon-right-arrow"></span>
+""">
+<menuLinkPhone """
+Téléphonie <span class="icon-right-arrow"></span>
+""">
+<menuLinkTv """
+TV <span class="icon-right-arrow"></span>
+""">
+<menuLinkMobile """
+Mobile <span class="icon-right-arrow"></span>
+""">
 <menuLinkCoupon "Promos">
 <menuLinkOnlineOrder "Inscription en ligne">
 <menuLinkAssistance "Assistance">
@@ -58,13 +129,13 @@ Langage<span class="icon-right-arrow"></span>
 <menuLinkGear "Nos équipements">
 <menuLinkSub "Abonnez-vous">
 <menuLinkPhoneHome "Accueil Téléphonie">
-<menuLinkPrices "Nos {{tarifs}}">
+<menuLinkPrices "Nos tarifs">
 <menuLinkOurPhones "Nos téléphones">
 <menuLinkTvHome "Accueil TV">
 <menuLinkTvOffers "Notre offre TV">
 <menuLinkMobileHome "Accueil Mobile">
 <menuLinkMobileSub "Nos abonnements">
-<menuLinkOurPhones "Nos téléphones">
+<menuLinkOurMobiles "Nos mobiles">
 <menuLinkFiberOffer "Offre spéciale fibre">
 <menuLinkOffers "Nos offres">
 <menuLinkPrivate "Particuliers">
@@ -76,9 +147,22 @@ Langage<span class="icon-right-arrow"></span>
 <menuLinkParrainage """
 <span class="icon icon-parrainage-ico"></span>{{parrainage}}
 """>
+<menuLinkRepondeur """
+<span class="icon icon-repondeur-icone"></span>Répondeur
+""">
+<menuLinkFin """
+<span class="icon icon-pig-ico"></span>Options de financement
+""">
+<menuLinkTarifsDetails """
+<span class="icon icon-calculator-ico"></span>Nos tarifs détaillés
+""">
+<menuLinkTvChannels """
+<span class="icon icon-tv-ico"></span>Liste des chaînes
+""">
 <menuLinkDoc """
 <span class="icon icon-document-ico"></span>Documents
 """>
+<knowMore "En savoir plus">
 
 /*----------------------------------------------------------------------------*/
 /*-------------------------------INDEX.HTML-----------------------------------*/
@@ -115,6 +199,7 @@ Profitez d'Internet<br/>dès la signature<br/>du contrat !
     Toutes {{menuLinkOffers}} disponibles <strong>chez vous</strong> : 
 """>
 <dispoVerif "Vérifiez les disponibilités">
+<dispoVerif1 "Vérifiez la disponibilité">
 <whichOffer "Quelles offres sont disponibles chez vous ?">
 /*----------------------------------------------------------------------------*/
 /*--------------------------------SECTIONS------------------------------------*/
@@ -145,7 +230,7 @@ Nous ne pouvons malheureusement pas vérifier l’éligibilité de votre adresse
 """>
 <getBest "Exigez le meilleur">
 <heartHit "Offre coup de ">
-<packInclude "Inclus dans ce pack :">
+<packInclude "Inclus dans ce pack : ">
 <volUnlimited "Volume illimité">
 <aboTel "Abonnement tél. fixe">
 <natCall "Appels nat. fixes">
@@ -154,6 +239,9 @@ Nous ne pouvons malheureusement pas vérifier l’éligibilité de votre adresse
 <otherOffers "Voir nos autres offres">
 <promoInstall "promo : installation offerte">
 <promoSpeed "PROMO : LA VITESSE x2">
+<promoInstallSpeed """
+Promo : installation offerte<br/>+ vitesse x2
+""">
 <promoHalf "promo : 6 mois à moitié prix">
 <chooseLoc "Choisissez votre localité">
 <chooseAdr "Choisissez votre adresse">
@@ -216,4 +304,867 @@ Vous connaissez des personnes qui n'ont pas encore d'abonnement Internet chez Lu
 Pour profiter de notre offre de parrainage, téléchargez et complétez le bon ci-dessous :
 """>
 /*----------------------------------------------------------------------------*/
-/*------------------------INTERNET/PARRAINAGE.HTML----------------------------*/
+/*-------------------------INTERNET/OPTIONNOW.HTML----------------------------*/
+/*----------------------------------META--------------------------------------*/
+<internetOnMetaTitle "Internet : Option NOW - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+/*--------------------------------SECTION-------------------------------------*/
+<internetOnTitle """
+Bénéficiez d’un accès <strong>Internet immédiat !</strong>
+""">
+<internetOnDesc """
+Avec l'option NOW, <strong>profitez d’Internet dès la signature du contrat !</strong>En attendant que votre connexion soit activée chez vous, nous vous fournissons <strong>gratuitement un hotspot</strong> vous permettant d’avoir <strong>un accès Internet immédiat</strong> à votre domicile.
+""">
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/*---------------------INTERNET/TARIFS_DETAILLES.HTML-------------------------*/
+/*----------------------------------META--------------------------------------*/
+<internetTarifsMetaTitle "Internet : tarifs détaillés  - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+/*--------------------------------SECTION-------------------------------------*/
+<internetTarifsTitle """
+Nos tarifs <span class="bold">détaillés</span>
+""">
+<internetTarifsDesc "Consultez ci-dessous l'intégralité de nos tarifs Internet.">
+/*----------------------------------------------------------------------------*/
+/*--------------------------------TABLEAU-------------------------------------*/
+<internetTarifsDataZone "Téléphonie nationale fixe illimitée">
+<internetTarifsDataZone1 "Appels illimités vers mobiles LOL">
+<internetTarifsDataZone2 "EU 120 (120 minutes vers l’Europe fixe)">
+<internetTarifsDataActiveService "Activation du service">
+<internetTarifsDataInstall "Activation du service">
+<internetTarifsDataModem "Modem de base">
+<internetTarifsDataAboTel "{{abo}} téléphonique">
+<internetTarifsDataAboIsdn "{{abo}} ligne ISDN">
+<internetTarifsDataNatFix "Téléphonie nat. fixe illimitée">
+<internetTarifsDataLolCall "Appels vers mobiles LOL">
+<internetTarifsDataTrafic "Trafic des données">
+<internetTarifsDataTelAvantage "Pack avantages téléphonie">
+/*----------------------------------------------------------------------------*/
+/*------------------------INTERNET/OFFRES.HTML--------------------------------*/
+/*----------------------------------META--------------------------------------*/
+<internetOffreMetaTitle "Internet : Nos offres – Luxembourg Online">
+<internetOffreMetaDesc """
+    content="Les offres Internet de Luxembourg Online s’adaptent à vos besoins en connectivité. Profitez d’un trafic illimité et découvrez les nombreux avantages de la fibre optique."
+""">
+<internetOffreMetaKeywords """
+    content="Offre Internet fibre, Internet haut débit, Abonnement Internet Luxembourg, Offres fibre optique"
+""">
+/*----------------------------------------------------------------------------*/
+/*-------------------------------CONTENT--------------------------------------*/
+<internetOffreTitle "Nos offres Internet">
+<internetOffreDSL24Desc "Bénéficiez de l'essentiel">
+<internetOffreTel "120 min vers l'Europe fixe">
+<internetOffreFIBER30Desc "Gardez le contact">
+<internetOffreOnDemand "sur demande">
+<internetOffreFIBER100Desc """
+Offre coup  de <span class="icon-heart-ico"></span>
+""">
+<internetOffreFIBER200Desc "Exigez le meilleur">
+<internetOffreCableDesc """
+<strong class="blue">Luxembourg Online SA</strong> en collaboration avec l’<strong class="blue">Antenne Collective Ettelbruck/Schieren/Hosingen</strong> vous propose un accès à large bande à Internet via le câble TV (disponible avec un abonnement télévision) pour la connexion à Internet.
+""">
+<internetOffreCableAbo "Abo mensuel">
+<internetOffreCableTel "Tél.nat.fixe flat">
+<internetOffreCableTelMin "120 min vers EU">
+<internetOffreCableinstallMod24 """
+Installation + modem <span>(contrat 24 mois)</span>
+""">
+<internetOffreCableinstallMod12 """
+Installation + modem <span>(contrat 12 mois)</span>
+""">
+<internetOffreTvTitle """
+Prolongez l'expérience
+<strong>avec LOL<span class="normal">TV</span> ! </strong>
+""">
+<internetOffreTvDesc "En plus de votre abonnement Internet, souscrivez à LOLTV et profitez de vos séries et films préférés. ">
+<internetOffreTvLink "Voir notre offre TV">
+/*---------------------------INTERNET/FAQ.HTML--------------------------------*/
+/*----------------------------------META--------------------------------------*/
+<internetFaqMetaTitle "Internet : FAQ - Luxembourg Online">
+/*--------------------------------SECTION-------------------------------------*/
+<internetFaqTitle "Foire aux questions">
+<internetFaqDesc """
+Vous recherchez une information ? Découvrez ci-dessous les questions
+                                les plus fréquemment posées.<br />
+                                Si vous ne trouvez pas de réponse à votre question ou si vous avez besoin d'aide, contactez notre service client par téléphone au <strong><a href="tel://2799 0000">2799 0000</a></strong>
+                                ou par e-mail à <strong>helpdesk@internet.lu</strong>
+""">
+/*----------------------------------------------------------------------------*/
+/*------------------------------QUESTIONS-------------------------------------*/
+<internetFaqQ1 "Quelle est l'obligation de Luxembourg Online concernant la vitesse Internet fournie ?">
+<internetFaqQ1A """
+Nous mettons tout en oeuvre pour vous proposer une vitesse de qualité optimale.<br/>
+                                    Les vitesses annoncées représentent le débit maximum envisageable et ne sont pas garanties.
+                                    Le débit réel dépend :<br/>
+                                    - de la distance entre l'adresse d'installation et la centrale téléphonique<br/>
+                                    - de votre installation interne (câblage, équipements, connexion par câble ou par wifi, distances entre les appareils...).<br/>
+                                    Pour plus d'information, vous pouvez consulter la <a href="../divers/assistance.html#document;3;" target="blank_">fiche signalétique</a>.
+                                    Si toutefois vous rencontrez des difficultés avec votre vitesse,
+                                    <a href="../divers/contact.html#form" target="blank_">contactez-nous</a>. Notre service Helpdesk vous
+                                    apportera toute l'aide dont vous avez besoin.
+""">
+<internetFaqQ2 "Que signifient « upstream » (débit montant) », « downstream » (débit descendant) et Mbit/s ?">
+<internetFaqQ2A """
+« Upstream » (ou débit montant) correspond à la vitesse à laquelle les données sont envoyées de votre ordinateur
+                                    vers Internet, c'est-à-dire à votre vitesse d’envoi.<br/>
+                                    « Downstream » (ou débit descendant) désigne la vitesse de téléchargement, ou en d'autres termes la vitesse à laquelle les
+                                    données provenant d’Internet se chargent sur votre ordinateur.<br/>
+                                    « Mbit/s » est l'abréviation de « megabit par seconde ». Il s'agit d'une unité de mesure utilisée en informatique. Ainsi, un
+                                    megabit par seconde correspond à un volume de données transmis en une seconde. Les vitesses de connexion internet
+                                    proposées par Luxembourg Online sont exprimées en Mbit/s.
+""">
+<internetFaqQ3 "À quoi sert le filtre (splitter) ?">
+<internetFaqQ3A """
+Le filtre se présente sous la forme d'un boîtier en plastique, livré systématiquement lorsque vous souscrivez à l'offre
+                                    LOLDSL 24 
+                                    <div class="popup-gallery" style="display: inline-block;"><a href="../images/internet/faq/filtre.png"><i class="fa fa-picture-o" style="color:#e75e0a;font-size: 18px;"></i></a></div>.<br/>
+                                    Ce dispositif permet de séparer le signal entre les basses fréquences, utilisées par les appareils téléphoniques et les hautes
+                                    fréquences, dédiées à la navigation Internet, à la téléphonie et à la TV.<br/>
+                                    Sans filtre, des perturbations peuvent subvenir, rendant le réseau téléphonique et Internet très instable (grésillements, voix
+                                    inaudibles, coupures). Il est donc indispensable de placer un filtre sur chaque prise murale sur laquelle est branché un
+                                    équipement téléphonique.<br/>
+                                    Par ailleurs, il est déconseillé d'utiliser plus de 3 téléphones sur une même ligne, car cela provoque un affaiblissement du
+                                    signal.
+""">
+<internetFaqQ4 "Puis-je utiliser un modem provenant d'un autre fournisseur ?">
+<internetFaqQ4A """
+Techniquement, vous pouvez utiliser le modem de votre choix. Cependant, nous vous déconseillons vivement d'utiliser un
+                                    équipement autre que <a href="../internet/equipements.html" target="blank_">ceux fournis par Luxembourg Online.</a><br/>
+                                    Si tel est le cas, nous ne pourrons pas garantir le bon fonctionnement du service, ni vous assurer de support technique en cas
+                                    de panne, de dysfonctionnement ou de toute autre perturbation liées au modem.
+""">
+<internetFaqQ5 "Que signifie « fair use » ?">
+<internetFaqQ5A """
+« Fair use » peut se traduire par « usage équitable » ou « usage raisonnable ». Cette politique vise à garantir une qualité de
+                                    service équivalente pour tous, en limitant l'écart d'utilisation entre les utilisateurs. Cela signifie qu'en cas d'utilisation abusive,
+                                    Luxembourg Online se réserve le droit de suspendre ou de limiter votre accès aux services, et ce jusqu’à la fin de la période
+                                    de facturation en cours.<br/>
+                                    Afin d'éviter cela, pensez à vérifier régulièrement votre consommation dans votre <a href="#" class="openPopup" data-popup="0">Espace client</a>.
+""">
+<internetFaqQ6 "Que se passe-t-il si je déménage ?">
+<internetFaqQ6A """
+Nous vous invitons à compléter et à nous retourner le formulaire de déménagement disponible sous <a href="abonnement.html">la rubrique Documents</a> dans les plus brefs délais, ou de contacter notre service commercial afin qu’il vous oriente au mieux dans vos démarches.<br/>
+                                    Vous pouvez également <a href="../documents/Transfert_Contrat_Internet.pdf" target="blank_">transférer votre contrat</a> à une tierce personne, qui reprendra les droits et les obligations liés à votre abonnement.<br/>
+                                    Pour plus d'information, <a href="../divers/contact.html#form" target="blank_">contactez-nous</a>.
+""">
+/*------------------------------INTERNET/ABO.HTML-----------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<internetAboMetaTitle "Internet : Abonnez-vous - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+/*----------------------------------SECTION-----------------------------------*/
+<aboTitle "Documents et contrats">
+<aboDesc """
+Veuillez trouver ci-dessous les différents documents relatifs à nos offres {{$cat}}. <br />Pour plus d’informations, n’hésitez pas à nous contacter
+                                par téléphone au <strong><a href="tel://2799 0000">2799 0000</a></strong> ou par email à <strong>commercial@internet.lu</strong>.
+""">
+/*----------------------------------------------------------------------------*/
+<aboConractTitle "Contrats">
+<internetAboConractLink1 """
+<a href="../documents/LOLFIBERDSL_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Contrat d'abonnement LOLFIBER / LOLDSL</div></a>
+""">
+<internetAboConractLink2 """
+<a href="../documents/LOLFIBERDSL_OFFRE2_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Contrat d'abonnement promo fibre</div></a>
+""">
+<internetAboConractLink3 """
+<a href="../documents/LOLCABLE_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Contrat d'abonnement LOLCABLE</div></a>
+""">
+<internetAboConractLink4 """
+<a href="../documents/LOLDSL20_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Contrat d'abonnement LOLDSL 20</div></a>
+""">
+<aboCondTitle "Conditions générales et mentions légales">
+<internetAboCondLink1 """
+<a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20ACCES%20%20INTERNET%20HAUT%20DEBIT%20ET%20TRES%20HAUT%20DEBIT.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link">Conditions particulières (Internet)<span>(nouvelle version depuis 12/03/2012)</span></div></a>
+""">
+<aboCondLink2 """
+<a href="../documents/CONDITIONS%20GENERALES%20DES%20SERVICES%20LUXEMBOURG%20ONLINE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link">Conditions générales<span>(nouvelle version depuis 09/01/2014)</span></div></a>
+""">
+<aboCondLink3 """
+<a href="../documents/MENTIONS_LEGALES.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link">Mentions légales<span>(nouvelle version depuis 26/01/2016)</span></div></a>
+""">
+<aboOtherTitle "Autres">
+<aboOtherLink1 """
+<a href="../documents/domiciliationnew_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Domiciliation</div></a>
+""">
+<internetAboOtherLink2 """
+<a href="../documents/demenag_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Déclaration de déménagement</div></a>
+""">
+<internetAboOtherLink3 """
+<a href="../documents/Transfert_Contrat_Internet.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Transfert de contrat Internet</div></a>
+""">
+<internetAboOtherLink4 """
+<a href="../documents/RUSH_ORDER_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Rush order (LOLFIBER/LOLDSL)</div></a>
+""">
+/*----------------------------------------------------------------------------*/
+/*----------------------------INTERNET/CABLE.HTML-----------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<internetCableMetaTitle "Internet : Nos offres LOLCABLE – Luxembourg Online">
+<internetCableMetaDesc """
+content="Les offres Internet de Luxembourg Online s’adaptent à vos besoins en connectivité. Profitez d’un trafic illimité et découvrez les nombreux avantages de la fibre optique."
+""">
+/*--------------------------------SECTION-------------------------------------*/
+<internetCableTitle """
+<span class="extra-bold">LOL</span>Cable
+""">
+<internetCableDesc """
+L'accès Internet par le câble TV sur les réseaux : Antenne Collective Ettelbruck<br>(Ettelbruck, Erpeldange, Warken), Antenne Collective Schieren.
+""">
+<internetCableDescZone0 """
+<b>120 minutes incluses vers les pays de l'Union Européenne:</b>
+                    <div>
+                        Allemagne,
+                        Autriche,
+                        Belgique,
+                        Bulgarie,
+                        Chypre,
+                        Croatie,
+                        Danemark,
+                        Espagne,
+                        Estonie,
+                        Finlande,
+                        France,
+                        Grèce,
+                        Hongrie,
+                        Irlande,
+                        Italie,
+                        Lettonie,
+                        Lituanie,
+                        Luxembourg,
+                        Malte,
+                        Pays-Bas,
+                        Pologne,
+                        Portugal,
+                        République tchèque,
+                        Roumanie,
+                        Royaume-Uni,
+                        Slovaquie,
+                        Slovénie,
+                        Suède
+                    </div>
+""">
+<internetCableDescZone1 """
+<b>Appels illimités vers les numéros nationaux fixes </b>
+                    <div>
+                        sauf numéros spéciaux (type 800, 900, jeux, televoting, services érotiques, etc)
+                    </div>
+""">
+*-----------------------INTERNET/EQUIPEMENTS.HTML-----------------------------*/
+/*---------------------------------META---------------------------------------*/
+<internetGearMetaTitle "Internet : Nos équipements – Luxembourg Online">
+<internetGearMetaDesc """
+content="Des équipements de qualité pour votre Internet : bénéficiez de la performance de nos modems wifi qui vous garantissent une connexion ultra haut débit.."
+""">
+/*--------------------------------SECTION-------------------------------------*/
+<modemRoutAdslVdsl "Modem-routeur wifi ADSL2+ et VDSL">
+<modemRoutAdsl "Modem-routeur wifi ADSL2+">
+<modemRoutFibre "Modem-routeur wifi Fibre">
+<repeat "Répétiteur pour étendre le réseau wifi">
+<pwrLine "Solution pour étendre le réseau à travers le circuit électrique">
+<adaptWifi "Adaptateur wifi">
+/*-----------------------------MOBILE/ACCUEIL.HTML----------------------------*/
+/*----------------------------------META--------------------------------------*/
+<mobileAccueilMetaTitle "Mobile : Accueil - Luxembourg Online">
+<mobileAccueilMetaDesc """
+    content="Avec les abonnements mobiles de Luxembourg Online, profitez pleinement de votre GSM : communiquez en illimité au Luxembourg et appelez partout vers et en Europe, sans contrainte."
+""">
+<mobileAccueilMetaKeywords """
+    content="abonnement mobile Luxembourg, forfait mobile Europe, abonnement gsm"
+""">
+/*----------------------------------------------------------------------------*/
+/*--------------------------------SECTION-------------------------------------*/
+<mobileAccueilAboTitle """
+Les essentiels <strong>pour communiquer !</strong>
+""">
+<mobileAccueilAboDesc """
+Avec les abonnements mobiles de Luxembourg Online, découvrez des formules attractives, flexibles et adaptées à tous vos besoins. 
+""">
+<mobileAccueilAboLink "Voir nos offres mobiles">
+<mobileAccueilFinTitle """
+Des options de financement <strong>pour maîtriser votre budget !</strong>
+""">
+<mobileAccueilFinDesc "Lors de l’achat de votre mobile, Luxembourg Online vous laisse
+                                la possibilité d’étaler votre paiement sur 24 mois et de choisir l’option
+                                de financement qui vous convient. Chez Luxembourg Online, à chacun
+                                sa solution !">
+<mobileAccueilMatTitle """
+<strong>Samsung Galaxy S7</strong>
+Repoussez les limites du smartphone !
+""">
+<mobileAccueilMatDesc "Tout nouveau, plus performant et plus esthétique, la dernière innovation de la marque Samsung est en vente chez Luxembourg Online ! Avec le Galaxy S7, plongez dans une toute nouvelle dimension et dépassez vos limites.">
+/*-----------------------------MOBILE/ABO.HTML----------------------------*/
+/*----------------------------------META--------------------------------------*/
+<mobileAboMetaTitle "Mobile : Abonnez-vous - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<mobileAboConractLink1 """
+<a href="../documents/LOLMOBILE_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Contrat d'abonnement</div></a>
+""">
+<mobileAboCondLink1 """
+<a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20DE%20TELEPHONIE%20MOBILE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link">Conditions particulières (Mobile)<span>(nouvelle version depuis 12/03/2012)</span></div></a>
+""">
+<mobileAboOtherLink2 """
+<a href="../documents/PORTABILITE_remplissable.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Demande de portabilité</div></a>
+""">
+/*-------------------------MOBILE/ABONNEMENTS.HTML----------------------------*/
+/*----------------------------------META--------------------------------------*/
+<mobileAbosMetaTitle "Mobile : Abonnements - Luxembourg Online">
+<mobileAbosMetaDesc """
+content="Découvrez nos abonnements mobile sans engagement, avec appels nationaux vers fixe et mobile LOL en illimité et communiquez sans contraintes vers et en Europe."
+""">
+/*----------------------------------------------------------------------------*/
+<mobileAbosTitle "Nos Abonnements Mobile">
+<mobileAbosFamDesc "Juste l'essentiel">
+<appelNatLol "Appels nationaux LOL">
+<appelNatOther "Appels nationaux autres">
+<smsNat "SMS nationaux">
+<dataUnlimited "Data illimité 3G/4G">
+<telSmsEurope "Appels/SMS en Europe">
+
+<mobileAbosHomeDesc "Le Luxembourg en illimité">
+<mobileAbosEuDesc "L'Europe à votre portée">
+<footNoteMobileOffer1 "(1) Appels sauf numéros spéciaux (type 800, 900, jeux, televoting, services érotiques, etc.), SMS sauf SMS surtaxés.">
+<footNoteMobileOffer2 "(2) Fair Use : 5GB en national inclus. En cas de dépassement, facturation 10€/GB entamé.">
+<footNoteMobileOffer3 "(3) 250 minutes ou SMS de Luxembourg vers Europe, ou d'Europe vers Europe.">
+<aboNoContract """
+Abonnements <strong>sans engagement</strong>
+""">
+/*------------------------------MOBILE/FAQ.HTML-------------------------------*/
+/*----------------------------------META--------------------------------------*/
+<mobileFaqMetaTitle "Mobile : FAQ - Luxembourg Online">
+<mobileAbosMetaDesc """
+content="Découvrez nos abonnements mobile sans engagement, avec appels nationaux vers fixe et mobile LOL en illimité et communiquez sans contraintes vers et en Europe."
+""">
+/*----------------------------------------------------------------------------*/
+<mobileFaqQ1 "Comment configurer Internet et les MMS sur mon téléphone mobile ?">
+<mobileFaqQ1A """
+Rendez-vous dans la <a href="../divers/assistance.html#config-data;0;" target="blank_">rubrique Assistance</a>, cliquez sur l'onglet DATA/MMS et suivez pas-à-pas les indications.
+""">
+<mobileFaqQ2 "Comment gérer ma consommation data à l’étranger ?">
+<mobileFaqQ2A """
+>- Je souhaite profiter de la data à l'étranger. 
+                                    D'après la législation en vigueur au sein de l'Union européenne, l'utilisation de la data en
+                                    itinérance (data roaming) est limitée à 50 euros. Toutefois, si vous le souhaitez, vous
+                                    pouvez :<br/>
+                                    <ul>
+                                        <li>- AVANT d'atteindre la limite, choisir de désactiver ce service, en envoyant STOP par SMS au 60300,</li>
+                                        <li>- APRÈS avoir atteint la limite, choisir d'annuler le blocage, en envoyant en envoyant GO par SMS au 60300.</li>
+                                    </ul><br/>
+                                    À noter que la limite de 50 euros HTVA ne concerne pas les utilisations voix et SMS ou
+                                    l’utilisation data nationale. Par conséquent, aucun blocage ne sera effectué par
+                                    Luxembourg Online pour ces usages.<br/>
+                                    - Je souhaite désactiver la data à l'étranger<br>
+                                    Vous pouvez désactiver la data à l'étranger en désactivant l'option "itinérance" <a href="../divers/assistance.html#config-data;0;" target="blank_">dans les paramètres de votre smartphone.</a>
+""">
+<mobileFaqQ3 "Que faire en cas de perte ou de vol de mon téléphone mobile ?">
+<mobileFaqQ3A """
+<a href="../divers/contact.html#form" target="blank_">Contactez immédiatement</a> notre service Helpdesk afin que nous procédions au blocage
+                                    de la carte SIM.<br/>
+                                    En cas de vol, vous devez également déposer plainte auprès des services de police.
+                                    Pensez à préparer les informations suivantes :
+                                    <ul>
+                                        <li>- votre numéro de téléphone mobile et le nom de l'opérateur,</li>
+                                        <li>- le numéro IMEI, le numéro de série (figurant sur la facture ou le coffret d'achat),</li>
+                                        <li>- le nom du modèle, la marque et la couleur de votre téléphone, ainsi que les éventuels accessoires volés,</li>
+                                        <li>- les circonstances précises du vol (date et l'heure présumée).</li>
+                                    </ul>
+""">
+<mobileFaqQ4 "Je souhaite souscrire un abonnement LOLMOBILE, puis-je conserver mon ancien numéro ?">
+<mobileFaqQ4A """
+Oui, cela est possible. Lorsque vous souscrivez à un abonnement LOLMOBILE, vous
+                                    pouvez choisir de conserver ou non votre ancien numéro de téléphone mobile. Cette opération
+                                    s’appelle la portabilité.
+""">
+<mobileFaqQ5 "J’ai introduit à trois reprises un code PIN erroné, ma carte SIM est bloquée. Que dois-je faire ?">
+<mobileFaqQ5A """
+Pour débloquer votre carte SIM, vous devez utiliser le code PUK, situé sur la carte où était fixée la SIM 
+                                    <div class="popup-gallery" style="    display: inline-block;"><a href="../images/mobile/faq/sim.jpg"><i class="fa fa-picture-o" style="color:#e75e0a;font-size: 18px;"></i></a></div>.
+                                    Dès que vous l'introduisez, la carte SIM est débloquée.<br/>
+                                    Si vous ne retrouvez pas votre code PUK, rendez-vous en boutique avec une pièce
+                                    d'identité valide ou <a href="../divers/contact.html#form" target="blank_">contactez-nous</a>.
+""">
+<mobileFaqQ6 "Combien de temps faut-il pour que ma carte SIM LOL soit active ?">
+<mobileFaqQ6A "Votre carte SIM LOL sera active dans un délai de 48 heures.">
+<mobileFaqQ7 "Comment suivre ma consommation ?">
+<mobileFaqQ7A """
+Vous pouvez suivre votre consommation à tout moment sur notre site internet, en vous connectant à votre <a href="#" class="openPopup" data-popup="0">Espace client</a>.
+""">
+<mobileFaqQ8 "Que signifient « rythme de facturation 60'/60' » et « rythme de facturation 60'/15' » ?">
+<mobileFaqQ8A """
+«Rythme de facturation 60'/60'» signifie que la première minute d’appel est facturée
+                                    d’office. Ensuite, chaque minute d’appel entamée est facturée.<br/>
+                                    «Rythme de facturation 60'/15'» signifie que première minute d’appel est facturée
+                                    d’office. Ensuite, vous payez chaque quart de minute entamé (toutes les 15 secondes).
+""">
+/*---------------------------MOBILE/HOTCITY.HTML------------------------------*/
+/*----------------------------------META--------------------------------------*/
+<mobileHCMetaTitle "Mobile : HOTCITY - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+/*-------------------------------SECTION--------------------------------------*/
+<mobileHCTitle """
+<b>HOT</b>CITY
+""">
+<mobileHCDesc "Profitez d'un accès wi-fi illimité à Luxembourg-ville et Esch-sur-Alzette avec l'option HOTCITY. Que vous soyez en terrasse, dans la rue ou simplement en ville, vous bénéficiez d'un réseau de qualité.">
+<mobileHCTableTitle "Détail des tarifs :">
+<mobileHCTableData1 "Abonnés data mobile Luxembourg Online">
+<mobileHCTableData2 "Abonnés accès Internet Luxembourg Online">
+<mobileHCFootNote1 "(1) Abonnement LOLMOBILE Home, LOLMOBILE Europe, LOLDATA 3G et DATA 4G.">
+<mobileHCLink """
+Plus de détails sur<br><a href="https://www.hotcity.lu/" target="blank_"><strong>www.hotcity.lu</strong></a>
+""">
+/*-----------------------MOBILE/FINANCEMENT.HTML------------------------------*/
+/*----------------------------------META--------------------------------------*/
+<mobileFinMetaTitle "Mobile : Financement - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+/*-------------------------------SECTION--------------------------------------*/
+<mobileFinTitle """
+Options de <b>financement</b>
+""">
+<mobileFinDesc "Lors de l'achat de votre mobile, Luxembourg Online vous laisse la possibilité d'étaler votre paiement sur 24 mois et de choisir l'option de financement qui vous convient. Chez Luxembourg Online, à chacun sa solution !">
+<mobileFinOptTitle "Nos options de financement">
+<mobileFinOptDesc "Choisissez vos options de financement et bénéficiez d'une remise immédiate sur l'achat de votre téléphone.">
+<mobileFinOptDetails1 """<strong>Option 5/24 : </strong>payez 5€ par mois pendant 24 mois <strong>économisez 120€</strong>""">
+<mobileFinOptDetails2 """<strong>Option 10/24 : </strong>payez 10€ par mois pendant 24 mois <strong>économisez 240€</strong>""">
+<mobileFinOptDetails3 """<strong>Option 15/24 : </strong>payez 15€ par mois pendant 24 mois <strong>économisez 360€</strong>""">
+<mobileFinOptDetails4 """<strong>Option 20/24 : </strong>payez 20€ par mois pendant 24 mois <strong>économisez 480€</strong>""">
+<mobileFinOptDetails5 """<strong>Option 25/24 : </strong>payez 25€ par mois pendant 24 mois <strong>économisez 600€</strong>""">
+<mobileFinOptDetails6 """<strong>Option 30/24 : </strong>payez 30€ par mois pendant 24 mois <strong>économisez 720€</strong>""">
+<mobileFinOptTxt "Bien évidemment, vous pouvez également acheter votre mobile sans option, en réglant la totalité du montant directement au moment de l'achat.">
+<mobileFinOptFooter "Options valables uniquement pour toute souscription à un abonnement LOLMOBILE avec achat d'un téléphone.">
+/*---------------------------MOBILE/TARIFS.HTML-------------------------------*/
+/*----------------------------------META--------------------------------------*/
+<mobileTarifsMetaTitle "Mobile : tarifs détaillés  - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<mobileTarifsZoneInt1 """
+<b>Zone internationale 1</b>
+                    <div>
+                        Açores, Allemagne, Autriche, Belgique, Bulgarie, Chypre, Croatie, Danemark, Espagne(incluant Îles Canaries), Estonie, Finlande, France, Gibraltar, Guyane Française, Grèce, Guadeloupe, Hongrie, Île de Man, Îles de la Réuion, Irlande, Islande, Italie, Jersey, Lettonie, Liechtenstein, Lituanie, Madère, Malte, Martinique, Monaco, Norvège, Pays-Bas, Pologne, Portugal, République Tchèque, Roumanie, Royaume-Uni, Slovaquie, Slovénie, Suède, Suisse.
+                    </div>
+""">
+<mobileTarifsZoneInt2 """
+<b>Zone internationale 2</b>
+                    <div>
+                        Albanie, Australie, Canada, Chine, Egypte, îIes Féroé, Hong-Kong, Israël, Japon, Monténégro, Nouvelle-Zélande, îles Mariannes du Nord, Russie, Serbie, Singapour, Afrique du Sud, Sri Lanka, Taïwan, Turquie, Ukraine, USA (Guam, Virgin Islands).
+                    </div>
+""">
+<mobileTarifsZoneInt3 """
+<b>Zone internationale 3</b>
+                    <div>
+                        Andorre, Arménie, Aruba, Bahreïn, Bangladesh, Biélorussie, Bosnie Herzégovine, Brésil, Dominique, République Dominicaine, Gambie, Ghana, Grenade, Gua, Inde, Indonésie, Kenya, Liban, Macao, Mexique, Moldavie, Montserrat, Maroc, Namibie, Corée du Nord, Oman, Pakistan, Puerto Rico, Qatar, Rwanda, Sénégal, Seychelles, Corée du Sud, Syrie, Thaïlande, Togo, Tunisie, Iles Turques-et-Caïques, Ouganda, Emirats Arabes Unis, Uruguay, Yémen.
+                    </div>
+""">
+<mobileTarifsZoneInt4 """
+<b>Zone internationale 4</b>
+                    <div>
+                        Afghanistan, Algérie, Samoa américaines, Angola, Anguilla, Antarctique, Antigua Barbuda, Argentine, Etats et Territoires d?Australie, Azerbaïdjan, Bahamas, Barbade, Belize, Bénin, Bermudes, Bhoutan, Bolivie, Botswana, Brunei, Burkina Faso, Burundi, Cambodge, Cameroun, Cap-Vert, Iles Caïmans, République Centrafricaine, Tchad, Chili, Colombie, Congo, Iles Cook, Costa Rica, Cuba, Djibouti, Timor Oriental, Equateur, Guinée Equatoriale, Erythrée, Ethiopie, Iles Malouines, Fidji, Polynésie française, Gabon, Géorgie, Groenland, Guatemala, Guinée, Guinée-Bissau, Guyane, Haïti, Honduras, Iran, Irak, Côte d?Ivoire, Jamaïque, Jordanie, Kazakhstan, Kiribati, Koweït, Kirgyzstan, Lao, Lesotho, Libéria, Libye, Macédoine, Madagascar, Malawi, Malaisie, Maldives, Mali, Iles Marshall, Mauritanie, Ile Maurice, Mayotte, Micronésie, Mongolie, Mozambique, Myanmar, Nauru, Népal, Antilles (Pays-Bas), Nouvelle-Calédonie, Nicaragua, Niger, Nigeria, Norfolk, Palaos, Palestine, Panama, Papouasie-Nouvelle-Guinée, Paraguay, Pérou, Philippines, République Démocratique du Congo, Salomon, Salvadore, Saint Marin, Sao Tomé et Principe, Arabie Saoudite, Sierra Leone, St Kitts Nevis, St Pierre et Miquelon, Sainte Lucie, St Vincent et Grenades, Soudan, Suriname, Swaziland, Tadzhikistan, Tanzanie, Tonga, Trinité-et-Tobago, Turkménistan, Ouzbékistan, Vanuatu, Venezuela, Vietnam, Iles Vierges, Wallis et Futuna, Samoa Occidentaux, Zambie, Zimbabwe.
+                    </div>
+""">
+<mobileTarifsZoneInt5 """
+<b>Zone internationale 5</b>
+                    <div>
+                        Ellipso, Emsat, Globalstar, ICOGlobal, Inmarsat, Iridium, Jasper, Jersey Teleco, MCP Norvège, Satellite, Satellite Maritime, Thuraya, Vodafone Malta Maritime.
+                    </div>
+""">
+<mobileTarifsZone1 """
+<b>Zone 1</b>
+                    <div>
+                        Açores, Allemagne, Autriche, Belgique, Bulgarie, Croatie, Chypre, Danemark, Espagne, Estonie, Finlande, France, Guyane française, Gibraltar, Grèce, Guadeloupe, Hongrie, Iles Canaries, Islande, Irlande, Île de Man, Iles de la Réunion, Italie, Jersey, Lettonie, Liechtenstein, Lituanie, Madère, Malte, Martinique, Monaco, Norvège, Pays-Bas, Pologne, Portugal, République tchèque, Roumanie, Royaume-Uni, Slovaquie, Slovénie, Suède, Suisse. 
+                    </div>
+""">
+<mobileTarifsZone2 """
+<b>Zone 2</b>
+                    <div>
+                        Albanie, Australie, Canada, Chine, Egypte, îIes Féroé, Hong-Kong, Israël, Japon, Monténégro, Nouvelle-Zélande, îles Mariannes du Nord, Russie, Serbie, Singapour, Afrique du Sud, Sri Lanka, Taïwan, Turquie, Ukraine, USA (Guam, Virgin Islands).
+                    </div>
+""">
+<mobileTarifsZone3 """
+<b>Zone 3</b>
+                    <div>
+                        Andorre, Arménie, Aruba, Bahreïn, Bangladesh, Biélorussie, Bosnie Herzégovine, Brésil, Dominique, République Dominicaine, Gambie, Ghana, Grenade, Gua, Inde, Indonésie, Kenya, Liban, Macao, Mexique, Moldavie, Montserrat, Maroc, Namibie, Corée du Nord, Oman, Pakistan, Puerto Rico, Qatar, Rwanda, Sénégal, Seychelles, Corée du Sud, Syrie, Thaïlande, Togo, Tunisie, Iles Turques-et-Caïques, Ouganda, Emirats Arabes Unis, Uruguay, Yémen. 
+                    </div>
+""">
+<mobileTarifsZone4 """
+<b>Zone 4</b>
+                    <div>
+                        Albanie, Angola, Anguilla, Antigua et Barbuda, Arabie Saoudite, Argentine, Arménie, Azerbaïdjan, Barbades, Burkina Faso, Chine, Côte d'Ivoire, Congo (République démocratique du), Corée du Sud, Emirats Arabes Unis, Géorgie, Grenade, Hong-Kong, ïles Vierges (UK), Iles Caïman, Inde, Iran, Israel, Jamaïque, Jordanie, Kazaksthan, Kenya, Koweit, Macédoine, Malawi, Malaysie, Mauritius, Mexique, Mozambique,Nigeria, Palestine, Paraguay, Pérou, Philippines, Polynésie française,Qatar, Russie, Saint Kitt et Nevis, Sainte Lucie, Saint Vincent et Grenades, Saint Marin, Tanzanie (Zanzibar), Trinidad &amp; Tobago, Ukraine, Vietnam. 
+                    </div>
+""">
+<mobileTarifsZone5 """
+<b>Zone 5</b>
+                    <div>
+                        Ellipso, Emsat, Globalstar, ICOGlobal, Inmarsat, Iridium, Jasper, Jersey Teleco, MCP Norvège, Satellite, Satellite Maritime, Thuraya, Vodafone Malta Maritime.  
+                    </div>
+""">
+<mobileTarifsDesc "Consultez ci-dessous l'intégralité de nos tarifs téléphonie mobile.">
+<mobileTarifsTable1Title "National: Appels">
+<mobileTarifsTable1Label1 "Appel vers un numéro national fixe">
+<mobileTarifsTable1Label2 "Appel vers un numéro national mobile LOL">
+<mobileTarifsTable1Label3 "Appel vers un autre numéro national mobile">
+<mobileTarifsTable1Label4 "Appel vers la messagerie vocale">
+<mobileTarifsTable1Label5 "Rythme de facturation">
+<mobileTarifsTable2Title "Tarifs data National (sans abonnement)">
+<mobileTarifsTable2Label1 "Transfert de données">
+<mobileTarifsTable2Value1 """
+<br>
+                                                    1,0174 par MB<br>
+                                                    0,5087 par MB<br>
+                                                    0,3052 par MB<br>
+                                                    0,2035 par MB<br>
+""">
+<mobileTarifsTable2Label2 "Volume inclus">
+<mobileTarifsTable2Label3 "Accessoires">
+<mobileTarifsTable2Value2 "Location stick 3G gratuite">
+<mobileTarifsTable2Value3 "Location stick 4G gratuite">
+<mobileTarifsTable2FootNote "(1) Fair Use : En cas de dépassement,facturation de 10€/GB">
+<mobileTarifsTable3Title "International: Appels vers l'étranger">
+<mobileTarifsTable3Label1 "Appels vers:">
+<mobileTarifsTable3Label2 "Fixes €/min">
+<mobileTarifsTable3Label3 "Mobiles €/min">
+<interZone "Zone internationale">
+<mobileTarifsTable3Value1 "Rythme de facturation 60\" 60\"">
+<mobileTarifsTable4Title "International: Appels depuis l'étranger">
+<mobileTarifsTable4Label1 """
+Vous<br>êtes<br>en
+""">
+<mobileTarifsTable4FootNote1 "(1) Tarif avec abonnement LOLMOBILE FAMILY (ou autre abonnement sans forfaits illimités)">
+<mobileTarifsTable4FootNote2 "(2) Tarif avec abonnements LOLMOBILE HOME et LOLMOBILE EUROPE (ou autre abonnement avec forfaits illimités)">
+<mobileTarifsTable4FootNote3 "Rythme de facturation 30'' 1'' pour la zone 1">
+<mobileTarifsTable4FootNote4 "Rythme de facturation 60'' 60'' pour les zones 2-5">
+<mobileTarifsTable5Title "International: Recevoir des appels depuis l'étranger">
+<mobileTarifsTable5Label1 "Vous êtes en">
+<mobileTarifsTable5Label2 "Tarif €/min">
+<mobileTarifsTable5Value1 "Rythme de facturation 1\" 1\"">
+<mobileTarifsTable6Label1 "Envoyer du Luxembourg vers l'international">
+<mobileTarifsTable6Label2 "vers zones internationales">
+<mobileTarifsTable6Label3 "Envoyer vers zones roaming">
+<mobileTarifsTable6Label4 "depuis Roaming Zone">
+<mobileTarifsTable6Label5 "Recevoir des SMS dans les zones int.">
+<mobileTarifsTable6Label6 "Recevoir des SMS dans les zones int.">
+/*----------------------------MOBILE/EQUIP.HTML-------------------------------*/
+/*----------------------------------META--------------------------------------*/
+<mobileGearMetaTitle "Mobile : Nos Mobiles - Luxembourg Online">
+<mobileGearMetaDesc "Mobile : Nos Mobiles - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<mobileGearLabel1 "Taille:">
+/*------------------------------INTERNET/ABO.HTML-----------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<tvAboMetaTitle "TV : Abonnement  - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<tvAboConractLink1 """
+<a href="../documents/LOLTV_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Contrat d'abonnement</div></a>
+""">
+<tvAboOtherLink1 """
+<a href="../documents/domiciliationnew.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Domiciliation</div></a>
+""">
+<tvAboOtherLink2 """
+<a href="../documents/guides/Guide_TV_Minix_A5_BD.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Manuel d'utilisation Minix</div></a>
+""">
+<tvAboOtherLink3 """
+<a href="../documents/guides/Guide_TV_Minix_Mini_A5_BD.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Manuel d'utilisation Minix mini</div></a>
+""">
+<tvAboOtherLink4 """
+<a href="../documents/Manuel-tv.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Manuel d'utilisation Amino</div></a>
+""">
+/*------------------------------------TV/ABO.HTML-----------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<tvAccueilMetaTitle "TV : Accueil - Luxembourg Online">
+<tvAccueilMetaDesc """
+content="Avec LOLTV, profitez du meilleur de la télévision ! Chaînes TV, chaînes radio, films, séries Netflix et vidéos Youtube : tout est disponible depuis votre télévision."
+""">
+<tvAccueilMetaKeywords """
+content="Abonnement TV, abonnement télévision, offres TV"
+""">
+/*----------------------------------------------------------------------------*/
+/*--------------------------------SECTION-------------------------------------*/
+<tvAccueilTitle """
+Regarder la télévision <br/>n'a jamais été aussi intense !
+""">
+<tvAccueilDesc """
+Avec LOLTV, vous avez l’embarras du choix : + 100 chaînes TV, + 50 chaînes Full HD, + 40 chaînes radio, ainsi que tous vos contenus Netflix<span class="exponent">(1)</span> et YouTube !<br/>
+                                <span style="margin: 10px 0 0; display: inline-block;" class="footer-note">(1) Option payante</span>
+""">
+<tvAccueilGearTitle """
+Des équipements<br/><strong>toujours plus performants !</strong>
+""">
+<tvAccueilGearDesc "Pour son service LOLTV, Luxembourg Online met à votre disposition des équipements de dernière technologie. En location ou à l’achat, profitez de toutes les fonctionnalités d’un décodeur TV ultra performant et voyez les choses en grand !">
+/*---------------------------TV/CHANNELS.HTML---------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<tvChannelMetaTitle "TV : Liste des chaînes – Luxembourg Online">
+<tvChannelMetaDesc """
+content="Avec LOLTV, accédez à tous vos contenus depuis votre canapé. Découvrez nos nombreuses chaînes TV, HD et radio. Surfez également sur Netflix et Youtube depuis votre TV."
+""">
+/*----------------------------------------------------------------------------*/
+<tvChannelTitle """
+Liste des <span class="bold">chaînes TV</span>
+""">
+<tvChannelRadioTitle """
+Liste des <span class="bold">chaînes radio</span>
+""">
+/*---------------------------TV/CHANNELS.HTML---------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<tvFaqMetaTitle "TV : FAQ - Luxembourg Online">
+<tvFaqQ1 "Comment puis-je bénéficier de l'offre LOLTV ?">
+<tvFaqQ1A """
+Pour profiter de l'offre LOLTV, vous devez :<br/>
+                                    <ul>
+                                        <li>- être abonné à une <a href="../internet/offres.html" target="blank_">offre Internet Luxembourg Online</a> et disposer d'une vitesse au moins égale à 8 Mbit/s,</li>
+                                        <li>- disposer d'un modem compatible et correctement configuré,</li>
+                                        <li>- disposer d'un décodeur TV.</li>
+                                    </ul><br/>
+                                    Pour plus d'information, <a href="../divers/contact.html#form" target="blank_">contactez-nous</a>.
+""">
+<tvFaqQ2 "Je possède déjà un décodeur TV. Puis-je l’utiliser ?">
+<tvFaqQ2A """
+Si vous possédez déjà un décodeur LOL, vous pouvez l’utiliser sans aucun problème. En
+                                    revanche, vous ne pourrez pas utiliser un décodeur provenant d’un autre opérateur.
+                                    Pour acquérir un nouveau décodeur TV, c'est <a href="../tv/equipements.html" target="blank_">ici</a> !
+""">
+<tvFaqQ3 "Que faire en cas de problème technique lié à la télévision ?">
+<tvFaqQ3A """
+Tout d'abord, effectuez les vérifications ci-après.Ces conseils vous permettrons de résoudre le problème dans la plupart des cas.
+                                    <ul>
+                                        <li>- Redémarrez tous vos équipements TV (TV, décodeur, modem).</li>
+                                        <li>- Vérifiez l'état de vos appareils et leur alimentation<br/>
+                                            <ul>
+                                                <li>• Les câbles doivent être en bon état, c'est-à-dire non pliés, ni abîmés.</li>
+                                                <li>• Pensez également à changer les piles de la télécommande si besoin.</li>
+                                            </ul>                                            
+                                            Si rien de s'allume, vérifiez l'état de la prise électrique en y branchant un autre
+                                            appareil (comme une lampe par exemple). Essayez également de tester une
+                                            prise différente. Aussi, éliminez toute multiprise ou rallonge qui pourrait être
+                                            défectueuse.</li>
+                                        <li>- Vérifiez tous les branchements : ils doivent correspondre aux indications du guide d'installation : <a href="../divers/assistance.html#install-modem;3;" target="blank_">Minix</a>, <a href="../divers/assistance.html#install-modem;4;" target="blank_">Minix mini</a>.</li>
+                                        <li>- Vérifiez si la connexion internet fonctionne</li>                                        
+                                    </ul>
+                                    Testez si le problème est résolu après chaque étape. Si malgré ces vérifications, vous constatez encore des dysfonctionnements,
+                                    <a href="../divers/contact.html#form" target="blank_">contactez-nous</a>.
+""">
+<tvFaqQ4 "Puis-je profiter des chaînes LOLTV sur plusieurs téléviseurs ?">
+<tvFaqQ4A """
+Oui, en fonction de la vitesse de votre abonnement Internet, vous pouvez installer
+                                    plusieurs décodeurs TV. Pour cela, vous devez vous procurer un ou plusieurs<a href="../tv/equipements.html" target="blank_"> décodeurs
+                                        LOL supplémentaire(s)</a>. <br /><a href="../divers/contact.html#form" target="blank_">Contactez-nous</a> pour en savoir plus.
+                                    Notre service Helpdesk vous apportera toute l'aide dont vous avez besoin.
+""">
+/*-----------------------------TV/OFFRES.HTML---------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<tvOfferMetaTitle "TV : Notre offre TV – Luxembourg Online">
+<tvOfferMetaDesc """
+content="Avec LOLTV, accédez à tous vos contenus depuis votre canapé. Découvrez nos nombreuses chaînes TV, HD et radio. Surfez également sur Netflix et Youtube depuis votre TV."
+""">
+/*----------------------------------------------------------------------------*/
+<tvOfferTitle """
+    Regarder la télévision <br/>n'a jamais été aussi intense !
+""">
+<tvOfferChannelTitle """
+<strong>Un grand nombre</strong>
+                                de programmes
+""">
+<tvOfferChannelDesc "Avec LOLTV, Luxembourg Online met à votre disposition plus de 100 chaînes TV. Il y en a pour tous les goûts et dans toutes les langues : films de grands réalisateurs, chaînes d’informations, émissions culturelles, programmes pour enfants... vous y trouverez forcément votre bonheur !">
+<tvOfferChannelLink "Découvrez la liste des chaînes TV">
+<tvOfferAppTitle """
+<strong>Des applications accessibles</strong> directement depuis votre téléviseur
+""">
+<tvOfferAppDesc """
+Diffusée directement via le réseau Internet, la solution LOLTV est prête pour le futur et vous offre des services qui ne sont pas disponibles via les solutions de télévision traditionnelles. En plus de l’accès aux chaînes de télévision classique, vous pouvez ainsi accéder à des applications telles que <span class="red extra-bold">Netflix</span><span class="exponent">(1)</span> et <span class="red extra-bold">YouTube</span> directement depuis votre téléviseur !
+                                <span style="font-size: 12px; color: #818181; display: block; padding-top: 10px;">(1) Option payante.</span>
+""">
+<tvOfferIntTitle """
+Une interface <strong>simple et réactive</strong>
+""">
+<tvOfferIntDesc "Pour faciliter votre navigation, Luxembourg Online a mis en place pour vous une interface simple, rapide et intuitive. Retrouvez en un clin d’oeil tout ce que vous recherchez et accédez à tous vos services LOLTV en quelques clics seulement !">
+<tvOfferMinixTitle """
+Un décodeur <strong>de dernière génération</strong>
+""">
+<tvOfferMinixDesc """
+Ne vous fiez pas à sa taille ! Le décodeur LOLTV, bien qu’il soit ultra compact, vous offrira toute la puissance des plus grands. Équipé d’un processeur quad-core, d’une mémoire 2 GB RAM et de la technologie full HD, il vous offrira une expérience télévisuelle de haute qualité.
+                                <span style="font-size: 12px; color: #818181; display: block; padding-top: 10px;">Télécommande gyroscopique disponible sur demande.</span>
+""">
+<tvOfferMinixLink "Accédez à nos équipements">
+<tvOfferConnectTitle """
+De nombreuses <strong>connectiques</strong>
+""">
+<tvOfferConnectDesc "Équipé d’un port audio, d’un port micro, de ports USB et d’un emplacement pour carte mémoire, le décodeur LOLTV vous permettra de connecter tous vos périphériques pour une expérience toujours plus riche et des usages multipliés.">
+<tvOfferAboTitle """
+Alors n’attendez plus <br/>pour profiter des nombreux <br/>avantages du service LOLTV !
+""">
+/*------------------------------TV/EQUIP.HTML---------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<tvGearMetaTitle "TV : Nos équipements – Luxembourg Online">
+<tvGearMetaDesc """
+content="Profitez du meilleur de la télévision avec le décodeur TV Minix, équipé d’un processeur quad-core, d’un port USB et full HD. L’installation du décodeur vous est offerte. "
+""">
+/*----------------------------------------------------------------------------*/
+<tvGearTitle """
+Décodeur TV Minix <span class="orange" style="font-size:40px;">hellos <strong>gratuite !</strong></span>
+""">
+<tvGearAchat "achat 159€ (contrat 12 mois)">
+<tvGearLocation """
+<strong>Décodeur(s) supplémentaire(s) :</strong><br />
+                                    Location décodeur 5,50€/mois (contrat 24 mois)<br />
+                                    Achat décodeur 159€ (contrat 12 mois)
+""">
+<tvGearList """
+<li>Processeur quad-core</li>
+                                    <li>Mémoire 2 GB RAM</li>
+                                    <li>Full HD</li>
+                                    <li>Ports USB</li>
+                                    <li>Emplacement carte SD</li>
+                                    <li>Hotspot wi-fi</li>
+""">
+<tvGearRemoteTitle """
+La télécommande gyroscopique <strong>LOL<span class="normal">TV</span></strong>
+""">
+<tvGearRemoteDesc "Déplacez le pointeur d'un simple mouvement du poignet et profitez d'un grand confort d'utilisation. Au dos, la télécommande comporte un clavier qui vous permettra de faciliter votre navigation dans les menus.">
+/*-----------------------------TEL/ACCUEIL.HTML-------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<telAccueilMetaTitle "Téléphonie : Accueil - Luxembourg Online">
+<telAccueilMetaDesc """
+content="Chez Luxembourg Online, votre abonnement de téléphonie fixe est inclus dans votre forfait Internet : communiquez en toute tranquilité et surfez à toute vitesse."
+""">
+<telAccueilMetaKeywords """
+content="Forfait Internet telephone, abonnement telephone fixe,  téléphonie Luxembourg, appel illimité vers fixe"
+""">
+/*----------------------------------------------------------------------------*/
+<telAccueilTitle """
+Des communications <strong>à un prix avantageux !</strong>
+""">
+<telAccueilDesc "Avec l’abonnement de téléphonie fixe inclus dans votre forfait Internet, profitez des nombreux avantages tarifaires offerts par Luxembourg Online : appels illimités vers les fixes nationaux et vers les mobiles LOL, 120 minutes d’appels vers les fixes d’Europe...">
+<telAccueilLink "Voir nos tarifs détaillés">
+<telAccueilVisioTitle """
+<span class="extra-bold">LOL</span>VISIO :<br/><span class="extra-bold">Oubliez la distance !</span>
+""">
+<telAccueilVisioDesc """
+<span class="extra-bold">LOL</span>VISIO est le service de téléphonie fixe dernière génération de Luxembourg Online. Profitez en toute simplicité de la téléphonie classique alliée à un système de visiophonie moderne.
+""">
+<telAccueilVisioLink "Voir l'offre">
+<telAccueilGearTtitle """
+Une sélection de téléphones <strong>parfaitement adaptés à vos communications !</strong>
+""">
+<telAccueilGearDesc "Pour vous permettre de communiquer en toute simplicité, Luxembourg Online a sélectionné pour vous des téléphones performants, avec un design élégant. Faites votre choix parmi les équipements proposés. ">
+<telAccueilGearLink "Voir nos téléphones">
+/*--------------------------------TEL/ABO.HTML--------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<telAboMetaTitle "Téléphonie : Abonnez-vous - Luxembourg Online">
+<telAccueilMetaDesc """
+content="Chez Luxembourg Online, votre abonnement de téléphonie fixe est inclus dans votre forfait Internet : communiquez en toute tranquilité et surfez à toute vitesse."
+""">
+<telAccueilMetaKeywords """
+content="Forfait Internet telephone, abonnement telephone fixe,  téléphonie Luxembourg, appel illimité vers fixe"
+""">
+/*----------------------------------------------------------------------------*/
+<telAboConractLink1 """
+<a href="../documents/raccordement.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Commande raccordement</div></a>
+""">
+<telAboConractLink2 """
+<a href="../documents/Transfert_Contrat_Internet.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Transfert de contrat téléphonie</div></a>
+""">
+<telAboCondLink1 """
+<a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20DE%20TELEPHONIE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link">Conditions particulières (Téléphonie)<span>(nouvelle version depuis 12/03/2012)</span></div></a>
+""">
+/*--------------------------------TEL/FAQ.HTML--------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<telFaqMetaTitle "Téléphonie : FAQ - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<telFaqQ1 "Puis-je avoir la téléphonie fixe sans prendre d’accès Internet ?">
+<telFaqQ1A """
+Oui, cela est tout à fait possible. Pour plus d'information, <a href="../divers/contact.html#form" target="blank_">contactez-nous</a>.
+""">
+<telFaqQ2 "Puis-je dévier des appels reçus sur ma ligne fixe vers un autre numéro ?">
+<telFaqQ2A """
+Oui, ce service est disponible.<br /> Pour cela, il vous suffit de vous connectez à votre
+                                    <a href="#" class="openPopup" data-popup="0"><strong>Espace client</strong></a> et de cliquez sur "<strong>Mon compte</strong>". Entrez ensuite vos identifiants dans les champs correspondants et cliquez sur "<strong>se connecter</strong>".<br/>
+                                    Une fois ceci fait, suivez les étapes suivantes :<br/>
+                                    1. Sélectionnez Mes abonnements, puis cliquez sur Configurer.<br/>
+                                    2. Dans la rubrique Renvoi d'appel, indiquez le numéro vers lequel vous souhaitez faire le
+                                    renvoi ainsi que l'état souhaité (renvoi direct ou après 5 sonneries).<br/>
+                                    3. Cliquez sur Sauvegarder en bas de la page.<br/>
+                                    Le renvoi est actif immédiatement après la modification.
+""">
+<telFaqQ3 "Que signifient « rythme de facturation 60'/60' » et « rythme de facturation 60'/15' » ?">
+<telFaqQ3A """
+«Rythme de facturation 60'/60'» signifie que la première minute d’appel est facturée
+                                    d’office. Ensuite, chaque minute d’appel entamée est facturée.<br/>
+                                    «Rythme de facturation 60'/15'» signifie que première minute d’appel est facturée
+                                    d’office. Ensuite, vous payez chaque quart de minute entamé (toutes les 15 secondes).
+""">
+/*--------------------------TEL/LOLVVISIO.HTML--------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<telVisioMetaTitle "Téléphonie : LOLVISIO – Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<telVisioZoneInt1 """
+Allemagne, Autriche, Belgique, Bulgarie, Chypre, Croatie, Danemark, Espagne, Estonie, Finlande, France (métropole + Guyane + Martinique + Reunion), Grèce, Hongrie, Irlande, Italie, Lettonie, Lituanie, Malte, Monaco, Pays-Bas, Pologne, Portugal, Rep. Tchèque, Roumanie, Royaume-Uni, Slovaquie, Slovénie, Suède.
+""">
+<telVisioTitle """
+<span class="extra-bold">LOL</span>VISIO :<br/><span class="extra-bold">Oubliez la distance !</span>
+""">
+<telVisioDesc """
+<span class="extra-bold">LOL</span>VISIO est le service de téléphonie fixe dernière génération de Luxembourg Online. Il permet de profiter à la fois de toute la simplicité de la téléphonie classique et de la modernité de la visiophonie.
+""">
+<telVisioComTitle """
+Une communication <strong>plus proche</strong>
+""">
+<telVisioComDesc """
+Parce qu’il est toujours plus agréable et rassurant de voir la personne avec qui l’on discute, Luxembourg Online a mis au point ce nouveau service de téléphonie fixe <strong>inédit au Grand-Duché</strong>. Vos interlocuteurs apparaissent à l’écran comme s’ils étaient à côté de vous. Ainsi, vous restez en contact avec vos proches, mêmes s’ils sont loin. 
+""">
+<telVisioGearTitle """
+Un téléphone <strong>de dernière génération</strong>
+""">
+<telVisioGearDesc """
+Alliant simplicité et modernité, le téléphone <span class="extra-bold">LOL</span>VISIO de Luxembourg Online a été conçu pour permettre une <strong>communication de haute qualité</strong>. Facile d’usage, il s’utilise comme un téléphone classique, la visiophonie en plus.
+                                Et si vous ne vous sentez pas d’humeur à une conversation en "face à face", vous pouvez à tout moment passer en mode audio uniquement.
+""">
+<telVisioGearLink "Accédez à nos téléphones">
+<telVisioTarifTitle """
+<strong>Le tarif habituel,</strong> sans surcoût
+""">
+<telVisioTarifDesc """
+Le téléphone <span class="bold">LOL</span>VISIO est très facile d'utilisation et conviendra à tous.<br/> Pour passer un appel audio ou vidéo, rien de plus simple : vous composez le numéro et décrochez le combiné. Le tour est joué ! Découvrez notre vidéo de démonstration ci-contre et n'hésitez pas à venir le tester en boutique.
+""">
+<telVisioOfferTitle """
+N'attendez plus, appelez-nous au <br/><span style="font-size: 1.6em; line-height: 60px;">2799 0000</span><br/>pour plus d'informations !
+""">
+<telVisioOfferTable1 """
+Appels nationaux <strong>fixes illimités</strong><span class="exponent">(1)</span>
+""">
+<telVisioOfferTable2 """
+Appels vers <strong>mobiles LOL illimités</strong>
+""">
+<telVisioOfferTable3 """
+<strong>120 minutes</strong> vers les fixes d'Europe<span class="exponent">(2)</span>
+""">
+/*----------------------------PROMO/FIBRE.HTML--------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<promoFibreMetaTitle "Promos : Fibre - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<promoFibreTitle """
+offre fibre<span style="font-size: 0.3em;" class="exponent">(1)</span>
+""">
+<promoFibreDesc """
+<span class="bold">LOL</span>FIBER 100 devient <span class="bold">LOL</span>FIBER 200<br/>Frais d'installation et de câblage fibre <span class="extra-bold">offerts !</span>
+""">
+<promoFibreOfferDesc """
+Pour toute nouvelle souscription de 24 mois à l'offre <br/><span class="bold">LOLFIBER 100</span>, Luxembourg Online vous double la vitesse<span class="exponent">(1)</span> et  offre les frais d'installation et de câblage fibre, soit jusqu'à : 
+""">
+<promoFibreOfferPrice """
+<div class="price blue">309€</div>
+<div class="label blue">de remise</div>
+""">
+<promoFibreOfferDetails """
+ou contactez-nous au <b>2799 0000</b>
+""">
+<promoFibreOfferDate "Offre promotionnelle valable jusqu'au 31/12/2016. Voir détails et conditions en magasin">
+/*----------------------------PROMO/FIBRE1.HTML-------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<promoFibre1MetaTitle "Promos : Fibre - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<promoFibre1Title "offre spéciale">
+<promoFibre1Desc """
+Frais d'installation <span class="extra-bold">offerts !</span>
+""">
+<promoFibre1Desc1 """
+Malheureusement la technologie fibre optique n'est pas disponible à votre adresse. Luxembourg Online vous propose l'abonnement<br/><span class="bold">LOLFIBER 100</span> en technologie VDSL.
+""">
+<promoFibre1Desc2 "Pour toute souscription de 24 mois, Luxembourg Online vous offre les frais d'installation, soit : ">
+<promoFibre1OfferPrice """
+<div class="price blue">89€</div>
+<div class="label blue">de remise</div>
+""">

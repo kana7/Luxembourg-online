@@ -77,7 +77,7 @@
         checkOccurence: function () {
             var occurence = [];
             this.$infos.each(function () {
-                if (!$(this).is(':hidden')){
+                if (!$(this).is(':hidden')) {
                     $.each($(this).data('fnote'), function (index, value) {
                         if ($.inArray(value, occurence) < 0) {
                             occurence.push(value);
@@ -92,10 +92,8 @@
             footContainer.empty();
             console.log(occurence);
             $.each(this.options.registry, function (index, value) {
-                console.log(index);
-                console.log($.isArray(index, occurence) > -1);
                 if (occurence.indexOf(index) > -1) {
-                    footContainer.append('<li><span>(' + (index + 1) + ')</span> ' + value + '</li>');
+                    footContainer.append('<li><span>(' + (index + 1) + ')</span>' + value + '</li>');
                 }
             });
         },

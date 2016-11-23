@@ -1,10 +1,3 @@
-/*PLUGIN POUR APPLIQUER LES REFERENCES DES TRADUCTIONS*/
-$.fn.setL10nData = function (id, args) {
-  return this.each(function () {
-    document.l10n.setAttributes(this, id, args);
-  });
-};
-
 var formNameIndex = ['shop_fibre', 'shop_portabilite'];
 var cookieIndex = ['shop_serviceMap', 'shop_panierItems', 'shop_idhome'].concat(formNameIndex);
 
@@ -50,8 +43,8 @@ var temp;
 $(function () {
     MenuMobile.init();
     PopupModule.init();
-    if($('.header-dropdown')){
-        $('.header-dropdown').each(function(){
+    if ($('.header-dropdown')) {
+        $('.header-dropdown').each(function () {
             temp = new HeaderDropDown(this);
             temp.init();
         });
@@ -68,8 +61,8 @@ $(function () {
     if (jQuery().numeric) {
         $(".numeric").numeric();
     }
-    if ($('#languageSelector')){
-        $('#languageSelector').find('a').on('click', function(){
+    if ($('#languageSelector')) {
+        $('#languageSelector').find('a').on('click', function () {
             var lang = $(this).attr('data-lang');
             document.l10n.requestLocales(String(lang));
         });
@@ -387,7 +380,7 @@ var getRandomInt = function (min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 };
 
-var removeHash = function() {
+var removeHash = function () {
     var scrollV, scrollH, loc = window.location;
     if ("replaceState" in history)
         history.replaceState("", document.title, loc.pathname + loc.search);

@@ -3741,7 +3741,7 @@ span[class^=icon-] {
       color: #fff;
       background-color: #004994;
       border-bottom: 2px solid #004994; }
-      .mobile-side-menu .menu-links-wrapper .menu-item.back span {
+      .mobile-side-menu .menu-links-wrapper .menu-item.back span[class^="icon-"] {
         float: left;
         top: 1px;
         margin-right: 5px;
@@ -5015,7 +5015,7 @@ span[class^=icon-] {
   .content-container .offer-item-blue .info, .content-container .offer-item-orange .info {
     font-size: 16px;
     font-weight: 400; }
-    .content-container .offer-item-blue .info span:not(.exponent), .content-container .offer-item-orange .info span:not(.exponent) {
+    .content-container .offer-item-blue .info span:not(.exponent):not([data-l10n-id]), .content-container .offer-item-orange .info span:not(.exponent):not([data-l10n-id]) {
       display: inline-block;
       position: absolute;
       top: 20px;

@@ -17,7 +17,7 @@
 @include media(tab){
     #promo-fibre-2x{
         &.image-1{
-            background-image: url('../../../images/promos/Promo_Fibre/Promo_Fibrex2_Visuel1_1056x450px.jpg');
+            background-image: url('../../../images/promos/Promo Fibre Noel/Promo_Fibre_Noel_1056x450px.jpg');
         }
         &.image-2{
             background-image: url('../../../images/promos/Promo_Fibre/Promo_Fibrex2_Visuel2_1056x450px.jpg');
@@ -40,7 +40,7 @@
         }
     }
     #promo-fibre{height: 200px !important;}
-    #promo-fibre-2x{height: 450px !important;}
+    #promo-fibre-2x{height: 450px;}
     #promo-noel{
         background-size: 1056px auto;
         &:not(.not-accueil){
@@ -59,7 +59,7 @@
 @include media(desk){
     #promo-fibre-2x{
         &.image-1{
-            background-image: url('../../../images/promos/Promo_Fibre/Promo_Fibrex2_Visuel1_1302x370px.jpg');
+            background-image: url('../../../images/promos/Promo Fibre Noel/Promo_Fibre_Noel_1302x370px.jpg');
             text-align: left !important;
         }
         &.image-2{
@@ -78,7 +78,7 @@
     }
     #promo-noel, #promo-fibre, #promo-fibre-2x{
         background-size: 1302px auto;
-        height: 370px !important;
+        height: 370px;
         padding: 40px 0 30px;
         background-image: url(../../../images/promos/Promo_Fibre/Offre_Fibre_JAN_1302x370px.jpg);
         .section-title{
@@ -153,7 +153,7 @@
 @include media(lgdesk){
     #promo-fibre-2x{
         &.image-1{
-            background-image: url('../../../images/promos/Promo_Fibre/Promo_Fibrex2_Visuel1_1920x400px.jpg');
+            background-image: url('../../../images/promos/Promo Fibre Noel/Promo_Fibre_Noel_1920x400px.jpg');
         }
         &.image-2{
             background-image: url('../../../images/promos/Promo_Fibre/Promo_Fibrex2_Visuel2_1920x400px.jpg');

@@ -402,10 +402,10 @@ input[type=number] {
 
 #lolnow-banner {
   background-color: #eff0f3;
-  background-size: 427px auto;
-  padding-top: 240px;
+  background-size: 312px auto;
+  padding-top: 175px;
   background-position: center top;
-  background-image: url(../../../images/Internet/320px/Img_LOLNOW.jpg); }
+  background-image: url(../../../images/Internet/320px/Img_Option_NOW4.jpg); }
   #lolnow-banner .footer-note {
     text-align: center; }
 
@@ -468,7 +468,7 @@ input[type=number] {
   #lolnow-banner {
     background-size: 427px auto;
     padding-top: 235px;
-    background-image: url(../../../images/Internet/640px/Img_LOLNOW.jpg); } }
+    background-image: url(../../../images/Internet/640px/Img_Option_NOW3.jpg); } }
 @media screen and (min-width: 1056px) and (max-width: 1302px) {
   #lolnow-banner .section-title, #lolnow-banner .section-text {
     margin-bottom: 15px; } }
@@ -536,7 +536,7 @@ input[type=number] {
     background-size: 742px auto;
     padding-top: 0;
     background-position: right top;
-    background-image: url(../../../images/Internet/1024px/Img_LOLNOW.jpg); }
+    background-image: url(../../../images/Internet/1024px/Img_Option_NOW2.jpg); }
     #lolnow-banner .footer-note {
       text-align: left; } }
 @media screen and (min-width: 1302px) {
@@ -564,6 +564,6 @@ input[type=number] {
   #lolnow-banner {
     height: 500px !important;
     background-size: 928px auto;
-    background-image: url(../../../images/Internet/1280px/Img_LOLNOW.jpg); } }
+    background-image: url(../../../images/Internet/1280px/Img_Option_NOW1.jpg); } }
 
 /*# sourceMappingURL=accueil.css.map */

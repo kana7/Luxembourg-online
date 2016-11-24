@@ -4,11 +4,11 @@
   #slider-contents .infos.image-1 {
     background-image: url(../../images/Homepage/SLIDER/Braderie_septembre_4.jpg); }
   #slider-contents .infos.image-2 {
-    background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel1_672x320px.jpg); }
+    background-image: url(../../images/Homepage/SLIDER/LOLTV_672x320.jpg); }
   #slider-contents .infos.image-3 {
-    background-image: url(../../images/Homepage/SLIDER/Slider3_672x320px.jpg); }
+    background-image: url(../../images/Homepage/SLIDER/Slider_Option_NOW_672x320px.jpg); }
   #slider-contents .infos.image-4 {
-    background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel2_672x320x.jpg); }
+    background-image: url(../../images/Homepage/SLIDER/Promo_Fibre_Noel_672x320x.jpg); }
   #slider-contents .infos.image-5 {
     background-image: url(../../images/Homepage/SLIDER/Inscription_672x320px.jpg); }
 
@@ -18,11 +18,11 @@
     #slider-contents .infos.image-1 {
       background-image: url(../../images/Homepage/SLIDER/Braderie_septembre_3.jpg); }
     #slider-contents .infos.image-2 {
-      background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel1_1056x450px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/LOLTV_1056x450.jpg); }
     #slider-contents .infos.image-3 {
-      background-image: url(../../images/Homepage/SLIDER/Slider3_1056x450px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Slider_Option_NOW_1056x450px.jpg); }
     #slider-contents .infos.image-4 {
-      background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel2_1056x450px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Promo_Fibre_Noel_1056x450px.jpg); }
     #slider-contents .infos.image-5 {
       background-image: url(../../images/Homepage/SLIDER/Inscription_1056x450px.jpg); } }
 @media screen and (min-width: 1056px) {
@@ -31,11 +31,11 @@
     #slider-contents .infos.image-1 {
       background-image: url(../../images/Homepage/SLIDER/Braderie_septembre_2.jpg); }
     #slider-contents .infos.image-2 {
-      background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel1_1302x370px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/LOLTV_1302x330.jpg); }
     #slider-contents .infos.image-3 {
-      background-image: url(../../images/Homepage/SLIDER/Slider3_1302x330px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Slider_Option_NOW_1302x330px.jpg); }
     #slider-contents .infos.image-4 {
-      background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel2_1302x330px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Promo_Fibre_Noel_1302x330px.jpg); }
     #slider-contents .infos.image-5 {
       background-image: url(../../images/Homepage/SLIDER/Inscription_1302x330px.jpg); } }
 @media screen and (min-width: 1302px) {
@@ -44,11 +44,11 @@
     #slider-contents .infos.image-1 {
       background-image: url(../../images/Homepage/SLIDER/Braderie_septembre_1.jpg); }
     #slider-contents .infos.image-2 {
-      background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel1_1920x400px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/LOLTV_1920x360.jpg); }
     #slider-contents .infos.image-3 {
-      background-image: url(../../images/Homepage/SLIDER/Slider3_1920x360px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Slider_Option_NOW_1920x360px.jpg); }
     #slider-contents .infos.image-4 {
-      background-image: url(../../images/Homepage/SLIDER/Promo_Fibrex2_Visuel2_1920x360px.jpg); }
+      background-image: url(../../images/Homepage/SLIDER/Promo_Fibre_Noel_1920x360px.jpg); }
     #slider-contents .infos.image-5 {
       background-image: url(../../images/Homepage/SLIDER/Inscription_1920x360px.jpg); } }
 #slider-contents .infos.image-6 .title {
@@ -90,6 +90,9 @@
   font-size: 0.7em; }
   #slider-contents .infos.image-4 .title span.chapeau + span, #slider-contents .infos.image-2 .title span.chapeau + span {
     font-size: 1.2em; }
+#slider-contents .infos.image-2 .title {
+  text-transform: none;
+  font-weight: 400; }
 
 @media screen and (min-width: 672px) {
   #slider-contents .infos.image-2 .title {
@@ -126,21 +129,11 @@
     width: 230px;
     margin: 0 auto 20px; } }
 @media screen and (min-width: 1056px) {
-  #slider-contents .infos.image-2 .row > div {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%); }
-    #slider-contents .infos.image-2 .row > div .section-price {
-      float: left;
-      margin: initial !important; }
-  #slider-contents .infos.image-2 .title {
-    font-size: 32pt;
-    line-height: 45px; }
-  #slider-contents .infos.image-2 p.bottom-details {
-    font-size: 14pt; }
+  #slider-contents .infos.image-2 {
+    text-align: right; }
+    #slider-contents .infos.image-2 .title {
+      font-size: 25px;
+      line-height: 32px; }
 
   #slider-contents .infos.image-1 .title {
     font-size: 33px;
@@ -148,6 +141,9 @@
     margin-bottom: 10px; }
   #slider-contents .infos.image-1 .top-details {
     margin-bottom: 15px; }
+  #slider-contents .infos.image-3 .top-details {
+    font-size: 28px;
+    line-height: 27px; }
 
   #slider-contents .infos.image-4 div[class^="phone-"] {
     float: left;
@@ -173,10 +169,8 @@
     font-size: 22px; }
 
   #slider-contents .infos.image-2 .title {
-    font-size: 53px;
-    line-height: 55px; }
-    #slider-contents .infos.image-2 .title span.chapeau {
-      line-height: 40px; }
+    font-size: 38px;
+    line-height: 42px; }
 
   #slider-contents .infos.image-4 .title {
     font-size: 45px;

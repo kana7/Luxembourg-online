@@ -74,7 +74,7 @@
     #lolnow-banner {
         background-size: 427px auto;
         padding-top: 235px;
-        background-image: url(../../../images/Internet/640px/Img_LOLNOW.jpg);
+        background-image: url(../../../images/Internet/640px/Img_Option_NOW3.jpg);
     }
 }
 @include viewport(range, $min: $desk, $max: $lgdesk){
@@ -145,7 +145,7 @@
         background-size: 742px auto;
         padding-top: 0;
         background-position: right top;
-        background-image: url(../../../images/Internet/1024px/Img_LOLNOW.jpg);
+        background-image: url(../../../images/Internet/1024px/Img_Option_NOW2.jpg);
         .footer-note{text-align: left;}
     }
 }
@@ -181,6 +181,6 @@
     #lolnow-banner {
         height: 500px !important;
         background-size: 928px auto;
-        background-image: url(../../../images/Internet/1280px/Img_LOLNOW.jpg);
+        background-image: url(../../../images/Internet/1280px/Img_Option_NOW1.jpg);
     }
 }

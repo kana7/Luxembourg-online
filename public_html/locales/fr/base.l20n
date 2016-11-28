@@ -1483,12 +1483,508 @@ Bienvenue sur l'<span class="bold">assistance Luxembourg Online</span>
                     </div>
 """>
 <diversAssGuideTitle "Guide d'installation et d'assistance">
-<diversAssGuideLink1 """
-href="../documents/guides/guide-assistance-technique.pdf"
+<diversAssGuideLinkImg1 """
+<a class="link link2" href="../documents/guides/guide-assistance-technique.pdf" target="_blank"><img src="../images/guide/guide-assistance-technique.jpg"></a>
 """>
-<diversAssGuideTechAss """
-<h3>Guide d'assistance technique</h3><a class="link-assistance" {{diversAssGuideLink1}} target="_blank">Télécharger</a>
+<diversAssGuideLink1 """
+<h3>Guide d'assistance technique</h3><a class="link-assistance" href="../documents/guides/guide-assistance-technique.pdf" target="_blank">Télécharger</a>
+""">
+<diversAssGuideLinkImg2 """
+<a class="link link2" href="../documents/guides/Guide_ADSL_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_ADSL_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a>
 """>
 <diversAssGuideLink2 """
 <h3>Fritz!Box (ADSL)</h3><a class="link-assistance" href="../documents/guides/Guide_ADSL_A5_BD.pdf" target="_blank">Télécharger</a>
 """>
+<diversAssGuideLinkImg3 """
+<a class="link link2" href="../documents/guides/Guide_VDSL_RV_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_VDSL_RV_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a>
+""">
+<diversAssGuideLink3 """
+<h3>Fritz!Box (VDSL)</h3><a class="link-assistance" href="../documents/guides/Guide_VDSL_RV_A5_BD.pdf" target="_blank">Télécharger</a>
+""">
+<diversAssGuideLinkImg4 """
+<a onClick="ga('send', 'event', 'download', 'click', ‘FRITZ VDSL');"  class="link link2" href="../documents/guides/Guide_VDSL_DG_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_VDSL_DG_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a>
+""">
+<diversAssGuideLink4 """
+<h3>Fritz!Box (VDSL dégroupé)</h3><a onClick="ga('send', 'event', 'download', 'click', ‘FRITZ VDSL');" class="link-assistance" href="../documents/guides/Guide_VDSL_DG_A5_BD.pdf" target="_blank">Télécharger</a>
+""">
+<diversAssGuideLinkImg5 """
+<a class="link link2" href="../documents/guides/Guide_LOLVISIO_particuliers_201605.pdf" target="_blank"><img src="../images/guide/Guide_LOLVISIO.png" data-realwidth="106" data-realheight="150"></a>
+""">
+<diversAssGuideLink5 """
+<h3><span class="bold">LOL</span>VISIO</h3><a onClick="ga('send', 'event', 'download', 'click', LOLVISIO');" class="link-assistance" href="../documents/guides/Guide_LOLVISIO_particuliers_201605.pdf" target="_blank">Télécharger</a>
+""">
+<diversAssGuideLinkImg6 """
+<a class="link link2" href="../documents/guides/Guide_TV_Minix_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_TV_Minix_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a>
+""">
+<diversAssGuideLink6 """
+<h3>Minix (LOLTV)</h3><a class="link-assistance" href="../documents/guides/Guide_TV_Minix_A5_BD.pdf" target="_blank">Télécharger</a>
+""">
+<diversAssGuideLinkImg7 """
+<a onClick="ga('send', 'event', 'download', 'click', ‘Minix Mini');" class="link link2" href="../documents/guides/Guide_TV_Minix_Mini_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_TV_Minix_Mini_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a>
+""">
+<diversAssGuideLink7 """
+<h3>Minix Mini (LOLTV)</h3><a onClick="ga('send', 'event', 'download', 'click', ‘Minix Mini');" class="link-assistance" href="../documents/guides/Guide_TV_Minix_Mini_A5_BD.pdf" target="_blank">Télécharger</a>
+""">
+<diversAssMailTitle "Configuration mail">
+<diversAssMailSelect "Séléctionnez la configuration :">
+<diversAssMailSelectOption1 "Paramètres de base">
+<diversAssMailOption1Param """
+<li><span>Serveur de courrier entrant (POP) : <b>pop.internet.lu</b></span></li>
+                                                <li><span>Port: <b>110/connexion sans SSL</b></span></li>
+                                                <li><span>Serveur de courrier sortant (SMTP) : <b>smtp.internet.lu</b></span></li>
+                                                <li><span>Port SMTP: <b>25 ou 587 avec authentification activée/connexion sans SSL</b></span></li>
+                                                <li><span>Adresse email : <b>votre adresse @internet.lu</b></span></li>
+                                                <li><span>Nom d'utilisateur (username) : <b>votre username</b></span></li>
+                                                <li><span>Mot de passe (password) : <b>votre password</b></span></li>
+""">
+<diversAssMailOption2Content """
+<h3>Windows 10 Mail</h3>
+                                            <ul class="emailPara" data-l10n-id="diversAssMailOption2Content">
+                                                <li><span>Ouvrez l'application Mail (Courrier en francais), cliquez sur l'icone "Paramètres" puis "Comptes".</span></li>
+                                                <li><span>Cliquez ensuite sur "Ajouter un compte".</span></li>
+                                                <li><span>Sélectionnez "Autre compte".</span></li>
+                                                <li><span>Entrez l’adresse email et le mot de passe correspondant et selectionnez "Ouverture de session".</span></li>
+                                                <li><span>Cliquez sur "Terminé".</span></li>
+                                            </ul><br>
+                                            <p>Une fenêtre de confirmation apparait : votre compte est configuré ! Vous pouvez maintenant
+                                                envoyer et recevoir vos emails via Windows Mail 10.</p>
+                                            <p>Pour plus d'information : <a class="link-assistance" target="blank" href="https://support.office.com/fr-fr/article/Configurer-votre-compte-dans-lapplication-Courrier-pour-Windows-10-7ff79e8b-439b-4b47-8ff9-3f9a33166c60">Assistance Microsoft</a></p>
+                                            <div><h3>Windows 8 Mail</h3>
+                                                <p>L'application Windows 8 Mail n'est malheureusement pas compatible car elle ne supporte pas le protocole POP3 avec le service Mail Luxembourg Online.<br>
+                                                    Pour consulter vos emails, veuillez utiliser un autre client mail (Thunderbird, Outlook, ...) ou accéder à l'espace client du site www.internet.lu.</p>
+                                            </div>
+""">
+<diversAssMailOption3Content """
+<h3>Outlook (valable pour Outlook 2010,2013 et 2016)</h3>                                            
+                                            <ul class="emailPara">
+                                                <li><span>Démarrez Outlook.</span></li>
+                                                <li><span>Dans la barre de menu, cliquez sur Fichier et ensuite sur Ajouter un compte.</span></li>                                                        
+                                                <li><span>Cochez la case "Configuration manuelle ou types de serveurs supplémentaires" et cliquez sur Suivant.</span></li>
+                                                <li><span>Cochez la case "POP ou IMAP" et cliquez sur Suivant.</span></li>
+                                                <li><span>Remplissez les champs comme indiqué ci-dessous et cliquez sur le bouton "Paramètres supplémentaires".</span></li>
+                                                <ul class="emailPara2">
+                                                    <li>Votre nom : <span>introduisez votre prénom et votre nom de famille.</span></li>
+                                                    <li>Adresse de messagerie : <span>introduisez votre adresse e-mail.</span></li>
+                                                    <li>Type de compte : <span>sélectionnez <b>POP</b> dans le menu déroulant.</span></li>
+                                                    <li>Serveur de courrier entrant : <span>introduisez <b>pop.internet.lu</b> dans ce champ.</span></li>
+                                                    <li>Serveur de courrier sortant (SMTP) : <span>introduisez <b>smtp.internet.lu</b> dans ce champ.</span></li>
+                                                    <li>Nom d'utilisateur : <span>introduisez votre nom d'utilisateur.</span></li>
+                                                    <li>Mot de passe : <span>introduisez votre mot de passe. Si vous le souhaitez, vous pouvez cocher la case "Mémoriser le mot de passe".</span></li>
+                                                </ul>
+                                                <li><span>Cliquez ensuite sur "Paramètres supplémentaires ..."</span></li>
+                                                <ul class="emailPara2">
+                                                    <li>Allez dans l'onglet Options avancées, remplissez les champs comme indiqué ci-dessous et cliquez sur le bouton OK.</li>
+                                                    <li>Utilisez le type de connexion chiffrée suivant : <span>sélectionnez <b>aucun</b>.</span></li>
+                                                    <li>Serveur entrant (POP) : <span>introduisez <b>110</b></span>.</li>
+                                                    <li>Serveur de courrier sortant (SMTP) : <span>introduisez <b>25 ou 587</b>.</span></li>                                                            
+                                                </ul>
+                                                <li><span>Cliquez sur Suivant, puis sur Fermer et ensuite sur Terminer.</span></li>                                                
+                                                <li><span>Vous pouvez désormais envoyer et recevoir vos e-mails via Outlook.</span></li>                                                
+                                            </ul>
+                                            <p>Pour plus d'information : <a class="link-assistance" target="blank" href="https://support.microsoft.com/fr-fr/kb/286197">Assistance Microsoft</a></p>
+""">
+<diversAssMailOption4Content """
+<h3>Outlook 2007</h3>
+                                            <ul class="emailPara" style="margin-bottom:20px;">
+                                                <li><span>Dans la barre de menu, cliquez sur Outils et ensuite sur Paramètres du compte.</span></li>
+                                                <li><span>Allez dans l'onglet Messagerie et cliquez sur Nouveau.</span></li>
+                                                <li><span>Cochez la case "Microsoft Exchange, POP3, IMAP ou HTTP" et cliquez sur Suivant.</span></li>
+                                                <li><span>Cochez la case "Configurer manuellement les paramètres du serveur ou les types de serveurs supplémentaires" et cliquez sur Suivant.</span></li>
+                                                <li><span>Cochez la case "Messagerie Internet" et cliquez sur Suivant.</span></li>
+                                                <li><span>Remplissez les champs comme indiqué ci-dessous et cliquez sur le bouton "Paramètres supplémentaires".</span></li>
+                                                <ul class="emailPara2">
+                                                    <li>Votre nom : <span>introduisez votre nom.</span></li>
+                                                    <li>Adresse de messagerie : <span>introduisez votre adresse e-mail.</span></li>
+                                                    <li>Type de compte : <span>sélectionnez <b>POP3</b> dans le menu déroulant.</span></li>
+                                                    <li>Serveur de courrier entrant : <span>introduisez <b>pop.internet.lu</b> dans ce champ.</span></li>
+                                                    <li>Serveur de courrier sortant (SMTP) : <span>introduisez <b>smtp.internet.lu</b> dans ce champ.</span></li>
+                                                    <li>Nom d’utilisateur : <span>réintroduisez votre nom d'utilisateur.</span></li>
+                                                    <li>Mot de passe : <span>introduisez votre mot de passe. Si vous le souhaitez, vous pouvez cocher la case " Mémoriser le mot de passe".</span></li>
+                                                </ul>
+                                                <li><span>Allez dans l’onglet Options avancées, complétez les champs comme décrit ci-dessous et cliquez sur le bouton OK.</span></li>
+                                                <ul class="emailPara2">
+                                                    <li>Serveur entrant (POP) : <span>introduisez <b>110</b>.</span></li>
+                                                    <li>Ce serveur nécessite une connexion chiffrée (SSL) : <span>NE PAS cocher cette case</span></li>
+                                                    <li>Serveur sortant (SMTP) : <span>introduisez <b>25 ou 587</b>.</span></li>
+                                                    <li>Utilisez le type de connexion chiffrée suivant : <span>sélectionnez <b>aucune</b>.</span></li>
+                                                </ul>
+                                                <li><span>Cliquez sur Suivant, ensuite sur Terminer.</span></li>
+
+                                                <li><span>Vous pouvez désormais envoyer et recevoir vos e-mails via Outlook 2007.</span></li>
+                                            </ul>
+""">
+<diversAssMailOption5Content """
+<h3>iOS</h3>                                            
+<a class="link-assistance" href="../documents/guides/mail_iphone.pdf" target="_blank">Configuration E-mail sous IOS</a>
+""">
+<diversAssMailOption6Content """
+<h3>Android</h3>
+<a class="link-assistance" href="../documents/guides/mail_android.pdf" target="_blank">Configuration E-mail sous Android</a>
+""">
+<diversAssMobileTitle "Configuration DATA/MMS">
+<diversAssMobileDesc "Le plus souvent, votre téléphone mobile récupère les paramètres de configuration Internet depuis la SIM, ou les reçoit automatiquement via le réseau. Il est également possible de faire la configuration manuellement pour avoir accès à Internet. 
+Séléctionnez la configuration correspondant à votre système d’exploitation et suivez les instructions.">
+<diversAssMobileData """
+<div class="rTableRow"><div class="rTableCell" style="font-weight:bold;font-size:13px;border-bottom:1px solid #e1e1e1;">Configuration Data</div>
+                                                                <div class="rTableCell" style="font-weight:bold;font-size:10pt;border-bottom:1px solid #e1e1e1;"></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Nom:</div><div class="rTableCell">LOL Internet</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">APN:</div><div class="rTableCell">orange.lu</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Serveur Proxy:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Port:</div><div class="rTableCell">8080</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Nom d'utilisateur:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Mot de passe:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Serveur:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">MMSC:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Proxy-MMS:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Port MMS:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">MCC:</div><div class="rTableCell">270</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">MNC:</div><div class="rTableCell">99</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Type d'authentification:</div><div class="rTableCell">PAP ou CHAP</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Type APN:</div><div class="rTableCell">default, supl</div></div>
+""">
+<diversAssMobileMms """
+<div class="rTableRow"><div class="rTableCell" style="font-weight:bold;font-size:13px;border-bottom:1px solid #e1e1e1;">Configuration MMS</div>
+                                                                <div class="rTableCell" style="font-weight:bold;font-size:10pt;border-bottom:1px solid #e1e1e1;"></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Nom:</div><div class="rTableCell">LOL MMS</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">APN:</div><div class="rTableCell">orange.lu</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Serveur Proxy:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Port:</div><div class="rTableCell">8080</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Nom d'utilisateur:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Mot de passe:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Serveur:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>non défini</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">MMSC:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>http://mms.orange.lu</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Proxy-MMS:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>212.88.139.44</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Port MMS:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>8080</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">MCC:</div><div class="rTableCell">270</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">MNC:</div><div class="rTableCell">99</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Type d'authentification:</div><div class="rTableCell">PAP ou CHAP</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Type APN:</div><div class="rTableCell">mms</div></div>
+""">
+<diversAssMobileIns1 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Activer les données mobiles</h3>
+                                            <div class="dropdown-content">
+                                                <ul class="emailPara">
+                                                    <li><span>Appuyez sur le lanceur d'applications.</span></li>
+                                                    <li><span>Sélectionnez </span> "Paramètres" ou "Réglages".</li>
+                                                    <li><span>En fonction de la marque et de la version Android de votre mobile, sélectionnez :</span></li>
+                                                    <ul class="emailPara2">
+                                                        <li><span>"Sans fil et réseaux"</span></li>
+                                                        <li><span>ou "Plus..."</span></li>
+                                                        <li><span>ou "Données mobiles"</span></li>
+                                                        <li><span>ou "Paramètres supplémentaires"</span></li>
+                                                        <li><span>ou "Plus de réseaux" (depuis l'onglet "Connexions")</span></li>
+                                                        <li><span>ou "Réseaux et partage de connexion"(depuis l'onglet "Réseaux").</span></li>
+                                                    </ul>
+                                                    <li><span>Sélectionnez </span> "Réseaux mobiles".</li>
+                                                    <li><span>Assurez-vous que la première ligne "Données mobiles", "Données mobiles activées",
+                                                            "Données activées" ou "Trafic de données mobiles" est bien cochée.</span></li>
+                                                </ul>
+                                            </div>
+""">
+<diversAssMobileIns2 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Activer l'itinérance des données (roaming)</h3>
+                                            <div class="dropdown-content">
+                                                <ul class="emailPara">
+                                                    <li><span>Rendez-vous dans "Paramètres" > "Réseaux Mobiles".</span></li>
+                                                    <li><span>La case "Données mobiles" ou "Itinérance" doit être cochée.</span></li>
+                                                </ul><br/>
+                                                <p>Si vous cochez cette case, un message d'information à propos vous informera des risques de facturation de la data
+                                                    à l’étranger.<br/>
+                                                <p style="font-weight: bold;">Attention : pour éviter les mauvaises surprises, consultez nos <a class="link-assistance" href="../mobile/tarifs_detailles.html" target="blank_">tarifs détaillés</a></p>
+                                            </div>
+""">
+<diversAssMobileIns3 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Configuration des paramètres APN</h3>
+                                            <div class="dropdown-content">
+                                                <p>L'APN (Access Point Name) est le point d’accès qu'utilise votre téléphone pour accéder
+                                                    au réseau Internet mobile de votre opérateur.</p>
+                                                <h3>Etape 1 : accédez aux paramètres APN</h3>
+                                                <ul class="emailPara">
+                                                    <li><span>Appuyez sur le lanceur d'applications.</span></li>
+                                                    <li><span>Sélectionnez </span>"Paramètres" ou "Réglages".</li>
+                                                    <li><span>Suivant la marque et la version Android de votre mobile, sélectionnez :</span></li>
+                                                    <ul class="emailPara2">
+                                                        <li><span>"Sans fil et réseaux"</span></li>
+                                                        <li><span>ou "Plus..."</span></li>
+                                                        <li><span>ou "Données mobiles"</span></li>
+                                                        <li><span>ou "Paramètres supplémentaires"</span></li>
+                                                        <li><span>ou "Plus de réseaux" (depuis l'onglet "Connexions")</span></li>
+                                                        <li><span>ou "Réseaux et partage de connexion"(depuis l'onglet "Réseaux").</span></li>
+                                                    </ul>
+                                                    <li>Sélectionnez <span> "Réseaux mobiles".</span></li>
+                                                    <li>Sélectionnez ensuite <span>"Nom des points d'accès"</span>.</li>
+                                                </ul>
+                                                <p style="font-weight: bold;">Plusieurs cas sont possibles lorsque vous êtes sur la page de configuration des
+                                                    paramètres APN :</p>
+                                                <p>- soit vous pouvez modifier les APN existants en appuyant simplement dessus et en renseignant les informations ci-après,</p>
+                                                <p>- soit vous enregistrez de nouveaux APN et supprimez les anciens APN déjà paramétrés.</p>
+                                                <h3>Etape 2 : configurer les paramètres APN LOL</h3>
+                                                <p>Renseignez les informations présentes dans la configuration <a class="link-assistance" href="../divers/assistance.html#config-data;0;" target="blank_">Paramètre de base</a>.</p>
+                                                <p>En cas de difficultés, faites appel à notre <a class="link-assistance" href="../divers/contact.html#Probleme_technique" target="blank_">service Helpdesk.</a></p>
+                                            </div>
+""">
+<diversAssMobileIns4 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Exemple sur un Samsung Galaxy S5</h3>
+                                            <div class="dropdown-content">
+                                                <div class="row tuto" style="padding-left: 10px;">
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/Samsung1.png" alt=""/>
+                                                    </div>
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/Samsung2.png" alt=""/>
+                                                    </div>
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/Samsung3.png" alt=""/>
+                                                    </div>
+                                                </div>
+                                            </div> 
+""">
+<diversAssMobileIns5 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Configuration des paramètres APN</h3>
+                                            <div class="dropdown-content">
+                                                <p style="margin-bottom:0;">L'APN (Access Point Name) est le point d’accès qu'utilise votre téléphone pour accéder
+                                                    au réseau Internet mobile de votre opérateur.</p><br/>
+                                                <h3>Etape 1 : accédez aux paramètres APN</h3>
+                                                <ul class="emailPara">
+                                                    <li><span>Depuis l'écran d'accueil, appuyez sur la flèche en bas à droite de l'écran (ou faites
+                                                            défiler l'écran vers la gauche) pour accéder à la liste des applications.</span>
+                                                    </li>
+                                                    <li><span>Sélectionnez </span>"Paramètres".</li>
+                                                    <li><span>Sélectionnez ensuite </span>"réseau cellulaire" ou "réseau mobile".</li>
+                                                    <li><span>En fonction de la version de Windows de votre mobile, appuyez sur</span> "ajouter un
+                                                        APN internet"<span> (ou "ajouter un APN mms", suivant l'APN que vous souhaitez
+                                                            renseigner) ou sélectionnez </span>"modifier APN".</li>
+                                                </ul>
+                                                <p style="font-weight: bold;">Plusieurs cas sont possibles lorsque vous êtes sur la page de configuration des
+                                                    paramètres APN :</p>
+                                                <p>- soit vous pouvez modifier les APN existants en appuyant simplement dessus et en renseignant les informations ci-après,</p>
+                                                <p>- soit vous enregistrez de nouveaux APN et supprimez les anciens APN déjà paramétrés.</p>
+                                                <h3>Etape 2 : configurer les paramètres APN LOL</h3>
+                                                <p>Renseignez les informations présentes dans la configuration <a class="link-assistance" href="../divers/assistance.html#config-data;0;" target="blank_">Paramètre de base</a>.</p>
+                                            </div>
+""">
+<diversAssMobileIns6 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Exemple sur un Windows Phone</h3>
+                                            <div class="dropdown-content">
+                                                <div class="row tuto" style="padding-left: 10px;">
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/WindowsPhone1.jpg" alt=""/>
+                                                    </div>
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/WindowsPhone2.png" alt=""/>
+                                                    </div>
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/WindowsPhone3.png" alt=""/>
+                                                    </div>
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/WindowsPhone4.png" alt=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="row tuto" style="padding-left: 10px;">
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/WindowsPhone5.png" alt=""/>
+                                                    </div>
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/WindowsPhone6.png" alt=""/>
+                                                    </div>
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/WindowsPhone7.png" alt=""/>
+                                                    </div>
+                                                </div>
+                                            </div>
+""">
+<diversAssMobileIns7 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Activez l'itinérance des données (roaming)</h3>
+                                            <div class="dropdown-content">
+                                                <ul class="emailPara">
+                                                    <li><span>allez dans</span> "Réglages" > "Général" > "Réseau"</li>
+                                                    <li><span>activez les données à l’étranger (curseur gris O).</span></li>
+                                                </ul>
+                                                <p style="font-weight: bold;">Attention : pour éviter les mauvaises surprises, consultez nos <a class="link-assistance" href="../mobile/tarifs_detailles.html" target="blank_">tarifs détaillés</a></p>
+                                            </div>
+""">
+<diversAssFactTitle "FAQ Facturation">
+<diversAssFactIns1 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Je ne comprends pas ma facture</h3>
+                                        <div class="dropdown-content">
+                                            <div class="faq-image">
+                                                <div class="popup-gallery display-phone display-tab">
+                                                    <a href="../images/Divers/Assistance/Facture_Anonyme_1.jpg">
+                                                        <img src="../images/Divers/Assistance/Facture_Anonyme_1.jpg" alt=""/>
+                                                    </a>
+                                                </div>
+                                                <img class="hidden-phone hidden-tab" src="../images/Divers/Assistance/Facture_Anonyme_1.jpg" alt=""/>
+                                                <div class="display-desk display-lgdesk notif notif-one txtzone" data-zone="1"></div>
+                                                <div class="display-desk display-lgdesk notif notif-two txtzone" data-zone="2"></div>
+                                                <div class="display-desk display-lgdesk notif notif-three txtzone" data-zone="3"></div>
+                                                <div class="display-desk display-lgdesk notif notif-four txtzone" data-zone="4"></div>
+                                                <div class="display-desk display-lgdesk notif notif-five txtzone" data-zone="5"></div>
+                                            </div>
+                                            <ul class="display-phone display-tab emailPara">
+                                                <li><span><p>Nos coordonées, trouvez ici :</p>
+                                                        <ul class="not-decimal-list">
+                                                            <li><span>nos adresses,</span></li>
+                                                            <li><span>notre numéro de téléphone</span></li>
+                                                            <li><span>et notre numéro de fax.</span></li>
+                                                        </ul>
+                                                        <p>Vous pouvez visualiser ces informations directement sur Internet.lu, rubrique Contact.</p>
+                                                    </span></li><br/>
+                                                <li><span>Votre adresse. Cette adresse postale est votre adresse de facturation. Elle peut être différente de l'adresse d'installation.</span></li><br/>
+                                                <li><span>Détails de votre facture                                                        
+                                                        Dans cet espace, vous retrouvez :
+                                                        <ul class="not-decimal-list">
+                                                            <li><span>le numéro de facture,</span></li>
+                                                            <li><span>le descriptif et le montant de vos abonnements,</span></li>
+                                                            <li><span>le détail de vos consommations,</span></li>
+                                                            <li><span>Le montant total de la facture.</span></li>
+                                                        </ul>
+                                                        <p>Les consommations du mois précédent sont prises en compte pour la facture du mois en cours. Toutes ces infos sont disponibles dans votre Espace client.</p>
+                                                    </span></li><br/>
+                                                <li><span>Informations supplémentaires                                                        
+                                                        Cette partie contient :
+                                                        <ul class="not-decimal-list">
+                                                            <li><span>le mode de facturation</span></li>
+                                                            <li><span>la date de prélèvement (en cas de domiciliation),</span></li>
+                                                            <li><span>et d'autres informations concernant le paiement.</span></li>
+                                                        </ul>
+                                                    </span></li><br/>
+                                                <li><span>Il s'agit ici des différents comptes bancaires de Luxembourg Online sur lesquels vous pouvez effectuer vos virements.</span></li><br/>
+                                            </ul>
+                                            <p><span style="text-decoration: underline;" class="blue">Mention divers</span> : correspond aux services premium (SMS et MMS surtaxés)</p>
+                                            <p>Vous avez encore des questions ? <a class="link-assistance" href="../divers/contact.html#Facturation" target="blank_">Contactez-nous !</a></p>
+                                        </div>
+""">
+<diversAssFactIns2 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Quels sont les avantages de la domiciliation ?</h3>
+                                        <div class="dropdown-content">
+                                            <p>La domiciliation est un mode de paiement simple et sécurisé. Le prélèvement est effectué automatiquement tous les mois, évitant ainsi les frais de facturation (1,50 €) et les frais en cas de retard de paiement. Pour mettre en place une domiciliation, lisez la question suivante.</p>
+                                        </div>
+""">
+<diversAssFactIns3 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Comment mettre en place une domiciliation ?</h3>
+                                        <div class="dropdown-content">
+                                            <p>Si vous souhaitez que votre facture soit directement prélevée sur votre compte bancaire, vous
+                                                devez :</p>
+                                            <ul class="not-decimal-list" style="list-style-type: circle">
+                                                <li><span>imprimer et remplir le <a class="link-assistance" href="../documents/domiciliationnew_FR.pdf" target="blank_">mandat de domiciliation</a>,</span></li>
+                                                <li><span>nous le faire parvenir en ligne via notre <a class="link-assistance" href="../divers/contact.html#Facturation" target="blank_">formulaire</a>, par voie
+                                                        postale, ou l'apporter en boutique.</span></li>                                                    
+                                            </ul>                                            
+                                        </div>
+""">
+<diversAssFactIns4 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Quelle est la date de prélèvement ?</h3>
+                                        <div class="dropdown-content">
+                                            <p>Dès lors que votre domiciliation est active, les prélèvements se font en fin de mois 
+                                                ou bien le 15 du mois, si la première tentative a échoué.</p>
+                                        </div>
+""">
+<diversAssFactIns5 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Peut-on changer la date de prélèvement ?</h3>
+                                        <div class="dropdown-content">
+                                            <p>A ce jour, il n'est pas possible de changer la date de prélèvement. Toutefois, si vous rencontrez
+                                                des difficultés, <a class="link-assistance" href="../divers/contact.html#Facturation" target="blank_">Contactez-nous</a>.</p>
+                                        </div>
+""">
+<diversAssFactIns6 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Comment payer ma facture en ligne ?</h3>
+                                        <div class="dropdown-content">
+                                            <p>Pour payer votre facture en ligne, suivez les étapes suivantes :</p>
+                                            <ul class="emailPara">
+                                                <li><span>Cliquez sur <a href="#" class="openPopup link-assistance" data-popup="0">Espace client</a>, puis sélectionnez mon compte.</span></li>                                                    
+                                                <li><span>Connectez-vous à l'aide de votre identifiant et de votre mot de passe.</span></li>
+                                                <li class="popup-gallery"><span>Cliquez sur « Compte client » puis sur le bouton « Payer XX EUR » <a href="../images/divers/Assistance/bouton_facture.jpg">( <span class="icon icon-faq-ico"></span> )</a></span></li>
+                                                <li><span>Sélectionnez ensuite le lien correspondant à votre mode de paiement.</span></li>
+                                                <li><span>Suivez les instructions indiquées par votre banque.
+                                                        A la fin du processus, vous recevrez une confirmation de paiement à conserver.</span></li>                                               
+                                            </ul>
+                                        </div>
+""">
+<diversAssFactIns7 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Quels sont les avantages de la facture par mail ?</h3>
+                                        <div class="dropdown-content">
+                                            <ul class="emailPara">
+                                                <li><span>Vous n'avez plus à payer les frais d'envoi (1.50 euro par mois).</span></li>
+                                                <li><span>Vous pouvez consulter vos factures partout et à tout moment, en accédant à vos mails ou à
+                                                        votre <a href="#" class="openPopup link-assistance" data-popup="0">Espace client</a>.</span></li>
+                                                <li><span>Vous archivez plus facilement vos factures, en les enregistrant directement sur votre
+                                                        ordinateur, ou même sur votre <a class="link-assistance" href="http://internet.lu/lolcloud" target="blank_">LOLCLoud</a> !</span></li>
+                                                <li><span>Vous ne recevez plus de facture papier : ainsi, vous contribuez à la protection de
+                                                        l'environnement.</span></li>
+                                            </ul>
+                                            <p>Pour recevoir votre facture par email, il vous suffit d'en faire la demande <a class="link-assistance" href="../divers/contact.html#Facturation" target="blank_">ici</a>.</p>
+                                        </div>
+""">
+<diversAssFactIns8 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Comment recevoir ma facture par mail ?</h3>
+                                        <div class="dropdown-content">
+                                            <p>Pour recevoir ma facture par mail, il suffit d'en faire la demande <a class="link-assistance" href="../divers/contact.html#Facturation" target="blank_">ici</a>.</p>
+                                        </div>
+""">
+<diversAssFactIns9 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Comment consulter ma facture en ligne ?</h3>
+                                        <div class="dropdown-content">
+                                            <p>Pour cela, il vous suffit de vous connectez à votre Espace client, cliquez
+                                                sur "Mon compte" et entrez ensuite vos identifiants dans les champs correspondants.
+                                                Cliquez sur "se connecter", puis sélectionnez « Compte client ». Vous pourrez
+                                                visualiser toutes vos factures et également payer en ligne.</p>
+                                        </div>
+""">
+<diversAssFactIns10 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Comment puis-je suivre ma consommation ?</h3>
+                                        <div class="dropdown-content">
+                                            <ul class="emailPara">
+                                                <li><span>Cliquez sur <a href="#" class="openPopup link-assistance" data-popup="0">Espace client</a>, puis sélectionnez mon compte.</span></li>
+                                                <li><span>Connectez-vous à l'aide de votre identifiant et de votre mot de passe.</span></li>
+                                                <li><span>Cliquez sur « Mes abonnements » puis sur « Consommation ».</span></li>                                                
+                                            </ul>
+                                            <p>Vous pouvez visualiser ici le détail de vos consommations.</p>
+                                        </div>
+""">
+<diversAssFactIns11 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Je constate une erreur sur ma facture, que faire ?</h3>
+                                        <div class="dropdown-content">
+                                            <p>Si vous estimez que votre facture comporte une erreur, nous vous invitons à nous contacter en
+                                                utilisant le <a class="link-assistance" href="../divers/contact.html#Facturation" target="blank_">formulaire</a>.</p>
+                                        </div>
+""">
+<diversAssDocTitle "Documents utiles">
+<diversAssDocSelectLabel "Type de documents :">
+<diversAssDocCaTitle "Contrats d'abonnement">
+<diversAssDocCaLink1 """<a href="../documents/LOLFIBERDSL_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLFIBER/DSL</div></a>""">
+<diversAssDocCaLink2 """<a href="../documents/LOLFIBERDSL_OFFRE2_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Offre LOLFIBER</div></a>""">
+<diversAssDocCaLink3 """<a href="../documents/LOLCABLE_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLCABLE</div></a>""">
+<diversAssDocCaLink4 """<a href="../documents/LOLDSL20_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLDSL 20</div></a>""">
+<diversAssDocCaLink5 """<a href="../documents/LOLMOBILE_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLMOBILE</div></a>""">
+<diversAssDocCaLink6 """<a href="../documents/LOLTV_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLTV</div></a>""">
+<diversAssDocDiversTitle "Divers">
+<diversAssDocDiversLink1 """<a href="../documents/demenag_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Déclaration de déménagement</div></a>""">
+<diversAssDocDiversLink2 """<a href="../documents/Bon_FR2.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Bon de parrainage</div></a>""">
+<diversAssDocDiversLink3 """<a href="../documents/raccordement.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Commande de raccordement <span>analogique ou ISDN</span> </div></a>""">
+<diversAssDocDiversLink4 """<a href="../documents/domiciliationnew_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Domiciliation bancaire</div></a>""">
+<diversAssDocDiversLink5 """<a href="../documents/Transfert_Contrat_Internet.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Transfert de contrat <span>Internet et/ou téléphonie</span></div></a>""">
+<diversAssDocDiversLink6 """<a href="../documents/RUSH_ORDER_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Rush Order</div></a>""">
+<diversAssDocDiversLink7 """<a href="../documents/LISTE_DES_PRIX.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Liste des prix<span>(nouvelle version depuis 26/10/2016)</span></div></a>""">
+<diversAssDocDiversLink8 """<a href="http://www.internet.lu/documents/RETRACTATION.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Formulaire de rétractation<span>(Commande en ligne)</span></div></a>""">
+<diversAssDocDiversLink9 """<a href="http://www.internet.lu/documents/RENONCIATION.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Formulaire de renonciation<span>(Commande en ligne)</span></div></a>""">
+<diversAssDocCgpTitle "Condition générales et particulières">
+<diversAssDocCgpLink1 """<a href="../documents/CONDITIONS%20GENERALES%20DES%20SERVICES%20LUXEMBOURG%20ONLINE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Condition générales<span>(nouvelle version depuis 09/01/2014)</span></div></a>""">
+<diversAssDocCgpLink2 """<a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20ACCES%20%20INTERNET%20HAUT%20DEBIT%20ET%20TRES%20HAUT%20DEBIT.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Condition particulières xDSL/Fibre<span>(nouvelle version depuis 12/03/2012)</span></div></a>""">
+<diversAssDocCgpLink3 """<a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20ACCES%20INTERNET%20HAUT%20DE%20DEBIT%20PAR%20CABLE%20CATV.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Condition particulières <span>Internet par câble </span><span>(nouvelle version depuis 12/03/2012)</span></div></a>""">
+<diversAssDocCgpLink4 """<a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20DE%20TELEPHONIE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Condition particulières téléphonie fixe<span>(nouvelle version depuis 12/03/2012)</span></div></a>""">
+<diversAssDocCgpLink5 """<a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20DE%20TELEPHONIE%20MOBILE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Condition particulières<span> téléphonie mobile</span><span>(nouvelle version depuis 01/05/2015)</span></div></a>""">
+<diversAssDocfsTitle "Fiches signalétiques">
+<diversAssDocfsLink1 """<a href="../documents/feuille_type_fix.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Téléphonie fixe</div></a>""">
+<diversAssDocfsLink2 """<a href="../documents/feuille_type_mobile_mobilefamily.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLMOBILE Family</div></a>""">
+<diversAssDocfsLink3 """<a href="../documents/feuille_type_mobile_mobilehome.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLMOBILE Home</div></a>""">
+<diversAssDocfsLink4 """<a href="../documents/feuille_type_mobile_mobileeurope.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLMOBILE Europe</div></a>""">
+<diversAssDocfsLink5 """<a href="../documents/feuille_type_large_bande1.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLFIBER</div></a>""">
+<diversAssDocfsLink6 """<a href="../documents/feuille_type_large_bande2.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLCABLE</div></a>""">
+<diversAssDocfsLink7 """<a href="../documents/feuille_type_offres_groupees1.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLDSL</div></a>""">
+<diversAssDocfsLink8 """<a href="../documents/feuille_type_offres_groupees2.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOL KOMPLETT</div></a>""">
+<diversAssDocfsLink9 """<a href="../documents/feuille_type_teledistribution_IPTV.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLTV</div></a>""">
+<diversAssDocfsLink10 """<a href="../documents/feuille_type_autres_services.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Autres services</div></a>""">
+<diversAssDocfsLink11 """<a href="../documents/feuille_type_mobile_lolnow.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOL NOW</div></a>""">
+<diversAssDocfsLink12 """<a href="../documents/feuille_type_mobile_mobilefamily.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLMOBILE Family</div></a>""">
+<diversAssDocfsLink13 """<a href="../documents/feuille_type_mobile_mobilehome.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLMOBILE Home</div></a>""">
+<diversAssDocfsLink14 """<a href="../documents/feuille_type_mobile_mobileeurope.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLMOBILE Europe</div></a>""">

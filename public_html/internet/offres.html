@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="../styles/css/main.css">
         <script src="../scripts/vendor/picturefill.min.js"></script>
         <link rel="localization" href="../locales/manifest.json"/>
-        <script src="../locales/l20n.js"></script>
+        <script src="../locales/l20n-v3.js"></script>
     </head>
     <body>
         <div id="clientSpace" class="popup">
@@ -995,7 +995,6 @@
                     </div>
                     <div class="phone-12 desk-12">
                         <ul class="footer-note"></ul>
-                        <!--<input class="test" type="button" value="Create &amp; insert a <p> element that will be dynamically localized">-->
                     </div>
                 </div>
             </section>
@@ -1221,16 +1220,6 @@ $(function () {
         ]
     });
 });
-        </script>
-        <script>
-            var button = document.querySelector('.test');
-            var id ="footNoteInternetOffer4";
-            button.addEventListener('click', function insert() {
-                var p = document.createElement('li');
-                p.setAttribute('data-l10n-id', id);
-                document.l10n.localizeNode(p);
-                $('.footer-note').append(p);
-            });
         </script>
         <script type="text/javascript" src="../scripts/analytics.js"></script>
     </body>

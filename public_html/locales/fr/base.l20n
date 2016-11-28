@@ -15,7 +15,7 @@
 <inter "International">
 <engagement "Engagement">
 <no "Non">
-<yes "Yes">
+<yes "Oui">
 <and "et">
 <tarif "Tarif">
 <otherClients "Autres clients">
@@ -91,6 +91,10 @@ Langage<span class="icon-right-arrow"></span>
 <volume "Volume">
 <ipAdress "Adresse IP">
 <phone "Téléphone">
+<com "Commercial">
+<compta "Comptabilité">
+<boutique "Nos boutiques">
+<openHours "Heures d'ouverture">
 <searchMenuButton "Affiner votre recherche">
 <modem {
 singular: "modem",
@@ -141,26 +145,31 @@ Mobile <span class="icon-right-arrow"></span>
 <menuLinkPrivate "Particuliers">
 <menuLinkBusiness "Business">
 <menuLinkNotice "Mentions légales">
+<tarifDSL "Tarifs DSL/FIBER">
 <menuLinkTarifs """
-<span class="icon icon-calculator-ico"></span>Tarifs DSL/FIBER
+<span class="icon icon-calculator-ico"></span>{{menuLinkTarifs}}
 """>
 <menuLinkParrainage """
 <span class="icon icon-parrainage-ico"></span>{{parrainage}}
 """>
+<am "Répondeur">
 <menuLinkRepondeur """
 <span class="icon icon-repondeur-icone"></span>Répondeur
 """>
+<linkFin "Options de financement">
 <menuLinkFin """
-<span class="icon icon-pig-ico"></span>Options de financement
+<span class="icon icon-pig-ico"></span>{{linkFin}}
 """>
+<tarifDetails "Nos tarifs détaillés">
 <menuLinkTarifsDetails """
-<span class="icon icon-calculator-ico"></span>Nos tarifs détaillés
+<span class="icon icon-calculator-ico"></span>{{tarifDetails}}
 """>
 <menuLinkTvChannels """
 <span class="icon icon-tv-ico"></span>Liste des chaînes
 """>
+<doc "Documents">
 <menuLinkDoc """
-<span class="icon icon-document-ico"></span>Documents
+<span class="icon icon-document-ico"></span>{{doc}}
 """>
 <knowMore "En savoir plus">
 
@@ -1167,4 +1176,319 @@ Malheureusement la technologie fibre optique n'est pas disponible à votre adres
 <promoFibre1OfferPrice """
 <div class="price blue">89€</div>
 <div class="label blue">de remise</div>
+""">
+/*---------------------------DIVERS/EMPLOI.HTML-------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<diversEmploiMetaTitle "Offres d’emploi – Luxembourg Online">
+<diversEmploiMetaDesc """
+content="Vous êtes à la recherche d’un emploi à Luxembourg? Le domaine des télécoms vous intéresse? 
+              Consultez nos offres d’emploi actuelles ou envoyez votre candidature spontanée."
+""">
+<diversEmploiMetaKeywords """
+content="offre emploi Luxembourg, stage Luxembourg, postuler au Luxembourg, offres emploi télécommunications"
+""">
+/*----------------------------------------------------------------------------*/
+<diversEmploiTitle """
+Offres <b>d'emploi
+""">
+<diversEmploiDesc """
+Vous êtes motivé et à la recherche d'un nouveau challenge ?<br>Consultez nos offres d'emploi et rejoignez nos équipes jeunes et dynamiques.
+""">
+<diversEmploiadmTitle "Administratif">
+<diversEmploiAdmPdf1 """
+<a href="../documents/emploi/LOL-2016-003.pdf" target="_blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Un comptable (m/f)</div>
+                                        </a>
+""">
+<diversEmploiAdmPdf2 """
+<a href="../documents/emploi/LOL-2016-002.pdf" target="_blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Un contrôleur de gestion (m/f)</div>
+                                        </a>
+""">
+<diversEmploiAdmPdf3 """
+<a href="../documents/emploi/Stagiaire_comptable.pdf" target="blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Un stagiaire en comptabilité (m/f)</div>
+                                        </a>
+""">
+<diversEmploiAdmPdf4 """
+<a href="../documents/emploi/Stagiaire_controleur_de_gestion.pdf" target="blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Un stagiaire en controleur de gestion (m/f)</div>
+                                        </a>
+""">
+<diversEmploiAdmPdf5 """
+    <a href="../documents/emploi/Stagiaire_rh.pdf" target="blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Un stagiaire en ressources humaines (m/f)</div>
+                                        </a>
+""">
+<diversEmploiComTitle "Commercial">
+<diversEmploiComPdf1 """
+<a href="../documents/emploi/LOL-2015-10-001.pdf" target="blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Un commercial (m/f)</div>
+                                        </a>
+""">
+<diversEmploiComPdf2 """
+<a href="../documents/emploi/Stagiaire_commercial.pdf" target="blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Un stagiaire dans le domaine du<span> commercial (m/f)</span></div>
+                                        </a>
+""">
+<diversEmploiHelpTitle "Helpdesk">
+<diversEmploiHelpPdf1 """
+<a href="../documents/emploi/LOL-2015-10-003.pdf" target="blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Un collaborateur helpdesk (m/f)</div>
+                                        </a>
+""">
+<diversEmploiInfoTitle "Informatique">
+<diversEmploiInfoPdf1 """
+<a href="../documents/emploi/LOL-2015-008.pdf" target="blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Un ingénieur informatique <span>conception/développement (m/f)</span></div>
+                                        </a>
+""">
+<diversEmploiInfoPdf2 """
+<a href="../documents/emploi/LOL-2015-10-005.pdf" target="blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Un informaticien (m/f)</div>
+                                        </a>
+""">
+<diversEmploiInfoPdf3 """
+<a href="../documents/emploi/Stagiaires_informatique.pdf" target="blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Des stagiaires en informatique (m/f)</div>
+                                        </a>
+""">
+<diversEmploiMarkTitle "Marketing / Communication">
+<diversEmploiMarkPdf1 """
+<a href="../documents/emploi/Stagiaire_marketing.pdf" target="blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Un stagiaire en <span>marketing/communication (m/f)</span></div>
+                                        </a>
+""">
+<diversEmploiMarkPdf2 """
+<a href="../documents/emploi/Stagiaire_redactionnelle.pdf" target="blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Un stagiaire <span>documentation et rédaction (m/f)</span></div>
+                                        </a>
+""">
+<diversEmploiOtherTitle "Autres">
+<diversEmploiOtherPdf1 """
+<a href="../documents/emploi/Technicien_support_informatique.pdf" target="blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Un technicien support informatique (m/f)</div>
+                                        </a>
+""">
+<diversEmploiCanTitle """
+<span class="extra-bold">Candidature</span> spontanée ?
+""">
+<diversEmploiCanDesc """
+Si vous souhaitez rejoindre notre entreprise, merci de nous faire parvenir votre dossier de candidature (CV et lettre de motivation)
+                                à l'adresse suivante : <span class="bold">emploi@internet.lu</span>
+""">
+<diversEmploiCanLink "Envoyez votre candidature">
+/*---------------------------DIVERS/BROCHURE.HTML-----------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<diversBrochMetaTitle "Brochure – Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<diversBrochTitle """
+Notre <span class="bold">brochure</span>
+""">
+<diversBrochDesc "Vous souhaitez connaître nos offres ? Consultez ci-dessous notre brochure en ligne ou n'hésitez pas à vous le procurer directement
+                                en boutique.">
+<diversBrochMetaDesc """
+content="Vous êtes intéressé par une de nos offres ou vous désirez en savoir plus sur nos produits ? Contactez-nous par téléphone ou par email, ou complétez notre formulaire en ligne. "
+""">
+/*----------------------------DIVERS/CONTACT.HTML-----------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<diversConMetaTitle "Contact – Luxembourg Online ">
+<diversConMetaDesc """
+content="Vous êtes intéressé par une de nos offres ou vous désirez en savoir plus sur nos produits ? Contactez-nous par téléphone ou par email, ou complétez notre formulaire en ligne. "
+""">
+/*----------------------------------------------------------------------------*/
+<diversConTitle """
+Besoin de <span class="bold">nous contacter ?</span>
+""">
+<diversConDesc "Nos équipes sont à votre service afin de vous conseiller et répondre à toutes vos questions. Pour cela, contactez-nous par téléphone ou par e-mail,
+                                ou complétez le formulaire ci-dessous.">
+<diversConLuxOpenHourData """
+<li class="extra-bold">{{openHours}} : </li>
+                                        <li>Lu-Ve: 9h30 - 18h30</li>
+                                        <li>Sa: 9h00 - 18h00</li>
+""">
+<diversConDudOpenHourData """
+<li class="extra-bold">Heures d'ouverture : </li>
+                                        <li>Lu: 13h00 - 18h00</li>
+                                        <li>Ma-Sa: 10h00 - 18h00</li>
+""">
+<diversConFormTitle "Formulaire de contact">
+<diversConFormSubTitle "Vos coordonnées">
+<diversConFormAttr1 "Êtes-vous client chez Luxembourg Online?">
+<diversConFormAttr2 "Nom">
+<diversConFormAttr3 "Prénom">
+<diversConFormAttr4 "Adresse">
+<diversConFormAttr5 "Localité">
+<diversConFormAttr6 "Mobile">
+<diversConFormAttr7 "Joindre un fichier">
+<diversConFormAttr7Details "3 fichiers maximum">
+<required "*Obligatoire">
+<diversConFormSubTitle2 "Votre demande">
+<diversConFormAttr8 "Objet">
+<diversConFormObj1 "-- Sélectionnez un objet --">
+<diversConFormObj2 "Demande d'informations commerciales">
+<diversConFormObj3 "Demande identifiants mail">
+<diversConFormObj4 "Suivi de commande">
+<diversConFormObj5 "Question technique">
+<diversConFormObj6 "Facturation">
+<diversConFormObj7 "Candidature">
+<diversConFormObj8 "diversConFormObj8">
+<diversConFormAttr9 """
+Message <span style="font-size: 0.7em;">(240 caractères max.)</span><span class="red">*</span>
+""">
+<diversConFormSend "Envoyer">
+<diversConAdm """
+<div class="title extra-bold">Administration :</div>
+                        <ul>
+                            <li><span class="extra-bold">Adresse :</span> 14, av. du X Septembre | L-2550 Luxembourg</li>
+                            <li><span class="extra-bold">Fax :</span> 2799 3555 (commercial) | 45 93 34 (comptabilité)</li>
+                        </ul>
+""">
+/*-----------------------------DIVERS/PROPOS.HTML-----------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<diversPropMetaTitle "A propos – Luxembourg Online">
+<diversPropMetaDesc """
+content="Spécialiste de l’Internet, la téléphonie, TV, mobile et Cloud, Luxembourg Online est l’un des principaux opérateurs de télécommunications à Luxembourg."
+""">
+<diversPropMetaKeys """
+content="Telecom Luxembourg, operateur telecom, fournisseur accès Internet, Luxembourg Online"
+""">
+/*----------------------------------------------------------------------------*/
+<diversPropTitle """
+À propos de <b>Luxembourg Online</b>
+""">
+<diversPropDesc """
+Découvrez notre histoire. <br>Depuis plus de 20 ans, la satisfaction de nos clients est une priorité. C'est d'ailleurs là une de nos valeurs essentielles.
+""">
+<diversProp20Title "20 ans">
+<diversProp20Desc """
+<p>Luxembourg Online, <span>fondé en 1995,</span> est l'un des principaux opérateurs luxembourgeois de télécommunications. Spécialisé dans la
+                                fourniture d'accès Internet, la téléphonie fixe, mobile, la télévision, le développement de réseaux et d'applications informatiques, Luxembourg Online est
+                                un expert dans le domaine des télécoms depuis plus de 20 ans.</p>
+                            <p>Société luxembourgeoise à <span>100% privée, </span>Luxembourg Online dispose d'un effectif de plus de 100 collaborateurs, répartis sur 4 sites dans le pays. </p>
+                            <p>A ce jour plus de<span> 30 000 clients </span>privés et professionnels accordent leur confiance à Luxembourg Online.</p> 
+""">
+<diversPropNetTitle "Un réseau important">
+<diversPropNetDesc """
+    <p>Depuis sa création, Luxembourg Online s'est donné pour principal objectif de fournir la connexion Internet la plus performante possible à ses clients.</p>
+                            <p>Pour ce faire, la société a réalisé des investissements massifs en termes d'infrastructures Internet, notamment pour le
+                                déploiement de la <span>fibre optique</span>. Ainsi, Luxembourg Online dispose de <span>son propre réseau</span> Internet au Grand-Duché et couvre la 
+                                quasi totalité du pays.</p>
+                            <a class="btn-outline-white" style="text-transform: initial;" target="blank" href="../documents/Reseau_Fibre_Luxembourg_Online.pdf">Voir la carte du réseau</a>
+""">
+<diversPropValueTitle "Nos valeurs">
+<diversPropValueDesc """
+<p>Luxembourg Online est une société fortement ancrée dans le paysage luxembourgeois. Fondée il y a plus de 20 ans, elle constitue le 2<span class="exponent">ème</span>
+                                opérateur télécoms le plus ancien du Grand-Duché.</p>
+                            <p>L'élaboration et le respect de valeurs propres à l'entreprise est un élément essentiel à sa pérennité.</p>        
+""">
+<diversPropSatTitle "Satisfaction client">
+<diversPropSatDesc """
+<p>Parce que ce sont les clients qui permettent à Luxembourg Online d'exister depuis plus de 20 ans, la société s'attache à les conserver et à les <span>satisfaire</span>. En mettant à leur disposition un <span>helpdesk multilingue</span> disponible 6/7j et un <span>service commercial dédié,</span> Luxembourg Online
+                                s'assure de leur suivi et de leur satisfaction.</p>
+""">
+<diversPropIndTitle "Indépendance">
+<diversPropIndTitleDesc """
+<p>Luxembourg Online dispose de son <span>propre réseau</span> Internet à Luxembourg et assure de manière <span>autonome</span> le développement, la commercialisation
+                                et le suivi de l'ensemble de ses produits et services.</p>
+""">
+<diversPropExpTitle "Expertise">
+<diversPropExpDesc """
+<p>Luxembourg Online a été <span>l'un des précurseurs</span> en matière d'accès Internet au Grand-Duché, ses équipes sont ainsi parfaitement formées aux spécificités et à l'évolution des technologies télécoms sur le marché luxembourgeois.</p>
+""">
+<diversPropDataTitle "Gestion des données">
+<diversPropDataDesc """
+<p>Parce que la gestion des données est devenue une priorité avec l'apparition des nouvelles technologies, Luxembourg Online s'engage <span>à ne pas utiliser, diffuser ou vendre les données personnelles</span> de ses clients sans leur consentement explicite.</p>
+""">
+<diversPropHistTitle "Notre historique">
+<diversPropHistStep1 "Lancement de l'inscription en ligne.">
+<diversPropHistStep2 "Lancement du service LOLVISIO.">
+<diversPropHistStep3 "Luxembourg Online fête ses 20 ans !">
+<diversPropHistStep4 "Lancement du dégroupage en fibre optique.">
+<diversPropHistStep5 "Lancement du service LOLTV, la solution de télévision par IP.">
+<diversPropHistStep6 "Obtention de la licence UMTS.">
+<diversPropHistStep7 "Lancement du service de téléphonie mobile LOLMOBILE.">
+<diversPropHistStep8 "Lancement du service de téléphonie via Internet.">
+<diversPropHistStep9 "Lancement du service de préselection téléphonique Luxembourg Online pour téléphoner moins cher.">
+<diversPropHistStep10 "Lancement de l'accès Internet haut-débit.">
+<diversPropHistStep11 "Lancement de l'accès Internet par le câble de télévision.">
+<diversPropHistStep12 "Obtention de la licence A.">
+<diversPropHistStep13 "Lancement des forfaits Internet sous forme de packages (Internet \"free free\").">
+<diversPropHistStep14 "Lancement de l'accès Internet gratuit à une échelle nationale.">
+<diversPropHistStep15 "Lancement de sa plateforme de commerce électronique.">
+<diversPropHistStep16 "Création de Luxembourg Online.">
+/*-----------------------------DIVERS/PLAN.HTML-------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<diversPlanMetaTitle "Plan - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<diversPlanTitle "Plan du site Luxembourg Online">
+<diversPlanSubTitle1 "Internet">
+<diversPlanSubTitle2 "Téléphonie">
+<diversPlanSubTitle3 "Mobile">
+<diversPlanSubTitle4 "Divers">
+<diversPlanSubTitle5 "Nos autres sites">
+<diversPlanLink1 "Site business">
+/*-----------------------DIVERS/Assistance.HTML-------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<diversAssMetaTitle "Assistance - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<diversAssTitle """
+Bienvenue sur l'<span class="bold">assistance Luxembourg Online</span>
+""">
+<diversAssInfo1 """
+<b>Nos coordonnées</b>
+                    <div>
+                        <ul class="emailPara2">
+                            <li><span>nos adresses,</span></li>
+                            <li><span>notre numéro de téléphone</span></li>
+                            <li><span>et notre numéro de fax.</span></li>                            
+                        </ul>
+                        <p>Vous pouvez visualiser ces informations directement sur Internet.lu, rubrique Contact.</p>
+                    </div>
+""">
+<diversAssInfo2 """
+<b>Votre adresse</b>
+                    <div>                        
+                        <p>Cette adresse postale est votre adresse de facturation. Elle peut être différente de l'adresse d'installation.</p>
+                    </div>
+""">
+<diversAssInfo3 """
+<b>Détails de votre facture</b>
+                    <div>
+                        <p>Dans cet espace, vous retrouvez :</p>
+                        <ul class="emailPara2">
+                            <li><span>le numéro de facture,</span></li>
+                            <li><span>le descriptif et le montant de vos abonnements,</span></li>
+                            <li><span>le détail de vos consommations,</span></li>
+                            <li><span>Le montant total de la facture.</span></li>
+                        </ul>
+                        <p>Les consommations du mois précédent sont prises en compte pour la facture du mois en cours. Toutes ces infos sont disponibles dans votre Espace client.</p>
+                    </div>
+""">
+<diversAssInfo4 """
+<b>Informations supplémentaires</b>                    
+                    <div>
+                        <p>Cette partie contient :</p>
+                        <ul class="emailPara2">
+                            <li><span>le mode de facturation,</span></li>
+                            <li><span>la date de prélèvement (en cas de domiciliation),</span></li>
+                            <li><span>et d'autres informations concernant le paiement.</span></li>                            
+                        </ul>                        
+                    </div>
+""">
+<diversAssInfo5 """
+<b>Informations supplémentaires</b>                    
+                    <div>
+                        <p>Il s'agit ici des différents comptes bancaires de Luxembourg Online sur lesquels vous pouvez effectuer vos virements.</p>                                              
+                    </div>
+""">
+<diversAssGuideTitle "Guide d'installation et d'assistance">
+<diversAssGuideLink1 """
+href="../documents/guides/guide-assistance-technique.pdf"
+""">
+<diversAssGuideTechAss """
+<h3>Guide d'assistance technique</h3><a class="link-assistance" {{diversAssGuideLink1}} target="_blank">Télécharger</a>
+""">
+<diversAssGuideLink2 """
+<h3>Fritz!Box (ADSL)</h3><a class="link-assistance" href="../documents/guides/Guide_ADSL_A5_BD.pdf" target="_blank">Télécharger</a>
 """>

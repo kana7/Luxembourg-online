@@ -2971,8 +2971,11 @@ header {
   margin-right: 30px; }
   .logo img {
     width: auto;
-    height: 100%;
-    max-height: 44px; }
+    height: 100%; }
+  .logo.noel img {
+    height: 50px;
+    position: relative;
+    bottom: 10px; }
 
 #slider {
   display: block;
@@ -3152,7 +3155,7 @@ header {
     #services .service#lolnow {
       background-image: url(../../images/Homepage/OFFRES/Option_NOW_296x233px.jpg); }
     #services .service#mobiles {
-      background-image: url(../../images/Homepage/OFFRES/Bonnes_Fetes_296x233px.jpg); }
+      background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_Europe_296x233px.jpg); }
     #services .service#installation {
       background-image: url(../../images/Homepage/OFFRES/LOLTV_296x233px.jpg); }
     #services .service#dispo {
@@ -7025,7 +7028,7 @@ h2.contact-title {
     #services .service#lolnow {
       background-image: url(../../images/Homepage/OFFRES/Option_NOW_288x392px.jpg); }
     #services .service#mobiles {
-      background-image: url(../../images/Homepage/OFFRES/Bonnes_Fetes_288x392px.jpg); }
+      background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_Europe_288x392px.jpg); }
     #services .service#installation {
       background-image: url(../../images/Homepage/OFFRES/LOLTV_288x392px.jpg); }
 
@@ -7330,7 +7333,9 @@ h2.contact-title {
     .logo.noel {
       bottom: 19px; }
       .logo.noel img {
-        max-height: 75px; }
+        max-height: 75px;
+        bottom: 0;
+        height: 100%; }
 
   #mobileType .flickity-prev-next-button {
     height: 35px; }
@@ -7461,7 +7466,7 @@ h2.contact-title {
     #services .service#lolnow {
       background-image: url(../../images/Homepage/OFFRES/Option_NOW_240x327px.jpg); }
     #services .service#mobiles {
-      background-image: url(../../images/Homepage/OFFRES/Bonnes_Fetes_240x327px.jpg); }
+      background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_Europe_240x327px.jpg); }
     #services .service#installation {
       background-image: url(../../images/Homepage/OFFRES/LOLTV_240x327px.jpg); }
     #services .service .infos {
@@ -7997,7 +8002,7 @@ h2.contact-title {
   #services .service#lolnow {
     background-image: url(../../images/Homepage/OFFRES/Option_NOW_320x437px.jpg); }
   #services .service#mobiles {
-    background-image: url(../../images/Homepage/OFFRES/Bonnes_Fetes_320x437px.jpg); }
+    background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_Europe_320x437px.jpg); }
   #services .service#installation {
     background-image: url(../../images/Homepage/OFFRES/LOLTV_320x437px.jpg); }
   #services .service .infos {

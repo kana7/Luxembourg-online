@@ -79,7 +79,7 @@ Langage<span class="icon-right-arrow"></span>
 <footNoteInternetOffer5 "Prix promo. Après 6 mois: LOLDSL 24 à 34,90€, LOLFIBER 100 à 54,90€. ">
 <footNoteInternetOffer6 "Valable uniquement en combinaison avec un abonnement Internet Luxembourg Online">
 <gratis "gratuit">
-<mondaySaturday "Lu-Sa:">
+<mondaySaturday "Lu-Sa: 9h00-18h00">
 <parrainage "Bon de parrainage">
 <installation "Installation">
 <illimited "illimité">
@@ -147,7 +147,7 @@ Mobile <span class="icon-right-arrow"></span>
 <menuLinkNotice "Mentions légales">
 <tarifDSL "Tarifs DSL/FIBER">
 <menuLinkTarifs """
-<span class="icon icon-calculator-ico"></span>{{menuLinkTarifs}}
+<span class="icon icon-calculator-ico"></span>{{tarifDSL}}
 """>
 <menuLinkParrainage """
 <span class="icon icon-parrainage-ico"></span>{{parrainage}}
@@ -337,11 +337,11 @@ Nos tarifs <span class="bold">détaillés</span>
 <internetTarifsDesc "Consultez ci-dessous l'intégralité de nos tarifs Internet.">
 /*----------------------------------------------------------------------------*/
 /*--------------------------------TABLEAU-------------------------------------*/
+<internetTarifsFibre "Fibre/vdsl">
 <internetTarifsDataZone "Téléphonie nationale fixe illimitée">
 <internetTarifsDataZone1 "Appels illimités vers mobiles LOL">
 <internetTarifsDataZone2 "EU 120 (120 minutes vers l’Europe fixe)">
 <internetTarifsDataActiveService "Activation du service">
-<internetTarifsDataInstall "Activation du service">
 <internetTarifsDataModem "Modem de base">
 <internetTarifsDataAboTel "{{abo}} téléphonique">
 <internetTarifsDataAboIsdn "{{abo}} ligne ISDN">
@@ -413,7 +413,7 @@ Nous mettons tout en oeuvre pour vous proposer une vitesse de qualité optimale.
                                     <a href="../divers/contact.html#form" target="blank_">contactez-nous</a>. Notre service Helpdesk vous
                                     apportera toute l'aide dont vous avez besoin.
 """>
-<internetFaqQ2 "Que signifient « upstream » (débit montant) », « downstream » (débit descendant) et Mbit/s ?">
+<internetFaqQ2 "Que signifient « upstream » (débit montant), « downstream » (débit descendant) et Mbit/s ?">
 <internetFaqQ2A """
 « Upstream » (ou débit montant) correspond à la vitesse à laquelle les données sont envoyées de votre ordinateur
                                     vers Internet, c'est-à-dire à votre vitesse d’envoi.<br/>

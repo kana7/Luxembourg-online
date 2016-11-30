@@ -5981,8 +5981,7 @@ h2.contact-title {
       margin: 0;
       display: block; }
     .header-dropdown .drop a {
-      display: block;
-      padding: 9px 10px 8px; }
+      display: block; }
     .header-dropdown .drop.is-visible {
       display: block; }
 

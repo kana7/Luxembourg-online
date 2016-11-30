@@ -65,9 +65,12 @@ $(function () {
         $('#languageSelector').find('a').on('click', function () {
             var lang = $(this).attr('data-lang');
             document.l10n.requestLocales(String(lang));
+            if($('.footer-note').length>0){
+                $('.footer-note').footerNote('render');
+            }
         });
     }
-});
+        });
 
 function getURLParameter(name) {
     return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;

@@ -97,7 +97,7 @@ var offers = {
     },
     100: {
         name: "Fiber 100",
-        description: "<span data-l10n-id='heartHit'>Offre coup de </span><span class='icon-heart-ico'></span>",
+        description: "<span data-l10n-id='heartHit'></span><span class='icon-heart-ico'></span>",
         download: "100 Mbit/s",
         upload: "50 Mbits/s",
         price: {
@@ -108,7 +108,7 @@ var offers = {
     },
     200: {
         name: "Fiber 200",
-        description: "<span data-l10n-data='getBest'>Exigez le meilleur</span>",
+        description: "<span data-l10n-id='getBest'></span>",
         download: "200 Mbit/s",
         upload: "100 Mbits/s",
         price: {
@@ -119,7 +119,7 @@ var offers = {
     },
     double: {
         name: "Fiber </span><span style='text-decoration: line-through; font-size: 0.9em;'> 100 </span> 200",
-        description: "<span data-l10n-id='promoSpeed'>PROMO : LA VITESSE x2</span>",
+        description: "<span data-l10n-id='promoSpeed'></span>",
         download: "</span><span style='text-decoration: line-through; font-size: 0.9em;'> 100 </span><span class='orange'>200 Mbit/s</span>",
         upload: "</span><span style='text-decoration: line-through; font-size: 0.9em;'> 50 </span>&nbsp;&nbsp;<span class='orange'>100 Mbit/s</span>",
         price: {
@@ -156,13 +156,13 @@ function printOffer(offer) {
             '<li class="info" data-fnote="[0]"><span class="icon-download-ico download"></span>' + offer.download + '</li>' +
             '<li class="info" data-fnote="[0]"><span class="icon-download-ico upload"></span>' + offer.upload + '</li>' +
             '<li class="check-list-container">' +
-            '<div class="check-list-title"><span class="icon-pack-ico"></span> <span data-l10n-id="packInclude">Inclus dans ce pack :</span> </div>' +
+            '<div class="check-list-title"><span class="icon-pack-ico"></span><span data-l10n-id="packInclude"></span></div>' +
             '<ul class="check-list">' +
-            '<li><span class="icon-check-ico"></span>Volume illimité</li>' +
-            '<li><span class="icon-check-ico"></span>Abonnement tél. fixe</li>' +
-            '<li data-fnote="[1]"><span class="icon-check-ico"></span>Appels nat. fixes</li>' +
-            '<li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>' +
-            '<li data-fnote="[1,2]"><span class="icon-check-ico"></span>120 min vers l\'Europe fixe</li>' +
+            '<li><span class="icon-check-ico"></span><span data-l10n-id="volUnlimited"></span></li>' +
+            '<li><span class="icon-check-ico"></span><span data-l10n-id="aboTel"></span></li>' +
+            '<li data-fnote="[1]"><span class="icon-check-ico"></span><span data-l10n-id="natCall"></span></li>' +
+            '<li><span class="icon-check-ico"></span><span data-l10n-id="internetTarifsDataLolCall"></span></li>' +
+            '<li data-fnote="[1,2]"><span class="icon-check-ico"></span><span data-l10n-id="euFixe"></span></li>' +
             '<li><span class="icon-check-ico"></span>LOL CLOUD 5GB</li>' +
             '<li><span class="icon-check-ico"></span><a href="lolnow.html">LOLNOW</a></li>' +
             '</ul>' +
@@ -466,6 +466,8 @@ function checkDispo(homeId, isLOLCable) {
                 $('.footer-note').footerNote('render');
                 /*Cookies.remove('shop_idhome');
                  Cookies.set('shop_idhome', homeId, {expires: 1});*/
+                console.log('traduction');
+                document.l10n.requestLocales(document.l10n.supportedLocales[0]);
             }, error: function (jqXHR, textStatus, errorThrown) {
                 console.log('jqXHR:');
                 console.log(jqXHR);

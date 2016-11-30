@@ -21,7 +21,7 @@
 
     // Create the plugin constructor
     function Plugin(element, options) {
-
+        
         this._name = pluginName;
         this.element = element;
         this._defaults = $.fn.footerNote.defaults;
@@ -96,6 +96,9 @@
                     footContainer.append('<li><span>(' + (index + 1) + ')</span>' + value + '</li>');
                 }
             });
+        },
+        coucou: function(){
+            alert('coucou');
         },
         callback: function () {
             // Cache onComplete option

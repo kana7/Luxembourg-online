@@ -5528,7 +5528,7 @@ a.promos-link:hover {
   font-size: 18px;
   color: #004994;
   padding-right: 5px; }
-  .bottom-link span {
+  .bottom-link span:not([data-l10n-id]) {
     position: relative;
     top: 2px;
     font-size: 16px; }
@@ -7596,7 +7596,7 @@ h2.contact-title {
     margin: 18px 0;
     font-size: 19px;
     padding-right: 5px; }
-    .bottom-link span {
+    .bottom-link span:not([data-l10n-id]) {
       top: 2px;
       font-size: 17px; }
 

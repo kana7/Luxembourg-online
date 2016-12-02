@@ -791,7 +791,7 @@
         margin: 18px 0;
         font-size: 19px;
         padding-right: 5px;
-        span{
+        span:not([data-l10n-id]){
             top: 2px;
             font-size: 17px;
         }

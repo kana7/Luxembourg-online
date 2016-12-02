@@ -852,7 +852,32 @@ Vous<br>êtes<br>en
 <mobileGearMetaTitle "Mobile : Nos Mobiles - Luxembourg Online">
 <mobileGearMetaDesc "Mobile : Nos Mobiles - Luxembourg Online">
 /*----------------------------------------------------------------------------*/
+<mobileGearTitle1 "Principal">
+<mobileGearTitle2 "&Eacutecran">
+<mobileGearTitle3 "Cam&eacute;ra">
+<mobileGearTitle4 "Connectivit&eacute">
+<mobileGearTitle5 "M&eacute;moire">
+<mobileGearTitle6 "Processeurs">
 <mobileGearLabel1 "Taille:">
+<mobileGearLabel2 "Poids:">
+<mobileGearLabel3 "Carte SIM:">
+<mobileGearLabel4 "OS:">
+<mobileGearLabel5 "Couleurs:">
+<mobileGearLabel6 "Diagonale:">
+<mobileGearLabel7 "R&eacute;solution:">
+<mobileGearLabel8 "Type:">
+<mobileGearLabel9 "Primaire:">
+<mobileGearLabel10 "Secondaire:">
+<mobileGearLabel11 "Vid&eacute;o:">
+<mobileGearLabel12 "Wi-fi:">
+<mobileGearLabel13 "Bluetooth:">
+<mobileGearLabel14 "GPS:">
+<mobileGearLabel15 "Vive:">
+<mobileGearLabel16 "Interne:">
+<mobileGearLabel17 "Carte ext.:">
+<mobileGearLabel18 "CPU:">
+<mobileGearLabel19 "GPU:">
+<mobileGearLabel20 "Chipset:">
 /*------------------------------INTERNET/ABO.HTML-----------------------------*/
 /*-----------------------------------META-------------------------------------*/
 <tvAboMetaTitle "TV : Abonnement  - Luxembourg Online">
@@ -1079,7 +1104,7 @@ Oui, cela est tout à fait possible. Pour plus d'information, <a href="../divers
 """>
 <telFaqQ2 "Puis-je dévier des appels reçus sur ma ligne fixe vers un autre numéro ?">
 <telFaqQ2A """
-Oui, ce service est disponible.<br /> Pour cela, il vous suffit de vous connectez à votre
+Oui, ce service est disponible.<br /> Pour cela, il vous suffit de vous connecter à votre
                                     <a href="#" class="openPopup" data-popup="0"><strong>Espace client</strong></a> et de cliquez sur "<strong>Mon compte</strong>". Entrez ensuite vos identifiants dans les champs correspondants et cliquez sur "<strong>se connecter</strong>".<br/>
                                     Une fois ceci fait, suivez les étapes suivantes :<br/>
                                     1. Sélectionnez Mes abonnements, puis cliquez sur Configurer.<br/>
@@ -1128,6 +1153,8 @@ Alliant simplicité et modernité, le téléphone <span class="extra-bold">LOL</
 <telVisioTarifDesc """
 Le téléphone <span class="bold">LOL</span>VISIO est très facile d'utilisation et conviendra à tous.<br/> Pour passer un appel audio ou vidéo, rien de plus simple : vous composez le numéro et décrochez le combiné. Le tour est joué ! Découvrez notre vidéo de démonstration ci-contre et n'hésitez pas à venir le tester en boutique.
 """>
+<telVisioVideoTitle """<strong>Un téléphone simple et pratique</strong>""">
+<telVisioVideoDesc """Le téléphone <span class="bold">LOL</span>VISIO est très facile d'utilisation et conviendra à tous.<br/> Pour passer un appel audio ou vidéo, rien de plus simple : vous composez le numéro et décrochez le combiné. Le tour est joué ! Découvrez notre vidéo de démonstration ci-contre et n'hésitez pas à venir le tester en boutique.""">
 <telVisioOfferTitle """
 N'attendez plus, appelez-nous au <br/><span style="font-size: 1.6em; line-height: 60px;">2799 0000</span><br/>pour plus d'informations !
 """>
@@ -1140,6 +1167,87 @@ Appels vers <strong>mobiles LOL illimités</strong>
 <telVisioOfferTable3 """
 <strong>120 minutes</strong> vers les fixes d'Europe<span class="exponent">(2)</span>
 """>
+/*--------------------------TEL/REPONDEUR.HTML--------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<phoneAmMetaTitle "Téléphonie : Répondeur - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<phoneAmTitle "Service <b>répondeur</b>">
+<phoneAmDesc "Découvrez ci-dessous notre service répondeur. Disponible pour tous les clients possédant une ligne téléphonique Luxembourg Online, il mettra a votre disposition de nombreuses fonctionnalités.">
+<phoneAmContent """
+<p>Ce service <strong>entièrement gratuit</strong> laisse la possibilité à vos correspondants de vous laisser un message 
+                                lorsque vous n'êtes pas disponible.</p>
+                            <ul>
+                                <li>- Vous recevez un e-mail dès qu'un message est déposé sur votre boîte vocale.</li>
+                                <li>- Le message se trouve en pièce jointe avec cet e-mail en format audio.</li>
+                                <li>- Vous pouvez consulter et gérer vos message à distance.</li>
+                            </ul>                            
+                            <p>Que vous soyez en vacances ou en déplacement, votre répondeur est accessible partout et à tout moment.</p>
+                            <p><strong>Avec le service répondeur gratuit de Luxembourg Online, vivez la mobilité sans souci !</strong></p>
+                            <div class="btn-container">
+                                <a class="btn-outline-white" href="../documents/Manuel-repondeur.pdf" target="blank_">Guide d'utilisation</a>
+                            </div>
+""">
+/*-----------------------------TEL/TARIFS.HTML--------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<phoneTarifsMetaTitle "Téléphonie : Nos tarifs – Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<phoneTarifsTitle """Communiquez<br/> en toute tranquillité !""">
+<phoneTarifsDesc """Abonnement de téléphonie fixe<br/><strong>inclus dans votre forfait Internet!</strong>""">
+<phoneTarifsTableTitle "Détail des communications hors forfaits :">
+<phoneTarifsTableHeader1 "Type d'appel">
+<phoneTarifsTableHeader2 "Heures pleines">
+<phoneTarifsTableHeader3 "Heures creuses">
+<phoneTarifsTableFixed "National fixe">
+<phoneTarifsTableMobile "National mobile">
+<phoneTarifsLink "Consultez la liste des tarifs à l'international">
+<phoneTarifsTableFoot1 "Heures pleines : Lundi à vendredi de 8h00 à 19h00">
+<phoneTarifsTableFoot2 "Heures creuses : Lundi à vendredi de 19h00 à 8h00  l  Weekends et jours fériés">
+<phoneTarifsLink1 "Pour connaître les anciennes tarifications, consultez la liste des prix">
+/*---------------------------TEL/EQUIPEMENTS.HTML-----------------------------*/
+<phoneGearT201Desc "Téléphone numérique sans fil DECT">
+<phoneGearT201Config """
+<li><div class="info">- Répertoire pour 50 noms et numéros</div></li>
+<li><div class="info">- Mode ECO</div></li>
+<li><div class="info">- Afficheur rétro-éclairé</div></li>
+<li><div class="info">- Téléphone mains-libres via haut-parleur</div></li>
+<li><div class="info">- 20 noms et numéros d'appelants</div></li>
+<li><div class="info">- Interphone / Transfert d'appel entre combinés</div></li>
+<li><div class="info">- Mémoire pour 10 numéros appelés</div></li>
+<li><div class="info">- Jusqu'à 10 hrs de parole / 200 hrs de veille (valeurs approx.)</div></li>
+""">
+<phoneGearT202Desc "Pack Duo : 2 x Téléphone numérique sans fil DECT">
+<phoneGearT202Config """
+<li><div class="info">- Répertoire pour 50 noms et numéros</div></li>
+                                                        <li><div class="info">- Mode ECO</div></li>
+                                                        <li><div class="info">- Afficheur rétro-éclairé</div></li>
+                                                        <li><div class="info">- Téléphone mains-libres via haut-parleur</div></li>
+                                                        <li><div class="info">- 20 noms et numéros d'appelants</div></li>
+                                                        <li><div class="info">- Interphone / Transfert d'appel entre combinés</div></li>
+                                                        <li><div class="info">- Mémoire pour 10 numéros appelés</div></li>
+                                                        <li><div class="info">- Jusqu'à 10 hrs de parole / 200 hrs de veille (valeurs approx.)</div></li>
+""">
+<phoneGearT203Desc "Pack Trio : 3 x Téléphone numérique sans fil DECT">
+<phoneGearT203Config """
+<li><div class="info">- Répertoire pour 50 noms et numéros</div></li>
+                                                        <li><div class="info">- Mode ECO</div></li>
+                                                        <li><div class="info">- Afficheur rétro-éclairé</div></li>
+                                                        <li><div class="info">- Téléphone mains-libres via haut-parleur</div></li>
+                                                        <li><div class="info">- 20 noms et numéros d'appelants</div></li>
+                                                        <li><div class="info">- Interphone / Transfert d'appel entre combinés</div></li>
+                                                        <li><div class="info">- Mémoire pour 10 numéros appelés</div></li>
+                                                        <li><div class="info">- Jusqu'à 10 hrs de parole / 200 hrs de veille (valeurs approx.)</div></li>
+""">
+<phoneGearT49gDesc "Visiophone moderne et ultra performant :">
+<phoneGearT49gConfig """
+<li><div class="info">- Ecran tactile 8"</div></li>
+                                                        <li><div class="info">- Technologie HD voice</div></li>
+                                                        <li><div class="info">- Appels vidéo en full HD</div></li>
+                                                        <li><div class="info">- Caméra HD 2 Mpx avec volet de fermeture</div></li>
+                                                        <li><div class="info">- Bluetooth 4.0 et wi-fi intégrés</div></li>
+                                                        <li><div class="info">- Ports HDMI et USB</div></li>
+                                                        <li><div class="info">- Interface intuitive</div></li>
+                                                        <li><div class="info">- Nombreuses fonctionnalités incluses</div></li>
+""">
 /*----------------------------PROMO/FIBRE.HTML--------------------------------*/
 /*-----------------------------------META-------------------------------------*/
 <promoFibreMetaTitle "Promos : Fibre - Luxembourg Online">
@@ -1150,6 +1258,7 @@ offre fibre<span style="font-size: 0.3em;" class="exponent">(1)</span>
 <promoFibreDesc """
 <span class="bold">LOL</span>FIBER 100 devient <span class="bold">LOL</span>FIBER 200<br/>Frais d'installation et de câblage fibre <span class="extra-bold">offerts !</span>
 """>
+<promoFibreOfferTitle """2x <span class="uppercase">plus rapide au même prix</span> !""">
 <promoFibreOfferDesc """
 Pour toute nouvelle souscription de 24 mois à l'offre <br/><span class="bold">LOLFIBER 100</span>, Luxembourg Online vous double la vitesse<span class="exponent">(1)</span> et  offre les frais d'installation et de câblage fibre, soit jusqu'à : 
 """>
@@ -1988,3 +2097,18 @@ Séléctionnez la configuration correspondant à votre système d’exploitation
 <diversAssDocfsLink12 """<a href="../documents/feuille_type_mobile_mobilefamily.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLMOBILE Family</div></a>""">
 <diversAssDocfsLink13 """<a href="../documents/feuille_type_mobile_mobilehome.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLMOBILE Home</div></a>""">
 <diversAssDocfsLink14 """<a href="../documents/feuille_type_mobile_mobileeurope.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLMOBILE Europe</div></a>""">
+/*--------------------------------LEGAL.HTML----------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<legalMetaTitle "Mention légales - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<legalTitle "Mentions légales">
+<legalList2Title "Conditions générales d'utilisation">
+<legalList2Link """
+<a class="link" href="//www.internet.lu/documents/CONDITIONS%20GENERALES%20DES%20SERVICES%20LUXEMBOURG%20ONLINE.pdf" target="_blank" ><img src="images/Icone/Img/pdf.gif" alt="pdf"/><div class="link">Conditions générales<br>(nouvelle version depuis 09/01/2014)</div></a>
+""">
+<legalList2Link1 """
+<a href="//www.internet.lu/documents/MENTIONS_LEGALES.pdf" target="_blank">
+                                                <img src="images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Mentions légales<br>(nouvelle version depuis 01/03/2015)</div>
+                                            </a>
+""">
+<legalList3Title "COORDONNÉES DE L'ENTREPRISE">

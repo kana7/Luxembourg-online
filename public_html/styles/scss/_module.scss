@@ -2365,7 +2365,7 @@ a.promos-link{
     font-size: 18px;
     color: $blue;
     padding-right: 5px;
-    span{
+    span:not([data-l10n-id]){
         position: relative;
         top: 2px;
         font-size: 16px;

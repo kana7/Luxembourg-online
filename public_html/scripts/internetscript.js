@@ -63,7 +63,7 @@ var popuptemplate = '<div id="testDispo" class="popup">' +
         '<div class="white-pannel">' +
         '<div style="position: relative;">' +
         '<button class="pannel-close"><span class="icon-x-icone"></span></button>' +
-        '<h2 data-l10n-id="">Testez la disponibilité</h2>' +
+        '<h2 data-l10n-id="testDispoTitle">Testez la disponibilité</h2>' +
         '<span data-l10n-id="cpInput"><input value name="zipcode" class="input-white" type="text" placeholder="Code postal"/></span>' +
         '<select name="ville" value class="input-white select"></select>' +
         '<select name="rue" value class="input-white select"></select>' +
@@ -219,7 +219,7 @@ function checkDispo(homeId, isLOLCable) {
             dataType: 'jsonp',
             success: function (data) {
                 obj = data;
-                console.log(obj);
+                //console.log(obj);
                 ab = ["", "", "", "", "", "", ""];
                 if (obj.Service[6]) {  // Dégroupage DSL
                     articleObj = obj.Service[6].article;
@@ -463,11 +463,10 @@ function checkDispo(homeId, isLOLCable) {
                 $('html, body').animate({
                     scrollTop: $('#offers-section, #promoFiber-content').offset().top
                 }, 650);
-                $('.footer-note').footerNote('render');
                 /*Cookies.remove('shop_idhome');
                  Cookies.set('shop_idhome', homeId, {expires: 1});*/
-                console.log('traduction');
-                document.l10n.requestLocales(document.l10n.supportedLocales[0]);
+                getTraduction();
+                //document.l10n.requestLocales(document.l10n.supportedLocales[0]);
             }, error: function (jqXHR, textStatus, errorThrown) {
                 console.log('jqXHR:');
                 console.log(jqXHR);
@@ -631,7 +630,7 @@ $(function () {
                         });
                     }
                 }
-
+                getTraduction();
             }
         });
     });
@@ -645,6 +644,7 @@ $(function () {
             }
         });
         $("select[name=rue]").fadeIn();
+        getTraduction();
     });
     $("body").on('change', 'select[name=rue]', function () {
         for (i in streetList.Streets) {
@@ -672,6 +672,7 @@ $(function () {
                 }
             }
         }
+        getTraduction();
     });
     $("body").on('click', '.btnVerif', function () {
         var homeId = $("select[name=numero]").val();
@@ -685,6 +686,7 @@ $(function () {
         } else {
             alert('Entrez votre numéro de rue pour continuer...');
         }
+        getTraduction();
     });
     $("body").on('click', '.btnVerif2', function (event) {
         var homeId = $("select[name=numero]").val();
@@ -701,6 +703,7 @@ $(function () {
         } else {
             alert('Entrez votre numéro de rue pour continuer...');
         }
+        getTraduction();
     });
 });
 

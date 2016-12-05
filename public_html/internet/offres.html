@@ -1044,7 +1044,7 @@
                                 <strong>avec LOL<span class="normal">TV</span> ! </strong>
                             </h2>
                             <p class="section-text" data-l10n-id="internetOffreTvDesc">En plus de votre abonnement Internet, souscrivez à LOLTV et profitez de vos séries et films préférés. </p>
-                            <a class="btn-outline-white" href="../tv/offres.html">Voir notre offre TV</a>
+                            <a class="btn-outline-white" href="../tv/offres.html" data-l10n-id="internetOffreTvLink">Voir notre offre TV</a>
                         </div>
                     </div>
                 </div>
@@ -1223,6 +1223,8 @@
                             document.l10n.getSync('footNoteInternetOffer5')
                         ]
                     });
+                    console.log(document.l10n);
+                    console.log(document.l10n.supportedLocales);
                 });
             });
         </script>

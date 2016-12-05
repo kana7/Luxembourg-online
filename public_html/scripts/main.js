@@ -65,21 +65,28 @@ $(function () {
         $('#languageSelector').find('a').on('click', function () {
             var lang = $(this).attr('data-lang');
             document.l10n.requestLocales(String(lang));
-            if($('.footer-note').length>0){
-                alert('hello');
+            if ($('.footer-note').length > 0) {
                 $('.footer-note').footerNote('render', {
-                        'registry': [
-                            document.l10n.getSync('footNoteInternetOffer1'),
-                            document.l10n.getSync('footNoteInternetOffer2'),
-                            document.l10n.getSync('footNoteInternetOffer3'),
-                            document.l10n.getSync('footNoteInternetOffer4'),
-                            document.l10n.getSync('footNoteInternetOffer5')
-                        ]
-                    });
+                    'registry': [
+                        document.l10n.getSync('footNoteInternetOffer1'),
+                        document.l10n.getSync('footNoteInternetOffer2'),
+                        document.l10n.getSync('footNoteInternetOffer3'),
+                        document.l10n.getSync('footNoteInternetOffer4'),
+                        document.l10n.getSync('footNoteInternetOffer5')
+                    ]
+                });
             }
         });
     }
-        });
+});
+
+function getTraduction() {
+    var nodes = document.querySelectorAll('[data-l10n-id]'), i;
+    for (i = 0; i < nodes.length; ++i) {
+        document.l10n.localizeNode(nodes[i]);
+    }
+    
+}
 
 function getURLParameter(name) {
     return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;

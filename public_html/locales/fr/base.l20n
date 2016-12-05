@@ -17,6 +17,7 @@
 <no "Non">
 <yes "Oui">
 <and "et">
+<screen "Écran">
 <tarif "Tarif">
 <otherClients "Autres clients">
 <all "Tous">
@@ -96,10 +97,8 @@ Langage<span class="icon-right-arrow"></span>
 <boutique "Nos boutiques">
 <openHours "Heures d'ouverture">
 <searchMenuButton "Affiner votre recherche">
-<modem {
-singular: "modem",
-plurial: "modems"
-}>
+<modem "Modem">
+<modem1 "Modems">
 <wifiGrear "Accessoires wifi">
 <wlanRep "Répétiteurs WLAN">
 <powRep "Répétiteurs POWERLINE">
@@ -259,6 +258,7 @@ Promo : installation offerte<br/>+ vitesse x2
 /*----------------------------------------------------------------------------*/
 /*------------------------------POPUP TESTDISPO-------------------------------*/
 <testDispoTitle "Testez la disponibilité">
+<EnterNum "Entrez votre numéro de rue pour continuer...">
 /*----------------------------------------------------------------------------*/
 /*---------------------------INTERNET/ACCUEIL.HTML----------------------------*/
 /*----------------------------------META--------------------------------------*/
@@ -810,6 +810,7 @@ Options de <b>financement</b>
 <mobileTarifsTable1Label4 "Appel vers la messagerie vocale">
 <mobileTarifsTable1Label5 "Rythme de facturation">
 <mobileTarifsTable2Title "Tarifs data National (sans abonnement)">
+<mobileTarifsTable2Title2 " National: SMS/MMS et Data">
 <mobileTarifsTable2Label1 "Transfert de données">
 <mobileTarifsTable2Value1 """
 <br>
@@ -878,6 +879,19 @@ Vous<br>êtes<br>en
 <mobileGearLabel18 "CPU:">
 <mobileGearLabel19 "GPU:">
 <mobileGearLabel20 "Chipset:">
+<mobileGearLabel21 "Prix avec Financement 30/24">
+<mobileGearLabel21Sub "30€ par mois sur 24 mois">
+<mobileGearLabel22 "Prix avec Financement 25/24">
+<mobileGearLabel22Sub "25€ par mois sur 24 mois">
+<mobileGearLabel23 "Prix avec Financement 20/24">
+<mobileGearLabel23Sub "20€ par mois sur 24 mois">
+<mobileGearLabel24 "Prix avec Financement 15/24">
+<mobileGearLabel24Sub "15€ par mois sur 24 mois">
+<mobileGearLabel25 "Prix avec Financement 10/24">
+<mobileGearLabel25Sub "10€ par mois sur 24 mois">
+<mobileGearLabel26 "Prix avec Financement 5/24">
+<mobileGearLabel26Sub "5€ par mois sur 24 mois">
+<mobileGearLabel27 "Prix sans abonnement">
 /*------------------------------INTERNET/ABO.HTML-----------------------------*/
 /*-----------------------------------META-------------------------------------*/
 <tvAboMetaTitle "TV : Abonnement  - Luxembourg Online">

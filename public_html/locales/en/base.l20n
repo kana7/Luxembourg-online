@@ -18,10 +18,11 @@ Luxemburgish">
 <no "No">
 <yes "Yes">
 <and "and">
+<enternum "Enter your street number to continue the search...">
 <tarif "Price list">
 <otherClients "Other customers">
 <all "All">
-<homeHeadTitle "Votre opérateur télécoms : Luxembourg Online">
+<homeHeadTitle "Your telecom operator : Luxembourg Online">
 <homeHeadDescription """
     content="Découvrez les offres imbattables de Luxembourg Online pour Internet
              haut débit et très haut débit (fibre, VDSL), téléphonie, mobile, TV et Cloud."
@@ -84,7 +85,7 @@ Language<span class="icon-right-arrow"></span>
 <parrainage "Sponsor Voucher">
 <installation "Installation">
 <illimited "unlimited">
-<inclus "inclus">
+<inclus "included">
 <dynamique "dynamic">
 <location "Location">
 <withTech "With a Technicien">
@@ -97,10 +98,8 @@ Language<span class="icon-right-arrow"></span>
 <boutique "Our Shops">
 <openHours "Business hours">
 <searchMenuButton "Refine your search">
-<modem {
-singular: "modem",
-plurial: "modems"
-}>
+<modem "Modem">
+<modem1 "Modems">
 <wifiGrear "Wifi accessories">
 <wlanRep "WLAN repeaters">
 <powRep "POWERLINE repeaters">
@@ -134,7 +133,7 @@ Mobile <span class="icon-right-arrow"></span>
 <menuLinkGear "Our Devices">
 <menuLinkSub "Subscribe">
 <menuLinkPhoneHome "Phone home">
-<menuLinkPrices "Our tarifs">
+<menuLinkPrices "Tariffs">
 <menuLinkOurPhones "Our phones">
 <menuLinkTvHome "Tv home">
 <menuLinkTvOffers "Our TV offer">
@@ -161,7 +160,7 @@ Mobile <span class="icon-right-arrow"></span>
 <menuLinkFin """
 <span class="icon icon-pig-ico"></span>{{linkFin}}
 """>
-<tarifDetails "Our tarifs in detail">
+<tarifDetails "Our tariffs in detail">
 <menuLinkTarifsDetails """
 <span class="icon icon-calculator-ico"></span>{{tarifDetails}}
 """>
@@ -197,7 +196,7 @@ Mobile <span class="icon-right-arrow"></span>
 /*----------------------------------------------------------------------------*/
 /*---------------------------------ENCARTS------------------------------------*/
 <serviceMobileDesc """
-Includes Calls and Texts<br/>in Europe.
+Includes calls and texts<br/>in Europe.
 """>
 <serviceTvDesc """
 Netflix<span class="exponent">(1)</span> and YouTube<br/>on your TV!
@@ -248,7 +247,7 @@ Unfortunalty, we can't check the availability for your address. <br />Please cal
 <euFixe "120 minutes to European local numbers">
 <otherOffers "See our other offers">
 <promoInstall "offer: free installation">
-<promoSpeed "offer: speed x2">
+<promoSpeed "OFFER: SPEED X2">
 <promoInstallSpeed """
 offer: free installation<br/>+ speed x2
 """>
@@ -276,7 +275,7 @@ offer: free installation<br/>+ speed x2
 Discover all <strong>our exciting offers!</strong>
 """>
 <internetAccueilOfferDesc """
-Spécialiste de l’Internet depuis plus de 20 ans, Luxembourg Online met à votre disposition des offres performantes et à un prix attractif.<br/> Que vous ayez simplement besoin de l’essentiel ou que vous soyez un surfer hyper-connecté, une de nos offres est forcément faite pour vous !
+Specialising in Internet access for the past 20 years, we are constantly bringing high performnace solutions with attractive deals to the market. Whether you are a simple internet customer or a 24/7 connected social media user, one of our offers will suit your needs.
 """>
 <internetAccueilOfferLink "Check our internet offers">
 /*----------------------------------------------------------------------------*/
@@ -299,7 +298,7 @@ Reliable and efficient, users benefit from the following advantages: stability, 
 /*----------------------------------------------------------------------------*/
 /*------------------------INTERNET/PARRAINAGE.HTML----------------------------*/
 /*----------------------------------META--------------------------------------*/
-<internetParainnageMetaTitle "Internet : Bon de parrainage - Luxembourg Online">
+<internetParainnageMetaTitle "Internet : Sponsor voucher - Luxembourg Online">
 /*----------------------------------------------------------------------------*/
 /*--------------------------------SECTION-------------------------------------*/
 <internetParainnageTitle """
@@ -323,11 +322,11 @@ To take advantage of our sponsor off, download the form here :
 /*----------------------------------------------------------------------------*/
 /*---------------------INTERNET/TARIFS_DETAILLES.HTML-------------------------*/
 /*----------------------------------META--------------------------------------*/
-<internetTarifsMetaTitle "Internet : tarifs détaillés  - Luxembourg Online">
+<internetTarifsMetaTitle "Internet : tariffs in detail  - Luxembourg Online">
 /*----------------------------------------------------------------------------*/
 /*--------------------------------SECTION-------------------------------------*/
 <internetTarifsTitle """
-Our tarifs <span class="bold">détaillés</span>
+Our tariffs <span class="bold">in detail</span>
 """>
 <internetTarifsDesc "Review all our internet tariffs below.">
 /*----------------------------------------------------------------------------*/
@@ -347,7 +346,7 @@ Our tarifs <span class="bold">détaillés</span>
 /*----------------------------------------------------------------------------*/
 /*------------------------INTERNET/OFFRES.HTML--------------------------------*/
 /*----------------------------------META--------------------------------------*/
-<internetOffreMetaTitle "Internet : Nos offres – Luxembourg Online">
+<internetOffreMetaTitle "Internet : Our offers – Luxembourg Online">
 <internetOffreMetaDesc """
     content="Les offres Internet de Luxembourg Online s’adaptent à vos besoins en connectivité. Profitez d’un trafic illimité et découvrez les nombreux avantages de la fibre optique."
 """>
@@ -357,7 +356,7 @@ Our tarifs <span class="bold">détaillés</span>
 /*----------------------------------------------------------------------------*/
 /*-------------------------------CONTENT--------------------------------------*/
 <internetOffreTitle "Our internet offers">
-<internetOffreDSL24Desc "The Essentials!">
+<internetOffreDSL24Desc "The Essential!">
 <internetOffreTel "120 min to european fixed lines">
 <internetOffreFIBER30Desc "Keep in touch">
 <internetOffreOnDemand "on demand">
@@ -388,24 +387,21 @@ Installation + modem <span>(12 month contrat)</span>
 /*--------------------------------SECTION-------------------------------------*/
 <internetFaqTitle "FAQ">
 <internetFaqDesc """
-Are you looking for information ? Use our FAC below.
+Are you looking for information ? Use our FAQ below.
 If you can‘t find the answer to your question, and you still require help, then don‘t hesitate to call our client service helpdesk on <strong><a href="tel://2799 0000">2799 0000</a></strong> or via e-mail <strong>helpdesk@internet.lu</strong>
 """>
 /*----------------------------------------------------------------------------*/
 /*------------------------------QUESTIONS-------------------------------------*/
 <internetFaqQ1 "What is Luxembourg Online‘s obligation towards the speed they deliver ?">
 <internetFaqQ1A """
-Nous mettons tout en oeuvre pour vous proposer une vitesse de qualité optimale.<br/>
-                                    Les vitesses annoncées représentent le débit maximum envisageable et ne sont pas garanties.
-                                    Le débit réel dépend :<br/>
-                                    - de la distance entre l'adresse d'installation et la centrale téléphonique<br/>
-                                    - de votre installation interne (câblage, équipements, connexion par câble ou par wifi, distances entre les appareils...).<br/>
-                                    Pour plus d'information, vous pouvez consulter la <a href="../divers/assistance.html#document;3;" target="blank_">fiche signalétique</a>.
-                                    Si toutefois vous rencontrez des difficultés avec votre vitesse,
-                                    <a href="../divers/contact.html#form" target="blank_">contactez-nous</a>. Notre service Helpdesk vous
-                                    apportera toute l'aide dont vous avez besoin.
+We endeavour to supply you with the optimal connection speed.<br/>
+Our advertised connection speeds represent the maximum bandwidth and are not warranted. The end user bandwidth depends on the following:<br/>
+- the distance between the end user‘s adress and the telephone exchange<br/>
+- the end user‘s circumstances  (internal, cabling, distance between entry point and wifi router, wifi router to connected wifi devices, walls of premises,…)
+For more information, consult the <a href="../divers/assistance.html#document;3;" target="blank_">information product sheets</a>. If you encounter bandwidth issues, 
+                                    <a href="../divers/contact.html#form" target="blank_">contct us</a>.  Our helpdesk will advise and help you with your issues.
 """>
-<internetFaqQ2 "What does \"upstream\", \"downstream" and Mbit/s mean ?">
+<internetFaqQ2 "What does \"upstream\", \"downstream\" and Mbit/s mean ?">
 <internetFaqQ2A """
 \"Upstream\" (also known ass \"upload\") is the speed with which your device sends data to the Internet<br/>
                                     "Downstream" (also known as download) is the speed your connection accesses data from the internet and loads this on your device. It is also known ass download speed.<br/>
@@ -427,16 +423,16 @@ Theoretically, you can use the modem of your choice. We do however recommend you
 """>
 <internetFaqQ6 "What happens when I move house ?">
 <internetFaqQ6A """
-Nous vous invitons à compléter et à nous retourner le formulaire de déménagement disponible sous <a href="abonnement.html">la rubrique Documents</a> dans les plus brefs délais, ou de contacter notre service commercial afin qu’il vous oriente au mieux dans vos démarches.<br/>
-                                    Vous pouvez également <a href="../documents/Transfert_Contrat_Internet.pdf" target="blank_">transférer votre contrat</a> à une tierce personne, qui reprendra les droits et les obligations liés à votre abonnement.<br/>
-                                    Pour plus d'information, <a href="../divers/contact.html#form" target="blank_">contactez-nous</a>.
+
+If you move to an area covered by the Luxembourg Online network, then your contract will remain extant. If this is not the case, your can cancel your subscription after the minimum cancelation notice.
+You can equally <a href="../documents/Transfert_Contrat_Internet.pdf" target="blank_">transfer</a> the subscription to another person, whereby the conditions of the contract must be upheld. If you have further questions, don‘t hesitate to <a href="../divers/contact.html#form" target="blank_">contact us</a>.
 """>
 /*------------------------------INTERNET/ABO.HTML-----------------------------*/
 /*-----------------------------------META-------------------------------------*/
-<internetAboMetaTitle "Internet : Abonnez-vous - Luxembourg Online">
+<internetAboMetaTitle "Internet : Subscribe - Luxembourg Online">
 /*----------------------------------------------------------------------------*/
 /*----------------------------------SECTION-----------------------------------*/
-<aboTitle "Documents et contrats">
+<aboTitle "Documents and Contracts">
 <aboDesc """
 All the documents you require in relation to our {{$cat}} products.<br/> For more information, don‘t hesitate to contact our helpdesk on <strong><a href="tel://2799 0000">2799 0000</a></strong> or via email to <strong>commercial@internet.lu</strong>.
 """>
@@ -454,7 +450,7 @@ All the documents you require in relation to our {{$cat}} products.<br/> For mor
 <internetAboConractLink4 """
 <a href="../documents/LOLDSL20_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Subscription form LOLDSL 20</div></a>
 """>
-<aboCondTitle "Conditions générales et mentions légales">
+<aboCondTitle "General and legal terms of service">
 <internetAboCondLink1 """
 <a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20ACCES%20%20INTERNET%20HAUT%20DEBIT%20ET%20TRES%20HAUT%20DEBIT.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link">Special conditions (Internet)<span>(new version 12/03/2012)</span></div></a>
 """>
@@ -480,7 +476,7 @@ All the documents you require in relation to our {{$cat}} products.<br/> For mor
 /*----------------------------------------------------------------------------*/
 /*----------------------------INTERNET/CABLE.HTML-----------------------------*/
 /*-----------------------------------META-------------------------------------*/
-<internetCableMetaTitle "Internet : Nos offres LOLCABLE – Luxembourg Online">
+<internetCableMetaTitle "Internet : LOLCABLE – Luxembourg Online">
 <internetCableMetaDesc """
 content="Les offres Internet de Luxembourg Online s’adaptent à vos besoins en connectivité. Profitez d’un trafic illimité et découvrez les nombreux avantages de la fibre optique."
 """>
@@ -489,7 +485,7 @@ content="Les offres Internet de Luxembourg Online s’adaptent à vos besoins en
 <span class="extra-bold">LOL</span>Cable
 """>
 <internetCableDesc """
-L'accès Internet par le câble TV sur les réseaux : Antenne Collective Ettelbruck<br>(Ettelbruck, Erpeldange, Warken), Antenne Collective Schieren.
+Internet access via the cable TV network: Antenne Collective Ettelbrück (Ettelbrück, Erpeldingen, Warken), Antenne Collective Schieren
 """>
 <internetCableDescZone0 """
 <b>120 minutes included to the countries of the European Union:</b>
@@ -532,20 +528,20 @@ L'accès Internet par le câble TV sur les réseaux : Antenne Collective Ettelbr
 """>
 *-----------------------INTERNET/EQUIPEMENTS.HTML-----------------------------*/
 /*---------------------------------META---------------------------------------*/
-<internetGearMetaTitle "Internet : Nos équipements – Luxembourg Online">
+<internetGearMetaTitle "Internet : Our devices – Luxembourg Online">
 <internetGearMetaDesc """
 content="Des équipements de qualité pour votre Internet : bénéficiez de la performance de nos modems wifi qui vous garantissent une connexion ultra haut débit.."
 """>
 /*--------------------------------SECTION-------------------------------------*/
-<modemRoutAdslVdsl "Modem-Router WLAN ADSL2+ and VDSL">
-<modemRoutAdsl "Modem-Router WLAN ADSL2+ and VDSL">
-<modemRoutFibre "Wifi fiber modem router">
+<modemRoutAdslVdsl "Modem-Router Wifi ADSL2+ and VDSL">
+<modemRoutAdsl "Modem-Router Wifi ADSL2+ and VDSL">
+<modemRoutFibre "Modem-Router Wifi fiber">
 <repeat "Repeater to extend the wifi network">
 <pwrLine "Solution to extend the network through the electrical circuit">
 <adaptWifi "Wifi adapter">
 /*-----------------------------MOBILE/ACCUEIL.HTML----------------------------*/
 /*----------------------------------META--------------------------------------*/
-<mobileAccueilMetaTitle "Mobile : Accueil - Luxembourg Online">
+<mobileAccueilMetaTitle "Mobile : Home - Luxembourg Online">
 <mobileAccueilMetaDesc """
     content="Avec les abonnements mobiles de Luxembourg Online, profitez pleinement de votre GSM : communiquez en illimité au Luxembourg et appelez partout vers et en Europe, sans contrainte."
 """>
@@ -572,7 +568,7 @@ Push into the smartphone limits !
 <mobileAccueilMatDesc "Esthetique, slim, powerful; Samsung‘s latest innovation is now available at Luxembourg Online! With the Galaxy S7, experience new dimensions and go beyond your imits.">
 /*-----------------------------MOBILE/ABO.HTML----------------------------*/
 /*----------------------------------META--------------------------------------*/
-<mobileAboMetaTitle "Mobile : Abonnez-vous - Luxembourg Online">
+<mobileAboMetaTitle "Mobile : Subscribe - Luxembourg Online">
 /*----------------------------------------------------------------------------*/
 <mobileAboConractLink1 """
 <a href="../documents/LOLMOBILE_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Subsription contract</div></a>
@@ -585,7 +581,7 @@ Push into the smartphone limits !
 """>
 /*-------------------------MOBILE/ABONNEMENTS.HTML----------------------------*/
 /*----------------------------------META--------------------------------------*/
-<mobileAbosMetaTitle "Mobile : Abonnements - Luxembourg Online">
+<mobileAbosMetaTitle "Mobile : Subscribe - Luxembourg Online">
 <mobileAbosMetaDesc """
 content="Découvrez nos abonnements mobile sans engagement, avec appels nationaux vers fixe et mobile LOL en illimité et communiquez sans contraintes vers et en Europe."
 """>
@@ -676,7 +672,7 @@ More info on<br><a href="https://www.hotcity.lu/" target="blank_"><strong>www.ho
 """>
 /*-----------------------MOBILE/FINANCEMENT.HTML------------------------------*/
 /*----------------------------------META--------------------------------------*/
-<mobileFinMetaTitle "Mobile : Financement - Luxembourg Online">
+<mobileFinMetaTitle "Mobile : Financing - Luxembourg Online">
 /*----------------------------------------------------------------------------*/
 /*-------------------------------SECTION--------------------------------------*/
 <mobileFinTitle """
@@ -695,7 +691,7 @@ More info on<br><a href="https://www.hotcity.lu/" target="blank_"><strong>www.ho
 <mobileFinOptFooter "Offers only valid for subscriptions to LOLMOBILE and purchase of a phone.">
 /*---------------------------MOBILE/TARIFS.HTML-------------------------------*/
 /*----------------------------------META--------------------------------------*/
-<mobileTarifsMetaTitle "Mobile : tarifs détaillés  - Luxembourg Online">
+<mobileTarifsMetaTitle "Mobile : tariffs in detail  - Luxembourg Online">
 /*----------------------------------------------------------------------------*/
 <mobileTarifsZoneInt1 """
 <b>International zone 1</b>
@@ -767,6 +763,7 @@ Andorra, Armenia, Aruba, Bahrain, Bangladesh, Belarus, Bosnia and Herzegovina, D
 <mobileTarifsTable1Label4 "Call to the voicemail service">
 <mobileTarifsTable1Label5 "Conversation billing">
 <mobileTarifsTable2Title "National Tarif Data (without subscription)">
+<mobileTarifsTable2Title2 "National SMS/MMS and data">
 <mobileTarifsTable2Label1 "Data transfer">
 <mobileTarifsTable2Value1 """
 <br>
@@ -806,15 +803,15 @@ You<br>are<br>in
 <mobileTarifsTable6Label6 "Receive SMS in int. zones">
 /*----------------------------MOBILE/EQUIP.HTML-------------------------------*/
 /*----------------------------------META--------------------------------------*/
-<mobileGearMetaTitle "Mobile : Nos Mobiles - Luxembourg Online">
+<mobileGearMetaTitle "Mobile : Our mobile phones - Luxembourg Online">
 <mobileGearMetaDesc "Mobile : Nos Mobiles - Luxembourg Online">
 /*----------------------------------------------------------------------------*/
 <mobileGearTitle1 "Key Features">
 <mobileGearTitle2 "Screen">
 <mobileGearTitle3 "Camera">
 <mobileGearTitle4 "Connectivity">
-<mobileGearTitle5 "M&eacute;moire">
-<mobileGearTitle6 "Processeurs">
+<mobileGearTitle5 "Memory">
+<mobileGearTitle6 "Processors">
 <mobileGearLabel1 "Size:">
 <mobileGearLabel2 "Weight:">
 <mobileGearLabel3 "Carte SIM:">
@@ -830,14 +827,28 @@ You<br>are<br>in
 <mobileGearLabel13 "Bluetooth:">
 <mobileGearLabel14 "GPS:">
 <mobileGearLabel15 "RAM:">
-<mobileGearLabel16 "Interne:">
-<mobileGearLabel17 "Carte ext.:">
+<mobileGearLabel16 "HDD:">
+<mobileGearLabel17 "SD slot:">
 <mobileGearLabel18 "CPU:">
 <mobileGearLabel19 "GPU:">
 <mobileGearLabel20 "Chipset:">
+<mobileGearLabel21 "Price with finance option 30/24">
+<mobileGearLabel21Sub "30€ per month over 24 months">
+<mobileGearLabel22 "Price with finance option 25/24">
+<mobileGearLabel22Sub "25€ per month over 24 months">
+<mobileGearLabel23 "Price with finance option 20/24">
+<mobileGearLabel23Sub "20€ per month over 24 months">
+<mobileGearLabel24 "Price with finance option 15/24">
+<mobileGearLabel24Sub "15€ per month over 24 months">
+<mobileGearLabel25 "Price with finance option 10/24">
+<mobileGearLabel25Sub "10€ per month over 24 months">
+<mobileGearLabel26 "Price with finance option 5/24">
+<mobileGearLabel26Sub "5€ per month over 24 months">
+<mobileGearLabel27 "Price without subscription">
+<screen "Screen">
 /*------------------------------INTERNET/ABO.HTML-----------------------------*/
 /*-----------------------------------META-------------------------------------*/
-<tvAboMetaTitle "TV : Abonnement  - Luxembourg Online">
+<tvAboMetaTitle "TV : Subscribe  - Luxembourg Online">
 /*----------------------------------------------------------------------------*/
 <tvAboConractLink1 """
 <a href="../documents/LOLTV_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Subscription form</div></a>
@@ -856,7 +867,7 @@ You<br>are<br>in
 """>
 /*------------------------------------TV/ABO.HTML-----------------------------*/
 /*-----------------------------------META-------------------------------------*/
-<tvAccueilMetaTitle "TV : Accueil - Luxembourg Online">
+<tvAccueilMetaTitle "TV : Home - Luxembourg Online">
 <tvAccueilMetaDesc """
 content="Avec LOLTV, profitez du meilleur de la télévision ! Chaînes TV, chaînes radio, films, séries Netflix et vidéos Youtube : tout est disponible depuis votre télévision."
 """>
@@ -866,7 +877,7 @@ content="Abonnement TV, abonnement télévision, offres TV"
 /*----------------------------------------------------------------------------*/
 /*--------------------------------SECTION-------------------------------------*/
 <tvAccueilTitle """
-Watching TV<br/> has never been so intense! !
+Watching TV<br/> has never been so intense!
 """>
 <tvAccueilDesc """
 With LOLTV, the choice is yours: + 100 TV channels, + 50 HD channels, + 40 radio stations, and options for Netflix<span class="exponent">(1)</span> and Youtube<class="exponent">(1)</span><br/>
@@ -878,7 +889,7 @@ With LOLTV, the choice is yours: + 100 TV channels, + 50 HD channels, + 40 radio
 <tvAccueilGearDesc "For our LOLTV service, we have chosen the latest technologie. As a rental device, or through purchase, take advantage of this high performing decoder and see the big picture!">
 /*---------------------------TV/CHANNELS.HTML---------------------------------*/
 /*-----------------------------------META-------------------------------------*/
-<tvChannelMetaTitle "TV : Liste des chaînes – Luxembourg Online">
+<tvChannelMetaTitle "TV : Channel list – Luxembourg Online">
 <tvChannelMetaDesc """
 content="Avec LOLTV, accédez à tous vos contenus depuis votre canapé. Découvrez nos nombreuses chaînes TV, HD et radio. Surfez également sur Netflix et Youtube depuis votre TV."
 """>
@@ -896,7 +907,7 @@ content="Avec LOLTV, accédez à tous vos contenus depuis votre canapé. Découv
 <tvFaqQ1A """
 In order to become a LOLTV subscriber, the folowing applies:<br/>
 <ul>
-<li>- be subscribed to a Luxembbourg Online internet access with a speed equal or greate than 8 Mbit/s,</li>
+<li>- be subscribed to a Luxembourg Online internet access with a speed equal or greate than 8 Mbit/s,</li>
 <li>- be in possession of a compatible modem, correctly installed,</li>
 <li>- be in possession of a LOLTV decoder.</li>
 </ul></br>
@@ -919,13 +930,13 @@ In first instance, follow these instructions. This advice should allow you to co
 </ul>
 After each stage, check if the Problem is still apparent. If after these steps, it still doesn‘t work, then <a href="../divers/contact.html#form" target="blank_">call our helpdesk</a>.
 """>
-<tvFaqQ4 "Can I watwch LOLTV on numerous televisions?">
+<tvFaqQ4 "Can I watch LOLTV on numerous televisions?">
 <tvFaqQ4A """
 Yes. Dependant on the speed of your connection you can install numerous TV decoders. To do this, you will need to order <a href="../tv/equipements.html" target="blank_">supplementary LOL decoders</a>. <br /><a href="../divers/contact.html#form" target="blank_">Contact us</a> to find out more. Our helpdesk will be able to help you with this matter.
 """>
 /*-----------------------------TV/OFFRES.HTML---------------------------------*/
 /*-----------------------------------META-------------------------------------*/
-<tvOfferMetaTitle "TV : Notre offre TV – Luxembourg Online">
+<tvOfferMetaTitle "TV : TV offer – Luxembourg Online">
 <tvOfferMetaDesc """
 content="Avec LOLTV, accédez à tous vos contenus depuis votre canapé. Découvrez nos nombreuses chaînes TV, HD et radio. Surfez également sur Netflix et Youtube depuis votre TV."
 """>
@@ -936,7 +947,7 @@ Watching TV<br/> has never been so intense!
 <tvOfferChannelTitle """
 <strong>A wide range</strong> of channels
 """>
-<tvOfferChannelDesc "LOLTV, we at Luxemborug Online are providing over 100 channels. Bringing you the best in variation and language selection, including block buster movies, information channels, cultural programmes, kids entertainment...something for everyone!">
+<tvOfferChannelDesc "LOLTV, we at Luxembourg Online are providing over 100 channels. Bringing you the best in variation and language selection, including block buster movies, information channels, cultural programmes, kids entertainment...something for everyone!">
 <tvOfferChannelLink "Applications directly accessible from your TV">
 <tvOfferAppTitle """
 Applications <strong>directly accessible</strong> from your TV
@@ -946,9 +957,9 @@ Broadcast over the internet, the LOLTV product is ready for the future and offer
                                 <span style="font-size: 12px; color: #818181; display: block; padding-top: 10px;">(1) Additional option and charge.</span>
 """>
 <tvOfferIntTitle """
-Une interface <strong>simple et réactive</strong>
+<strong>A simple and easy</strong> interface
 """>
-<tvOfferIntDesc "Pour faciliter votre navigation, Luxembourg Online a mis en place pour vous une interface simple, rapide et intuitive. Retrouvez en un clin d’oeil tout ce que vous recherchez et accédez à tous vos services LOLTV en quelques clics seulement !">
+<tvOfferIntDesc "To help you navigate throught the TV menu, Luxembourg Online has developed a simple and easy interface. Find all the apps and guides quickly and at a click of a button.">
 <tvOfferMinixTitle """
 The <strong>newest generation</strong> decoder
 """>
@@ -966,7 +977,7 @@ Don‘t hang around anymore<br/>and subscribe to <br/>the many LOLTV advantages!
 """>
 /*------------------------------TV/EQUIP.HTML---------------------------------*/
 /*-----------------------------------META-------------------------------------*/
-<tvGearMetaTitle "TV : Nos équipements – Luxembourg Online">
+<tvGearMetaTitle "TV : Devices – Luxembourg Online">
 <tvGearMetaDesc """
 content="Profitez du meilleur de la télévision avec le décodeur TV Minix, équipé d’un processeur quad-core, d’un port USB et full HD. L’installation du décodeur vous est offerte. "
 """>
@@ -989,12 +1000,12 @@ Decoder Retail Price 159€ (12 month contract)
                                     <li>WIFI Hotspot</li>
 """>
 <tvGearRemoteTitle """
-<strong>LOL<span class="normal">TV</span></strong>‘s gyroscopic remote
+<strong>LOL<span class="normal">TV</span></strong>Gyroscopic remote
 """>
 <tvGearRemoteDesc "Move the pointer with simple wrist movements with this six-axis gyroscopic remote and enjoy your experience from the  comfort of your sofa. On the rear of the remote, is a fully functional keyboard to deliver a seamless user experience.">
 /*-----------------------------TEL/ACCUEIL.HTML-------------------------------*/
 /*-----------------------------------META-------------------------------------*/
-<telAccueilMetaTitle "Téléphonie : Accueil - Luxembourg Online">
+<telAccueilMetaTitle "Telephony : Home - Luxembourg Online">
 <telAccueilMetaDesc """
 content="Chez Luxembourg Online, votre abonnement de téléphonie fixe est inclus dans votre forfait Internet : communiquez en toute tranquilité et surfez à toute vitesse."
 """>
@@ -1006,7 +1017,7 @@ content="Forfait Internet telephone, abonnement telephone fixe,  téléphonie Lu
 <strong>Cost-effective communications !</strong>
 """>
 <telAccueilDesc "With a landline subscription included in the internet flat rate, enjoy the advantageous calling offers: unlimited calls to domestic landlines and LOL mobiles, 120 minutes to european landlines...">
-<telAccueilLink "Telephone tarif in detail">
+<telAccueilLink "Telephone tariffs in detail">
 <telAccueilVisioTitle """
 <span class="extra-bold">LOL</span>VISIO :<br/><span class="extra-bold">Face-to-face has never been easier!</span>
 """>
@@ -1015,13 +1026,13 @@ content="Forfait Internet telephone, abonnement telephone fixe,  téléphonie Lu
 """>
 <telAccueilVisioLink "Show the offer">
 <telAccueilGearTtitle """
-A selection of telephones strong>adapted to your communications needs!</strong>
+A selection of telephones <strong>adapted to your communications needs!</strong>
 """>
 <telAccueilGearDesc "So that you can easily communicate, Luxembourg Online has selected a range of high quality and fashionable telephones. Have a browse and select your favourite one.">
 <telAccueilGearLink "Our telephones">
 /*--------------------------------TEL/ABO.HTML--------------------------------*/
 /*-----------------------------------META-------------------------------------*/
-<telAboMetaTitle "Téléphonie : Abonnez-vous - Luxembourg Online">
+<telAboMetaTitle "Telephony : Subscribe - Luxembourg Online">
 <telAccueilMetaDesc """
 content="Chez Luxembourg Online, votre abonnement de téléphonie fixe est inclus dans votre forfait Internet : communiquez en toute tranquilité et surfez à toute vitesse."
 """>
@@ -1040,7 +1051,7 @@ content="Forfait Internet telephone, abonnement telephone fixe,  téléphonie Lu
 """>
 /*--------------------------------TEL/FAQ.HTML--------------------------------*/
 /*-----------------------------------META-------------------------------------*/
-<telFaqMetaTitle "Téléphonie : FAQ - Luxembourg Online">
+<telFaqMetaTitle "Telephony : FAQ - Luxembourg Online">
 /*----------------------------------------------------------------------------*/
 <telFaqQ1 "Can I purchase a fixed telephone line without buying an internet connection subscription?">
 <telFaqQ1A """
@@ -1063,7 +1074,7 @@ The call divert is active immediatly after this modification.
 """>
 /*--------------------------TEL/LOLVVISIO.HTML--------------------------------*/
 /*-----------------------------------META-------------------------------------*/
-<telVisioMetaTitle "Téléphonie : LOLVISIO – Luxembourg Online">
+<telVisioMetaTitle "Telephony: LOLVISIO – Luxembourg Online">
 /*----------------------------------------------------------------------------*/
 <telVisioZoneInt1 """
 Allemagne, Autriche, Belgique, Bulgarie, Chypre, Croatie, Danemark, Espagne, Estonie, Finlande, France (métropole + Guyane + Martinique + Reunion), Grèce, Hongrie, Irlande, Italie, Lettonie, Lituanie, Malte, Monaco, Pays-Bas, Pologne, Portugal, Rep. Tchèque, Roumanie, Royaume-Uni, Slovaquie, Slovénie, Suède.
@@ -1088,19 +1099,18 @@ Combining simplicity and state-of-the-art, Luxembourg Online‘s <span class="ex
 """>
 <telVisioGearLink "View our telephones">
 <telVisioTarifTitle """
-<strong>The same tarif,</strong> without additional cost
+<strong>The same tariff,</strong> without additional cost
 """>
 <telVisioTarifDesc """
 Using a <span class="extra-bold">LOL</span>VISIO does not incure extra costs. Whether in audio or video mode, the tarif will stay the same.In addition, with a landline subscription your domestic and LOL mobile phones calls are free and unlimited. On top of that, the package allows 120 minutes to european landlines. <strong>Chat and talk to your hearts content!</strong>
 
-Communiquer avec le téléphone  ne vous coûtera pas plus cher. Le tarif reste le même, que vous appeliez en mode vidéo ou en mode audio. De plus, avec l’abonnement de téléphonie fixe de Luxembourg Online, vos appels vers les fixes nationaux et les mobiles LOL sont gratuits et illimités. Grâce à cet abonnement, vous bénéficiez également de 120 minutes d’appels gratuites vers les fixes d’Europe. Ainsi, <strong>vous communiquez en toute tranquillité !</strong>
 """>
 <telVisioVideoTitle """<strong>An easy and practical telephone</strong>""">
 <telVisioVideoDesc """
 The <span class="bold">LOL</span>VISIO telephone is very easy to use and can suit any user.<br/> To place an audio or video call, is no different to a traditional phone. Dial the phone number and lift the handset. That‘s it! Have a look at our demonstration video or come to our shop and test it for yourself.
 """>
 <telVisioOfferTitle """
-Don‘t hang around, call us on <br/><span style="font-size: 1.6em; line-height: 60px;">2799 0000</span><br/>for more information !
+Call us on <br/><span style="font-size: 1.6em; line-height: 60px;">2799 0000</span><br/>for more information !
 """>
 <telVisioOfferTable1 """
 <strong>Unlimited</strong> domestic landline calls <span class="exponent">(1)</span>
@@ -1113,98 +1123,93 @@ Don‘t hang around, call us on <br/><span style="font-size: 1.6em; line-height:
 """>
 /*--------------------------TEL/REPONDEUR.HTML--------------------------------*/
 /*-----------------------------------META-------------------------------------*/
-<phoneAmMetaTitle "Téléphonie : Répondeur - Luxembourg Online">
+<phoneAmMetaTitle "Telephony : Voicemail - Luxembourg Online">
 /*----------------------------------------------------------------------------*/
-<phoneAmTitle "Service <b>répondeur</b>">
-<phoneAmDesc "Découvrez ci-dessous notre service répondeur. Disponible pour tous les clients possédant une ligne téléphonique Luxembourg Online, il mettra a votre disposition de nombreuses fonctionnalités.">
+<phoneAmTitle "<b>Voicemail</b>">
+<phoneAmDesc "Find out about our voicemail service. Available for all customers with a Luxembourg Online phone line, it will provide you with many features.">
 <phoneAmContent """
-<p>Ce service <strong>entièrement gratuit</strong> laisse la possibilité à vos correspondants de vous laisser un message 
-                                lorsque vous n'êtes pas disponible.</p>
+<p>It's <strong>completely free</strong> and allows your correspondents to leave a message when you are not available.</p>
                             <ul>
-                                <li>- Vous recevez un e-mail dès qu'un message est déposé sur votre boîte vocale.</li>
-                                <li>- Le message se trouve en pièce jointe avec cet e-mail en format audio.</li>
-                                <li>- Vous pouvez consulter et gérer vos message à distance.</li>
+                                <li>- You receive an e-mail as soon as a message is sent to your mailbox.</li>
+                                <li>- The message is attached as an attachment with the e-mail in audio format.</li>
+                                <li>- You can listen to and manage your messages remotely.</li>
                             </ul>                            
-                            <p>Que vous soyez en vacances ou en déplacement, votre répondeur est accessible partout et à tout moment.</p>
-                            <p><strong>Avec le service répondeur gratuit de Luxembourg Online, vivez la mobilité sans souci !</strong></p>
+                            <p>Whether you're on holidays or on the go, your answering machine is available anytime, anywhere.</p>
+                            <p><strong>With the free voicemail service of Luxembourg Online, live the mobility without worry!</strong></p> 
                             <div class="btn-container">
-                                <a class="btn-outline-white" href="../documents/Manuel-repondeur.pdf" target="blank_">Guide d'utilisation</a>
+                                <a class="btn-outline-white" href="../documents/Manuel-repondeur.pdf" target="blank_">Manual</a>
                             </div>
 """>
 /*-----------------------------TEL/TARIFS.HTML--------------------------------*/
 /*-----------------------------------META-------------------------------------*/
-<phoneTarifsMetaTitle "Téléphonie : Nos tarifs – Luxembourg Online">
+<phoneTarifsMetaTitle "Telephony : Tariffs – Luxembourg Online">
 /*----------------------------------------------------------------------------*/
-<phoneTarifsTitle """Communiquez<br/> en toute tranquillité !""">
-<phoneTarifsDesc """Abonnement de téléphonie fixe<br/><strong>inclus dans votre forfait Internet!</strong>""">
-<phoneTarifsTableTitle "Détail des communications hors forfaits :">
-<phoneTarifsTableHeader1 "Type d'appel">
-<phoneTarifsTableHeader2 "Heures pleines">
-<phoneTarifsTableHeader3 "Heures creuses">
-<phoneTarifsTableFixed "National fixe">
+<phoneTarifsTitle """Chat and talk<br/>to your hearts content. !""">
+<phoneTarifsDesc """A fixed landline is<br/><strong>included in your internet subscription</strong>""">
+<phoneTarifsTableTitle "Calls not included in the price plan:">
+<phoneTarifsTableHeader1 "Call type">
+<phoneTarifsTableHeader2 "Peak">
+<phoneTarifsTableHeader3 "Off-peak">
+<phoneTarifsTableFixed "National landline">
 <phoneTarifsTableMobile "National mobile">
-<phoneTarifsLink "Consultez la liste des tarifs à l'international">
-<phoneTarifsTableFoot1 "Heures pleines : Lundi à vendredi de 8h00 à 19h00">
-<phoneTarifsTableFoot2 "Heures creuses : Lundi à vendredi de 19h00 à 8h00  l  Weekends et jours fériés">
-<phoneTarifsLink1 "Pour connaître les anciennes tarifications, consultez la liste des prix">
+<phoneTarifsLink "All our international tariffs">
+<phoneTarifsTableFoot1 "Peak : Monday to friday from 8:00 to 19:00">
+<phoneTarifsTableFoot2 "Off-peak : Monday to friday from 19:00 à 8:00  |  Weekends and holidays">
+<phoneTarifsLink1 "To view the old tariffs, see the price list">
 /*---------------------------TEL/EQUIPEMENTS.HTML-----------------------------*/
-<phoneGearT201Desc "Téléphone numérique sans fil DECT">
+<phoneGearT201Desc "Cordless DECT phone">
 <phoneGearT201Config """
-<li><div class="info">- Répertoire pour 50 noms et numéros</div></li>
-<li><div class="info">- Mode ECO</div></li>
-<li><div class="info">- Afficheur rétro-éclairé</div></li>
-<li><div class="info">- Téléphone mains-libres via haut-parleur</div></li>
-<li><div class="info">- 20 noms et numéros d'appelants</div></li>
-<li><div class="info">- Interphone / Transfert d'appel entre combinés</div></li>
-<li><div class="info">- Mémoire pour 10 numéros appelés</div></li>
-<li><div class="info">- Jusqu'à 10 hrs de parole / 200 hrs de veille (valeurs approx.)</div></li>
+<li><div class="info">- Directory for 50 names and numbers</div></li>
+                                                        <li><div class="info">- Mode ECO</div></li>
+                                                        <li><div class="info">- Retro-lighting</div></li>
+                                                        <li><div class="info">- Hands-free phone via speaker</div></li>
+                                                        <li><div class="info">- 20 caller names and numbers</div></li>
+                                                        <li><div class="info">- Interphone / call forwarding between devices</div></li>
+                                                        <li><div class="info">- Memory for 10 calling numbers</div></li>
 """>
-<phoneGearT202Desc "Pack Duo : 2 x Téléphone numérique sans fil DECT">
+<phoneGearT202Desc "Pack Duo : 2 x Cordless DECT phone">
 <phoneGearT202Config """
-<li><div class="info">- Répertoire pour 50 noms et numéros</div></li>
+<li><div class="info">- Directory for 50 names and numbers</div></li>
                                                         <li><div class="info">- Mode ECO</div></li>
-                                                        <li><div class="info">- Afficheur rétro-éclairé</div></li>
-                                                        <li><div class="info">- Téléphone mains-libres via haut-parleur</div></li>
-                                                        <li><div class="info">- 20 noms et numéros d'appelants</div></li>
-                                                        <li><div class="info">- Interphone / Transfert d'appel entre combinés</div></li>
-                                                        <li><div class="info">- Mémoire pour 10 numéros appelés</div></li>
-                                                        <li><div class="info">- Jusqu'à 10 hrs de parole / 200 hrs de veille (valeurs approx.)</div></li>
+                                                        <li><div class="info">- Retro-lighting</div></li>
+                                                        <li><div class="info">- Hands-free phone via speaker</div></li>
+                                                        <li><div class="info">- 20 caller names and numbers</div></li>
+                                                        <li><div class="info">- Interphone / call forwarding between devices</div></li>
+                                                        <li><div class="info">- Memory for 10 calling numbers</div></li>
 """>
-<phoneGearT203Desc "Pack Trio : 3 x Téléphone numérique sans fil DECT">
+<phoneGearT203Desc "Pack Trio : 3 x Cordless DECT phone">
 <phoneGearT203Config """
-<li><div class="info">- Répertoire pour 50 noms et numéros</div></li>
+<li><div class="info">- Directory for 50 names and numbers</div></li>
                                                         <li><div class="info">- Mode ECO</div></li>
-                                                        <li><div class="info">- Afficheur rétro-éclairé</div></li>
-                                                        <li><div class="info">- Téléphone mains-libres via haut-parleur</div></li>
-                                                        <li><div class="info">- 20 noms et numéros d'appelants</div></li>
-                                                        <li><div class="info">- Interphone / Transfert d'appel entre combinés</div></li>
-                                                        <li><div class="info">- Mémoire pour 10 numéros appelés</div></li>
-                                                        <li><div class="info">- Jusqu'à 10 hrs de parole / 200 hrs de veille (valeurs approx.)</div></li>
+                                                        <li><div class="info">- Retro-lighting</div></li>
+                                                        <li><div class="info">- Hands-free phone via speaker</div></li>
+                                                        <li><div class="info">- 20 caller names and numbers</div></li>
+                                                        <li><div class="info">- Interphone / call forwarding between devices</div></li>
+                                                        <li><div class="info">- Memory for 10 calling numbers</div></li>
 """>
-<phoneGearT49gDesc "Visiophone moderne et ultra performant :">
+<phoneGearT49gDesc "Modern and performing visiophone :">
 <phoneGearT49gConfig """
-<li><div class="info">- Ecran tactile 8"</div></li>
-                                                        <li><div class="info">- Technologie HD voice</div></li>
-                                                        <li><div class="info">- Appels vidéo en full HD</div></li>
-                                                        <li><div class="info">- Caméra HD 2 Mpx avec volet de fermeture</div></li>
-                                                        <li><div class="info">- Bluetooth 4.0 et wi-fi intégrés</div></li>
+<li><div class="info">- Touchscreen 8"</div></li>
+                                                        <li><div class="info">- Technology HD voice</div></li>
+                                                        <li><div class="info">- Video calls in full HD</div></li>
+                                                        <li><div class="info">- Camera HD 2 Mpx with closing mechanism</div></li>
+                                                        <li><div class="info">- Bluetooth 4.0 and wi-fi integrated</div></li>
                                                         <li><div class="info">- Ports HDMI et USB</div></li>
-                                                        <li><div class="info">- Interface intuitive</div></li>
-                                                        <li><div class="info">- Nombreuses fonctionnalités incluses</div></li>
+                                                        <li><div class="info">- Intuitive interface</div></li>
 """>
 /*----------------------------PROMO/FIBRE.HTML--------------------------------*/
 /*-----------------------------------META-------------------------------------*/
-<promoFibreMetaTitle "Promos : Fibre - Luxembourg Online">
+<promoFibreMetaTitle "Promo : Fiber - Luxembourg Online">
 /*----------------------------------------------------------------------------*/
 <promoFibreTitle """
 optical fiber offer<span style="font-size: 0.3em;" class="exponent">(1)</span>
 """>
 <promoFibreDesc """
-<span class="bold">LOL</span>FIBER 100 becomes <span class="bold">LOL</span>FIBER 200<br/>Instalation and cabling fees <span class="extra-bold">free !</span>
+<span class="bold">LOL</span>FIBER 100 becomes <span class="bold">LOL</span>FIBER 200<br/><span class="extra-bold">Free</span> installation and cabling fees!
 """>
 <promoFibreOfferTitle """<span class="uppercase">Twice the speed for the same price!</span>""">
 <promoFibreOfferDesc """
-For every new 24 month LOLFIBER 100 subscription, Luxmebourg Online will offer you double the speed<span class="exponent">(1)</span> and no charge for installation or cabling, up to an amount of:
+For every new 24 months LOLFIBER 100 subscription, Luxembourg Online will double the speed<span class="exponent">(1)</span> and offer no charge for installation or cabling, up to an amount of:
 """>
 <promoFibreOfferPrice """
 <div class="price blue">309€</div>
@@ -1217,7 +1222,7 @@ or contact us on <b>2799 0000</b>
 
 /*----------------------------PROMO/FIBRE1.HTML-------------------------------*/
 /*-----------------------------------META-------------------------------------*/
-<promoFibre1MetaTitle "Promos : Fibre - Luxembourg Online">
+<promoFibre1MetaTitle "Promo : Fiber - Luxembourg Online">
 /*----------------------------------------------------------------------------*/
 <promoFibre1Title "offre spéciale">
 <promoFibre1Desc """
@@ -1234,7 +1239,7 @@ Unfortunately the fiber optic technology is not available at your address. Luxem
 """>
 /*---------------------------DIVERS/EMPLOI.HTML-------------------------------*/
 /*-----------------------------------META-------------------------------------*/
-<diversEmploiMetaTitle "Offres d’emploi – Luxembourg Online">
+<diversEmploiMetaTitle "Job offers – Luxembourg Online">
 <diversEmploiMetaDesc """
 content="Vous êtes à la recherche d’un emploi à Luxembourg? Le domaine des télécoms vous intéresse? 
               Consultez nos offres d’emploi actuelles ou envoyez votre candidature spontanée."
@@ -1244,7 +1249,7 @@ content="offre emploi Luxembourg, stage Luxembourg, postuler au Luxembourg, offr
 """>
 /*----------------------------------------------------------------------------*/
 <diversEmploiTitle """
-Offres <b>d'emploi
+<b>Job</b> offers
 """>
 <diversEmploiDesc """
 Are you a motivated person and looking for a new challenge?<br/> We have the below posts open; maybe you might be able to join our young and dynamic team.
@@ -1337,7 +1342,7 @@ If you think you would fit in to our team, we would like to hear from you. Send 
 <diversBrochMetaTitle "Brochure – Luxembourg Online">
 /*----------------------------------------------------------------------------*/
 <diversBrochTitle """
-Notre <span class="bold">brochure</span>
+Our <span class="bold">magazine</span>
 """>
 <diversBrochDesc "Would you like to see all our offers? Have a look at our magazine or pop by and pick one up at one of our shops.">
 /*----------------------------DIVERS/CONTACT.HTML-----------------------------*/
@@ -1463,7 +1468,7 @@ Discover our story.<br>For 20 years, client satisfaction has been our primary ai
 /*-----------------------------------META-------------------------------------*/
 <diversPlanMetaTitle "Plan - Luxembourg Online">
 /*----------------------------------------------------------------------------*/
-<diversPlanTitle "Plan du site Luxembourg Online">
+<diversPlanTitle "Sitemap Luxembourg Online">
 <diversPlanSubTitle1 "Internet">
 <diversPlanSubTitle2 "Telephony">
 <diversPlanSubTitle3 "Mobile">
@@ -1472,7 +1477,7 @@ Discover our story.<br>For 20 years, client satisfaction has been our primary ai
 <diversPlanLink1 "Corporate webpage">
 /*-----------------------DIVERS/Assistance.HTML-------------------------------*/
 /*-----------------------------------META-------------------------------------*/
-<diversAssMetaTitle "Assistance - Luxembourg Online">
+<diversAssMetaTitle "Help - Luxembourg Online">
 /*----------------------------------------------------------------------------*/
 <diversAssTitle """
 Bienvenue sur l'<span class="bold">assistance Luxembourg Online</span>

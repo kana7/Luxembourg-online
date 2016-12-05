@@ -54,7 +54,12 @@
              });*/
         },
         //print foot note in the page
-        render: function () {
+        render: function (optionsParam) {
+            console.log(optionsParam);
+            if (optionsParam !== undefined){
+                console.log('test');
+                this.options = $.extend({}, this._defaults, optionsParam);
+            }
             this.buildCache();
             this.printExponent();
             this.printFootNote.call(this, this.checkOccurence());

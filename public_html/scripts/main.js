@@ -66,7 +66,16 @@ $(function () {
             var lang = $(this).attr('data-lang');
             document.l10n.requestLocales(String(lang));
             if($('.footer-note').length>0){
-                $('.footer-note').footerNote('render');
+                alert('hello');
+                $('.footer-note').footerNote('render', {
+                        'registry': [
+                            document.l10n.getSync('footNoteInternetOffer1'),
+                            document.l10n.getSync('footNoteInternetOffer2'),
+                            document.l10n.getSync('footNoteInternetOffer3'),
+                            document.l10n.getSync('footNoteInternetOffer4'),
+                            document.l10n.getSync('footNoteInternetOffer5')
+                        ]
+                    });
             }
         });
     }

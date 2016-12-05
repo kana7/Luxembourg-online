@@ -37,8 +37,13 @@ var encartDispoTemplate = '<div class="phone-12 tab-6 desk-3">' +
         '</div>' +
         '</div>' +
         '</div>';
-
+var supportedLang = {
+    "fr": "langFr",
+    "en": "langGb",
+    "de": "langDe"
+};
 var temp;
+var langString;
 // ON PAGE READY
 $(function () {
     MenuMobile.init();
@@ -61,23 +66,36 @@ $(function () {
     if (jQuery().numeric) {
         $(".numeric").numeric();
     }
-    if ($('#languageSelector')) {
-        $('#languageSelector').find('a').on('click', function () {
-            var lang = $(this).attr('data-lang');
-            document.l10n.requestLocales(String(lang));
-            if ($('.footer-note').length > 0) {
-                $('.footer-note').footerNote('render', {
-                    'registry': [
-                        document.l10n.getSync('footNoteInternetOffer1'),
-                        document.l10n.getSync('footNoteInternetOffer2'),
-                        document.l10n.getSync('footNoteInternetOffer3'),
-                        document.l10n.getSync('footNoteInternetOffer4'),
-                        document.l10n.getSync('footNoteInternetOffer5')
-                    ]
-                });
-            }
-        });
-    }
+    document.l10n.ready(function () {
+        if ($('#languageSelector')) {
+            $('#languageSelector').empty();
+            langString = '<button><span data-l10n-id="' + supportedLang[document.l10n.supportedLocales[0]] + '"></span><span class="icon-right-arrow"></span></button>' +
+                    '<ul class="drop">';
+            $.each(supportedLang, function (index, value) {
+                if (index != document.l10n.supportedLocales[0]) {
+                    langString += '<li data-lang="' + index + '"><span data-l10n-id="' + value + '"></span></li>';
+                }
+            });
+            langString += '</ul>';
+            $('#languageSelector').append(langString);
+            $('#languageSelector').on('click', 'li', function () {
+                var lang = $(this).attr('data-lang');
+                document.l10n.requestLocales(String(lang));
+                if ($('.footer-note').length > 0) {
+                    $('.footer-note').footerNote('render', {
+                        'registry': [
+                            document.l10n.getSync('footNoteInternetOffer1'),
+                            document.l10n.getSync('footNoteInternetOffer2'),
+                            document.l10n.getSync('footNoteInternetOffer3'),
+                            document.l10n.getSync('footNoteInternetOffer4'),
+                            document.l10n.getSync('footNoteInternetOffer5')
+                        ]
+                    });
+                }
+            });
+        }
+        getTraduction();
+    });
 });
 
 function getTraduction() {
@@ -85,7 +103,7 @@ function getTraduction() {
     for (i = 0; i < nodes.length; ++i) {
         document.l10n.localizeNode(nodes[i]);
     }
-    
+
 }
 
 function getURLParameter(name) {
@@ -156,14 +174,12 @@ var DropDown = function (element) {
 var HeaderDropDown = function (element) {
     var $document = $('html');
     var $element = $(element);
-    var $button = $element.find('button');
-    var $drop = $element.find('.drop');
     var flag = 1;
     var init = function () {
         _bindEvents();
     };
     var _bindEvents = function () {
-        $button.on('click', function () {
+        $element.on('click', 'button', function () {
             _toggleDrop();
         });
         $document.on('click', function () {
@@ -177,19 +193,19 @@ var HeaderDropDown = function (element) {
     };
     var _toggleDrop = function () {
         flag = "0";
-        if ($button.hasClass('is-active')) {
+        if ($element.find('button').hasClass('is-active')) {
             _closeDrop();
         } else {
             _openDrop();
         }
     };
     var _openDrop = function () {
-        $button.addClass('is-active');
-        $drop.addClass('is-visible');
+        $element.find('button').addClass('is-active');
+        $element.find('.drop').addClass('is-visible');
     };
     var _closeDrop = function () {
-        $button.removeClass('is-active');
-        $drop.removeClass('is-visible');
+        $element.find('button').removeClass('is-active');
+        $element.find('.drop').removeClass('is-visible');
     };
 
     return{

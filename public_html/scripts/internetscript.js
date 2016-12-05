@@ -164,7 +164,7 @@ function printOffer(offer) {
             '<li><span class="icon-check-ico"></span><span data-l10n-id="internetTarifsDataLolCall"></span></li>' +
             '<li data-fnote="[1,2]"><span class="icon-check-ico"></span><span data-l10n-id="euFixe"></span></li>' +
             '<li><span class="icon-check-ico"></span>LOL CLOUD 5GB</li>' +
-            '<li><span class="icon-check-ico"></span><a href="lolnow.html">LOLNOW</a></li>' +
+            '<li><span class="icon-check-ico"></span><a href="lolnow.html">Option LOLNOW</a></li>' +
             '</ul>' +
             '</li>' +
             '</ul>' +
@@ -424,7 +424,7 @@ function checkDispo(homeId, isLOLCable) {
                             if ($(obj.Service[2]).length <= 0 && $(obj.Service[5]).length <= 0) { //SI PAS FIBRE
                                 $('.k100+.promos-link.persist').hide();
                                 $('.k100').find('.offer-price').replaceWith(printPrice(offers['100-half']));
-                                $(insertPromoLink(null, null, null, "promo : 6 mois à moitié prix")).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                                $(insertPromoLink(null, null, null, "<span data-l10n-id='promoHalf'>promo : 6 mois à moitié prix</span>")).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                                 $(insertPromoLink(ab[2][0], ab[2][1], homeId, "<span data-l10n-id='promoInstall'>promo : installation offerte</span>")).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500); //PRINT LIEN VERS PAGE VDSL
                             } else { //SI FIBRE
                                 $('.k100+.promos-link.persist').attr('href', '//www.internet.lu/promos/fibre.html#' + homeId + ';' + isLOLCable);
@@ -684,7 +684,7 @@ $(function () {
         if (homeId != "") {
             window.location.href = "/internet/offres.html#" + $("input[name=zipcode]").val() + ";" + $("select[name=ville]").val() + ";" + $("select[name=rue]").val() + ";" + $("select[name=numero]").val() + ";" + isLOLCable;
         } else {
-            alert('Entrez votre numéro de rue pour continuer...');
+            alert(document.l10n.getSync('EnterNum'));
         }
         getTraduction();
     });
@@ -701,7 +701,7 @@ $(function () {
             }
             checkDispo($("select[name=numero]").val(), isLOLCable);
         } else {
-            alert('Entrez votre numéro de rue pour continuer...');
+            alert(document.l10n.getSync('EnterNum'));
         }
         getTraduction();
     });

@@ -81,6 +81,7 @@ $(function () {
             $('#languageSelector').append(langString);
             $('#languageSelector').on('click', 'li', function () {
                 var lang = $(this).attr('data-lang');
+                setTraduction(lang);
                 if ($('.footer-note').length > 0) {
                     $('.footer-note').footerNote('render', {
                         'registry': [

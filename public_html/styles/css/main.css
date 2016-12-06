@@ -5958,7 +5958,7 @@ h2.contact-title {
     background: none;
     border: none;
     padding: 9px 10px;
-    width: 105px;
+    width: 125px;
     border-bottom: 1px solid #003a75; }
     .header-dropdown button span[class^="icon-"] {
       margin-right: 0;
@@ -5973,13 +5973,14 @@ h2.contact-title {
   .header-dropdown .drop {
     display: none;
     position: absolute;
-    width: 105px;
+    width: 125px;
     z-index: 3;
     background-color: #004185;
     border-top: 1px solid #004994; }
     .header-dropdown .drop li {
       margin: 0;
-      display: block; }
+      display: block;
+      cursor: pointer; }
     .header-dropdown .drop a {
       display: block; }
     .header-dropdown .drop.is-visible {

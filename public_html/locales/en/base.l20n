@@ -72,7 +72,7 @@ Language<span class="icon-right-arrow"></span>
 <dispoOnRequest "Available on demand.">
 <footNoteOptionPay "Additional option and charge">
 <footNoteConditionShop "See store conditions">
-<footNoteConditionShop1 "See details and store conditions">
+<footNoteConditionShop1 "See details and store for conditions">
 <footNoteDispo "Check for availability">
 <footNoteInternetOffer1 "Bandwidth speeds (upload and download) are displayed as maximum values. True values can vary and are subject to each installation. ">
 <footNoteInternetOffer2 "All calls except special numbers (800, 900, televoting, premium calls, etc.). ">
@@ -184,7 +184,7 @@ Mobile <span class="icon-right-arrow"></span>
 """>
 <sliderLolvisioTitle "Forget about the distance!">
 <sliderSub """
-    <span class="normal">No need to move,</span>
+    <span class="normal">From the comfort on your home,</span>
     <br/>order online !
 """>
 <sliderSubLink "See the demo">
@@ -250,7 +250,7 @@ Unfortunalty, we can't check the availability for your address. <br />Please cal
 <aboTel "Landline">
 <natCall "Domestic landline calls">
 <mobileCall "Calls to LOL mobiles">
-<euFixe "120 minutes to European local numbers">
+<euFixe "120 minutes to European landline numbers">
 <otherOffers "See our other offers">
 <promoInstall "offer: free installation">
 <promoSpeed "OFFER: SPEED X2">
@@ -281,7 +281,7 @@ offer: free installation<br/>+ speed x2
 Discover all <strong>our exciting offers!</strong>
 """>
 <internetAccueilOfferDesc """
-Specialising in Internet access for the past 20 years, we are constantly bringing high performnace solutions with attractive deals to the market. Whether you are a simple internet customer or a 24/7 connected social media user, one of our offers will suit your needs.
+Specialising in Internet access for the past 20 years, we are constantly bringing high performance solutions with attractive deals to the market. Whether you are a simple internet customer or a 24/7 connected social media user, one of our offers will suit your needs.
 """>
 <internetAccueilOfferLink "Check our internet offers">
 /*----------------------------------------------------------------------------*/
@@ -290,8 +290,8 @@ Specialising in Internet access for the past 20 years, we are constantly bringin
 <strong>Fiber technology</strong>The internet access revolution !
 """>
 <internetAccueilFibreDesc """
-Connsidered as the technology of the future, optical fiber is becoming mainstream in Luxembourg.
-Reliable and efficient, users benefit from the following advantages: stability, speed, superior reception. Fiber technology knows no limits!
+Considered as the technology of the future, optical fiber is becoming mainstream in Luxembourg.
+Reliable and efficient, users benefit from the following advantages: stability, speed, superior bandwidth. Fiber technology knows no limits!
 """>
 <internetAccueilFibreLink "More on fiber technology">
 /*----------------------------------------------------------------------------*/
@@ -299,7 +299,7 @@ Reliable and efficient, users benefit from the following advantages: stability, 
 <internetAccueilGearTitle """
 <strong>Our Hardware</strong>The best quality choice!
 """>
-<internetAccueilGearDesc "To guarantee your best internet experience, Luxembourg Online trusts in the multiple awards winning products from AVM.">
+<internetAccueilGearDesc "To guarantee your best internet experience, Luxembourg Online trusts in the multiple award-winning products from AVM.">
 <internetAccueilGearLink "Hardware specifications">
 /*----------------------------------------------------------------------------*/
 /*------------------------INTERNET/PARRAINAGE.HTML----------------------------*/
@@ -323,7 +323,7 @@ To take advantage of our sponsor off, download the form here :
 /*----------------------------------------------------------------------------*/
 /*--------------------------------SECTION-------------------------------------*/
 <internetOnTitle """<strong>Enjoy immediate Internet access!</strong>""">
-<internetOnDesc """Avec l'option NOW, <strong>profitez d’Internet dès la signature du contrat !</strong>En attendant que votre connexion soit activée chez vous, nous vous fournissons <strong>gratuitement un hotspot</strong> vous permettant d’avoir <strong>un accès Internet immédiat</strong> à votre domicile.""">
+<internetOnDesc """With our NOW option, there’s no waiting to get online !</strong>As soon as your contract is signed and while you are waiting for the installation, we will provide you with a hotspot free of charge, allowing you to access the internet straight away.""">
 /*----------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------*/
 /*---------------------INTERNET/TARIFS_DETAILLES.HTML-------------------------*/
@@ -339,7 +339,7 @@ Our tariffs <span class="bold">in detail</span>
 /*--------------------------------TABLEAU-------------------------------------*/
 <internetTarifsDataZone "Fixed line national Telephony">
 <internetTarifsDataZone1 "Unlimited calls to mobile LOL">
-<internetTarifsDataZone2 "EU 120 (120 minutes to european fixed lines)">
+<internetTarifsDataZone2 "EU 120 (120 minutes to European fixed lines)">
 <internetTarifsDataActiveService "Service activation">
 <internetTarifsDataInstall "Service activation">
 <internetTarifsDataModem "Modem">
@@ -569,7 +569,7 @@ Financing options so that you can <strong>manage your budget !</strong>
 <mobileAccueilFinDesc "On purchase of your mobile phone, Luxembourg Online allows an easy repayment method over 24 months and will let you choose your payment solution to your convenience. Luxembourg Online provides solutions for everyone!">
 <mobileAccueilMatTitle """
 <strong>Samsung Galaxy S7</strong>
-Push into the smartphone limits !
+Pushing into the smartphone limits !
 """>
 <mobileAccueilMatDesc "Esthetique, slim, powerful; Samsung‘s latest innovation is now available at Luxembourg Online! With the Galaxy S7, experience new dimensions and go beyond your imits.">
 /*-----------------------------MOBILE/ABO.HTML----------------------------*/
@@ -820,7 +820,7 @@ You<br>are<br>in
 <mobileGearTitle6 "Processors">
 <mobileGearLabel1 "Size:">
 <mobileGearLabel2 "Weight:">
-<mobileGearLabel3 "Carte SIM:">
+<mobileGearLabel3 "SIM card:">
 <mobileGearLabel4 "OS:">
 <mobileGearLabel5 "Colours:">
 <mobileGearLabel6 "Diagonally:">
@@ -886,13 +886,13 @@ content="Abonnement TV, abonnement télévision, offres TV"
 Watching TV<br/> has never been so intense!
 """>
 <tvAccueilDesc """
-With LOLTV, the choice is yours: + 100 TV channels, + 50 HD channels, + 40 radio stations, and options for Netflix<span class="exponent">(1)</span> and Youtube<class="exponent">(1)</span><br/>
+With LOLTV, the choice is yours: + 100 TV channels, + 50 HD channels, + 40 radio stations, and options for Netflix<span class="exponent">(1)</span> and Youtube<br/>
                                 <span style="margin: 10px 0 0; display: inline-block;" class="footer-note">(1) Additional option and charge</span>
 """>
 <tvAccueilGearTitle """
 <strong>High performance</strong> Devices! 
 """>
-<tvAccueilGearDesc "For our LOLTV service, we have chosen the latest technologie. As a rental device, or through purchase, take advantage of this high performing decoder and see the big picture!">
+<tvAccueilGearDesc "For our LOLTV service, we have chosen the latest technology. As a rental device, or through purchase, take advantage of this high performing decoder and see the big picture!">
 /*---------------------------TV/CHANNELS.HTML---------------------------------*/
 /*-----------------------------------META-------------------------------------*/
 <tvChannelMetaTitle "TV : Channel list – Luxembourg Online">
@@ -953,13 +953,13 @@ Watching TV<br/> has never been so intense!
 <tvOfferChannelTitle """
 <strong>A wide range</strong> of channels
 """>
-<tvOfferChannelDesc "LOLTV, we at Luxembourg Online are providing over 100 channels. Bringing you the best in variation and language selection, including block buster movies, information channels, cultural programmes, kids entertainment...something for everyone!">
+<tvOfferChannelDesc "With LOLTV, Luxembourg Online are providing over 100 channels. Bringing you the best in variation and language selection, including block buster movies, information channels, cultural programmes, kids entertainment...something for everyone!">
 <tvOfferChannelLink "Applications directly accessible from your TV">
 <tvOfferAppTitle """
 Applications <strong>directly accessible</strong> from your TV
 """>
 <tvOfferAppDesc """
-Broadcast over the internet, the LOLTV product is ready for the future and offers multimedia solutions not available via tradition televion. In addition to the acces of standard television channels, with LOLTV you can access <span class="red extra-bold">Netflix</span><span class="exponent">(1)</span> and <span class="red extra-bold">Youtube</span> straight from your TV.
+Broadcast over the internet, the LOLTV product is ready for the future and offers multimedia solutions not available via traditional television. In addition to the acces of standard television channels, with LOLTV you can access <span class="red extra-bold">Netflix</span><span class="exponent">(1)</span> and <span class="red extra-bold">Youtube</span> straight from your TV.
                                 <span style="font-size: 12px; color: #818181; display: block; padding-top: 10px;">(1) Additional option and charge.</span>
 """>
 <tvOfferIntTitle """
@@ -991,7 +991,7 @@ content="Profitez du meilleur de la télévision avec le décodeur TV Minix, éq
 <tvGearTitle """
 TV Minix Decoder <span class="orange" style="font-size:40px;">free <strong>installation !</strong></span>
 """>
-<tvGearAchat "One off purchage 159€ (12 month term)">
+<tvGearAchat "One off purchase 159€ (12 month term)">
 <tvGearLocation """
 <strong>Additional Decoders:</strong><br />
 Decoder rental 5,50€/Month (24 Month Contract)</br>
@@ -1028,11 +1028,11 @@ content="Forfait Internet telephone, abonnement telephone fixe,  téléphonie Lu
 <span class="extra-bold">LOL</span>VISIO :<br/><span class="extra-bold">Face-to-face has never been easier!</span>
 """>
 <telAccueilVisioDesc """
-<span class="extra-bold">LOL</span>VISIO is the newest generation of telephones at Luxembourg Online. It combines classic telephone features with a modern camera phone.
+<span class="bold">LOL</span>VISIO is the newest generation of telephones provided by Luxembourg Online. It combines classic telephone features with a modern camera phone.
 """>
 <telAccueilVisioLink "Show the offer">
 <telAccueilGearTtitle """
-A selection of telephones <strong>adapted to your communications needs!</strong>
+A selection of telephones <strong>adapted to your communication needs!</strong>
 """>
 <telAccueilGearDesc "So that you can easily communicate, Luxembourg Online has selected a range of high quality and fashionable telephones. Have a browse and select your favourite one.">
 <telAccueilGearLink "Our telephones">
@@ -1089,13 +1089,13 @@ Allemagne, Autriche, Belgique, Bulgarie, Chypre, Croatie, Danemark, Espagne, Est
 <span class="extra-bold">LOL</span>VISIO :<br/><span class="extra-bold">Forget about the distance !</span>
 """>
 <telVisioDesc """
-<span class="extra-bold">LOL</span>VISIO is the newest generation of fixed line telephones from Luxembourg ONline. Use this easy system which combines the classic telephone and the modern video calling.
+<span class="extra-bold">LOL</span>VISIO is the newest generation of fixed line telephones from Luxembourg Online. Use this top of the range product which combines a classic telephone and the modern video calling.
 """>
 <telVisioComTitle """
 <strong>A closer experience</strong> when communicating
 """>
 <telVisioComDesc """
-Seeing someone speaking and observing their body language makes conversations much easier. This is why Luxembourg Online opted for this product <strong>unique in the Grand-Duchy</strong>. You will see your contact on the screen, and it will be as if they were next to you.
+Seeing someone speaking and observing their body language makes conversations much easier. This is why Luxembourg Online opted for this product <strong>unique in the Grand-Duchy</strong>. You will see your contact on the screen, and it will be as if they were in front of you.
 """>
 <telVisioGearTitle """
 The <strong>new generation</strong> telephone
@@ -1108,12 +1108,12 @@ Combining simplicity and state-of-the-art, Luxembourg Online‘s <span class="ex
 <strong>The same tariff,</strong> without additional cost
 """>
 <telVisioTarifDesc """
-Using a <span class="extra-bold">LOL</span>VISIO does not incure extra costs. Whether in audio or video mode, the tarif will stay the same.In addition, with a landline subscription your domestic and LOL mobile phones calls are free and unlimited. On top of that, the package allows 120 minutes to european landlines. <strong>Chat and talk to your hearts content!</strong>
+Using a <span class="extra-bold">LOL</span>VISIO does not incure extra costs. Whether in audio or video mode, the tarif will stay the same. In addition, with a landline subscription your domestic and LOL mobile phones calls are free and unlimited. On top of that, the package allows 120 minutes to European landlines. <strong>Chat and talk to your hearts content !</strong>
 
 """>
 <telVisioVideoTitle """<strong>An easy and practical telephone</strong>""">
 <telVisioVideoDesc """
-The <span class="bold">LOL</span>VISIO telephone is very easy to use and can suit any user.<br/> To place an audio or video call, is no different to a traditional phone. Dial the phone number and lift the handset. That‘s it! Have a look at our demonstration video or come to our shop and test it for yourself.
+The <span class="bold">LOL</span>VISIO telephone is very easy to use and is very user-friendly.<br/>To place an audio or video call, is no different to a traditional phone. Dial the phone number and lift the handset. That‘s it! Have a look at our demonstration video or come to our shop and test it for yourself.
 """>
 <telVisioOfferTitle """
 Call us on <br/><span style="font-size: 1.6em; line-height: 60px;">2799 0000</span><br/>for more information !
@@ -1125,7 +1125,7 @@ Call us on <br/><span style="font-size: 1.6em; line-height: 60px;">2799 0000</sp
 <strong>Unlimited calls</strong> to LOL mobiles
 """>
 <telVisioOfferTable3 """
-<strong>120 minutes</strong> to the fixed lines of Europe<span class="exponent">(2)</span>
+<strong>120 minutes</strong> to the European landlines<span class="exponent">(2)</span>
 """>
 /*--------------------------TEL/REPONDEUR.HTML--------------------------------*/
 /*-----------------------------------META-------------------------------------*/
@@ -1150,7 +1150,7 @@ Call us on <br/><span style="font-size: 1.6em; line-height: 60px;">2799 0000</sp
 /*-----------------------------------META-------------------------------------*/
 <phoneTarifsMetaTitle "Telephony : Tariffs – Luxembourg Online">
 /*----------------------------------------------------------------------------*/
-<phoneTarifsTitle """Chat and talk<br/>to your hearts content. !""">
+<phoneTarifsTitle """Chat and talk<br/>to your hearts content!""">
 <phoneTarifsDesc """A fixed landline is<br/><strong>included in your internet subscription</strong>""">
 <phoneTarifsTableTitle "Calls not included in the price plan:">
 <phoneTarifsTableHeader1 "Call type">
@@ -1159,8 +1159,8 @@ Call us on <br/><span style="font-size: 1.6em; line-height: 60px;">2799 0000</sp
 <phoneTarifsTableFixed "National landline">
 <phoneTarifsTableMobile "National mobile">
 <phoneTarifsLink "All our international tariffs">
-<phoneTarifsTableFoot1 "Peak : Monday to friday from 8:00 to 19:00">
-<phoneTarifsTableFoot2 "Off-peak : Monday to friday from 19:00 à 8:00  |  Weekends and holidays">
+<phoneTarifsTableFoot1 "Peak : Monday to Friday from 8:00 to 19:00">
+<phoneTarifsTableFoot2 "Off-peak : Monday to Friday from 19:00 à 8:00  |  Weekends and holidays">
 <phoneTarifsLink1 "To view the old tariffs, see the price list">
 /*---------------------------TEL/EQUIPEMENTS.HTML-----------------------------*/
 <phoneGearT201Desc "Cordless DECT phone">

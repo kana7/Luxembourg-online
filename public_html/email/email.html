@@ -14,6 +14,8 @@
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
+       <link rel="localization" href="../locales/manifest.json"/>
+        <script defer src="../locales/l20n.js"></script>
     </head>
 
     <body>
@@ -27,62 +29,61 @@
         </div>
         <nav class="mobile-side-menu">
             <ul class="menu">
-                <li class="menu-item link"><a href="../index.htm">Accueil</a></li>
-                <li class="menu-item" data-id='internet'>Internet<span class="icon-right-arrow"></span></li>
-                <li class="menu-item" data-id='telephone'>Téléphonie <span class="icon-right-arrow"></span></li>
-                <li class="menu-item" data-id='tv'>TV <span class="icon-right-arrow"></span></li>
-                <li class="menu-item" data-id='mobile'>Mobile<span class="icon-right-arrow"></span></li>
-                <li class="menu-item link"><a href="../promos/fibre.html">Promos</a></li>
+                <li class="menu-item link"><a href="index.htm" data-l10n-id="menuLinkHome">Accueil</a></li>
+                <li class="menu-item" data-id='internet' data-l10n-id="menuLinkInternet">Internet<span class="icon-right-arrow"></span></li>
+                <li class="menu-item" data-id='telephone' data-l10n-id="menuLinkPhone">Téléphonie <span class="icon-right-arrow"></span></li>
+                <li class="menu-item" data-id='tv' data-l10n-id="menuLinkTv">TV <span class="icon-right-arrow"></span></li>
+                <li class="menu-item" data-id='mobile' data-l10n-id="menuLinkMobile">Mobile<span class="icon-right-arrow"></span></li>
+                <li class="menu-item link"><a href="../promos/fibre.html" data-l10n-id="menuLinkCoupon">Promos</a></li>
+                <li class="menu-item link commande"><a href="http://shop.internet.lu/inscription/shop/offres.html"><span class="icon-orders"></span><span data-l10n-id="menuLinkOnlineOrder">Inscription en ligne</span></a></li>
                 <li class="sous-nav">
                     <ul class="menu">
-                        <li class="menu-item link"><a href="../divers/assistance.html">Assistance</a></li>
+                        <li class="menu-item link"><a href="../divers/assistance.html" data-l10n-id="menuLinkAssistance">Assistance</a></li>
                         <li class="menu-item link"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOLCLOUD</a></li>
-                        <!--<li class="menu-item link"><a href="../divers/news.html">Actualités</a></li>-->
-                        <li class="menu-item link"><a href="../divers/brochure.html">Brochure</a></li>
-                        <li class="menu-item link"><a href="../divers/propos.html">À propos</a></li>
-                        <li class="menu-item link"><a href="../divers/contact.html">Contact</a></li>
-                        <li class="menu-item link"><a href="../divers/emploi.html">Offres d'emploi</a></li>
-                        <li class="menu-item link"><a href="../divers/plan.html">Plan du site</a></li>
+                        <li class="menu-item link"><a href="../divers/brochure.html" data-l10n-id="menuLinkMag">Brochure</a></li>
+                        <li class="menu-item link"><a href="../divers/propos.html" data-l10n-id="menuLinkAbout">À propos</a></li>
+                        <li class="menu-item link"><a href="../divers/contact.html" data-l10n-id="menuLinkContact">Contact</a></li>
+                        <li class="menu-item link"><a href="../divers/emploi.html" data-l10n-id="menuLinkJob">Offres d'emploi</a></li>
+                        <li class="menu-item link"><a href="../divers/plan.html" data-l10n-id="menuLinkSitemap">Plan du site</a></li>
                     </ul>
                 </li>
             </ul>
             <div class="menu-links-wrapper">
                 <ul class="menu-links" id="internet">
                     <li class="menu-item back"><span class="icon-right-arrow"></span>Internet</li>
-                    <li class="menu-item"><a href="../internet/accueil.html">Accueil Internet</a></li>
-                    <li class="menu-item"><a href="../internet/offres.html">Nos offres</a></li>
-                    <li class="menu-item"><a href="../internet/equipements.html">Nos équipements</a></li>
+                    <li class="menu-item"><a href="../internet/accueil.html" data-l10n-id="menuLinkInternetHome">Accueil Internet</a></li>
+                    <li class="menu-item"><a href="../internet/offres.html" data-l10n-id="menuLinkOffers">Nos offres</a></li>
+                    <li class="menu-item"><a href="../internet/equipements.html" data-l10n-id="menuLinkGear">Nos équipements</a></li>
                     <li class="menu-item"><a href="../internet/optionnow.html">Option NOW</a></li>
-                    <li class="menu-item"><a href="../internet/abonnement.html">Abonnez-vous</a></li>
+                    <li class="menu-item"><a href="../internet/abonnement.html" data-l10n-id="menuLinkSub">Abonnez-vous</a></li>
                 </ul>
             </div>
             <div class="menu-links-wrapper">
                 <ul class="menu-links" id="telephone">
-                    <li class="menu-item back"><span class="icon-right-arrow"></span>Téléphonie</li>
-                    <li class="menu-item"><a href="../telephonie/accueil.html">Accueil Téléphonie</a></li>
-                    <li class="menu-item"><a href="../telephonie/tarifs.html">Nos tarifs</a></li>
+                    <li class="menu-item back"><span class="icon-right-arrow"></span><span data-l10n-id="menuLinkPhone">Téléphonie</span></li>
+                    <li class="menu-item"><a href="../telephonie/accueil.html" data-l10n-id="menuLinkPhoneHome">Accueil Téléphonie</a></li>
+                    <li class="menu-item"><a href="../telephonie/tarifs.html" data-l10n-id="menuLinkPrices">Nos tarifs</a></li>
                     <li class="menu-item"><a href="../telephonie/lolvisio.html">LOLVISIO</a></li>
-                    <li class="menu-item"><a href="../telephonie/equipements.html">Nos téléphones</a></li>
-                    <li class="menu-item"><a href="../telephonie/abonnement.html">Abonnez-vous</a></li>
+                    <li class="menu-item"><a href="../telephonie/equipements.html " data-l10n-id="menuLinkOurPhones">Nos téléphones</a></li>
+                    <li class="menu-item"><a href="../telephonie/abonnement.html" data-l10n-id="menuLinkSub">Abonnez-vous</a></li>
                 </ul>
             </div>
             <div class="menu-links-wrapper">
                 <ul class="menu-links" id="tv">
-                    <li class="menu-item back"><span class="icon-right-arrow"></span>TV</li>
-                    <li class="menu-item"><a href="../tv/accueil.html">Accueil TV</a></li>
-                    <li class="menu-item"><a href="../tv/offres.html">Notre offre TV</a></li>
-                    <li class="menu-item"><a href="../tv/equipements.html">Nos équipements</a></li>
-
-                    <li class="menu-item"><a href="../tv/abonnement.html">Abonnez-vous</a></li>
+                    <li class="menu-item back"><span class="icon-right-arrow"></span><span data-l10n-id="menuLinkTv">TV</span></li>
+                    <li class="menu-item"><a href="../tv/accueil.html" data-l10n-id="menuLinkTvHome">Accueil TV</a></li>
+                    <li class="menu-item"><a href="../tv/offres.html" data-l10n-id="menuLinkTvOffers">Notre offre TV</a></li>
+                    <li class="menu-item"><a href="../tv/equipements.html" data-l10n-id="menuLinkGear">Nos équipements</a></li>
+                    <li class="menu-item"><a href="../tv/abonnement.html" data-l10n-id="menuLinkSub">Abonnez-vous</a></li>
                 </ul>
             </div>
             <div class="menu-links-wrapper">
                 <ul class="menu-links" id="mobile">
-                    <li class="menu-item back"><span class="icon-right-arrow"></span>Mobile</li>
-                    <li class="menu-item"><a href="../mobile/accueil.html">Accueil Mobile</a></li>
-                    <li class="menu-item"><a href="../mobile/abonnements.html">Nos abonnements</a></li>
-                    <li class="menu-item"><a href="../mobile/equipements.html">Nos téléphones</a></li>
-                    <li class="menu-item"><a href="../mobile/abonnement.html">Abonnez-vous</a></li>
+                    <li class="menu-item back"><span class="icon-right-arrow"></span><span data-l10n-id="menuLinkMobile">Mobile</span></li>
+                    <li class="menu-item"><a href="../mobile/accueil.html" data-l10n-id="menuLinkMobileHome">Accueil Mobile</a></li>
+                    <li class="menu-item"><a href="../mobile/abonnements.html" data-l10n-id="menuLinkMobileSub">Nos abonnements</a></li>
+                    <li class="menu-item"><a href="../mobile/equipements.html" data-l10n-id="menuLinkOurPhones">Nos téléphones</a></li>
+                    <li class="menu-item"><a href="../mobile/abonnement.html" data-l10n-id="menuLinkSub">Abonnez-vous</a></li>
                 </ul>
             </div>
         </nav>
@@ -93,23 +94,24 @@
                         <div class="row">
                             <nav class="pull-left">
                                 <ul class="top-menu-header-links left">
-                                    <li class="active"><a href="/index.htm">Particuliers</a></li><!--
-                                    --><li><a href="http://www.internet.lu/business/">Business</a></li>
+                                    <li class="active"><a href="/index.htm" data-l10n-id="menuLinkPrivate">Particuliers</a></li><!--
+                                    --><li><a href="http://www.internet.lu/business/" data-l10n-id="menuLinkBusiness">Business</a></li>
                                 </ul>
                             </nav>
                             <nav class="pull-right hidden-phone hidden-tab">
                                 <ul class="top-menu-header-links right">
-                                    <li class="menu-item"><a href="../divers/assistance.html">Assistance</a></li>
+                                    <li class="menu-item"><a href="../divers/assistance.html" data-l10n-id="menuLinkAssistance">Assistance</a></li>
                                     <li class="menu-item"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOLCLOUD</a></li>
-                                    <!--<li class="menu-item"><a href="../divers/news.html">Actualités</a></li>--><li class="menu-item"><a href="../divers/brochure.html">Brochure</a></li>
-                                    <li class="menu-item"><a href="../divers/propos.html">À propos</a></li>
-                                    <li class="menu-item"><a href="../divers/contact.html">Contact</a></li>
+                                    <li class="menu-item"><a href="../divers/brochure.html" data-l10n-id="menuLinkMag">Brochure</a></li>
+                                    <li class="menu-item"><a href="../divers/propos.html" data-l10n-id="menuLinkAbout">À propos</a></li>
+                                    <li class="menu-item"><a href="../divers/contact.html" data-l10n-id="menuLinkContact">Contact</a></li>
                                 </ul>
+                                <div id="languageSelector" class="header-dropdown top-menu-header-links left">
+                                </div>
                             </nav>
                         </div>
                     </div>
                 </div>
-
                 <div id="bottom-menu-header">                    
                     <nav class="bottom-menu-header-links mobile display-phone display-tab">
                         <div class="pull-left">
@@ -135,35 +137,35 @@
                                             <div class="active-border"></div>
                                             <a href="../internet/accueil.html">
                                                 <img class="header-icon" src="../images/Icone/img/internet.png" alt="Internet" />
-                                                <div class="link">Internet</div>
+                                                <div class="link" data-l10n-id="menuLinkInternet">Internet</div>
                                             </a>
                                         </li><!--
                                         --><li>
                                             <div class="active-border"></div>
                                             <a href="../telephonie/accueil.html">
                                                 <img class="header-icon" src="../images/Icone/img/telephonie.png" alt="Téléphonie" />
-                                                <div class="link">Téléphonie</div>
+                                                <div class="link" data-l10n-id="menuLinkPhone">Téléphonie</div>
                                             </a>
                                         </li><!--
                                         --><li>
                                             <div class="active-border"></div>
                                             <a href="../tv/accueil.html">
                                                 <img class="header-icon" src="../images/Icone/img/tv.png" alt="Tv" />
-                                                <div class="link">TV</div>
+                                                <div class="link" data-l10n-id="menuLinkTv">TV</div>
                                             </a>
                                         </li><!--
                                         --><li>
                                             <div class="active-border"></div>
                                             <a href="../mobile/accueil.html">
                                                 <img class="header-icon" src="../images/Icone/img/mobile.png" alt="Mobile" />
-                                                <div class="link">Mobile</div>
+                                                <div class="link" data-l10n-id="menuLinkMobile">Mobile</div>
                                             </a>
                                         </li><!--
                                         --><li>
                                             <div class="active-border"></div>
                                             <a href="../promos/fibre.html">
                                                 <img class="header-icon" src="../images/Icone/img/promos.png" alt="Promos" />
-                                                <div class="link">Promos</div>
+                                                <div class="link" data-l10n-id="menuLinkCoupon">Promos</div>
                                             </a>
                                         </li>
                                     </ul>
@@ -235,7 +237,7 @@
                                         <input type="hidden" name="SqlDB" value="OMS2">  
                                         <div class="clearfix">
                                             <div class="phone-4 input-left">
-                                                <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
+                                                <input type="text" name="xuser" placeholder="Nom d'utilisateur" autofocus/>
                                             </div>
                                             <div class="phone-4 ">
                                                 <input type="password" name="xpw" placeholder="Mot de passe"/>
@@ -250,7 +252,7 @@
                                         <input type="hidden" name="SqlDB" value="LOLShop">  
                                         <div class="clearfix">
                                             <div class="phone-4 input-left">
-                                                <input type="text" name="_Username" placeholder="Nom d'utilisateur"/>
+                                                <input type="text" name="_Username" placeholder="Nom d'utilisateur" autofocus/>
                                             </div>
                                             <div class="phone-4 ">
                                                 <input  type="password" name="_Password" placeholder="Mot de passe"/>
@@ -265,7 +267,7 @@
                                         <input type="hidden" name="SqlDB" value="OHPS">  
                                         <div class="clearfix">
                                             <div class="phone-4 input-left">
-                                                <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
+                                                <input type="text" name="xuser" placeholder="Nom d'utilisateur" autofocus/>
                                             </div>
                                             <div class="phone-4 ">
                                                 <input  type="password" name="xpw" placeholder="Mot de passe"/>
@@ -341,7 +343,7 @@
                                     <span class="icon-phone-icone"></span><a href="tel://2799 0000">2799 0000</a>
                                 </li>
                                 <li>
-                                    <span class="icon-clock-icone"></span>Lu-Sa: 9h00-18h00
+                                    <span class="icon-clock-icone"></span><span data-l10n-id="mondaySaturday">Lu-Sa: 9h00-18h00</span>
                                 </li>
                                 <li>
                                     <span class="icon-internet-ico"></span><a href="../divers/contact.html#demande_infos_commerciales" target="_blank">commercial@internet.lu</a>
@@ -387,7 +389,7 @@
                                         <li><a href="../tv/offres.html">Notre offre</a></li>
 
                                         <li><a href="../tv/equipements.html">Nos équipements</a></li>
-                                        
+
                                     </ul>
                                 </nav>
                             </div>
@@ -423,7 +425,7 @@
             </footer>
         </div>
         <!--              ./FOOTER               -->
-
+        <script type="text/javascript" src="../scripts/vendor/js.cookie.js"></script>
         <script src="../scripts/vendor/jquery.min.js"></script>
         <script src="../scripts/main.js"></script>
         <script>
@@ -432,7 +434,7 @@
                     $('.client-menu>li[data-id]').removeClass('active');
                     $(this).addClass('active');
                     $('.pannel-forms').find('form').removeClass('is-visible');
-                    $('#'+$(this).attr('data-id')).addClass('is-visible');
+                    $('#' + $(this).attr('data-id')).addClass('is-visible');
                 });
             });
         </script>

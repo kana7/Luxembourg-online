@@ -13,7 +13,7 @@
   margin-top: 20px;
   text-align: left;
   color: #818181; }
-  .footer-note > span {
+  .footer-note > span:not([data-l10n-id]) {
     display: block; }
   .footer-note .exponent {
     display: inline-block;

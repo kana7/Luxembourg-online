@@ -21,7 +21,7 @@
 
     // Create the plugin constructor
     function Plugin(element, options) {
-
+        
         this._name = pluginName;
         this.element = element;
         this._defaults = $.fn.footerNote.defaults;
@@ -54,7 +54,10 @@
              });*/
         },
         //print foot note in the page
-        render: function () {
+        render: function (optionsParam) {
+            if (optionsParam !== undefined){
+                this.options = $.extend({}, this._defaults, optionsParam);
+            }
             this.buildCache();
             this.printExponent();
             this.printFootNote.call(this, this.checkOccurence());
@@ -77,7 +80,7 @@
         checkOccurence: function () {
             var occurence = [];
             this.$infos.each(function () {
-                if (!$(this).is(':hidden')){
+                if (!$(this).is(':hidden')) {
                     $.each($(this).data('fnote'), function (index, value) {
                         if ($.inArray(value, occurence) < 0) {
                             occurence.push(value);
@@ -92,12 +95,13 @@
             footContainer.empty();
             console.log(occurence);
             $.each(this.options.registry, function (index, value) {
-                console.log(index);
-                console.log($.isArray(index, occurence) > -1);
                 if (occurence.indexOf(index) > -1) {
-                    footContainer.append('<li><span>(' + (index + 1) + ')</span> ' + value + '</li>');
+                    footContainer.append('<li><span>(' + (index + 1) + ')</span>' + value + '</li>');
                 }
             });
+        },
+        coucou: function(){
+            alert('coucou');
         },
         callback: function () {
             // Cache onComplete option

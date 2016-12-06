@@ -28,18 +28,18 @@ function natSort(as, bs) {
     }
     return a.length - b.length;
 }
-var nonDispoTemplate = 'Indisponible <br />à votre adresse';
-var nonDispoAllTemplate = 'Nous ne pouvons malheureusement pas vérifier l’éligibilité de votre adresse. <br />Merci de nous contacter au 2799 0000 pour plus d\'informations.';
-var buttonDispoTempate = '<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_FR.pdf" target="_blank">Abonnez-vous</a>';
-var buttonPromoFibre = '<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_OFFRE2_FR.pdf" target="_blank">Abonnez-vous</a>';
-var buttonPromoTv = '<a class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_OFFRE1_FR.pdf" target="_blank">Abonnez-vous</a>';
+var nonDispoTemplate = '<span data-l10n-id="noDisponible">Indisponible <br />à votre adresse</span>';
+var nonDispoAllTemplate = '<span data-l10n-id="notEligible">Nous ne pouvons malheureusement pas vérifier l’éligibilité de votre adresse. <br />Merci de nous contacter au 2799 0000 pour plus d\'informations.</span>';
+var buttonDispoTempate = '<a data-l10n-id="menuLinkSub" class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_FR.pdf" target="_blank">Abonnez-vous</a>';
+var buttonPromoFibre = '<a data-l10n-id="menuLinkSub" class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_OFFRE2_FR.pdf" target="_blank">Abonnez-vous</a>';
+var buttonPromoTv = '<a data-l10n-id="menuLinkSub" class="btn-blue btn-subscription" href="../documents/LOLFIBERDSL_OFFRE1_FR.pdf" target="_blank">Abonnez-vous</a>';
 var checkDispoTemplate = '<section id="test-offres" class="clearfix">' +
         '<div class="container-wrapper">' +
         '<div class="row">' +
-        '<div class="text phone-12 desk-6"><span class="icon-internet-ico"></span>Quelles offres sont disponibles chez vous ?</div>' +
+        '<div class="text phone-12 desk-6"><span class="icon-internet-ico"></span><span class="whichOffer">Quelles offres sont disponibles chez vous ?</span></div>' +
         '<div class="testDispo clearfix">' +
         '<div>' +
-        '<input id="zipcode" value class="input-white" type="text" placeholder="Code postal" maxlength="4"/>' +
+        '<span data-l10n-id="cpInput"><input id="zipcode" value class="input-white" type="text" placeholder="Code postal" maxlength="4"/></span>' +
         '</div>' +
         '<div>' +
         '<select id="ville" class="input-white select"></select>' +
@@ -51,8 +51,8 @@ var checkDispoTemplate = '<section id="test-offres" class="clearfix">' +
         '<select id="numero" class="input-white select"></select>' +
         '</div>' +
         '<div class="btn-verif">' +
-        '<button type="button" class="btn-orange verifyCp">Vérifiez les disponibilités</button>' +
-        '<button type="button" class="btn-orange btnVerif2">Vérifiez les disponibilités</button>' +
+        '<button data-l10n-id="dispoVerif" type="button" class="btn-orange verifyCp">Vérifiez les disponibilités</button>' +
+        '<button data-l10n-id="dispoVerif" type="button" class="btn-orange btnVerif2">Vérifiez les disponibilités</button>' +
         '</div>' +
         '</div>' +
         '</div>' +
@@ -63,14 +63,14 @@ var popuptemplate = '<div id="testDispo" class="popup">' +
         '<div class="white-pannel">' +
         '<div style="position: relative;">' +
         '<button class="pannel-close"><span class="icon-x-icone"></span></button>' +
-        '<h2>Testez la disponibilité</h2>' +
-        '<input value name="zipcode" class="input-white" type="text" placeholder="Code postal"/>' +
+        '<h2 data-l10n-id="testDispoTitle">Testez la disponibilité</h2>' +
+        '<span data-l10n-id="cpInput"><input value name="zipcode" class="input-white" type="text" placeholder="Code postal"/></span>' +
         '<select name="ville" value class="input-white select"></select>' +
         '<select name="rue" value class="input-white select"></select>' +
         '<select name="numero" value class="input-white select numero"></select>' +
         '<div style="text-align: center;">' +
-        '<button type="button" class="btn-orange btnVerify verifyCp">Vérifiez les disponibilités</button>' +
-        '<button type="button" data-bool="true" class="btn-orange btnVerify btnVerif2">Vérifiez les disponibilités</button>' +
+        '<button data-l10n-id="dispoVerif" type="button" class="btn-orange btnVerify verifyCp">Vérifiez les disponibilités</button>' +
+        '<button data-l10n-id="dispoVerif" type="button" data-bool="true" class="btn-orange btnVerify btnVerif2">Vérifiez les disponibilités</button>' +
         '</div>' +
         '</div>' +
         '</div>' +
@@ -97,7 +97,7 @@ var offers = {
     },
     100: {
         name: "Fiber 100",
-        description: "Offre coup de <span class='icon-heart-ico'></span>",
+        description: "<span data-l10n-id='heartHit'></span><span class='icon-heart-ico'></span>",
         download: "100 Mbit/s",
         upload: "50 Mbits/s",
         price: {
@@ -108,7 +108,7 @@ var offers = {
     },
     200: {
         name: "Fiber 200",
-        description: "Exigez le meilleur",
+        description: "<span data-l10n-id='getBest'></span>",
         download: "200 Mbit/s",
         upload: "100 Mbits/s",
         price: {
@@ -119,7 +119,7 @@ var offers = {
     },
     double: {
         name: "Fiber </span><span style='text-decoration: line-through; font-size: 0.9em;'> 100 </span> 200",
-        description: "PROMO : LA VITESSE x2",
+        description: "<span data-l10n-id='promoSpeed'></span>",
         download: "</span><span style='text-decoration: line-through; font-size: 0.9em;'> 100 </span><span class='orange'>200 Mbit/s</span>",
         upload: "</span><span style='text-decoration: line-through; font-size: 0.9em;'> 50 </span>&nbsp;&nbsp;<span class='orange'>100 Mbit/s</span>",
         price: {
@@ -156,22 +156,22 @@ function printOffer(offer) {
             '<li class="info" data-fnote="[0]"><span class="icon-download-ico download"></span>' + offer.download + '</li>' +
             '<li class="info" data-fnote="[0]"><span class="icon-download-ico upload"></span>' + offer.upload + '</li>' +
             '<li class="check-list-container">' +
-            '<div class="check-list-title"><span class="icon-pack-ico"></span> Inclus dans ce pack : </div>' +
+            '<div class="check-list-title"><span class="icon-pack-ico"></span><span data-l10n-id="packInclude"></span></div>' +
             '<ul class="check-list">' +
-            '<li><span class="icon-check-ico"></span>Volume illimité</li>' +
-            '<li><span class="icon-check-ico"></span>Abonnement tél. fixe</li>' +
-            '<li data-fnote="[1]"><span class="icon-check-ico"></span>Appels nat. fixes</li>' +
-            '<li><span class="icon-check-ico"></span>Appels vers mobiles LOL</li>' +
-            '<li data-fnote="[1,2]"><span class="icon-check-ico"></span>120 min vers l\'Europe fixe</li>' +
+            '<li><span class="icon-check-ico"></span><span data-l10n-id="volUnlimited"></span></li>' +
+            '<li><span class="icon-check-ico"></span><span data-l10n-id="aboTel"></span></li>' +
+            '<li data-fnote="[1]"><span class="icon-check-ico"></span><span data-l10n-id="natCall"></span></li>' +
+            '<li><span class="icon-check-ico"></span><span data-l10n-id="internetTarifsDataLolCall"></span></li>' +
+            '<li data-fnote="[1,2]"><span class="icon-check-ico"></span><span data-l10n-id="euFixe"></span></li>' +
             '<li><span class="icon-check-ico"></span>LOL CLOUD 5GB</li>' +
-            '<li><span class="icon-check-ico"></span><a href="lolnow.html">LOLNOW</a></li>' +
+            '<li><span class="icon-check-ico"></span><a href="lolnow.html">Option LOLNOW</a></li>' +
             '</ul>' +
             '</li>' +
             '</ul>' +
             '<div class="item-footer">' +
             '<div class="offer-price">' +
             offer.price.exponent +
-            +offer.price.unit + '<span>/mois</span>' +
+            +offer.price.unit + '<span data-l10n-id="month">/mois</span>' +
             '</div>' +
             '</div>' +
             '</div>';
@@ -180,7 +180,7 @@ function printOffer(offer) {
 function printPrice(offer) {
     var printedPrice = '<div class="offer-price">' +
             offer.price.exponent +
-            +offer.price.unit + '<span>/mois</span>' +
+            +offer.price.unit + '<span data-l10n-id="month">/mois</span>' +
             '</div>';
     return printedPrice;
 }
@@ -192,7 +192,7 @@ function insertLink(id, service, indexLink, idHome) {
      *local shop link: "../shop/inscription.html#"*/
 }
 function insertButton(id, service, idHome) {
-    return '<a class="btn-blue btn-subscription" ' + insertLink(id, service, 0, idHome) + '>Abonnez-vous</a>';
+    return '<a class="btn-blue btn-subscription" ' + insertLink(id, service, 0, idHome) + ' data-l10n-id="menuLinkSub">Abonnez-vous</a>';
 }
 function insertPromoLink(id, service, idHome, string) {
     if (service == null) {
@@ -219,7 +219,7 @@ function checkDispo(homeId, isLOLCable) {
             dataType: 'jsonp',
             success: function (data) {
                 obj = data;
-                console.log(obj);
+                //console.log(obj);
                 ab = ["", "", "", "", "", "", ""];
                 if (obj.Service[6]) {  // Dégroupage DSL
                     articleObj = obj.Service[6].article;
@@ -402,7 +402,7 @@ function checkDispo(homeId, isLOLCable) {
                         /*TO DO: INSERT PROMO 6 MOIS DSL24 + VDSL 100*/
                         if ($(obj.Service[2]).length <= 0 && $(obj.Service[5]).length <= 0) {
                             $('.k24').find('.offer-price').replaceWith(printPrice(offers['24-half']));
-                            $(insertPromoLink(null, null, null, "promo : 6 mois à moitié prix")).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                            $(insertPromoLink(null, null, null, "<span data-l10n-id='promoHalf'>promo : 6 mois à moitié prix</span>")).insertAfter($('.k24')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                         } else {
                             $('.k24').find('.offer-price').replaceWith(printPrice(offers[24]));
                         }
@@ -423,10 +423,9 @@ function checkDispo(homeId, isLOLCable) {
                             $('.k100').find('.not-dispo').remove();
                             if ($(obj.Service[2]).length <= 0 && $(obj.Service[5]).length <= 0) { //SI PAS FIBRE
                                 $('.k100+.promos-link.persist').hide();
-
                                 $('.k100').find('.offer-price').replaceWith(printPrice(offers['100-half']));
-                                $(insertPromoLink(null, null, null, "promo : 6 mois à moitié prix")).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
-                                $(insertPromoLink(ab[2][0], ab[2][1], homeId, "promo : installation offerte")).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500); //PRINT LIEN VERS PAGE VDSL
+                                $(insertPromoLink(null, null, null, "<span data-l10n-id='promoHalf'>promo : 6 mois à moitié prix</span>")).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                                $(insertPromoLink(ab[2][0], ab[2][1], homeId, "<span data-l10n-id='promoInstall'>promo : installation offerte</span>")).insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500); //PRINT LIEN VERS PAGE VDSL
                             } else { //SI FIBRE
                                 $('.k100+.promos-link.persist').attr('href', '//www.internet.lu/promos/fibre.html#' + homeId + ';' + isLOLCable);
                                 $('.k100+.promos-link.persist').show();
@@ -442,7 +441,7 @@ function checkDispo(homeId, isLOLCable) {
                             $(printNonDispo(nonDispoTemplate)).prependTo('.k100').css('visibility', 'visible').animate({opacity: 1.0}, 500);
                             $('.k100').addClass('not');
                             if ($('#promoFiber-content').length > 0 && (ab[0] != "" || ab[1] != "")) {
-                                $('<a class="btn-blue btn-subscription" href="//internet.lu/internet/offres.html">Voir nos autres offres</a>').insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
+                                $('<a class="btn-blue btn-subscription" href="//internet.lu/internet/offres.html" data-l10n-id="otherOffers">Voir nos autres offres</a>').insertAfter($('.k100')).css('visibility', 'visible').animate({opacity: 1.0}, 500);
                             }
                         }
                     }
@@ -464,9 +463,10 @@ function checkDispo(homeId, isLOLCable) {
                 $('html, body').animate({
                     scrollTop: $('#offers-section, #promoFiber-content').offset().top
                 }, 650);
-                $('.footer-note').footerNote('render');
                 /*Cookies.remove('shop_idhome');
                  Cookies.set('shop_idhome', homeId, {expires: 1});*/
+                getTraduction();
+                //document.l10n.requestLocales(document.l10n.supportedLocales[0]);
             }, error: function (jqXHR, textStatus, errorThrown) {
                 console.log('jqXHR:');
                 console.log(jqXHR);
@@ -540,8 +540,8 @@ $(function () {
             success: function (data) {
                 streetList = data;
                 arrLocality = [];
-                locality = "<option>Choisissez votre localité</option>";
-                var vhtml = "<option data-idLocality='-1'>Choisissez votre adresse</option>";
+                locality = "<option data-l10n-id='chooseLoc'>Choisissez votre localité</option>";
+                var vhtml = "<option data-l10n-id='chooseAdr' data-idLocality='-1'>Choisissez votre adresse</option>";
                 for (i in streetList.Streets) {
 
                     vhtml += "<option value='" + streetList.Streets[i].id + "' title='" + streetList.Streets[i].name + "' data-idLocality='" + streetList.Streets[i].idLocality + "'>" + streetList.Streets[i].name + "</option>";
@@ -552,7 +552,7 @@ $(function () {
                     locality += "<option value='" + idLocality + "' title='" + arrLocality[idLocality] + "'>" + arrLocality[idLocality] + "</option>";
                 }
                 if ($(locality).length < 2 || $("input[name=zipcode]").val().substr(2, $("input[name=zipcode]").val().length - 1) < 1000) {
-                    locality = "<option>Code postal inconnu</option>";
+                    locality = "<option data-l10n-id='unknownCp'>Code postal inconnu</option>";
                 }
                 $(".verifyCp").hide();
                 $(".btnVerif2, .btnVerif").show();
@@ -630,7 +630,7 @@ $(function () {
                         });
                     }
                 }
-
+                getTraduction();
             }
         });
     });
@@ -644,12 +644,13 @@ $(function () {
             }
         });
         $("select[name=rue]").fadeIn();
+        getTraduction();
     });
     $("body").on('change', 'select[name=rue]', function () {
         for (i in streetList.Streets) {
             if (streetList.Streets[i].id == $("select[name=rue]").val()) {
                 streetNbr = streetList.Streets[i].streetNumbers;
-                var vhtml = "<option value=''>Choisissez le numéro</option>";
+                var vhtml = "<option data-l10n-id='chooseNum' value=''>Choisissez le numéro</option>";
                 for (b in streetNbr) {
                     number = streetNbr[b].number.length > 0 ? "Numéro:" + streetNbr[b].number + "\n" : "";
                     building = streetNbr[b].building.length > 0 ? "Batiment:" + streetNbr[b].building + "\n" : "";
@@ -671,6 +672,7 @@ $(function () {
                 }
             }
         }
+        getTraduction();
     });
     $("body").on('click', '.btnVerif', function () {
         var homeId = $("select[name=numero]").val();
@@ -682,8 +684,9 @@ $(function () {
         if (homeId != "") {
             window.location.href = "/internet/offres.html#" + $("input[name=zipcode]").val() + ";" + $("select[name=ville]").val() + ";" + $("select[name=rue]").val() + ";" + $("select[name=numero]").val() + ";" + isLOLCable;
         } else {
-            alert('Entrez votre numéro de rue pour continuer...');
+            alert(document.l10n.getSync('EnterNum'));
         }
+        getTraduction();
     });
     $("body").on('click', '.btnVerif2', function (event) {
         var homeId = $("select[name=numero]").val();
@@ -698,8 +701,9 @@ $(function () {
             }
             checkDispo($("select[name=numero]").val(), isLOLCable);
         } else {
-            alert('Entrez votre numéro de rue pour continuer...');
+            alert(document.l10n.getSync('EnterNum'));
         }
+        getTraduction();
     });
 });
 

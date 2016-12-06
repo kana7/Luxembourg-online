@@ -2,8 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <title>Téléphonie : LOLVISIO – Luxembourg Online</title>
-        <meta name="description" content="" />
+        <title data-l10n-id="telVisioMetaTitle">Téléphonie : LOLVISIO – Luxembourg Online</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <link rel="shortcut icon" href="/favicon.ico">
@@ -12,63 +11,64 @@
         <link rel="stylesheet" href="../styles/css/telephonie/telephonie.css">
 
         <script src="../scripts/vendor/picturefill.min.js"></script>
+        <link rel="localization" href="../locales/manifest.json"/>
+        <script src="../locales/l20n.js"></script>
     </head>
-
     <body>
         <div id="clientSpace" class="popup">
             <div class="background-client"></div>
             <div class="white-pannel">
                 <div style="position:relative;">
                     <button class="pannel-close"><span class="icon-x-icone"></span></button>
-                    <h2>Espace Client</h2>
+                    <h2 data-l10n-id="frontOffice">Espace Client</h2>
                     <ul class="client-menu">
-                        <li class="active" data-id="mail">Email</li>
+                        <li class="active" data-id="mail" data-l10n-id="frontOfficeMail">Email</li>
                         <li>|</li>
-                        <li data-id="account">Mon compte</li>
+                        <li data-id="account" data-l10n-id="frontOfficeAccount">Mon compte</li>
                         <li>|</li>
-                        <li data-id="homepage">Homepage</li>
+                        <li data-id="homepage" data-l10n-id="frontOfficeHomepage">Homepage</li>
                     </ul>
                     <div class="pannel-forms">
                         <form id="mail" class="clearfix is-visible" name="ServiceLogin1" method="POST" action="https://email.internet.lu/Scripts/sql.exe?_selection=10">
                             <input type="hidden" name="Sql" value="Default.phs">  
                             <input type="hidden" name="SqlDB" value="OMS2">  
-                            <div class="phone-6 input-left">
+                            <div class="phone-6 input-left" data-l10n-id="placeholderUser">
                                 <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
                             </div>
-                            <div class="phone-6 input-right">
+                            <div class="phone-6 input-right" data-l10n-id="placeholderMdp">
                                 <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
                             </div>
-                            <button class="btn-blue" type="submit">Se connecter</button>
+                            <button class="btn-blue" type="submit" data-l10n-id="frontOfficeConnect">Se connecter</button>
                         </form>
                         <form id="account" class="clearfix" name="LoginPhone" method="POST" action="http://shop.internet.lu/Scripts/sql.exe?LoginScript=LoginClient.phs&NextScript=DisplayAccount.phs&_Login=">
                             <input type="hidden" name="Sql" value="LoginClient_Login.phs">  
                             <input type="hidden" name="SqlDB" value="LOLShop">  
-                            <div class="phone-6 input-left">
+                            <div class="phone-6 input-left" data-l10n-id="placeholderUser">
                                 <input type="text" name="_Username" placeholder="Nom d'utilisateur"/>
                             </div>
-                            <div class="phone-6 input-right">
+                            <div class="phone-6 input-right" data-l10n-id="placeholderMdp">
                                 <input class="pull-right" type="password" name="_Password" placeholder="Mot de passe"/>
                             </div>
-                            <button class="btn-blue" type="submit">Se connecter</button>
+                            <button class="btn-blue" type="submit" data-l10n-id="frontOfficeConnect">Se connecter</button>
                         </form>
                         <form id="homepage" class="clearfix" name="ServiceLogin3" method="POST" action="http://sites.internet.lu/Scripts/sql.exe">
                             <input type="hidden" name="Sql" value="default.phs">  
                             <input type="hidden" name="SqlDB" value="OHPS">  
-                            <div class="phone-6 input-left">
+                            <div class="phone-6 input-left" data-l10n-id="placeholderUser">
                                 <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
                             </div>
-                            <div class="phone-6 input-right">
+                            <div class="phone-6 input-right" data-l10n-id="placeholderMdp">
                                 <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
                             </div>
-                            <button class="btn-blue" type="submit">Se connecter</button>
+                            <button class="btn-blue" type="submit" data-l10n-id="frontOfficeConnect">Se connecter</button>
                         </form>
                         <div class="contact-infos hidden-phone">
                             Helpdesk: 2799 0000
-                            <span>Lu-Ve: 8h00-19h00  l  Sa: 9h00-18h00</span>
+                            <span data-l10n-id="frontOfficeOpening">Lu-Ve: 8h00-19h00  l  Sa: 9h00-18h00</span>
                         </div>
                         <div class="contact-infos display-phone">
                             Helpdesk: 2799 0000
-                            <span>Lu-Ve: 8h00-19h00<br/>Sa: 9h00-18h00</span>
+                            <span data-l10n-id="frontOfficeOpening">Lu-Ve: 8h00-19h00<br/>Sa: 9h00-18h00</span>
                         </div>
                     </div>
                 </div>
@@ -137,8 +137,8 @@
         </nav>
         <div id="siteWrap">
             <div class="zone int_zone1">
-                <b>Pays membres de l'U.E</b>
-                <div>
+                <b data-l10n-id="footNoteInternetOffer3">Pays membres de l'U.E</b>
+                <div data-l10n-id="telVisioZoneInt1">
                     Allemagne, Autriche, Belgique, Bulgarie, Chypre, Croatie, Danemark, Espagne, Estonie, Finlande, France (métropole + Guyane + Martinique + Reunion), Grèce, Hongrie, Irlande, Italie, Lettonie, Lituanie, Malte, Monaco, Pays-Bas, Pologne, Portugal, Rep. Tchèque, Roumanie, Royaume-Uni, Slovaquie, Slovénie, Suède.
                 </div>
             </div>
@@ -148,30 +148,31 @@
                         <div class="row">
                             <nav class="pull-left">
                                 <ul class="top-menu-header-links left">
-                                    <li class="active"><a href="/index.htm">Particuliers</a></li><!--
-                                    --><li><a href="http://www.internet.lu/business/">Business</a></li>
+                                    <li class="active"><a href="/index.htm" data-l10n-id="menuLinkPrivate">Particuliers</a></li><!--
+                                    --><li><a href="http://www.internet.lu/business/" data-l10n-id="menuLinkBusiness">Business</a></li>
                                 </ul>
                             </nav>
                             <nav class="pull-right hidden-phone hidden-tab">
                                 <ul class="top-menu-header-links right">
-                                    <li class="menu-item"><a href="../divers/assistance.html">Assistance</a></li>
+                                    <li class="menu-item"><a href="../divers/assistance.html" data-l10n-id="menuLinkAssistance">Assistance</a></li>
                                     <li class="menu-item"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOLCLOUD</a></li>
-                                    <!--<li class="menu-item"><a href="../divers/news.html">Actualités</a></li>--><li class="menu-item"><a href="../divers/brochure.html">Brochure</a></li>
-                                    <li class="menu-item"><a href="../divers/propos.html">À propos</a></li>
-                                    <li class="menu-item"><a href="../divers/contact.html">Contact</a></li>
+                                    <li class="menu-item"><a href="../divers/brochure.html" data-l10n-id="menuLinkMag">Brochure</a></li>
+                                    <li class="menu-item"><a href="../divers/propos.html" data-l10n-id="menuLinkAbout">À propos</a></li>
+                                    <li class="menu-item"><a href="../divers/contact.html" data-l10n-id="menuLinkContact">Contact</a></li>
                                 </ul>
+                                <div id="languageSelector" class="header-dropdown top-menu-header-links left">
+                                </div>
                             </nav>
                         </div>
                     </div>
                 </div>
-
                 <div id="bottom-menu-header">
-                    <ul class="sub-menu hidden-phone hidden-tab grey">
-                        <li><a href="accueil.html"><div class="link">Accueil Téléphonie</div></a></li>
-                        <li><a href="tarifs.html"><div class="link">Nos tarifs</div></a></li>
+                    <ul class="sub-menu hidden-phone hidden-tab">
+                        <li><a href="accueil.html"><div class="link" data-l10n-id="menuLinkPhoneHome">Accueil Téléphonie</div></a></li>
+                        <li><a href="tarifs.html"><div class="link" data-l10n-id="menuLinkPrices">Nos tarifs</div></a></li>
                         <li class="active"><a href="lolvisio.html"><div class="link">LOLVisio</div></a></li>
-                        <li><a href="equipements.html"><div class="link">nos téléphones</div></a></li>
-                        <li><a href="abonnement.html"><div class="link">Abonnez-vous</div></a></li>
+                        <li><a href="equipements.html"><div class="link" data-l10n-id="menuLinkOurPhones">nos téléphones</div></a></li>
+                        <li><a href="abonnement.html"><div class="link" data-l10n-id="menuLinkSub">Abonnez-vous</div></a></li>
                     </ul>
                     <nav class="bottom-menu-header-links mobile display-phone display-tab">
                         <div class="pull-left">
@@ -200,42 +201,42 @@
                                             <div class="active-border"></div>
                                             <a href="../internet/accueil.html">
                                                 <img class="header-icon" src="../images/Icone/img/internet.png" alt="Internet" />
-                                                <div class="link">Internet</div>
+                                                <div class="link" data-l10n-id="menuLinkInternet">Internet</div>
                                             </a>
                                         </li><!--
                                         --><li class="active">
                                             <div class="active-border"></div>
                                             <a href="../telephonie/accueil.html">
                                                 <img class="header-icon" src="../images/Icone/img/telephonie.png" alt="Téléphonie" />
-                                                <div class="link">Téléphonie</div>
+                                                <div class="link" data-l10n-id="menuLinkPhone">Téléphonie</div>
                                             </a>
                                         </li><!--
                                         --><li>
                                             <div class="active-border"></div>
                                             <a href="../tv/accueil.html">
                                                 <img class="header-icon" src="../images/Icone/img/tv.png" alt="Tv" />
-                                                <div class="link">TV</div>
+                                                <div class="link" data-l10n-id="menuLinkTv">TV</div>
                                             </a>
                                         </li><!--
                                         --><li>
                                             <div class="active-border"></div>
                                             <a href="../mobile/accueil.html">
                                                 <img class="header-icon" src="../images/Icone/img/mobile.png" alt="Mobile" />
-                                                <div class="link">Mobile</div>
+                                                <div class="link" data-l10n-id="menuLinkMobile">Mobile</div>
                                             </a>
                                         </li><!--
                                         --><li>
                                             <div class="active-border"></div>
                                             <a href="../promos/fibre.html">
                                                 <img class="header-icon" src="../images/Icone/img/promos.png" alt="Promos" />
-                                                <div class="link">Promos</div>
+                                                <div class="link" data-l10n-id="menuLinkCoupon">Promos</div>
                                             </a>
                                         </li>
                                     </ul>
                                 </nav>
                             </div>
                             <div class="pull-right hidden-phone hidden-tab">
-                                <button id="openClientSpace" class="btn-blue openPopup" data-popup="0">Espace client</button>
+                                <button id="openClientSpace" class="btn-blue openPopup" data-popup="0" data-l10n-id="frontOffice">Espace client</button>
                             </div>
                         </div>
                     </div>
@@ -277,10 +278,10 @@
                 <div class="container-wrapper">
                     <div class="row clearfix">
                         <div class="phone-12 desk-6">
-                            <h2 class="section-title lowercase">
+                            <h2 class="section-title lowercase" data-l10n-id="telVisioTitle">
                                 <span class="extra-bold">LOL</span>VISIO :<br/><span class="extra-bold">Oubliez la distance !</span>
                             </h2>
-                            <p class="section-text"><span class="extra-bold">LOL</span>VISIO est le service de téléphonie fixe dernière génération de Luxembourg Online. Il permet de profiter à la fois de toute la simplicité de la téléphonie classique et de la modernité de la visiophonie.</p>
+                            <p class="section-text" data-l10n-id="telVisioDesc"><span class="extra-bold">LOL</span>VISIO est le service de téléphonie fixe dernière génération de Luxembourg Online. Il permet de profiter à la fois de toute la simplicité de la téléphonie classique et de la modernité de la visiophonie.</p>
                         </div>
                     </div>
                 </div>
@@ -295,11 +296,11 @@
                                  ../images/Telephonie/320px/lolvisio_communication.jpg 672w" sizes="100%" alt="chaines tv">
                         </div>
                         <div class="phone-12 desk-6">
-                            <h2 class="section-title lowercase">
+                            <h2 class="section-title lowercase" data-l10n-id="telVisioComTitle">
                                 Une communication
                                 <strong>plus proche</strong>
                             </h2>
-                            <p class="section-text grey">Parce qu’il est toujours plus agréable et rassurant de voir la personne avec qui l’on discute, Luxembourg Online a mis au point ce nouveau service de téléphonie fixe <strong>inédit au Grand-Duché</strong>. Vos interlocuteurs apparaissent à l’écran comme s’ils étaient à côté de vous. Ainsi, vous restez en contact avec vos proches, mêmes s’ils sont loin. </p>
+                            <p class="section-text grey" data-l10n-id="telVisioComDesc">Parce qu’il est toujours plus agréable et rassurant de voir la personne avec qui l’on discute, Luxembourg Online a mis au point ce nouveau service de téléphonie fixe <strong>inédit au Grand-Duché</strong>. Vos interlocuteurs apparaissent à l’écran comme s’ils étaient à côté de vous. Ainsi, vous restez en contact avec vos proches, mêmes s’ils sont loin. </p>
                         </div>
                     </div>
                 </div>
@@ -314,15 +315,15 @@
                                  ../images/Telephonie/320px/lolvisio_phone.jpg 672w" sizes="100%" alt="minix tv">
                         </div>
                         <div class="phone-12 desk-6">
-                            <h2 class="section-title lowercase">
+                            <h2 class="section-title lowercase" data-l10n-id="telVisioGearTitle">
                                 Un téléphone
                                 <strong>de dernière génération</strong>
                             </h2>
-                            <p class="section-text grey">
+                            <p class="section-text grey" data-l10n-id="telVisioGearDesc">
                                 Alliant simplicité et modernité, le téléphone <span class="extra-bold">LOL</span>VISIO de Luxembourg Online a été conçu pour permettre une <strong>communication de haute qualité</strong>. Facile d’usage, il s’utilise comme un téléphone classique, la visiophonie en plus.
                                 Et si vous ne vous sentez pas d’humeur à une conversation en "face à face", vous pouvez à tout moment passer en mode audio uniquement.
                             </p>
-                            <a class="btn-outline-white" href="equipements.html#1">Accédez à nos téléphones</a>
+                            <a class="btn-outline-white" href="equipements.html#1" data-l10n-id="telVisioGearLink">Accédez à nos téléphones</a>
                         </div>
                     </div>
                 </div>
@@ -337,11 +338,11 @@
                                  ../images/Telephonie/320px/lolvisio_appel.jpg 672w" sizes="100%" alt="interface LOLTV">
                         </div>
                         <div class="phone-12 desk-6">
-                            <h2 class="section-title lowercase">
+                            <h2 class="section-title lowercase" data-l10n-id="telVisioTarifTitle">
                                 <strong>Le tarif habituel,</strong>
                                 sans surcoût
                             </h2>
-                            <p class="section-text grey">Communiquer avec le téléphone <span class="extra-bold">LOL</span>VISIO ne vous coûtera pas plus cher. Le tarif reste le même, que vous appeliez en mode vidéo ou en mode audio. De plus, avec l’abonnement de téléphonie fixe de Luxembourg Online, vos appels vers les fixes nationaux et les mobiles LOL sont gratuits et illimités. Grâce à cet abonnement, vous bénéficiez également de 120 minutes d’appels gratuites vers les fixes d’Europe. Ainsi, <strong>vous communiquez en toute tranquillité !</strong></p>
+                            <p class="section-text grey" data-l10n-id="telVisioTarifDesc">Communiquer avec le téléphone <span class="extra-bold">LOL</span>VISIO ne vous coûtera pas plus cher. Le tarif reste le même, que vous appeliez en mode vidéo ou en mode audio. De plus, avec l’abonnement de téléphonie fixe de Luxembourg Online, vos appels vers les fixes nationaux et les mobiles LOL sont gratuits et illimités. Grâce à cet abonnement, vous bénéficiez également de 120 minutes d’appels gratuites vers les fixes d’Europe. Ainsi, <strong>vous communiquez en toute tranquillité !</strong></p>
                         </div>
                     </div>
                 </div>
@@ -353,10 +354,10 @@
                             <iframe class="video" width="1280" height="720" src="https://www.youtube.com/embed/q4lp503va88?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <div class="phone-12 desk-6">
-                            <h2 class="section-title lowercase">
+                            <h2 class="section-title lowercase" data-l10n-id="telVisioVideoTitle">
                                 <strong>Un téléphone simple et pratique</strong>
                             </h2>
-                            <p class="section-text grey">Le téléphone <span class="bold">LOL</span>VISIO est très facile d'utilisation et conviendra à tous.<br/> Pour passer un appel audio ou vidéo, rien de plus simple : vous composez le numéro et décrochez le combiné. Le tour est joué ! Découvrez notre vidéo de démonstration ci-contre et n'hésitez pas à venir le tester en boutique.</p>
+                            <p class="section-text grey" data-l10n-id="telVisioVideoDesc">Le téléphone <span class="bold">LOL</span>VISIO est très facile d'utilisation et conviendra à tous.<br/> Pour passer un appel audio ou vidéo, rien de plus simple : vous composez le numéro et décrochez le combiné. Le tour est joué ! Découvrez notre vidéo de démonstration ci-contre et n'hésitez pas à venir le tester en boutique.</p>
                         </div>
                     </div>
                 </div>
@@ -364,7 +365,7 @@
             <section style="padding: 30px 0 !important;" class="section-layout content-container background-gradient-grey section-shadow phone-mb-0">
                 <div class="container-wrapper">
                     <div class="phone-12 desk-6 section-info center-tab">
-                        <h2 class="blue extra-bold phone-mt-0 phone-mb-0" style="font-size: 28px;">N'attendez plus, appelez-nous au <br/><span style="font-size: 1.6em; line-height: 60px;">2799 0000</span><br/>pour plus d'informations !</h2>
+                        <h2 class="blue extra-bold phone-mt-0 phone-mb-0" style="font-size: 28px;" data-l10n-id="telVisioOfferTitle">N'attendez plus, appelez-nous au <br/><span style="font-size: 1.6em; line-height: 60px;">2799 0000</span><br/>pour plus d'informations !</h2>
                     </div>
                     <div class="phone-12 desk-6 center-tab">
                         <div class="offer-item-blue phone-mb-0 tab-mb-10">
@@ -372,19 +373,19 @@
                                 <strong>LOL</strong>VISIO
                             </div>
                             <ul class="item-body">
-                                <li class="info"><span class="icon-check-ico"></span><div class="data">Appels nationaux <strong>fixes illimités</strong><span class="exponent">(1)</span></div></li>
-                                <li class="info"><span class="icon-check-ico"></span><div class="data">Appels vers <strong>mobiles LOL illimités</strong></div></li>
-                                <li class="info txtint_zone" data-zone="1"><span class="icon-check-ico"></span><div class="data"><strong>120 minutes</strong> vers les fixes d'Europe<span class="exponent">(2)</span></div></li>
+                                <li class="info"><span class="icon-check-ico"></span><div class="data" data-l10n-id="telVisioOfferTable1">Appels nationaux <strong>fixes illimités</strong><span class="exponent">(1)</span></div></li>
+                                <li class="info"><span class="icon-check-ico"></span><div class="data" data-l10n-id="telVisioOfferTable2">Appels vers <strong>mobiles LOL illimités</strong></div></li>
+                                <li class="info txtint_zone" data-zone="1"><span class="icon-check-ico"></span><div class="data" data-l10n-id="telVisioOfferTable3"><strong>120 minutes</strong> vers les fixes d'Europe<span class="exponent">(2)</span></div></li>
                             </ul>
                         </div>
                         <div class="phone-12">
                             <p class="footer-note phone-mb-0" style="text-align: center">
-                                <span style="display:inline-block;">(1)</span> Sauf numéros spéciaux (type 800, 900, jeux, televoting, services érotiques, etc.)
+                                <span style="display:inline-block;">(1)</span> <span data-l10n-id="footNoteInternetOffer2">Sauf numéros spéciaux (type 800, 900, jeux, televoting, services érotiques, etc.)</span>
                             </p>
                             <p class="footer-note phone-mb-0 phone-mt-0" style="text-align: center">
-                                <span style="display:inline-block;">(2)</span> Pays membres de l'U.E
+                                <span style="display:inline-block;">(2)</span> <span data-l10n-id="footNoteInternetOffer3">Pays membres de l'U.E</span>
                             </p>
-                            <p class="footer-note phone-mb-0 phone-mt-5" style="text-align: center">
+                            <p class="footer-note phone-mb-0 phone-mt-5" style="text-align: center" data-l10n-id="footNoteInternetOffer6">
                                 Valable uniquement en combinaison avec un abonnement Internet Luxembourg Online
                             </p>
                         </div>
@@ -397,8 +398,8 @@
                         <div class="row">
                             <ul class="center">
                                 <li><a href="../telephonie/faq.html"><span class="icon icon-faq-ico"></span>FAQ</a></li>
-                                <li><a href="../telephonie/repondeur.html"><span class="icon icon-repondeur-icone"></span>Répondeur</a></li>
-                                <li><a href="../telephonie/abonnement.html"><span class="icon icon-document-ico"></span>Documents</a></li>
+                                <li><a href="../telephonie/repondeur.html" data-l10n-id="menuLinkRepondeur"><span class="icon icon-repondeur-icone"></span>Répondeur</a></li>
+                                <li><a href="../telephonie/abonnement.html" data-l10n-id="menuLinkDoc"><span class="icon icon-document-ico"></span>Documents</a></li>
                             </ul>
                         </div>
                     </div>
@@ -406,7 +407,7 @@
                 <div id="social-links">
                     <div class="container-wrapper">
                         <div class="row">
-                            <div class="text">Rejoignez-nous sur: </div>
+                            <div class="text" data-l10n-id="joinUs">Rejoignez-nous sur: </div>
                             <nav>
                                 <ul class="spread">
                                     <li>
@@ -447,13 +448,13 @@
                 <div id="contact">
                     <div class="container-wrapper">
                         <div class="row">
-                            <div class="text">Contactez-nous : </div>
+                            <div class="text" data-l10n-id="contactUs">Contactez-nous : </div>
                             <ul class="contact-infos spread">
                                 <li>
                                     <span class="icon-phone-icone"></span><a href="tel://2799 0000">2799 0000</a>
                                 </li>
                                 <li>
-                                    <span class="icon-clock-icone"></span>Lu-Sa: 9h00-18h00
+                                    <span class="icon-clock-icone"></span><span data-l10n-id="mondaySaturday">Lu-Sa: 9h00-18h00</span>
                                 </li>
                                 <li>
                                     <span class="icon-internet-ico"></span><a href="../divers/contact.html#demande_infos_commerciales" target="_blank">commercial@internet.lu</a>
@@ -467,39 +468,37 @@
                         <div class="row">
                             <a class="help-link" href="../divers/assistance.html">
                                 <span class="icon-info-icone"></span>
-                                <p>Besoin d'aide ? Accédez à l’espace assistance de Luxembourg Online (FAQ, informations, guides et documents utiles, contrats, divers)</p>
+                                <p data-l10n-id="needHelp">Besoin d'aide ? Accédez à l’espace assistance de Luxembourg Online (FAQ, informations, guides et documents utiles, contrats, divers)</p>
                                 <span class="icon-right-arrow"></span>
                             </a>
                             <div class="separator hidden-phone hidden-tab"></div>
                         </div>
                         <div class="row hidden-phone hidden-tab">
                             <div class="footer-top-links">
-                                <h4>internet : </h4>
+                                <h4><span data-l10n-id="menuLinkInternet">internet</span> : </h4>
                                 <nav>
                                     <ul class="links">
-                                        <li><a href="../internet/offres.html">Nos offres</a></li>
-                                        <li><a href="../promos/fibre.html">Offre spéciale fibre</a></li>
-                                        <li><a href="../internet/equipements.html">Nos équipements</a></li>
+                                        <li><a href="../internet/offres.html"  data-l10n-id="menuLinkOffers">Nos offres</a></li>
+                                        <li><a href="../promos/fibre.html"  data-l10n-id="menuLinkFiberOffer">Offre spéciale fibre</a></li>
+                                        <li><a href="../internet/equipements.html"  data-l10n-id="menuLinkGear">Nos équipements</a></li>
                                     </ul>
                                 </nav>
                             </div>
                             <div class="footer-top-links">
-                                <h4>téléphonie : </h4>
+                                <h4><span data-l10n-id="menuLinkPhone">téléphonie</span> : </h4>
                                 <nav>
                                     <ul class="links">
-                                        <li><a href="../telephonie/tarifs.html">Nos tarifs</a></li>
-                                        <li><a href="../telephonie/equipements.html">Nos téléphones</a></li>
+                                        <li><a href="../telephonie/tarifs.html" data-l10n-id="menuLinkPrices">Nos tarifs</a></li>
+                                        <li><a href="../telephonie/equipements.html" data-l10n-id="menuLinkOurPhones">Nos téléphones</a></li>
                                     </ul>
                                 </nav>
                             </div>
                             <div class="footer-top-links">
-                                <h4>tv : </h4>
+                                <h4><span data-l10n-id="menuLinkTv">tv</span> : </h4>
                                 <nav>
                                     <ul class="links">
-                                        <li><a href="../tv/offres.html">Notre offre</a></li>
-
-                                        <li><a href="../tv/equipements.html">Nos équipements</a></li>
-
+                                        <li><a href="../tv/offres.html" data-l10n-id="menuLinkTvOffers">Notre offre</a></li>
+                                        <li><a href="../tv/equipements.html" data-l10n-id="menuLinkGear">Nos équipements</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -507,8 +506,8 @@
                                 <h4>mobile : </h4>
                                 <nav>
                                     <ul class="links">
-                                        <li><a href="../mobile/abonnements.html">Nos offres</a></li>
-                                        <li><a href="../mobile/equipements.html">Nos téléphones</a></li>
+                                        <li><a href="../mobile/abonnements.html" data-l10n-id="menuLinkOffers">Nos offres</a></li>
+                                        <li><a href="../mobile/equipements.html" data-l10n-id="menuLinkOurPhones">Nos téléphones</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -516,16 +515,14 @@
                         <div class="row">
                             <div class="separator"></div>
                             <div class="phone-12">
-                                <div class="display-phone copyright">© Luxembourg Online S.A. – 2016, tous droits réservés</div>
+                                <div class="display-phone copyright" data-l10n-id="copyright">© Luxembourg Online S.A. – 2016, tous droits réservés</div>
                                 <nav class="hidden-phone">
                                     <ul class="footer-bottom-links">
-                                        <li>
-                                            © Luxembourg Online S.A. – 2016, tous droits réservés</li>
-                                        <li><a href="../legal.html">Mentions légales</a></li>
-                                        <li><a href="../divers/emploi.html">Offres d'emploi</a></li>
-                                        <li><a href="../divers/plan.html">Plan du site</a></li>
-
-                                        <li><a href="../divers/contact.html">Contact</a></li>
+                                        <li data-l10n-id="copyright">© Luxembourg Online S.A. – 2016, tous droits réservés</li>
+                                        <li><a href="../legal.html" data-l10n-id="menuLinkNotice">Mentions légales</a></li>
+                                        <li><a href="../divers/emploi.html" data-l10n-id="menuLinkJob">Offres d'emploi</a></li>
+                                        <li><a href="../divers/plan.html" data-l10n-id="menuLinkSitemap">Plan du site</a></li>
+                                        <li><a href="../divers/contact.html" data-l10n-id="menuLinkContact">Contact</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -535,11 +532,10 @@
             </footer>
         </div>
         <!--              ./FOOTER               -->
-
+        <script type="text/javascript" src="../scripts/vendor/js.cookie.js"></script>
         <script src="../scripts/vendor/jquery.min.js"></script>
         <script type="text/javascript" src="../scripts/mobilescript.js"></script>
         <script src="../scripts/main.js"></script>
         <script type="text/javascript" src="../scripts/analytics.js"></script>
     </body>
-
 </html>

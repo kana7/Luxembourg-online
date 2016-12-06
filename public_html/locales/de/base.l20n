@@ -1,0 +1,2113 @@
+/*---------------------------GLOBAL TRANSLATION-------------------------------*/
+<langDe "Deutsch">
+<langLu "Luxemburgisch">
+<langFr "Französisch">
+<langGb "Englisch">
+<langPt "Portugiesisch">
+<langIt "Italienisch">
+<langNl "Niederländisch">
+<langRu "Russisch">
+<langEs "Spanisch">
+<langOther "Andere">
+<month "/Monat">
+<month1 "Monat">
+<price "Preis">
+<inter "International">
+<engagement "Verpflichtung">
+<no "Nein">
+<yes "Ja">
+<and "und">
+<enternum "Bitte geben Sie Ihre Strassennummer an um weiterzufahren...">
+<tarif "Tarif">
+<otherClients "Andere Kunden">
+<all "Alle">
+<homeHeadTitle "Ihr Telekommunikation-Operator: Luxembourg Online">
+<homeHeadDescription """
+    content="Entdecken Sie die unschlagbaren Angebote von Luxembourg Online für Highspeed Internet und Ultra Highspeed Internet (Glasfaser, VDSL), Fix- und Mobiltelefonie, TV und Cloud."
+""">
+<homeHeadKeywords """
+content="Telekommunikation Luxembourg, Telekommunikation Lösung, Internetanbieter, Internet TV Handy, Angebot Fiber Internet"
+""">
+<notFoundMetaTitle "Fehler 404 : Luxembourg Online">
+<notFoundDesc """
+<p style="font-size: 1.4em; line-height: 30px;" class="extra-bold phone-mb-20 blue">Die von Ihnen gesuchte Seite konnte leider nicht gefunden werden.</p>
+<p style="font-size: 1.2em; line-height: 25px;" class="grey">Möglicherweise existiert sie nicht, wurde verlegt oder die angegebene Adresse ist nicht korrekt.</p>
+""">
+<backToAccueil "Zurück zur Startseite">
+<language """
+Sprache<span class="icon-right-arrow"></span>
+""">
+<frontOffice "Kundenlogin">
+<frontOfficeMail "Email">
+<frontOfficeAccount "Mein Konto">
+<frontOfficeHomepage "Homepage">
+<frontOfficeConnect "Verbinden">
+<frontOfficeOpening "Mo-Fr: 8:00-19:00  l  Sa: 9:00-18:00">
+<placeholderUser """
+<input placeholder="Benutzername"/>
+""">
+<placeholderMdp """
+<input placeholder="Passwort"/>
+""">
+<onlineOrder """
+ Ihr Abo online
+<strong>bestellen</strong>
+<span class="icon-right-arrow"></span>
+""">
+<joinUs "Verfolgen Sie uns auch über: ">
+<contactUs "Kontakt: ">
+<needHelp "Benötigen Sie Hilfe? Hier erhalten Sie weiterführende Dokumente (FAQ, Informationen, Anleitungen, Vertäge etc.)">
+<cp "PLZ">
+<cpInput """
+    <input value name="zipcode" class="input-white" type="text" placeholder="{{cp}}" maxlength="4"/>
+""">
+<tvChannel "TV-Kanäle">
+<tvHdChannel "HD-Kanäle">
+<tvRadioChannel "Radio-Kanäle">
+<copyright "© Luxembourg Online S.A. – 2016, Alle Rechte vorbehalten">
+<adresse "Adresse">
+<notDispo "nocht verfügbar">
+<dispoOnRequest "Auf Anfrage verfügbar.">
+<footNoteOptionPay "mit Zusatzkosten verbunden">
+<footNoteConditionShop "Detaillierte Infos im Shop">
+<footNoteConditionShop1 "Detaillierte Infos im Shop">
+<footNoteDispo "Machbarkeit überprüfen">
+<footNoteInternetOffer1 "Bei den angegebenen Transferraten für Up- und Download handelt es nicht um garantierte Leistungen.  ">
+<footNoteInternetOffer2 "Mit Ausnahme von Sondernummern (800, 900, Gewinnspiele, Televoting, etc.). ">
+<footNoteInternetOffer3 "Länder der EU. ">
+<footNoteInternetOffer4 "Angebot nur gültig in Kombination mit einem Internet Abonnement bei Luxembourg Online. ">
+<footNoteInternetOffer5 "Aktionspreis. Nach 6 Monaten: LOLDSL 24 für 34,90€, LOLFIBER 100 für 54,90€. ">
+<footNoteInternetOffer6 "Gültig nur in Kombination mit einem Internet Abonnement bei Luxembourg Online">
+<gratis "kostenlos">
+<mondaySaturday "Mo-Sa: 9:00-18:00">
+<parrainage "Kunden werben">
+<installation "Installation">
+<illimited "unbegrenzt">
+<inclus "inbegriffen">
+<dynamique "dynamisch">
+<location "Miete">
+<withTech "Mit Techniker">
+<abo "Abonnement">
+<volume "Volumen">
+<ipAdress "IP-Adresse">
+<phone "Telefon">
+<com "Vertrieb">
+<compta "Buchhaltung">
+<boutique "Unsere Shops">
+<openHours "Öffnungszeiten">
+<searchMenuButton "Suche verfeinern">
+<modem "Modem">
+<modem1 "Modems">
+<wifiGrear "WLAN-Zubehör">
+<wlanRep "WLAN Repeater">
+<powRep "POWERLINE Repeater">
+<upTo "bis">
+<seeDetails "Weitere Informationen">
+<analogique "analog">
+
+/*-----------------------------------LIENS------------------------------------*/
+<menuLinkHome "Startseite">
+<menuLinkInternet """
+Internet<span class="icon-right-arrow"></span>
+""">
+<menuLinkPhone """
+Telefonie <span class="icon-right-arrow"></span>
+""">
+<menuLinkTv """
+TV <span class="icon-right-arrow"></span>
+""">
+<menuLinkMobile """
+Handy <span class="icon-right-arrow"></span>
+""">
+<menuLinkCoupon "Aktionen">
+<menuLinkOnlineOrder "Online-Registrierung">
+<menuLinkAssistance "Hilfe">
+<menuLinkMag "Broschüre">
+<menuLinkAbout "Über uns">
+<menuLinkContact "Kontakt">
+<menuLinkJob "Stellenangebote">
+<menuLinkSitemap "Sitemap">
+<menuLinkInternetHome "Internet">
+<menuLinkGear "Zubehör">
+<menuLinkSub "Bestellen">
+<menuLinkPhoneHome "Telefonie">
+<menuLinkPrices "Tarife">
+<menuLinkOurPhones "Telefone">
+<menuLinkTvHome "TV">
+<menuLinkTvOffers "TV-Angebot">
+<menuLinkMobileHome "Handy">
+<menuLinkMobileSub "Tarife">
+<menuLinkOurMobiles "Handys">
+<menuLinkFiberOffer "Glasfaser Spezialangebot">
+<menuLinkOffers "Angebote">
+<menuLinkPrivate "Privatkunden">
+<menuLinkBusiness "Business">
+<menuLinkNotice "Impressum">
+<tarifDSL "DSL/FIBER Tarife">
+<menuLinkTarifs """
+<span class="icon icon-calculator-ico"></span>{{tarifDSL}}
+""">
+<menuLinkParrainage """
+<span class="icon icon-parrainage-ico"></span>{{parrainage}}
+""">
+<am "Anrufbeantworter">
+<menuLinkRepondeur """
+<span class="icon icon-repondeur-icone"></span>Anrufbeantworter
+""">
+<linkFin "Finanzierungsoptionen">
+<menuLinkFin """
+<span class="icon icon-pig-ico"></span>{{linkFin}}
+""">
+<tarifDetails "Unsere Tarife im Detail">
+<menuLinkTarifsDetails """
+<span class="icon icon-calculator-ico"></span>{{tarifDetails}}
+""">
+<menuLinkTvChannels """
+<span class="icon icon-tv-ico"></span>Senderliste
+""">
+<doc "Dokumente">
+<menuLinkDoc """
+<span class="icon icon-document-ico"></span>{{doc}}
+""">
+<knowMore "Mehr erfahren">
+
+/*----------------------------------------------------------------------------*/
+/*-------------------------------INDEX.HTML-----------------------------------*/
+/*----------------------------------SLIDER------------------------------------*/
+<fiberPromoTitle1 """
+    La vitesse <span class="lowercase">x</span>2
+""">
+<fiberPromoTitle2 """
+    2<span class="lowercase">x</span> plus rapide <br/>au même prix !
+""">
+<sliderLolvisioTitle "Oubliez la distance !">
+<sliderSub """
+    <span class="normal">Plus besoin de vous déplacer,</span>
+    <br/>Abonnez-vous en ligne !
+""">
+<sliderSubLink "Voir la démo">
+<sliderLolcloudTitle """
+    LOL<span style="font-weight: 300;">CLOUD</span> : Vos fichiers,
+<br/>partout où vous voulez!
+""">
+<sliderLolcloudDetails "5 GB de stockage offerts">
+/*----------------------------------------------------------------------------*/
+/*---------------------------------ENCARTS------------------------------------*/
+<serviceMobileDesc """
+Anrufe und SMS<br/>inbegriffen in Europa.
+""">
+<serviceTvDesc """
+Netflix<span class="exponent">(1)</span> und YouTube<br/>auf Ihrem TV !
+""">
+<serviceLolnowDesc """
+Nutzen Sie Internet<br/>ab der Unterschrift<br/>des Vertrags !
+""">
+<encartTestTitle """
+    Verfügbare {{menuLinkOffers}} <strong>an Ihrer Adresse</strong> : 
+""">
+<dispoVerif "Verfügbarkeitscheck">
+<dispoVerif1 "Verfügbarkeitscheck">
+<whichOffer "Welche Angebote sind für Sie verfügbar ?">
+/*----------------------------------------------------------------------------*/
+/*--------------------------------SECTIONS------------------------------------*/
+<homeMagTitle """
+ENTDECKEN SIE DIE AN IHRE BEDÜRFNISSE ANGEPASSTEN ANGEBOTE !</strong>
+""">
+<homeMagDesc "Internet, Festnetz, Mobilfunk und Fernsehen. In unserem Magazin finden Sie unsere vollständigen Angebote inklusive aktueller Aktionen.">
+<homeMagLink "Zur Broschüre">
+<homeBdayTitle """
+Luxembourg Online
+<br/><strong>feiert seinen 20. Geburtstag</strong>
+""">
+<homeBdayDesc "Wir bedanken uns für das Vertrauendass Sie uns entgegen gebracht haben. Unsere Zusammenarbeit und Ihre Treue sind seit über 20 Jahren der Schlüssel zum Erfolg.">
+<homeBdayLink "Über Luxembourg Online">
+<homeOnlineluTitle """
+NEUSTE HIGH-TECH, AKTUELLES KINO UND VERANSTALTUNGEN IN <strong>LUXEMBOURG !</strong>
+""">
+<homeOnlineluDesc "Über das Online-Portal online.lu erhalten Sie aktuelle Informationen über kulturelle Veranstaltungen in Luxembourg, sowie Zeitpläne und Veranstaltungskalender für Kino, Konzerte und Austellungen.">
+<homeOnlineluLink "Weiter zu online.lu">
+<tvChannelOffer "über 110 TV-Sender, 40 HD-Sender + 40 Radio-Sender">
+/*----------------------------------------------------------------------------*/
+/*------------------------------InternetScript--------------------------------*/
+<noDisponible """
+    {{notDispo}} <br />an Ihrer {{adresse}}
+""">
+<notEligible """
+Leider können wir die Verfügbarkeit an Ihrer Adresse nicht prüfen. <br />Bitte kontaktieren Sie uns unter 2799 0000 um mehr Informationen zu erhalten.
+""">
+<getBest "Das beste ist gerade gut genug">
+<heartHit "Meistgewählte ">
+<packInclude "Das Paket beinhaltet: ">
+<volUnlimited "Unbegrenztes Volumen">
+<aboTel "Festnetznummer">
+<natCall "Anrufe ins nat. Festnetz">
+<mobileCall "Anrufe in LOL Mobilnetz">
+<euFixe "120 Min. in Europ. Festnetz">
+<otherOffers "Andere Angebote anschauen">
+<promoInstall "Promo : Installation kostenlos">
+<promoSpeed "PROMO : SPEED x2">
+<promoInstallSpeed """
+Promo : Installation kostenlos<br/>+ Speed x2
+""">
+<promoHalf "Promo : 6 Monate zum halben Preis">
+<chooseLoc "Wählen Sie Ihren Ort">
+<chooseAdr "Wählen Sie Ihre Adresse">
+<chooseNum "Wählen Sie Ihre Nummer">
+<unknownCp "{{cp}} unbekannt">
+/*----------------------------------------------------------------------------*/
+/*------------------------------POPUP TESTDISPO-------------------------------*/
+<testDispoTitle "Verfügbarkeit überprüfen">
+/*----------------------------------------------------------------------------*/
+/*---------------------------INTERNET/ACCUEIL.HTML----------------------------*/
+/*----------------------------------META--------------------------------------*/
+<internetAccueilMetaTitle "Internet : Internet - Luxembourg Online">
+<internetAccueilMetaDesc """
+    content="Spezialist für Internetanbindungen (Glasfaser und Koffer)kann Luxembourg Online Ihnen leistungsfähige Angebote zu attraktiven Preisen anbieten. "
+""">
+<internetAccueilMetaKeywords """
+    content="Angebot Glasfaser Internet, Glasfaser Fiber Luxembourg, Highspeed Internet, Internetanbieter"
+""">
+/*----------------------------------------------------------------------------*/
+/*------------------------------OFFRE INTERNET--------------------------------*/
+<internetAccueilOfferTitle """
+<b>Höchst attraktive</b> Internet Angebote !</strong>
+""">
+<internetAccueilOfferDesc """
+Luxembourg Online ist seit über 20 Jahren Spezialist für Internetanbindungen und kann Ihnen leistungsfähige Angebote zu attraktiven Preisen anbieten.
+Je nachdem ob Sie Vielsurfer sind oder einfach nur mal online gehen, wir können Ihnen für Ihren Bedarf den entsprechenden Tarif anbieten!
+""">
+<internetAccueilOfferLink "Unsere Internet Angebote">
+/*----------------------------------------------------------------------------*/
+/*-------------------------------SECTION FIBRE--------------------------------*/
+<internetAccueilFibreTitle """
+<strong>Die Glasfaser Technik</strong> bietet die schnellste und zukunftsträchtigste Internetverbindung.
+""">
+<internetAccueilFibreDesc """
+In Luxembourg ist die Versorgung mit Glasfaserverkabelung bereits weit fortgeschritten. Damit verfügen unsere Kunden bereits jetzt über die Vorteile dieser Technik: Das Netz ist stabil und viele Kunden können zeitgleich das Netz mit hoher Geschwindigkeit nutzen.
+""">
+<internetAccueilFibreLink "Erfahren Sie mehr">
+/*----------------------------------------------------------------------------*/
+/*---------------------------SECTION EQUIPEMENT-------------------------------*/
+<internetAccueilGearTitle """
+Wir bieten Ihnen qualitativ hochwertige <strong>Hardware!</strong>
+""">
+<internetAccueilGearDesc """
+Um unseren Kunden beste Leistung zu bieten, haben wir uns für die qualitativ hochwertigen Produkte von AVM entschieden. 
+""">
+<internetAccueilGearLink "Erfahren Sie mehr">
+/*----------------------------------------------------------------------------*/
+/*------------------------INTERNET/PARRAINAGE.HTML----------------------------*/
+/*----------------------------------META--------------------------------------*/
+<internetParainnageMetaTitle "Internet : Kunden werben - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+/*--------------------------------SECTION-------------------------------------*/
+<internetParainnageTitle """
+Kunden <b>werben</b>
+""">
+<internetParainnageDesc """
+Kennen Sie jemanden der noch keinen Internetzugang über Luxembourg Online hat ?
+Falls ja, helfen Sie ihm seine Kosten zu reduzieren und empfehlen Sie ihm eins unserer Angebote. <strong>Sie profitieren durch eine Prämie von 40 Euro.</strong>
+""">
+<internetParainnageDesc1 """
+Klicken Sie hierzu auf den Button und füllen Sie das Formular aus:
+""">
+/*----------------------------------------------------------------------------*/
+/*-------------------------INTERNET/OPTIONNOW.HTML----------------------------*/
+/*----------------------------------META--------------------------------------*/
+<internetOnMetaTitle "Internet : Option NOW - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+/*--------------------------------SECTION-------------------------------------*/
+<internetOnTitle """
+Profitieren Sie von einem <strong>direkten Internetzugang!</strong>
+""">
+<internetOnDesc """
+Mit Option NOW <strong>profitiern Sie ab Vertragsabschluss von einem Internetzugang!</strong> Bis Ihre Internetleitung bei Ihnen aktiviert wird, bieten wir Ihnen einen <strong>kostenlosen Hotspot</strong> welcher einen <strong>direkten Internetzugang</strong> in Ihrem Heim ermöglicht.
+""">
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/*---------------------INTERNET/TARIFS_DETAILLES.HTML-------------------------*/
+/*----------------------------------META--------------------------------------*/
+<internetTarifsMetaTitle "Internet : Tarife im Detail - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+/*--------------------------------SECTION-------------------------------------*/
+<internetTarifsTitle """
+Unsere Tarife <span class="bold">im Detail</span>
+""">
+<internetTarifsDesc "Anbei finden Sie eine vollständige Übersicht über unsere Internettarife.">
+/*----------------------------------------------------------------------------*/
+/*--------------------------------TABLEAU-------------------------------------*/
+<internetTarifsFibre "Glasfaser/VDSL">
+<internetTarifsDataZone "Festnetztelefonie national (unbegrenzt)">
+<internetTarifsDataZone1 "Anrufe in LOL Mobilnetz">
+<internetTarifsDataZone2 "EU 120 (120 Minuten ins europäische Festnetz)">
+<internetTarifsDataActiveService "Aktivierung">
+<internetTarifsDataInstall "Aktivierungskosten">
+<internetTarifsDataModem "Modem (Basismodell)">
+<internetTarifsDataAboTel "Telefonabo">
+<internetTarifsDataAboIsdn "ISDN-Leitung">
+<internetTarifsDataNatFix "Festnetztelefonie national (unbegrenzt)">
+<internetTarifsDataLolCall "Anrufe ins LOL Mobilnetz">
+<internetTarifsDataTrafic "Datenverkehr">
+<internetTarifsDataTelAvantage "Telefonie Vorteilspack">
+/*----------------------------------------------------------------------------*/
+/*------------------------INTERNET/OFFRES.HTML--------------------------------*/
+/*----------------------------------META--------------------------------------*/
+<internetOffreMetaTitle "Internet : Nos offres – Luxembourg Online">
+<internetOffreMetaDesc """
+    content="Die Internetangebote von Luxembourg Online passen sich Ihren Bedürfnissen an. Profitieren Sie von einem unbegrenzten Datenvolumen und entdecken Sie die vielen Vorteile der Glasfaser."
+""">
+<internetOffreMetaKeywords """
+    content="Angebot Glasfaser Internet, Glasfaser Fiber Luxembourg, Highspeed Internet, Internetanbieter"
+""">
+/*----------------------------------------------------------------------------*/
+/*-------------------------------CONTENT--------------------------------------*/
+<internetOffreTitle "Unsere Internetangebote">
+<internetOffreDSL24Desc "Fürs Wesentliche">
+<internetOffreTel "120 Min. im europ. Festnetz">
+<internetOffreFIBER30Desc "Bleiben Sie in Verbindung">
+<internetOffreOnDemand "Auf Anfrage">
+<internetOffreFIBER100Desc """
+Meistgewählte <span class="icon-heart-ico"></span>
+""">
+<internetOffreFIBER200Desc "Das Beste vom Besten">
+<internetOffreCableDesc """
+<strong class="blue">Luxembourg Online SA</strong> in Zusammenarbeit mit <strong class="blue">Antenne Collective Ettelbruck/Schieren/Hosingen</strong> bietet Ihnen einen Internetzugang übers TV-Netz in diesen Orten (verfügbar in Verbindung mit einem TV-Abo bei der jeweiligen Geminschaftsantenne).
+""">
+<internetOffreCableAbo "Monatsabo">
+<internetOffreCableTel "Nat. Festnetzflat">
+<internetOffreCableTelMin "120 Min in die EU">
+<internetOffreCableinstallMod24 """
+Installation + Modem <span>(Vertrag 24 Monate)</span>
+""">
+<internetOffreCableinstallMod12 """
+Installation + Modem <span>(Vertrag 12 Monate)</span>
+""">
+<internetOffreTvTitle """
+Steigern Sie Ihre Lebensqualität 
+<strong>mit LOL <span class="normal">TV</span>! </strong>
+""">
+<internetOffreTvDesc "Buchen Sie zusätzlich zum Internet Abo LOL TV und erleben Sie beliebte Serien und Filme. ">
+<internetOffreTvLink "Unser TV Angebot">
+/*---------------------------INTERNET/FAQ.HTML--------------------------------*/
+/*----------------------------------META--------------------------------------*/
+<internetFaqMetaTitle "Internet : FAQ - Luxembourg Online">
+/*--------------------------------SECTION-------------------------------------*/
+<internetFaqTitle "FAQ">
+<internetFaqDesc """
+Benötigen Sie weitere Informationen? Weiter unten finden Sie Antworten auf die häufigst gestellten Fragen.<br/>
+Falls Sie keine Antwort auf Ihre Fragen finden sollten, zögern Sie nicht uns telefonisch unter <strong><a href="tel://2799 0000">2799 0000</a></strong>
+                                oder per E-mail an <strong>helpdesk@internet.lu</strong>
+""">
+/*----------------------------------------------------------------------------*/
+/*------------------------------QUESTIONS-------------------------------------*/
+<internetFaqQ1 "Welche Internet Geschwindigkeit verpflichtet sich Luxembourg Online zu liefern ?">
+<internetFaqQ1A """
+Wir versuchen alles, Ihnen höchste Surf-Geschwindigkeit mit optimaler Qualität zu liefern.<br/>
+Die in unseren Angeboten aufgezeigten Geschwindigkeiten stellen die maximal erreichbaren Geschwindigkeiten dar und nicht die von uns garantierte Performance.<br/>
+Die tatsächliche Geschwindigkeit ist abhängig von:<br/>
+- der Distanz zwischen dem Installationsort und der systemabhängigen Vermittlungsstelle<br/>
+- der Netzwerkinfrastuktur vor Ort (Verkabelung, Hardwareausstattung, Distanz der Geräte zueinander)<br/>
+- Anzahl der Nutzer bzw. der auf das Internet zugreifenden Komponenten vor Ort<br/>
+Weitere Informationen zu möglichen Fehlerursachen können Sie in unserer <a href="../divers/assistance.html#document;3;" target="blank_">Supportdokumenten</a> finden.<br/>
+Falls Sie keine Antwort auf Ihre Fragen finden sollten, zögern Sie nicht uns telefonisch unter 2799 0000 oder per E-Mail via helpdesk@internet.lu zu kontaktieren.
+                                  
+""">
+<internetFaqQ2 "Was bedeutet \" Upstream \", \" downstream \" und  Mbit/s ?">
+<internetFaqQ2A """
+\" Upstream \" (oder auch \" Upload \") entspricht der Geschwindigkeit mit der die Daten von Ihrem Computer ins Internet gesendet werden. Man spricht auch von der Uploadgeschwindigkeit.<br/>
+                                    \" Downstream \" (oder auch \" Download \") entspricht der Geschwindigkeit mit der die Daten aus dem Internet auf Ihren Computer geladen werden. Man spricht auch von der Downloadgeschwindigkeit.<br/>
+                                    \" Mbit/s \" ist die Abkürzung für \" Megabit pro Sekunde \". Es handelt sich dabei um ein in der Informationstechnik verwendete Einheit für Geschwindigkeit von Daten. Sie entspricht dem in einer Sekunde transferierten Datenvolumen. Die Geschwindigkeit der Internetverbindungen von Luxembourg Online werden in Mbit/s angegeben.
+""">
+<internetFaqQ3 "Wozu wird ein Splitter benötigt ?">
+<internetFaqQ3A """
+Bei einem Splitter handelt sich um ein kleines Plastikgehäuse mit Steckverbindung, welches Ihnen bei Bestellung eines DSL 24 Accounts mitgeliefert wird.
+                                    <div class="popup-gallery" style="display: inline-block;"><a href="../images/internet/faq/filtre.png"><i class="fa fa-picture-o" style="color:#e75e0a;font-size: 18px;"></i></a></div>.<br/>
+                                   Diese Komponente dient dazu, die über die Telefonleitung gesendeten Niederfrequenzen, die für die Internetverbindung genutzt werden, von den Hochfrequenzen, die für Telefonie und Fernsehsignale verwendet werden zu trennen.<br/>
+									Es ist notwendig,einen Splitter hinter jeder vom Leitungsinhaber zur Verfügung gestellten Leitungsdose zu verwenden.<br/>
+									Des weiteren wird davon abgeraten, mehr wie drei Telefone an dem gleichen DSL Anschluss hinter dem Splitter zu verwenden. Dies kann zu einer Schwächung des Signals führen.
+
+""">
+<internetFaqQ4 "Kann ich ein Modem eines anderen Providers verwenden ?">
+<internetFaqQ4A """
+Technisch gesehen können Sie ein Modem Ihrer Wahl verwenden. Allerdings raten wir strengstens davon ab, ein anderes Modem als ein <a href="../internet/equipements.html" target="blank_">von Luxembourg Online geliefertes Modem</a> zu nutzen. Luxembourg Online kann die Funktion des Dienstes mit einem anderen Modem nicht garantieren. <br/>Des weiteren können wir bei Schäden oder Funktionsstörungen jeglicher Art keinen technischen Support anbieten. 
+
+""">
+<internetFaqQ5 "Was versteht man unter \" fair use \" ?">
+<internetFaqQ5A """
+\" fair use \" könnte man mit \" gerechter Verbrauch \" oder \" angemessener Verbrauch \" übersetzen. <BR/>
+									Der Grundsatz dieser Vereinbarung zielt darauf, allen Nutzern die gleiche Dienstqualität und Performance anzubieten. Luxembourg Online behält sich das Recht vor, bei Missbrauch und Verstoss gegen diesen Grundsatz den Zugriff auf den Dienst einzuschränken oder bis zum Ende der Abrechnungsperiode ganz zu unterbinden.
+									<br/>Aus diesem Grund sollten Sie Ihren Verbrauch regelmässig über Ihr <a href="#" class="openPopup" data-popup="0">Kundenkonto</a> überprüfen. 
+""">
+<internetFaqQ6 "Was passiert wenn ich umziehe ?">
+<internetFaqQ6A """
+Wenn Sie in ein von Luxembourg Online als Dienstanbieter abgedecktes Gebiet umziehen, bleibt Ihr Vertrag erhalten. Andernfalls wird Ihr Vertrag zum Ende der jeweils gültigen Kündigungsperiode gekündigt.
+Ebenfalls besteht die Möglichkeit den Vertrag auf eine andere Person zu <a href="../documents/Transfert_Contrat_Internet.pdf" target="blank_">übertragen</a>, wobei diese alle mit dem Vertrag verbundenen Verpflichtungen einhalten muss.<br/>
+                                    Für weitere Fragen können Sie uns gerne <a href="../divers/contact.html#form" target="blank_">kontaktieren</a>.
+""">
+/*------------------------------INTERNET/ABO.HTML-----------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<internetAboMetaTitle "Internet : Abonnieren Sie - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+/*----------------------------------SECTION-----------------------------------*/
+<aboTitle "Dokumente und Verträge">
+<aboDesc """
+Weiter unten finden Sie alle relevanten Dokumente bezüglich unserer Internet-Angebote. Für weitere Fragen können Sie uns gerne telefonisch unter <strong><a href="tel://2799 0000">2799 0000</a></strong> oder per E-mail an <strong>commercial@internet.lu</strong>.
+""">
+/*----------------------------------------------------------------------------*/
+<aboConractTitle "Verträge">
+<internetAboConractLink1 """
+<a href="../documents/LOLFIBERDSL_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Vertrag LOLFIBER / LOLDSL</div></a>
+""">
+<internetAboConractLink2 """
+<a href="../documents/LOLFIBERDSL_OFFRE2_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Vertrag Promo Glasfaser</div></a>
+""">
+<internetAboConractLink3 """
+<a href="../documents/LOLCABLE_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Vertrag LOLCABLE</div></a>
+""">
+<internetAboConractLink4 """
+<a href="../documents/LOLDSL20_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Vertrag LOLDSL 20</div></a>
+""">
+<aboCondTitle "ALLGEMEINE BEDINGUNGEN UND RECHTLICHE HINWEISE">
+<internetAboCondLink1 """
+<a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20ACCES%20%20INTERNET%20HAUT%20DEBIT%20ET%20TRES%20HAUT%20DEBIT.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link">Sondervereinbarung (Internet) <span>(neue Version vom  12/03/2012)</span></div></a>
+""">
+<aboCondLink2 """
+<a href="../documents/CONDITIONS%20GENERALES%20DES%20SERVICES%20LUXEMBOURG%20ONLINE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link">Allgemeine Bedingungen <span>(neue Version vom  09/01/2014)</span></div></a>
+""">
+<aboCondLink3 """
+<a href="../documents/MENTIONS_LEGALES.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link">Rechtliche Hinweise<span>(neue Version vom  26/01/2016)</span></div></a>
+""">
+<aboOtherTitle "Sonstiges">
+<aboOtherLink1 """
+<a href="../documents/domiciliationnew_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Sepa-Mandat</div></a>
+""">
+<internetAboOtherLink2 """
+<a href="../documents/demenag_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Umzugserklärung</div></a>
+""">
+<internetAboOtherLink3 """
+<a href="../documents/Transfert_Contrat_Internet.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Vertragsübernahme Internet</div></a>
+""">
+<internetAboOtherLink4 """
+<a href="../documents/RUSH_ORDER_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Rush order (LOLFIBER/LOLDSL)</div></a>
+""">
+/*----------------------------------------------------------------------------*/
+/*----------------------------INTERNET/CABLE.HTML-----------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<internetCableMetaTitle "Internet : Unsere Angebote LOLCABLE – Luxembourg Online">
+<internetCableMetaDesc """
+content="Die Internetangebote von Luxembourg Online passen sich Ihren Bedürfnissen an. Profitieren Sie von einem unbegrenzten Datenvolumen und entdecken Sie die vielen Vorteile der Glasfaser."
+""">
+/*--------------------------------SECTION-------------------------------------*/
+<internetCableTitle """
+<span class="extra-bold">LOL</span>Cable
+""">
+<internetCableDesc """
+Internetzugang über das Kabel-TV-Netz: Gemeinschaftsantenne Ettelbrück (Ettelbrück, Erpeldingen, Warken), Gemeinschaftsantenne Schieren 
+""">
+<internetCableDescZone0 """
+<b>120 Minuten in EU-Länder:</b>
+                    <div>
+                        Belgien,
+                        Bulgarien,
+						Dänemark,
+						Deutschland,
+                        Dänemark,
+                        Estland,
+                        Finland,
+                        Frankreich,
+                        Griechenland,
+						Großbritannien,
+                        Irland,
+                        Italien,
+						Kroatien
+                        Lettland,
+                        Litauen,
+                        Luxembourg,
+                        Malta,
+                        Niederlande,
+						Österreich,
+                        Polen,
+                        Portugal,
+						Rumänien,
+						Spanien,
+                        Slovakei,
+                        Slovenien,
+                        Schweden,
+						Tschechische Republik,
+						Ungarn,
+						Zypern
+                    </div>
+""">
+<internetCableDescZone1 """
+<b>Unbegrenzte Anrufe ins nationale Festnetz </b>
+                    <div>
+                        Mit Ausnahme von Sondernummern (800, 900, Gewinnspiele, Televoting, etc.)
+                    </div>
+""">
+*-----------------------INTERNET/EQUIPEMENTS.HTML-----------------------------*/
+/*---------------------------------META---------------------------------------*/
+<internetGearMetaTitle "Internet : Zubehör – Luxembourg Online">
+<internetGearMetaDesc """
+content="Qualitätszubehör für Ihr Internet : profitieren Sie von der Leistungsfähigkeit unserer Wifi-Modems, die eine Ultra-High-Speed-Verbindung garantieren."
+""">
+/*--------------------------------SECTION-------------------------------------*/
+<modemRoutAdslVdsl "WLAN Modem-Router ADSL2+ und VDSL">
+<modemRoutAdsl "WLAN Modem-Router ADSL2+">
+<modemRoutFibre "WLAN Modem-Router Glasfaser">
+<repeat "Erweitert die Reichweite des WLAN">
+<pwrLine "Erweitert das Heimnetzwerk über die Stromleitung">
+<adaptWifi "WLAN Adapter">
+/*-----------------------------MOBILE/ACCUEIL.HTML----------------------------*/
+/*----------------------------------META--------------------------------------*/
+<mobileAccueilMetaTitle "Handy : Startseite - Luxembourg Online">
+<mobileAccueilMetaDesc """
+    content="Mit den Handy-Abos von Luxembourg Online nutzen Sie Ihr Handy zum Vollsten: rufen Sie unbegrenzt in Luxemburg und Europa an."
+""">
+<mobileAccueilMetaKeywords """
+    content="Handy-Abo Luxembourg, Mobilflat Europa, Handy-Abo"
+""">
+/*----------------------------------------------------------------------------*/
+/*--------------------------------SECTION-------------------------------------*/
+<mobileAccueilAboTitle """
+Das Wesentliche <strong>zum Kommunizieren !</strong>
+""">
+<mobileAccueilAboDesc """
+Entdecken Sie mit den Mobilfunkverträgen von Luxembourg Online unsere attraktiven, flexiblen und den jeweiligen Bedürfnissen angepassten Angebote. 
+""">
+<mobileAccueilAboLink "Unsere Mobilfunktarife">
+<mobileAccueilFinTitle """
+Finanzierungsoptionen <strong>zur Verwaltung Ihres Budgets !</strong>
+""">
+<mobileAccueilFinDesc "Luxembourg Online bietet Ihnen beim Kauf eines Mobilfunkgerätes die Möglichkeit der Ratenzahlung über 24 Monate oder eine an Ihre Bedürfnisse angepasste  Finanzierungsmöglichkeit.
+Luxembourg Online findet für jeden eine Lösung!">
+<mobileAccueilMatTitle """
+<strong>Samsung Galaxy S7</strong>
+Wir entdecken eine neue Dimension für Smartphones !
+""">
+<mobileAccueilMatDesc "Brandneu, leistungstark und äusserst ästethisch, die neuste Innovation am Smartphone Markt wird Ihnen von Luxembourg Online angeboten.
+Mit dem Galaxy S7 tauchen Sie in ganz neue Dimensionen ein und überschreiten Grenzen.">
+/*-----------------------------MOBILE/ABO.HTML----------------------------*/
+/*----------------------------------META--------------------------------------*/
+<mobileAboMetaTitle "Handy : Bestellen - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<mobileAboConractLink1 """
+<a href="../documents/LOLMOBILE_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Vertrag</div></a>
+""">
+<mobileAboCondLink1 """
+<a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20DE%20TELEPHONIE%20MOBILE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link">Sondervereinbarung (Mobilfunk) <span>(neue Version vom 12/03/2012)</span></div></a>
+""">
+<mobileAboOtherLink2 """
+<a href="../documents/PORTABILITE_remplissable.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Portierungsauftrag</div></a>
+""">
+/*-------------------------MOBILE/ABONNEMENTS.HTML----------------------------*/
+/*----------------------------------META--------------------------------------*/
+<mobileAbosMetaTitle "Mobile : Abos - Luxembourg Online">
+<mobileAbosMetaDesc """
+content="Entdecken Sie unsere Handy-Abos ohne Vertragslaufdauer, Anrufe ins nationale Festnetz sowie LOL Mobilkunden inbegriffen und sorgenloses Telefonieren in Europa."
+""">
+/*----------------------------------------------------------------------------*/
+<mobileAbosTitle "Unsere Handy-Abos">
+<mobileAbosFamDesc "Nur das Wesentliche">
+<appelNatLol "Gespräche LOL-Netz ">
+<appelNatOther "Andere nationale Netze">
+<smsNat "SMS national">
+<dataUnlimited "Daten unbegrenzt 3G/4G">
+<telSmsEurope "Gespräche/SMS nach Europa">
+
+<mobileAbosHomeDesc "Luxembourg unlimitiert">
+<mobileAbosEuDesc "Ganz Europa in Reichweite">
+<footNoteMobileOffer1 "(1) Mit Ausnahme von Sondernummern (800, 900, Gewinnspiele, Televoting, etc.), SMS und gebührenpflichtige SMS. ">
+<footNoteMobileOffer2 "(2) Fair Use : 5GB ins nationale Netz inklusive. Im Falles des Überschreitens: 10€ pro angefangenem GB.">
+<footNoteMobileOffer3 "(3) 250 Minuten oder SMS von Luxembourg nach Europa oder innerhalb Europa.">
+<aboNoContract """
+Abos <strong>ohne Vertragslaufdauer</strong>
+""">
+/*------------------------------MOBILE/FAQ.HTML-------------------------------*/
+/*----------------------------------META--------------------------------------*/
+<mobileFaqMetaTitle "Handy : FAQ - Luxembourg Online">
+<mobileAbosMetaDesc """
+content="Entdecken Sie unsere Handy-Abos ohne Vertragslaufdauer, Anrufe ins nationale Festnetz sowie LOL Mobilkunden inbegriffen und sorgenloses Telefonieren in Europa."
+""">
+/*----------------------------------------------------------------------------*/
+<mobileFaqQ1 "Wie konfiguriert man Internet oder MMS auf dem Smartphone ?">
+<mobileFaqQ1A """
+Öffnen Sie unsere <a href="../divers/assistance.html#config-data;0;" target="blank_">Hilfe-Seite</a> und öffnen Sie im Bereich Konfiguration DATA/MMS das Dropdown-Menü des jeweiligen Betriebssystems. Folgen Sie den einzelnen Schritten der Anleitung.
+""">
+<mobileFaqQ2 "Wie kann ich meine Verbrauchsdaten im Ausland verwalten ?">
+<mobileFaqQ2A """
+- Sie möchten von der mobilen Datennutzung im Ausland Gebrauch machen:
+Nach einer gültigen Gesetzgebung ist die Höhe der Roaming Kosten innerhalb der Europäischen Union auf maximal 50 Euro beschränkt.
+Falls Sie wünschen, können Sie jedoch:<br/>
+                                    <ul>
+                                        <li>- VOR Erreichen der maximalen Höhe den Dienst durch Senden einer SMS mit Inhalt “STOP” an 60300 stoppen.</li>
+                                        <li>- NACH Überschreiten der maximalen Grenze können Sie die Blockierung aufheben, indem Sie den Text “GO” per SMS an 60300 senden.</li>
+                                    </ul>
+									<br/>
+                                    Zu beachten ist, dass die Limitierung auf 50 Euro nur Datendienste im Ausland und nicht Gespräche, SMS und Datendienste im Inland beinhaltet.
+Für diese Verwendung wird keine Blockierung durch Luxembourg Online durchgeführt.<br/>
+                                    - Sie können den Datendienst im Ausland über die Funktion <a href="../divers/assistance.html#config-data;0;" target="blank_">“Roaming” in den Systemeinstellungen Ihres Smartphones deaktivieren</a>. 
+""">
+<mobileFaqQ3 "Was muss ich tun wenn ich mein Mobiltelefon verloren habe oder das Telefon gestohlen wurde?">
+<mobileFaqQ3A """
+<a href="../divers/contact.html#form" target="blank_">Kontaktieren Sie umgehend</a> unsere Helpline die SIM-Karte sperren zu zu lassen.
+Im Falle eines Diebstahls sollten Sie ebenfalls umgehend Anzeige bei der Polizei erstatten. Halten Sie hierzu folgende Informationen bereit:<br/>
+                                   
+                                    <ul>
+                                        <li> Ihre Mobilfunknummer und den Namen des Providers,</li>
+                                        <li>- die IMEI- und die Seriennummer (befindet sich auf der Rechnung oder dem Kaufbeleg – alternativ auf dem Gerät),</li>
+                                        <li>- Hersteller, Farbe, Name oder die Typenbezeichnung des Gerätes. Ausserdem ebenfalls gestohlenes Zubehör,</li>
+                                        <li>- die Umstände des Diebstahls (Datum und Zeit, Zeugen)</li>
+                                    </ul>
+""">
+<mobileFaqQ4 "Ich möchte einen neuen Mobilfunkvertrag mit Luxembourg Online abschliessen. Kann ich meine alte Nummer behalten? ">
+<mobileFaqQ4A """
+Ja, das ist möglich. Beim Abschluss eines neuen Vertrages können Sie eine neue Rufnummer erhalten oder Ihre alte Rufnummer übernehmen. Der Vorgang hierzu nennt sich Portierung.
+""">
+<mobileFaqQ5 "Nach dreimaliger Eingabe des falschen PIN-Codes ist die SIM-Karte gesperrt. Was kann ich tun ?">
+<mobileFaqQ5A """
+Um Ihre SIM-Karte wieder freizuschalten müssen Sie den PUK-Code verwenden. Sie finden diesen Code in Ihren Dokumenten bei der Angabe des vorgegebenen PINs.
+                                    <div class="popup-gallery" style="    display: inline-block;"><a href="../images/mobile/faq/sim.jpg"><i class="fa fa-picture-o" style="color:#e75e0a;font-size: 18px;"></i></a></div>.
+                                    Nach Eingabe der PUK ist die SIM-Karte wieder freigeschaltet.<br/>
+                                    Falls Sie den PUK-Code nicht vorliegen haben, <a href="../divers/contact.html#form" target="blank_">kontaktieren Sie uns</a> oder besuchen Sie einen unserer Shops.
+""">
+<mobileFaqQ6 "Wie lange dauert es bis meine LOL-SIM Karte aktiviert ist ?">
+<mobileFaqQ6A "Ihre LOL-SIM Karte wird innerhalb von 48 Stunden freigeschaltet. ">
+<mobileFaqQ7 "Wo kann ich meinen Verbrauch einsehen ?">
+<mobileFaqQ7A """
+Sie können Ihren Verbrauch jederzeit online über Ihr <a href="#" class="openPopup" data-popup="0">Kundenkonto</a> einsehen.
+""">
+<mobileFaqQ8 "Was bedeutet \"Taktung 60’/60’\" und \"Taktung 60’/15’\" ?
+">
+<mobileFaqQ8A """
+\"Taktung 60’/60’\" bedeutet dass die erste Minute normal abgerechnet wird und jede weitere angefangene Minute zusätzlich abgerechnet wird.<br/>
+\"Taktung 60’/15’\" bedeutet dass die erste Minute normal abgerechnet wird und anschliessend jede Viertelminute (also alle 15 Sekunden) abgerechnet wird.
+""">
+/*---------------------------MOBILE/HOTCITY.HTML------------------------------*/
+/*----------------------------------META--------------------------------------*/
+<mobileHCMetaTitle "Handy : HOTCITY - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+/*-------------------------------SECTION--------------------------------------*/
+<mobileHCTitle """
+<b>HOT</b>CITY
+""">
+<mobileHCDesc "Profitieren Sie mit HOTCITY von einem uneingeschränkten WLAN-Zugang in Luxembourg Stadt und  Esch-sur-Alzette. Auf der Terrasse, auf der Strasse oder einfach nur in der Stadt. Seien Sie mobil und profitieren Sie von der guten Netzabdeckung von HOTCITY.">
+<mobileHCTableTitle "Tarifdetails:">
+<mobileHCTableData1 "Bei Abonnement LOLMOBILE über Luxembourg Online">
+<mobileHCTableData2 "Bei Abonnement Internetzugang über Luxembourg Online">
+<mobileHCFootNote1 "(1) bei Abonnement LOL MOBILE Home, LOL MOBILE Europe, LOLDATA 3G und DATA 4G.">
+<mobileHCLink """
+Mehr Infos unter<br><a href="https://www.hotcity.lu/" target="blank_"><strong>www.hotcity.lu</strong></a>
+""">
+/*-----------------------MOBILE/FINANCEMENT.HTML------------------------------*/
+/*----------------------------------META--------------------------------------*/
+<mobileFinMetaTitle "Handy : Finanzierung - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+/*-------------------------------SECTION--------------------------------------*/
+<mobileFinTitle """
+<b>Finanzierungsmöglichkeiten</b>
+""">
+<mobileFinDesc "Luxembourg Online bietet Ihnen beim Kauf eines Mobilfunkgerätes die Möglichkeit der Ratenzahlung über 24 Monate oder eine andere Finanzierungsmöglichkeit gemäss Ihrer Bedürfnisse.
+Luxembourg Online findet für jeden eine Lösung. ">
+<mobileFinOptTitle "Unsere Finanzierungsmöglichkeiten">
+<mobileFinOptDesc "Wählen Sie eine Finanzierungsoption und profitieren Sie sofort von einer Ermässigung beim Kauf eines Smartphones.">
+<mobileFinOptDetails1 """<strong>Option 5/24 : </strong>Zahlen Sie monatlich 5€ über 24 Monate, <strong>sparen Sie 120€</strong>""">
+<mobileFinOptDetails2 """<strong>Option 10/24 : </strong>Zahlen Sie monatlich 10€ über 24 Monate, <strong>sparen Sie 240€</strong>""">
+<mobileFinOptDetails3 """<strong>Option 15/24 : </strong>Zahlen Sie monatlich 15€ über 24 Monate, <strong>sparen Sie 360€</strong>""">
+<mobileFinOptDetails4 """<strong>Option 20/24 : </strong>Zahlen Sie monatlich 20€ über 24 Monate, <strong>sparen Sie 480€</strong>""">
+<mobileFinOptDetails5 """<strong>Option 25/24 : </strong>Zahlen Sie monatlich 25€ über 24 Monate, <strong>sparen Sie 600€</strong>""">
+<mobileFinOptDetails6 """<strong>Option 30/24 : </strong>Zahlen Sie monatlich 30€ über 24 Monate, <strong>sparen Sie 720€</strong>""">
+<mobileFinOptTxt "Natürlich können Sie Ihr Smartphone auch ohne eine der Optionen kaufen. Die Gesamtkosten werden sofort beim Kauf ermittelt.">
+<mobileFinOptFooter "Die Optionen beziehen sich ausschliesslich auf den Kauf in Verbindung mit dem Abschluss eines LOL MOBILE-Abonnements.">
+/*---------------------------MOBILE/TARIFS.HTML-------------------------------*/
+/*----------------------------------META--------------------------------------*/
+<mobileTarifsMetaTitle "Handy : Tarife im Detail - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<mobileTarifsZoneInt1 """
+<b>Zone international 1</b>
+                    <div>
+                       Azoren, Belgien, Bulgarien, Dänemark, Deutschland, Estland, Finnland, Frankreich, Französisch Guyana, Gibraltar, Griechenland, Grossbritannien, Guadeloupe, Isle of Man, Irland, Island, Italien, Jersey, Kroatien, Lettland, Liechtenstein, Litauen, Madeira, Malta, Martinique, Monaco, Niederlande, Norwegen, Österreich, Polen, Portugal, Reunion, Spanien(inklusive Kanarische Inseln), Tchechische Republik, Rumänien, Schweden, Schweiz, Slovakei, Slovenien, Ungarn
+					</div>
+""">
+<mobileTarifsZoneInt2 """
+<b>Zone international 2</b>
+                    <div>
+                        Ägypten, Albanien, Australien, China, Faröer-Inseln, Hong-Kong, Israel, Japan, Kanada, Montenegro, Neuseeland, Nördliche Mariannen, Russland, Serbien, Singapur, Südafrika, Sri Lanka, Taiwan, Türkei, Ukraine, USA (Guam, Virgin Island) 
+				    </div>
+""">
+<mobileTarifsZoneInt3 """
+<b>Zone international 3</b>
+                    <div>
+                        Andorra, Armenien, Aruba, Bahrein, Bangladesch, Bosnien Herzegowina, Brasilien, Dominica, Dominikanische Republik, Gambia, Ghana, Grenada, Gua Inde, Indonesien, Jemen, Katar, Kenia, Libanon, Macao, Mexiko, Moldawien, Montserrat, Maroko, Namibia, Nordkorea, Oman, Pakistan, Puerto Rico, Ruanda, Senegal, Seychellen, Südkorea, Syrien, Thailand, Togo, Tunesien, Turks- und Caicosinseln, Uganda, Uruguay, Vereinigte Arabische Emirate, Weissrussland    
+					</div>
+""">
+<mobileTarifsZoneInt4 """
+<b>Zone international 4</b>
+                    <div>
+                        Äquatorialguinea, Äthiopien, Afghanistan , Algerien, Amerik. Samoa, Angola, Anguilla, Antarktis, Antigua und Barbuda, Argentinien, Australien, Azerbaidjan, Bahamas, Barbados, Belize, Benin, Bermudas, Butan, Bolivien, Botswana, Brunei, Burkina Faso, Burundi, Chile, Cook-Inseln, Costa Rica, Dschibuti, Ecuador, Elfenbeinküste, Eritrea, Falklandinseln, Fiji, Französisch Polynesien, Gabun, Georgien, Grönland, Guatemala, Guinea, Guinea-Bissau, Guyana, Haiti, Honduras, Iran, Irak, Jamaika, Jordanien, Jungferninseln, Kambotscha, Kamerun, Kapverden, Kaimaninseln, Kasachstan, Kirgistan, Kiribati, Kolumbien, Kongo, Kuba, Kuweit, Lao, Lesotho, Liberia, Libyen, Macedonien, Madagaskar, Malawi, Malaysia, Malediven, Mali, Marschall-Inseln, Mauretanien, Mauritius, Mayotte, Mikronesien, Mongolei, Mosambique, Myanmar, Nauru, Nepal, Niederländische Antillen, Neukaledonien, Nicaragua, Niger, Nigeria, Norfolk, Ost-Timor, Palau, Palestina, Panama, Papua-Neuguinea, Paraguay, Peru, Philipinen, Republik Kongo, Republik Zentralafrika, Salomonen-Inseln, Salvador, Sambia, Saint Marin, Samoa, Sao Tome und Principe, Saudi Arabien, Sierra Leone, St Kitts und Nevis, St Pierre und Principe, Santa Lucia, St. Vincent und die Grenadinen, Sudan, Surinam, Swasiland, Tadschikistan, Tansania, Tonga, Trinidat und Tobago, Tschad, Turkmenistan, Usbekistan, Vanatu, Venezuela, Vietnam, Wallis und Futuna, Zimbabwe
+					</div>
+""">
+<mobileTarifsZoneInt5 """
+<b>Zone international 5</b>
+                    <div>
+                        Ellipso, Emsat, Globalstar, ICOGlobal, Inmarsat, Iridium, Jasper, Jersey Teleco, MCP Norvège, Satellite, Satellite Maritime, Thuraya, Vodafone Malta Maritime
+					</div>
+""">
+<mobileTarifsZone1 """
+<b>Zone 1</b>
+                    <div>
+                        Azoren, Belgien, Bulgarien, Dänemark, Deutschland, Estland, Finnland, Frankreich, Französisch Guyana, Gibraltar, Griechenland, Grossbritannien, Guadeloupe, Isle of Man, Irland, Island, Italien, Jersey, Kroatien, Lettland, Liechtenstein, Litauen, Madeira, Malta, Martinique, Monaco, Niederlande, Norwegen, Österreich, Polen, Portugal, Reunion, Spanien(inklusive Kanarische Inseln), Tchechische Republik, Rumänien, Schweden, Schweiz, Slovakei, Slovenien, Ungarn
+					</div>
+""">
+<mobileTarifsZone2 """
+<b>Zone 2</b>
+                    <div>
+                        Ägypten, Albanien, Australien, China, Faröer-Inseln, Hong-Kong, Israel, Japan, Kanada, Montenegro, Neuseeland, Nördliche Mariannen, Russland, Serbien, Singapur, Südafrika, Sri Lanka, Taiwan, Türkei, Ukraine, USA (Guam, Virgin Island) 
+					</div>
+""">
+<mobileTarifsZone3 """
+<b>Zone 3</b>
+                    <div>
+                        Andorra, Armenien, Aruba, Bahrein, Bangladesch, Bosnien Herzegowina, Brasilien, Dominica, Dominikanische Republik, Gambia, Ghana, Grenada, Gua Inde, Indonesien, Jemen, Katar, Kenia, Libanon, Macao, Mexiko, Moldawien, Montserrat, Maroko, Namibia, Nordkorea, Oman, Pakistan, Puerto Rico, Ruanda, Senegal, Seychellen, Südkorea, Syrien, Thailand, Togo, Tunesien, Turks- und Caicosinseln, Uganda, Uruguay, Vereinigte Arabische Emirate, Weissrussland    
+					</div>
+""">
+<mobileTarifsZone4 """
+<b>Zone 4</b>
+                    <div>
+                        Albanien, Angola, Anguilla, Antigua und Barbuda, Argentinien, Armenien, Azerbaidjan, Barbados, Burkina Faso, Elfenbeinküste, Französisch Polynesien, Georgien, Grenade, Hong-Kong, Indien, Iran, Israel, Jamaika, Jordanien, Jungferninseln, Katar, Kaimaninseln, Kasachstan, Kenia, Kuwait, Macedonien, Malawi, Malaysia, Mexiko,  Mosambique, Nigeria, Palestina, Paraguay, Peru, Philipinen, Russland, Republik Kongo, Saint Marin, Sansibar, Saudi Arabien, St Kitts und Nevis, Santa Lucia, St. Vincent und die Grenadinen, Südkorea, Tansania, Trinidat und Tobago, Ukraine, Vereinigte Arabische Emirate, Vietnam
+					</div>
+""">
+<mobileTarifsZone5 """
+<b>Zone 5</b>
+                    <div>
+                       Ellipso, Emsat, Globalstar, ICOGlobal, Inmarsat, Iridium, Jasper, Jersey Teleco, MCP Norvège, Satellite, Satellite Maritime, Thuraya, Vodafone Malta Maritime
+					  </div>
+""">
+<mobileTarifsDesc "Anbei finden Sie eine vollständige Übersicht über unsere Mobilfunktarife.">
+<mobileTarifsTable1Title "National: Gespräche">
+<mobileTarifsTable1Label1 "Anruf auf Festnetznummer">
+<mobileTarifsTable1Label2 "Anruf auf nationale Mobilfunknummer LOL">
+<mobileTarifsTable1Label3 "Anruf auf andere Mobilfunknummer">
+<mobileTarifsTable1Label4 "Anruf auf Sprachspeicherdienst">
+<mobileTarifsTable1Label5 "Taktung">
+<mobileTarifsTable2Title "Tarif Daten national (ohne Abonnement)">
+<mobileTarifsTable2Title2 "National: SMS/MMS und Daten">
+<mobileTarifsTable2Label1 "Datentransfer">
+<mobileTarifsTable2Value1 """
+<br>
+                                                    1,0174 / MB<br>
+                                                    0,5087 / MB<br>
+                                                    0,3052 / MB<br>
+                                                    0,2035 / MB<br>
+""">
+<mobileTarifsTable2Label2 "Inklusivvolumen">
+<mobileTarifsTable2Label3 "Zubehör">
+<mobileTarifsTable2Value2 "Miete 3G-Stick kostenlos">
+<mobileTarifsTable2Value3 "Miete 4G-Stick kostenlos">
+<mobileTarifsTable2FootNote "(1) Fair Use: Bei Überschreiten Kosten von 10€/GB">
+<mobileTarifsTable3Title "International: Gespräche ins Ausland">
+<mobileTarifsTable3Label1 "Anruf nach:">
+<mobileTarifsTable3Label2 "Festnetz €/min">
+<mobileTarifsTable3Label3 "Mobilnummer €/min">
+<interZone "Zone international">
+<mobileTarifsTable3Value1 "Taktung 60\" 60\"">
+<mobileTarifsTable4Title "International: Gespräche aus Ausland">
+<mobileTarifsTable4Label1 """
+Sie befinden sich in:
+""">
+<mobileTarifsTable4FootNote1 "(1) Tarif mit Abonnement LOL MOBILE FAMILY (oder anderer Tarif ohne ungegrenztes Volumen)">
+<mobileTarifsTable4FootNote2 "(2) Tarif mit Abonnement LOL MOBILE HOME oder LOL MOBILE EUROPE (oder anderer Tarif ohne ungegrenztes Volumen)">
+<mobileTarifsTable4FootNote3 "Taktung 30'' 1'' für Zone 1">
+<mobileTarifsTable4FootNote4 "Taktung 60'' 60'' für Zonen 2-5">
+<mobileTarifsTable5Title "International: Empfang von Gesprächen aus dem Ausland">
+<mobileTarifsTable5Label1 "Sie befinden sich in">
+<mobileTarifsTable5Label2 "Tarif €/Min">
+<mobileTarifsTable5Value1 "Taktung 1\" 1\"">
+<mobileTarifsTable6Label1 "Versand aus Luxembourg ins Ausland">
+<mobileTarifsTable6Label2 "In Zone international">
+<mobileTarifsTable6Label3 "Versand in Roaming Zone">
+<mobileTarifsTable6Label4 "aus Roaming Zone">
+<mobileTarifsTable6Label5 "Empfang von SMS aus den R.Zonen">
+<mobileTarifsTable6Label6 "Empfang von SMS aus den R.Zonen">
+/*----------------------------MOBILE/EQUIP.HTML-------------------------------*/
+/*----------------------------------META--------------------------------------*/
+<mobileGearMetaTitle "Handy : Handys - Luxembourg Online">
+<mobileGearMetaDesc "Handy : Handys - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<mobileGearTitle1 "Hauptmerkmale:">
+<mobileGearTitle2 "Bildschirm:">
+<mobileGearTitle3 "Kamera:">
+<mobileGearTitle4 "Konnektivität:">
+<mobileGearTitle5 "Speicher:">
+<mobileGearTitle6 "Prozessor:">
+<mobileGearLabel1 "Maße:">
+<mobileGearLabel2 "Gewicht:">
+<mobileGearLabel3 "SIM-Karte:">
+<mobileGearLabel4 "System:">
+<mobileGearLabel5 "Farben:">
+<mobileGearLabel6 "Diagonale:">
+<mobileGearLabel7 "Auflösung:">
+<mobileGearLabel8 "Typ:">
+<mobileGearLabel9 "Primär:">
+<mobileGearLabel10 "Sekundär:">
+<mobileGearLabel11 "Video:">
+<mobileGearLabel12 "WLAN:">
+<mobileGearLabel13 "Bluetooth:">
+<mobileGearLabel14 "GPS:">
+<mobileGearLabel15 "RAM:">
+<mobileGearLabel16 "Intern:">
+<mobileGearLabel17 "Ext. Karte:">
+<mobileGearLabel18 "CPU:">
+<mobileGearLabel19 "GPU:">
+<mobileGearLabel20 "Chipset:">
+<mobileGearLabel21 "Preis mit Finanzierung 30/24">
+<mobileGearLabel21Sub "30€ pro Monat über 24 Monate">
+<mobileGearLabel22 "Preis mit Finanzierung 25/24">
+<mobileGearLabel22Sub "25€ pro Monat über Monate">
+<mobileGearLabel23 "Preis mit Finanzierung 20/24">
+<mobileGearLabel23Sub "20€ pro Monat über Monate">
+<mobileGearLabel24 "Preis mit Finanzierung 15/24">
+<mobileGearLabel24Sub "15€ pro Monat über Monate">
+<mobileGearLabel25 "Preis mit Finanzierung 10/24">
+<mobileGearLabel25Sub "10€ pro Monat über Monate">
+<mobileGearLabel26 "Preis mit Finanzierung 5/24">
+<mobileGearLabel26Sub "5€ pro Monat über Monate">
+<mobileGearLabel27 "Preis ohne Finanzierung">
+<screen "Bild">
+/*------------------------------TV/ABO.HTML-----------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<tvAboMetaTitle "TV : Abonnement  - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<tvAboConractLink1 """
+<a href="../documents/LOLTV_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Vertrag</div></a>
+""">
+<tvAboOtherLink1 """
+<a href="../documents/domiciliationnew.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Sepa-Mandat</div></a>
+""">
+<tvAboOtherLink2 """
+<a href="../documents/guides/Guide_TV_Minix_A5_BD.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Benutzerhandbuch Minix</div></a>
+""">
+<tvAboOtherLink3 """
+<a href="../documents/guides/Guide_TV_Minix_Mini_A5_BD.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Benutzerhandbuch Minix mini</div></a>
+""">
+<tvAboOtherLink4 """
+<a href="../documents/Manuel-tv.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Benutzerhandbuch Amino</div></a>
+""">
+/*------------------------------------TV/INDEX.HTML-----------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<tvAccueilMetaTitle "TV : Startseite - Luxembourg Online">
+<tvAccueilMetaDesc """
+content="Mit LOLTV, genießen Sie das Beste aus ! TV-Sender, Radiosender, Filme, Netflix Serien und Youtube Videos : alles ist verfügbar ab Ihrem TV."
+""">
+<tvAccueilMetaKeywords """
+content="TV-Abo, Television Abonnement, TV-Angebote"
+""">
+/*----------------------------------------------------------------------------*/
+/*--------------------------------SECTION-------------------------------------*/
+<tvAccueilTitle """
+Fernsehen so intensiv erleben wie nie zuvor !
+""">
+<tvAccueilDesc """
+Mit LOL TV haben Sie die Qual der Wahl: + 110 Sender, + 50 HD-Sender, 40 Radiosender, sowie Streamingdienst Netflix<span class="exponent">(1)</span> und Youtube !<br/>
+                                <span style="margin: 10px 0 0; display: inline-block;" class="footer-note">(1) mit Zusatzkosten verbunden</span>
+""">
+<tvAccueilGearTitle """
+<strong>Leistungsfähiges</strong>Equipment mit vielen Funktionen !</strong>
+""">
+<tvAccueilGearDesc "Für den Dienst LOL TV stellt Luxembourg Online Ihnen die neueste Technologie zur Verfügung.
+Gemietet oder als Kaufhardware, profitieren Sie von der reichhaltigen Funktionalität der von uns angebotenen Empfänger.">
+/*---------------------------TV/CHANNELS.HTML---------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<tvChannelMetaTitle "TV : Liste des chaînes – Luxembourg Online">
+<tvChannelMetaDesc """
+content="Mit LOLTV, genießen Sie das Beste aus ! TV-Sender, Radiosender, Filme, Netflix Serien und Youtube Videos : alles ist verfügbar ab Ihrem TV."
+""">
+/*----------------------------------------------------------------------------*/
+<tvChannelTitle """
+Liste der <span class="bold">TV-Sender</span>
+""">
+<tvChannelRadioTitle """
+Liste der <span class="bold">Radiosender</span>
+""">
+/*---------------------------TV/CHANNELS.HTML---------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<tvFaqMetaTitle "TV : FAQ - Luxembourg Online">
+<tvFaqQ1 "Wie kann ich vom LOL TV Angebot profitieren ?">
+<tvFaqQ1A """
+Um unser LOL TV Angebot nutzen zu können, sollten Sie:<br/>
+                                    <ul>
+                                        <li>- über einen <a href="../internet/offres.html" target="blank_">Internetzugang von Luxembourg Online</a> mit einer Geschwindigkeit von mehr wie 8 Mbit/s verfügen,</li>
+                                        <li>- über ein richtig konfiguriertes Modem verfügen,</li>
+                                        <li>- über einen entsprechenden Empfänger verfügen.</li>
+                                    </ul><br/>
+                                    Für weitere Fragen können Sie uns gerne <a href="../divers/contact.html#form" target="blank_">kontaktieren</a>.
+""">
+<tvFaqQ2 "Ich besitze bereits einen TV Empfänger. Kann ich diesen verwenden?">
+<tvFaqQ2A """
+Falls Sie bereits einen LOL Empfänger von Luxembourg Online besitzen, können Sie diesen gerne nutzen. Dagegen können Sie einen Empfänger eines anderen Anbieters nicht verwenden.
+""">
+<tvFaqQ3 "Was mache ich im Falle eines technischen Problems beim TV Empfang ?">
+<tvFaqQ3A """
+Führen Sie eine Fehleranalyse anhand der unten aufgeführten Schritte durch. Diese Ratschläge werden Ihnen helfen ein Grossteil der auftretenden Probleme zu lösen:
+                                    <ul>
+                                        <li>- Starten Sie alle Komponenten (TV, Empfänger, Modem) neu.</li>
+                                        <li>- Überprüfen Sie den jeweiligen Status der Geräte (Stromversorgung: Standby oder eingeschaltet)<br/>
+                                            <ul>
+                                                <li>• Stellen Sie sicher dass die Verkabelung in Ordnung ist und dass die einzelnen Kabel nicht gebogen oder beschädigt sind.</li>
+                                                <li>• Überprüfen Sie ob die Fernbedienung funktionniert (Batterien) und stellen Sie sicher dass Sie die korrekte Fernbedienung verwenden.</li>
+                                            </ul>                                            
+                                           Darüber hinaus sollten Sie die Steckdose überprüfen, indem Sie dort ein anderes technisches Gerät (wie beispielsweise eine Lampe) anschliessen und auf Funktion überprüfen. Testen Sie den Empfänger auch an einer anderen Steckdose.
+Vermeiden Sie Mehrfachsteckdosen und Verlängerungskabel. Überprüfen Sie diese und sortieren Sie defekte Komponenten sofort aus. </li>
+                                        <li>- Überprüfen Sie alle Anschlüsse: Sie sollten alle gemäss Hinweis des jeweiligen Herstellers verwendet werden.</li>
+                                        <li>- Überprüfen Sie ob die Internetverbindung funktioniert.</li>                                        
+                                    </ul>
+                                    Überprüfen Sie nach jedem Schritt der Fehleranalyse ob das jeweilige Problem gelöst wurde.
+                                    <a href="../divers/contact.html#form" target="blank_">Kontaktieren</a>
+ Sie uns falls das Problem nicht behoben werden konnte.
+""">
+<tvFaqQ4 "Kann ich die Sender von LOL TV mit mehreren Fernseher empfangen ?">
+<tvFaqQ4A """
+Ja, in Abhängigkeit von Ihrer Internetverbindung können Sie mehrere Empfänger gleichzeitig nutzen. Hierfür benötigen Sie zusätzliche Hardware in Form von Empfängern. Diese können Sie direkt über uns beziehen.
+<br/><a href="../divers/contact.html#form" target="blank_">Kontaktieren</a> Sie uns um mehr zu erfahren. Unser Helpdesk kann Ihnen im Falle von auftretenden Fragen weiterhelfen. <
+""">
+/*-----------------------------TV/OFFRES.HTML---------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<tvOfferMetaTitle "TV : Unser TV-Angebot – Luxembourg Online">
+<tvOfferMetaDesc """
+content="Mit LOLTV, genießen Sie das Beste aus ! TV-Sender, Radiosender, Filme, Netflix Serien und Youtube Videos : alles ist verfügbar ab Ihrem TV."
+""">
+/*----------------------------------------------------------------------------*/
+<tvOfferTitle """
+    Fernsehen<br/>so intensiv<br/>wie nie zuvor !
+""">
+<tvOfferChannelTitle """
+<strong>Eine Vielzahl</strong> an Sendern
+""">
+<tvOfferChannelDesc "Mit LOL TV bietet Luxembourg Online Ihnen über 100 Sender in verschiedenen Sprachen. Da ist für jeden Geschmack etwas dabei: 
+Filme von grossen Regisseuren, Dokumentationen, Kultursendungen, Kindersendungen … zwangsläufig wird etwas für Ihren Geschmack dabei sein !">
+<tvOfferChannelLink "Übersicht Senderliste">
+<tvOfferAppTitle """
+<strong>Zusatzdienste</strong>  direkt mit dem Fernseher empfangbar
+""">
+<tvOfferAppDesc """
+Mit der über das Internet verbreiteten Lösung LOL TV sind Sie für die Zukunft gerüstet, denn wir bieten Ihnen bereits jetzt Dienste an, die mit der traditionellen Fernsehlösung nicht möglich sind. Zusätzlich zum klassischen Fernsehempfang können weitere Anwendungen wie <span class="red extra-bold">Netflix</span><span class="exponent">(1)</span> und <span class="red extra-bold">YouTube</span> direkt mit dem Fernseher empfangen werden ! 
+                                <span style="font-size: 12px; color: #818181; display: block; padding-top: 10px;">(1) mit Zusatzkosten verbunden.</span>
+""">
+<tvOfferIntTitle """
+<strong>Einfache und nutzerfreundliche</strong> Bedienung
+""">
+<tvOfferIntDesc "Um Ihnen die Navigation durch die einzelnen Menüs so einfach wie möglich zu gestalten, hat Luxembourg Online eine schnelle und intuitive Menüführung implementiert. Damit lassen sich in wenigen Augenblicken alle gesuchten Inhalte finden und mit nur wenigen Klicks gelangen Sie zu allen Diensten von LOL TV.">
+<tvOfferMinixTitle """
+Ein Empfänger <strong>der nächsten Generation</strong>
+""">
+<tvOfferMinixDesc """
+Lassen Sie sich nicht von seiner Grösse täuschen! Der LOL TV Empfänger verfügt trotz seiner kompakten Grösse über grosse Leistungsfähigkeit. Ausgestattet mit einem Quad-Core Prozessor und Arbeitsspeicher von 2 GB RAM ist er für den Empfang von Full HD Sendungen geeignet. Er bietet  Ihnen ein Fernseherlebnis von höchster Güte.
+                                <span style="font-size: 12px; color: #818181; display: block; padding-top: 10px;">Gyroscopische Fernbedienung (für Gestensteuerung) ist auf Anfrage verfügbar.</span>
+""">
+<tvOfferMinixLink "zum Zubehör">
+<tvOfferConnectTitle """
+Zahlreiche <strong>Anschlussmöglichkeiten</strong>
+""">
+<tvOfferConnectDesc "Ausgestattet mit einem digitalen Audio Port, einem Mikrofon-Anschluss, zwei USB-Ports, einer Schnittstelle für Speicherkarten, besitzt der LOL TV vielfältige Anschlussmöglichkeiten für die unterschiedlichsten Anwendungsbereiche.">
+<tvOfferAboTitle """
+Warten Sie nicht länger und nutzen Sie die reichhaltigen Vorteile von LOL TV !
+""">
+/*------------------------------TV/EQUIP.HTML---------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<tvGearMetaTitle "TV : Zubehör – Luxembourg Online">
+<tvGearMetaDesc """
+content="Mit LOLTV, genießen Sie das Beste aus ! TV-Sender, Radiosender, Filme, Netflix Serien und Youtube Videos : alles ist verfügbar ab Ihrem TV. "
+""">
+/*----------------------------------------------------------------------------*/
+<tvGearTitle """
+TV-Empfänger Minix <span class="orange" style="font-size:40px;"><strong>Kostenlose</strong> Installation!</span>
+""">
+<tvGearAchat "Kauf 159€ (Vertrag 12 Monate)">
+<tvGearLocation """
+<strong>Zusätzliche Empfänger:</strong><br />
+                                    Miete 5,50€/Monat (Vertrag 24 Monate)<br />
+                                    Kauf 159€ (Vertrag 12 Monate)
+""">
+<tvGearList """
+<li>Quad-core CPU</li>
+                                    <li>Speicher 2 GB RAM</li>
+                                    <li>Full HD</li>
+                                    <li>USB Ports</li>
+                                    <li>SD-Kartenslot</li>
+                                    <li>WLAN Hotspot</li>
+""">
+<tvGearRemoteTitle """
+Gyroscopische Fernbedienung <strong>LOL<span class="normal">TV</span></strong>
+""">
+<tvGearRemoteDesc "Bewegen Sie den Mauszeiger mit einfachen Hand- und Armbewegungen und profitieren Sie dadurch vom grossartigen Bedienungskomfort.
+Darüber hinaus befindet sich auf der Rückseite der Fernbedienung eine Tastatur, die Ihnen die Navigation und Bedienung noch weiter erleichtert.">
+/*-----------------------------TEL/ACCUEIL.HTML-------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<telAccueilMetaTitle "Telefonie : Startseite - Luxembourg Online">
+<telAccueilMetaDesc """
+content="Bei Luxembourg Online ist das Telefonabo im Internettarif enthalten : kommunizieren und surfen Sie in aller Ruhe."
+""">
+<telAccueilMetaKeywords """
+content="Forfait Internet Telefon, Festnetz Abonnement,  Telefonie Luxembourg, Festnetzflat"
+""">
+/*----------------------------------------------------------------------------*/
+<telAccueilTitle """
+Kommunikation <strong> zum vorteilhaften Preis ! </strong>
+""">
+<telAccueilDesc "Mit einem Festnetz-Abonnement, welches bereits in der Internet-Pauschale enthalten ist, profitieren Sie von zahlreichen Vorteilen die Ihnen von Luxembourg Online angeboten werden: unlimitierte Gespräche ins nationale Festnetz und ins Mobilfunknetz von LOL, 120 Freiminuten ins Festnetz der EU...">
+<telAccueilLink "Telefontarife im Detail">
+<telAccueilVisioTitle """
+<span class="extra-bold">LOL</span>VISIO :<br/><span class="extra-bold">Distanzen überwinden !</span>
+""">
+<telAccueilVisioDesc """
+<span class="extra-bold">LOL</span>VISIO von Luxembourg Online ist der Festnetz Service der nächsten Generation.
+Profitieren Sie schon jetzt von der Einfachheit der klassischen Telefonie in Kombination mit moderner Videotelefonie. 
+""">
+<telAccueilVisioLink "Angebot ansehen">
+<telAccueilGearTtitle """
+Eine Auswahl an Telefonen, <strong>angepasst an Ihre Kommunikationsbedürfnisse! </strong>
+""">
+<telAccueilGearDesc "Um Ihnen möglichst einfache und komfortable Kommunikations zu erlauben, bietet Luxembourg Online Ihnen eine Auswahl an leistungsstarken und funktionalen Telefonen an. Treffen Sie Ihre Auswahl unter der unseren Angeboten.">
+<telAccueilGearLink "Unsere Telefone">
+/*--------------------------------TEL/ABO.HTML--------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<telAboMetaTitle "Telefonie : Bestellen - Luxembourg Online">
+<telAccueilMetaDesc """
+content="Bei Luxembourg Online ist das Telefonabo im Internettarif enthalten : kommunizieren und surfen Sie in aller Ruhe."
+""">
+<telAccueilMetaKeywords """
+content="Forfait Internet Telefon, Festnetz Abonnement,  Telefonie Luxembourg, Festnetzflat"
+""">
+/*----------------------------------------------------------------------------*/
+<telAboConractLink1 """
+<a href="../documents/raccordement.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Auftrag für Anschluss</div></a>
+""">
+<telAboConractLink2 """
+<a href="../documents/Transfert_Contrat_Internet.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Vertragsübernahme</div></a>
+""">
+<telAboCondLink1 """
+<a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20DE%20TELEPHONIE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link"><span style="display:block;">Sondervereinbarung (Telefonie) (neue Version von 12/03/2012)</span></div></a>
+""">
+/*--------------------------------TEL/FAQ.HTML--------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<telFaqMetaTitle "Telefonie : FAQ - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<telFaqQ1 "Kann ich einen Telefon-Festnetzanschluss ohne Internetzugang bestellen ?">
+<telFaqQ1A """
+Ja, das ist möglich. Für weitere Fragen können Sie uns gerne <a href="../divers/contact.html#form" target="blank_">kontaktieren</a>.
+""">
+<telFaqQ2 "Kann ich einen auf meinem Festnetzanschluss ankommenden Telefonanruf auf eine andere Nummer weiterleiten ? ">
+<telFaqQ2A """
+Ja, dieser Dienst ist verfügbar.<br /> Melden Sie sich bei Ihrem <a href="#" class="openPopup" data-popup="0"><strong>Kundenkonto</strong></a> und wählen Sie hier die Option <strong>“Mein Konto”</strong>.Geben Sie hier zur Anmeldung Benutzername und Kennwort ein und klicken Sie auf <strong>“verbinden”</strong>.<br/>
+                                    Folgen Sie den jeweiligen Konfigurationsschritten:<br/>
+                                    1. Wählen Sie “Meine Abonnements” aus und klicken Sie auf “Konfigurieren”.<br/>
+                                    2. Wählen Sie im Bereich “Anrufweiterleitung” die Nummer aus für die Sie eine Weiterleitung einrichten möchten und geben Sie die Zielnummer ein.<br/>
+                                    3. Klicken Sie auf “Speichern” um die Einstellung zu speichern.<br/>
+                                    Die Änderung ist ab sofort nach Einrichtung gültig.
+""">
+<telFaqQ3 "Was bedeutet \"Taktung 60’/60’\" und \"Taktung 60’/15’\" ?">
+<telFaqQ3A """
+\"Taktung 60’/60’\" bedeutet dass die erste Minute normal abgerechnet wird und jede weitere angefangene Minute zusätzlich abgerechnet wird<br/>
+\"Taktung 60’/15’\" bedeutet dass die erste Minute normal abgerechnet wird und anschliessend jede Viertelminute (also alle 15 Sekunden) abgerechnet wird
+""">
+/*--------------------------TEL/LOLVVISIO.HTML--------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<telVisioMetaTitle "Telefonie : LOLVISIO – Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<telVisioZoneInt1 """
+Belgien,
+                        Bulgarien,
+						Dänemark,
+						Deutschland,
+                        Dänemark,
+                        Estland,
+                        Finland,
+                        Frankreich,
+                        Griechenland,
+						Großbritannien,
+                        Irland,
+                        Italien,
+						Kroatien
+                        Lettland,
+                        Litauen,
+                        Luxembourg,
+                        Malta,
+						Monaco,
+                        Niederlande,
+						Österreich,
+                        Polen,
+                        Portugal,
+						Rumänien,
+						Spanien,
+                        Slovakei,
+                        Slovenien,
+                        Schweden,
+						Tschechische Republik,
+						Ungarn,
+						Zypern.
+""">
+<telVisioTitle """
+<span class="extra-bold">LOL</span>VISIO :<br/><span class="extra-bold">Distanzen überwinden !</span>
+""">
+<telVisioDesc """
+<span class="extra-bold">LOL</span>VISIO ist unser Festnetz Service der nächsten Generation.
+Profitieren Sie schon jetzt von der Einfachheit der klassischen Telefonie in Kombination mit moderner Videotelefonie.  
+""">
+<telVisioComTitle """
+Kommunikation <strong>zum Annähern</strong>
+""">
+<telVisioComDesc """
+Weil es angenehmer und beruhigender ist, die Person zu sehen, mit der man spricht, hat Luxembourg Online diesen neuen Dienst im Grossherzogtum entwickelt. Dabei sehen sich die Gesprächspartner am Bildschirm, so als ob sie sich gegenüber sitzen würden. So können Sie mit Ihren  Angehörigen in Kontakt bleiben, auch wenn sei weit entfernt sind. 
+""">
+<telVisioGearTitle """
+Ein Telefon <strong>der nächsten Generation</strong>
+""">
+<telVisioGearDesc """
+Das Telefon <span class="extra-bold">LOL</span>VISIO von Luxembourg Online verbindet Moderne und Einfachheit und ermöglicht Kommunikation in höchster Qualität. So einfach in der Handhabung wie ein klassisches Telefon, mit der Option der Bildtelefonie. Und wenn Sie nicht in Stimmung auf ein Face-zu-Face Gespräch sind, können Sie jederzeit in den klassichen Telefoniemodus wechseln.
+""">
+<telVisioGearLink "zu unseren Telefonen">
+<telVisioTarifTitle """
+<strong>Zum Normaltarif,</strong> ohne Mehrkosten
+""">
+<telVisioTarifDesc """
+Mit dem Telefon <span class="bold">LOL</span>VISIO wird Kommunikation für Sie nicht teurer. Der Tarif und die Kosten bleiben gleich, ob Sie nun im Video- oder nur im Audio-Modus telefonieren. Des weiteren bleiben bei Buchung eines Festnetzanschlusses alle Gespräche ins Festnetz und zum Mobilfunknetz von LOL kostenlos. Profitieren Sie darüber hinaus von den 120 kostenlosen Freiminuten ins Europäische Festnetz.
+Folglich können Sie in aller Ruhe telefonieren.
+""">
+<telVisioVideoTitle """<strong>Ein Telefon, einfach und praktisch</strong>""">
+<telVisioVideoDesc """Das Telefon <span class="bold">LOL</span>VISIO ist einfach in der Handhabung und passt zu allen Bedürfnissen. Möchten Sie ein Audio- oder Videogespräch führen, nichts leichter als das: Wählen Sie einfach die Nummer und heben Sie den Hörer ab. 
+Sehen Sie hierzu unser Demonstrationsvideo und zögern sie nicht in unsen Shop zu kommen und das Telefon zu testen. """>
+<telVisioOfferTitle """
+Zögern Sie nicht, rufen Sie uns einfach unter <br/><span style="font-size: 1.6em; line-height: 60px;">2799 0000</span><br/> an um an mehr Informationen zu gelangen!
+""">
+<telVisioOfferTable1 """
+<strong>Unbegrenzt</strong> nat. Festnetz<span class="exponent">(1)</span>
+""">
+<telVisioOfferTable2 """
+<strong>Unbegrenzt</strong> LOL Mobilfunknetz
+""">
+<telVisioOfferTable3 """
+<strong>120 Freiminuten</strong> ins Europ. Festnetz<span class="exponent">(2)</span>
+""">
+/*--------------------------TEL/REPONDEUR.HTML--------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<phoneAmMetaTitle "Telefonie : Anrufbeantworter - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<phoneAmTitle "<b>Anrufbeantworter</b>">
+<phoneAmDesc "Entdecken Sie unseren Anrufbeantworter Service.
+Bei dem Dienst handelt es sich um einen virtuellen Anrufbeantworter mit vielen Funktionen, der für alle Kunden verfügbar ist, die über einen Telefonanschluss von Luxembourg Online verfügen..">
+<phoneAmContent """
+<p>Dieser <strong>kostenlose</strong> Dienst bietet Ihnen die Möglichkeit der Erreichbarkeit, auch wenn Sie aktuell nicht verfügbar sind.</p>
+                            <ul>
+                                <li>- Sie erhalten eine E-Mail sobald eine Sprachnachricht auf ihrer Mailbox eingegangen ist</li>
+                                <li>- Die Nachricht befindet sich als Audiodatei im E-Mail Anhang.</li>
+                                <li>- Somit können Sie die empfangenen Nachrichten aus der Ferne abrufen
+.</li>
+                            </ul>                            
+                            <p>Falls Sie in Ferien oder auf Reisen sind , Ihr Anrufbeantworter ist immer erreichbar.</p>
+                            <p><strong>Mit dem kostenlosen Anrufbeantworter Servicevon Luxembourg Online können Sie Ihre Mobilität ausleben und dennoch erreichbar sein!</strong></p>
+                            <div class="btn-container">
+                                <a class="btn-outline-white" href="../documents/Manuel-repondeur.pdf" target="blank_">Bedienungsanleitung</a>
+                            </div>
+""">
+/*-----------------------------TEL/TARIFS.HTML--------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<phoneTarifsMetaTitle "Telefonie : Unsere Tarife – Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<phoneTarifsTitle """Kommunizieren<br/>Sie in aller Ruhe!""">
+<phoneTarifsDesc """Ein Festnetzanschluss<br/><strong>ist bereits in Ihrer Internet-Pauschale enthalten!</strong>""">
+<phoneTarifsTableTitle "Kommunikationsdetails ausserhalb der Pauschale:">
+<phoneTarifsTableHeader1 "Typ Anruf">
+<phoneTarifsTableHeader2 "Hauptzeit">
+<phoneTarifsTableHeader3 "Nebenzeit">
+<phoneTarifsTableFixed "Festnetz national">
+<phoneTarifsTableMobile "Mobilfunknetz national">
+<phoneTarifsLink "Siehe Liste der internationalen Tarife">
+<phoneTarifsTableFoot1 "Hauptzeit : Montag bis Freitag  von 8:00 bis 19:00">
+<phoneTarifsTableFoot2 "Nebenzeit : Montag bis Freitag von 19:00 à 8:00 / Wochenende und Feiertage">
+<phoneTarifsLink1 "Die alte Tarifstruktur befindet sich innerhalb der Preisliste">
+/*---------------------------TEL/EQUIPEMENTS.HTML-----------------------------*/
+<phoneGearT201Desc "Schnurlostelefon DECT">
+<phoneGearT201Config """
+<li><div class="info">- Telefonbuch für 50 Namen und Nummern</div></li>
+<li><div class="info">- ECO Modus</div></li>
+                                                        <li><div class="info">- Beleuchtetes Display</div></li>
+                                                        <li><div class="info">- Freisprechfunktion via Lautsprecher</div></li>
+                                                        <li><div class="info">- Anrufspeicher 20 Namen und Nummern</div></li>
+                                                        <li><div class="info">- Interphone / Weiterleitung zwischen Einheiten</div></li>
+                                                        <li><div class="info">- Wahlwiederholungsspeicher 10 Einträge</div></li>
+                                                        <li><div class="info">- Bis zu 10 h Sprechzeit / 200 h im Standby (ungefähre Werte)</div></li>
+""">
+<phoneGearT202Desc "Pack Duo : 2 x Schnurlostelefon DECT">
+<phoneGearT202Config """
+<li><div class="info">- Telefonbuch für 50 Namen und Nummern</div></li>
+                                                        <li><div class="info">- ECO Modus</div></li>
+                                                        <li><div class="info">- Beleuchtetes Display</div></li>
+                                                        <li><div class="info">- Freisprechfunktion via Lautsprecher</div></li>
+                                                        <li><div class="info">- Anrufspeicher 20 Namen und Nummern</div></li>
+                                                        <li><div class="info">- Interphone / Weiterleitung zwischen Einheiten</div></li>
+                                                        <li><div class="info">- Wahlwiederholungsspeicher 10 Einträge</div></li>
+                                                        <li><div class="info">- Bis zu 10 h Sprechzeit / 200 h im Standby (ungefähre Werte)</div></li>
+""">
+<phoneGearT203Desc "Pack Trio : 3 x Schnurlostelefon DECT">
+<phoneGearT203Config """
+<li><div class="info">- Telefonbuch für 50 Namen und Nummern</div></li>
+                                                        <li><div class="info">- ECO Modus</div></li>
+                                                        <li><div class="info">- Beleuchtetes Display</div></li>
+                                                        <li><div class="info">- Freisprechfunktion via Lautsprecher</div></li>
+                                                        <li><div class="info">- Anrufspeicher 20 Namen und Nummern</div></li>
+                                                        <li><div class="info">- Interphone / Weiterleitung zwischen Einheiten</div></li>
+                                                        <li><div class="info">- Wahlwiederholungsspeicher 10 Einträge</div></li>
+                                                        <li><div class="info">- Bis zu 10 h Sprechzeit / 200 h im Standby (ungefähre Werte)</div></li>
+""">
+<phoneGearT49gDesc "Modernes und ultraperformantes Visiofon:">
+<phoneGearT49gConfig """
+<li><div class="info">- Touchbildschirm 8"</div></li>
+                                                        <li><div class="info">- Technologie HD voice</div></li>
+                                                        <li><div class="info">- Videoanrufe in Full HD</div></li>
+                                                        <li><div class="info">- Kamera HD 2 Megapixel mit Schliessmechanismus</div></li>
+                                                        <li><div class="info">- Bluetooth 4.0 und WLAN integriert</div></li>
+                                                        <li><div class="info">- Ports HDMI und USB</div></li>
+                                                        <li><div class="info">- Intuitives Interface</div></li>
+                                                        <li><div class="info">- Viele zusätzliche Funktionnalitäten inbegriffen</div></li>
+""">
+/*----------------------------PROMO/FIBRE.HTML--------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<promoFibreMetaTitle "Promo: Glasfaser - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<promoFibreTitle """
+GLASFASER ANGEBOTE<span style="font-size: 0.3em;" class="exponent">(1)</span>
+""">
+<promoFibreDesc """
+Aus <span class="bold">LOL</span>FIBER 100 wird <span class="bold">LOL</span>FIBER 200<br/>Wir schenken Ihnen die <span class="extra-bold">Installations- und Verkabelungskosten!</span>
+""">
+<promoFibreOfferTitle """2x <span class="uppercase">mehr Geschwindigkeit zum gleichen Preis !</span> !""">
+<promoFibreOfferDesc """
+Bei Abschluss eines Neuvertrages für das Angebot <br/><span class="bold">LOLFIBER 100</span> über 24 Monate verdoppelt Luxembourg Online die Geschwindigkeit<span class="exponent">(1)</span>  und schenkt Ihnen die Kosten für Installation und Verkabelung, d.h. bis zu:   
+""">
+<promoFibreOfferPrice """
+<div class="price blue">309€</div>
+<div class="label blue">Ermässigung</div>
+""">
+<promoFibreOfferDetails """
+oder kontaktieren Sie uns unter <b>2799 0000</b>
+""">
+<promoFibreOfferDate "Angebot ist gültig bis zum  31/12/2016. Weitere Informationen in unserem Shop">
+/*----------------------------PROMO/FIBRE1.HTML-------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<promoFibre1MetaTitle "Promo : Glasfaser - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<promoFibre1Title "Sonderangebot">
+<promoFibre1Desc """
+Wir schenken Ihnen die <span class="extra-bold">Installationskosten!</span>
+""">
+<promoFibre1Desc1 """
+Leider ist Glasfaser nicht vergügbar an Ihrer Adresse. Als Alternative bietet Luxembourg Online das Abo<br/><span class="bold">LOLFIBER 100</span> mit VDSL-Technologie.
+""">
+<promoFibre1Desc2 "Bei Abschluss eines Neuvertrages über 24 Monate, schenkt Ihnen Luxembourg Online die Installationskosten, d.h. : ">
+<promoFibre1OfferPrice """
+<div class="price blue">89€</div>
+<div class="label blue">Ermässigung</div>
+""">
+/*---------------------------DIVERS/EMPLOI.HTML-------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<diversEmploiMetaTitle "Stellenangebote – Luxembourg Online">
+<diversEmploiMetaDesc """
+content="Sind Sie motiviert und auf der Suche nach einer neuen Herausforderung?
+Schauen Sie sich unsere Stellenangebote an und schliessen Sie sich unserem jungen und dynamischen Team an."
+""">
+<diversEmploiMetaKeywords """
+content="Stellenangebote Luxembourg, Lehrgang Luxembourg, In Luxembourg arbeiten, Stellenangebote Telekommunikation"
+""">
+/*----------------------------------------------------------------------------*/
+<diversEmploiTitle """
+<b>Stellenangebote</b>
+""">
+<diversEmploiDesc """
+Sind Sie motiviert und auf der Suche nach einer neuen Herausforderung?<br/>
+Schauen Sie sich unsere Stellenangebote an und schliessen Sie sich unserem jungen und dynamischen Team an.
+""">
+<diversEmploiadmTitle "Administrativ">
+<diversEmploiAdmPdf1 """
+<a href="../documents/emploi/LOL-2016-003.pdf" target="_blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Finanzbuchhalter (m/w)</div>
+                                        </a>
+""">
+<diversEmploiAdmPdf2 """
+<a href="../documents/emploi/LOL-2016-002.pdf" target="_blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Controller (m/f)</div>
+                                        </a>
+""">
+<diversEmploiAdmPdf3 """
+<a href="../documents/emploi/Stagiaire_comptable.pdf" target="blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Praktikant Finanzbuchhaltung (m/w)</div>
+                                        </a>
+""">
+<diversEmploiAdmPdf4 """
+<a href="../documents/emploi/Stagiaire_controleur_de_gestion.pdf" target="blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Praktikant Controlling (m/w)</div>
+                                        </a>
+""">
+<diversEmploiAdmPdf5 """
+    <a href="../documents/emploi/Stagiaire_rh.pdf" target="blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Praktikant Personalverwaltung (m/w)</div>
+                                        </a>
+""">
+<diversEmploiComTitle "Vertrieb">
+<diversEmploiComPdf1 """
+<a href="../documents/emploi/LOL-2015-10-001.pdf" target="blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Vertriebsmitarbeiter (m/w)</div>
+                                        </a>
+""">
+<diversEmploiComPdf2 """
+<a href="../documents/emploi/Stagiaire_commercial.pdf" target="blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Praktikant Vertrieb (m/w)</div>
+                                        </a>
+""">
+<diversEmploiHelpTitle "Helpdesk">
+<diversEmploiHelpPdf1 """
+<a href="../documents/emploi/LOL-2015-10-003.pdf" target="blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Mitarbeiter Helpdesk (m/w) </div>
+                                        </a>
+""">
+<diversEmploiInfoTitle "Informatik">
+<diversEmploiInfoPdf1 """
+<a href="../documents/emploi/LOL-2015-008.pdf" target="blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Informatiker Projektierung/Entwicklung (m/w)</div>
+                                        </a>
+""">
+<diversEmploiInfoPdf2 """
+<a href="../documents/emploi/LOL-2015-10-005.pdf" target="blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Informatiker (m/w)</div>
+                                        </a>
+""">
+<diversEmploiInfoPdf3 """
+<a href="../documents/emploi/Stagiaires_informatique.pdf" target="blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Praktikant Informatik (m/w) </div>
+                                        </a>
+""">
+<diversEmploiMarkTitle "Marketing / Kommunikation">
+<diversEmploiMarkPdf1 """
+<a href="../documents/emploi/Stagiaire_marketing.pdf" target="blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Praktikant Marketing/Kommunikation</div>
+                                        </a>
+""">
+<diversEmploiMarkPdf2 """
+<a href="../documents/emploi/Stagiaire_redactionnelle.pdf" target="blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Praktikant Journalismus/Pädagogik (m/w)</div>
+                                        </a>
+""">
+<diversEmploiOtherTitle "Andere">
+<diversEmploiOtherPdf1 """
+<a href="../documents/emploi/Technicien_support_informatique.pdf" target="blank">
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Support Techniker Informatik (m/w)</div>
+                                        </a>
+""">
+<diversEmploiCanTitle """
+Spontane <span class="extra-bold">Bewerbung</span>?
+""">
+<diversEmploiCanDesc """
+Falls Sie sich dazu entschliessen sollten, sich unserem Unternehmen anschliessen zu wollen, senden Sie uns Ihre Bewerbungsunterlagen (Lebenslauf + Anschreiben) an folgende E-Mail Adresse:  <span class="bold">emploi@internet.lu</span>
+""">
+<diversEmploiCanLink "Bewerbung verschicken">
+/*---------------------------DIVERS/BROCHURE.HTML-----------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<diversBrochMetaTitle "Broschüre – Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<diversBrochTitle """
+Unsere <span class="bold">Broschüre</span>
+""">
+<diversBrochDesc "Möchten Sie unsere Angebote kennenlernen ? Lesen Sie unsere Online-Broschüre unten oder holen Sie sie sich in unserm Shop ab.">
+<diversBrochMetaDesc """
+content="Sie sind an einem unserer Angebote interessiert und möchten mehr erfahren ? Kontaktieren Sie une per Telefon oder E-Mail, oder verwenden Sie unser Kontaktformular. "
+""">
+/*----------------------------DIVERS/CONTACT.HTML-----------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<diversConMetaTitle "Kontakt – Luxembourg Online ">
+<diversConMetaDesc """
+content="Sie sind an einem unserer Angebote interessiert und möchten mehr erfahren ? Kontaktieren Sie une per Telefon oder E-Mail, oder verwenden Sie unser Kontaktformular. "
+""">
+/*----------------------------------------------------------------------------*/
+<diversConTitle """
+Möchten Sie mit uns <span class="bold">Kontakt aufnehmen?</span>
+""">
+<diversConDesc "Unser Team steht Ihnen für Fragen und Beratung zur Verfügung.
+Kontaktieren Sie uns per Telefon, per E-Mail oder verwenden Sie unser Kontaktformular weiter unten.">
+<diversConLuxOpenHourData """
+<li class="extra-bold">{{openHours}} : </li>
+                                        <li>Mo-Fr: 9:30 - 18:30</li>
+                                        <li>Sa: 9:00 - 18:00</li>
+""">
+<diversConDudOpenHourData """
+<li class="extra-bold">Öffnungszeiten : </li>
+                                        <li>Mo: 13:00 - 18:00</li>
+                                        <li>Di-Sa: 10:00 - 18:00</li>
+""">
+<diversConFormTitle "Kontaktformular">
+<diversConFormSubTitle "Ihre Kontaktdaten">
+<diversConFormAttr1 "Sind Sie bereits Kunde bei Luxembourg Online?">
+<diversConFormAttr2 "Name">
+<diversConFormAttr3 "Vorname">
+<diversConFormAttr4 "Adresse">
+<diversConFormAttr5 "Ort">
+<diversConFormAttr6 "Mobilnummer">
+<diversConFormAttr7 "Datei anhängen">
+<diversConFormAttr7Details "Maximal 3 Dateien">
+<required "*Pflichtangabe">
+<diversConFormSubTitle2 "Ihre Frage">
+<diversConFormAttr8 "Betreff">
+<diversConFormObj1 "-- Wählen Sie einen Inhalt --">
+<diversConFormObj2 "Anfrage vertrieblich">
+<diversConFormObj3 "Zugangsdaten E-Mail">
+<diversConFormObj4 "Bestellung">
+<diversConFormObj5 "Technische Frage">
+<diversConFormObj6 "Rechnung">
+<diversConFormObj7 "Bewerbung">
+<diversConFormObj8 "Anderer">
+<diversConFormAttr9 """
+Inhalt <span style="font-size: 0.7em;">(240 Zeichen max.)</span><span class="red">*</span>
+""">
+<diversConFormSend "Senden">
+<diversConAdm """
+<div class="title extra-bold">Verwaltung :</div>
+                        <ul>
+                            <li><span class="extra-bold">Adresse :</span> 14, av. du X Septembre | L-2550 Luxembourg</li>
+                            <li><span class="extra-bold">Fax :</span> 2799 3555 (vertrieblich) | 45 93 34 (Buchhaltung)</li>
+                        </ul>
+""">
+/*-----------------------------DIVERS/PROPOS.HTML-----------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<diversPropMetaTitle "Über uns – Luxembourg Online">
+<diversPropMetaDesc """
+content="Spezialist Internet, Telefonie, TV, Handy und Cloud, Luxembourg Online ist einer der Hauptakteure im Telekombereich in Luxembourg."
+""">
+<diversPropMetaKeys """
+content="Telekom Luxembourg, Telekom Operater, Internetanbieter, Luxembourg Online"
+""">
+/*----------------------------------------------------------------------------*/
+<diversPropTitle """
+Über <b>Luxembourg Online</b>
+""">
+<diversPropDesc """
+Entdecken Sie unsere Geschichte. Seit mehr als 20 Jahren steht die Zufriedenheit unserer Kunden an vorderster Stelle. Das ist übrigens eins unserer Leitmotive.
+""">
+<diversProp20Title "20 Jahre">
+<diversProp20Desc """
+<p>Luxembourg Online, <span>gegründet 1995,</span> ist einer der Hauptakteure auf dem luxemburgischen Telekommunikationsmarkt. Luxembourg Online, Experte seit über 20 Jahren auf dem Gebiet der Telekommunikation ist spezialisiert auf Internetzugang,  Festnetztelefonie, Mobilfunk, Fernsehempfang, sowie Entwicklung und Aufbau spezieller Informationsanwendungen und -netzen.</p>
+                            <p>Luxembourg Online ist zu 100% privat und verfügt über 100 Mitarbeiter, die auf vier Standorte im Land verteilt sind. </p>
+                            <p>Zur Zeit geniesst das Unternehmen das Vertrauen von über 30.000 Kunden im Privat- und Businessbereich.</p> 
+""">
+<diversPropNetTitle "Ein ausgebautes Netzwerk">
+<diversPropNetDesc """
+    <p>Seit Gründung hat Luxembourg Online sich zum Hauptziel gesetzt, seinen Kunden jederzeit Internet mit best möglicher Performance zu bieten.</p>
+                            <p>Hierfür hat das Unternehmen grosse Investitionen in die Internet Infrastruktur, speziell in den Ausbau der Glasfaserverkabelung getätigt.
+Somit verfügt Luxembourg Online über ein eigenes Internet im Grossherzogtum und deckt damit nahezu das gesamte Land ab.</p>
+                            <a class="btn-outline-white" style="text-transform: initial;" target="blank" href="../documents/Reseau_Fibre_Luxembourg_Online.pdf">Karte der Versorgungsgebiete</a>
+""">
+<diversPropValueTitle "Unsere Werte">
+<diversPropValueDesc """
+<p>Luxembourg Online hat sich als Unternehmen fest in der Luxembourger Gesellschaft etabliert. Gegründet vor über 20 Jahren, hat das Unternehmen sich zum zweiten Telekommunikationsanbieter im Land entwickelt.</p>
+                            <p>Die Ausarbeitung und der Erhalt der folgenden Unternehmenswerte sind wesentliche Bestandteile zum Erhalt des Unternehmens.</p>        
+""">
+<diversPropSatTitle "Kundenzufriedenheit">
+<diversPropSatDesc """
+<p>Weil unsere Kunden dafür gesorgt haben, dass Luxembourg Online seit über 20 Jahren erfolgreich existiert, ist das Unternehmen darauf bedacht diese Situation zu erhalten und unsere Kunden jederzeit zufrieden zu stellen.
+Hierfür steht unseren Kunden an sechs von sieben Tagen ein mehrsprachiger Helpdesk und ein Shop mit kompetenten Vertriebsmitarbeitern zur Verfügung.</p>
+""">
+<diversPropIndTitle "Unabhängigkeit">
+<diversPropIndTitleDesc """
+<p>Luxembourg Online verfügt über sein eigenes ‘Internet’ in Luxembourg und gewährleistet somit seine Unabhängigkeit in Verfügbarkeit, Entwicklung und Betreuung seiner Produkte und Dienste.</p>
+""">
+<diversPropExpTitle "Expertise">
+<diversPropExpDesc """
+<p>Luxembourg Online ist seit jeher der Vorreiter auf dem Gebiet des Internetzugangs im Grossherzogtum. Sein Vertriebs- und Serviceteam besteht aus Spezialisten, die an die Technologieentwicklungen am Markt angepasst sind. </p>
+""">
+<diversPropDataTitle "Datenschutz">
+<diversPropDataDesc """
+<p>Da der Datenschutz bei der Verwendung von neuen Technologien immer höheren Stellenwert einnimmt, verpflichtet sich Luxembourg Online, Nutzerdaten weder zu nutzen, noch zu verbreiten oder ohne persönliche Einwilligung des Kunden an dritte weiterzugeben. </p>
+""">
+<diversPropHistTitle "UNSERE GESCHICHTE">
+<diversPropHistStep1 "Einführung der Online-Einschreibung.">
+<diversPropHistStep2 "Einführung von LOLVISIO.">
+<diversPropHistStep3 "Luxembourg Online feiert sein 20 jähriges Bestehen !">
+<diversPropHistStep4 "Einführung von Glasfaserverkabelung.">
+<diversPropHistStep5 "Einführung von LOLTV, der Fernsehempfang via Internet.">
+<diversPropHistStep6 "Erhalt der UMTS-Lizenz.">
+<diversPropHistStep7 "Einführung von Mobilfunk LOLMOBILE.">
+<diversPropHistStep8 "Einführung von Telefonie über Internet.">
+<diversPropHistStep9 "Einführung von Telefon-Preselect-Verträgen um günstiger zu telefonieren.">
+<diversPropHistStep10 "Einführung von High-Speed Internet.">
+<diversPropHistStep11 "Einführung von Internetzugang über Fernsehverkabelung.">
+<diversPropHistStep12 "Erhalt der Lizenz A.">
+<diversPropHistStep13 "Einführung von ‘Pauschal-Internet’ mit unterschiedlichen Paketen (Internet \“free free\”).">
+<diversPropHistStep14 "Einführung eines kostenlosen landesweiten Internetzugangs.">
+<diversPropHistStep15 "Einführung einer elektronischen online-Plattform.">
+<diversPropHistStep16 "Gründung von Luxembourg Online.">
+/*-----------------------------DIVERS/PLAN.HTML-------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<diversPlanMetaTitle "Sitemap - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<diversPlanTitle "Sitemap Luxembourg Online">
+<diversPlanSubTitle1 "Internet">
+<diversPlanSubTitle2 "Telefonie">
+<diversPlanSubTitle3 "Handy">
+<diversPlanSubTitle4 "Verschiedenes">
+<diversPlanSubTitle5 "Weitere Seiten">
+<diversPlanLink1 "Business Seite">
+/*-----------------------DIVERS/Assistance.HTML-------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<diversAssMetaTitle "Hilfe - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<diversAssTitle """
+Willkommen auf der <span class="bold">Supportseite</span> von Luxembourg Online
+""">
+<diversAssInfo1 """
+<b>Unsere Kontaktdaten</b>
+                    <div>
+                        <ul class="emailPara2">
+                            <li><span>unsere Adressen,</span></li>
+                            <li><span>unsere Telefonnummer</span></li>
+                            <li><span>und unsere Faxnummer</span></li>                            
+                        </ul>
+                        <p>Sie können diese Information jederzeit aufrufen auf internet.lu, Rubrik Kontakt.</p>
+                    </div>
+""">
+<diversAssInfo2 """
+<b>Ihre Adresse</b>
+                    <div>                        
+                        <p>Diese Postadresse ist Ihre Rechnungsadresse. Sie kann von der Installationsadresse abweichen.</p>
+                    </div>
+""">
+<diversAssInfo3 """
+<b>Details Ihrer Rechnung</b>
+                    <div>
+                        <p>Hier finden Sie :</p>
+                        <ul class="emailPara2">
+                            <li><span>die Rechnungsnummer,</span></li>
+                            <li><span>die Beschreibung und Tarife Ihrer Abos,</span></li>
+                            <li><span>die detaillierten Verbraucherinformationen,</span></li>
+                            <li><span>den Gesamtbetrag der Rechnung.</span></li>
+                        </ul>
+                        <p>Der Verbrauch des vorherigen Monats wird im laufenden Monat verrechnet. Alle diese Informationen finden Sie in Ihrem Kundenkonto.</p>
+                    </div>
+""">
+<diversAssInfo4 """
+<b>Zusätzliche Informationen</b>                    
+                    <div>
+                        <p>Hier finden Sie:</p>
+                        <ul class="emailPara2">
+                            <li><span>der Abrechnungsmodus,</span></li>
+                            <li><span>das Datum der Abbuchung (im Falle der Zahlung per Lastschrifteinzug),</span></li>
+                            <li><span>und andere Informationen bezüglich Ihrer Rechnungen.</span></li>                            
+                        </ul>                        
+                    </div>
+""">
+<diversAssInfo5 """
+<b>Zusätzliche Informationen</b>                    
+                    <div>
+                        <p>Hier sind die verschiedenen Konten von Luxembourg Online, auf die Sie die Überweisungen tätigen können.</p>                                              
+                    </div>
+""">
+<diversAssGuideTitle "Bedienungsanleitungen und -hilfen">
+<diversAssGuideLinkImg1 """
+<a class="link link2" href="../documents/guides/guide-assistance-technique.pdf" target="_blank"><img src="../images/guide/guide-assistance-technique.jpg"></a>
+""">
+<diversAssGuideLink1 """
+<h3>Guide d'assistance technique</h3><a class="link-assistance" href="../documents/guides/guide-assistance-technique.pdf" target="_blank">Herunterladen</a>
+""">
+<diversAssGuideLinkImg2 """
+<a class="link link2" href="../documents/guides/Guide_ADSL_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_ADSL_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a>
+""">
+<diversAssGuideLink2 """
+<h3>Fritz!Box (ADSL)</h3><a class="link-assistance" href="../documents/guides/Guide_ADSL_A5_BD.pdf" target="_blank">Herunterladen</a>
+""">
+<diversAssGuideLinkImg3 """
+<a class="link link2" href="../documents/guides/Guide_VDSL_RV_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_VDSL_RV_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a>
+""">
+<diversAssGuideLink3 """
+<h3>Fritz!Box (VDSL)</h3><a class="link-assistance" href="../documents/guides/Guide_VDSL_RV_A5_BD.pdf" target="_blank">Herunterladen</a>
+""">
+<diversAssGuideLinkImg4 """
+<a onClick="ga('send', 'event', 'download', 'click', ‘FRITZ VDSL');"  class="link link2" href="../documents/guides/Guide_VDSL_DG_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_VDSL_DG_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a>
+""">
+<diversAssGuideLink4 """
+<h3>Fritz!Box (VDSL dégroupé)</h3><a onClick="ga('send', 'event', 'download', 'click', ‘FRITZ VDSL');" class="link-assistance" href="../documents/guides/Guide_VDSL_DG_A5_BD.pdf" target="_blank">Herunterladen</a>
+""">
+<diversAssGuideLinkImg5 """
+<a class="link link2" href="../documents/guides/Guide_LOLVISIO_particuliers_201605.pdf" target="_blank"><img src="../images/guide/Guide_LOLVISIO.png" data-realwidth="106" data-realheight="150"></a>
+""">
+<diversAssGuideLink5 """
+<h3><span class="bold">LOL</span>VISIO</h3><a onClick="ga('send', 'event', 'download', 'click', LOLVISIO');" class="link-assistance" href="../documents/guides/Guide_LOLVISIO_particuliers_201605.pdf" target="_blank">Herunterladen</a>
+""">
+<diversAssGuideLinkImg6 """
+<a class="link link2" href="../documents/guides/Guide_TV_Minix_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_TV_Minix_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a>
+""">
+<diversAssGuideLink6 """
+<h3>Minix (LOLTV)</h3><a class="link-assistance" href="../documents/guides/Guide_TV_Minix_A5_BD.pdf" target="_blank">Herunterladen</a>
+""">
+<diversAssGuideLinkImg7 """
+<a onClick="ga('send', 'event', 'download', 'click', ‘Minix Mini');" class="link link2" href="../documents/guides/Guide_TV_Minix_Mini_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_TV_Minix_Mini_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a>
+""">
+<diversAssGuideLink7 """
+<h3>Minix Mini (LOLTV)</h3><a onClick="ga('send', 'event', 'download', 'click', ‘Minix Mini');" class="link-assistance" href="../documents/guides/Guide_TV_Minix_Mini_A5_BD.pdf" target="_blank">Herunterladen</a>
+""">
+<diversAssMailTitle "Konfiguration E-Mail">
+<diversAssMailSelect "Wählen Sie die Konfiguration:">
+<diversAssMailSelectOption1 "Grundeinstellungen">
+<diversAssMailOption1Param """
+<li><span>Posteingangsserver(POP): <b>pop.internet.lu</b></span></li>
+                                                <li><span>Port: <b>110/connexion ohne SSL</b></span></li>
+                                                <li><span>Postausgangsserver (SMTP) : <b>smtp.internet.lu</b></span></li>
+                                                <li><span>Port SMTP: <b>25 oder 587 mit Authentifizierung aktiviert/Verbindung ohne SSL</b></span></li>
+                                                <li><span>E-mail-Adresse: <b>Ihre Adresse @internet.lu</b></span></li>
+                                                <li><span>Benutzername (username) : <b>Ihr Benutzer</b></span></li>
+                                                <li><span>Passwort (password) : <b>Ihr Passwort</b></span></li>
+""">
+<diversAssMailOption2Content """
+<h3>Windows 10 Mail</h3>
+                                            <ul class="emailPara" data-l10n-id="diversAssMailOption2Content">
+                                                <li><span>Öffnen Sie die Anwendung Mail (Courrier im Französischen) und klicken Sie auf das Icon “Konten”.</span></li>
+                                                <li><span>Klicken Sie auf das Icon “Konto hinzufügen”.</span></li>
+                                                <li><span>Wählen Sie “Anderes Konto”.</span></li>
+                                                <li><span>Geben Sie Ihre E-Mail Adresse und das dazugehörige Kennwort ein und klicken Sie auf “Anmelden”.</span></li>
+                                                <li><span>Klicken Sie anschliessend auf “Beenden”.</span></li>
+                                            </ul><br>
+                                            <p>Ein Fenster zur Bestätigung wird angezeigt: Ihr Konto wurde erfolgreich eingerichtet!
+Sie können nun mit E-Mails mit Windows 10 empfangen und versenden. </p>
+                                            <p>Für mehr Informationen:  <a class="link-assistance" target="blank" href="https://support.office.com/fr-fr/article/Configurer-votre-compte-dans-lapplication-Courrier-pour-Windows-10-7ff79e8b-439b-4b47-8ff9-3f9a33166c60">Microsoft Assistent</a></p>
+                                            <div><h3>Windows 8 Mail</h3>
+                                                <p>Die Anwendung Windows 8 Mail ist leider aufgrund fehlender Unterstützung von POP3 nicht mit dem Maildienst von Luxembourg Online nutzbar.<br/>
+Nutzen Sie zum E-Mail Empfang bitte einen alternativen Mail Client (Thunderbird, Outlook, …) oder verwenden Sie den Kundenlogin über unsere Webseite www.internet.lu.</p>
+                                            </div>
+""">
+<diversAssMailOption3Content """
+<h3>Outlook (gilt für Outlook 2010,2013 und 2016)</h3>                                            
+                                            <ul class="emailPara">
+                                                <li><span>Öffnen Sie Outlook.</span></li>
+                                                <li><span>Klicken Sie in der Menüleiste auf “Datei” und anschliessend auf “Konto hinzufügen”</span></li>                                                        
+                                                <li><span>Wählen Sie “Servereinstellungen oder zusätzliche Servertypen manuell konfigurieren” und klicken Sie auf “Weiter”.</span></li>
+                                                <li><span>Wählen Sie “POP oder IMAP” und klicken Sie auf “Weiter”.</span></li>
+                                                <li><span>Vervollständigen Sie die Felder  gemäss den folgenden Angaben und klicken Sie auf den Button “Weitere Einstellungen”.</span></li>
+                                                <ul class="emailPara2">
+                                                    <li>Ihr Name: <span>Vor- und Nachname</span></li>
+                                                    <li>E-Mail-Adresse: <span>Ihre E-Mail Adresse</span></li>
+                                                    <li>Kontotyp:  <span>wählen Sie <b>POP</b> im Dropdown Menü</span></li>
+                                                    <li>Posteingangsserver: <span>tragen Sie hier <b>pop.internet.lu</b> ein</span></li>
+                                                    <li>Postausgangsserver(SMTP): <span>tragen Sie hier <b>smtp.internet.lu</b> ein.</span></li>
+                                                    <li>Benutzername: <span>tragen Sie hier Ihren Benutzernamen ein.</span></li>
+                                                    <li>Kennwort: <span>geben Sie hier Ihr Kennwort ein (achten Sie auf Gross- und Kleinschreibung). Sie können das Kennwort speichern. Aktivieren Sie hierfür “Kennwort speichern”.</span></li>
+                                                </ul>
+                                                <li><span>Klicken Sie anschliessend auf “Weitere Einstellungen”."</span></li>
+                                                <ul class="emailPara2">
+                                                    <li>Wählen Sie den Tab “Erweitert”, vervollständigen Sie die Felder wie weiter unten beschrieben und klicken Sie auf “OK”.</li>
+                                                    <li>Wählen Sie unter “Verwenden Sie den folgenden verschlüsselten Verbindungstyp” “Keinen”</span></li>
+                                                    <li>Posteingangsserver (POP) : <span> Wählen Sie Port <b>110</b></span>.</li>
+                                                    <li>Postausgangsserver(SMTP) : <span> Wählen Sie Port <b>25</b> oder <b>587</b></span></li>                                                            
+                                                </ul>
+                                                <li><span>Klicken Sie nach “OK” auf “Weiter” zum Schliessen und beenden.</span></li>                                                
+                                                <li><span>Von jetzt ab können Sie E-Mails aus Outlook empfangen und senden.</span></li>                                                
+                                            </ul>
+                                            <p>Für mehr Informationen:  <a class="link-assistance" target="blank" href="https://support.microsoft.com/fr-fr/kb/286197">Microsoft Assistent</a></p>
+""">
+<diversAssMailOption4Content """
+<h3>Outlook 2007</h3>
+                                            <ul class="emailPara" style="margin-bottom:20px;">
+                                                <li><span>Klicken Sie in der Menüleiste auf “Extras” und anschliessend auf “Kontoeinstellungen”.</span></li>
+                                                <li><span>Klicken Sie auf der registerkarte “E-Mail” auf “neu”.</span></li>
+                                                <li><span>Klicken Sie im Dialogfeld “Neues E-Mail Konto hinzufügen”, wählen Sie “Microsoft Exchange, POP3, IMAP oder HTTP” und klicken Sie auf “Weiter”.</span></li>
+                                                <li><span>Wählen Sie hier die Option “Servereinstellungen oder zusätzliche Servertypen manuell konfigurieren” und klicken Sie auf “Weiter".</span></li>
+                                                <li><span>Klicken Sie auf “Internet E-Mail” und anschliessend auf “Weiter”.</span></li>
+                                                <li><span>Vervollständigen Sie die Felder mit den folgenden Angaben und klicken Sie auf den Button “Weitere Einstellungen”.</span></li>
+                                                <ul class="emailPara2">
+                                                    <li>Ihr Name: <span> Vor- und Nachname.</span></li>
+                                                    <li> E-Mail-Adresse: <span>Ihre E-Mail Adresse.</span></li>
+                                                    <li>Kontotyp: <span>wählen Sie <b>POP3</b> im Dropdown Menü</span></li>
+                                                    <li>Posteingangsserver (POP): <span>tragen Sie hier <b>pop.internet.lu</b> ein.</span></li>
+                                                    <li>Postausgangsserver (SMTP) : <span>tragen Sie hier <b>smtp.internet.lu</b> ein.</span></li>
+                                                    <li>Benutzername: <span>tragen Sie hier Ihren Benutzernamen ein.</span></li>
+                                                    <li>Kennwort: <span>geben Sie hier Ihr Kennwort ein (achten Sie auf Gross- und Kleinschreibung). Sie können das Kennwort speichern. Aktivieren Sie hierfür “Kennwort speichern”.</span></li>
+                                                </ul>
+                                                <li><span>Wählen Sie den Tab “Erweitert”, vervollständigen Sie die Felder wie weiter unten beschrieben und klicken Sie auf “OK”.</span></li>
+                                                <ul class="emailPara2">
+                                                    <li>Posteingangsserver (POP) : <span>Wählen Sie Port <b>110</b>.</span></li>
+                                                    <li>Der Server benötigt eine verschlüsselte Verbindung (SSL): <span>HIER KEINE Einstellung tätigen</span></li>
+                                                    <li>Postausgangsserver(SMTP) : <span>Wählen Sie Port <b>25 oder 587</b>.</span></li>
+                                                    <li>Wählen Sie unter “Verwenden Sie den folgenden verschlüsselten Verbindungstyp” “Keinen”</span></li>
+                                                </ul>
+                                                <li><span>Klicken Sie auf “Weiter” und anschliessend auf “Fertig stellen”.</span></li>
+
+                                                <li><span>Von jetzt ab können Sie E-Mails aus Outlook E-Mails empfangen und senden.</span></li>
+                                            </ul>
+""">
+<diversAssMailOption5Content """
+<h3>iOS</h3>                                            
+<a class="link-assistance" href="../documents/guides/mail_iphone.pdf" target="_blank">E-Mail Konfiguration mit iOS</a>
+""">
+<diversAssMailOption6Content """
+<h3>Android</h3>
+<a class="link-assistance" href="../documents/guides/mail_android.pdf" target="_blank">E-Mail Konfiguration mit Android</a>
+""">
+<diversAssMobileTitle "Konfiguration DATA/MMS">
+<diversAssMobileDesc "In den meisten Fällen bekommt Ihr Mobiltelefon seine Konfigurationseinstellungen über die SIM-Karte oder automatisch über das Netz des Dienstanbieters mitgeteilt.
+Ebenfalls ist es möglich die Einstellungen für den Internetzugang manuell zu konfigurieren.
+Wählen Sie zur Konfiguration Ihr Betriebssystem und folgen Sie den Anweisungen.">
+<diversAssMobileData """
+<div class="rTableRow"><div class="rTableCell" style="font-weight:bold;font-size:13px;border-bottom:1px solid #e1e1e1;">Konfiguration Data</div>
+                                                                <div class="rTableCell" style="font-weight:bold;font-size:10pt;border-bottom:1px solid #e1e1e1;"></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Name:</div><div class="rTableCell">LOL Internet</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">APN:</div><div class="rTableCell">orange.lu</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Proxy-Server:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>keine Angabe</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Port:</div><div class="rTableCell">8080</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Benutzername:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>keine Angabe</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Passwort:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>keine Angabe</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Server:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>keine Angabe</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">MMSC:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>keine Angabe</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Proxy-MMS:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>keine Angabe</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Port MMS:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>keine Angabe</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">MCC:</div><div class="rTableCell">270</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">MNC:</div><div class="rTableCell">99</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Typ Authentifizierung:</div><div class="rTableCell">PAP ou CHAP</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Typ APN:</div><div class="rTableCell">standard</div></div>
+""">
+<diversAssMobileMms """
+<div class="rTableRow"><div class="rTableCell" style="font-weight:bold;font-size:13px;border-bottom:1px solid #e1e1e1;">Konfiguration MMS</div>
+                                                                <div class="rTableCell" style="font-weight:bold;font-size:10pt;border-bottom:1px solid #e1e1e1;"></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Name:</div><div class="rTableCell">LOL MMS</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">APN:</div><div class="rTableCell">orange.lu</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Proxy-Server:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>keine Angabe</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Port:</div><div class="rTableCell">8080</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Benutzername:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>keine Angabe</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Passwort:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>keine Angabe</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Server:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>keine Angabe</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">MMSC:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>http://mms.orange.lu</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Proxy-MMS:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>212.88.139.44</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Port MMS:</div><div class="rTableCell"><font style="color:#b0b0b0;"><i>8080</i><font></font></font></div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">MCC:</div><div class="rTableCell">270</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">MNC:</div><div class="rTableCell">99</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Typ Authentifizierung:</div><div class="rTableCell">PAP ou CHAP</div></div>
+                                                            <div class="rTableRow"><div class="rTableCell">Typ APN:</div><div class="rTableCell">mms</div></div>
+""">
+<diversAssMobileIns1 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Datendienst aktivieren</h3>
+                                            <div class="dropdown-content">
+                                                <ul class="emailPara">
+                                                    <li><span>Öffnen Sie die Menüoberfläche des Smartphones.</span></li>
+                                                    <li><span>Wählen Sie </span>“Einstellungen”</li>
+                                                    <li><span>In Abhängigkeit von der Marke Ihres Smartphones und der Android-Version wählen Sie :</span></li>
+                                                    <ul class="emailPara2">
+                                                        <li><span>"Verbindungen"</span></li>
+                                                        <li><span>oder "Mehr..."</span></li>
+                                                        <li><span>oder "Mobildaten"</span></li>
+                                                        <li><span>oder "Zusätzliche Einstellungen"</span></li>
+                                                        <li><span>oder "Mehr Netzwerke"</span></li></span></li>
+                                                    </ul>
+                                                    <li><span>Wählen Sie </span> "Mobilnetzwerke".</li>
+                                                    <li><span>Stellen Sie sicher, dass “Datendienste”, “Datendienste aktiviert”, “Daten aktiviert” oder “Mobile Daten” aktiviert ist.</span></li>
+                                                </ul>
+                                            </div>
+""">
+<diversAssMobileIns2 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Roaming aktivieren</h3>
+                                            <div class="dropdown-content">
+                                                <ul class="emailPara">
+                                                    <li><span>Wählen Sie im Menü “Einstellungen>Mobilnetzwerke” das Untermenü “Datenverbrauch”.</span></li>
+                                                    <li><span>Stellen Sie sicher dass Roaming aktiviert ist.</span></li>
+                                                </ul><br/>
+                                                <p>Sobald Sie diese Funktion aktivieren, werden Sie über die Risiken durch fehlende Kostenkontrolle im Ausland informiert.<br/>
+                                                <p style="font-weight: bold;">Achtung: Um sich vor unangenehmen Überraschungen zu schützen, sollten Sie vor Aktivierung unsere detailierten <a class="link-assistance" href="../mobile/tarifs_detailles.html" target="blank_">Tarifinformationen</a> einsehen.</p>
+                                            </div>
+""">
+<diversAssMobileIns3 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Konfiguration der APN Einstellungen</h3>
+                                            <div class="dropdown-content">
+                                                <p>Der APN (Access Point Name) ist der Zugangspunkt, an dem sich Ihr Telefon ins Mobilfunknetz Ihres Providers anmeldet.</p>
+                                                <h3>Schritt 1 : So erhalten Sie Informationen zum aktuellen APN:</h3>
+                                                <ul class="emailPara">
+                                                    <li><span>Öffnen Sie die Menüoberfläche des Smartphones</span></li>
+                                                    <li><span>Wählen Sie </span>"Einstellungen”.</li>
+                                                    <li><span>In Abhängigkeit von der Marke Ihres Smartphones und der Android-Version wählen Sie :</span></li>
+                                                    <ul class="emailPara2">
+                                                        <li><span>"Verbindungen"</span></li>
+                                                        <li><span>oder "Mehr..."</span></li>
+                                                        <li><span>oder "Mobildaten"</span></li>
+                                                        <li><span>oder "Zusätzliche Einstellungen"</span></li>
+                                                        <li><span>oder "Mehr Netzwerke"</span></li></span></li>
+                                                    </ul>
+                                                    <li>Wählen Sie </span> "Mobilnetzwerke".</span></li>
+                                                    <li>Wählen Sie anschliessend <span>"Zugangspunkte"</span>.</li>
+                                                </ul>
+                                                <p style="font-weight: bold;">Hier können mehrere Zugänge angezeigt sein</p>
+                                                <p>- Sie können die Einstellungen von bestehenden APN ändern. Klicken Sie hierzu einfach auf den jeweils gelisteten Zugangspunkt,</p>
+                                                <p>-  Sie können hier neue APNs eintragen und die Einstellungen von vorhandenen APNs ändern.</p>
+                                                <h3>Schritt 2 : APN-Einstellungen von LOL konfigurieren</h3>
+                                                <p>Die hierfür relevanten Informationen zur Konfiguration finden Sie in den <a class="link-assistance" href="../divers/assistance.html#config-data;0;" target="blank_">Grundeinstellungen</a>.</p>
+                                                <p>Konsultieren Sie unseren Helpdesk <a class="link-assistance" href="../divers/contact.html#Probleme_technique" target="blank_"> Helpdesk</a> im Falle von Problemen. </p>
+                                            </div>
+""">
+<diversAssMobileIns4 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Beispiel für das Samsung Galaxy S5</h3>
+                                            <div class="dropdown-content">
+                                                <div class="row tuto" style="padding-left: 10px;">
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/Samsung1.png" alt=""/>
+                                                    </div>
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/Samsung2.png" alt=""/>
+                                                    </div>
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/Samsung3.png" alt=""/>
+                                                    </div>
+                                                </div>
+                                            </div> 
+""">
+<diversAssMobileIns5 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Konfiguration der AP Einstellungen</h3>
+                                            <div class="dropdown-content">
+                                                <p style="margin-bottom:0;">Der APN (Access Point Name) ist der Zugangspunkt, an dem sich Ihr Telefon ins Mobilfunknetz Ihres Providers anmeldet.</p><br/>
+                                                <h3>Schritt 1 : So erhalten Sie Informationen zum aktuellen APN:</h3>
+                                                <ul class="emailPara">
+                                                    <li><span>Öffnen Sie im Konfigurationsmenü des Smartphones die Übersicht der Anwendungen.</span>
+                                                    </li>
+                                                    <li><span>Wählen Sie </span>“Einstellungen”.</li>
+                                                    <li><span>Wählen Sie anschliessend den Menüpunkt “Netz” oder “Mobilfunk”.</li>
+                                                    <li><span>Wählen Sie anschliessend in Abhängigkeit von der Windowsversion die Funktion “Internet-APN hinzufügen” oder falls Sie einen existierenden APN abändern wollen “APN ändern”.</li>
+                                                </ul>
+                                                <p style="font-weight: bold;">Hier können mehrere Zugänge angezeigt sein:</p>
+                                                <p>- Sie können die Einstellungen von bestehenden APN ändern. Klicken Sie hierzu einfach auf den jeweils gelisteten Zugangspunkt,</p>
+                                                <p>- Sie können hier neue APNs eintragen und die Einstellungen von vorhandenen APNs ändern.</p>
+                                                <h3>Schritt 2 : APN-Einstellungen von LOL konfigurieren</h3>
+                                                <p>Informationen zur Konfiguration finden Sie in den <a class="link-assistance" href="../divers/assistance.html#config-data;0;" target="blank_">Grundeinstellungen</a>.</p>
+                                            </div>
+""">
+<diversAssMobileIns6 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Beispiel für Windows Phone</h3>
+                                            <div class="dropdown-content">
+                                                <div class="row tuto" style="padding-left: 10px;">
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/WindowsPhone1.jpg" alt=""/>
+                                                    </div>
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/WindowsPhone2.png" alt=""/>
+                                                    </div>
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/WindowsPhone3.png" alt=""/>
+                                                    </div>
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/WindowsPhone4.png" alt=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="row tuto" style="padding-left: 10px;">
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/WindowsPhone5.png" alt=""/>
+                                                    </div>
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/WindowsPhone6.png" alt=""/>
+                                                    </div>
+                                                    <div class="phone-12 tab-6 desk-3">
+                                                        <img src="../images/Divers/Assistance/WindowsPhone7.png" alt=""/>
+                                                    </div>
+                                                </div>
+                                            </div>
+""">
+<diversAssMobileIns7 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Roaming aktivieren</h3>
+                                            <div class="dropdown-content">
+                                                <ul class="emailPara">
+                                                    <li><span>Im Menü “Einstellungen” > “Allgemein” > “Mobiles Netz”</li>
+                                                    <li><span>Aktivieren Sie hier “Datenroaming” durch Schieben des Schalters (weisses O) nach rechts.</span></li>
+                                                </ul>
+                                                <p style="font-weight: bold;">Achtung: Um sich vor unangenehmen Überraschungen zu schützen, sollten Sie vor Aktivierung unsere detailierten <a class="link-assistance" href="../mobile/tarifs_detailles.html" target="blank_">Tarifinformationen</a> einsehen.</p>
+                                            </div>
+""">
+<diversAssFactTitle "FAQ Rechnungen">
+<diversAssFactIns1 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Ich verstehe meine Rechnung nicht</h3>
+                                        <div class="dropdown-content">
+                                            <div class="faq-image">
+                                                <div class="popup-gallery display-phone display-tab">
+                                                    <a href="../images/Divers/Assistance/Facture_Anonyme_1.jpg">
+                                                        <img src="../images/Divers/Assistance/Facture_Anonyme_1.jpg" alt=""/>
+                                                    </a>
+                                                </div>
+                                                <img class="hidden-phone hidden-tab" src="../images/Divers/Assistance/Facture_Anonyme_1.jpg" alt=""/>
+                                                <div class="display-desk display-lgdesk notif notif-one txtzone" data-zone="1"></div>
+                                                <div class="display-desk display-lgdesk notif notif-two txtzone" data-zone="2"></div>
+                                                <div class="display-desk display-lgdesk notif notif-three txtzone" data-zone="3"></div>
+                                                <div class="display-desk display-lgdesk notif notif-four txtzone" data-zone="4"></div>
+                                                <div class="display-desk display-lgdesk notif notif-five txtzone" data-zone="5"></div>
+                                            </div>
+                                            <ul class="display-phone display-tab emailPara">
+                                                <li><span><p>Unsere Kontaktdaten:</p>
+                                                        <ul class="not-decimal-list">
+                                                            <li><span>unsere Adresse,</span></li>
+                                                            <li><span>unsere Telefonnummer</span></li>
+                                                            <li><span>und unsere Faxnummer.</span></li>
+                                                        </ul>
+                                                        <p>Sie können diese Informationen auch auf unserer Webseite unter internet.lu im Bereich Kontakt finden.</p>
+                                                    </span></li><br/>
+                                                <li><span>Ihre Adresse. Bei dieser postalischen Adresse handelt es sich um Ihre Rechnungsadresse. Diese Adresse kann von der Adresse der Installation abweichen.</span></li><br/>
+                                                <li><span>Rechnungsdetails  <br/>                                                      
+                                                        In diesem Bereich finden Sie: :
+                                                        <ul class="not-decimal-list">
+                                                            <li><span>die Rechnungsnummer,</span></li>
+                                                            <li><span>die Beschreibung und den Rechnungsbetrag Ihres Abonnements,</span></li>
+                                                            <li><span>detailierte Verbrauchswerte,</span></li>
+                                                            <li><span>den Gesamtrechnungsbetrag.</span></li>
+                                                        </ul>
+                                                        <p>Für den Verbauch wird jeweils der jeweilige Verbrauch des Vormonats und nicht des aktuellen Monats berücksichtigt.
+Mehr Informationen hierzu finden Sie auf unserer Webseite in Ihrem Kundenkonto.</p>
+                                                    </span></li><br/>
+                                                <li><span>Zusätzliche Informationen       <br/>                                             
+                                                        Hierbei handelt es sich um:
+                                                        <ul class="not-decimal-list">
+                                                            <li><span>der Abrechnungsmodus</span></li>
+                                                            <li><span>das Datum der Abbuchung (im Falle der Zahlung per Lastschrifteinzug),</span></li>
+                                                            <li><span>alle weiteren Informationen die die Zahlung betreffen.</span></li>
+                                                        </ul>
+                                                    </span></li><br/>
+                                                <li><span>Hierbei handelt es sich um unterschiedliche Bankkonten von Luxembourg Online, über die Sie Ihre Zahlungen tätigen können.</span></li><br/>
+                                            </ul>
+                                            <p><span style="text-decoration: underline;" class="blue">Verschiedenes</span> : hier handelt es such um Premiumdienste (gebührenpflichtige SMS und MMS)</p>
+                                            <p>Haben Sie noch Fragen ? <a class="link-assistance" href="../divers/contact.html#Facturation" target="blank_">Kontaktieren Sie uns!</a></p>
+                                        </div>
+""">
+<diversAssFactIns2 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Was sind die Vorteile der Zahlung per Lastschrifteinzug ?</h3>
+                                        <div class="dropdown-content">
+                                            <p>Bei der Zahlung per Lastschrifteinzug handelt es sich um ein sehr einfaches und sicheres Zahlungsverfahren. 
+Die Abbuchung wird automatisiert jeden Monat von Ihrem Konto getätigt, wodurch Ihnen die Verwaltungsgebühr von 1,50 € bei rückständigen Zahlungen erspart bleibt.
+Um die Zahlung per Lastschrift einzuleiten, lesen Sie bitte die Antwort auf die folgende Frage.</p>
+                                        </div>
+""">
+<diversAssFactIns3 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Wie richte ich die Zahlung per Lastschriftverfahren ein?</h3>
+                                        <div class="dropdown-content">
+                                            <p>Falls Sie möchten dass Ihre Rechnung direkt von Ihrem Konto eingezogen wird, müssen Sie folgendes tun:</p>
+                                            <ul class="not-decimal-list" style="list-style-type: circle">
+                                                <li><span>Drucken und füllen Sie das  <a class="link-assistance" href="../documents/domiciliationnew_FR.pdf" target="blank_">SEPA-Lastschrifstformular</a> aus,</span></li>
+                                                <li><span>lassen Sie uns das Dokument online oder per Post zukommen, oder bringen Sie das Dokument direkt in unseren Shop.</span></li>                                                    
+                                            </ul>                                            
+                                        </div>
+""">
+<diversAssFactIns4 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Zu welchem Datum wird der Rechnungsbetrag abgebucht?</h3>
+                                        <div class="dropdown-content">
+                                            <p>Sobald das Lastschriftverfahren eingerichtet ist, erfolgen die Abbuchungen jeweils zum Ende des Monats oder zum 15. eines Monats, falls eine Abbuchung gescheitert sein sollte.</p>
+                                        </div>
+""">
+<diversAssFactIns5 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Lässt sich das Datum der Abbuchung ändern?</h3>
+                                        <div class="dropdown-content">
+                                            <p>Zur Zeit ist es nicht möglich den Zeitpunkt der Abbuchung zu ändern.
+Doch sollten Sie uns direkt <a class="link-assistance" href="../divers/contact.html#Facturation" target="blank_">kontaktieren</a> falls irgendwelche Probleme auftreten sollten.</p>
+                                        </div>
+""">
+<diversAssFactIns6 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Wie kann ich meine Rechnung elektronisch oder online bezahlen ?</h3>
+                                        <div class="dropdown-content">
+                                            <p>Um die online-Zahlung Ihre Rechnungsbeträge in die Wege zu leiten, folgen Sie den nächsten Schritten:</p>
+                                            <ul class="emailPara">
+                                                <li><span>Wählen Sie den <a href="#" class="openPopup link-assistance" data-popup="0">Kundenbereich</a> über unsere Webseite internet.lu aus.</span></li>                                                    
+                                                <li><span>Wählen Sie hier "Mein Konto", identifizieren Sie sich durch Eingabe Ihres Nutzernamens und geben Sie anschliessend Ihr Passwort ein</span></li>
+                                                <li class="popup-gallery"><span>Klicken Sie auf <<Kundenkonto >> und anschliessend auf den Button "XX EUR zahlen" <a href="../images/divers/Assistance/bouton_facture.jpg">( <span class="icon icon-faq-ico"></span> )</a></span></li>
+                                                <li><span>Wählen Sie im nächsten Schritt die gewünschte Zahlungsweise aus.</span></li>
+                                                <li><span>Folgen Sie den Anweisungen entsprechend Ihrer Bankverbindung. Im abschliessenden Prozess erhalten Sie eine Zahlungsbestätigung, die Sie aufbewahren sollten.</span></li>                                               
+                                            </ul>
+                                        </div>
+""">v
+<diversAssFactIns7 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Was sind die Vorteile des Rechnungsempfangs per E-Mail ?</h3>
+                                        <div class="dropdown-content">
+                                            <ul class="emailPara">
+                                                <li><span>Sie sparen die Versandkosten (1,50 Euro pro Monat) für Rechnungsversand.</span></li>
+                                                <li><span>Sie können Ihre Rechnungen jederzeit und überall einsehen. Hierfür ist alleinig ein Internetzugang oder Zugang zu Ihrem Kundenkonto notwendig.</span></li>
+                                                <li><span>Das Archivieren der Rechnungen wird erleichtert da Sie diese direkt auf Ihrem Rechner oder sogar in der <a class="link-assistance" href="http://internet.lu/lolcloud" target="blank_">LOLCLoud</a> ablegen können!</span></li>
+                                                <li><span>Sie erhalten keine Papierrechnungen mehr: Somit sparen Sie Papier ein und tragen damit zum Umweltschutz bei.</span></li>
+                                            </ul>
+                                            <p>Um die Rechnung zukünftig per E-Mail zu empfangen, reicht ein Klick auf <a class="link-assistance" href="../divers/contact.html#Facturation" target="blank_">diesen Link</a>.</p>
+                                        </div>
+""">
+<diversAssFactIns8 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Wie empfange ich zukünftig meine Rechnung per E-Mail ?</h3>
+                                        <div class="dropdown-content">
+                                            <p>Um Ihre Rechnungen zukünftig per E-Mail zu empfangen, <a class="link-assistance" href="../divers/contact.html#Facturation" target="blank_">klicken Sie hier</a>.</p>
+                                        </div>
+""">
+<diversAssFactIns9 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Wie kann ich meine Rechnungen online einsehen?</h3>
+                                        <div class="dropdown-content">
+                                            <p>Hierfür reicht es aus, wenn Sie sich in Ihrem Kundenkonto anmelden. <br/>
+Wählen Sie den Kundenbereich (Kundenlogin) über unsere Webseite internet.lu aus.<br/>
+Wählen Sie hier << Mein Konto >> (“Mon compte”), identifizieren Sie sich durch Eingabe Ihres Nutzernamens und geben Sie anschliessend Ihr Passwort ein.<br/>
+Wählen Sie im Kontenbereich die Rechnungen aus die Sie zukünftig online empfangen möchten..</p>
+                                        </div>
+""">
+<diversAssFactIns10 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Wie kann ich meinen Verbrauch einsehen?</h3>
+                                        <div class="dropdown-content">
+                                            <ul class="emailPara">
+                                                <li><span>Wählen Sie den Kundenbereich (Kundenlogin) über unsere Webseite internet.lu aus. </span></li>
+                                                <li><span>Wählen Sie hier "Mein Konto", identifizieren Sie sich durch Eingabe Ihres Nutzernamens und geben Sie anschliessend Ihr Passwort ein.</span></li>
+                                                <li><span>Klicken Sie auf "Meine Abonnements" und anschliessend auf "Verbrauch".</span></li>                                                
+                                            </ul>
+                                            <p>Hier bekommen Sie Ihre Verbrauchswerte detailiert aufgezeigt.</p>
+                                        </div>
+""">
+<diversAssFactIns11 """
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Ich habe einen Fehler in meiner Rechnung entdeckt, was kann ich tun?</h3>
+                                        <div class="dropdown-content">
+                                            <p>Wenn Sie feststellen sollten dass Ihre Rechnung einen Fehler enthält, kontaktieren Sie uns umgehend mit folgendem <a class="link-assistance" href="../divers/contact.html#Facturation" target="blank_">Formular</a>.</p>
+                                        </div>
+""">
+<diversAssDocTitle "Nützliche Dokumente">
+<diversAssDocSelectLabel "Art von Unterlagen :">
+<diversAssDocCaTitle "Vertragsdokumente">
+<diversAssDocCaLink1 """<a href="../documents/LOLFIBERDSL_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLFIBER/DSL</div></a>""">
+<diversAssDocCaLink2 """<a href="../documents/LOLFIBERDSL_OFFRE2_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Offre LOLFIBER</div></a>""">
+<diversAssDocCaLink3 """<a href="../documents/LOLCABLE_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLCABLE</div></a>""">
+<diversAssDocCaLink4 """<a href="../documents/LOLDSL20_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLDSL 20</div></a>""">
+<diversAssDocCaLink5 """<a href="../documents/LOLMOBILE_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLMOBILE</div></a>""">
+<diversAssDocCaLink6 """<a href="../documents/LOLTV_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLTV</div></a>""">
+<diversAssDocDiversTitle "Verschiedenes">
+<diversAssDocDiversLink1 """<a href="../documents/demenag_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Umzugsantrag</div></a>""">
+<diversAssDocDiversLink2 """<a href="../documents/Bon_FR2.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Kunden werben</div></a>""">
+<diversAssDocDiversLink3 """<a href="../documents/raccordement.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Bestellung Festnetzanschluss Analog oder ISDN</span> </div></a>""">
+<diversAssDocDiversLink4 """<a href="../documents/domiciliationnew_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">SEPA-Mandat</div></a>""">
+<diversAssDocDiversLink5 """<a href="../documents/Transfert_Contrat_Internet.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Vertragsübernahme Internet/Telefonie</div></a>""">
+<diversAssDocDiversLink6 """<a href="../documents/RUSH_ORDER_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Rush Order</div></a>""">
+<diversAssDocDiversLink7 """<a href="../documents/LISTE_DES_PRIX.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Preisliste<span>(neue Version ab 26/10/2016)</span></div></a>""">
+<diversAssDocDiversLink8 """<a href="http://www.internet.lu/documents/RETRACTATION.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Formular Widerruf (bei Online-Bestellung)</span></div></a>""">
+<diversAssDocDiversLink9 """<a href="http://www.internet.lu/documents/RENONCIATION.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Formular Forderungsverzicht (bei Online-Bestellung)</span></div></a>""">
+<diversAssDocCgpTitle "Allgemeine Bestimmungen und Sondervereinbarungen">
+<diversAssDocCgpLink1 """<a href="../documents/CONDITIONS%20GENERALES%20DES%20SERVICES%20LUXEMBOURG%20ONLINE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Allgemeine Bestimmungen<span>(neue Version ab 09/01/2014)</span></div></a>""">
+<diversAssDocCgpLink2 """<a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20ACCES%20%20INTERNET%20HAUT%20DEBIT%20ET%20TRES%20HAUT%20DEBIT.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Sondervereinbarung xDSL/Fibre<span>(neue Version ab 12/03/2012)</span></div></a>""">
+<diversAssDocCgpLink3 """<a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20ACCES%20INTERNET%20HAUT%20DE%20DEBIT%20PAR%20CABLE%20CATV.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Sondervereinbarung <span>Internet über TV-Kabel</span><span>(neue Version ab 12/03/2012)</span></div></a>""">
+<diversAssDocCgpLink4 """<a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20DE%20TELEPHONIE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Sondervereinbarung Festnetztelefonie<span>(neue Version ab 12/03/2012)</span></div></a>""">
+<diversAssDocCgpLink5 """<a href="../documents/CONDITIONS%20PARTICULIERES%20DES%20SERVICES%20DE%20TELEPHONIE%20MOBILE.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Sondervereinbarung<span> Mobiltelefonie</span><span>(neue Version ab 01/05/2015)</span></div></a>""">
+<diversAssDocfsTitle "Produktbeschreibungen">
+<diversAssDocfsLink1 """<a href="../documents/feuille_type_fix.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Téléphonie fixe</div></a>""">
+<diversAssDocfsLink2 """<a href="../documents/feuille_type_mobile_mobilefamily.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLMOBILE Family</div></a>""">
+<diversAssDocfsLink3 """<a href="../documents/feuille_type_mobile_mobilehome.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLMOBILE Home</div></a>""">
+<diversAssDocfsLink4 """<a href="../documents/feuille_type_mobile_mobileeurope.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLMOBILE Europe</div></a>""">
+<diversAssDocfsLink5 """<a href="../documents/feuille_type_large_bande1.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLFIBER</div></a>""">
+<diversAssDocfsLink6 """<a href="../documents/feuille_type_large_bande2.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLCABLE</div></a>""">
+<diversAssDocfsLink7 """<a href="../documents/feuille_type_offres_groupees1.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLDSL</div></a>""">
+<diversAssDocfsLink8 """<a href="../documents/feuille_type_offres_groupees2.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOL KOMPLETT</div></a>""">
+<diversAssDocfsLink9 """<a href="../documents/feuille_type_teledistribution_IPTV.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLTV</div></a>""">
+<diversAssDocfsLink10 """<a href="../documents/feuille_type_autres_services.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Autres services</div></a>""">
+<diversAssDocfsLink11 """<a href="../documents/feuille_type_mobile_lolnow.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOL NOW</div></a>""">
+<diversAssDocfsLink12 """<a href="../documents/feuille_type_mobile_mobilefamily.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLMOBILE Family</div></a>""">
+<diversAssDocfsLink13 """<a href="../documents/feuille_type_mobile_mobilehome.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLMOBILE Home</div></a>""">
+<diversAssDocfsLink14 """<a href="../documents/feuille_type_mobile_mobileeurope.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLMOBILE Europe</div></a>""">
+/*-----------------------------------META-------------------------------------*/
+<legalMetaTitle "Mention légales - Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<legalTitle "Rechtliche Hinweise">
+<legalList2Title "Conditions générales d'utilisation">
+<legalList2Link """
+<a class="link" href="//www.internet.lu/documents/CONDITIONS%20GENERALES%20DES%20SERVICES%20LUXEMBOURG%20ONLINE.pdf" target="_blank" ><img src="images/Icone/Img/pdf.gif" alt="pdf"/><div class="link">Allgemeinen Bedingungen<br>(neue Version ab 09/01/2014)</div></a>
+""">
+<legalList2Link1 """
+<a href="//www.internet.lu/documents/MENTIONS_LEGALES.pdf" target="_blank">
+                                                <img src="images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Rechtliche Hinweise<br>(neue Version ab 01/03/2015)</div>
+                                            </a>
+""">
+<legalList3Title "KONTAKTDATEN">

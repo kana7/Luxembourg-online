@@ -24,7 +24,7 @@
     .info{
         font-size: 16px;
         font-weight: 400;
-        span:not(.exponent){
+        span:not(.exponent):not([data-l10n-id]){
             display: inline-block;
             position: absolute;
             top: 20px;

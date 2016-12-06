@@ -2,8 +2,8 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <title>Internet : Nos équipements – Luxembourg Online</title>
-        <meta name="description" content="Des équipements de qualité pour votre Internet : bénéficiez de la performance de nos modems wifi qui vous garantissent une connexion ultra haut débit.." />
+        <title data-l10n-id="internetGearMetaTitle">Internet : Nos équipements – Luxembourg Online</title>
+        <meta name="description" data-l10n-id="internetGearMetaDesc" content="Des équipements de qualité pour votre Internet : bénéficiez de la performance de nos modems wifi qui vous garantissent une connexion ultra haut débit.." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <link rel="shortcut icon" href="/favicon.ico">
@@ -16,63 +16,64 @@
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
+        <link rel="localization" href="../locales/manifest.json"/>
+        <script src="../locales/l20n.js"></script>
     </head>
-
     <body>
         <div id="clientSpace" class="popup">
             <div class="background-client"></div>
             <div class="white-pannel">
                 <div style="position:relative;">
                     <button class="pannel-close"><span class="icon-x-icone"></span></button>
-                    <h2>Espace Client</h2>
+                    <h2 data-l10n-id="frontOffice">Espace Client</h2>
                     <ul class="client-menu">
-                        <li class="active" data-id="mail">Email</li>
+                        <li class="active" data-id="mail" data-l10n-id="frontOfficeMail">Email</li>
                         <li>|</li>
-                        <li data-id="account">Mon compte</li>
+                        <li data-id="account" data-l10n-id="frontOfficeAccount">Mon compte</li>
                         <li>|</li>
-                        <li data-id="homepage">Homepage</li>
+                        <li data-id="homepage" data-l10n-id="frontOfficeHomepage">Homepage</li>
                     </ul>
                     <div class="pannel-forms">
                         <form id="mail" class="clearfix is-visible" name="ServiceLogin1" method="POST" action="https://email.internet.lu/Scripts/sql.exe?_selection=10">
                             <input type="hidden" name="Sql" value="Default.phs">  
                             <input type="hidden" name="SqlDB" value="OMS2">  
-                            <div class="phone-6 input-left">
+                            <div class="phone-6 input-left" data-l10n-id="placeholderUser">
                                 <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
                             </div>
-                            <div class="phone-6 input-right">
+                            <div class="phone-6 input-right" data-l10n-id="placeholderMdp">
                                 <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
                             </div>
-                            <button class="btn-blue" type="submit">Se connecter</button>
+                            <button class="btn-blue" type="submit" data-l10n-id="frontOfficeConnect">Se connecter</button>
                         </form>
                         <form id="account" class="clearfix" name="LoginPhone" method="POST" action="http://shop.internet.lu/Scripts/sql.exe?LoginScript=LoginClient.phs&NextScript=DisplayAccount.phs&_Login=">
                             <input type="hidden" name="Sql" value="LoginClient_Login.phs">  
                             <input type="hidden" name="SqlDB" value="LOLShop">  
-                            <div class="phone-6 input-left">
+                            <div class="phone-6 input-left" data-l10n-id="placeholderUser">
                                 <input type="text" name="_Username" placeholder="Nom d'utilisateur"/>
                             </div>
-                            <div class="phone-6 input-right">
+                            <div class="phone-6 input-right" data-l10n-id="placeholderMdp">
                                 <input class="pull-right" type="password" name="_Password" placeholder="Mot de passe"/>
                             </div>
-                            <button class="btn-blue" type="submit">Se connecter</button>
+                            <button class="btn-blue" type="submit" data-l10n-id="frontOfficeConnect">Se connecter</button>
                         </form>
                         <form id="homepage" class="clearfix" name="ServiceLogin3" method="POST" action="http://sites.internet.lu/Scripts/sql.exe">
                             <input type="hidden" name="Sql" value="default.phs">  
                             <input type="hidden" name="SqlDB" value="OHPS">  
-                            <div class="phone-6 input-left">
+                            <div class="phone-6 input-left" data-l10n-id="placeholderUser">
                                 <input type="text" name="xuser" placeholder="Nom d'utilisateur"/>
                             </div>
-                            <div class="phone-6 input-right">
+                            <div class="phone-6 input-right" data-l10n-id="placeholderMdp">
                                 <input class="pull-right" type="password" name="xpw" placeholder="Mot de passe"/>
                             </div>
-                            <button class="btn-blue" type="submit">Se connecter</button>
+                            <button class="btn-blue" type="submit" data-l10n-id="frontOfficeConnect">Se connecter</button>
                         </form>
                         <div class="contact-infos hidden-phone">
                             Helpdesk: 2799 0000
-                            <span>Lu-Ve: 8h00-19h00  l  Sa: 9h00-18h00</span>
+                            <span data-l10n-id="frontOfficeOpening">Lu-Ve: 8h00-19h00  l  Sa: 9h00-18h00</span>
                         </div>
                         <div class="contact-infos display-phone">
                             Helpdesk: 2799 0000
-                            <span>Lu-Ve: 8h00-19h00<br/>Sa: 9h00-18h00</span>
+                            <span data-l10n-id="frontOfficeOpening">Lu-Ve: 8h00-19h00<br/>Sa: 9h00-18h00</span>
                         </div>
                     </div>
                 </div>
@@ -87,69 +88,67 @@
             </a>
             <a href="http://shop.internet.lu/inscription/shop/offres.html">
                 <div class="blue-fixed-option">
-                    <p>Abonnez-vous<br/> <strong>en ligne </strong><span class="icon-right-arrow"></span></p>
+                    <p data-l10n-id="onlineOrder">Abonnez-vous<br/> <strong>en ligne </strong><span class="icon-right-arrow"></span></p>
                 </div>
             </a>
         </div>
         <nav class="mobile-side-menu">
             <ul class="menu">
-                <li class="menu-item link"><a href="../index.htm">Accueil</a></li>
-                <li class="menu-item" data-id='internet'>Internet<span class="icon-right-arrow"></span></li>
-                <li class="menu-item" data-id='telephone'>Téléphonie <span class="icon-right-arrow"></span></li>
-                <li class="menu-item" data-id='tv'>TV <span class="icon-right-arrow"></span></li>
-                <li class="menu-item" data-id='mobile'>Mobile<span class="icon-right-arrow"></span></li>
-                <li class="menu-item link"><a href="../promos/fibre.html">Promos</a></li>
-                <li class="menu-item link commande"><a href="http://shop.internet.lu/inscription/shop/offres.html"><span class="icon-orders"></span>Inscription en ligne</a></li>
+                <li class="menu-item link"><a href="index.htm" data-l10n-id="menuLinkHome">Accueil</a></li>
+                <li class="menu-item" data-id='internet' data-l10n-id="menuLinkInternet">Internet<span class="icon-right-arrow"></span></li>
+                <li class="menu-item" data-id='telephone' data-l10n-id="menuLinkPhone">Téléphonie <span class="icon-right-arrow"></span></li>
+                <li class="menu-item" data-id='tv' data-l10n-id="menuLinkTv">TV <span class="icon-right-arrow"></span></li>
+                <li class="menu-item" data-id='mobile' data-l10n-id="menuLinkMobile">Mobile<span class="icon-right-arrow"></span></li>
+                <li class="menu-item link"><a href="../promos/fibre.html" data-l10n-id="menuLinkCoupon">Promos</a></li>
+                <li class="menu-item link commande"><a href="http://shop.internet.lu/inscription/shop/offres.html"><span class="icon-orders"></span><span data-l10n-id="menuLinkOnlineOrder">Inscription en ligne</span></a></li>
                 <li class="sous-nav">
                     <ul class="menu">
-                        <li class="menu-item link"><a href="../divers/assistance.html">Assistance</a></li>
+                        <li class="menu-item link"><a href="../divers/assistance.html" data-l10n-id="menuLinkAssistance">Assistance</a></li>
                         <li class="menu-item link"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOLCLOUD</a></li>
-                        <!--<li class="menu-item link"><a href="../divers/news.html">Actualités</a></li>-->
-                        <li class="menu-item link"><a href="../divers/brochure.html">Brochure</a></li>
-                        <li class="menu-item link"><a href="../divers/propos.html">À propos</a></li>
-                        <li class="menu-item link"><a href="../divers/contact.html">Contact</a></li>
-                        <li class="menu-item link"><a href="../divers/emploi.html">Offres d'emploi</a></li>
-                        <li class="menu-item link"><a href="../divers/plan.html">Plan du site</a></li>
+                        <li class="menu-item link"><a href="../divers/brochure.html" data-l10n-id="menuLinkMag">Brochure</a></li>
+                        <li class="menu-item link"><a href="../divers/propos.html" data-l10n-id="menuLinkAbout">À propos</a></li>
+                        <li class="menu-item link"><a href="../divers/contact.html" data-l10n-id="menuLinkContact">Contact</a></li>
+                        <li class="menu-item link"><a href="../divers/emploi.html" data-l10n-id="menuLinkJob">Offres d'emploi</a></li>
+                        <li class="menu-item link"><a href="../divers/plan.html" data-l10n-id="menuLinkSitemap">Plan du site</a></li>
                     </ul>
                 </li>
             </ul>
             <div class="menu-links-wrapper">
                 <ul class="menu-links" id="internet">
                     <li class="menu-item back"><span class="icon-right-arrow"></span>Internet</li>
-                    <li class="menu-item"><a href="../internet/accueil.html">Accueil Internet</a></li>
-                    <li class="menu-item"><a href="../internet/offres.html">Nos offres</a></li>
-                    <li class="menu-item"><a href="../internet/equipements.html">Nos équipements</a></li>
+                    <li class="menu-item"><a href="../internet/accueil.html" data-l10n-id="menuLinkInternetHome">Accueil Internet</a></li>
+                    <li class="menu-item"><a href="../internet/offres.html" data-l10n-id="menuLinkOffers">Nos offres</a></li>
+                    <li class="menu-item"><a href="../internet/equipements.html" data-l10n-id="menuLinkGear">Nos équipements</a></li>
                     <li class="menu-item"><a href="../internet/optionnow.html">Option NOW</a></li>
-                    <li class="menu-item"><a href="../internet/abonnement.html">Abonnez-vous</a></li>
+                    <li class="menu-item"><a href="../internet/abonnement.html" data-l10n-id="menuLinkSub">Abonnez-vous</a></li>
                 </ul>
             </div>
             <div class="menu-links-wrapper">
                 <ul class="menu-links" id="telephone">
-                    <li class="menu-item back"><span class="icon-right-arrow"></span>Téléphonie</li>
-                    <li class="menu-item"><a href="../telephonie/accueil.html">Accueil Téléphonie</a></li>
-                    <li class="menu-item"><a href="../telephonie/tarifs.html">Nos tarifs</a></li>
+                    <li class="menu-item back"><span class="icon-right-arrow"></span><span data-l10n-id="menuLinkPhone">Téléphonie</span></li>
+                    <li class="menu-item"><a href="../telephonie/accueil.html" data-l10n-id="menuLinkPhoneHome">Accueil Téléphonie</a></li>
+                    <li class="menu-item"><a href="../telephonie/tarifs.html" data-l10n-id="menuLinkPrices">Nos tarifs</a></li>
                     <li class="menu-item"><a href="../telephonie/lolvisio.html">LOLVISIO</a></li>
-                    <li class="menu-item"><a href="../telephonie/equipements.html">Nos téléphones</a></li>
-                    <li class="menu-item"><a href="../telephonie/abonnement.html">Abonnez-vous</a></li>
+                    <li class="menu-item"><a href="../telephonie/equipements.html " data-l10n-id="menuLinkOurPhones">Nos téléphones</a></li>
+                    <li class="menu-item"><a href="../telephonie/abonnement.html" data-l10n-id="menuLinkSub">Abonnez-vous</a></li>
                 </ul>
             </div>
             <div class="menu-links-wrapper">
                 <ul class="menu-links" id="tv">
-                    <li class="menu-item back"><span class="icon-right-arrow"></span>TV</li>
-                    <li class="menu-item"><a href="../tv/accueil.html">Accueil TV</a></li>
-                    <li class="menu-item"><a href="../tv/offres.html">Notre offre TV</a></li>
-                    <li class="menu-item"><a href="../tv/equipements.html">Nos équipements</a></li>
-
-                    <li class="menu-item"><a href="../tv/abonnement.html">Abonnez-vous</a></li>
+                    <li class="menu-item back"><span class="icon-right-arrow"></span><span data-l10n-id="menuLinkTv">TV</span></li>
+                    <li class="menu-item"><a href="../tv/accueil.html" data-l10n-id="menuLinkTvHome">Accueil TV</a></li>
+                    <li class="menu-item"><a href="../tv/offres.html" data-l10n-id="menuLinkTvOffers">Notre offre TV</a></li>
+                    <li class="menu-item"><a href="../tv/equipements.html" data-l10n-id="menuLinkGear">Nos équipements</a></li>
+                    <li class="menu-item"><a href="../tv/abonnement.html" data-l10n-id="menuLinkSub">Abonnez-vous</a></li>
                 </ul>
             </div>
             <div class="menu-links-wrapper">
                 <ul class="menu-links" id="mobile">
-                    <li class="menu-item back"><span class="icon-right-arrow"></span>Mobile</li>
-                    <li class="menu-item"><a href="../mobile/accueil.html">Accueil Mobile</a></li>
-                    <li class="menu-item"><a href="../mobile/abonnements.html">Nos abonnements</a></li>
-                    <li class="menu-item"><a href="../mobile/equipements.html">Nos téléphones</a></li>
-                    <li class="menu-item"><a href="../mobile/abonnement.html">Abonnez-vous</a></li>
+                    <li class="menu-item back"><span class="icon-right-arrow"></span><span data-l10n-id="menuLinkMobile">Mobile</span></li>
+                    <li class="menu-item"><a href="../mobile/accueil.html" data-l10n-id="menuLinkMobileHome">Accueil Mobile</a></li>
+                    <li class="menu-item"><a href="../mobile/abonnements.html" data-l10n-id="menuLinkMobileSub">Nos abonnements</a></li>
+                    <li class="menu-item"><a href="../mobile/equipements.html" data-l10n-id="menuLinkOurPhones">Nos téléphones</a></li>
+                    <li class="menu-item"><a href="../mobile/abonnement.html" data-l10n-id="menuLinkSub">Abonnez-vous</a></li>
                 </ul>
             </div>
         </nav>
@@ -160,30 +159,30 @@
                         <div class="row">
                             <nav class="pull-left">
                                 <ul class="top-menu-header-links left">
-                                    <li class="active"><a href="/index.htm">Particuliers</a></li><!--
-                                    --><li><a href="http://www.internet.lu/business/">Business</a></li>
+                                    <li class="active"><a href="/index.htm" data-l10n-id="menuLinkPrivate">Particuliers</a></li><!--
+                                    --><li><a href="http://www.internet.lu/business/" data-l10n-id="menuLinkBusiness">Business</a></li>
                                 </ul>
                             </nav>
                             <nav class="pull-right hidden-phone hidden-tab">
                                 <ul class="top-menu-header-links right">
-                                    <li><a href="../divers/assistance.html">Assistance</a></li>
-                                    <li><a href="http://www.internet.lu/lolcloud/index.htm" target="_blank">LOLCLOUD</a></li>
-                                    <li><a href="../divers/brochure.html">Brochure</a></li>
-                                    <li><a href="../divers/propos.html">À propos</a></li>
-                                    <li><a href="../divers/contact.html">Contact</a></li>
+                                    <li class="menu-item"><a href="../divers/assistance.html" data-l10n-id="menuLinkAssistance">Assistance</a></li>
+                                    <li class="menu-item"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOLCLOUD</a></li>
+                                    <li class="menu-item"><a href="../divers/brochure.html" data-l10n-id="menuLinkMag">Brochure</a></li>
+                                    <li class="menu-item"><a href="../divers/propos.html" data-l10n-id="menuLinkAbout">À propos</a></li>
+                                    <li class="menu-item"><a href="../divers/contact.html" data-l10n-id="menuLinkContact">Contact</a></li>
                                 </ul>
+                                <div id="languageSelector" class="header-dropdown top-menu-header-links left">
+                                </div>
                             </nav>
                         </div>
                     </div>
                 </div>
-
                 <div id="bottom-menu-header">
                     <ul class="sub-menu hidden-phone hidden-tab">
-                        <li><a href="accueil.html"><div class="link">Accueil Internet</div></a></li>
-                        <li><a href="offres.html"><div class="link">Nos Offres</div></a></li>
-                        <li class="active"><a href="equipements.html"><div class="link">Nos Équipements</div></a></li>
-                        <li><a href="optionnow.html"><div class="link">Option NOW</div></a></li>
-                        <li><a href="abonnement.html"><div class="link">Abonnez-vous</div></a></li>
+                        <li class="active"><a href="accueil.html"><div class="link" data-l10n-id="menuLinkMobileHome">Accueil Mobile</div></a></li>
+                        <li><a href="abonnements.html"><div class="link" data-l10n-id="menuLinkMobileSub">Nos Abonnements</div></a></li>
+                        <li><a href="equipements.html"><div class="link" data-l10n-id="menuLinkOurMobiles">Nos Mobiles</div></a></li>
+                        <li><a href="abonnement.html"><div class="link" data-l10n-id="menuLinkSub">Abonnez-vous</div></a></li>
                     </ul>
                     <nav class="bottom-menu-header-links mobile display-phone display-tab">
                         <div class="pull-left">
@@ -212,69 +211,68 @@
                                             <div class="active-border"></div>
                                             <a href="../internet/accueil.html">
                                                 <img class="header-icon" src="../images/Icone/img/internet.png" alt="Internet" />
-                                                <div class="link">Internet</div>
+                                                <div class="link" data-l10n-id="menuLinkInternet">Internet</div>
                                             </a>
                                         </li><!--
                                         --><li>
                                             <div class="active-border"></div>
                                             <a href="../telephonie/accueil.html">
                                                 <img class="header-icon" src="../images/Icone/img/telephonie.png" alt="Téléphonie" />
-                                                <div class="link">Téléphonie</div>
+                                                <div class="link" data-l10n-id="menuLinkPhone">Téléphonie</div>
                                             </a>
                                         </li><!--
                                         --><li>
                                             <div class="active-border"></div>
                                             <a href="../tv/accueil.html">
                                                 <img class="header-icon" src="../images/Icone/img/tv.png" alt="Tv" />
-                                                <div class="link">TV</div>
+                                                <div class="link" data-l10n-id="menuLinkTv">TV</div>
                                             </a>
                                         </li><!--
                                         --><li>
                                             <div class="active-border"></div>
                                             <a href="../mobile/accueil.html">
                                                 <img class="header-icon" src="../images/Icone/img/mobile.png" alt="Mobile" />
-                                                <div class="link">Mobile</div>
+                                                <div class="link" data-l10n-id="menuLinkMobile">Mobile</div>
                                             </a>
                                         </li><!--
                                         --><li>
                                             <div class="active-border"></div>
                                             <a href="../promos/fibre.html">
                                                 <img class="header-icon" src="../images/Icone/img/promos.png" alt="Promos" />
-                                                <div class="link">Promos</div>
+                                                <div class="link" data-l10n-id="menuLinkCoupon">Promos</div>
                                             </a>
                                         </li>
                                     </ul>
                                 </nav>
                             </div>
                             <div class="pull-right hidden-phone hidden-tab">
-                                <button id="openClientSpace" class="btn-blue openPopup" data-popup="0">Espace client</button>
+                                <button id="openClientSpace" class="btn-blue openPopup" data-popup="0" data-l10n-id="frontOffice">Espace client</button>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </header>
             <section id="equipement-section" class="background-lightgrey">
                 <div class="container-wrapper">
                     <div class="row hidden-desk hidden-lgdesk">
-                        <h1 class="content-title">Nos équipements : </h1>
+                        <h1 class="content-title"><span data-l10n-id="menuLinkGear">Nos équipements</span> : </h1>
                     </div>
                     <div  class="row display-phone display-tab">
                         <div class="phone-12">
                             <div class="searchMenu">
                                 <button>
-                                    <span class="icon-right-arrow"></span> Affiner votre recherche :
+                                    <span class="icon-right-arrow"></span> <span data-l10n-id="searchMenuButton">Affiner votre recherche</span> :
                                 </button>
                                 <ul class="dropdown">
-                                    <li data-cat="modemMobile">Modems</li>
-                                    <li data-cat="wlanMobile">Répétiteurs WLAN</li>
-                                    <li data-cat="powerMobile">Répétiteurs POWERLINE</li>
-                                    <li data-cat="usbMobile">Accessoires wifi</li>
+                                    <li data-cat="modemMobile" data-l10n-id="modem1">Modems</li>
+                                    <li data-cat="wlanMobile" data-l10n-id="wlanRep">Répétiteurs WLAN</li>
+                                    <li data-cat="powerMobile" data-l10n-id="powRep">Répétiteurs POWERLINE</li>
+                                    <li data-cat="usbMobile" data-l10n-id="wifiGrear">Accessoires wifi</li>
                                 </ul>
                             </div>
                             <div data-cat="modemMobile" class="philter">
                                 <button>
-                                    <span class="selectedPhilter">Modem</span>
+                                    <span class="selectedPhilter" data-l10n-id="modem" >Modem</span>
                                 </button>
                             </div>
                         </div>
@@ -300,7 +298,7 @@
                                             <ul class="details phone-12 tab-6">
                                                 <li class="item-name">
                                                     <div class="main">FRITZ!Box 3272</div>
-                                                    <div class="sub">Modem-routeur wifi ADSL2+</div>
+                                                    <div class="sub" data-l10n-id="modemRoutAdsl">Modem-routeur wifi ADSL2+</div>
                                                 </li>
                                                 <li>
                                                     <ul class="config">
@@ -310,7 +308,7 @@
                                                         </li>
                                                         <li>
                                                             <div class="label">WLAN : </div>
-                                                            <div class="info">2,4 Ghz - jusqu'à 300Mbit/s</div>
+                                                            <div class="info">2,4 Ghz - <span data-l10n-id="upTo">jusqu'à</span> 300Mbit/s</div>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -319,7 +317,7 @@
                                                 <div class="equipement-price">
                                                     <div class="price">
                                                         <div>€</div>
-                                                        4<span> /mois</span>
+                                                        4<span data-l10n-id="month">/mois</span>
                                                     </div>
                                                     <a class="link" href="../documents/datasheets/3272.pdf" target="blank_">Voir plus de détails</a>
                                                 </div>
@@ -329,45 +327,46 @@
                                 </div>
                                 <!--<div class="gallery-cell">
                                     <div class="equipement-item-blue">
-                                    <ul class="phone-12 popup-gallery">
-                                        <li class="main-image">
-                                            <a href="../images/equipment/modem/5490/5490_big1.jpg" title="FRITZ!BOX 5490 - front">
-                                                <img src="../images/equipment/modem/5490/5490_big1.jpg" alt="FRITZ!BOX 5490" />
-                                            </a>
-                                        </li>
-                                        <li class="thumbnails">
-                                            <div class="thumbnails-wrapper clearfix">
-                                                <a href="../images/equipment/modem/5490/5490_back1.jpg" title="FRITZ!BOX 5490 - back">
-                                                    <div class="thumb"><img src="../images/equipment/modem/5490/5490_back1.jpg" alt="FRITZ!BOX 5490 - back" /></div>
+                                        <ul class="phone-12 popup-gallery">
+                                            <li class="main-image">
+                                                <a href="../images/equipment/modem/5490/5490_big1.jpg" title="FRITZ!BOX 5490 - front">
+                                                    <img src="../images/equipment/modem/5490/5490_big1.jpg" alt="FRITZ!BOX 5490" />
                                                 </a>
+                                            </li>
+                                            <li class="thumbnails">
+                                                <div class="thumbnails-wrapper clearfix">
+                                                    <a href="../images/equipment/modem/5490/5490_back1.jpg" title="FRITZ!BOX 5490 - back">
+                                                        <div class="thumb"><img src="../images/equipment/modem/5490/5490_back1.jpg" alt="FRITZ!BOX 5490 - back" /></div>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul class="details phone-12 tab-6">
+                                            <li class="item-name">
+                                                <div class="main">FRITZ!Box 5490</div>
+                                                <div class="sub" data-l10n-id="modemRoutFibre">Modem-routeur wifi Fibre</div>
+                                            </li>
+                                            <li>
+                                                <ul class="config">
+                                                    <li>
+                                                        <div class="label">LAN : </div>
+                                                        <div class="info">4 x Gigabit, 1 x isdn</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="label">WLAN : </div>
+                                                        <div class="info">2,4 et 5 Ghz - <span data-l10n-id="upTo">jusqu'à</span> 1300Mbit/s</div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <div class="phone-12 tab-6 pull-right">
+                                            <div class="equipement-price">
+                                                <div class="price">
+                                                    <div>€</div>
+                                                    4<span data-l10n-id="month">/mois</span>
+                                                </div>
+                                                <a class="link" href="../documents/datasheets/5490.pdf" target="blank_" data-l10n-id="seeDetails">Voir plus de détails</a>
                                             </div>
-                                        </li>
-                                    </ul>
-                                    <ul class="details phone-12 tab-6">
-                                        <li class="item-name">
-                                            <div class="main">FRITZ!Box 5490</div>
-                                            <div class="sub">Modem-routeur wifi Fibre</div>
-                                        </li>
-                                        <li>
-                                            <ul class="config">
-                                                <li>
-                                                    <div class="label">LAN : </div>
-                                                    <div class="info">4 x Gigabit, 2 x fast Ethernet, 1 x isdn</div>
-                                                </li>
-                                                <li>
-                                                    <div class="label">WLAN : </div>
-                                                    <div class="info">2,4 et 5 Ghz - jusqu'à 1300Mbit/s</div>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                    <div class="phone-12 tab-6 pull-right">
-                                        <div class="equipement-price">
-                                            <div class="price">
-                                                <div>€</div>
-                                                4<span> /mois</span>
-                                            </div>
-                                            <a class="link" href="../documents/datasheets/5490.pdf" target="blank_">Voir plus de détails</a>
                                         </div>
                                     </div>
                                 </div>
@@ -395,7 +394,7 @@
                                             <ul class="details phone-12 tab-6">
                                                 <li class="item-name">
                                                     <div class="main">FRITZ!Box 7360</div>
-                                                    <div class="sub">Modem-routeur wifi ADSL2+ et VDSL</div>
+                                                    <div class="sub" data-l10n-id="modemRoutAdslVdsl">Modem-routeur wifi ADSL2+ et VDSL</div>
                                                 </li>
                                                 <li>
                                                     <ul class="config">
@@ -418,9 +417,9 @@
                                                 <div class="equipement-price">
                                                     <div class="price">
                                                         <div>€</div>
-                                                        4<span> /mois</span>
+                                                        4<span data-l10n-id="month">/mois</span>
                                                     </div>
-                                                    <a class="link" href="../documents/datasheets/7360.pdf" target="blank_">Voir plus de détails</a>
+                                                    <a class="link" href="../documents/datasheets/7360.pdf" target="blank_" data-l10n-id="seeDetails">Voir plus de détails</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -449,7 +448,7 @@
                                             <ul class="details phone-12 tab-6">
                                                 <li class="item-name">
                                                     <div class="main">FRITZ!Box 7490</div>
-                                                    <div class="sub">Modem-routeur wifi ADSL2+ et VDSL</div>
+                                                    <div class="sub" data-l10n-id="modemRoutAdslVdsl">Modem-routeur wifi ADSL2+ et VDSL</div>
                                                 </li>
                                                 <li>
                                                     <ul class="config">
@@ -459,7 +458,7 @@
                                                         </li>
                                                         <li>
                                                             <div class="label">WLAN : </div>
-                                                            <div class="info">2,4 et 5 Ghz - jusqu'à 1300Mbit/s</div>
+                                                            <div class="info">2,4 et 5 Ghz - <span data-l10n-id="upTo">jusqu'à</span> 1300Mbit/s</div>
                                                         </li>
                                                         <li>
                                                             <div class="label">Téléphone : </div>
@@ -472,9 +471,9 @@
                                                 <div class="equipement-price">
                                                     <div class="price">
                                                         <div>€</div>
-                                                        6<span> /mois</span>
+                                                        6<span data-l10n-id="month">/mois</span>
                                                     </div>
-                                                    <a class="link" href="../documents/datasheets/7490.pdf" target="blank_">Voir plus de détails</a>
+                                                    <a class="link" href="../documents/datasheets/7490.pdf" target="blank_" data-l10n-id="seeDetails">Voir plus de détails</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -502,7 +501,7 @@
                                             <ul class="details phone-12 tab-6">
                                                 <li class="item-name">
                                                     <div class="main">FRITZ!WLAN Repeater 450E</div>
-                                                    <div class="sub">Répétiteur pour étendre le réseau wifi</div>
+                                                    <div class="sub" data-l10n-id="repeat">Répétiteur pour étendre le réseau wifi</div>
                                                 </li>
                                                 <li>
                                                     <ul class="config">
@@ -512,7 +511,7 @@
                                                         </li>
                                                         <li>
                                                             <div class="label">WLAN : </div>
-                                                            <div class="info">2,4 - jusqu'à 450Mbit/s</div>
+                                                            <div class="info">2,4 - <span data-l10n-id="upTo">jusqu'à</span> 450Mbit/s</div>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -522,7 +521,7 @@
                                                     <div class="price">
                                                         52<span class="big-euro">€</span>
                                                     </div>
-                                                    <a class="link" href="../documents/datasheets/r450e.pdf" target="blank_">Voir plus de détails</a>
+                                                    <a class="link" href="../documents/datasheets/r450e.pdf" target="blank_" data-l10n-id="seeDetails">Voir plus de détails</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -548,7 +547,7 @@
                                             <ul class="details phone-12 tab-6">
                                                 <li class="item-name">
                                                     <div class="main">FRITZ!WLAN Repeater 1750E</div>
-                                                    <div class="sub">Répétiteur pour étendre le réseau wifi</div>
+                                                    <div class="sub" data-l10n-id="repeat">Répétiteur pour étendre le réseau wifi</div>
                                                 </li>
                                                 <li>
                                                     <ul class="config">
@@ -558,7 +557,7 @@
                                                         </li>
                                                         <li>
                                                             <div class="label">WLAN : </div>
-                                                            <div class="info">2,4 et 5 Ghz - jusqu'à 1750Mbit/s</div>
+                                                            <div class="info">2,4 et 5 Ghz - <span data-l10n-id="upTo">jusqu'à</span> 1750Mbit/s</div>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -569,7 +568,7 @@
                                                         84<span class="big-euro">€</span>
                                                     </div>
                                                 </div>
-                                                <a class="link" href="../documents/datasheets/r1750e.pdf" target="blank_">Voir plus de détails</a>
+                                                <a class="link" href="../documents/datasheets/r1750e.pdf" target="blank_" data-l10n-id="seeDetails">Voir plus de détails</a>
                                             </div>
                                         </div>
                                     </div>
@@ -589,7 +588,7 @@
                                             <ul class="details phone-12 tab-6">
                                                 <li class="item-name">
                                                     <div class="main">FRITZ!Powerline 530E Set</div>
-                                                    <div class="sub">Solution pour étendre le réseau à travers le circuit électrique</div>
+                                                    <div class="sub" data-l10n-id="pwrLine">Solution pour étendre le réseau à travers le circuit électrique</div>
                                                 </li>
                                                 <li>
                                                     <ul class="config">
@@ -605,7 +604,7 @@
                                                     <div class="price">
                                                         81<span class="big-euro">€</span>
                                                     </div>
-                                                    <a class="link" href="../documents/datasheets/pl530e.pdf" target="blank_">Voir plus de détails</a>
+                                                    <a class="link" href="../documents/datasheets/pl530e.pdf" target="blank_" data-l10n-id="seeDetails">Voir plus de détails</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -624,7 +623,7 @@
                                             <ul class="details phone-12 tab-6">
                                                 <li class="item-name">
                                                     <div class="main">FRITZ!Powerline 540E Set</div>
-                                                    <div class="sub">Solution pour étendre le réseau à travers le circuit électrique</div>
+                                                    <div class="sub" data-l10n-id="pwrLine">Solution pour étendre le réseau à travers le circuit électrique</div>
                                                 </li>
                                                 <li>
                                                     <ul class="config">
@@ -644,7 +643,7 @@
                                                     <div class="price">
                                                         85<span class="big-euro">€</span>
                                                     </div>
-                                                    <a class="link" href="../documents/datasheets/pl540e.pdf" target="blank_">Voir plus de détails</a>
+                                                    <a class="link" href="../documents/datasheets/pl540e.pdf" target="blank_" data-l10n-id="seeDetails">Voir plus de détails</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -673,7 +672,7 @@
                                             <ul class="details phone-12 tab-6">
                                                 <li class="item-name">
                                                     <div class="main">FRITZ!Powerline 546E</div>
-                                                    <div class="sub">Solution pour étendre le réseau à travers le circuit électrique</div>
+                                                    <div class="sub" data-l10n-id="pwrLine">Solution pour étendre le réseau à travers le circuit électrique</div>
                                                 </li>
                                                 <li>
                                                     <ul class="config">
@@ -683,7 +682,7 @@
                                                         </li>
                                                         <li>
                                                             <div class="label">WLAN : </div>
-                                                            <div class="info">2,4 Ghz - jusqu'à 300Mbit/s</div>
+                                                            <div class="info">2,4 Ghz - <span data-l10n-id="upTo">jusqu'à</span> 300Mbit/s</div>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -693,7 +692,7 @@
                                                     <div class="price">
                                                         95<span class="big-euro">€</span>
                                                     </div>
-                                                    <a class="link" href="../documents/datasheets/pl546e.pdf" target="blank_">Voir plus de détails</a>
+                                                    <a class="link" href="../documents/datasheets/pl546e.pdf" target="blank_" data-l10n-id="seeDetails">Voir plus de détails</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -721,13 +720,13 @@
                                             <ul class="details phone-12 tab-6">
                                                 <li class="item-name">
                                                     <div class="main">FRITZ!WLAN Stick AC</div>
-                                                    <div class="sub">Adaptateur wifi</div>
+                                                    <div class="sub" data-l10n-id="adaptWifi">Adaptateur wifi</div>
                                                 </li>
                                                 <li>
                                                     <ul class="config">
                                                         <li>
                                                             <div class="label">WLAN :</div>
-                                                            <div class="info">2,4 et 5 Ghz - jusqu'à 430Mbit/s</div>
+                                                            <div class="info">2,4 et 5 Ghz - <span data-l10n-id="upTo">jusqu'à</span> 430Mbit/s</div>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -737,7 +736,7 @@
                                                     <div class="price">
                                                         28<span class="big-euro">€</span>
                                                     </div>
-                                                    <a class="link" href="../documents/datasheets/wlansac.pdf" target="blank_">Voir plus de détails</a>
+                                                    <a class="link" href="../documents/datasheets/wlansac.pdf" target="blank_" data-l10n-id="seeDetails">Voir plus de détails</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -750,11 +749,11 @@
                         <div style="padding-right: 15px;" class="phone-3">
                             <div class="searchMenu">
                                 <ul class="DesktopMenu">
-                                    <li class="is-active" data-cat="modem">Modems</li>
-                                    <li data-cat="wlan">Répétiteurs WLAN</li>
-                                    <li data-cat="power">Répétiteurs POWERLINE</li>
-                                    <li data-cat="usb">Accessoires wifi</li>
-                                    <li data-cat="tous">Tous</li>
+                                    <li class="is-active" data-cat="modem" data-l10n-id="modem1">Modems</li>
+                                    <li data-cat="wlan" data-l10n-id="wlanRep">Répétiteurs WLAN</li>
+                                    <li data-cat="power" data-l10n-id="powRep">Répétiteurs POWERLINE</li>
+                                    <li data-cat="usb" data-l10n-id="wifiGrear">Accessoires wifi</li>
+                                    <li data-cat="tous" data-l10n-id="all">Tous</li>
                                 </ul>
                             </div>
                         </div>
@@ -778,7 +777,7 @@
                                     <ul class="details phone-4 vertical-align-middle">
                                         <li class="item-name">
                                             <div class="main">FRITZ!Box 3272</div>
-                                            <div class="sub">Modem-routeur wifi ADSL2+</div>
+                                            <div class="sub" data-l10n-id="modemRoutAdsl">Modem-routeur wifi ADSL2+</div>
                                         </li>
                                         <li>
                                             <ul class="config">
@@ -788,7 +787,7 @@
                                                 </li>
                                                 <li>
                                                     <div class="label">WLAN : </div>
-                                                    <div class="info">2,4 Ghz - jusqu'à 300Mbit/s</div>
+                                                    <div class="info">2,4 Ghz - <span data-l10n-id="upTo">jusqu'à</span> 300Mbit/s</div>
                                                 </li>
                                             </ul>
                                         </li>
@@ -797,9 +796,9 @@
                                         <div class="equipement-price">
                                             <div class="price">
                                                 <div>€</div>
-                                                4<span> /mois</span>
+                                                4<span data-l10n-id="month">/mois</span>
                                             </div>
-                                            <a class="link" href="../documents/datasheets/3272.pdf" target="blank_">Voir plus de détails</a>
+                                            <a class="link" href="../documents/datasheets/3272.pdf" target="blank_" data-l10n-id="seeDetails">Voir plus de détails</a>
                                         </div>
                                     </div>
                                 </div>
@@ -821,17 +820,17 @@
                                     <ul class="details phone-4 vertical-align-middle">
                                         <li class="item-name">
                                             <div class="main">FRITZ!Box 5490</div>
-                                            <div class="sub">Modem-routeur wifi Fibre</div>
+                                            <div class="sub" data-l10n-id="modemRoutFibre">Modem-routeur wifi Fibre</div>
                                         </li>
                                         <li>
                                             <ul class="config">
                                                 <li>
                                                     <div class="label">LAN : </div>
-                                                    <div class="info">4 x Gigabit, 2 x fast Ethernet, 1 x isdn</div>
+                                                    <div class="info">4 x Gigabit, 1 x isdn</div>
                                                 </li>
                                                 <li>
                                                     <div class="label">WLAN : </div>
-                                                    <div class="info">2,4 et 5 Ghz - jusqu'à 1300Mbit/s</div>
+                                                    <div class="info">2,4 <span data-l10n-id="and">et</span> 5 Ghz - <span data-l10n-id="upTo">jusqu'à</span> 1300Mbit/s</div>
                                                 </li>
                                             </ul>
                                         </li>
@@ -840,9 +839,9 @@
                                         <div class="equipement-price">
                                             <div class="price">
                                                 <div>€</div>
-                                                4<span> /mois</span>
+                                                4<span data-l10n-id="month">/mois</span>
                                             </div>
-                                            <a class="link" href="../documents/datasheets/5490.pdf" target="blank_">Voir plus de détails</a>
+                                            <a class="link" href="../documents/datasheets/5490.pdf" target="blank_" data-l10n-id="seeDetails">Voir plus de détails</a>
                                         </div>
                                     </div>
                                 </div>-->
@@ -867,7 +866,7 @@
                                     <ul class="details phone-4 vertical-align-middle">
                                         <li class="item-name">
                                             <div class="main">FRITZ!Box 7360</div>
-                                            <div class="sub">Modem-routeur wifi ADSL2+ et VDSL</div>
+                                            <div class="sub" data-l10n-id="modemRoutAdslVdsl">Modem-routeur wifi ADSL2+ et VDSL</div>
                                         </li>
                                         <li>
                                             <ul class="config">
@@ -877,7 +876,7 @@
                                                 </li>
                                                 <li>
                                                     <div class="label">WLAN : </div>
-                                                    <div class="info">2,4 Ghz - jusqu'à 300Mbit/s</div>
+                                                    <div class="info">2,4 Ghz - <span data-l10n-id="upTo">jusqu'à</span> 300Mbit/s</div>
                                                 </li>
                                                 <li>
                                                     <div class="label">Téléphone : </div>
@@ -890,9 +889,9 @@
                                         <div class="equipement-price">
                                             <div class="price">
                                                 <div>€</div>
-                                                4<span> /mois</span>
+                                                4<span data-l10n-id="month">/mois</span>
                                             </div>
-                                            <a class="link" href="../documents/datasheets/7360.pdf" target="blank_">Voir plus de détails</a>
+                                            <a class="link" href="../documents/datasheets/7360.pdf" target="blank_" data-l10n-id="seeDetails">Voir plus de détails</a>
                                         </div>
                                     </div>
                                 </div>
@@ -918,7 +917,7 @@
                                     <ul class="details phone-4 vertical-align-middle">
                                         <li class="item-name">
                                             <div class="main">FRITZ!Box 7490</div>
-                                            <div class="sub">Modem-routeur wifi ADSL2+ et VDSL</div>
+                                            <div class="sub" data-l10n-id="modemRoutAdslVdsl">Modem-routeur wifi ADSL2+ et VDSL</div>
                                         </li>
                                         <li>
                                             <ul class="config">
@@ -928,11 +927,11 @@
                                                 </li>
                                                 <li>
                                                     <div class="label">WLAN : </div>
-                                                    <div class="info">2,4 et 5 Ghz - jusqu'à 1300Mbit/s</div>
+                                                    <div class="info">2,4 <span data-l10n-id="et">et</span> 5 Ghz - <span data-l10n-id="upTo">jusqu'à</span> 1300Mbit/s</div>
                                                 </li>
                                                 <li>
-                                                    <div class="label">Téléphone : </div>
-                                                    <div class="info">2 x analogique, 1 x ISDN, DECT</div>
+                                                    <div class="label"><span data-l10n-id="phone">Téléphone</span> : </div>
+                                                    <div class="info">2 x <span data-l10n-id="analogique">analogique</span>, 1 x ISDN, DECT</div>
                                                 </li>
                                             </ul>
                                         </li>
@@ -941,9 +940,9 @@
                                         <div class="equipement-price">
                                             <div class="price">
                                                 <div>€</div>
-                                                6<span> /mois</span>
+                                                6<span data-l10n-id="month">/mois</span>
                                             </div>
-                                            <a class="link" href="../documents/datasheets/7490.pdf" target="blank_">Voir plus de détails</a>
+                                            <a class="link" href="../documents/datasheets/7490.pdf" target="blank_" data-l10n-id="seeDetails">Voir plus de détails</a>
                                         </div>
                                     </div>
                                 </div>
@@ -967,7 +966,7 @@
                                     <ul class="details phone-4 vertical-align-middle">
                                         <li class="item-name">
                                             <div class="main">FRITZ!WLAN Repeater 450E</div>
-                                            <div class="sub">Répétiteur pour étendre le réseau wifi</div>
+                                            <div class="sub" data-l10n-id="repeat">Répétiteur pour étendre le réseau wifi</div>
                                         </li>
                                         <li>
                                             <ul class="config">
@@ -977,7 +976,7 @@
                                                 </li>
                                                 <li>
                                                     <div class="label">WLAN : </div>
-                                                    <div class="info">2,4 - jusqu'à 450Mbit/s</div>
+                                                    <div class="info">2,4 - <span data-l10n-id="upTo">jusqu'à</span> 450Mbit/s</div>
                                                 </li>
                                             </ul>
                                         </li>
@@ -987,7 +986,7 @@
                                             <div class="price">
                                                 52<span class="big-euro">€</span>
                                             </div>
-                                            <a class="link" href="../documents/datasheets/r450e.pdf" target="blank_">Voir plus de détails</a>
+                                            <a class="link" href="../documents/datasheets/r450e.pdf" target="blank_" data-l10n-id="seeDetails">Voir plus de détails</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1009,7 +1008,7 @@
                                     <ul class="details phone-4 vertical-align-middle">
                                         <li class="item-name">
                                             <div class="main">FRITZ!WLAN Repeater 1750E</div>
-                                            <div class="sub">Répétiteur pour étendre le réseau wifi</div>
+                                            <div class="sub" data-l10n-id="repeat">Répétiteur pour étendre le réseau wifi</div>
                                         </li>
                                         <li>
                                             <ul class="config">
@@ -1019,7 +1018,7 @@
                                                 </li>
                                                 <li>
                                                     <div class="label">WLAN : </div>
-                                                    <div class="info">2,4 et 5 Ghz - jusqu'à 1750Mbit/s</div>
+                                                    <div class="info">2,4 <span data-l10n-id="and">et</span> 5 Ghz - <span data-l10n-id="upTo">jusqu'à</span> 1750Mbit/s</div>
                                                 </li>
                                             </ul>
                                         </li>
@@ -1029,7 +1028,7 @@
                                             <div class="price">
                                                 84<span class="big-euro">€</span>
                                             </div>
-                                            <a class="link" href="../documents/datasheets/r1750e.pdf" target="blank_">Voir plus de détails</a>
+                                            <a class="link" href="../documents/datasheets/r1750e.pdf" target="blank_" data-l10n-id="seeDetails">Voir plus de détails</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1046,7 +1045,7 @@
                                     <ul class="details phone-4 vertical-align-middle">
                                         <li class="item-name">
                                             <div class="main">FRITZ!Powerline 530E Set</div>
-                                            <div class="sub">Solution pour étendre le réseau à travers le circuit électrique</div>
+                                            <div class="sub" data-l10n-id="pwrLine">Solution pour étendre le réseau à travers le circuit électrique</div>
                                         </li>
                                         <li>
                                             <ul class="config">
@@ -1062,7 +1061,7 @@
                                             <div class="price">
                                                 81<span class="big-euro">€</span>
                                             </div>
-                                            <a class="link" href="../documents/datasheets/pl530e.pdf" target="blank_">Voir plus de détails</a>
+                                            <a class="link" href="../documents/datasheets/pl530e.pdf" target="blank_" data-l10n-id="seeDetails">Voir plus de détails</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1077,7 +1076,7 @@
                                     <ul class="details phone-4 vertical-align-middle">
                                         <li class="item-name">
                                             <div class="main">FRITZ!Powerline 540E Set</div>
-                                            <div class="sub">Solution pour étendre le réseau à travers le circuit électrique</div>
+                                            <div class="sub" data-l10n-id="pwrLine">Solution pour étendre le réseau à travers le circuit électrique</div>
                                         </li>
                                         <li>
                                             <ul class="config">
@@ -1087,7 +1086,7 @@
                                                 </li>
                                                 <li>
                                                     <div class="label">WLAN : </div>
-                                                    <div class="info">2,4 Ghz - jusqu'à 300 Mbit/s</div>
+                                                    <div class="info">2,4 Ghz - <span data-l10n-id="upTo">jusqu'à</span> 300 Mbit/s</div>
                                                 </li>
                                             </ul>
                                         </li>
@@ -1097,7 +1096,7 @@
                                             <div class="price">
                                                 85<span class="big-euro">€</span>
                                             </div>
-                                            <a class="link" href="../documents/datasheets/pl540e.pdf" target="blank_">Voir plus de détails</a>
+                                            <a class="link" href="../documents/datasheets/pl540e.pdf" target="blank_" data-l10n-id="seeDetails">Voir plus de détails</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1122,7 +1121,7 @@
                                     <ul class="details phone-4 vertical-align-middle">
                                         <li class="item-name">
                                             <div class="main">FRITZ!Powerline 546E</div>
-                                            <div class="sub">Solution pour étendre le réseau à travers le circuit électrique</div>
+                                            <div class="sub" data-l10n-id="pwrLine">Solution pour étendre le réseau à travers le circuit électrique</div>
                                         </li>
                                         <li>
                                             <ul class="config">
@@ -1132,7 +1131,7 @@
                                                 </li>
                                                 <li>
                                                     <div class="label">WLAN : </div>
-                                                    <div class="info">2,4 Ghz - jusqu'à 300Mbit/s</div>
+                                                    <div class="info">2,4 Ghz - <span data-l10n-id="upTo">jusqu'à</span> 300Mbit/s</div>
                                                 </li>
                                             </ul>
                                         </li>
@@ -1142,7 +1141,7 @@
                                             <div class="price">
                                                 95<span class="big-euro">€</span>
                                             </div>
-                                            <a class="link" href="../documents/datasheets/pl546e.pdf" target="blank_">Voir plus de détails</a>
+                                            <a class="link" href="../documents/datasheets/pl546e.pdf" target="blank_" data-l10n-id="seeDetails">Voir plus de détails</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1166,13 +1165,13 @@
                                     <ul class="details phone-4 vertical-align-middle">
                                         <li class="item-name">
                                             <div class="main">FRITZ!WLAN Stick AC</div>
-                                            <div class="sub">Adaptateur wifi</div>
+                                            <div class="sub" data-l10n-id="adaptWifi">Adaptateur wifi</div>
                                         </li>
                                         <li>
                                             <ul class="config">
                                                 <li>
                                                     <div class="label">WLAN :</div>
-                                                    <div class="info">2,4 et 5 Ghz - jusqu'à 430Mbit/s</div>
+                                                    <div class="info">2,4 <span data-l10n-id="and">et</span> 5 Ghz - <span data-l10n-id="upTo">jusqu'à</span> 430Mbit/s</div>
                                                 </li>
                                             </ul>
                                         </li>
@@ -1182,7 +1181,7 @@
                                             <div class="price">
                                                 28<span class="big-euro">€</span>
                                             </div>
-                                            <a class="link" href="../documents/datasheets/wlansac.pdf" target="blank_">Voir plus de détails</a>
+                                            <a class="link" href="../documents/datasheets/wlansac.pdf" target="blank_" data-l10n-id="seeDetails">Voir plus de détails</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1192,15 +1191,15 @@
                 </div>
             </section>
             <footer>
-                <div id="document-links" class="iner-shadow">
+<div id="document-links" class="iner-shadow">
                     <div class="container-wrapper">
                         <div class="row">
                             <ul class="spread">
                                 <li><a href="../internet/faq.html"><span class="icon icon-faq-ico"></span>FAQ</a></li>
-                                <li><a href="../internet/tarifs_detailles.html"><span class="icon icon-calculator-ico"></span>Tarifs DSL/FIBER</a></li>
+                                <li><a href="../internet/tarifs_detailles.html" data-l10n-id="menuLinkTarifs"><span class="icon icon-calculator-ico"></span>Tarifs DSL/FIBER</a></li>
                                 <li><a href="../internet/cable.html"><span class="icon icon-cable-ico"></span>LOLCABLE</a></li>
-                                <li><a href="../internet/parrainage.html"><span class="icon icon-parrainage-ico"></span>Bon de parrainage</a></li>
-                                <li><a href="../internet/abonnement.html"><span class="icon icon-document-ico"></span>Documents</a></li>
+                                <li><a href="../internet/parrainage.html" data-l10n-id="menuLinkParrainage"><span class="icon icon-parrainage-ico"></span>Bon de parrainage</a></li>
+                                <li><a href="../internet/abonnement.html" data-l10n-id="menuLinkDoc"><span class="icon icon-document-ico"></span>Documents</a></li>
                             </ul>
                         </div>
                     </div>
@@ -1208,7 +1207,7 @@
                 <div id="social-links">
                     <div class="container-wrapper">
                         <div class="row">
-                            <div class="text">Rejoignez-nous sur: </div>
+                            <div class="text" data-l10n-id="joinUs">Rejoignez-nous sur: </div>
                             <nav>
                                 <ul class="spread">
                                     <li>
@@ -1249,13 +1248,13 @@
                 <div id="contact">
                     <div class="container-wrapper">
                         <div class="row">
-                            <div class="text">Contactez-nous : </div>
+                            <div class="text" data-l10n-id="contactUs">Contactez-nous : </div>
                             <ul class="contact-infos spread">
                                 <li>
                                     <span class="icon-phone-icone"></span><a href="tel://2799 0000">2799 0000</a>
                                 </li>
                                 <li>
-                                    <span class="icon-clock-icone"></span>Lu-Sa: 9h00-18h00
+                                    <span class="icon-clock-icone"></span><span data-l10n-id="mondaySaturday">Lu-Sa: 9h00-18h00</span>
                                 </li>
                                 <li>
                                     <span class="icon-internet-ico"></span><a href="../divers/contact.html#demande_infos_commerciales" target="_blank">commercial@internet.lu</a>
@@ -1269,39 +1268,37 @@
                         <div class="row">
                             <a class="help-link" href="../divers/assistance.html">
                                 <span class="icon-info-icone"></span>
-                                <p>Besoin d'aide ? Accédez à l’espace assistance de Luxembourg Online (FAQ, informations, guides et documents utiles, contrats, divers)</p>
+                                <p data-l10n-id="needHelp">Besoin d'aide ? Accédez à l’espace assistance de Luxembourg Online (FAQ, informations, guides et documents utiles, contrats, divers)</p>
                                 <span class="icon-right-arrow"></span>
                             </a>
                             <div class="separator hidden-phone hidden-tab"></div>
                         </div>
                         <div class="row hidden-phone hidden-tab">
                             <div class="footer-top-links">
-                                <h4>internet : </h4>
+                                <h4><span data-l10n-id="menuLinkInternet">internet</span> : </h4>
                                 <nav>
                                     <ul class="links">
-                                        <li><a href="../internet/offres.html">Nos offres</a></li>
-                                        <li><a href="../promos/fibre.html">Offre spéciale fibre</a></li>
-                                        <li><a href="../internet/equipements.html">Nos équipements</a></li>
+                                        <li><a href="../internet/offres.html"  data-l10n-id="menuLinkOffers">Nos offres</a></li>
+                                        <li><a href="../promos/fibre.html"  data-l10n-id="menuLinkFiberOffer">Offre spéciale fibre</a></li>
+                                        <li><a href="../internet/equipements.html"  data-l10n-id="menuLinkGear">Nos équipements</a></li>
                                     </ul>
                                 </nav>
                             </div>
                             <div class="footer-top-links">
-                                <h4>téléphonie : </h4>
+                                <h4><span data-l10n-id="menuLinkPhone">téléphonie</span> : </h4>
                                 <nav>
                                     <ul class="links">
-                                        <li><a href="../telephonie/tarifs.html">Nos tarifs</a></li>
-                                        <li><a href="../telephonie/equipements.html">Nos téléphones</a></li>
+                                        <li><a href="../telephonie/tarifs.html" data-l10n-id="menuLinkPrices">Nos tarifs</a></li>
+                                        <li><a href="../telephonie/equipements.html" data-l10n-id="menuLinkOurPhones">Nos téléphones</a></li>
                                     </ul>
                                 </nav>
                             </div>
                             <div class="footer-top-links">
-                                <h4>tv : </h4>
+                                <h4><span data-l10n-id="menuLinkTv">tv</span> : </h4>
                                 <nav>
                                     <ul class="links">
-                                        <li><a href="../tv/offres.html">Notre offre</a></li>
-
-                                        <li><a href="../tv/equipements.html">Nos équipements</a></li>
-
+                                        <li><a href="../tv/offres.html" data-l10n-id="menuLinkTvOffers">Notre offre</a></li>
+                                        <li><a href="../tv/equipements.html" data-l10n-id="menuLinkGear">Nos équipements</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -1309,8 +1306,8 @@
                                 <h4>mobile : </h4>
                                 <nav>
                                     <ul class="links">
-                                        <li><a href="../mobile/abonnements.html">Nos offres</a></li>
-                                        <li><a href="../mobile/equipements.html">Nos téléphones</a></li>
+                                        <li><a href="../mobile/abonnements.html" data-l10n-id="menuLinkOffers">Nos offres</a></li>
+                                        <li><a href="../mobile/equipements.html" data-l10n-id="menuLinkOurPhones">Nos téléphones</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -1318,16 +1315,14 @@
                         <div class="row">
                             <div class="separator"></div>
                             <div class="phone-12">
-                                <div class="display-phone copyright">© Luxembourg Online S.A. – 2016, tous droits réservés</div>
+                                <div class="display-phone copyright" data-l10n-id="copyright">© Luxembourg Online S.A. – 2016, tous droits réservés</div>
                                 <nav class="hidden-phone">
                                     <ul class="footer-bottom-links">
-                                        <li>
-                                            © Luxembourg Online S.A. – 2016, tous droits réservés</li>
-                                        <li><a href="../legal.html">Mentions légales</a></li>
-                                        <li><a href="../divers/emploi.html">Offres d'emploi</a></li>
-                                        <li><a href="../divers/plan.html">Plan du site</a></li>
-
-                                        <li><a href="../divers/contact.html">Contact</a></li>
+                                        <li data-l10n-id="copyright">© Luxembourg Online S.A. – 2016, tous droits réservés</li>
+                                        <li><a href="../legal.html" data-l10n-id="menuLinkNotice">Mentions légales</a></li>
+                                        <li><a href="../divers/emploi.html" data-l10n-id="menuLinkJob">Offres d'emploi</a></li>
+                                        <li><a href="../divers/plan.html" data-l10n-id="menuLinkSitemap">Plan du site</a></li>
+                                        <li><a href="../divers/contact.html" data-l10n-id="menuLinkContact">Contact</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -1337,7 +1332,7 @@
             </footer>
         </div>
         <!--              ./FOOTER               -->
-
+        <script type="text/javascript" src="../scripts/vendor/js.cookie.js"></script>
         <script src="../scripts/vendor/jquery.min.js"></script>
         <script src="../scripts/vendor/flickity.pkgd.min.js"></script>
         <script src="../scripts/vendor/lightbox.js"></script>

@@ -3744,7 +3744,7 @@ span[class^=icon-] {
       color: #fff;
       background-color: #004994;
       border-bottom: 2px solid #004994; }
-      .mobile-side-menu .menu-links-wrapper .menu-item.back span {
+      .mobile-side-menu .menu-links-wrapper .menu-item.back span[class^="icon-"] {
         float: left;
         top: 1px;
         margin-right: 5px;
@@ -5018,7 +5018,7 @@ span[class^=icon-] {
   .content-container .offer-item-blue .info, .content-container .offer-item-orange .info {
     font-size: 16px;
     font-weight: 400; }
-    .content-container .offer-item-blue .info span:not(.exponent), .content-container .offer-item-orange .info span:not(.exponent) {
+    .content-container .offer-item-blue .info span:not(.exponent):not([data-l10n-id]), .content-container .offer-item-orange .info span:not(.exponent):not([data-l10n-id]) {
       display: inline-block;
       position: absolute;
       top: 20px;
@@ -5531,7 +5531,7 @@ a.promos-link:hover {
   font-size: 18px;
   color: #004994;
   padding-right: 5px; }
-  .bottom-link span {
+  .bottom-link span:not([data-l10n-id]) {
     position: relative;
     top: 2px;
     font-size: 16px; }
@@ -5961,7 +5961,7 @@ h2.contact-title {
     background: none;
     border: none;
     padding: 9px 10px;
-    width: 105px;
+    width: 125px;
     border-bottom: 1px solid #003a75; }
     .header-dropdown button span[class^="icon-"] {
       margin-right: 0;
@@ -5976,16 +5976,16 @@ h2.contact-title {
   .header-dropdown .drop {
     display: none;
     position: absolute;
-    width: 105px;
-    z-index: 1;
+    width: 125px;
+    z-index: 3;
     background-color: #004185;
     border-top: 1px solid #004994; }
     .header-dropdown .drop li {
       margin: 0;
-      display: block; }
-    .header-dropdown .drop a {
       display: block;
-      padding: 9px 10px 8px; }
+      cursor: pointer; }
+    .header-dropdown .drop a {
+      display: block; }
     .header-dropdown .drop.is-visible {
       display: block; }
 
@@ -7602,7 +7602,7 @@ h2.contact-title {
     margin: 18px 0;
     font-size: 19px;
     padding-right: 5px; }
-    .bottom-link span {
+    .bottom-link span:not([data-l10n-id]) {
       top: 2px;
       font-size: 17px; }
 

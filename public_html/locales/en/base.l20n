@@ -39,7 +39,7 @@ content="Telecom Luxembourg, solution telecom, fournisseur accès internet, Inte
 <language """
 Language<span class="icon-right-arrow"></span>
 """>
-<frontOffice "Customer Area">
+<frontOffice "Your account">
 <frontOfficeMail "Email">
 <frontOfficeAccount "My account">
 <frontOfficeHomepage "Homepage">
@@ -59,7 +59,7 @@ Language<span class="icon-right-arrow"></span>
 <joinUs "Join us on : ">
 <contactUs "Get in touch: ">
 <needHelp "Help or Assistance required? Use the Luxembourg Online support page (FAQ, information, instructions, contracts, documents, etc.)">
-<cp "Zip code">
+<cp "Postal code">
 <cpInput """
     <input value name="zipcode" class="input-white" type="text" placeholder="{{cp}}" maxlength="4"/>
 """>
@@ -121,10 +121,10 @@ TV <span class="icon-right-arrow"></span>
 <menuLinkMobile """
 Mobile <span class="icon-right-arrow"></span>
 """>
-<menuLinkCoupon "Special Offers">
+<menuLinkCoupon "Special offers">
 <menuLinkOnlineOrder "Online subscription">
 <menuLinkAssistance "Assistance">
-<menuLinkMag "Brochure">
+<menuLinkMag "Magazine">
 <menuLinkAbout "About">
 <menuLinkContact "Contact">
 <menuLinkJob "Jobs">
@@ -142,7 +142,7 @@ Mobile <span class="icon-right-arrow"></span>
 <menuLinkOurMobiles "Our mobiles">
 <menuLinkFiberOffer "Promotional Offer for fiber connection">
 <menuLinkOffers "Our offers">
-<menuLinkPrivate "Private customers">
+<menuLinkPrivate "Personal">
 <menuLinkBusiness "Business">
 <menuLinkNotice "Terms of use">
 <tarifDSL "DSL/Fiber tarifs">
@@ -211,9 +211,9 @@ Netflix<span class="exponent">(1)</span> and YouTube<br/>on your TV!
 Enjoy the Internet <br/>as soon as the contract is signed!
 """>
 <encartTestTitle """
-    All {{menuLinkOffers}} available <strong>at your house</strong> : 
+    All {{menuLinkOffers}} available <strong>in your area</strong> : 
 """>
-<dispoVerif "Check for availabilities">
+<dispoVerif "Check for availability">
 <dispoVerif1 "Check for availability">
 <whichOffer "Which offers are available to you?">
 /*----------------------------------------------------------------------------*/
@@ -222,7 +222,7 @@ Enjoy the Internet <br/>as soon as the contract is signed!
 discover our deals <strong>taylored to your needs !</strong>
 """>
 <homeMagDesc "internet, Landline, Mobile, TV. Check out all our products in our magazine and discover our current deals.">
-<homeMagLink "Read our brochure">
+<homeMagLink "Read our magazine">
 <homeBdayTitle """
 Luxembourg Online
 <br/><strong> celbrates it‘s 20th Birthday !</strong>
@@ -1345,7 +1345,7 @@ If you think you would fit in to our team, we would like to hear from you. Send 
 <diversEmploiCanLink "Send application">
 /*---------------------------DIVERS/BROCHURE.HTML-----------------------------*/
 /*-----------------------------------META-------------------------------------*/
-<diversBrochMetaTitle "Brochure – Luxembourg Online">
+<diversBrochMetaTitle "Magazine – Luxembourg Online">
 /*----------------------------------------------------------------------------*/
 <diversBrochTitle """
 Our <span class="bold">magazine</span>

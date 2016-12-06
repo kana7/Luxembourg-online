@@ -193,6 +193,12 @@ Mobile <span class="icon-right-arrow"></span>
 <br/>everywhere you want!
 """>
 <sliderLolcloudDetails "5 GB Storage offered">
+<lolnowSliderDesc """
+<span class="bold">Enjoy immediate <br/>Internet access!</span>
+""">
+<lolTvSlider """
+Watching TV<br/>has never been so intense! 
+""">
 /*----------------------------------------------------------------------------*/
 /*---------------------------------ENCARTS------------------------------------*/
 <serviceMobileDesc """
@@ -1224,7 +1230,7 @@ or contact us on <b>2799 0000</b>
 /*-----------------------------------META-------------------------------------*/
 <promoFibre1MetaTitle "Promo : Fiber - Luxembourg Online">
 /*----------------------------------------------------------------------------*/
-<promoFibre1Title "offre spéciale">
+<promoFibre1Title "Special offer">
 <promoFibre1Desc """
 <span class="extra-bold">Free</span> installation fee !
 """>

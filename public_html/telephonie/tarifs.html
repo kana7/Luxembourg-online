@@ -177,9 +177,9 @@
                                     <li class="menu-item"><a href="../divers/propos.html" data-l10n-id="menuLinkAbout">À propos</a></li>
                                     <li class="menu-item"><a href="../divers/contact.html" data-l10n-id="menuLinkContact">Contact</a></li>
                                 </ul>
-                                <div class="header-dropdown top-menu-header-links left">
+                                <div id="languageSelector" class="header-dropdown top-menu-header-links left">
                                     <button data-l10n-id="language">Langages<span class="icon-right-arrow"></span></button>
-                                    <ul id="languageSelector" class="drop">
+                                    <ul class="drop">
                                         <li><a href="#" data-lang="fr">Fr</a></li>
                                         <li><a href="#" data-lang="en">En</a></li>
                                         <li><a href="#" data-lang="de">De</a></li>
@@ -347,7 +347,7 @@
                                 <p class="footer-note">
                                     <span><span class="exponent">(1)</span><span data-l10n-id="phoneTarifsTableFoot1">Heures pleines : Lundi à vendredi de 8h00 à 19h00</span></span>
                                     <span><span class="exponent">(2)</span><span data-l10n-id="phoneTarifsTableFoot2">Heures creuses : Lundi à vendredi de 19h00 à 8h00  l  Weekends et jours fériés</span></span>
-                                    <span>Rythme de facturation 60'/60'</span>
+                                    <span data-l10n-id="mobileTarifsTable3Value1">Rythme de facturation 60'/60'</span>
                                 </p>
                             </div>
                         </div>
@@ -367,8 +367,8 @@
                         <div class="row">
                             <ul class="center">
                                 <li><a href="../telephonie/faq.html"><span class="icon icon-faq-ico"></span>FAQ</a></li>
-                                <li><a href="../telephonie/repondeur.html"><span class="icon icon-repondeur-icone"></span>Répondeur</a></li>
-                                <li><a href="../telephonie/abonnement.html"><span class="icon icon-document-ico"></span>Documents</a></li>
+                                <li><a href="../telephonie/repondeur.html" data-l10n-id="menuLinkRepondeur"><span class="icon icon-repondeur-icone"></span>Répondeur</a></li>
+                                <li><a href="../telephonie/abonnement.html" data-l10n-id="menuLinkDoc"><span class="icon icon-document-ico"></span>Documents</a></li>
                             </ul>
                         </div>
                     </div>
@@ -376,7 +376,7 @@
                 <div id="social-links">
                     <div class="container-wrapper">
                         <div class="row">
-                            <div class="text">Rejoignez-nous sur: </div>
+                            <div class="text" data-l10n-id="joinUs">Rejoignez-nous sur: </div>
                             <nav>
                                 <ul class="spread">
                                     <li>
@@ -417,7 +417,7 @@
                 <div id="contact">
                     <div class="container-wrapper">
                         <div class="row">
-                            <div class="text">Contactez-nous : </div>
+                            <div class="text" data-l10n-id="contactUs">Contactez-nous : </div>
                             <ul class="contact-infos spread">
                                 <li>
                                     <span class="icon-phone-icone"></span><a href="tel://2799 0000">2799 0000</a>
@@ -435,41 +435,39 @@
                 <div id="footer-links">
                     <div class="container-wrapper">
                         <div class="row">
-                            <a class="help-link" href="#">
+                            <a class="help-link" href="../divers/assistance.html">
                                 <span class="icon-info-icone"></span>
-                                <p>Besoin d'aide ? Accédez à l’espace assistance de Luxembourg Online (FAQ, informations, guides et documents utiles, contrats, divers)</p>
+                                <p data-l10n-id="needHelp">Besoin d'aide ? Accédez à l’espace assistance de Luxembourg Online (FAQ, informations, guides et documents utiles, contrats, divers)</p>
                                 <span class="icon-right-arrow"></span>
                             </a>
-                            <div class="separator"></div>
+                            <div class="separator hidden-phone hidden-tab"></div>
                         </div>
                         <div class="row hidden-phone hidden-tab">
                             <div class="footer-top-links">
-                                <h4>internet : </h4>
+                                <h4><span data-l10n-id="menuLinkInternet">internet</span> : </h4>
                                 <nav>
                                     <ul class="links">
-                                        <li><a href="../internet/offres.html">Nos offres</a></li>
-                                        <li><a href="../promos/fibre.html">Offre spéciale fibre</a></li>
-                                        <li><a href="../internet/equipements.html">Nos équipements</a></li>
+                                        <li><a href="../internet/offres.html"  data-l10n-id="menuLinkOffers">Nos offres</a></li>
+                                        <li><a href="../promos/fibre.html"  data-l10n-id="menuLinkFiberOffer">Offre spéciale fibre</a></li>
+                                        <li><a href="../internet/equipements.html"  data-l10n-id="menuLinkGear">Nos équipements</a></li>
                                     </ul>
                                 </nav>
                             </div>
                             <div class="footer-top-links">
-                                <h4>téléphonie : </h4>
+                                <h4><span data-l10n-id="menuLinkPhone">téléphonie</span> : </h4>
                                 <nav>
                                     <ul class="links">
-                                        <li><a href="../telephonie/tarifs.html">Nos tarifs</a></li>
-                                        <li><a href="../telephonie/equipements.html">Nos téléphones</a></li>
+                                        <li><a href="../telephonie/tarifs.html" data-l10n-id="menuLinkPrices">Nos tarifs</a></li>
+                                        <li><a href="../telephonie/equipements.html" data-l10n-id="menuLinkOurPhones">Nos téléphones</a></li>
                                     </ul>
                                 </nav>
                             </div>
                             <div class="footer-top-links">
-                                <h4>tv : </h4>
+                                <h4><span data-l10n-id="menuLinkTv">tv</span> : </h4>
                                 <nav>
                                     <ul class="links">
-                                        <li><a href="../tv/offres.html">Notre offre</a></li>
-
-                                        <li><a href="../tv/equipements.html">Nos équipements</a></li>
-
+                                        <li><a href="../tv/offres.html" data-l10n-id="menuLinkTvOffers">Notre offre</a></li>
+                                        <li><a href="../tv/equipements.html" data-l10n-id="menuLinkGear">Nos équipements</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -477,8 +475,8 @@
                                 <h4>mobile : </h4>
                                 <nav>
                                     <ul class="links">
-                                        <li><a href="../mobile/abonnements.html">Nos offres</a></li>
-                                        <li><a href="../mobile/equipements.html">Nos téléphones</a></li>
+                                        <li><a href="../mobile/abonnements.html" data-l10n-id="menuLinkOffers">Nos offres</a></li>
+                                        <li><a href="../mobile/equipements.html" data-l10n-id="menuLinkOurPhones">Nos téléphones</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -486,16 +484,14 @@
                         <div class="row">
                             <div class="separator"></div>
                             <div class="phone-12">
-                                <div class="display-phone copyright">© Luxembourg Online S.A. – 2016, tous droits réservés</div>
+                                <div class="display-phone copyright" data-l10n-id="copyright">© Luxembourg Online S.A. – 2016, tous droits réservés</div>
                                 <nav class="hidden-phone">
                                     <ul class="footer-bottom-links">
-                                        <li>
-                                            © Luxembourg Online S.A. – 2016, tous droits réservés</li>
-                                        <li><a href="../legal.html">Mentions légales</a></li>
-                                        <li><a href="../divers/emploi.html">Offres d'emploi</a></li>
-                                        <li><a href="../divers/plan.html">Plan du site</a></li>
-
-                                        <li><a href="../divers/contact.html">Contact</a></li>
+                                        <li data-l10n-id="copyright">© Luxembourg Online S.A. – 2016, tous droits réservés</li>
+                                        <li><a href="../legal.html" data-l10n-id="menuLinkNotice">Mentions légales</a></li>
+                                        <li><a href="../divers/emploi.html" data-l10n-id="menuLinkJob">Offres d'emploi</a></li>
+                                        <li><a href="../divers/plan.html" data-l10n-id="menuLinkSitemap">Plan du site</a></li>
+                                        <li><a href="../divers/contact.html" data-l10n-id="menuLinkContact">Contact</a></li>
                                     </ul>
                                 </nav>
                             </div>

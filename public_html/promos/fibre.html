@@ -167,9 +167,9 @@
                                     <li class="menu-item"><a href="../divers/propos.html" data-l10n-id="menuLinkAbout">À propos</a></li>
                                     <li class="menu-item"><a href="../divers/contact.html" data-l10n-id="menuLinkContact">Contact</a></li>
                                 </ul>
-                                <div class="header-dropdown top-menu-header-links left">
+                                <div id="languageSelector" class="header-dropdown top-menu-header-links left">
                                     <button data-l10n-id="language">Langages<span class="icon-right-arrow"></span></button>
-                                    <ul id="languageSelector" class="drop">
+                                    <ul class="drop">
                                         <li><a href="#" data-lang="fr">Fr</a></li>
                                         <li><a href="#" data-lang="en">En</a></li>
                                         <li><a href="#" data-lang="de">De</a></li>
@@ -353,7 +353,7 @@
                                                     <li style="line-height: 53px;" class="description"><span data-l10n-id="promoSpeed">PROMO : LA VITESSE x2</span><span class="exponent blue">(1)</span></li>
                                                     <li class="info"><span class="icon-download-ico download"></span><span style="text-decoration: line-through; font-size: 0.9em;"> 100 </span><span class="orange">200 Mbit/s</span><span class="exponent">(2)</span></li>
                                                     <li class="info"><span class="icon-download-ico upload"></span><span style="text-decoration: line-through; font-size: 0.9em;"> 50 </span>&nbsp;&nbsp;<span class="orange">100 Mbit/s</span><span class="exponent">(2)</span></li>
-                                                    <li class="check-list-container"><div class="check-list-title"><span class="icon-pack-ico"></span> <span data-l10n->Inclus dans ce pack :</span> </div>
+                                                    <li class="check-list-container"><div class="check-list-title"><span class="icon-pack-ico"></span> <span data-l10n-id="packInclude">Inclus dans ce pack :</span> </div>
                                                         <ul class="check-list">
                                                             <li><span class="icon-check-ico"></span><span data-l10n-id="volUnlimited">Volume illimité</span></li>
                                                             <li><span class="icon-check-ico"></span><span data-l10n-id="aboTel">Abonnement tél. fixe</span></li>
@@ -559,6 +559,9 @@
                     wrapAround: true,
                     prevNextButtons: false,
                     autoPlay: 2500
+                });
+                document.l10n.ready(function(){
+                    getTraduction();
                 });
             });
         </script>

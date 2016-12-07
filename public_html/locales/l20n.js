@@ -151,6 +151,20 @@
             document.l10n = ctx;
         }
 
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
 
         // Bootstrap: set up the context and call requestLocales()
         // ==========================================================================
@@ -231,7 +245,7 @@
             //   https://bugzilla.mozilla.org/show_bug.cgi?id=889335
             // For IE we use navigator.browserLanguage, see:
             //   http://msdn.microsoft.com/en-us/library/ie/ms533542%28v=vs.85%29.aspx
-            ctx.requestLocales(navigator.language || navigator.browserLanguage);
+            ctx.requestLocales(getCookie('lang') || navigator.language || navigator.browserLanguage);
 
             return manifest;
         }

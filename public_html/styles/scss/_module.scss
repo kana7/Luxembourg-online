@@ -2707,6 +2707,7 @@ h2.contact-title {
         padding: 9px 30px 8px;
     }
 }
+html[lang="en"] .input-group label[for="Cp"]{text-transform: capitalize;}
 .input-group{
     margin-bottom: 15px;
     &:not(.inline) *:not(span){
@@ -2847,7 +2848,10 @@ h2.contact-title {
 
 // JS MODULES
 // --------------------------------------------------
-
+div#languageSelector {
+    text-align: right;
+    margin-left: 30px;
+}
 .header-dropdown{
     position: relative;
     display: inline-block;
@@ -2857,6 +2861,7 @@ h2.contact-title {
         z-index: 2;
         outline: 0;
         background: none;
+        background-color: #0056ae;
         border: none;
         padding: 9px 10px ;
         width: 125px;
@@ -2878,12 +2883,19 @@ h2.contact-title {
         z-index: 3;
         background-color: darken($blue, 3%);
         border-top: 1px solid $blue;
+        text-align: right;
         li{margin: 0; display: block; cursor: pointer;}
         a{
             display: block;
         }
         &.is-visible{
             display: block;
+        }
+        li:not(:last-child) {
+            border-bottom: 1px solid #003a75;
+        }
+        li:not(:first-child) {
+            border-top: 1px solid #004994;
         }
     }
 }
@@ -3698,5 +3710,5 @@ h2.contact-title {
     opacity: 1;
 }
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
-	opacity: 0;
+    opacity: 0;
 }

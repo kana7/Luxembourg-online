@@ -184,8 +184,8 @@ Mobile <span class="icon-right-arrow"></span>
 """>
 <sliderLolvisioTitle "Forget about the distance!">
 <sliderSub """
-    <span class="normal">From the comfort on your home,</span>
-    <br/>order online !
+    <span class="normal">From the comfort of your home,</span>
+    <br/>order online!
 """>
 <sliderSubLink "See the demo">
 <sliderLolcloudTitle """
@@ -1387,7 +1387,7 @@ Trying to <span class="bold">get in touch with us?</span>
 <diversConFormAttr8 "Object">
 <diversConFormObj1 "-- Please select a topic --">
 <diversConFormObj2 "Request for sales information">
-<diversConFormObj3 "Request for e-mail contact details">
+<diversConFormObj3 "Request for email (password reset) details">
 <diversConFormObj4 "Order tracking">
 <diversConFormObj5 "Technical Question">
 <diversConFormObj6 "Billing">
@@ -1422,14 +1422,14 @@ Discover our story.<br>For 20 years, client satisfaction has been our primary ai
 """>
 <diversProp20Title "20 years">
 <diversProp20Desc """
-<p>Luxembourg Online was <span>founded in 1995</span> and is one of Luxembourg‘s principal telecoms operators. Providing internet access, fixed telephone, mobile s, television (IPTV), network development and computer software engineering, Luxembourg Online has been present as an expert for over 20 years.</p>
+<p>Luxembourg Online was <span>founded in 1995</span> and is one of Luxembourg‘s principal telecoms operators. Providing internet access, fixed telephone, mobile telephones, television (IPTV), network development and computer software engineering, Luxembourg Online has been present as an expert for over 20 years.</p>
 <p>Luxembourg Online is a 100% privately-owned company, with over 100 employees over 4 sites.</p>
 <p>To this day, over 30 000 private and corporate clients entrust their communications requirements with Luxembourg Online.</p> 
 """>
 <diversPropNetTitle "A main player">
 <diversPropNetDesc """
-<p>Since its creation, Luxembourg Online‘s objective has been to provide it‘s clients with the best performing internet connection possible.</p>
-<p>In order to achieve this, the company has invested heavily in the technical internet network, predominantly in <span>fiber optics</span>. Thus, Luxembourg Online manages it‘s <span>own network</span> in the Grand-Duchy, which covers the entirety of the country.</p>
+<p>Since its creation, Luxembourg Online‘s objective has been to provide its clients with the best performing internet connection possible.</p>
+<p>In order to achieve this, the company has invested heavily in the national internet network, predominantly in <span>fiber optics</span>. Thus, Luxembourg Online manages it‘s <span>own network</span> in the Grand-Duchy, which covers the entirety of the country.</p>
 <a class="btn-outline-white" style="text-transform: initial;" target="blank" href="../documents/Reseau_Fibre_Luxembourg_Online.pdf">View the map of our network</a>
 """>
 <diversPropValueTitle "Our values">
@@ -1447,7 +1447,7 @@ Discover our story.<br>For 20 years, client satisfaction has been our primary ai
 """>
 <diversPropExpTitle "Expertise">
 <diversPropExpDesc """
-<p>Luxembourg Online a été <span>l'un des précurseurs</span> en matière d'accès Internet au Grand-Duché, ses équipes sont ainsi parfaitement formées aux spécificités et à l'évolution des technologies télécoms sur le marché luxembourgeois.</p>
+<p>With new technologies, data protection has become one of our priorities. Luxembourg Online will not use, transfer or use a client‘s details without their explicit consent.</p>
 """>
 <diversPropDataTitle "Data Management">
 <diversPropDataDesc """
@@ -1456,7 +1456,7 @@ Discover our story.<br>For 20 years, client satisfaction has been our primary ai
 <diversPropHistTitle "Our history">
 <diversPropHistStep1 "Introduction of online sales.">
 <diversPropHistStep2 "Launch of LOLVISIO">
-<diversPropHistStep3 "Luxembourg Online celbrates it‘s 20th Birthday !">
+<diversPropHistStep3 "Luxembourg Online celebrates it‘s 20th Birthday !">
 <diversPropHistStep4 "Launch of unbundled optical fiber network.">
 <diversPropHistStep5 "Launch of LOLTV, the IPTV solution.">
 <diversPropHistStep6 "Became a UMTS-license holder.">
@@ -1486,7 +1486,7 @@ Discover our story.<br>For 20 years, client satisfaction has been our primary ai
 <diversAssMetaTitle "Help - Luxembourg Online">
 /*----------------------------------------------------------------------------*/
 <diversAssTitle """
-Bienvenue sur l'<span class="bold">assistance Luxembourg Online</span>
+Welcome to <span class="bold">Luxembourg Online Support</span>
 """>
 <diversAssInfo1 """
 <b>Our contact details</b>
@@ -1540,7 +1540,7 @@ Bienvenue sur l'<span class="bold">assistance Luxembourg Online</span>
 <a class="link link2" href="../documents/guides/guide-assistance-technique.pdf" target="_blank"><img src="../images/guide/guide-assistance-technique.jpg"></a>
 """>
 <diversAssGuideLink1 """
-<h3>Guide d'assistance technique</h3><a class="link-assistance" href="../documents/guides/guide-assistance-technique.pdf" target="_blank">Download</a>
+<h3>Technical Support Guide</h3><a class="link-assistance" href="../documents/guides/guide-assistance-technique.pdf" target="_blank">Download</a>
 """>
 <diversAssGuideLinkImg2 """
 <a class="link link2" href="../documents/guides/Guide_ADSL_A5_BD.pdf" target="_blank"><img src="../images/guide/Guide_ADSL_A5_BD-1.png" data-realwidth="106" data-realheight="150"></a>
@@ -1592,19 +1592,21 @@ Bienvenue sur l'<span class="bold">assistance Luxembourg Online</span>
 """>
 <diversAssMailOption2Content """
 <h3>Windows 10 Mail</h3>
-                                            <ul class="emailPara" data-l10n-id="diversAssMailOption2Content">
+                                            <ul class=\"emailPara\">
                                                 <li><span>Open the Windows Mail application from the Windows start icon.</span></li>
                                                 <li><span> Select 2Advanced setup".</span></li>
                                                 <li><span>Select "Internet email" (POP or IMAP accounts that let you view your email in a web browser.)</span></li>
-                                                <li><span>Email address: the one you were provided with (i.e. customer@internet.lu)
-User name: your customer account user name
-Password: the password you were provided with, or the one you have set to your account.
-Account name: this is the name you can give to the account and the one you will see.
-Send you message using this name: simply insert your name.
-Incoming email server: pop.internet.lu
-Account type: Pop3
-Outgoing (SMTP) email server: smtp.internet.lu
-The e-mail account requires no SSL authentication for incoming or outgoing email.</span></li>
+                                                <li><span>Email address: the one you were provided with (i.e. customer@internet.lu)</li>
+</ul>
+<ul class=\"emailPara2\">
+<li>User name: <span>your customer account user name</span></li>
+<li>Password:<span>the password you were provided with, or the one you have set to your account.</span></li>
+<li>Account name: <span>this is the name you can give to the account and the one you will see.</span></li>
+<li>Send you message using this name: <span>simply insert your name.</span></li>
+<li>Incoming email server: <span>pop.internet.lu</span></li>
+<li>Account type: <span>Pop3</span></li>
+<li>Outgoing (SMTP) email server: <span>smtp.internet.lu</span></li>
+<li><span>The e-mail account requires no SSL authentication for incoming or outgoing email.</span></li>
                                             </ul>
 """>
 <diversAssMailOption3Content """
@@ -1673,7 +1675,7 @@ The e-mail account requires no SSL authentication for incoming or outgoing email
 <a class="link-assistance" href="../documents/guides/mail_android.pdf" target="_blank">Android E-mail Settings</a>
 """>
 <diversAssMobileTitle "Configuration DATA/MMS">
-<diversAssMobileDesc "In most cases, your mobile phone will retrieve internet access paramters from the SIM card, or automatically via the network. It is also possible to configure your mobile phone manually. Choose the setup according to the operating system and then follow the instructions.">
+<diversAssMobileDesc "In most cases, your mobile phone will retrieve internet access parameters from the SIM card, or automatically via the network. It is also possible to configure your mobile phone manually. Choose the setup according to the operating system and then follow the instructions.">
 <diversAssMobileData """
 <div class="rTableRow"><div class="rTableCell" style="font-weight:bold;font-size:13px;border-bottom:1px solid #e1e1e1;">Configuration Data</div>
                                                                 <div class="rTableCell" style="font-weight:bold;font-size:10pt;border-bottom:1px solid #e1e1e1;"></div></div>
@@ -1718,7 +1720,7 @@ The e-mail account requires no SSL authentication for incoming or outgoing email
                                                     <li><span>Select</span> "Settings".</li>
                                                     <li><span>Depending on make and version of your android mobile choose one of the follwoing :</span></li>
                                                     <ul class="emailPara2">
-<li>"Without bile network"</li>
+<li>"Without mobile network"</li>
                                                         <li><span>"Wireless & Networks"</span></li>
                                                         <li><span>or "More"</span></li>
                                                         <li><span>or "More settings"</span></li>
@@ -1783,7 +1785,7 @@ On accessing the APN parameters menu, there are a few  possibilities :</p>
                                             </div> 
 """>
 <diversAssMobileIns5 """
-<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Configuration des paramètres APN</h3>
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Configuring APN Settings</h3>
                                             <div class="dropdown-content">
                                                 <p style="margin-bottom:0;">The APN (Access Point Name) is the access point which your telephone connects to in order to acquire the operators mobile internet network.</p><br/>
                                                 <h3>Step 1 : access the APN parameters</h3>
@@ -1893,13 +1895,13 @@ On accessing the APN parameters menu, there are a few  possibilities :</p>
                                         </div>
 """>
 <diversAssFactIns2 """
-<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>What are the advantages of a direct debit? ?</h3>
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>What are the advantages of a direct debit?</h3>
                                         <div class="dropdown-content">
                                             <p>Using a direct debit is a simple and secure way to manage your monthly payment. The transaction is carried out automatically every month, thus negating any invoicing fees or in case of late payment. If you would like to set up a direct debit, then please proceed to the next FAQ.</p>
                                         </div>
 """>
 <diversAssFactIns3 """
-<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>How do I set up a direct debit? ?</h3>
+<h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>How do I set up a direct debit?</h3>
                                         <div class="dropdown-content">
                                             <p>If you would like to set up a direct debit, then you do the following :</p>
                                             <ul class="not-decimal-list" style="list-style-type: circle">
@@ -1911,13 +1913,13 @@ On accessing the APN parameters menu, there are a few  possibilities :</p>
 <diversAssFactIns4 """
 <h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>When whill my account be debited ?</h3>
                                         <div class="dropdown-content">
-                                            <p>As soon as your direct debit is avtivated, your bank account will be debited at the end of each month, or on the 15th of the month, if the first attempt fails.</p>
+                                            <p>As soon as your direct debit is activated, your bank account will be debited at the end of each month, or on the 15th of the month, if the first attempt fails.</p>
                                         </div>
 """>
 <diversAssFactIns5 """
 <h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Can I change the date of debit ?</h3>
                                         <div class="dropdown-content">
-                                            <p>Currently, it is not possible to change the transfer date. If this is of a concern, please don‘t hesitate to <a class="link-assistance" href="../divers/contact.html#Facturation" target="blank_">contact us</a>.</p>
+                                            <p>Currently, it is not possible to change the transfer date. If this is a concern, please don‘t hesitate to <a class="link-assistance" href="../divers/contact.html#Facturation" target="blank_">contact us</a>.</p>
                                         </div>
 """>
 <diversAssFactIns6 """
@@ -1928,7 +1930,7 @@ On accessing the APN parameters menu, there are a few  possibilities :</p>
                                                 <li><span>Access<a href="#" class="openPopup link-assistance" data-popup="0">Customer Area</a>, and then select my account.</span></li>                                                    
                                                 <li><span>Connect to your account via your login details..</span></li>
                                                 <li class="popup-gallery"><span>Select « Customer Account » and then on the button « Pay XX EUR » <a href="../images/divers/Assistance/bouton_facture.jpg">( <span class="icon icon-faq-ico"></span> )</a></span></li>
-                                                <li><span>Select your corresponding payment mehtod.</span></li>
+                                                <li><span>Select your corresponding payment method.</span></li>
                                                 <li><span>Follow the instructions given by your bank. At the end of the procedure, you will receive a payment confirmation which you must keep.</span></li>
                                             </ul>
                                         </div>

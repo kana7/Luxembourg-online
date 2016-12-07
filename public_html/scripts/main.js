@@ -38,9 +38,9 @@ var encartDispoTemplate = '<div class="phone-12 tab-6 desk-3">' +
         '</div>' +
         '</div>';
 var supportedLang = {
-    "fr": "langFr",
-    "en": "langGb",
-    "de": "langDe"
+    "fr": "Français",
+    "en": "English",
+    "de": "Deutsch"
 };
 var temp;
 var langString;
@@ -50,11 +50,11 @@ $(function () {
     document.l10n.ready(function () {
         if ($('#languageSelector')) {
             $('#languageSelector').empty();
-            langString = '<button><span data-l10n-id="' + supportedLang[document.l10n.supportedLocales[0]] + '"></span><span class="icon-right-arrow"></span></button>' +
+            langString = '<button>' + supportedLang[document.l10n.supportedLocales[0]] + '<span class="icon-right-arrow"></span></button>' +
                     '<ul class="drop">';
             $.each(supportedLang, function (index, value) {
                 if (index != document.l10n.supportedLocales[0]) {
-                    langString += '<li data-lang="' + index + '"><span data-l10n-id="' + value + '"></span></li>';
+                    langString += '<li data-lang="' + index + '">'+ value +'</li>';
                 }
             });
             langString += '</ul>';

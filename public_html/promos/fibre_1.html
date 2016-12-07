@@ -12,7 +12,10 @@
         <!--[if lt IE 9]>
                 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-                <link rel="localization" href="../locales/manifest.json"/>
+        <script type="text/javascript" src="../scripts/vendor/polyfill.min.js"></script>
+        <script type="text/javascript" src="../scripts/vendor/Template.js"></script>
+        <script type="text/javascript" src="../scripts/vendor/Intl.min.js"></script>
+        <link rel="localization" href="../locales/manifest.json"/>
         <script src="../locales/l20n.js"></script>
     </head>
     <body>
@@ -316,35 +319,35 @@
                             <div class="clearfix promo-offer-container hidden-phone">
                                 <div class="phone-12 tab-6">
                                     <div class="k100">
-                                            <div class="offer-item-orange">
-                                                <div class="item-header">
-                                                    <strong>LOL</strong>fiber 100
-                                                </div>
-                                                <ul class="item-body">
-                                                    <li class="description" data-l10n-id="internetOffreFIBER100Desc">Offre coup  de <span class="icon-heart-ico"></span></li>
-                                                    <li class="info"><span class="icon-download-ico download"></span>100 Mbit/s<span class="exponent">(1)</span></li>
-                                                    <li class="info"><span class="icon-download-ico upload"></span>50 Mbits/s<span class="exponent">(1)</span></li>
-                                                    <li class="check-list-container">
-                                                        <div class="check-list-title"><span class="icon-pack-ico"></span><span data-l10n-id="packInclude"> Inclus dans ce pack : </span></div>
-                                                        <ul class="check-list">
-                                                            <li><span class="icon-check-ico"></span><span data-l10n-id="volUnlimited">Volume illimité</span></li>
-                                                            <li><span class="icon-check-ico"></span><span data-l10n-id="aboTel">Abonnement tél. fixe</span></li>
-                                                            <li><span class="icon-check-ico"></span><span data-l10n-id="natCall">Appels nat. fixes</span><span class="exponent">(2)</span></li>
-                                                            <li><span class="icon-check-ico"></span><span data-l10n-id="internetTarifsDataLolCall">Appels vers mobiles LOL</span></li>
-                                                            <li><span class="icon-check-ico"></span><span data-l10n-id="internetOffreTel">120 min vers l'Europe fixe</span><span class="exponent">(2) (3)</span></li>
-                                                            <li><span class="icon-check-ico"></span>LOLCLOUD 5GB</li>
-                                                            <li><span class="icon-check-ico"></span><a href="../internet/optionnow.html">Option NOW</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                                <div class="item-footer">
-                                                    <div class="offer-price">
-                                                        <div style="left: 154px;">,90€</div>
-                                                        54<span data-l10n-id="month">/mois</span>
-                                                    </div>
+                                        <div class="offer-item-orange">
+                                            <div class="item-header">
+                                                <strong>LOL</strong>fiber 100
+                                            </div>
+                                            <ul class="item-body">
+                                                <li class="description" data-l10n-id="internetOffreFIBER100Desc">Offre coup  de <span class="icon-heart-ico"></span></li>
+                                                <li class="info"><span class="icon-download-ico download"></span>100 Mbit/s<span class="exponent">(1)</span></li>
+                                                <li class="info"><span class="icon-download-ico upload"></span>50 Mbits/s<span class="exponent">(1)</span></li>
+                                                <li class="check-list-container">
+                                                    <div class="check-list-title"><span class="icon-pack-ico"></span><span data-l10n-id="packInclude"> Inclus dans ce pack : </span></div>
+                                                    <ul class="check-list">
+                                                        <li><span class="icon-check-ico"></span><span data-l10n-id="volUnlimited">Volume illimité</span></li>
+                                                        <li><span class="icon-check-ico"></span><span data-l10n-id="aboTel">Abonnement tél. fixe</span></li>
+                                                        <li><span class="icon-check-ico"></span><span data-l10n-id="natCall">Appels nat. fixes</span><span class="exponent">(2)</span></li>
+                                                        <li><span class="icon-check-ico"></span><span data-l10n-id="internetTarifsDataLolCall">Appels vers mobiles LOL</span></li>
+                                                        <li><span class="icon-check-ico"></span><span data-l10n-id="internetOffreTel">120 min vers l'Europe fixe</span><span class="exponent">(2) (3)</span></li>
+                                                        <li><span class="icon-check-ico"></span>LOLCLOUD 5GB</li>
+                                                        <li><span class="icon-check-ico"></span><a href="../internet/optionnow.html">Option NOW</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <div class="item-footer">
+                                                <div class="offer-price">
+                                                    <div style="left: 154px;">,90€</div>
+                                                    54<span data-l10n-id="month">/mois</span>
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="phone-12">

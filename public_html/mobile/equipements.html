@@ -13,6 +13,9 @@
         <link rel="stylesheet" href="../styles/css/main.css">
 
         <script src="../scripts/vendor/picturefill.min.js"></script>
+        <script type="text/javascript" src="../scripts/vendor/polyfill.min.js"></script>
+        <script type="text/javascript" src="../scripts/vendor/Template.js"></script>
+        <script type="text/javascript" src="../scripts/vendor/Intl.min.js"></script>
         <link rel="localization" href="../locales/manifest.json"/>
         <script src="../locales/l20n.js"></script>
         <!--[if lt IE 9]>
@@ -457,8 +460,8 @@
         <script src="../scripts/allmobilescript2.js"></script>
         <script src="../scripts/main.js"></script>
         <script type="text/javascript">
-            $(function(){
-                document.l10n.ready(function(){
+            $(function () {
+                document.l10n.ready(function () {
                     getTraduction();
                 });
             });

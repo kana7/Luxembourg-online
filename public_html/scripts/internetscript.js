@@ -463,10 +463,7 @@ function checkDispo(homeId, isLOLCable) {
                 $('html, body').animate({
                     scrollTop: $('#offers-section, #promoFiber-content').offset().top
                 }, 650);
-                /*Cookies.remove('shop_idhome');
-                 Cookies.set('shop_idhome', homeId, {expires: 1});*/
                 getTraduction();
-                //document.l10n.requestLocales(document.l10n.supportedLocales[0]);
             }, error: function (jqXHR, textStatus, errorThrown) {
                 console.log('jqXHR:');
                 console.log(jqXHR);

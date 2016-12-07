@@ -43,7 +43,7 @@ var supportedLang = {
     "de": "langDe"
 };
 var temp;
-//var langCookie = Cookies.get('lang');
+var langCookie = Cookies.get('lang');
 var langString;
 // ON PAGE READY
 $(function () {
@@ -67,6 +67,7 @@ $(function () {
     if (jQuery().numeric) {
         $(".numeric").numeric();
     }
+    //language management
     document.l10n.ready(function () {
         if ($('#languageSelector')) {
             $('#languageSelector').empty();
@@ -79,7 +80,8 @@ $(function () {
             });
             langString += '</ul>';
             $('#languageSelector').append(langString);
-            $('#languageSelector').on('click', 'li', function () {
+            $('#languageSelector').unbind('click.lang').on('click.lang', 'li', function () {
+                console.log('test');
                 var lang = $(this).attr('data-lang');
                 setTraduction(lang);
                 if ($('.footer-note').length > 0) {
@@ -99,7 +101,7 @@ $(function () {
     });
 });
 function setTraduction(lang) {
-    //Cookies.set('lang', String(lang));
+    Cookies.set('lang', String(lang));
     document.l10n.requestLocales(String(lang));
 }
 function getTraduction() {

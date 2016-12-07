@@ -43,10 +43,40 @@ var supportedLang = {
     "de": "langDe"
 };
 var temp;
-var langCookie = Cookies.get('lang');
 var langString;
 // ON PAGE READY
 $(function () {
+    //language management
+    document.l10n.ready(function () {
+        if ($('#languageSelector')) {
+            $('#languageSelector').empty();
+            langString = '<button><span data-l10n-id="' + supportedLang[document.l10n.supportedLocales[0]] + '"></span><span class="icon-right-arrow"></span></button>' +
+                    '<ul class="drop">';
+            $.each(supportedLang, function (index, value) {
+                if (index != document.l10n.supportedLocales[0]) {
+                    langString += '<li data-lang="' + index + '"><span data-l10n-id="' + value + '"></span></li>';
+                }
+            });
+            langString += '</ul>';
+            $('#languageSelector').append(langString);
+            $('#languageSelector').unbind('click.lang').on('click.lang', 'li', function () {
+                var lang = $(this).attr('data-lang');
+                setTraduction(lang);
+                if ($('.footer-note').length > 0) {
+                    $('.footer-note').footerNote('render', {
+                        'registry': [
+                            document.l10n.getSync('footNoteInternetOffer1'),
+                            document.l10n.getSync('footNoteInternetOffer2'),
+                            document.l10n.getSync('footNoteInternetOffer3'),
+                            document.l10n.getSync('footNoteInternetOffer4'),
+                            document.l10n.getSync('footNoteInternetOffer5')
+                        ]
+                    });
+                }
+            });
+        }
+        getTraduction();
+    });
     MenuMobile.init();
     PopupModule.init();
     if ($('.header-dropdown')) {
@@ -67,41 +97,9 @@ $(function () {
     if (jQuery().numeric) {
         $(".numeric").numeric();
     }
-    //language management
-    document.l10n.ready(function () {
-        if ($('#languageSelector')) {
-            $('#languageSelector').empty();
-            langString = '<button><span data-l10n-id="' + supportedLang[document.l10n.supportedLocales[0]] + '"></span><span class="icon-right-arrow"></span></button>' +
-                    '<ul class="drop">';
-            $.each(supportedLang, function (index, value) {
-                if (index != document.l10n.supportedLocales[0]) {
-                    langString += '<li data-lang="' + index + '"><span data-l10n-id="' + value + '"></span></li>';
-                }
-            });
-            langString += '</ul>';
-            $('#languageSelector').append(langString);
-            $('#languageSelector').unbind('click.lang').on('click.lang', 'li', function () {
-                console.log('test');
-                var lang = $(this).attr('data-lang');
-                setTraduction(lang);
-                if ($('.footer-note').length > 0) {
-                    $('.footer-note').footerNote('render', {
-                        'registry': [
-                            document.l10n.getSync('footNoteInternetOffer1'),
-                            document.l10n.getSync('footNoteInternetOffer2'),
-                            document.l10n.getSync('footNoteInternetOffer3'),
-                            document.l10n.getSync('footNoteInternetOffer4'),
-                            document.l10n.getSync('footNoteInternetOffer5')
-                        ]
-                    });
-                }
-            });
-        }
-        getTraduction();
-    });
 });
 function setTraduction(lang) {
-    Cookies.set('lang', String(lang));
+    Cookies.set('lang', lang);
     document.l10n.requestLocales(String(lang));
 }
 function getTraduction() {
@@ -121,7 +119,6 @@ function deleteCookies() {
         Cookies.remove(cookieIndex[index]);
     }
 }
-
 
 //test si l'adresse email est eligible
 function testEmail(emailAddress) {

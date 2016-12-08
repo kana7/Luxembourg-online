@@ -81,6 +81,7 @@ Langage<span class="icon-right-arrow"></span>
 <footNoteInternetOffer6 "Valable uniquement en combinaison avec un abonnement Internet Luxembourg Online">
 <gratis "gratuit">
 <mondaySaturday "Lu-Sa: 9h00-18h00">
+<parrainageLink """<a class=\"btn-outline-white\" href=\"../documents/Bon_Parrainage_FR.pdf\" target=\"blank_\">Bon de parrainage</a>""">
 <parrainage "Bon de parrainage">
 <installation "Installation">
 <illimited "illimité">
@@ -221,7 +222,7 @@ Profitez d'Internet<br/>dès la signature<br/>du contrat !
 découvrez toutes nos offres <strong>adaptées à vos besoins !</strong>
 """>
 <homeMagDesc "Internet, téléphonie fixe, téléphonie mobile ou télévision. Consultez notre magazine pour découvrir l’intégralité de nos offres ainsi que les promotions du moment.">
-<homeMagLink "Consultez le magazine">
+<homeMagLink "Consultez la brochure">
 <homeBdayTitle """
 Luxembourg online
 <br/><strong>fête ses 20 ans !</strong>
@@ -2132,3 +2133,84 @@ Séléctionnez la configuration correspondant à votre système d’exploitation
                                             </a>
 """>
 <legalList3Title "COORDONNÉES DE L'ENTREPRISE">
+/*---------------------------COMMANDE EN LIGNE--------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<shopMetaTitle "Shop : Nos offres – Luxembourg Online">
+<shopInscMetaTitle "Shop : Inscription – Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<shopTitle """
+<span class="bold">Inscription en ligne</span> Luxembourg Online
+""">
+<shopDemo """Regardez la<br/> <strong>démo</strong>""">
+<shopStepList1 "Choix de l'abonnement">
+<shopStepList2 "Matériel">
+<shopStepList3 "Téléphonie fixe">
+<shopStepList4 "Télévision">
+<shopStep4Desc "Profitez de la télévision en qualité supérieure avec notre service LOLTV. ">
+<shopStepList5 "Coordonnées">
+<shopStepList6 "Confirmation">
+<shopStepDesc1 "Veuillez choisir le type d’installation que vous souhaitez. ">
+<shopStepDesc2 "Veuillez choisir le modem que vous souhaitez. ">
+<shopStepTitle1 "Numéro de téléphone">
+<portabilityLabel1 "Je souhaite un nouveau numéro de téléphone">
+<portabilityLabel12 "Je souhaite conserver mon numéro de téléphone actuel">
+<lineTypeLabel1 "analogique">
+<titulLabel1 "Titulaire de la ligne : ">
+<titulLabel2 "N° de téléphone à conserver : ">
+<titulInput2 """<input id="NumTel" name="p_numTel" type="text" placeholder="(Indiquez le num&eacute;ro sans espaces)">""">
+<titulLabel3 "N° de compte opérateur d'origine : ">
+<infoSupTitle "Informations supplémentaires">
+<alarmLabel1 "Je possède une alarme: ">
+<faxLabel1 "je possède un fax:">
+<shopPanierTitle "Récapitulatif">
+<shopPanierMonthlyTitle "Coûts mensuels">
+<shopPanierUniqueTitle "Coûts uniques">
+<shopPanierPromo1 """<span class="bold">PROMO</span> : installation offerte""">
+<shopPanierLabel1 "Coûts mensuels :">
+<shopPanierLabel2 "Coûts Uniques :">
+<shopPanierFootnote1 "(1) Frais de déplacement non inclus: 25€ centre et sud, 35€ nord">
+<shopPanierFootnote2 "(2) Prix mensuel aprés 6 mois :">
+<shopUIback "Retour">
+<shopUINext "Suivant">
+<shopFiberFormTitle "shopFiberFormTitle">
+<shopFiberFormDesc "Est-ce que le câblage interne de votre habitation est conforme pour le raccordement Internet via la fibre optique ?">
+<shopFiberFormInfos1 "Dans le cas d\'un appartement, une fibre optique doit relier l\'arrivée Post (TCS) à votre appartement.">
+<shopFiberFormInfos2 "Dans le cas d\'une maison, un câble réseau doit relier l\'arrivée Post (TCS) à une prise de votre maison. ">
+<shopFiberFormLabel1 "Mon cablâge interne est conforme pour le raccordement Internet via la fibre optique.">
+<shopFiberFormLabel2 "Mon cablâge interne n\'est pas conforme et je demande à Luxembourg Online d\'entreprendre les travaux nécessaires. ">
+<shopFiberFormPromo1 "PROMO : Frais de câblage fibre (220€) offerts !">
+<shopFiberFormPromo1Label "Frais de cablâge fibre : ">
+<shopFiberFormPromo1Details "Frais de cablâge offerts avec souscription d\'un abonnement LOL FIBER 100 ou 200 !">
+<shopFiberFormLink "Détails et frais d\'installation">
+<shopMatSupTitle "Matériel complémentaire">
+<shopTvTitle "Décodeur TV">
+<shopMatSupDesc "Si besoin, vous trouverez ci-dessous du matériel supplémentaire pour améliorer la qualité de votre réseau ou l’étendre. ">
+<shopWarningBack "Si vous retournez maintenant en arrière, les données de votre commande seront perdues. êtes-vous sûr?">
+<shopAboTel "Abonnement téléphonique">
+<shopAboTelFootnote1 "Appels nationaux fixes illimités">
+<shopAboTelFootnote2 "(sauf numéros spéciaux)">
+<shopAboTelFootnote3 "Appels illimités vers mobiles LOL">
+<shopAboTelFootnote4 "EU120 (120 min vers les fixes de l'UE)">
+<shopTvRemise "6 mois gratuits">
+<shopTvRemiseThen "après 17€/mois">
+<shopTvDecName "Décodeur LOL TV">
+<shopTvDecName1 "Décodeur pour 2ème TV">
+<shopTvDecLabel1 "Processeur quad-core">
+<shopTvDecLabel2 "Mémoire 2 GB RAM">
+<shopTvDecLabel3 "Full HD">
+<shopInstallPromo "Installation offerte">
+<shopInstallName1 "Installation par une équipe">
+<shopInstallName1Desc "Je souhaite qu’une équipe spécialisée vienne s’occuper de l’installation à mon domicile. Je vais donc être rappelé par Luxembourg Online pour fixer la date du rendez-vous. ">
+<shopInstallName2Desc "Installation avec un kit de self-install">
+<shopActivPromo "Activation offerte">
+<shopActivName "Activation">
+<shopCablePromo "Câblage offert">
+<shopCableName "Installation câblage interne">
+<shopInstallRemise "Remise installation">
+<shopAboInclude "Inclus dans votre abonnement de base">
+<shopTelNatFixe "Tél. Nat. Fixe flat">
+<shopEu120Details "120 min vers les fixes des pays membres de l'U.E">
+<shopPowerLineDetails "Solution pour étendre le réseau via le circuit électrique (ethernet)">
+<shopPowerLineDetails1 "Solution pour étendre le réseau via le circuit électrique (ethernet + wifi)">
+
+/*----------------------------------------------------------------------------*/

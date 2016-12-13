@@ -3370,6 +3370,9 @@ svg:not(:root) {
 .background-black {
   background-color: #07040D; }
 
+.background-blue {
+  background-color: #004994; }
+
 .background-lightgrey {
   background-color: #f8f8f8; }
 
@@ -4024,7 +4027,7 @@ span[class^=icon-] {
   background: linear-gradient(to bottom, #d6d6d6 0%, white 50%, #d6d6d6 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#d6d6d6', GradientType=0 ); }
 
-.btn-outline-black, .btn-outline-white {
+.btn-outline-black, .btn-outline-white, .btn-tr-white {
   padding: 15px 20px;
   font-size: 16px; }
 
@@ -5257,7 +5260,7 @@ span[class^=icon-] {
     left: 50px; }
 
 #twenty-years {
-  background-image: url(../../images/Homepage/CONTENU/320px/20ans_LOL.jpg);
+  background-image: url(../../images/Homepage/CONTENU/320px/Bandeau_Fibre_optique_4.jpg);
   background-position: center top;
   background-size: 312px auto;
   padding-top: 135px; }
@@ -7289,7 +7292,7 @@ div#languageSelector {
     font-size: 16px; }
 
   #twenty-years {
-    background-image: url(../../images/Homepage/CONTENU/640px/20ans_LOL.jpg);
+    background-image: url(../../images/Homepage/CONTENU/640px/Bandeau_Fibre_optique_3.jpg);
     background-size: 583px auto;
     padding-top: 205px; }
 
@@ -7816,7 +7819,7 @@ div#languageSelector {
     width: 55%; }
 
   #twenty-years {
-    background-image: url(../../images/Homepage/CONTENU/1024px/20ans_LOL.jpg);
+    background-image: url(../../images/Homepage/CONTENU/1024px/Bandeau_Fibre_optique_2.jpg);
     background-size: 752px auto;
     background-position: right top;
     padding-top: 0; }
@@ -8075,7 +8078,7 @@ div#languageSelector {
     margin-right: 111px; }
 
   #twenty-years {
-    background-image: url(../../images/Homepage/CONTENU/1280px/20ans_LOL.jpg);
+    background-image: url(../../images/Homepage/CONTENU/1280px/Bandeau_Fibre_optique_1.jpg);
     background-size: 926px auto;
     background-position: right top; }
 

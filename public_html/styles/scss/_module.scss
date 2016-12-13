@@ -50,6 +50,9 @@ svg:not(:root) {
 .background-black{
     background-color: $section-black;
 }
+.background-blue{
+    background-color: $blue;
+}
 .background-lightgrey{
     background-color: $light-grey;
 }
@@ -737,7 +740,7 @@ span[class^=icon-]
     background: linear-gradient(to bottom, rgb(214,214,214) 0%, rgb(255,255,255) 50%, rgb(214,214,214) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#d6d6d6', GradientType=0 );
 }
-.btn-outline-black, .btn-outline-white{
+.btn-outline-black, .btn-outline-white, .btn-tr-white{
     padding: 15px 20px;
     font-size: 16px;
 }
@@ -1966,7 +1969,7 @@ span[class^=icon-]
 }
 
 #twenty-years{
-    background-image: url(../../images/Homepage/CONTENU/320px/20ans_LOL.jpg);
+    background-image: url(../../images/Homepage/CONTENU/320px/Bandeau_Fibre_optique_4.jpg);
     background-position: center top;
     background-size: 312px auto;
     padding-top: 135px;

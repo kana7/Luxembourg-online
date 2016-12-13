@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <title>Shop : Inscription – Luxembourg Online</title>
+        <title data-l10n-id="shopInscMetaTitle">Shop : Inscription – Luxembourg Online</title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,14 +13,11 @@
         <link rel="stylesheet" href="../styles/css/internet/accueil.css">
         <link rel="stylesheet" href="../styles/css/main.css">
         <script src="../scripts/vendor/picturefill.min.js"></script>
+        <script type="text/javascript" src="scripts/vendor/polyfill.min.js"></script>
+        <script type="text/javascript" src="scripts/vendor/Template.js"></script>
+        <script type="text/javascript" src="scripts/vendor/Intl.min.js"></script>
         <link rel="localization" href="../locales/manifest.json"/>
         <script src="../locales/l20n.js"></script>
-        <script>
-            // L20n and document.l10n are now available
-            document.l10n.ready(function () {
-                console.log("Document's context is ready");
-            });
-        </script>
     </head>
     <body>
         <div id="clientSpace" class="popup">
@@ -84,62 +81,62 @@
         </div>
         <nav class="mobile-side-menu">
             <ul class="menu">
-                <li class="menu-item link"><a href="http://www.internet.lu/index.htm">Accueil</a></li>
-                <li class="menu-item" data-id='internet'>Internet<span class="icon-right-arrow"></span></li>
-                <li class="menu-item" data-id='telephone'>Téléphonie <span class="icon-right-arrow"></span></li>
-                <li class="menu-item" data-id='tv'>TV <span class="icon-right-arrow"></span></li>
-                <li class="menu-item" data-id='mobile'>Mobile<span class="icon-right-arrow"></span></li>
-                <li class="menu-item link"><a href="http://www.internet.lu/promos/fibre.html">Promos</a></li>
+                <li class="menu-item link"><a href="http://www.internet.lu/index.htm" data-l10n-id="menuLinkHome">Accueil</a></li>
+                <li class="menu-item" data-id='internet'><span data-l10n-id="menuLinkInternet">Internet</span><span class="icon-right-arrow"></span></li>
+                <li class="menu-item" data-id='telephone'><span data-l10n-id="menuLinkPhone">Téléphonie</span><span class="icon-right-arrow"></span></li>
+                <li class="menu-item" data-id='tv'><span data-l10n-id="menuLinkTv">TV</span><span class="icon-right-arrow"></span></li>
+                <li class="menu-item" data-id='mobile'><span data-l10n-id="menuLinkMobile">Mobile</span><span class="icon-right-arrow"></span></li>
+                <li class="menu-item link"><a href="http://www.internet.lu/promos/fibre.html" data-l10n-id="menuLinkCoupon">Promos</a></li>
                 <li class="sous-nav">
                     <ul class="menu">
-                        <li class="menu-item link"><a href="../divers/assistance.html">Assistance</a></li>
+                        <li class="menu-item link"><a href="http://www.internet.lu/divers/assistance.html" data-l10n-id="menuLinkAssistance">Assistance</a></li>
                         <li class="menu-item link"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOLCLOUD</a></li>
-                        <li class="menu-item link"><a href="http://www.internet.lu/divers/brochure.html">Brochure</a></li>
-                        <li class="menu-item link"><a href="http://www.internet.lu/divers/propos.html">À propos</a></li>
-                        <li class="menu-item link"><a href="http://www.internet.lu/divers/contact.html">Contact</a></li>
-                        <li class="menu-item link"><a href="http://www.internet.lu/divers/emploi.html">Offres d'emploi</a></li>
-                        <li class="menu-item link"><a href="http://www.internet.lu/divers/plan.html">Plan du site</a></li>
+                        <li class="menu-item link"><a href="http://www.internet.lu/divers/brochure.html" data-l10n-id="menuLinkMag">Brochure</a></li>
+                        <li class="menu-item link"><a href="http://www.internet.lu/divers/propos.html" data-l10n-id="menuLinkAbout">À propos</a></li>
+                        <li class="menu-item link"><a href="http://www.internet.lu/divers/contact.html" data-l10n-id="menuLinkContact">Contact</a></li>
+                        <li class="menu-item link"><a href="http://www.internet.lu/divers/emploi.html" data-l10n-id="menuLinkJob">Offres d'emploi</a></li>
+                        <li class="menu-item link"><a href="http://www.internet.lu/divers/plan.html" data-l10n-id="menuLinkSitemap">Plan du site</a></li>
                     </ul>
                 </li>
             </ul>
             <div class="menu-links-wrapper">
                 <ul class="menu-links" id="internet">
-                    <li class="menu-item back"><span class="icon-right-arrow"></span>Internet</li>
-                    <li class="menu-item"><a href="http://www.internet.lu/internet/accueil.html">Accueil Internet</a></li>
-                    <li class="menu-item"><a href="http://www.internet.lu/internet/offres.html">Nos offres</a></li>
-                    <li class="menu-item"><a href="http://www.internet.lu/internet/equipements.html">Nos équipements</a></li>
-                    <li class="menu-item"><a href="http://www.internet.lu/internet/abonnement.html">Abonnez-vous</a></li>
+                    <li class="menu-item back"><span class="icon-right-arrow"></span><span data-l10n-id="menuLinkInternet">Internet</span></li>
+                    <li class="menu-item"><a href="http://www.internet.lu/internet/accueil.html" data-l10n-id="menuLinkInternetHome">Accueil Internet</a></li>
+                    <li class="menu-item"><a href="http://www.internet.lu/internet/offres.html" data-l10n-id="menuLinkOffers">Nos offres</a></li>
+                    <li class="menu-item"><a href="http://www.internet.lu/internet/equipements.html" data-l10n-id="menuLinkGear">Nos équipements</a></li>
+                    <li class="menu-item"><a href="http://www.internet.lu/internet/lolnow.html">LOLNOW</a></li>
+                    <li class="menu-item"><a href="http://www.internet.lu/internet/abonnement.html" data-l10n-id="menuLinkSub">Abonnez-vous</a></li>
                 </ul>
             </div>
             <div class="menu-links-wrapper">
                 <ul class="menu-links" id="telephone">
-                    <li class="menu-item back"><span class="icon-right-arrow"></span>Téléphonie</li>
-                    <li class="menu-item"><a href="http://www.internet.lu/telephonie/accueil.html">Accueil Téléphonie</a></li>
-                    <li class="menu-item"><a href="http://www.internet.lu/telephonie/tarifs.html">Nos tarifs</a></li>
-                    <li class="menu-item"><a href="http://www.internet.lu/telephonie/equipements.html">Nos téléphones</a></li>
-                    <li class="menu-item"><a href="http://www.internet.lu/telephonie/abonnement.html">Abonnez-vous</a></li>
+                    <li class="menu-item back"><span class="icon-right-arrow"></span><span data-l10n-id="menuLinkPhone">Téléphonie</span></li>
+                    <li class="menu-item"><a href="http://www.internet.lu/telephonie/accueil.html" data-l10n-id="menuLinkPhoneHome">Accueil Téléphonie</a></li>
+                    <li class="menu-item"><a href="http://www.internet.lu/telephonie/tarifs.html" data-l10n-id="menuLinkPrices">Nos tarifs</a></li>
+                    <li class="menu-item"><a href="http://www.internet.lu/telephonie/equipements.html" data-l10n-id="menuLinkOurPhones">Nos téléphones</a></li>
+                    <li class="menu-item"><a href="http://www.internet.lu/telephonie/abonnement.html" data-l10n-id="menuLinkSub">Abonnez-vous</a></li>
                 </ul>
             </div>
             <div class="menu-links-wrapper">
                 <ul class="menu-links" id="tv">
-                    <li class="menu-item back"><span class="icon-right-arrow"></span>TV</li>
-                    <li class="menu-item"><a href="http://www.internet.lu/tv/accueil.html">Accueil TV</a></li>
-                    <li class="menu-item"><a href="http://www.internet.lu/tv/offres.html">Notre offre TV</a></li>
-                    <li class="menu-item"><a href="http://www.internet.lu/tv/equipements.html">Nos équipements</a></li>
-                    <li class="menu-item"><a href="http://www.internet.lu/tv/abonnement.html">Abonnez-vous</a></li>
+                    <li class="menu-item back"><span class="icon-right-arrow"></span><span data-l10n-id="menuLinkTv">TV</span></li>
+                    <li class="menu-item"><a href="http://www.internet.lu/tv/accueil.html" data-l10n-id="menuLinkTvHome">Accueil TV</a></li>
+                    <li class="menu-item"><a href="http://www.internet.lu/tv/offres.html" data-l10n-id="menuLinkTvOffers">Notre offre TV</a></li>
+                    <li class="menu-item"><a href="http://www.internet.lu/tv/equipements.html" data-l10n-id="menuLinkGear">Nos équipements</a></li>
+                    <li class="menu-item"><a href="http://www.internet.lu/tv/abonnement.html" data-l10n-id="menuLinkSub">Abonnez-vous</a></li>
                 </ul>
             </div>
             <div class="menu-links-wrapper">
                 <ul class="menu-links" id="mobile">
-                    <li class="menu-item back"><span class="icon-right-arrow"></span>Mobile</li>
-                    <li class="menu-item"><a href="http://www.internet.lu/mobile/accueil.html">Accueil Mobile</a></li>
-                    <li class="menu-item"><a href="http://www.internet.lu/mobile/abonnements.html">Nos abonnements</a></li>
-                    <li class="menu-item"><a href="http://www.internet.lu/mobile/equipements.html">Nos téléphones</a></li>
-                    <li class="menu-item"><a href="http://www.internet.lu/mobile/abonnement.html">Abonnez-vous</a></li>
+                    <li class="menu-item back"><span class="icon-right-arrow"></span><span data-l10n-id="menuLinkMobile">Mobile</span></li>
+                    <li class="menu-item"><a href="http://www.internet.lu/mobile/accueil.html" data-l10n-id="menuLinkMobileHome">Accueil Mobile</a></li>
+                    <li class="menu-item"><a href="http://www.internet.lu/mobile/abonnements.html" data-l10n-id="menuLinkMobileSub">Nos abonnements</a></li>
+                    <li class="menu-item"><a href="http://www.internet.lu/mobile/equipements.html" data-l10n-id="menuLinkOurPhones">Nos téléphones</a></li>
+                    <li class="menu-item"><a href="http://www.internet.lu/mobile/abonnement.html" data-l10n-id="menuLinkSub">Abonnez-vous</a></li>
                 </ul>
             </div>
         </nav>
-
         <div id="siteWrap">
             <header>
                 <div id="top-menu-header" class="hidden-phone hidden-tab">
@@ -147,28 +144,28 @@
                         <div class="row">
                             <nav class="pull-left">
                                 <ul class="top-menu-header-links left">
-                                    <li class="active"><a href="http://www.internet.lu/index.htm">Particuliers</a></li><!--
-                                    --><li><a href="http://www.internet.lu/business/">Business</a></li>
+                                    <li class="active"><a href="http://www.internet.lu/index.htm" data-l10n-id="menuLinkPrivate">Particuliers</a></li><!--
+                                    --><li><a href="http://www.internet.lu/business/" data-l10n-id="menuLinkBusiness">Business</a></li>
                                 </ul>
                             </nav>
                             <nav class="pull-right">
                                 <ul class="top-menu-header-links right">
-                                    <li><a href="http://www.internet.lu/divers/assistance.html">Assistance</a></li>
+                                    <li><a href="http://www.internet.lu/divers/assistance.html" data-l10n-id="menuLinkAssistance">Assistance</a></li>
                                     <li><a href="http://www.internet.lu/lolcloud/index.htm" target="_blank">LOLCLOUD</a></li>
-                                    <li><a href="http://www.internet.lu/divers/brochure.html">Brochure</a></li>
-                                    <li><a href="http://www.internet.lu/divers/propos.html">À propos</a></li>
-                                    <li><a href="http://www.internet.lu/divers/contact.html">Contact</a></li>
+                                    <li><a href="http://www.internet.lu/divers/brochure.html" data-l10n-id="menuLinkMag">Brochure</a></li>
+                                    <li><a href="http://www.internet.lu/divers/propos.html" data-l10n-id="menuLinkAbout">À propos</a></li>
+                                    <li><a href="http://www.internet.lu/divers/contact.html" data-l10n-id="menuLinkContact">Contact</a></li>
                                 </ul>
+                                <div id="languageSelector" class="header-dropdown top-menu-header-links left"></div>
                             </nav>
                         </div>
                     </div>
                 </div>
-
                 <div id="bottom-menu-header">
                     <nav class="bottom-menu-header-links mobile display-phone display-tab">
                         <div class="pull-left">
                             <div class="logo noel">
-                                <a href="http://www.internet.lu/index.htm"><img src="../images/Icone/Img/Logo-LOL.png" alt="logo LOL" /></a>
+                                <a href="http://www.internet.lu/index.htm"><img src="http://www.internet.lu/images/Icone/Img/Logo-LOL.png" alt="logo LOL" /></a>
                             </div>
                         </div>
                         <div class="mobile-menu-button">
@@ -184,7 +181,7 @@
                         <div class="row">
                             <div class="pull-left">
                                 <div class="logo noel">
-                                    <a href="http://www.internet.lu/index.htm"><img src="../images/Icone/img/Logo-LOL.png" alt="logo LOL" /></a>
+                                    <a href="http://www.internet.lu/index.htm"><img src="http://www.internet.lu/images/Icone/img/Logo-LOL.png" alt="logo LOL" /></a>
                                 </div><!--
                                 --><nav class="bottom-menu-header-links">
                                     <ul class="main-menu">
@@ -192,54 +189,53 @@
                                             <div class="active-border"></div>
                                             <a href="http://www.internet.lu/internet/accueil.html">
                                                 <img class="header-icon" src="../images/Icone/img/internet.png" alt="Internet" />
-                                                <div class="link">Internet</div>
+                                                <div class="link" data-l10n-id="menuLinkInternet">Internet</div>
                                             </a>
                                         </li><!--
                                         --><li>
                                             <div class="active-border"></div>
                                             <a href="http://www.internet.lu/telephonie/accueil.html">
                                                 <img class="header-icon" src="../images/Icone/img/telephonie.png" alt="Téléphonie" />
-                                                <div class="link">Téléphonie</div>
+                                                <div class="link" data-l10n-id="menuLinkPhone">Téléphonie</div>
                                             </a>
                                         </li><!--
                                         --><li>
                                             <div class="active-border"></div>
                                             <a href="http://www.internet.lu/tv/accueil.html">
                                                 <img class="header-icon" src="../images/Icone/img/tv.png" alt="Tv" />
-                                                <div class="link">TV</div>
+                                                <div class="link" data-l10n-id="menuLinkTv">TV</div>
                                             </a>
                                         </li><!--
                                         --><li>
                                             <div class="active-border"></div>
                                             <a href="http://www.internet.lu/mobile/accueil.html">
                                                 <img class="header-icon" src="../images/Icone/img/mobile.png" alt="Mobile" />
-                                                <div class="link">Mobile</div>
+                                                <div class="link" data-l10n-id="menuLinkMobile">Mobile</div>
                                             </a>
                                         </li><!--
                                         --><li>
                                             <div class="active-border"></div>
                                             <a href="//www.internet.lu/promos/fibre.html">
                                                 <img class="header-icon" src="../images/Icone/img/promos.png" alt="Promos" />
-                                                <div class="link">Promos</div>
+                                                <div class="link" data-l10n-id="menuLinkCoupon">Promos</div>
                                             </a>
                                         </li>
                                     </ul>
                                 </nav>
                             </div>
                             <div class="pull-right hidden-phone hidden-tab">
-                                <button id="openClientSpace" class="btn-blue openPopup" data-popup="0">Espace client</button>
+                                <button id="openClientSpace" class="btn-blue openPopup" data-popup="0" data-l10n-id="frontOffice">Espace client</button>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </header>
             <!--            ./HEADER                -->
             <section class="drop-shadow background-lightgrey">
                 <div class="container-wrapper">
                     <div class="row clearfix">
                         <div class="align-center phone-12">
-                            <h1 class="plan-title-padding section-title normal lowercase"><span class="bold">Inscription en ligne</span> Luxembourg Online</h1>                            
+                            <h1 class="plan-title-padding section-title normal lowercase" data-l10n-id="shopTitle"><span class="bold">Inscription en ligne</span> Luxembourg Online</h1>                            
                         </div>
                     </div>
                 </div>
@@ -249,19 +245,19 @@
                     <div class="container-wrapper">
                         <div class="row">
                             <ul>
-                                <li>Choix de l'abonnement</li>
+                                <li data-l10n-id="shopStepList1">Choix de l'abonnement</li>
                                 <li class="step-separator"><span class="icon-right-arrow"></span></li>
-                                <li class="active">Installation</li>
+                                <li class="active" data-l10n-id="installation">Installation</li>
                                 <li class="step-separator"><span class="icon-right-arrow"></span></li>
-                                <li>Matériel</li>
+                                <li data-l10n-id="shopStepList2">Matériel</li>
                                 <li class="step-separator"><span class="icon-right-arrow"></span></li>
-                                <li>Téléphonie fixe</li>
+                                <li data-l10n-id="shopStepList3">Téléphonie fixe</li>
                                 <li class="step-separator"><span class="icon-right-arrow"></span></li>
-                                <li>Télévision</li>
+                                <li data-l10n-id="shopStepList4">Télévision</li>
                                 <li class="step-separator"><span class="icon-right-arrow"></span></li>
-                                <li>Coordonnées</li>
+                                <li data-l10n-id="shopStepList5">Coordonnées</li>
                                 <li class="step-separator"><span class="icon-right-arrow"></span></li>
-                                <li>Confirmation</li>
+                                <li data-l10n-id="shopStepList6">Confirmation</li>
                             </ul>
                         </div>
                     </div>
@@ -274,42 +270,43 @@
                                     <input type="hidden" name="SqlDB" value="LOLOrderInLine">
                                     <input type="hidden" name="Sql" value="delCookie.phs">
                                     <input type="hidden" name="p_idHome" value=""/>
+                                    <input type="hidden" name="_LanguageId" value=""/>
                                     <div id="steps">
                                         <div id="installation" class="step" data-step="0">
-                                            <h2 class="step-title">Installation</h2>
-                                            <p class="step-description">Veuillez choisir le type d’installation que vous souhaitez. </p>
+                                            <h2 class="step-title" data-l10n-id="installation">Installation</h2>
+                                            <p class="step-description" data-l10n-id="shopStepDesc1">Veuillez choisir le type d’installation que vous souhaitez.</p>
                                         </div>
                                         <div id="materiel" class="step" data-step="1">
-                                            <h2 class="step-title">Modem</h2>
-                                            <p class="step-description"> Veuillez choisir le modem que vous souhaitez.</p>
+                                            <h2 class="step-title" data-l10n-id="modem">Modem</h2>
+                                            <p class="step-description" data-l10n-id="shopStepDesc2">Veuillez choisir le modem que vous souhaitez.</p>
                                         </div>
                                         <div id="telephonie" class="step" data-step="2">
-                                            <h2 class="step-title"> Téléphonie fixe</h2>
-                                            <p class="step-description">L'abonnement téléphonique est inclus dans votre abonnement.</p>
+                                            <h2 class="step-title" data-l10n-id="shopStepList3">Téléphonie fixe</h2>
+                                            <p class="step-description" data-l10n-id="shopStepDesc3">L'abonnement téléphonique est inclus dans votre abonnement.</p>
                                             <div class="clearfix phone-mt-30">
                                                 <div class="phone-mb-30">
-                                                    <h3 class="step-subtitle">Numéro de téléphone</h3>
+                                                    <h3 class="step-subtitle" data-l10n-id="shopStepTitle1">Numéro de téléphone</h3>
                                                 </div>
                                                 <div data-form="portabilite" class="step-form">
                                                     <div class="clearfix">
                                                         <div class="phone-12 phone-pr-20">
                                                             <div class="input-group radio phone-mb-10">
                                                                 <input id="NewNum" name="a_portabilite" type="radio" value="0" checked="">
-                                                                <label for="NewNum">Je souhaite un nouveau numéro de téléphone</label>
+                                                                <label for="NewNum" data-l10n-id="portabilityLabel1">Je souhaite un nouveau numéro de téléphone</label>
                                                             </div>
                                                             <div class="input-group phone-mb-15">
                                                                 <input id="OldNum" name="a_portabilite" type="radio" value="572">
-                                                                <label for="OldNum">Je souhaite conserver mon numéro de téléphone actuel</label>
+                                                                <label for="OldNum" data-l10n-id="portabilityLabel2">Je souhaite conserver mon numéro de téléphone actuel</label>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div id="porta-form" class="phone-12 lgdesk-8 hidden">
                                                         <div class="input-group-table">
                                                             <div class="input-group inline phone-mb-10">
-                                                                <label for="Nom">Type de la ligne :</label>
+                                                                <label for="Nom" data-l10n-id="lineTypeLabel1">Type de la ligne :</label>
                                                                 <div class="input-group-cell">
                                                                     <input id="Analog" name="p_lineType" type="radio" value="analogique">
-                                                                    <label for="Analog">analogique</label>
+                                                                    <label for="Analog" data-l10n-id="analogique">analogique</label>
                                                                     <input id="Isdn" name="p_lineType" type="radio" value="isdn">
                                                                     <label for="Isdn">ISDN</label>
                                                                     <input id="VoIP" name="p_lineType" type="radio" value="VoIP">
@@ -317,36 +314,36 @@
                                                                 </div>
                                                             </div>
                                                             <div class="input-group inline phone-mb-10">
-                                                                <label for="Titulaire">Titulaire de la ligne : </label>
+                                                                <label for="Titulaire" data-l10n-id="titulLabel1">Titulaire de la ligne : </label>
                                                                 <input id="Titulaire" name="p_titulaire" type="text">
                                                             </div>
                                                             <div class="input-group inline phone-mb-10">
-                                                                <label for="NumTel">N° de téléphone à conserver : </label>
-                                                                <input id="NumTel" name="p_numTel" type="text" placeholder="(Indiquez le num&eacute;ro sans espaces)">
+                                                                <label for="NumTel" data-l10n-id="titulLabel2">N° de téléphone à conserver : </label>
+                                                                <span data-l10n-id="titulInput2"><input id="NumTel" name="p_numTel" type="text" placeholder="(Indiquez le num&eacute;ro sans espaces)"></span>
                                                             </div>
                                                             <div class="input-group inline">
-                                                                <label for="NumOperateur">N° de compte opérateur d'origine : </label>
+                                                                <label for="NumOperateur" data-l10n-id="titulLabel3">N° de compte opérateur d'origine : </label>
                                                                 <input id="NumOperateur" name="p_numOperateur" type="text">
                                                             </div>
                                                         </div>
-                                                        <h4 class="substep-title phone-mb-10">Informations supplémentaires</h4>
+                                                        <h4 class="substep-title phone-mb-10" data-l10n-id="infoSupTitle">Informations supplémentaires</h4>
                                                         <div class="input-group-table">
                                                             <div class="input-group inline phone-mb-10">
-                                                                <label>Je possède une alarme: </label>
+                                                                <label data-l10n-id="alarmLabel1">Je possède une alarme: </label>
                                                                 <div class="input-group-cell">
                                                                     <input id="Alarm" type="radio" name="p_alarm" value="true">
-                                                                    <label for="Alarm">oui</label>
+                                                                    <label for="Alarm" data-l10n-id="yes">oui</label>
                                                                     <input id="NoAlarm" type="radio" name="p_alarm" value="false">
-                                                                    <label for="NoAlarm">non</label>
+                                                                    <label for="NoAlarm" data-l10n-id="no">non</label>
                                                                 </div>
                                                             </div>
                                                             <div class="input-group inline phone-mb-10">
-                                                                <label>je possède un fax: </label>
+                                                                <label data-l10n-id="faxLabel1">je possède un fax: </label>
                                                                 <div class="input-group-cell">
                                                                     <input id="Fax" type="radio" name="p_fax" value="true">
-                                                                    <label for="Fax">oui</label>
+                                                                    <label for="Fax" data-l10n-id="yes">oui</label>
                                                                     <input id="NoFax" type="radio" name="p_fax" value="false">
-                                                                    <label for="NoFax">non</label>
+                                                                    <label for="NoFax" data-l10n-id="no">non</label>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -355,8 +352,8 @@
                                             </div>
                                         </div>
                                         <div id="tv" class="step" data-step="3">
-                                            <h2 class="step-title">Télévision</h2>
-                                            <p class="step-description">Profitez de la télévision en qualité supérieure avec notre service LOLTV. </p>
+                                            <h2 class="step-title" data-l10n-id="shopStepList4">Télévision</h2>
+                                            <p class="step-description" data-l10n-id="shopStep4Desc">Profitez de la télévision en qualité supérieure avec notre service LOLTV. </p>
                                         </div>
                                     </div>
                                 </form>
@@ -364,25 +361,25 @@
                             <div class="phone-12 desk-4 lgdesk-3 desk-pl-10">
                                 <div id="panier">
                                     <ul>
-                                        <li class="header"><h3>Récapitulatif</h3></li>
+                                        <li class="header"><h3 data-l10n-id="shopPanierTitle">Récapitulatif</h3></li>
                                         <li class="items">
                                             <div class="month">
-                                                <h4>Coûts mensuels</h4>
+                                                <h4 data-l10n-id="shopPanierMonthlyTitle">Coûts mensuels</h4>
                                                 <ul>
                                                     <li>
-                                                        <span class="label">Coûts uniques</span>
+                                                        <span class="label" data-l10n-id="shopPanierUniqueTitle">Coûts uniques</span>
                                                         <span class="price">89.00 €</span>
                                                     </li>
                                                 </ul>
                                             </div>
                                             <div class="unique">
-                                                <h4>Coûts uniques</h4>
+                                                <h4 data-l10n-id="shopPanierUniqueTitle">Coûts uniques</h4>
                                                 <ul>
                                                     <li>
-                                                        <span class="label">Coûts uniques</span>
+                                                        <span class="label" data-l10n-id="shopPanierUniqueTitle">Coûts uniques</span>
                                                         <span class="price price-delete">89.00 €</span>
                                                         <div class="remise-name">
-                                                            <span class="label"><span class="bold">PROMO</span> : installation offerte</span>
+                                                            <span class="label" data-l10n-id="shopPanierPromo1"><span class="bold">PROMO</span> : installation offerte</span>
                                                             <span class="price price-delete">89.00 €</span>
                                                         </div>
                                                     </li>
@@ -392,18 +389,18 @@
                                         <li class="prices">
                                             <ul>
                                                 <li id="monthlyPrice">
-                                                    <span class="prices-label">Coûts mensuels :</span>
-                                                    <span class="prices-price">89.00 €<span class="normal lowercase">/mois</span></span>
+                                                    <span class="prices-label" data-l10n-id="shopPanierLabel1">Coûts mensuels :</span>
+                                                    <span class="prices-price">89.00 €<span class="normal lowercase" data-l10n-id="month">/mois</span></span>
                                                 </li>
                                                 <li id="uniquePrice">
-                                                    <span class="prices-label">Coûts Unique :</span>
+                                                    <span class="prices-label" data-l10n-id="shopPanierLabel2">Coûts Unique :</span>
                                                     <span class="prices-price">44.90 €</span>
                                                 </li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </div>
-                                <div id="travelXpens" class="cart-note">(1) Frais de déplacement non inclus: 25€ centre et sud, 35€ nord</div>
+                                <div id="travelXpens" class="cart-note" data-l10n-id="shopPanierFootnote1">(1) Frais de déplacement non inclus: 25€ centre et sud, 35€ nord</div>
                             </div>
                         </div>
                     </div>
@@ -415,7 +412,7 @@
                 <div id="social-links" class="iner-shadow">
                     <div class="container-wrapper">
                         <div class="row">
-                            <div class="text">Rejoignez-nous sur: </div>
+                            <div class="text" data-l10n-id="joinUs">Rejoignez-nous sur: </div>
                             <nav>
                                 <ul class="spread">
                                     <li>
@@ -456,7 +453,7 @@
                 <div id="contact">
                     <div class="container-wrapper">
                         <div class="row">
-                            <div class="text">Contactez-nous : </div>
+                            <div class="text" data-l10n-id="contactUs">Contactez-nous : </div>
                             <ul class="contact-infos spread">
                                 <li>
                                     <span class="icon-phone-icone"></span><a href="tel://2799 0000">2799 0000</a>
@@ -474,41 +471,39 @@
                 <div id="footer-links">
                     <div class="container-wrapper">
                         <div class="row">
-                            <a class="help-link" href="http://www.internet.lu/divers/assistance.html">
+                            <a class="help-link" href="//www.internet.lu/divers/assistance.html">
                                 <span class="icon-info-icone"></span>
-                                <p>Besoin d'aide ? Accédez à l’espace assistance de Luxembourg Online (FAQ, informations, guides et documents utiles, contrats, divers)</p>
+                                <p data-l10n-id="needHelp">Besoin d'aide ? Accédez à l’espace assistance de Luxembourg Online (FAQ, informations, guides et documents utiles, contrats, divers)</p>
                                 <span class="icon-right-arrow"></span>
                             </a>
                             <div class="separator hidden-phone hidden-tab"></div>
                         </div>
                         <div class="row hidden-phone hidden-tab">
                             <div class="footer-top-links">
-                                <h4>internet : </h4>
+                                <h4><span data-l10n-id="menuLinkInternet">internet</span> : </h4>
                                 <nav>
                                     <ul class="links">
-                                        <li><a href="http://www.internet.lu/internet/offres.html">Nos offres</a></li>
-                                        <li><a href="http://www.internet.lu/promos/fibre.html">Offre spéciale fibre</a></li>
-                                        <li><a href="http://www.internet.lu/internet/equipements.html">Nos équipements</a></li>
+                                        <li><a href="//www.internet.lu/internet/offres.html"  data-l10n-id="menuLinkOffers">Nos offres</a></li>
+                                        <li><a href="//www.internet.lu/promos/fibre.html"  data-l10n-id="menuLinkFiberOffer">Offre spéciale fibre</a></li>
+                                        <li><a href="//www.internet.lu/internet/equipements.html"  data-l10n-id="menuLinkGear">Nos équipements</a></li>
                                     </ul>
                                 </nav>
                             </div>
                             <div class="footer-top-links">
-                                <h4>téléphonie : </h4>
+                                <h4><span data-l10n-id="menuLinkPhone">téléphonie</span> : </h4>
                                 <nav>
                                     <ul class="links">
-                                        <li><a href="http://www.internet.lu/telephonie/tarifs.html">Nos tarifs</a></li>
-                                        <li><a href="http://www.internet.lu/telephonie/equipements.html">Nos téléphones</a></li>
+                                        <li><a href="//www.internet.lu/telephonie/tarifs.html" data-l10n-id="menuLinkPrices">Nos tarifs</a></li>
+                                        <li><a href="//www.internet.lu/telephonie/equipements.html" data-l10n-id="menuLinkOurPhones">Nos téléphones</a></li>
                                     </ul>
                                 </nav>
                             </div>
                             <div class="footer-top-links">
-                                <h4>tv : </h4>
+                                <h4><span data-l10n-id="menuLinkTv">tv</span> : </h4>
                                 <nav>
                                     <ul class="links">
-                                        <li><a href="http://www.internet.lu/tv/offres.html">Notre offre</a></li>
-
-                                        <li><a href="http://www.internet.lu/tv/equipements.html">Nos équipements</a></li>
-                                        <li><a href="http://www.internet.lu/promos/internetTV.html">Offre spéciale TV</a></li>
+                                        <li><a href="//www.internet.lu/tv/offres.html" data-l10n-id="menuLinkTvOffers">Notre offre</a></li>
+                                        <li><a href="//www.internet.lu/tv/equipements.html" data-l10n-id="menuLinkGear">Nos équipements</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -516,8 +511,8 @@
                                 <h4>mobile : </h4>
                                 <nav>
                                     <ul class="links">
-                                        <li><a href="http://www.internet.lu/mobile/abonnements.html">Nos offres</a></li>
-                                        <li><a href="http://www.internet.lu/mobile/equipements.html">Nos téléphones</a></li>
+                                        <li><a href="//www.internet.lu/mobile/abonnements.html" data-l10n-id="menuLinkOffers">Nos offres</a></li>
+                                        <li><a href="//www.internet.lu/mobile/equipements.html" data-l10n-id="menuLinkOurPhones">Nos téléphones</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -525,16 +520,14 @@
                         <div class="row">
                             <div class="separator"></div>
                             <div class="phone-12">
-                                <div class="display-phone copyright"><span class="icon-icone-lol"></span>&copy;2015 Luxembourg Online S.A</div>
+                                <div class="display-phone copyright" data-l10n-id="copyright">© Luxembourg Online S.A. – 2016, tous droits réservés</div>
                                 <nav class="hidden-phone">
                                     <ul class="footer-bottom-links">
-                                        <li>
-                                            <span class="icon-icone-lol"></span>&copy;2015 Luxembourg Online S.A</li>
-                                        <li><a href="http://www.internet.lu/legal.html">Mentions légales</a></li>
-                                        <li><a href="http://www.internet.lu/divers/emploi.html">Offres d'emploi</a></li>
-                                        <li><a href="http://www.internet.lu/divers/plan.html">Plan du site</a></li>
-
-                                        <li><a href="http://www.internet.lu/divers/contact.html">Contact</a></li>
+                                        <li data-l10n-id="copyright">© Luxembourg Online S.A. – 2016, tous droits réservés</li>
+                                        <li><a href="//www.internet.lu/legal.html" data-l10n-id="menuLinkNotice">Mentions légales</a></li>
+                                        <li><a href="//www.internet.lu/divers/emploi.html" data-l10n-id="menuLinkJob">Offres d'emploi</a></li>
+                                        <li><a href="//www.internet.lu/divers/plan.html" data-l10n-id="menuLinkSitemap">Plan du site</a></li>
+                                        <li><a href="//www.internet.lu/divers/contact.html" data-l10n-id="menuLinkContact">Contact</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -551,25 +544,29 @@
         <script type="text/javascript" src="../scripts/pubSub.js"></script>
         <script type="text/javascript">
             $(function () {
-                Cart.init();
-                $(document).delegate('input[name="a_portabilite"]', 'change', function () {
-                    if ($(this).val() != 0) {
-                        $('#porta-form').removeClass('hidden');
-                        $('#NumTel').attr('required', 'required');
-                    } else {
-                        $('#porta-form').addClass('hidden');
-                        $('#NumTel').removeAttr('required');
-                    }
+                document.l10n.once(function () {
+                    Cart.init();
+                    $(document).delegate('input[name="a_portabilite"]', 'change', function () {
+                        if ($(this).val() != 0) {
+                            $('#porta-form').removeClass('hidden');
+                            $('#NumTel').attr('required', 'required');
+                        } else {
+                            $('#porta-form').addClass('hidden');
+                            $('#NumTel').removeAttr('required');
+                        }
+                    });
                 });
             });
         </script>
         <script type="text/javascript" src="../scripts/inscriptionModule.js"></script>
         <script type="text/javascript">
             $(function () {
-                var temp;
-                $('.dropdown').each(function () {
-                    temp = new DropDown($(this));
-                    temp.init();
+                document.l10n.once(function () {
+                    var temp;
+                    $('.dropdown').each(function () {
+                        temp = new DropDown($(this));
+                        temp.init();
+                    });
                 });
             });
         </script>

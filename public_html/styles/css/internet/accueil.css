@@ -114,7 +114,7 @@
   #panier > ul .term h4, .shop-list > ul .term h4 {
     margin: 0;
     display: inline-block; }
-  #panier > ul .term span, .shop-list > ul .term span {
+  #panier > ul .term span:not([data-l10n-id]), .shop-list > ul .term span:not([data-l10n-id]) {
     top: 2px;
     position: relative; }
   #panier > ul .prices, .shop-list > ul .prices {
@@ -214,7 +214,7 @@
     position: absolute;
     top: -23px;
     right: 0;
-    content: "Merci de s\00E9lectionner tous les champs requis";
+    content: attr(data-err);
     color: #DC0000;
     font-weight: 800;
     font-size: 0.94em; }
@@ -249,7 +249,7 @@
     font-size: 1.2em !important;
     cursor: inherit; }
     .shop-item .btn-blue:before {
-      content: "Choisir"; }
+      content: attr(data-attr); }
   .shop-item:not(.disabled):not(.fixed) {
     cursor: pointer; }
   .shop-item.disabled {
@@ -264,7 +264,7 @@
     border: 1px solid #e75e0a; }
     .shop-item.selected .btn-blue {
       background-color: #e75e0a;
-      font-size: 2em !important;
+      font-size: 0 !important;
       padding: 0 10px; }
       .shop-item.selected .btn-blue:hover {
         background-color: #e75e0a; }
@@ -277,7 +277,8 @@
         font-variant: normal !important;
         text-transform: none !important;
         speak: none;
-        line-height: 1;
+        font-size: 28px !important;
+        line-height: 45px;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         content: "\57"; }

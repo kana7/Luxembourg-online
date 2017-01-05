@@ -15,12 +15,6 @@
         <script src="../scripts/vendor/picturefill.min.js"></script>
         <link rel="localization" href="../locales/manifest.json"/>
         <script src="../locales/l20n.js"></script>
-        <script>
-            // L20n and document.l10n are now available
-            document.l10n.ready(function () {
-                console.log("Document's context is ready");
-            });
-        </script>
     </head>
     <body>
         <div id="clientSpace" class="popup">
@@ -190,7 +184,7 @@
                 <div id="bottom-menu-header">
                     <nav class="bottom-menu-header-links mobile display-phone display-tab">
                         <div class="pull-left">
-                            <div class="logo noel">
+                            <div class="logo">
                                 <a href="../index.htm"><img src="../images/Icone/Img/Logo-LOL.png" alt="logo LOL" /></a>
                             </div>
                         </div>
@@ -206,7 +200,7 @@
                     <div class="container-wrapper hidden-phone hidden-tab">
                         <div class="row">
                             <div class="pull-left">
-                                <div class="logo noel">
+                                <div class="logo">
                                     <a href="../index.htm"><img src="../images/Icone/img/Logo-LOL.png" alt="logo LOL" /></a>
                                 </div><!--
                                 --><nav class="bottom-menu-header-links">
@@ -532,35 +526,50 @@
         <script type="text/javascript" src="../scripts/onLeavePage.js"></script>
         <script type="text/javascript">
             $(function () {
-                $('.submit').on('click', function () {
-                    if (verifyForm('clientInscription')) {
-                        $('#clientInscription').submit();
-                    }
-                });
-                $('input[required]').blur(function () {
-                    $(this).removeClass('not-fill');
+                document.l10n.ready(function () {
+                    $('.submit').unbind().on('click', function () {
+                        if (verifyForm('clientInscription')) {
+                            $('#clientInscription').submit();
+                        }
+                    });
+                    $('input').unbind().blur(function () {
+                        $(this).removeClass('not-fill');
+                    });
                 });
             });
             function verifyForm(form) {
                 var flag = true;
+                var message = '';
+                var pattern = new RegExp(/[\[\]\^\$\.\|\?\*\+\(\)\\~`\!@¬#%&\-_+={}'""<>:;, ]{1,}/);
                 var vform = form;
                 $('#' + vform).find('[required]').each(function () {
                     if (!$(this).val()) {
                         flag = false;
+                        message = 'ShopWarningRequired';
                         $(this).addClass('not-fill');
                     }
                 });
-                if (flag && !testEmail($('#Mail').val())) {
+                if (flag) {
+                    $('#' + vform).find('input:not([type="select"]):not(#Mail)').each(function () {
+                        var value = $(this).val();
+                        if (value && pattern.test(value) === true) {
+                            flag = false;
+                            message = 'shopWarningSpecialChar';
+                            $(this).addClass('not-fill');
+                        }
+                    });
+                }
+                if (flag && $('#Mail').val() && !testEmail($('#Mail').val())){
                     $('#Mail').addClass('not-fill');
-                    alert("E-mail invalide! Assurez-vous d'avoir correctement saisi votre adresse électronique.");
+                    alert(document.l10n.getSync('shopWarningEmail'));
                     return false;
                 } else if (flag && $('#Password2').val() !== $('#Password').val()) {
                     $('#Password, #Password2').addClass('not-fill');
-                    alert('Les mots de passe ne correspondent pas');
+                    alert(document.l10n.getSync('shopWarningPwd'));
                     return false;
                 } else {
                     if (!flag) {
-                        alert('Remplissez les champs obligatoires pour continuer');
+                        alert(document.l10n.getSync(message));
                     }
                     return flag;
                 }

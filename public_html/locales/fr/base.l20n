@@ -11,6 +11,7 @@
 <langOther "Autres">
 <month "/mois">
 <month1 "mois">
+<month2 "mois">
 <price "Prix">
 <inter "International">
 <engagement "Engagement">
@@ -187,6 +188,7 @@ Mobile <span class="icon-right-arrow"></span>
     <span class="normal">Plus besoin de vous déplacer,</span>
     <br/>Abonnez-vous en ligne !
 """>
+<sliderHappyNewYear """Luxembourg Online vous souhaite<br/>une bonne année !""">
 <sliderSubLink "Voir la démo">
 <sliderLolcloudTitle """
     LOL<span style="font-weight: 300;">CLOUD</span> : Vos fichiers,
@@ -224,17 +226,17 @@ découvrez toutes nos offres <strong>adaptées à vos besoins !</strong>
 <homeMagDesc "Internet, téléphonie fixe, téléphonie mobile ou télévision. Consultez notre magazine pour découvrir l’intégralité de nos offres ainsi que les promotions du moment.">
 <homeMagLink "Consultez la brochure">
 <homeBdayTitle """
-Luxembourg online
-<br/><strong>fête ses 20 ans !</strong>
+La fibre optique, <strong>la meilleure technologie Internet !</strong>
 """>
-<homeBdayDesc "Nous vous remercions de la confiance que vous nous accordez. Notre collaboration ainsi que votre fidélité sont les clés de notre réussite depuis 20 ans.">
-<homeBdayLink "À propos de Luxembourg Online">
+<homeBdayDesc "Plus rapide et plus stable, c'est la technologie d’avenir. Grâce à la fibre, vous pouvez utiliser tous vos services en simultané et ceci sans perte de qualité.">
+<homeBdayLink "Voir notre promo fibre">
 <homeOnlineluTitle """
-L’actu high-tech, cinéma et toutes vos sorties <strong>au luxembourg !</strong>
+L'actu cinéma <span class='bold'>au Luxembourg !</span>
 """>
-<homeOnlineluDesc "Horaires des films au Luxembourg, bandes annonces, tendances high-tech, mais aussi concerts, expos et restos vous attendent sur le portail culturel online.lu.">
+<homeOnlineluDesc "Horaire des films au Luxembourg, bandes-annonces et toute l'actualité du cinéma vous attendent sur Online.lu.">
 <homeOnlineluLink "Accédez à online.lu">
 <tvChannelOffer "+ 110 chaînes TV, 40 chaînes Full HD et + 40 chaînes radio">
+<HappyNewYear "Bonnes fêtes de fin d’année !">
 /*----------------------------------------------------------------------------*/
 /*------------------------------InternetScript--------------------------------*/
 <noDisponible """
@@ -1049,7 +1051,7 @@ content="Profitez du meilleur de la télévision avec le décodeur TV Minix, éq
 """>
 /*----------------------------------------------------------------------------*/
 <tvGearTitle """
-Décodeur TV Minix <span class="orange" style="font-size:40px;">hellos <strong>gratuite !</strong></span>
+Décodeur TV Minix <span class="orange" style="font-size:40px;">Installation <strong>gratuite !</strong></span>
 """>
 <tvGearAchat "achat 159€ (contrat 12 mois)">
 <tvGearLocation """
@@ -1290,7 +1292,7 @@ Pour toute nouvelle souscription de 24 mois à l'offre <br/><span class="bold">L
 <promoFibreOfferDetails """
 ou contactez-nous au <b>2799 0000</b>
 """>
-<promoFibreOfferDate "Offre promotionnelle valable jusqu'au 31/12/2016. Voir détails et conditions en magasin">
+<promoFibreOfferDate "Offre promotionnelle valable jusqu'au 31/01/2017. Voir détails et conditions en magasin">
 /*----------------------------PROMO/FIBRE1.HTML-------------------------------*/
 /*-----------------------------------META-------------------------------------*/
 <promoFibre1MetaTitle "Promos : Fibre - Luxembourg Online">
@@ -1462,7 +1464,7 @@ Besoin de <span class="bold">nous contacter ?</span>
 <diversConFormObj5 "Question technique">
 <diversConFormObj6 "Facturation">
 <diversConFormObj7 "Candidature">
-<diversConFormObj8 "diversConFormObj8">
+<diversConFormObj8 "Autre">
 <diversConFormAttr9 """
 Message <span style="font-size: 0.7em;">(240 caractères max.)</span><span class="red">*</span>
 """>
@@ -2054,7 +2056,7 @@ Séléctionnez la configuration correspondant à votre système d’exploitation
 <diversAssFactIns9 """
 <h3 data-trigger class="bold moveArrow"><span class="icon-right-arrow"></span>Comment consulter ma facture en ligne ?</h3>
                                         <div class="dropdown-content">
-                                            <p>Pour cela, il vous suffit de vous connectez à votre Espace client, cliquez
+                                            <p>Pour cela, il vous suffit de vous connecter à votre Espace client, cliquez
                                                 sur "Mon compte" et entrez ensuite vos identifiants dans les champs correspondants.
                                                 Cliquez sur "se connecter", puis sélectionnez « Compte client ». Vous pourrez
                                                 visualiser toutes vos factures et également payer en ligne.</p>
@@ -2146,6 +2148,7 @@ Séléctionnez la configuration correspondant à votre système d’exploitation
 <shopStepList2 "Matériel">
 <shopStepList3 "Téléphonie fixe">
 <shopStepList4 "Télévision">
+<shopStepDesc3 "L'abonnement téléphonique est inclus dans votre abonnement.">
 <shopStep4Desc "Profitez de la télévision en qualité supérieure avec notre service LOLTV. ">
 <shopStepList5 "Coordonnées">
 <shopStepList6 "Confirmation">
@@ -2153,8 +2156,8 @@ Séléctionnez la configuration correspondant à votre système d’exploitation
 <shopStepDesc2 "Veuillez choisir le modem que vous souhaitez. ">
 <shopStepTitle1 "Numéro de téléphone">
 <portabilityLabel1 "Je souhaite un nouveau numéro de téléphone">
-<portabilityLabel12 "Je souhaite conserver mon numéro de téléphone actuel">
-<lineTypeLabel1 "analogique">
+<portabilityLabel2 "Je souhaite conserver mon numéro de téléphone actuel">
+<lineTypeLabel1 "Type de la ligne :">
 <titulLabel1 "Titulaire de la ligne : ">
 <titulLabel2 "N° de téléphone à conserver : ">
 <titulInput2 """<input id="NumTel" name="p_numTel" type="text" placeholder="(Indiquez le num&eacute;ro sans espaces)">""">
@@ -2201,7 +2204,8 @@ Séléctionnez la configuration correspondant à votre système d’exploitation
 <shopInstallPromo "Installation offerte">
 <shopInstallName1 "Installation par une équipe">
 <shopInstallName1Desc "Je souhaite qu’une équipe spécialisée vienne s’occuper de l’installation à mon domicile. Je vais donc être rappelé par Luxembourg Online pour fixer la date du rendez-vous. ">
-<shopInstallName2Desc "Installation avec un kit de self-install">
+<shopInstallName2 "Installation avec un kit de self-install">
+<shopInstallName2Desc "Je procède à l’installation moi-même à l’aide du kit de self-install qui me sera fourni par Luxembourg Online.">
 <shopActivPromo "Activation offerte">
 <shopActivName "Activation">
 <shopCablePromo "Câblage offert">
@@ -2212,5 +2216,12 @@ Séléctionnez la configuration correspondant à votre système d’exploitation
 <shopEu120Details "120 min vers les fixes des pays membres de l'U.E">
 <shopPowerLineDetails "Solution pour étendre le réseau via le circuit électrique (ethernet)">
 <shopPowerLineDetails1 "Solution pour étendre le réseau via le circuit électrique (ethernet + wifi)">
+<shopCtrDuration "Durée du Contrat">
+<shopUIChoose "Choisir">
+<shopWarning "Merci de sélectionner tous les champs requis">
+<ShopWarningRequired "Remplissez les champs obligatoires pour continuer">
+<shopWarningSpecialChar """Merci de ne pas insérer de caractères spéciaux dans les champs.""">
+<shopWarningEmail "E-mail invalide! Assurez-vous d'avoir correctement saisi votre adresse électronique.">
+<shopWarningPwd "Les mots de passe ne correspondent pas.">
 
 /*----------------------------------------------------------------------------*/

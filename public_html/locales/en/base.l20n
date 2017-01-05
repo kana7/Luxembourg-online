@@ -12,6 +12,7 @@ Luxemburgish">
 <langOther "Other">
 <month "/month">
 <month1 "month">
+<month2 "months">
 <price "Price">
 <inter "International">
 <engagement "Contract engagement">
@@ -82,6 +83,9 @@ Language<span class="icon-right-arrow"></span>
 <footNoteInternetOffer6 "Only available with internet subscription with Luxembourg Online">
 <gratis "gratis">
 <mondaySaturday "Mo-Sa: 9:00-18:00">
+<parrainageLink """
+<a class="btn-outline-white" href="../documents/Bon_Parrainage_EN.pdf" target="blank_">Sponsor Voucher</a>
+""">
 <parrainage "Sponsor Voucher">
 <installation "Installation">
 <illimited "unlimited">
@@ -188,6 +192,7 @@ Mobile <span class="icon-right-arrow"></span>
     <br/>order online!
 """>
 <sliderSubLink "See the demo">
+<sliderHappyNewYear """Luxembourg Online wishes you <br/>a Happy New Year!""">
 <sliderLolcloudTitle """
     LOL<span style="font-weight: 300;">CLOUD</span> : your files,
 <br/>everywhere you want!
@@ -216,21 +221,21 @@ Enjoy the Internet <br/>as soon as the contract is signed!
 <dispoVerif "Check for availability">
 <dispoVerif1 "Check for availability">
 <whichOffer "Which offers are available to you?">
+<HappyNewYear "Merry christmas and happy new year!">
 /*----------------------------------------------------------------------------*/
 /*--------------------------------SECTIONS------------------------------------*/
 <homeMagTitle """
 discover our deals <strong>taylored to your needs !</strong>
 """>
-<homeMagDesc "internet, Landline, Mobile, TV. Check out all our products in our magazine and discover our current deals.">
+<homeMagDesc "Ïnternet, landline, mobile, TV. Check out all our products in our magazine and discover our current deals.">
 <homeMagLink "Read our magazine">
 <homeBdayTitle """
-Luxembourg Online
-<br/><strong> celbrates it‘s 20th Birthday !</strong>
+Optical fiber, <strong>The best internet technology!</strong>
 """>
-<homeBdayDesc "We are grateful to our loyal customers. Their support and our vision have created this great 20 year bond.">
-<homeBdayLink "About Luxembourg Online">
+<homeBdayDesc "Faster and more stable, this is the technology of the future. Thanks to the fiber, you can use all your services simultaneously and without loss of quality.">
+<homeBdayLink "Check our special offer">
 <homeOnlineluTitle """
-High-tech news, cinema and going out <strong>in luxembourg !</strong>
+High-tech news, cinema and going out <span class='bold'>in luxembourg!</span>
 """>
 <homeOnlineluDesc "Find out cinema times, concerts, multimedia and high-tech articles, but also restaurant reviews, outings on our cultural portal online.lu">
 <homeOnlineluLink "Visit online.lu">
@@ -280,9 +285,7 @@ offer: free installation<br/>+ speed x2
 <internetAccueilOfferTitle """
 Discover all <strong>our exciting offers!</strong>
 """>
-<internetAccueilOfferDesc """
-Specialising in Internet access for the past 20 years, we are constantly bringing high performance solutions with attractive deals to the market. Whether you are a simple internet customer or a 24/7 connected social media user, one of our offers will suit your needs.
-""">
+<internetAccueilOfferDesc """Specializing in Internet access for the past 20 years, we are constantly bringing high performance solutions with attractive deals to the market. Whether you are a simple internet customer or a 24/7 connected social media user, one of our offers will suit your needs.""">
 <internetAccueilOfferLink "Check our internet offers">
 /*----------------------------------------------------------------------------*/
 /*-------------------------------SECTION FIBRE--------------------------------*/
@@ -314,7 +317,7 @@ Reliable and efficient, users benefit from the following advantages: stability, 
 Do you have friends and family who don‘t have a Luxembourg Online connection? Then help him reduce his costs and get him to join Luxembourg Online. <strong>You could benefit from a 40 € reduction in your next bill.</strong>
 """>
 <internetParainnageDesc1 """
-To take advantage of our sponsor off, download the form here :
+To take advantage of our sponsor offer, download the form here :
 """>
 /*----------------------------------------------------------------------------*/
 /*-------------------------INTERNET/OPTIONNOW.HTML----------------------------*/
@@ -323,7 +326,7 @@ To take advantage of our sponsor off, download the form here :
 /*----------------------------------------------------------------------------*/
 /*--------------------------------SECTION-------------------------------------*/
 <internetOnTitle """<strong>Enjoy immediate Internet access!</strong>""">
-<internetOnDesc """With our NOW option, there’s no waiting to get online !</strong>As soon as your contract is signed and while you are waiting for the installation, we will provide you with a hotspot free of charge, allowing you to access the internet straight away.""">
+<internetOnDesc """With our NOW option, there’s no waiting to get online! As soon as your contract is signed and while you are waiting for the installation, we will provide you with a hotspot free of charge, allowing you to access the internet straight away.""">
 /*----------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------*/
 /*---------------------INTERNET/TARIFS_DETAILLES.HTML-------------------------*/
@@ -448,7 +451,7 @@ All the documents you require in relation to our {{$cat}} products.<br/> For mor
 <a href="../documents/LOLFIBERDSL_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Subscription form LOL FIBER / LOL DSL</div></a>
 """>
 <internetAboConractLink2 """
-<a href="../documents/LOLFIBERDSL_OFFRE2_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Subscription form Fiber Promotion</div></a>
+<a href="../documents/EN/LOLFIBERDSL_OFFRE2_EN.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Subscription form Fiber Promotion</div></a>
 """>
 <internetAboConractLink3 """
 <a href="../documents/LOLCABLE_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Subscription form LOLCABLE</div></a>
@@ -989,7 +992,7 @@ content="Profitez du meilleur de la télévision avec le décodeur TV Minix, éq
 """>
 /*----------------------------------------------------------------------------*/
 <tvGearTitle """
-TV Minix Decoder <span class="orange" style="font-size:40px;">free <strong>installation !</strong></span>
+TV Minix Decoder <span class="orange" style="font-size:40px;">Free <strong>installation !</strong></span>
 """>
 <tvGearAchat "One off purchase 159€ (12 month term)">
 <tvGearLocation """
@@ -1224,7 +1227,7 @@ For every new 24 months LOLFIBER 100 subscription, Luxembourg Online will double
 <promoFibreOfferDetails """
 or contact us on <b>2799 0000</b>
 """>
-<promoFibreOfferDate "Promotional offer valid until 31/12/2016. See offer and detail in our Shop.">
+<promoFibreOfferDate "Promotional offer valid until 31/01/2017. See offer and detail in our Shop.">
 
 /*----------------------------PROMO/FIBRE1.HTML-------------------------------*/
 /*-----------------------------------META-------------------------------------*/
@@ -1392,7 +1395,7 @@ Trying to <span class="bold">get in touch with us?</span>
 <diversConFormObj5 "Technical Question">
 <diversConFormObj6 "Billing">
 <diversConFormObj7 "Job Application">
-<diversConFormObj8 "other">
+<diversConFormObj8 "Other">
 <diversConFormAttr9 """
 Message <span style="font-size: 0.7em;">(max. 240 characters)</span><span class="red">*</span>
 """>
@@ -1454,14 +1457,14 @@ Discover our story.<br>For 20 years, client satisfaction has been our primary ai
 <p>With new technologies, data protectionhas become one of our priorities. Luxembourg Online will not use, transfer or use a client‘s details without their explicit consent.</p>
 """>
 <diversPropHistTitle "Our history">
-<diversPropHistStep1 "Introduction of online sales.">
+<diversPropHistStep1 "Launch of its online platform">
 <diversPropHistStep2 "Launch of LOLVISIO">
-<diversPropHistStep3 "Luxembourg Online celebrates it‘s 20th Birthday !">
+<diversPropHistStep3 "Luxembourg Online celebrates its 20th Birthday !">
 <diversPropHistStep4 "Launch of unbundled optical fiber network.">
 <diversPropHistStep5 "Launch of LOLTV, the IPTV solution.">
 <diversPropHistStep6 "Became a UMTS-license holder.">
 <diversPropHistStep7 "Launch of the mobile network LOLMOBILE.">
-<diversPropHistStep8 "Launch of the mobile network LOLMOBILE.">
+<diversPropHistStep8 "Launch of VOIP service.">
 <diversPropHistStep9 "Launch of the preselect telephone Contracts enabling cheaper communications.">
 <diversPropHistStep10 "Launch of high-speed Internet access.">
 <diversPropHistStep11 "Launch of Internet access via cable TV.">
@@ -1580,7 +1583,7 @@ Welcome to <span class="bold">Luxembourg Online Support</span>
 """>
 <diversAssMailTitle "E-mail Settings">
 <diversAssMailSelect "Choose the setting :">
-<diversAssMailSelectOption1 "Principal settings">
+<diversAssMailSelectOption1 "Basic settings">
 <diversAssMailOption1Param """
 <li><span>Incoming Server (POP, also knwon as POP3) : <b>pop.internet.lu</b></span></li>
                                                 <li><span>Incoming Port number: <b>110 (no SSL authentication)</b></span></li>
@@ -1980,7 +1983,7 @@ On accessing the APN parameters menu, there are a few  possibilities :</p>
 <diversAssDocSelectLabel "Documents type :">
 <diversAssDocCaTitle "Subscription forms">
 <diversAssDocCaLink1 """<a href="../documents/LOLFIBERDSL_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLFIBER/DSL</div></a>""">
-<diversAssDocCaLink2 """<a href="../documents/LOLFIBERDSL_OFFRE2_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Offre LOLFIBER</div></a>""">
+<diversAssDocCaLink2 """<a href="../documents/EN/LOLFIBERDSL_OFFRE2_EN.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">Offre LOLFIBER</div></a>""">
 <diversAssDocCaLink3 """<a href="../documents/LOLCABLE_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLCABLE</div></a>""">
 <diversAssDocCaLink4 """<a href="../documents/LOLDSL20_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLDSL 20</div></a>""">
 <diversAssDocCaLink5 """<a href="../documents/LOLMOBILE_FR.pdf" target="_blank"><img src="../images/Icone/Img/pdf.gif" alt="pdf"/><div class="link single-line">LOLMOBILE</div></a>""">
@@ -2030,3 +2033,93 @@ On accessing the APN parameters menu, there are a few  possibilities :</p>
                                             </a>
 """>
 <legalList3Title "Company details">
+/*---------------------------COMMANDE EN LIGNE--------------------------------*/
+/*-----------------------------------META-------------------------------------*/
+<shopMetaTitle "Shop : Nos offres – Luxembourg Online">
+<shopInscMetaTitle "Shop : Inscription – Luxembourg Online">
+/*----------------------------------------------------------------------------*/
+<shopTitle """
+<span class="bold">Online subscription</span> Luxembourg Online
+""">
+<shopDemo """Watch the<br/> <strong>demo</strong>""">
+<shopStepList1 "Choice of subscription">
+<shopStepList2 "Equipment">
+<shopStepList3 "Telephone">
+<shopStepList4 "Television">
+<shopStep4Desc "Why not also subscribe to our quality IPTV and manage these essentials in one bundle.">
+<shopStepList5 "Contact details">
+<shopStepList6 "Confirmation">
+<shopStepDesc1 "How would you like your connection to be installed?">
+<shopStepDesc2 "Choose one of the following modems. ">
+<shopStepDesc3 "A telephone line is included in the subscription package. ">
+<shopStepTitle1 "Telephone Number">
+<portabilityLabel1 "I require a new telephone number">
+<portabilityLabel2 "I would like to keep my existing number">
+<lineTypeLabel1 "Connection type:">
+<titulLabel1 "Phone line tenant: ">
+<titulLabel2 "Telephone number you wish to keep:">
+<titulInput2 """<input id="NumTel" name="p_numTel" type="text" placeholder="(insert number here, no spaces)">""">
+<titulLabel3 "Holder‘s account number with previous operator: ">
+<infoSupTitle "Additionnal information">
+<alarmLabel1 "I own an alarm: ">
+<faxLabel1 "I own a fax:">
+<shopPanierTitle "Summary">
+<shopPanierMonthlyTitle "Monthly costs">
+<shopPanierUniqueTitle "One time costs">
+<shopPanierPromo1 """<span class="bold">OFFER</span> : free installation""">
+<shopPanierLabel1 "Monthly costs:">
+<shopPanierLabel2 "One time costs:">
+<shopPanierFootnote1 "(1) Journey costs not included: 25€ center and south, 35€ north">
+<shopPanierFootnote2 "(2) Monthly costs after 6 months:">
+<shopUIback "Back">
+<shopUINext "Next">
+<shopUIChoose "Choose">
+<shopFiberFormTitle "Fiber installation">
+<shopFiberFormDesc "Is the internal cabling of your premises compatible for an optical fiber connection?">
+<shopFiberFormInfos1 "For an appartment, a fiber connection must be present between the Post point of connection (TCS) and your appartment.">
+<shopFiberFormInfos2 "For a house, a network cable must be connected between the Post point of connection (TCS) and a socket in your house.">
+<shopFiberFormLabel1 "The internal cabling of my premises is compatible for a fiber internet connection.">
+<shopFiberFormLabel2 "The internal cabling in my premises IS NOT compatible and I ask Luxembourg Online to conduct the necessar installation. ">
+<shopFiberFormPromo1 "OFFER: No fiber cabling costs (220€)">
+<shopFiberFormPromo1Label "Fiber cabling costs: ">
+<shopFiberFormPromo1Details "No fiber cabling costs with subscription of LOL FIBER 100 or 200 !">
+<shopFiberFormLink "Details and installation costs">
+<shopMatSupTitle "Additional peripheral devices">
+<shopTvTitle "TV Decoder">
+<shopMatSupDesc "If required, the below peripheral devices can be used to boost the quality of your network and/or to extend the range. ">
+<shopWarningBack "If you leave this page, entered infromation will be lost. Are you sure to continue?">
+<shopAboTel "Telephone subscription">
+<shopAboTelFootnote1 "Unlimited national landline calls">
+<shopAboTelFootnote2 "(except premium rate numbers)">
+<shopAboTelFootnote3 "Unlimited calls to LOL mobiles">
+<shopAboTelFootnote4 "EU120 (120 mins to EU landlines)">
+<shopTvRemise "6 mois gratuits">
+<shopTvRemiseThen "après 17€/mois">
+<shopTvDecName "LOL TV Devoder">
+<shopTvDecName1 "Second decoder">
+<shopTvDecLabel1 "Quad-core CPU">
+<shopTvDecLabel2 "Memory 2 GB RAM">
+<shopTvDecLabel3 "Full HD">
+<shopInstallPromo "Free installation">
+<shopInstallName1 "Installation by a technician">
+<shopInstallName2 "Installation by self-install kit">
+<shopInstallName1Desc "I would like a technical team to perform the installation at my residence. Luxembourg Online will contact me to confirm an appointment.">
+<shopInstallName2Desc "I would like to conduct the installation myself and will collect a self-install kit from Luxembourg Online.">
+<shopActivPromo "No activation costs">
+<shopActivName "Activation">
+<shopCablePromo "No cabling costs">
+<shopCableName "Internal cabling">
+<shopInstallRemise "Discount installation">
+<shopAboInclude "Included in your base subscription">
+<shopTelNatFixe "Unlimited national landline calls">
+<shopEu120Details "120 mins to EU landlines">
+<shopPowerLineDetails "Solution to extend the network via the electric circuit (ethernet)">
+<shopPowerLineDetails1 "Solution to extend the network via the electric circuit (ethernet + wifi)">
+<shopCtrDuration "Contract period">
+<shopWarning "Please provide all the necessary information.">
+<ShopWarningRequired "Please fill in the required fields to continue.">
+<shopWarningSpecialChar """Please do not insert any special characters in the input fields.""">
+<shopWarningEmail "Invalid e-mail! Make sure you have entered your email address correctly.">
+<shopWarningPwd "Passwords do not match.">
+
+/*----------------------------------------------------------------------------*/

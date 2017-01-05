@@ -175,8 +175,7 @@
                                     <li><a href="divers/propos.html" data-l10n-id="menuLinkAbout">À propos</a></li>
                                     <li><a href="divers/contact.html" data-l10n-id="menuLinkContact">Contact</a></li>
                                 </ul>
-                                <div id="languageSelector" class="header-dropdown top-menu-header-links left">
-                                </div>
+                                <div id="languageSelector" class="header-dropdown top-menu-header-links left"></div>
                             </nav>
                         </div>
                     </div>
@@ -184,7 +183,7 @@
                 <div id="bottom-menu-header">
                     <nav class="bottom-menu-header-links mobile display-phone display-tab">
                         <div class="pull-left">
-                            <div class="logo noel">
+                            <div class="logo">
                                 <a href="index.htm"><img src="images/Icone/img/Logo-LOL.png" alt="logo LOL" /></a>
                             </div>
                         </div>
@@ -200,7 +199,7 @@
                     <div class="container-wrapper hidden-phone hidden-tab">
                         <div class="row">
                             <div class="pull-left">
-                                <div class="logo noel">
+                                <div class="logo">
                                     <a href="index.htm"><img src="images/Icone/img/Logo-LOL.png" alt="logo LOL" /></a>
                                 </div><!--
                                 --><nav class="bottom-menu-header-links">
@@ -255,6 +254,17 @@
             <!--            SLIDER             -->
             <div id="slider">
                 <div id="slider-contents" class="main-gallery">
+                    <div class="gallery-cell">
+                        <div class="infos image-6">
+                            <div class="container-wrapper">
+                                <div class="row vertical-align-middle">
+                                    <div class="phone-12 align-center">
+                                        <h2 class="title white" data-l10n-id="sliderHappyNewYear">Luxembourg Online vous souhaite <br/>une bonne année !</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="gallery-cell">
                         <div class="infos image-4">
                             <a href="promos/fibre.html#vitesse2x"></a>
@@ -320,22 +330,20 @@
                 <div class="container-wrapper">
                     <div class="row">
                         <div class="phone-12 tab-6 desk-3">
-                            <a class="service-link" href="mobile/abonnements.html">
-                                <div id="mobiles" class="service">
-                                    <div class="infos">
-                                        <h3 class="white"><span class="bold">LOL</span>MOBILE EUROPE</h3>
-                                        <ul class="pull-left">
-                                            <li class="text align-left white" data-l10n-id="serviceMobileDesc"> Appels et SMS<br/> en Europe inclus.</li>
-                                            <li class="pull-left">
-                                                <div class="price-orange">
-                                                    <div>,00€</div>
-                                                    33<span data-l10n-id="month">/mois</span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                            <div id="mobiles" class="service">
+                                <div class="infos">
+                                    <h3 class="white bold" data-l10n-id="HappyNewYear">Bonnes fêtes de fin d’année !</h3>
+                                    <!--<ul class="pull-left">
+                                        <li class="text align-left white" data-l10n-id="serviceMobileDesc"> Appels et SMS<br/> en Europe inclus.</li>
+                                        <li class="pull-left">
+                                            <div class="price-orange">
+                                                <div>,00€</div>
+                                                33<span data-l10n-id="month">/mois</span>
+                                            </div>
+                                        </li>
+                                    </ul>-->
                                 </div>
-                            </a>
+                            </div>
                         </div>
                         <div class="phone-12 tab-6 desk-3">
                             <a class="service-link" href="tv/offres.html">
@@ -402,15 +410,23 @@
             <!--                ./OFFRES                -->
 
             <!--                20ANS               -->
-            <section id="twenty-years" class="section-layout section-background-image right">
+            <section style="background-color: #01010b;" class="section-layout left-orientation">
                 <div class="container-wrapper">
                     <div class="row clearfix">
                         <div class="phone-12 desk-6">
-                            <h1 class="section-title" data-l10n-id="homeBdayTitle">Luxembourg online<br/>à votre service
-                                <strong>depuis plus de 20 ans !</strong>
+                            <img class="section-img-align-bottom" src="images/Homepage/CONTENU/1280px/Bandeau_Fibre_optique_1.jpg" 
+                                 srcset="images/Homepage/CONTENU/1280px/Bandeau_Fibre_optique_1.jpg 1920w,
+                                 images/Homepage/CONTENU/1024px/Bandeau_Fibre_optique_2.jpg 1302w,
+                                 images/Homepage/CONTENU/640px/Bandeau_Fibre_optique_3.jpg 1056w,
+                                 images/Homepage/CONTENU/320px/Bandeau_Fibre_optique_4.jpg 672w"
+                                 sizes="100%"
+                                 alt="online.lu" />
+                        </div>
+                        <div class="phone-12 desk-6">
+                            <h1 class="section-title white" data-l10n-id="homeBdayTitle">La fibre optique,<strong>la meilleure technologie Internet !</strong>
                             </h1>
-                            <p class="section-text" data-l10n-id="homeBdayDesc">Nous vous remercions de la confiance que vous nous accordez. Notre collaboration ainsi que votre fidélité sont les clés de notre réussite depuis plus de 20 ans.</p>
-                            <a class="btn-outline-white" href="divers/propos.html" data-l10n-id="homeBdayLink">À propos de Luxembourg Online</a>
+                            <p class="section-text white" data-l10n-id="homeBdayDesc">Plus rapide et plus stable, c'est la technologie d’avenir. Grâce à la fibre, vous pouvez utiliser tous vos services en simultané et ceci sans perte de qualité.</p>
+                            <a class="btn-tr-white" href="promos/fibre.html" data-l10n-id="homeBdayLink">Voir notre promo fibre</a>
                         </div>
                     </div>
                 </div>
@@ -432,7 +448,7 @@
                         </div>
                         <div class="phone-12 desk-6">
                             <h1 class="section-title" data-l10n-id="homeOnlineluTitle">
-                                L’actu high-tech, cinéma et toutes vos sorties <strong>au luxembourg !</strong>
+                                L’actu high-tech, cinéma et toutes vos sorties <span class="bold">au luxembourg !</span>
                             </h1>
                             <p class="section-text" data-l10n-id="homeOnlineluDesc">
                                 Horaires des films au Luxembourg, bandes annonces, tendances high-tech, mais aussi concerts, expos et restos vous attendent sur le portail culturel online.lu.

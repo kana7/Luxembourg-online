@@ -11,6 +11,8 @@
     background-image: url(../../images/Homepage/SLIDER/Promo_Fibre_Noel_672x320x.jpg); }
   #slider-contents .infos.image-5 {
     background-image: url(../../images/Homepage/SLIDER/Inscription_672x320px.jpg); }
+  #slider-contents .infos.image-6 {
+    background-image: url(../../images/Homepage/SLIDER/Slider_Nouvel_An_672x320px.jpg); }
 
 @media screen and (min-width: 672px) {
   #slider-contents .infos {
@@ -24,7 +26,9 @@
     #slider-contents .infos.image-4 {
       background-image: url(../../images/Homepage/SLIDER/Promo_Fibre_Noel_1056x450px.jpg); }
     #slider-contents .infos.image-5 {
-      background-image: url(../../images/Homepage/SLIDER/Inscription_1056x450px.jpg); } }
+      background-image: url(../../images/Homepage/SLIDER/Inscription_1056x450px.jpg); }
+    #slider-contents .infos.image-6 {
+      background-image: url(../../images/Homepage/SLIDER/Slider_Nouvel_An_1056x450px.jpg); } }
 @media screen and (min-width: 1056px) {
   #slider-contents .infos {
     background-size: 1302px auto; }
@@ -37,7 +41,9 @@
     #slider-contents .infos.image-4 {
       background-image: url(../../images/Homepage/SLIDER/Promo_Fibre_Noel_1302x330px.jpg); }
     #slider-contents .infos.image-5 {
-      background-image: url(../../images/Homepage/SLIDER/Inscription_1302x330px.jpg); } }
+      background-image: url(../../images/Homepage/SLIDER/Inscription_1302x330px.jpg); }
+    #slider-contents .infos.image-6 {
+      background-image: url(../../images/Homepage/SLIDER/Slider_Nouvel_An_1302x330px.jpg); } }
 @media screen and (min-width: 1302px) {
   #slider-contents .infos {
     background-size: 1920px auto; }
@@ -50,7 +56,9 @@
     #slider-contents .infos.image-4 {
       background-image: url(../../images/Homepage/SLIDER/Promo_Fibre_Noel_1920x360px.jpg); }
     #slider-contents .infos.image-5 {
-      background-image: url(../../images/Homepage/SLIDER/Inscription_1920x360px.jpg); } }
+      background-image: url(../../images/Homepage/SLIDER/Inscription_1920x360px.jpg); }
+    #slider-contents .infos.image-6 {
+      background-image: url(../../images/Homepage/SLIDER/Slider_Nouvel_An_1920x360px.jpg); } }
 #slider-contents .infos.image-6 .title {
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.8); }
 

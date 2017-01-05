@@ -47,36 +47,38 @@ var langString;
 // ON PAGE READY
 $(function () {
     //language management
-    document.l10n.ready(function () {
-        if ($('#languageSelector')) {
-            $('#languageSelector').empty();
-            langString = '<button>' + supportedLang[document.l10n.supportedLocales[0]] + '<span class="icon-right-arrow"></span></button>' +
-                    '<ul class="drop">';
-            $.each(supportedLang, function (index, value) {
-                if (index != document.l10n.supportedLocales[0]) {
-                    langString += '<li data-lang="' + index + '">'+ value +'</li>';
-                }
-            });
-            langString += '</ul>';
-            $('#languageSelector').append(langString);
-            $('#languageSelector').unbind('click.lang').on('click.lang', 'li', function () {
-                var lang = $(this).attr('data-lang');
-                setTraduction(lang);
-                if ($('.footer-note').length > 0) {
-                    $('.footer-note').footerNote('render', {
-                        'registry': [
-                            document.l10n.getSync('footNoteInternetOffer1'),
-                            document.l10n.getSync('footNoteInternetOffer2'),
-                            document.l10n.getSync('footNoteInternetOffer3'),
-                            document.l10n.getSync('footNoteInternetOffer4'),
-                            document.l10n.getSync('footNoteInternetOffer5')
-                        ]
-                    });
-                }
-            });
-        }
-        getTraduction();
-    });
+    if (document.l10n !== undefined) {
+        document.l10n.ready(function () {
+            if ($('#languageSelector')) {
+                $('#languageSelector').empty();
+                langString = '<button>' + supportedLang[document.l10n.supportedLocales[0]] + '<span class="icon-right-arrow"></span></button>' +
+                        '<ul class="drop">';
+                $.each(supportedLang, function (index, value) {
+                    if (index != document.l10n.supportedLocales[0]) {
+                        langString += '<li data-lang="' + index + '">' + value + '</li>';
+                    }
+                });
+                langString += '</ul>';
+                $('#languageSelector').append(langString);
+                $('#languageSelector').unbind('click.lang').on('click.lang', 'li', function () {
+                    var lang = $(this).attr('data-lang');
+                    setTraduction(lang);
+                    if ($('.footer-note').length > 0) {
+                        $('.footer-note').footerNote('render', {
+                            'registry': [
+                                document.l10n.getSync('footNoteInternetOffer1'),
+                                document.l10n.getSync('footNoteInternetOffer2'),
+                                document.l10n.getSync('footNoteInternetOffer3'),
+                                document.l10n.getSync('footNoteInternetOffer4'),
+                                document.l10n.getSync('footNoteInternetOffer5')
+                            ]
+                        });
+                    }
+                });
+            }
+            getTraduction();
+        });
+    }
     MenuMobile.init();
     PopupModule.init();
     if ($('.header-dropdown')) {

@@ -867,12 +867,6 @@ var tv_list = {
             "definition": [1]
         },
         {
-            "link": "tv/Fashion_TV_120x100.png",
-            "name": "FASHION TV",
-            "lang": "UK",
-            "definition": [1]
-        },
-        {
             "link": "tv/france24_53x50.png",
             "name": "France 24",
             "lang": "EN",

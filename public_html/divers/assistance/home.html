@@ -12,8 +12,6 @@
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        <link rel="localization" href="../../locales/manifest.json"/>
-        <script defer src="../../locales/l20n.js"></script>
     </head>
     <body>
         <div id="clientSpace" class="popup">
@@ -166,7 +164,7 @@
                                     <li><a href="http://www.internet.lu/business/" target="blank_">Business</a></li>
                                 </ul>
                             </nav>
-                            <nav class="pull-right">
+                            <nav class="pull-right hidden-phone hidden-tab">
                                 <ul class="top-menu-header-links right">
                                     <li class="menu-item"><a href="../../divers/assistance.html">Assistance</a></li>
                                     <li class="menu-item"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOLCLOUD</a></li>
@@ -308,7 +306,11 @@
             </section>
             <section class="phone-pt-50 phone-pb-50" ng-app="assistApp">
                 <div class="container-wrapper">
-                    <div ng-view autoscroll class="view-fade-in"></div>
+                    <div ng-view autoscroll><div class="row">
+                        <div class="phone-12 align-center">
+                            <div class="loading"></div><p style="font-size: 18px; line-height: 25px;" class="blue">Chargement de l'assistance...</p>
+                        </div>
+                    </div></div>
                 </div>
             </section>
             <style type="text/css">
@@ -333,6 +335,25 @@
                 }
                 .view-fade-in.ng-leave{
                     opacity:0;
+                }
+                @keyframes spin {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+                .loading {
+                    display: inline-block;
+                    width: 100%;
+                    text-align: center;
+                    border-radius: 50%;
+                    width: 75px;
+                    height: 75px;
+                    border: .5rem solid rgba(0,73,148, 0.2);
+                    border-top-color: rgba(0,73,148, 1);
+                    animation: spin 0.8s infinite ease-in;
                 }
             </style>
             <section class="section-layout left-orientation background-lightgrey section-shadow">

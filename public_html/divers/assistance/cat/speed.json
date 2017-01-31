@@ -1,8 +1,0 @@
-{
-    "id": "speed",
-    "name": "Speed test",
-    "icon": "document-ico",
-    "links": [
-        {"name": "Tester ma vitesse de connexion", "link": 0}
-    ]
-}

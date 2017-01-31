@@ -4,7 +4,7 @@
     <br/>Cliquez sur la rubrique concernée et effectuez les vérifications.</p>
 <section class="clearfix">
     <div ng-repeat="cat in Categories" class="phone-12 tab-6 desk-4 lgdesk-3 phone-pl-0 phone-pr-0 tab-pl-10 tab-pr-10 phone-mb-20"> 
-        <a href="#/categories/{{ cat.id}}">
+        <a ng-href="#/categories/{{ cat.id}}">
             <div class="assistance-thumbnail"> 
                 <p class="title"><span class="icon-{{cat.icon}}"></span>{{ cat.name}} <span class="icon-right-arrow"></span></p> 
                 <div class="img-container"><img ng-src="{{cat.cover}}"> </div>

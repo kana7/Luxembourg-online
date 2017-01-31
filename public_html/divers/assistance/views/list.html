@@ -5,7 +5,7 @@
         <p style="font-size: 20px" class="bold">Demandes fréquentes</p>
         <ul class="list">
             <li style="display: block;" ng-repeat="link in links">
-                <a href="#/categories/{{cat.id}}/{{link.link}}"><span class="icon-right-arrow"></span> {{link.name}}</a>
+                <a ng-href="#/categories/{{cat.id}}/{{link.link}}"><span class="icon-right-arrow"></span> {{link.name}}</a>
             </li>
         </ul>
     </div>

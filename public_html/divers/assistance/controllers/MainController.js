@@ -36,20 +36,14 @@ assistControllers = assistApp.controller('MainController', ['$scope', function (
                 cover: '../../images/Divers/Assistance/at/Mails.jpg'
             },
             {
-                id: 'facture-consommation',
-                name: 'Facture & consommation',
+                id: 'facturation',
+                name: 'Facturation',
                 icon: 'calculator-ico',
                 cover: '../../images/Divers/Assistance/at/facturation.jpg'
             },
             {
                 id: 'doc',
                 name: 'Documents utiles',
-                icon: 'document-ico',
-                cover: '../../images/Divers/Assistance/at/docs_utiles.jpg'
-            },
-            {
-                id: 'speed/0',
-                name: 'Speed test',
                 icon: 'document-ico',
                 cover: '../../images/Divers/Assistance/at/docs_utiles.jpg'
             }

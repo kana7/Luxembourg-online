@@ -1,6 +1,6 @@
 {
-    "id": "facture-consommation",
-    "name": "Facture & consommation",
+    "id": "facturation",
+    "name": "Facturation",
     "icon": "calculator-ico",
     "links": [
         {"name": "Je ne comprends pas ma facture", "link": "0"},

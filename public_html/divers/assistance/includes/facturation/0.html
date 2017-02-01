@@ -13,26 +13,22 @@
         <div class="display-desk display-lgdesk notif notif-five txtzone" data-zone="5"></div>
     </div>
     <ul class="display-phone display-tab emailPara">
-        <li><span><p>Nos coordonées, trouvez ici :</p>
-                <ul class="not-decimal-list">
-                    <li><span>nos adresses,</span></li>
-                    <li><span>notre numéro de téléphone</span></li>
-                    <li><span>et notre numéro de fax.</span></li>
-                </ul>
-                <p>Vous pouvez visualiser ces informations directement sur Internet.lu, rubrique Contact.</p>
+        <li><span><p>Nos coordonées</p>
+                <p>Vous retrouvez ces informations également sur internet.lu, rubrique Contact.</p>
             </span></li><br/>
-        <li><span>Votre adresse. Cette adresse postale est votre adresse de facturation. Elle peut être différente de l'adresse d'installation.</span></li><br/>
+        <li><span><p>Votre adresse.</p> 
+                <p>Cette adresse postale est votre adresse de facturation. Elle peut être différente de l'adresse d'installation.</p></span></li><br/>
         <li><span>Détails de votre facture                                                        
-                Dans cet espace, vous retrouvez :
+                ici vous retrouvez :
                 <ul class="not-decimal-list">
                     <li><span>le numéro de facture,</span></li>
                     <li><span>le descriptif et le montant de vos abonnements,</span></li>
                     <li><span>le détail de vos consommations,</span></li>
                     <li><span>Le montant total de la facture.</span></li>
                 </ul>
-                <p>Les consommations du mois précédent sont prises en compte pour la facture du mois en cours. Toutes ces infos sont disponibles dans votre Espace client.</p>
+                <p>Les consommations du mois précédent sont prises en compte pour la facture du mois en cours. La mention "divers correspond aux services premium (SMS, MMS et appels surtaxés)."</p>
             </span></li><br/>
-        <li><span>Informations supplémentaires                                                        
+        <li><span><p>Informations supplémentaires</p>
                 Cette partie contient :
                 <ul class="not-decimal-list">
                     <li><span>le mode de facturation</span></li>
@@ -42,29 +38,27 @@
             </span></li><br/>
         <li><span>Il s'agit ici des différents comptes bancaires de Luxembourg Online sur lesquels vous pouvez effectuer vos virements.</span></li><br/>
     </ul>
-    <p><span style="text-decoration: underline;" class="blue">Mention divers</span> : correspond aux services premium (SMS et MMS surtaxés)</p>
-    <p>Vous avez encore des questions ? <a class="link-assistance" href="../../divers/contact.html#Facturation" target="blank_">Contactez-nous !</a></p>
 </div>
 <script type="text/javascript-lazy">
     $(function(){
-        $(".txtzone").mouseover(function(){
-                $(".zone"+$(this).attr("data-zone")).show();
-        });
-        $(".txtint_zone").mouseover(function(){
-                $(".int_zone"+$(this).attr("data-zone")).show();
-        });
-        $(".txtint_zone").mouseout(function(){
-                $(".zone").hide();
-        });
-        $(".txtzone").mouseout(function(){
-                $(".zone").hide();
-        });
-        $(document).on('mousemove', function(e){
-                $('.zone').css({
-                   left:  e.pageX+30,
-                   top:   e.pageY-110
-                });
-        });
-        $(".tooltipm").tooltip({'position':{ my: 'left center', at: 'right bottom' }});
-});
+    $(".txtzone").mouseover(function(){
+    $(".zone"+$(this).attr("data-zone")).show();
+    });
+    $(".txtint_zone").mouseover(function(){
+    $(".int_zone"+$(this).attr("data-zone")).show();
+    });
+    $(".txtint_zone").mouseout(function(){
+    $(".zone").hide();
+    });
+    $(".txtzone").mouseout(function(){
+    $(".zone").hide();
+    });
+    $(document).on('mousemove', function(e){
+    $('.zone').css({
+    left:  e.pageX+30,
+    top:   e.pageY-110
+    });
+    });
+    $(".tooltipm").tooltip({'position':{ my: 'left center', at: 'right bottom' }});
+    });
 </script>

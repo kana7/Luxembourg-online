@@ -97,7 +97,7 @@ Language<span class="icon-right-arrow"></span>
 <volume "Volume">
 <ipAdress "IP-Address">
 <phone "Telephone">
-<com "Commercial">
+<com "Sales department">
 <compta "Accounting">
 <boutique "Our Shops">
 <openHours "Business hours">
@@ -408,7 +408,7 @@ Our advertised connection speeds represent the maximum bandwidth and are not war
 - the distance between the end user‘s adress and the telephone exchange<br/>
 - the end user‘s circumstances  (internal, cabling, distance between entry point and wifi router, wifi router to connected wifi devices, walls of premises,…)
 For more information, consult the <a href="../divers/assistance.html#document;3;" target="blank_">information product sheets</a>. If you encounter bandwidth issues, 
-                                    <a href="../divers/contact.html#form" target="blank_">contct us</a>.  Our helpdesk will advise and help you with your issues.
+                                    <a href="../divers/contact.html#form" target="blank_">contact us</a>.  Our helpdesk will advise and help you with your issues.
 """>
 <internetFaqQ2 "What does \"upstream\", \"downstream\" and Mbit/s mean ?">
 <internetFaqQ2A """
@@ -764,7 +764,7 @@ Andorra, Armenia, Aruba, Bahrain, Bangladesh, Belarus, Bosnia and Herzegovina, D
                         Ellipso, Emsat, Globalstar, ICOGlobal, Inmarsat, Iridium, Jasper, Jersey Teleco, MCP Norvège, Satellite, Satellite Maritime, Thuraya, Vodafone Malta Maritime.  
                     </div>
 """>
-<mobileTarifsDesc "Review all our internet tariffs below.">
+<mobileTarifsDesc "Review all our internet tariffs below, applicable to standard phone calls/SMS/data. They don't apply to special numbers (800, 900, televoting, premium calls, etc.) or premium texts.">
 <mobileTarifsTable1Title "National: calls">
 <mobileTarifsTable1Label1 "Call to domestic landline">
 <mobileTarifsTable1Label2 "Call to an LOL mobile">
@@ -1227,7 +1227,7 @@ For every new 24 months LOLFIBER 100 subscription, Luxembourg Online will double
 <promoFibreOfferDetails """
 or contact us on <b>2799 0000</b>
 """>
-<promoFibreOfferDate "Promotional offer valid until 31/01/2017. See offer and detail in our Shop.">
+<promoFibreOfferDate "Promotional offer valid until 28/02/2017. See offer and detail in our Shop.">
 
 /*----------------------------PROMO/FIBRE1.HTML-------------------------------*/
 /*-----------------------------------META-------------------------------------*/
@@ -1289,10 +1289,10 @@ Are you a motivated person and looking for a new challenge?<br/> We have the bel
                                             <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Human Resources Intern (m/f)</div>
                                         </a>
 """>
-<diversEmploiComTitle "Commercial">
+<diversEmploiComTitle "Sales representative">
 <diversEmploiComPdf1 """
 <a href="../documents/emploi/LOL-2015-10-001.pdf" target="blank">
-                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">A commercial (m/f)</div>
+                                            <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">A sales representative (m/f)</div>
                                         </a>
 """>
 <diversEmploiComPdf2 """
@@ -1306,7 +1306,7 @@ Are you a motivated person and looking for a new challenge?<br/> We have the bel
                                             <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Helpdesk Operator (m/f)</div>
                                         </a>
 """>
-<diversEmploiInfoTitle "Informatique">
+<diversEmploiInfoTitle "IT">
 <diversEmploiInfoPdf1 """
 <a href="../documents/emploi/LOL-2015-008.pdf" target="blank">
                                             <img src="../images/Icone/Img/pdf.gif" alt="pdf" /><div class="link single-line">Software developer (m/f)</div>
@@ -1404,7 +1404,7 @@ Message <span style="font-size: 0.7em;">(max. 240 characters)</span><span class=
 <div class="title extra-bold">Administration :</div>
                         <ul>
                             <li><span class="extra-bold">Adresse :</span> 14, av. du X Septembre | L-2550 Luxembourg</li>
-                            <li><span class="extra-bold">Fax :</span> 2799 3555 (commercial) | 45 93 34 (accounting)</li>
+                            <li><span class="extra-bold">Fax :</span> 2799 3555 (sales department) | 45 93 34 (accounting)</li>
                         </ul>
 """>
 /*-----------------------------DIVERS/PROPOS.HTML-----------------------------*/
@@ -1450,11 +1450,11 @@ Discover our story.<br>For 20 years, client satisfaction has been our primary ai
 """>
 <diversPropExpTitle "Expertise">
 <diversPropExpDesc """
-<p>With new technologies, data protection has become one of our priorities. Luxembourg Online will not use, transfer or use a client‘s details without their explicit consent.</p>
+<p>Luxembourg Online was one of the innovators of the internet technology in the Grand-Duchy. It‘s teams are therefore highly trained and have adapted to meet the high-tech needs of the telcoms market in Luxembourg.</p>
 """>
 <diversPropDataTitle "Data Management">
 <diversPropDataDesc """
-<p>With new technologies, data protectionhas become one of our priorities. Luxembourg Online will not use, transfer or use a client‘s details without their explicit consent.</p>
+<p>With new technologies, data protection has become one of our priorities. Luxembourg Online will not use, transfer or use a client‘s details without their explicit consent.</p>
 """>
 <diversPropHistTitle "Our history">
 <diversPropHistStep1 "Launch of its online platform">

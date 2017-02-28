@@ -368,6 +368,12 @@ var tv_list = {
             "lang": "DE",
             "definition": [2]
         },
+		{
+            "link": "tv/disneyde.png",
+            "name": "Disney Channel",
+            "lang": "DE",
+            "definition": [1]
+        },
         {
             "link": "tv/dmax_67x50.png",
             "name": "DMAX",
@@ -475,8 +481,13 @@ var tv_list = {
             "name": "Prosieben HD",
             "lang": "DE",
             "definition": [2]
-        }
-        ,
+        },
+		{
+            "link": "tv/pro7maxx.png",
+            "name": "Prosieben Maxx HD",
+            "lang": "DE",
+            "definition": [2]
+        },
         {
             "link": "tv/radioBremen_76x50.png",
             "name": "Radio bremen TV",
@@ -515,6 +526,12 @@ var tv_list = {
         {
             "link": "tv/Sat.1_2_50x50.png",
             "name": "Sat 1 HD",
+            "lang": "DE",
+            "definition": [2]
+        },
+		{
+            "link": "tv/sat1gold.png",
+            "name": "Sat 1 Gold",
             "lang": "DE",
             "definition": [1]
         },
@@ -656,6 +673,18 @@ var tv_list = {
             "lang": "FR",
             "definition": [2]
         },
+		{
+            "link": "tv/eleven.png",
+            "name": "Eleven HD",
+            "lang": "FR",
+            "definition": [2]
+        },
+		{
+            "link": "tv/elevensports.png",
+            "name": "Eleven Sports HD",
+            "lang": "FR",
+            "definition": [2]
+        },
         {
             "link": "tv/EuroNews_50x50.png",
             "name": "Euronews",
@@ -697,6 +726,12 @@ var tv_list = {
             "name": "France O HD",
             "lang": "FR",
             "definition": [2]
+        },
+		{
+            "link": "tv/franceinfo.png",
+            "name": "France Info",
+            "lang": "FR",
+            "definition": [1]
         },
         {
             "link": "tv/gulli_hd.png",
@@ -785,7 +820,7 @@ var tv_list = {
         },
         {
             "link": "tv/tv5_50x50.png",
-            "name": "TV5 Monde",
+            "name": "TV5 Monde Europe",
             "lang": "FR",
             "definition": [1]
         },
@@ -794,6 +829,12 @@ var tv_list = {
             "name": "TV8 Mont Blanc",
             "lang": "FR",
             "definition": [1]
+        },
+		{
+            "link": "tv/ush.png",
+            "name": "Ushuaïa TV HD",
+            "lang": "FR",
+            "definition": [2]
         },
         {
             "link": "tv/logo_vosges_television.png",
@@ -924,6 +965,18 @@ var tv_list = {
         {
             "link": "tv/rainews.png",
             "name": "Rai News",
+            "lang": "IT",
+            "definition": [1]
+        },
+		{
+            "link": "tv/raiscuola.png",
+            "name": "Rai Scuola",
+            "lang": "IT",
+            "definition": [1]
+        },
+		{
+            "link": "tv/raistoria.png",
+            "name": "Rai Storia",
             "lang": "IT",
             "definition": [1]
         }

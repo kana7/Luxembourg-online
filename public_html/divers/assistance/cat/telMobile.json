@@ -3,7 +3,7 @@
     "name": "Téléphonie mobile",
     "icon": "mobile-ico",
     "links": [
-        {"name": "Les appels ne fonctionne pas", "link": 0},
+        {"name": "Les appels ne fonctionnent pas", "link": 0},
         {"name": "Je n'ai pas de connexion internet sur mon téléphone mobile", "link": 1}
     ]
 }

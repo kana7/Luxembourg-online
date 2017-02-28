@@ -99,7 +99,7 @@
                 <li class="menu-item link commande"><a href="http://shop.internet.lu/inscription/shop/offres.html"><span class="icon-orders"></span><span data-l10n-id="menuLinkOnlineOrder">Inscription en ligne</span></a></li>
                 <li class="sous-nav">
                     <ul class="menu">
-                        <li class="menu-item link"><a href="../divers/assistance.html" data-l10n-id="menuLinkAssistance">Assistance</a></li>
+                        <li class="menu-item link"><a href="../divers/assistance/home.html" data-l10n-id="menuLinkAssistance">Assistance</a></li>
                         <li class="menu-item link"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOLCLOUD</a></li>
                         <li class="menu-item link"><a href="../divers/brochure.html" data-l10n-id="menuLinkMag">Brochure</a></li>
                         <li class="menu-item link"><a href="../divers/propos.html" data-l10n-id="menuLinkAbout">À propos</a></li>
@@ -161,7 +161,7 @@
                             </nav>
                             <nav class="pull-right hidden-phone hidden-tab">
                                 <ul class="top-menu-header-links right">
-                                    <li class="menu-item"><a href="../divers/assistance.html" data-l10n-id="menuLinkAssistance">Assistance</a></li>
+                                    <li class="menu-item"><a href="../divers/assistance/home.html" data-l10n-id="menuLinkAssistance">Assistance</a></li>
                                     <li class="menu-item"><a href="http://www.internet.lu/lolcloud/index.htm" target="blank_">LOLCLOUD</a></li>
                                     <li class="menu-item"><a href="../divers/brochure.html" data-l10n-id="menuLinkMag">Brochure</a></li>
                                     <li class="menu-item"><a href="../divers/propos.html" data-l10n-id="menuLinkAbout">À propos</a></li>
@@ -352,43 +352,43 @@
                                     <div class="left-container phone-12 tab-6">
                                         <div class="input-group">
                                             <label for="Nom" data-l10n-id="diversConFormAttr2">Nom<span class="red">*</span></label>
-                                            <input id="Nom" name="_nom" type="text" required/>
+                                            <input id="Nom" name="_nom" type="text"/>
                                         </div>
                                     </div>
                                     <div class="right-container phone-12 tab-6">
                                         <div class="input-group">
                                             <label for="prenom" data-l10n-id="diversConFormAttr3">Prénom<span class="red">*</span></label>
-                                            <input id="Prenom" name="_prenom" type="text" required/>
+                                            <input id="Prenom" name="_prenom" type="text"/>
                                         </div>
                                     </div>
                                     <div class="left-container phone-12 tab-6">
                                         <div class="input-group">
                                             <label for="Adresse" data-l10n-id="diversConFormAttr4">Adresse<span class="red">*</span></label>
-                                            <input id="Adresse" name="_adresse" type="text" required/>
+                                            <input id="Adresse" name="_adresse" type="text"/>
                                         </div>
                                     </div>
                                     <div class="right-container phone-12 tab-6">
                                         <div class="input-group">
                                             <label for="Cp"><span data-l10n-id="cp">Code postal</span><span class="red">*</span></label>
-                                            <input id="Cp" name="_cp" type="text" required/>
+                                            <input id="Cp" name="_cp" type="text"/>
                                         </div>
                                     </div>
                                     <div class="left-container phone-12 tab-6">
                                         <div class="input-group">
                                             <label for="Localite"><span data-l10n-id="diversConFormAttr5">Localité</span><span class="red">*</span></label>
-                                            <input id="Localite" name="_localite" type="text" required/>
+                                            <input id="Localite" name="_localite" type="text"/>
                                         </div>
                                     </div>
                                     <div class="right-container phone-12 tab-6">
                                         <div class="input-group">
                                             <label for="Tel"><span data-l10n-id="phone">Téléphone</span><span class="red">*</span></label>
-                                            <input id="Tel" name="_tel" type="text" required/>
+                                            <input id="Tel" name="_tel" type="text"/>
                                         </div>
                                     </div>
                                     <div class="left-container phone-12 tab-6">
                                         <div class="input-group">
                                             <label for="Email">E-mail</label>
-                                            <input id="Email" name="_email" type="text" required/>
+                                            <input id="Email" name="_email" type="text"/>
                                         </div>
                                     </div>
                                     <div class="right-container phone-12 tab-6">
@@ -422,7 +422,7 @@
                                     <div class="input-group select">
                                         <label for="Object"><span data-l10n-id="diversConFormAttr8">Objet</span><span class="red">*</span></label>
                                         <div class="select-arrow">
-                                            <select id="Object" name="_object" required>
+                                            <select id="Object" name="_object">
                                                 <option value="" selected="selected" data-l10n-id="diversConFormObj1">-- Sélectionnez un objet --</option>
                                                 <option value="demande_infos_commerciales" data-l10n-id="diversConFormObj2">Demande d'informations commerciales</option>
                                                 <option value="identifiants_mail" data-l10n-id="diversConFormObj3">Demande identifiants mail</option>
@@ -436,11 +436,12 @@
                                     </div>
                                     <div class="input-group">
                                         <label for="Message" data-l10n-id="diversConFormAttr9">Message <span style="font-size: 0.7em;">(240 caractères max.)</span><span class="red">*</span></label>
-                                        <textarea name="_message" id="Message" maxlength="488" required></textarea>
+                                        <textarea name="_message" id="Message" maxlength="488"></textarea>
                                     </div>
                                     <div class="phone-6 display-phone display-tab">
                                         <p style="margin: 0;" class="red" data-l10n-id="required">*Obligatoire</p>
                                     </div>
+                                    <div id="captcha" class="pull-left"></div>
                                     <button type="button" style="padding: 13px 30px;" class="btnSubmitForm btn-blue pull-right" data-form="frmContact" data-l10n-id="diversConFormSend">Envoyer</button>
                                 </div>
                             </form>
@@ -522,7 +523,7 @@
                 <div id="footer-links">
                     <div class="container-wrapper">
                         <div class="row">
-                            <a class="help-link" href="../divers/assistance.html">
+                            <a class="help-link" href="../divers/assistance/home.html">
                                 <span class="icon-info-icone"></span>
                                 <p data-l10n-id="needHelp">Besoin d'aide ? Accédez à l’espace assistance de Luxembourg Online (FAQ, informations, guides et documents utiles, contrats, divers)</p>
                                 <span class="icon-right-arrow"></span>
@@ -644,17 +645,18 @@
                             $("#" + form).find('[name=_documentName' + i + ']').val(filename);
                         }
                     }
-                    if (!verifyForm(form)) {
+                    /*if (!verifyForm(form)) {
                         if ($('#Object').val() == "identifiants_mail") {
                             alert(verifMessage + " ainsi qu'une copie de votre carte d'identité en pièce jointe.");
                         } else {
                             alert(verifMessage + ".");
                         }
                         flag = 0;
-                    } else {
+                    } else {*/
                         getIp();
-                        submitForm();
-                    }
+                        console.log(grecaptcha.getResponse());
+                      //  submitForm();
+                    //}
                 });
                 $(window).load(function () {
                     var hash = document.URL.substr(document.URL.indexOf('#') + 1);
@@ -670,6 +672,11 @@
                     }
                 });
             });
+            var onloadCallback = function () {
+                var captcha = grecaptcha.render('captcha', {
+                    'sitekey': '6LfYHBEUAAAAAI1DIxTd9zZ1MRzpdKryg5SdKixA'
+                });
+            };
             function getIp() {
                 $.get("http://ipinfo.io", function (response) {
                     $('#ip_adress').val(response.city + ", " + response.country);
@@ -677,7 +684,7 @@
             }
             function verifyForm(form) {
                 var flag = true;
-                var vform = form;
+                var vform = form || "frmContact";
                 var mail = $("#" + vform).find("input[name=_email]");
                 if (mail.val()) {
                     if (!testEmail(mail.val())) {
@@ -735,7 +742,9 @@
         <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuu7e1_LY895Sdb36SLlyE77QmBZ_5zss&callback=initMap&language=fr">
         </script>
-
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+                async defer>
+        </script>
         <script type="text/javascript" src="../scripts/analytics.js"></script>
     </body>
 </html>

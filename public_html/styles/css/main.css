@@ -3155,7 +3155,7 @@ header {
     #services .service#lolnow {
       background-image: url(../../images/Homepage/OFFRES/Option_NOW_296x233px.jpg); }
     #services .service#mobiles {
-      background-image: url(../../images/Homepage/OFFRES/Bonnes_Fetes_296x233px.jpg); }
+      background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_Europe_296x233px.jpg); }
     #services .service#installation {
       background-image: url(../../images/Homepage/OFFRES/LOLTV_296x233px.jpg); }
     #services .service#dispo {
@@ -4822,7 +4822,7 @@ span[class^=icon-] {
     font-weight: 400; }
 
 .article {
-  text-align: justify; }
+  text-align: left; }
   .article .link {
     display: inline;
     color: #004994;
@@ -4844,6 +4844,9 @@ span[class^=icon-] {
     line-height: 20px;
     font-style: italic;
     margin-bottom: 25px; }
+  .article lightbox {
+    display: block;
+    text-align: center; }
   .article .content p, .article .content ul, .article .content li {
     display: block; }
   .article .content li:not(:first-child):not(:last-child) {
@@ -6605,7 +6608,7 @@ div#languageSelector {
     transition: border-width 0.14s linear; }
 
 .assistance-content section:not(:first-child) {
-  padding-top: 20px; }
+  padding-top: 10px; }
 .assistance-content .input-group select {
   width: auto;
   border: 1px solid #c0c0c0;
@@ -6617,24 +6620,30 @@ div#languageSelector {
   -o-box-shadow: none;
   -ms-box-shadow: none; }
 .assistance-content .article {
-  font-size: 16px;
-  line-height: 22px; }
+  font-size: 14px;
+  line-height: 1.4; }
   .assistance-content .article h3, .assistance-content .article .att h4, .assistance-content .article .note h4 {
-    font-size: 21px;
+    font-size: 18px;
     font-weight: 600;
-    text-transform: uppercase;
     color: #004994;
-    text-align: left; }
+    text-align: left;
+    text-transform: lowercase; }
+    .assistance-content .article h3:first-letter, .assistance-content .article .att h4:first-letter, .assistance-content .article .note h4:first-letter {
+      text-transform: capitalize; }
   .assistance-content .article h4 {
     margin-bottom: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: 400;
     color: #07040D;
     text-align: left; }
+  .assistance-content .article ul {
+    list-style: decimal;
+    padding-left: 15px; }
   .assistance-content .article li {
-    display: block;
-    font-size: 15px; }
+    display: list-item;
+    font-size: 14px;
+    padding-left: 5px; }
   .assistance-content .article a {
     font-weight: 800;
     text-decoration: underline;
@@ -6649,21 +6658,21 @@ div#languageSelector {
     .assistance-content .article .step-title + p {
       margin-top: 5px; }
   .assistance-content .article .img-container {
-    display: inline-block;
     text-align: center;
-    margin: 10px 0;
     padding: 5px;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
-    border: 1px solid #c0c0c0;
-    height: 200px; }
+    border-radius: 4px; }
+  @media screen and (min-width: 672px) {
+    .assistance-content .article .img-container {
+      display: inline-block;
+      height: 200px; } }
   .assistance-content .article .img-container img {
     display: block;
     width: auto;
     height: auto;
     max-height: 100%;
-    border-radius: 4px;
-    border: 1px solid #c0c0c0; }
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 4px; }
   .assistance-content .article .dropdown [data-trigger] span[class^=icon] {
     margin-left: 0; }
   .assistance-content .article .modemItem {
@@ -6752,9 +6761,12 @@ div#languageSelector {
     margin: 25px 0; }
   .assistance-content .article h3 {
     margin: 15px 0 10px;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 400;
-    line-height: 20px; }
+    line-height: 24px;
+    text-transform: lowercase; }
+    .assistance-content .article h3:first-letter {
+      text-transform: uppercase; }
   .assistance-content .article .dropdown-content h5 {
     font-size: 16px;
     font-weight: 600;
@@ -6805,7 +6817,8 @@ div#languageSelector {
     color: #fff;
     border-radius: 6px;
     padding: 10px 18px;
-    margin: 10px 0; }
+    margin: 3px 0 10px;
+    list-style: none; }
     .assistance-content .att > p + .footer-note, .assistance-content .att > ul + .footer-note, .assistance-content .att > div + .footer-note, .assistance-content .note > p + .footer-note, .assistance-content .note > ul + .footer-note, .assistance-content .note > div + .footer-note {
       margin: 0; }
   .assistance-content .att > div p:first-child, .assistance-content .note > div p:first-child {
@@ -6828,20 +6841,17 @@ div#languageSelector {
     padding: 10px 0;
     text-align: left; }
   .assistance-content table tr td:first-child {
-    font-weight: 600;
     color: #07040D;
     padding-right: 45px; }
 .assistance-content .doc-list li:not(:last-child) {
   margin-bottom: 10px; }
 .assistance-content .doc-list a {
-  display: table;
+  display: inline;
   text-decoration: none;
-  font-weight: 400; }
+  font-weight: 400;
+  vertical-align: middle; }
   .assistance-content .doc-list a:hover {
     text-decoration: underline; }
-  .assistance-content .doc-list a img, .assistance-content .doc-list a .link {
-    display: table-cell;
-    vertical-align: middle; }
   .assistance-content .doc-list a img {
     height: 22px;
     width: auto;
@@ -7044,7 +7054,7 @@ div#languageSelector {
     #services .service#lolnow {
       background-image: url(../../images/Homepage/OFFRES/Option_NOW_288x392px.jpg); }
     #services .service#mobiles {
-      background-image: url(../../images/Homepage/OFFRES/Bonnes_Fetes_288x392px.jpg); }
+      background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_Europe_288x392px.jpg); }
     #services .service#installation {
       background-image: url(../../images/Homepage/OFFRES/LOLTV_288x392px.jpg); }
 
@@ -7482,7 +7492,7 @@ div#languageSelector {
     #services .service#lolnow {
       background-image: url(../../images/Homepage/OFFRES/Option_NOW_240x327px.jpg); }
     #services .service#mobiles {
-      background-image: url(../../images/Homepage/OFFRES/Bonnes_Fetes_240x327px.jpg); }
+      background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_Europe_240x327px.jpg); }
     #services .service#installation {
       background-image: url(../../images/Homepage/OFFRES/LOLTV_240x327px.jpg); }
     #services .service .infos {
@@ -8018,7 +8028,7 @@ div#languageSelector {
   #services .service#lolnow {
     background-image: url(../../images/Homepage/OFFRES/Option_NOW_320x437px.jpg); }
   #services .service#mobiles {
-    background-image: url(../../images/Homepage/OFFRES/Bonnes_Fetes_320x437px.jpg); }
+    background-image: url(../../images/Homepage/OFFRES/LOL_Mobile_Europe_320x437px.jpg); }
   #services .service#installation {
     background-image: url(../../images/Homepage/OFFRES/LOLTV_320x437px.jpg); }
   #services .service .infos {

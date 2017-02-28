@@ -866,7 +866,7 @@ var abonnements_list = {
         "?": new Abonnement("5619", "a_abo", "LOL DSL 20", null, true, "", true, null, "EPT", "ADSL", 3, installNoRemise, activation, modem_List1, null, false, null)
     },
     "4": {
-        "5625": new Abonnement("5625", "a_abo", "LOL FIBER 30", 44.90, true, "", true, null, "EPT", "VDSL", 4, installNoRemise, activation, modem_List2, null, false, null)
+        "5625": new Abonnement("5625", "a_abo", "LOL FIBER 30", 44.90, true, "", true, null, "EPT", "VDSL", 4, typeInstall, activation, modem_List2, null, false, null)
     },
     "5": {
         "5625": new Abonnement("5625", "a_abo", "LOL FIBER 30", 44.90, true, "", true, null, "EPT", "FIBRE", 5, installNoRemise, activation, modem_List2, null, false, null),

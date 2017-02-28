@@ -1,0 +1,100 @@
+«VAR NEW _rand=«=@time()»»
+«VAR NEW _extension=""»
+«VAR NEW _mail=""»
+«VAR NEW _date=«=@timeserial(«_rand»)»»
+«VAR NEW _date="«=@day(«_date»)»_«=@month(«_date»)»_«=@year(«_date»)»_"»
+«IF @strlen("«_documentName1»")>0 » 
+	«LET _extension=@substr("«_documentName1»"; «=@strlen(_documentName1)-4»; -1)»
+	«LET _documentName1="«_date»_«_nom»_«_prenom»_«_rand»_001«_extension»"»
+	«FILE UPLOAD «_FileName1»;upload/«_documentName1»»
+«ENDIF»
+«IF @strlen("«_documentName2»")>0 » 
+	«LET _extension=@substr("«_documentName2»"; «=@strlen(_documentName2)-4»; -1)»
+	«LET _documentName2="«_date»_«_nom»_«_prenom»_«_rand»_002«_extension»"»
+	«FILE UPLOAD «_FileName2»;upload/«_documentName2»»
+«ENDIF»
+«IF @strlen("«_documentName3»")>0 » 
+	«LET _extension=@substr("«_documentName3»"; «=@strlen(_documentName3)-4»; -1)»
+	«LET _documentName3="«_date»_«_nom»_«_prenom»_«_rand»_003«_extension»"»
+	«FILE UPLOAD «_FileName3»;upload/«_documentName3»»
+«ENDIF»
+
+«MAIL SERVER mail.internet.lu»
+«MAIL PORT 25»
+
+«IF «_object» == "demande_infos_commerciales"»
+«MAIL SUBJECT Demande d'informations commerciales»
+«MAIL TO commercial@internet.lu»
+«ENDIF»
+
+«IF «_object» == "identifiants_mail"»
+«MAIL SUBJECT Demande identifiants mail»
+«MAIL TO helpdesk@internet.lu»
+«ENDIF»
+
+«IF «_object» == "Suivi_de_commande"»
+«MAIL SUBJECT Suivi de commande»
+«MAIL TO helpdesk@internet.lu»
+«ENDIF»
+
+«IF «_object» == "Probleme_technique"»
+«MAIL SUBJECT Problème technique»
+«MAIL TO helpdesk@internet.lu»
+«ENDIF»
+
+«IF «_object» == "Facturation"»
+«MAIL SUBJECT Facturation»
+«MAIL TO compta@internet.lu»
+«ENDIF»
+
+
+«IF «_object» == "Autres"» 
+«MAIL SUBJECT Autres»
+«MAIL TO helpdesk@internet.lu»
+«ENDIF»
+
+
+«MAIL SERVER mail.online.lu»
+«MAIL PORT 25»
+
+«IF «_object» == "Candidature"» 
+«MAIL SUBJECT Demande de candidature»
+«MAIL TO emploi@online.lu»
+«ENDIF»
+
+
+
+«MAIL FROM contact@internet.lu»
+«OUTPUT MAIL»
+
+Internetlu formulaire de contact
+
+Nom : «_nom»
+Prénom : «_prenom»
+Adresse : «_adresse»
+Code Postal : «_cp»
+Localité : «_localite»
+Tél : «_tel»
+Mobile : «_mobile»
+E-mail : «_email»
+Déjà client: «_client»
+
+Position du client: «_ip»
+
+Fichiers:
+«IF @strlen("«_documentName1»")>0 »www.internet.lu/upload/«_documentName1»«ENDIF»
+«IF @strlen("«_documentName2»")>0 »www.internet.lu/upload/«_documentName2»«ENDIF»
+«IF @strlen("«_documentName3»")>0 »www.internet.lu/upload/«_documentName3»«ENDIF»
+
+
+Objet du message : «_object»
+
+Message :
+«_message»
+
+«/OUTPUT»
+«MAIL SEND»
+<META http-equiv="refresh" content="0;URL=http://www.internet.lu/divers/contact.html#success">
+
+
+

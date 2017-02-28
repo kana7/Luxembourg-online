@@ -811,7 +811,7 @@ Options de <b>financement</b>
                         Ellipso, Emsat, Globalstar, ICOGlobal, Inmarsat, Iridium, Jasper, Jersey Teleco, MCP Norvège, Satellite, Satellite Maritime, Thuraya, Vodafone Malta Maritime.  
                     </div>
 """>
-<mobileTarifsDesc "Consultez ci-dessous l'intégralité de nos tarifs téléphonie mobile.">
+<mobileTarifsDesc "Consultez ci-dessous l'intégralité de nos tarifs téléphonie mobile.<br/>Ces tarifs s'appliquent aux appels/SMS/data standards. Ils ne s'appliquent pas aux appels vers numéros spéciaux (type 800, 900, jeux, televoting, services érotiques, etc.) ou services surtaxés/premium.">
 <mobileTarifsTable1Title "National: Appels">
 <mobileTarifsTable1Label1 "Appel vers un numéro national fixe">
 <mobileTarifsTable1Label2 "Appel vers un numéro national mobile LOL">
@@ -1292,7 +1292,7 @@ Pour toute nouvelle souscription de 24 mois à l'offre <br/><span class="bold">L
 <promoFibreOfferDetails """
 ou contactez-nous au <b>2799 0000</b>
 """>
-<promoFibreOfferDate "Offre promotionnelle valable jusqu'au 31/01/2017. Voir détails et conditions en magasin">
+<promoFibreOfferDate "Offre promotionnelle valable jusqu'au 28/02/2017. Voir détails et conditions en magasin">
 /*----------------------------PROMO/FIBRE1.HTML-------------------------------*/
 /*-----------------------------------META-------------------------------------*/
 <promoFibre1MetaTitle "Promos : Fibre - Luxembourg Online">

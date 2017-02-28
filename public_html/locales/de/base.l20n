@@ -793,7 +793,7 @@ Luxembourg Online findet für jeden eine Lösung. ">
                        Ellipso, Emsat, Globalstar, ICOGlobal, Inmarsat, Iridium, Jasper, Jersey Teleco, MCP Norvège, Satellite, Satellite Maritime, Thuraya, Vodafone Malta Maritime
 					  </div>
 """>
-<mobileTarifsDesc "Anbei finden Sie eine vollständige Übersicht über unsere Mobilfunktarife.">
+<mobileTarifsDesc "Anbei finden Sie eine vollständige Übersicht über unsere Mobilfunktarife.<br/>Diese Tarife gelten für normale Anrufe/SMS/Data. Sie gelten nicht für Sondernummern (800, 900, Gewinnspiele, Televoting, etc.) oder gebührenpflichtige SMS (Premium-SMS).">
 <mobileTarifsTable1Title "National: Gespräche">
 <mobileTarifsTable1Label1 "Anruf auf Festnetznummer">
 <mobileTarifsTable1Label2 "Anruf auf nationale Mobilfunknummer LOL">
@@ -1301,7 +1301,7 @@ Bei Abschluss eines Neuvertrages für das Angebot <br/><span class="bold">LOLFIB
 <promoFibreOfferDetails """
 oder kontaktieren Sie uns unter <b>2799 0000</b>
 """>
-<promoFibreOfferDate "Angebot ist gültig bis zum 31/01/2017. Weitere Informationen in unserem Shop">
+<promoFibreOfferDate "Angebot ist gültig bis zum 28/02/2017. Weitere Informationen in unserem Shop">
 /*----------------------------PROMO/FIBRE1.HTML-------------------------------*/
 /*-----------------------------------META-------------------------------------*/
 <promoFibre1MetaTitle "Promo : Glasfaser - Luxembourg Online">

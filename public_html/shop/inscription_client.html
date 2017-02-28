@@ -296,68 +296,68 @@
                                             <div class="left-container phone-12 tab-6 tab-pr-10">
                                                 <div class="input-group">
                                                     <label for="Utilisateur">Nom utilisateur<span class="red">*</span></label>
-                                                    <input id="Utilisateur" name="_utilisateur" type="text" required>
+                                                    <input id="Utilisateur" name="_utilisateur" type="text" >
                                                 </div>
                                             </div>
                                             <div class="left-container phone-12 tab-6 tab-pl-10">
                                                 <div class="input-group">
                                                     <label for="Mail">Adresse mail<span class="red">*</span></label>
-                                                    <input id="Mail" name="_mail" type="text" required>
+                                                    <input id="Mail" name="_mail" type="text" >
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="left-container phone-12 tab-6 tab-pr-10">
                                             <div class="input-group">
                                                 <label for="Password">Mot de passe<span class="red">*</span></label>
-                                                <input id="Password" name="_password" type="password" required>
+                                                <input id="Password" name="_password" type="password" >
                                             </div>
                                         </div>
                                         <div class="right-container phone-12 tab-6 tab-pl-10">
                                             <div class="input-group">
                                                 <label for="Password2">Confirmez votre mot de passe<span class="red">*</span></label>
-                                                <input id="Password2" name="_password" type="password" required>
+                                                <input id="Password2" name="_password" type="password" >
                                             </div>
                                         </div>
                                         <div class="left-container phone-12 tab-6 tab-pr-10">
                                             <div class="input-group">
                                                 <label for="Nom">Nom<span class="red">*</span></label>
-                                                <input id="Nom" name="_nom" type="text" required>
+                                                <input id="Nom" name="_nom" type="text" >
                                             </div>
                                         </div>
                                         <div class="right-container phone-12 tab-6 tab-pl-10">
                                             <div class="input-group">
                                                 <label for="Prenom">Prénom<span class="red">*</span></label>
-                                                <input id="Prenom" name="_prenom" type="text" required>
+                                                <input id="Prenom" name="_prenom" type="text" >
                                             </div>
                                         </div>
                                         <div class="left-container phone-12 tab-6 tab-pr-10">
                                             <div class="input-group">
                                                 <label for="MatSoc">Matricule sécurité sociale<span class="red">*</span></label>
-                                                <input id="MatSoc" class="numeric" name="_matricule" type="text" maxlength="13" required>
+                                                <input id="MatSoc" class="numeric" name="_matricule" type="text" maxlength="13" >
                                             </div>
                                         </div>
                                         <div class="left-container phone-12 tab-6 tab-pl-10">
                                             <div class="input-group">
                                                 <label for="Adresse">Adresse<span class="red">*</span></label>
-                                                <input id="Adresse" name="_adresse" type="text" required disabled>
+                                                <input id="Adresse" name="_adresse" type="text" >
                                             </div>
                                         </div>
                                         <div class="right-container phone-12 tab-6 tab-pr-10">
                                             <div class="input-group">
                                                 <label for="Ville">Ville<span class="red">*</span></label>
-                                                <input id="Ville" name="_ville" type="text" required disabled>
+                                                <input id="Ville" name="_ville" type="text" >
                                             </div>
                                         </div>
                                         <div class="left-container phone-12 tab-6 tab-pl-10">
                                             <div class="input-group">
                                                 <label for="CodePostal">Code postale<span class="red">*</span></label>
-                                                <input id="CodePostal" class="numeric" name="_codePostal" maxlength="4" type="text" required disabled>
+                                                <input id="CodePostal" class="numeric" name="_codePostal" maxlength="4" type="text" >
                                             </div>
                                         </div>
                                         <div class="right-container phone-12 tab-6 tab-pr-10">
                                             <div class="input-group">
                                                 <label for="Pays">Pays<span class="red">*</span></label>
-                                                <select id="Pays" name="_pays" required>
+                                                <select id="Pays" name="_pays" >
                                                     <option value="" disabled selected>sélectionnez votre Pays...</option>
                                                     <option value=""></option>
                                                 </select>
@@ -366,7 +366,7 @@
                                         <div class="right-container phone-12 tab-6 tab-pl-10">
                                             <div class="input-group">
                                                 <label for="Telephone">Téléphone<span class="red">*</span></label>
-                                                <input id="Telephone" class="numeric" name="_telephone" type="text" required>
+                                                <input id="Telephone" class="numeric" name="_telephone" type="text" >
                                             </div>
                                         </div>
                                     </div>
@@ -449,7 +449,7 @@
                 <div id="footer-links">
                     <div class="container-wrapper">
                         <div class="row">
-                            <a class="help-link" href="../divers/assistance.html">
+                            <a class="help-link" href="../divers/assistance/home.html">
                                 <span class="icon-info-icone"></span>
                                 <p>Besoin d'aide ? Accédez à l’espace assistance de Luxembourg Online (FAQ, informations, guides et documents utiles, contrats, divers)</p>
                                 <span class="icon-right-arrow"></span>
@@ -529,7 +529,8 @@
                 document.l10n.ready(function () {
                     $('.submit').unbind().on('click', function () {
                         if (verifyForm('clientInscription')) {
-                            $('#clientInscription').submit();
+                           alert('success !!!');
+                            //$('#clientInscription').submit();
                         }
                     });
                     $('input').unbind().blur(function () {
@@ -540,7 +541,7 @@
             function verifyForm(form) {
                 var flag = true;
                 var message = '';
-                var pattern = new RegExp(/[\[\]\^\$\.\|\?\*\+\(\)\\~`\!@¬#%&\-_+={}'""<>:;, ]{1,}/);
+                var pattern = new RegExp('^[-_. A-zÀ-ÿ0-9]*$');
                 var vform = form;
                 $('#' + vform).find('[required]').each(function () {
                     if (!$(this).val()) {
@@ -550,20 +551,27 @@
                     }
                 });
                 if (flag) {
-                    $('#' + vform).find('input:not([type="select"]):not(#Mail)').each(function () {
+                    $('#' + vform).find('input:not([type="select"]):not(#Mail):not([type="password"]):not([type="hidden"]):not([name="_Username"])').each(function () {
                         var value = $(this).val();
-                        if (value && pattern.test(value) === true) {
+                        if (value && pattern.test(value) === false) {
+                            flag = false;
+                            message = 'shopWarningSpecialChar';
+                            $(this).addClass('not-fill');
+                        }
+                    });
+                    $('#' + vform).find('input[type="password"], input[name="_Username"]').each(function () {
+                        if (!testRegexAlphanumeric($(this).val())) {
                             flag = false;
                             message = 'shopWarningSpecialChar';
                             $(this).addClass('not-fill');
                         }
                     });
                 }
-                if (flag && $('#Mail').val() && !testEmail($('#Mail').val())){
+                if (flag && $('#Mail').val() && !testEmail($('#Mail').val())) {
                     $('#Mail').addClass('not-fill');
                     alert(document.l10n.getSync('shopWarningEmail'));
                     return false;
-                } else if (flag && $('#Password2').val() !== $('#Password').val()) {
+                } else if (flag && $('#Password').val() && $('#Password2').val() !== $('#Password').val()) {
                     $('#Password, #Password2').addClass('not-fill');
                     alert(document.l10n.getSync('shopWarningPwd'));
                     return false;

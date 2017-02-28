@@ -1476,7 +1476,7 @@ span[class^=icon-]
 }
 
 .article{
-    text-align: justify;
+    text-align: left;
     .link{display: inline; color: $blue; text-decoration: underline; }
     .header, .content{
         font-size: 15px;
@@ -1500,6 +1500,10 @@ span[class^=icon-]
             font-style: italic;
             margin-bottom: 25px;
         }
+    }
+    lightbox{
+        display: block;
+        text-align: center;
     }
     .content{
         p,ul,li{display: block;}
@@ -3427,7 +3431,7 @@ div#languageSelector {
 
 .assistance-content{
     section:not(:first-child){
-        padding-top: 20px;
+        padding-top: 10px;
     }
     .input-group select{
         width: auto;
@@ -3437,19 +3441,27 @@ div#languageSelector {
         @include box-shadow(none);
     }
     .article{
-        font-size: 16px;
-        line-height: 22px;
+        font-size: 14px;
+        line-height: 1.4;
         h3, .att h4, .note h4{
-            font-size: 21px;
+            font-size: 18px;
             font-weight: 600;
-            text-transform: uppercase;
             color: $blue;
             text-align: left;
+            text-transform: lowercase;
+            &:first-letter{
+                text-transform: capitalize;
+            }
         }
-        h4{margin-bottom: 10px; font-size: 16px; font-weight: 600; text-transform: uppercase; color: $section-black; text-align: left;}
+        h4{margin-bottom: 10px; margin-top: 0; font-size: 18px; font-weight: 400; color: $section-black; text-align: left;}
+        ul{
+            list-style: decimal;
+            padding-left: 15px;
+        }
         li{
-            display: block;
-            font-size: 15px;
+            display: list-item;
+            font-size: 14px;
+            padding-left: 5px;
         }
         a{font-weight: 800; text-decoration: underline; color: $blue;}
         hr{
@@ -3457,8 +3469,14 @@ div#languageSelector {
             border-style: solid;
         }
         .step-title{color: $section-black; font-weight: 600; margin-bottom: 5px; &+p{margin-top: 5px;}}
-        .img-container{display: inline-block; text-align: center; margin: 10px 0; padding: 5px; border-radius: 4px; box-shadow: 0 2px 5px 0 rgba(0,0,0,0.20); border: 1px solid #c0c0c0; height: 200px;}
-        .img-container img{display: block; width: auto; height: auto; max-height: 100%; border-radius: 4px; border: 1px solid #c0c0c0;}
+        .img-container{text-align: center; padding: 5px; border-radius: 4px;}
+        @include media(tab){
+            .img-container{
+                display: inline-block;
+                height: 200px;
+            }
+        }
+        .img-container img{display: block; width: auto; height: auto; max-height: 100%; max-width: 100%; margin: 0 auto; border-radius: 4px;}
         .dropdown [data-trigger] span[class^=icon]{margin-left: 0;}
 
         .modemItem{
@@ -3573,9 +3591,11 @@ div#languageSelector {
         }
         h3{                                        
             margin: 15px 0 10px;
-            font-size: 16px;
+            font-size: 24px;
             font-weight: 400;
-            line-height: 20px;
+            line-height: 24px;
+            text-transform: lowercase;
+            &:first-letter{text-transform: uppercase;}
         }
         .dropdown-content h5{
             font-size: 16px;
@@ -3623,7 +3643,7 @@ div#languageSelector {
     .att, .note{
         display: table;
         h4{margin: 10px 0 0; text-align: left;}
-        &>p, &>ul, &>div{color: $white; border-radius: 6px; padding: 10px 18px; margin: 10px 0; &+.footer-note{margin: 0;}}
+        &>p, &>ul, &>div{color: $white; border-radius: 6px; padding: 10px 18px; margin: 3px 0 10px; list-style: none; &+.footer-note{margin: 0;}}
         &>div p:first-child{margin-top: 0;}
         a{color: white; text-decoration: underline;}
     }
@@ -3634,17 +3654,17 @@ div#languageSelector {
         width: 100%;
         tr:not(:first-child){border-top: 1px solid $blue;}
         td{vertical-align: top; padding: 10px 0; text-align: left;}
-        tr td:first-child{font-weight: 600; color: $section-black; padding-right: 45px;}
+        tr td:first-child{color: $section-black; padding-right: 45px;}
     }
 
     .doc-list{
         li:not(:last-child){margin-bottom: 10px;}
         a{
-            display: table;
+            display: inline;
             text-decoration: none;
             font-weight: 400;
+            vertical-align: middle;
             &:hover{text-decoration: underline;}
-            img, .link{display: table-cell; vertical-align: middle;}
             img{height: 22px; width: auto; margin-right: 7px;}
             .link{text-decoration: none !important;}
         }
